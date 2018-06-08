@@ -1,0 +1,1 @@
+@PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& './jp-build.ps1' %*"

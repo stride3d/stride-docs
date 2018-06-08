@@ -1,0 +1,70 @@
+  <div id="x_wrap">
+    <div id="xk-header">
+      
+
+<!-- Static navbar -->
+  <div id="x_head_openBG"></div>
+  <div id="x_head">
+    <h1><a href="//xenko.com">Xenko</a></h1>
+    <div id="x_menuButton"><span>OPEN / CLOSE</span></div>
+    <div id="x_head_container">
+        
+          <!--  
+            <ul class="x_menu">
+                <li><a href="{{_rel}}.">Documentation</a></li>
+                <li><a href="{{_rel}}manual">Manual</a></li>
+                <li><a href="{{_rel}}api/SiliconStudio.Xenko.Engine.html">API</a></li>
+                <li><a href="{{_rel}}ReleaseNotes.html">Release Notes</a></li>
+            </ul>
+            -->
+             <ul class="x_menu">
+                <li><a href="//xenko.com/features">Features</a></li>
+                <li><a href="//xenko.com/blog">Blog</a></li>
+                <li class="active"><a href="{{_rel}}.">Documentation</a></li>
+                <li><a href="//xenko.com/community">Community</a></li>
+            </ul>
+
+      <div id="x_head_subContainer">
+
+    <a class="x_download" href="//xenko.com/download" target="_self"><span>(icon)</span> Download</a>
+
+    <h3 class="x_search_title"></h3>
+    <div class="x_search">
+      <form role="search" id="search">
+        <input name="search_paths[]" type="hidden" value="/en">
+        <input id="search-query" class="txt" name="query" type="text" value="" data-page="{{_path}}">
+        <input class="send" name="submit" type="submit" value="Search">
+      </form>
+    </div>
+    
+    <ul class="x_sns">
+          <li class="facebook"><a href="https://www.facebook.com/xenko3d" target="_blank">Facebook</a></li>
+          <li class="twitter"><a href="https://twitter.com/xenko3d" target="_blank">Twitter</a></li>
+          <li class="youtube"><a href="https://www.youtube.com/channel/UCfP5ubydYEslNRtacmZBjuQ" target="_blank">YouTube</a></li>
+        </ul>
+        <div class="x_lang">
+          <p>LANGUAGE</p>
+        </div>
+      </div>
+      <div id="x_head_subButton"><span>OPEN / CLOSE</span></div>
+      <div id="x_head_langList"><ul>
+          <li><a data-language="en">English</span></li>
+          <li><a data-language="jp">日本語</a></li>
+      </ul></div>
+    </div>
+  </div>
+    
+<!--<nav class="navbar" role="navigation">
+  <div class="container">
+    <div id="navbar">
+      <form class="navbar-form navbar-right" role="search" id="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="search-query" placeholder="Search doc..." autocomplete="off">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>-->
+
+    </div>
+</div>

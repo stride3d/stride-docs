@@ -1,0 +1,5 @@
+{Create a project }{Create an empty project, or create one based on a template or sample.}{page:manual/get-started/create-a-project.html}
+{Game Studio}{Understand the central tool for game production in Xenko}{page:manual/game-studio/index.html}
+{Introduction to assets}{Create and manage images, models, sounds, and other assets.}{page:manual/game-studio/assets.html}
+{Set up a scene}{Set up a graphics pipeline, add entities, and move around the scene.}{page:manual/game-studio/scenes.html}
+{Launch a game}{Run your game from Game Studio or Visual Studio.}{page:manual/get-started/launch-a-game.html}

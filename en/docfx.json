@@ -1,0 +1,77 @@
+{
+  "metadata": [
+    {
+      "src": [
+          {
+            "files": [
+              "sources/core/Xenko.Core.Core/Xenko.Core.Core.csproj",
+              "sources/core/Xenko.Core.Core.IO/Xenko.Core.Core.IO.csproj",
+              "sources/core/Xenko.Core.Core.Mathematics/Xenko.Core.Core.Mathematics.csproj",
+              "sources/core/Xenko.Core.Core.MicroThreading/Xenko.Core.Core.MicroThreading.csproj",
+              "sources/core/Xenko.Core.Core.Serialization/Xenko.Core.Core.Serialization.csproj",
+              "sources/assets/Xenko.Core.Assets/Xenko.Core.Assets.csproj",
+              "sources/engine/Xenko/Xenko.csproj",
+              "sources/engine/Xenko.Audio/Xenko.Audio.csproj",
+              "sources/engine/Xenko.Engine/Xenko.Engine.csproj",
+              "sources/engine/Xenko.Games/Xenko.Games.csproj",
+              "sources/engine/Xenko.Graphics/Xenko.Graphics.csproj",
+              "sources/engine/Xenko.Input/Xenko.Input.csproj",
+              "sources/engine/Xenko.Particles/Xenko.Particles.csproj",
+              "sources/engine/Xenko.Physics/Xenko.Physics.csproj",
+              "sources/engine/Xenko.Shaders/Xenko.Shaders.csproj",
+              "sources/engine/Xenko.UI/Xenko.UI.csproj",
+              "sources/engine/Xenko.VirtualReality/Xenko.VirtualReality.csproj",
+              "sources/engine/Xenko.Navigation/Xenko.Navigation.csproj"
+            ],
+			"cwd": "../../xenko",
+          }
+        ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "force": false,
+    "content": [
+      {
+        "files": [
+          "toc.yml", "*.md", "manual/**/*.md", "api/*.md", "api/*.yml", "ReleaseNotes/*.md"
+        ],
+        "case": false,
+        "noNegate": false,
+        "noExpand": false,
+        "noEscape": false,
+        "noGlobStar": false,
+        "dot": false
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "web.config", "download/**", "studio_getting_started_links.txt",
+		  "**/media/**/*.png", 
+		  "**/media/**/*.jpg", 
+		  "**/media/**/*.gif", 
+		  "**/media/**/*.mp4", 
+		  "**/media/**/*.zip", 
+		  "**/media/**/*.svg",
+		  "**/media/**/*.cs"
+        ],
+        "case": false,
+        "noNegate": false,
+        "noExpand": false,
+        "noEscape": false,
+        "noGlobStar": false,
+        "dot": false
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "Xenko",
+      "_enableSearch": true
+    },
+    "dest": "../_site/en",
+    "template": [
+      "default", "template"
+    ],
+    "serve": false
+  }
+}

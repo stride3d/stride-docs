@@ -1,0 +1,482 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "width" : 600.0,
+  "height" : 664.0,
+  "version" : "0.5",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia Studio",
+    "platform" : "Windows",
+    "version" : "9.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\ambient-occlusion-on.jpg",
+      "rect" : [0, 0, 736, 663],
+      "lastMod" : "20171004T080916",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 736, 663],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\ambient-occlusion-off.jpg",
+      "rect" : [0, 0, 736, 663],
+      "lastMod" : "20171004T081426",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 736, 663],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-off.jpg",
+      "rect" : [0, 0, 838, 922],
+      "lastMod" : "20171005T022009",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 838, 922],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-on.jpg",
+      "rect" : [0, 0, 838, 922],
+      "lastMod" : "20171005T022034",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 838, 922],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 5,
+      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-only.jpg",
+      "rect" : [0, 0, 838, 922],
+      "lastMod" : "20171005T022052",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 838, 922],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "metaData" : ""
+        }
+      ]
+    }
+  ],
+  "timeline" : {
+    "id" : 6,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 3.6,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 7,
+                    "_type" : "IMFile",
+                    "src" : 3,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "occlusion-off"
+                    },
+                    "parameters" : {
+                      "scale0" : 0.720173535791757,
+                      "scale1" : 0.720173535791757
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 8,
+                    "_type" : "IMFile",
+                    "src" : 4,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "occlusion-on"
+                    },
+                    "parameters" : {
+                      "scale0" : 0.720173535791757,
+                      "scale1" : 0.720173535791757
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 36,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 9,
+                    "_type" : "IMFile",
+                    "src" : 5,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "occlusion-only"
+                    },
+                    "parameters" : {
+                      "scale0" : 0.720173535791757,
+                      "scale1" : 0.720173535791757
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 72,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                  {
+                    "id" : 10,
+                    "_type" : "Callout",
+                    "def" : {
+                      "kind" : "remix",
+                      "shape" : "text",
+                      "style" : "basic",
+                      "height" : 163.000000000096,
+                      "width" : 205.999999999649,
+                      "word-wrap" : 1.0,
+                      "horizontal-alignment" : "left",
+                      "text" : "Occlusion off",
+                      "vertical-alignment" : "bottom",
+                      "font" : {
+                        "color-blue" : 1.0,
+                        "color-green" : 1.0,
+                        "color-red" : 1.0,
+                        "size" : 96.0,
+                        "tracking" : 0.0,
+                        "name" : "Montserrat",
+                        "weight" : "Regular"
+                      },
+                      "textAttributes" : {
+                        "type" : "textAttributeList",
+                        "keyframes" : [
+                          {
+                            "time" : 0,
+                            "value" : [{"name":"underline","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":13,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":13,"rangeStart":0,"value":100,"valueType":"int"},{"name":"fontItalic","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":13,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":13,"rangeStart":0,"value":38,"valueType":"double"}],
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "attributes" : {
+                      "autoRotateText" : true
+                    },
+                    "parameters" : {
+                      "translation0" : -185.499999999922,
+                      "translation1" : 308.499999999908
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 36,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false,
+                      "default-HAlign" : "center",
+                      "default-VAlign" : "center",
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 11,
+                    "_type" : "Callout",
+                    "def" : {
+                      "kind" : "remix",
+                      "shape" : "text",
+                      "style" : "basic",
+                      "height" : 163.000000000096,
+                      "width" : 205.999999999649,
+                      "word-wrap" : 1.0,
+                      "horizontal-alignment" : "left",
+                      "text" : "Occlusion on",
+                      "vertical-alignment" : "bottom",
+                      "font" : {
+                        "color-blue" : 1.0,
+                        "color-green" : 1.0,
+                        "color-red" : 1.0,
+                        "size" : 96.0,
+                        "tracking" : 0.0,
+                        "name" : "Montserrat",
+                        "weight" : "Regular"
+                      },
+                      "textAttributes" : {
+                        "type" : "textAttributeList",
+                        "keyframes" : [
+                          {
+                            "time" : 0,
+                            "value" : [{"name":"fontItalic","rangeEnd":12,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":12,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":12,"rangeStart":0,"value":100,"valueType":"int"},{"name":"underline","rangeEnd":12,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":12,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":12,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"fontSize","rangeEnd":12,"rangeStart":0,"value":38,"valueType":"double"}],
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "attributes" : {
+                      "autoRotateText" : true
+                    },
+                    "parameters" : {
+                      "translation0" : -185.499999999922,
+                      "translation1" : 308.499999999908
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 36,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 36,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false,
+                      "default-HAlign" : "center",
+                      "default-VAlign" : "center",
+                      "default-text-attributes" : "[{\"name\":\"underline\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":\"(0,0,0,255)\",\"valueType\":\"color\"},{\"name\":\"strikethrough\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontWeight\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":100,\"valueType\":\"int\"},{\"name\":\"fontItalic\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontName\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"fontSize\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":38,\"valueType\":\"double\"}]",
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 12,
+                    "_type" : "Callout",
+                    "def" : {
+                      "kind" : "remix",
+                      "shape" : "text",
+                      "style" : "basic",
+                      "height" : 163.000000000096,
+                      "width" : 205.999999999649,
+                      "word-wrap" : 1.0,
+                      "horizontal-alignment" : "left",
+                      "text" : "Occlusion only",
+                      "vertical-alignment" : "bottom",
+                      "font" : {
+                        "color-blue" : 1.0,
+                        "color-green" : 1.0,
+                        "color-red" : 1.0,
+                        "size" : 96.0,
+                        "tracking" : 0.0,
+                        "name" : "Montserrat",
+                        "weight" : "Regular"
+                      },
+                      "textAttributes" : {
+                        "type" : "textAttributeList",
+                        "keyframes" : [
+                          {
+                            "time" : 0,
+                            "value" : [{"name":"underline","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":14,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":14,"rangeStart":0,"value":38,"valueType":"double"},{"name":"fontItalic","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":14,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"fontWeight","rangeEnd":14,"rangeStart":0,"value":100,"valueType":"int"},{"name":"strikethrough","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"int"}],
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "attributes" : {
+                      "autoRotateText" : true
+                    },
+                    "parameters" : {
+                      "translation0" : -185.499999999922,
+                      "translation1" : 308.499999999908
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 72,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 36,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false,
+                      "default-HAlign" : "center",
+                      "default-VAlign" : "center",
+                      "default-text-attributes" : "[{\"name\":\"underline\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":\"(0,0,0,255)\",\"valueType\":\"color\"},{\"name\":\"strikethrough\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontWeight\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":100,\"valueType\":\"int\"},{\"name\":\"fontItalic\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontName\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"fontSize\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":38,\"valueType\":\"double\"}]",
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 2,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 3,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 22,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\james.duffy\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\occlusion9b65c2d.autosave.tscproj",
+    "CanvasZoom" : 100,
+    "Date" : "2017-10-04 05:11:24 PM",
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "",
+    "ProjectDimensionsChanged" : "1",
+    "Title" : "occlusion",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic",
+    "canvasDetached" : "False",
+    "canvasPositionHeight" : "0",
+    "canvasPositionLeft" : "0",
+    "canvasPositionTop" : "0",
+    "canvasPositionWidth" : "0"
+  }
+}

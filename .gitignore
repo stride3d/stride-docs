@@ -1,0 +1,8 @@
+/_site
+/externals
+/obj
+en/api/*.yml
+en/api/.manifest
+en/obj/
+jp_tmp/*
+build.log

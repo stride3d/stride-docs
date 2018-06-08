@@ -1,0 +1,14 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<div class="subnav navbar navbar-default">
+	<div class="container xk-flex" id="navbar">
+	<select id="xk-current-version" class="form-control col-lg-1 col-md-2 col-sm-3 col-xs-6">
+		<option value="latest">Latest version (3.0)</option>
+	</select>
+		<!--<ul class="submenu-navbar"> 	 	
+			<li><a href="{{_rel}}manual/index.html">Manual</a></li>
+			<li><a href="{{_rel}}api/index.html">API</a></li>
+			<li><a href="{{_rel}}ReleaseNotes/index.html">Release notes</a></li> 	
+		</ul>-->
+	</div>
+</div>

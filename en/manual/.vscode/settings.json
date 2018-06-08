@@ -1,0 +1,14 @@
+{
+    "spellchecker.language": "en_US",
+    "spellchecker.ignoreWordsList": [
+        "HRTF"
+    ],
+    "spellchecker.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "spellchecker.ignoreRegExp": [],
+    "spellchecker.ignoreFileExtensions": [],
+    "spellchecker.checkInterval": 5000
+}
