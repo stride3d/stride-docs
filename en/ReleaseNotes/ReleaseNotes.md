@@ -6,9 +6,9 @@ August 2, 2018
 
 ### Xenko is now a MIT community-based opensource project!
 
-You read that right. <b>Xenko 3.0</b> is out now, released under the permissive [MIT License](https://opensource.org/licenses/MIT). 
+You read that right. **Xenko 3.0** is out now, released under the permissive [MIT License](https://opensource.org/licenses/MIT). 
 
-From now on, you can use and modify Xenko completely <b>free</b> — whether you're a professional, a student, or just looking for a new hobby. This includes the runtime and editor.
+From now on, you can use and modify Xenko completely **free** — whether you're a professional, a student, or just looking for a new hobby. This includes the runtime and editor.
 
 ![Xenko GitHub](media/ReleaseNotes-3.0/xenko-oss.png)
 
