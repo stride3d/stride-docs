@@ -13,9 +13,6 @@ The default splash screen is the Xenko logo.
 
 You can only specify one splash screen in Game Settings. If you want to add more, you need to implement them manually.
 
-> [!Warning]
-> Under the terms of the [Xenko end user license agreement](http://xenko.com/legal/eula), Xenko Personal (free) users must display the "Powered by Xenko" logo in the splash screen. If you're using Xenko with a free license, you can edit the splash screen image — for example, by adding a logo above or below the Xenko logo — but you must adhere to the [Xenko logo regulations (PDF)](https://xenko.com/legal/xenko-logo-regulations.pdf).
-
 ## Edit the splash screen
 
 The splash screen settings are part of the **Game settings** asset.
