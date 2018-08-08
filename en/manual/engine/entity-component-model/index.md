@@ -26,10 +26,10 @@ var myEntity = new Entity();
  
 // Create a model component (so that model is rendered)
 var modelComponent = new ModelComponent { Model = model };
-myEntity.Set(ModelComponent.Key, modelComponent);
+myEntity.Components.Add(modelComponent);
 
 // Set entity position
-myEntity.Transformation.Translation = new Vector3(100.0f, 100.0f, 0.0f);
+myEntity.Transform.Position = new Vector3(100.0f, 100.0f, 0.0f);
  
 // Add entity to scene; from now on its model will be rendered
 Entities.Add(myEntity);
