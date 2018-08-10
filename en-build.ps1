@@ -15,6 +15,11 @@ if ($API)
     
     # Build metadata from C# source
     deps\docfx\docfx.exe metadata en/docfx.json
+	if ($LastExitCode -ne 0)
+	{
+		Write-Host "Failed to generate API metadata"
+		exit $LastExitCode
+	}
 
     Write-Host "Start Namespace build"
     function getNamespaceFilesLocation
@@ -339,6 +344,11 @@ Write-Host "Generating documentation..."
 
 # Output to both build.log and console
 deps\docfx\docfx.exe build en\docfx.json
+if ($LastExitCode -ne 0)
+{
+	Write-Host "Failed to build doc"
+	exit $LastExitCode
+}
 
 # Copy extra items
 Copy-Item en/ReleaseNotes/ReleaseNotes.md _site/en/ReleaseNotes/

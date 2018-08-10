@@ -37,6 +37,11 @@ Copy-Item en/docfx.json jp_tmp -Force
 (Get-Content jp_tmp/docfx.json) -replace "_site/en","_site/jp" | Set-Content jp_tmp/docfx.json
 deps\docfx\docfx.exe build jp_tmp\docfx.json
 Remove-Item jp_tmp -recurse 
+if ($LastExitCode -ne 0)
+{
+	Write-Host "Failed to build doc"
+	exit $LastExitCode
+}
 
 Write-Host "Japanese documentation built."
 Stop-Transcript
