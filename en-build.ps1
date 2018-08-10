@@ -12,6 +12,14 @@ Start-Transcript -Path build.log
 if ($API)
 {
     Write-Host "Generating API documentation..."
+
+    # Run nuget restore
+    ..\xenko\build\.nuget\nuget restore ..\xenko\build\Xenko.sln
+	if ($LastExitCode -ne 0)
+	{
+		Write-Host "Failed to restore nuget packages"
+		exit $LastExitCode
+	}
     
     # Build metadata from C# source
     deps\docfx\docfx.exe metadata en/docfx.json
