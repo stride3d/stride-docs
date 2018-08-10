@@ -4,11 +4,11 @@
       "src": [
           {
             "files": [
-              "sources/core/Xenko.Core.Core/Xenko.Core.Core.csproj",
-              "sources/core/Xenko.Core.Core.IO/Xenko.Core.Core.IO.csproj",
-              "sources/core/Xenko.Core.Core.Mathematics/Xenko.Core.Core.Mathematics.csproj",
-              "sources/core/Xenko.Core.Core.MicroThreading/Xenko.Core.Core.MicroThreading.csproj",
-              "sources/core/Xenko.Core.Core.Serialization/Xenko.Core.Core.Serialization.csproj",
+              "sources/core/Xenko.Core/Xenko.Core.csproj",
+              "sources/core/Xenko.Core.IO/Xenko.Core.IO.csproj",
+              "sources/core/Xenko.Core.Mathematics/Xenko.Core.Mathematics.csproj",
+              "sources/core/Xenko.Core.MicroThreading/Xenko.Core.MicroThreading.csproj",
+              "sources/core/Xenko.Core.Serialization/Xenko.Core.Serialization.csproj",
               "sources/assets/Xenko.Core.Assets/Xenko.Core.Assets.csproj",
               "sources/engine/Xenko/Xenko.csproj",
               "sources/engine/Xenko.Audio/Xenko.Audio.csproj",
