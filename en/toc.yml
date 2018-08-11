@@ -4,6 +4,6 @@
   href: manual/
   homepage: manual/index.md
 - name: API
-  href: api/
+  href: api/index.md
 - name: Release Notes
   href: ReleaseNotes/ReleaseNotes.md
