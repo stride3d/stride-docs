@@ -6,31 +6,31 @@
 
 The Xenko UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout). Much of the WPF documentation also applies to the Xenko layout system.
 
-Every @'SiliconStudio.Xenko.UI.UIElement' in the Xenko UI system has a surrounding rectangle used in layouts. Xenko computes layouts according to the @'SiliconStudio.Xenko.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'SiliconStudio.Xenko.UI.Panels.Panel' elements (which arrange children in specific ways). 
+Every @'Xenko.UI.UIElement' in the Xenko UI system has a surrounding rectangle used in layouts. Xenko computes layouts according to the @'Xenko.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'Xenko.UI.Panels.Panel' elements (which arrange children in specific ways). 
 
-Processing this data recursively, the layout system computes a position and size for every @'SiliconStudio.Xenko.UI.UIElement' in the UI system.
+Processing this data recursively, the layout system computes a position and size for every @'Xenko.UI.UIElement' in the UI system.
 
 ## Measure and arrange
 
-Xenko performs the layout process recursively in two passes: [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) and [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)).
+Xenko performs the layout process recursively in two passes: [Measure](xref:Xenko.UI.UIElement.Measure(Xenko.Core.Mathematics.Vector3)) and [Arrange](xref:Xenko.UI.UIElement.Arrange(Xenko.Core.Mathematics.Vector3,System.Boolean)).
 
 ### Measure
 
-In the [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:SiliconStudio.Xenko.UI.UIElement#SiliconStudio_Xenko_UI_UIElement_DesiredSize) according to the properties you set, such as @'SiliconStudio.Xenko.UI.UIElement.Width', @'SiliconStudio.Xenko.UI.UIElement.Height', and @'SiliconStudio.Xenko.UI.UIElement.Margin'.
+In the [Measure](xref:Xenko.UI.UIElement.Measure(Xenko.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:Xenko.UI.UIElement#Xenko_UI_UIElement_DesiredSize) according to the properties you set, such as @'Xenko.UI.UIElement.Width', @'Xenko.UI.UIElement.Height', and @'Xenko.UI.UIElement.Margin'.
 
-Some @'SiliconStudio.Xenko.UI.Panels.Panel' elements call [Measure](xref:SiliconStudio.Xenko.UI.UIElement.Measure(SiliconStudio.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:SiliconStudio.Xenko.UI.UIElement#SiliconStudio_Xenko_UI_UIElement_DesiredSize) of their children, and act accordingly.
+Some @'Xenko.UI.Panels.Panel' elements call [Measure](xref:Xenko.UI.UIElement.Measure(Xenko.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:Xenko.UI.UIElement#Xenko_UI_UIElement_DesiredSize) of their children, and act accordingly.
 
 ### Arrange
 
-The [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
+The [Arrange](xref:Xenko.UI.UIElement.Arrange(Xenko.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
 
-* @'SiliconStudio.Xenko.UI.UIElement.Margin'
-* @'SiliconStudio.Xenko.UI.UIElement.Width'
-* @'SiliconStudio.Xenko.UI.UIElement.Height'
-* @'SiliconStudio.Xenko.UI.UIElement.HorizontalAlignment'
-* @'SiliconStudio.Xenko.UI.UIElement.VerticalAlignment' 
-* @'SiliconStudio.Xenko.UI.Panels.Panel'
-* specific [Arrange](xref:SiliconStudio.Xenko.UI.UIElement.Arrange(SiliconStudio.Core.Mathematics.Vector3,System.Boolean)) rules
+* @'Xenko.UI.UIElement.Margin'
+* @'Xenko.UI.UIElement.Width'
+* @'Xenko.UI.UIElement.Height'
+* @'Xenko.UI.UIElement.HorizontalAlignment'
+* @'Xenko.UI.UIElement.VerticalAlignment' 
+* @'Xenko.UI.Panels.Panel'
+* specific [Arrange](xref:Xenko.UI.UIElement.Arrange(Xenko.Core.Mathematics.Vector3,System.Boolean)) rules
 
 ## See also
 

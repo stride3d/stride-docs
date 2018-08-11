@@ -9,7 +9,7 @@
 
 制約は、2 つの剛体をリンクすること、または1 つの剛体をワールドの 1 点にリンクすることができます。剛体間の相互作用と依存関係を実現します。
 
-[制約の種類](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) は次の 6 つです。
+[制約の種類](xref:Xenko.Physics.ConstraintTypes) は次の 6 つです。
 
 * ヒンジ
 * ギア
@@ -25,34 +25,34 @@
 > [!NOTE]
 > 現在、制約を使用できるのはスクリプトからだけです。
 
-制約を作成するには、[Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) の静的メソッド [CreateConstraint](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) を使用します。
+制約を作成するには、[Simulation](xref:Xenko.Physics.Simulation) の静的メソッド [CreateConstraint](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) を使用します。
 
 ```cs
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix frameA, bool useReferenceFrameA);
 ```
 
-これは、[RigidBodyA](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyA) を現在の位置でワールドにリンクします。
-ブール値 [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は、制限が適用される座標系を指定します ([RigidBodyA](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyA) またはワールド)。
+これは、[RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) を現在の位置でワールドにリンクします。
+ブール値 [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は、制限が適用される座標系を指定します ([RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) またはワールド)。
 
 > [!NOTE]
-> * [ConstraintTypes.Point2Point](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合、フレームは A のピボットを表します。平行移動ベクトルのみが考慮されます。[useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
-> * [ConstraintTypes.Hinge](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合は、フレームは A のピボットと A の軸を表します。これは、ヒンジでは剛体とワールドの間で制限された角度の回転のみが許可されるためです。
-> * [ConstraintTypes.ConeTwist](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合は、[useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
-> * [ConstraintTypes.Gear](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) では、2 つの剛体を作成する必要があります。この関数は例外をスローします。
+> * [ConstraintTypes.Point2Point](xref:Xenko.Physics.ConstraintTypes) の場合、フレームは A のピボットを表します。平行移動ベクトルのみが考慮されます。[useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
+> * [ConstraintTypes.Hinge](xref:Xenko.Physics.ConstraintTypes) の場合は、フレームは A のピボットと A の軸を表します。これは、ヒンジでは剛体とワールドの間で制限された角度の回転のみが許可されるためです。
+> * [ConstraintTypes.ConeTwist](xref:Xenko.Physics.ConstraintTypes) の場合は、[useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
+> * [ConstraintTypes.Gear](xref:Xenko.Physics.ConstraintTypes) では、2 つの剛体を作成する必要があります。この関数は例外をスローします。
 
 ```cs
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyComponent rigidBodyB, Matrix frameA, Matrix frameB, bool useReferenceFrameA)
 ```
 
-このメソッドは、[RigidBodyA](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyA) を [RigidBodyB](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyB) にリンクします。
+このメソッドは、[RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) を [RigidBodyB](xref:Xenko.Physics.Constraint.RigidBodyB) にリンクします。
 
 > [!NOTE]
-> * [ConstraintTypes.Point2Point](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合、フレームは A または B のピボットを表します。平行移動ベクトルのみが考慮されます。[useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
-> * [ConstraintTypes.Hinge](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合、フレームは A/B のピボットと A/B の軸を表します。これは、この場合のヒンジでは、剛体とワールドの間に制限された角度の回転だけが許可されるためです。
-> * [ConstraintTypes.ConeTwist](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合は、[useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
-> * [ConstraintTypes.Gear](xref:SiliconStudio.Xenko.Physics.ConstraintTypes) の場合は、[useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。フレームは A または B の軸だけを表します。平行移動ベクトル (軸を含む必要があります) だけが使用されます。
+> * [ConstraintTypes.Point2Point](xref:Xenko.Physics.ConstraintTypes) の場合、フレームは A または B のピボットを表します。平行移動ベクトルのみが考慮されます。[useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
+> * [ConstraintTypes.Hinge](xref:Xenko.Physics.ConstraintTypes) の場合、フレームは A/B のピボットと A/B の軸を表します。これは、この場合のヒンジでは、剛体とワールドの間に制限された角度の回転だけが許可されるためです。
+> * [ConstraintTypes.ConeTwist](xref:Xenko.Physics.ConstraintTypes) の場合は、[useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。
+> * [ConstraintTypes.Gear](xref:Xenko.Physics.ConstraintTypes) の場合は、[useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は無視されます。フレームは A または B の軸だけを表します。平行移動ベクトル (軸を含む必要があります) だけが使用されます。
 
-ブール値 [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) は、制限が適用される座標系 ([RigidBodyA](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyA) または [RigidBodyB](xref:SiliconStudio.Xenko.Physics.Constraint.RigidBodyB)) を決定します。
+ブール値 [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) は、制限が適用される座標系 ([RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) または [RigidBodyB](xref:Xenko.Physics.Constraint.RigidBodyB)) を決定します。
 
 ## 制約をシミュレーションに追加する
 
@@ -69,7 +69,7 @@ var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);
 ```
 
-パラメーター [disableCollisionsBetweenLinkedBodies](xref:SiliconStudio.Xenko.Physics.Simulation.AddConstraint\(SiliconStudio.Xenko.Physics.Constraint,System.Boolean\)) は、
+パラメーター [disableCollisionsBetweenLinkedBodies](xref:Xenko.Physics.Simulation.AddConstraint\(Xenko.Physics.Constraint,System.Boolean\)) は、
  リンクされたボディが相互に衝突するのを停止します。
 
 同様に、シミュレーションから制約を削除するには、次のメソッドを使用します。

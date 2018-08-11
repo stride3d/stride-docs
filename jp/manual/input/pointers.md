@@ -29,9 +29,9 @@
 
 ## PointerEvent クラス
 
-[PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) は、ポインターのイベントを報告します。イベントには、現在の**ポインターの位置**と時刻の情報が含まれます。**ポインター**が変更されるたびにスローされます。
+[PointerEvent](xref:Xenko.Input.PointerEvent) は、ポインターのイベントを報告します。イベントには、現在の**ポインターの位置**と時刻の情報が含まれます。**ポインター**が変更されるたびにスローされます。
 
-最後の更新以降の**ポインター イベント**のリストには、[InputManager.PointerEvents](xref:SiliconStudio.Xenko.Input.InputManager.PointerEvents) を使用してアクセスできます。ポインター イベントは時間順に一覧表示されます。リストは更新のたびにクリアされるので、手動でクリアする必要はありません。
+最後の更新以降の**ポインター イベント**のリストには、[InputManager.PointerEvents](xref:Xenko.Input.InputManager.PointerEvents) を使用してアクセスできます。ポインター イベントは時間順に一覧表示されます。リストは更新のたびにクリアされるので、手動でクリアする必要はありません。
 
 ### ポインターの情報を取得する
 
@@ -39,7 +39,7 @@
 
 |プロパティ | 説明
 |--------|-----------
-|[PointerEvent.PointerId](xref:SiliconStudio.Xenko.Input.PointerEvent.PointerId) | イベントをトリガーしたポインターの ID を示します。
+|[PointerEvent.PointerId](xref:Xenko.Input.PointerEvent.PointerId) | イベントをトリガーしたポインターの ID を示します。
 
 > [!WARNING]
 > ポインターの ID は、ポインター イベントの 1 回の _Pressed->Moved->Released_ のシーケンスの間だけ有効です。
@@ -61,24 +61,24 @@ bool isTriggeredByMouse = event.Pointer is IMouseDevice
 
 #### 正規化された座標
 
-@'SiliconStudio.Xenko.Input.PointerEvent.Position' は、ピクセル単位の実際の画面サイズではなく、**正規化された** X および Y 座標でポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。
+@'Xenko.Input.PointerEvent.Position' は、ピクセル単位の実際の画面サイズではなく、**正規化された** X および Y 座標でポインターの位置を返します。そのため、ポインターの位置は任意の解像度に合わせて調整され、異なる解像度ごとに異なるコードを作成する必要はありません。
 
 * (0,0): ポインターは画面の左上隅にあります。
 * (1,1): ポインターは画面の右下隅にあります。
 
 #### 絶対座標
 
-[PointerEvent.AbsolutePosition](xref:SiliconStudio.Xenko.Input.PointerEvent.AbsolutePosition) は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。
+[PointerEvent.AbsolutePosition](xref:Xenko.Input.PointerEvent.AbsolutePosition) は、X と Y の絶対座標 (ピクセル単位の実際の画面サイズ) でポインターの位置を返します。たとえば、ポインターが画面の左上隅にある場合、値は (0,0) です。ポインターが右下隅にある場合、値は画面の解像度に依存します (たとえば (1280,720))。
 
 > [!TIP]
-> 画面の実際のサイズを取得するには、[IPointerDevice.SurfaceSize](xref:SiliconStudio.Xenko.Input.IPointerDevice.SurfaceSize) にアクセスします。次に例を示します。
+> 画面の実際のサイズを取得するには、[IPointerDevice.SurfaceSize](xref:Xenko.Input.IPointerDevice.SurfaceSize) にアクセスします。次に例を示します。
 > ```cs
 > var surfaceSize = Input.Pointer.SurfaceSize;
 > ```
 
 ### ポインター イベントを取得する
 
-ポインター イベントを調べるには、[PointerEvent.EventType](xref:SiliconStudio.Xenko.Input.PointerEvent.EventType) を使用します。
+ポインター イベントを調べるには、[PointerEvent.EventType](xref:Xenko.Input.PointerEvent.EventType) を使用します。
 
 5 種類のポインター イベントがあります。
 
@@ -92,20 +92,20 @@ bool isTriggeredByMouse = event.Pointer is IMouseDevice
 
 ### デルタ値を取得する
 
-[PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) は、前回の @'SiliconStudio.Xenko.Input.PointerEvent' からの経過時間を取得します。
+[PointerEvent.DeltaTime](xref:Xenko.Input.PointerEvent.DeltaTime) は、前回の @'Xenko.Input.PointerEvent' からの経過時間を取得します。
 
 正規化された座標または絶対座標でデルタ位置を取得できます。
 
 ### 正規化されたデルタ値
 
-[PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) は、前回の @'SiliconStudio.Xenko.Input.PointerEvent' からの位置の変化を、**正規化された** X、Y 座標で取得します。
+[PointerEvent.DeltaPosition](xref:Xenko.Input.PointerEvent.DeltaPosition) は、前回の @'Xenko.Input.PointerEvent' からの位置の変化を、**正規化された** X、Y 座標で取得します。
 
 > [!NOTE]
 > ポインター イベントのシーケンスの開始時には (つまり、**ポインターの状態**が**ダウン**のとき)、デルタ値は常に null になっています。
 
 ### 絶対デルタ値
 
-[PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.AbsoluteDeltaPosition) は、前回の @'SiliconStudio.Xenko.Input.PointerEvent' からの位置の変化を、**絶対** (X,Y) 座標で取得します。
+[PointerEvent.DeltaPosition](xref:Xenko.Input.PointerEvent.AbsoluteDeltaPosition) は、前回の @'Xenko.Input.PointerEvent' からの位置の変化を、**絶対** (X,Y) 座標で取得します。
 
 ## コード例
 
@@ -116,10 +116,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Core.Mathematics;
+using Xenko.Engine;
 
-namespace SiliconStudio.Xenko.Input.Tests
+namespace Xenko.Input.Tests
 {
     public class PointerTestScript : AsyncScript
     {

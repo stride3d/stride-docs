@@ -25,22 +25,22 @@
 
 非空間オーディオを実行時に再生するには、コードでインスタンスを作成して動作を定義します。
 
-[SoundInstance](xref:SiliconStudio.Xenko.Audio.SoundInstance) は、以下のプロパティで実行時にオーディオを制御します。
+[SoundInstance](xref:Xenko.Audio.SoundInstance) は、以下のプロパティで実行時にオーディオを制御します。
 
 | プロパティ  | 機能 |
 |-------    |-------|
-| [IsLooping](xref:SiliconStudio.Xenko.Audio.SoundInstance.IsLooping) | オーディオのループを取得または設定します。 |
-| [Pan](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pan)       | 左右のスピーカーのバランスを設定します。既定では、各スピーカーの値は 0.5 です。 |
-| [Pitch](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pitch)     | オーディオのピッチ (周波数) を取得または設定します。 |
-| [PlayState](xref:SiliconStudio.Xenko.Audio.SoundInstance.PlayState)	| [SoundInstance](xref:SiliconStudio.Xenko.Audio.SoundInstance) の状態を取得します。 |
-| [Position](xref:SiliconStudio.Xenko.Audio.SoundInstance.Position)	| オーディオの現在の再生位置を取得します。 |
-| [Volume](xref:SiliconStudio.Xenko.Audio.SoundInstance.Volume)	| オーディオのボリュームを設定します。 |
+| [IsLooping](xref:Xenko.Audio.SoundInstance.IsLooping) | オーディオのループを取得または設定します。 |
+| [Pan](xref:Xenko.Audio.SoundInstance.Pan)       | 左右のスピーカーのバランスを設定します。既定では、各スピーカーの値は 0.5 です。 |
+| [Pitch](xref:Xenko.Audio.SoundInstance.Pitch)     | オーディオのピッチ (周波数) を取得または設定します。 |
+| [PlayState](xref:Xenko.Audio.SoundInstance.PlayState)	| [SoundInstance](xref:Xenko.Audio.SoundInstance) の状態を取得します。 |
+| [Position](xref:Xenko.Audio.SoundInstance.Position)	| オーディオの現在の再生位置を取得します。 |
+| [Volume](xref:Xenko.Audio.SoundInstance.Volume)	| オーディオのボリュームを設定します。 |
 
-詳細については、[SoundInstance API のドキュメント](xref:SiliconStudio.Xenko.Audio.SoundInstance)を参照してください。
+詳細については、[SoundInstance API のドキュメント](xref:Xenko.Audio.SoundInstance)を参照してください。
 
 > [!NOTE]
-サウンドが既に再生中の場合に [SoundInstance.Play](xref:SiliconStudio.Xenko.Audio.SoundInstance.Play) をさらに呼び出してもすべて無視されます。
-[SoundInstance.Pause](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pause) (サウンドが既に一時停止されているとき) および [SoundInstance.Stop](xref:SiliconStudio.Xenko.Audio.SoundInstance.Stop) (サウンドが既に停止されているとき) についても同じです。
+サウンドが既に再生中の場合に [SoundInstance.Play](xref:Xenko.Audio.SoundInstance.Play) をさらに呼び出してもすべて無視されます。
+[SoundInstance.Pause](xref:Xenko.Audio.SoundInstance.Pause) (サウンドが既に一時停止されているとき) および [SoundInstance.Stop](xref:Xenko.Audio.SoundInstance.Stop) (サウンドが既に停止されているとき) についても同じです。
 
 たとえば、次に示すコードは次の処理を行います。
 

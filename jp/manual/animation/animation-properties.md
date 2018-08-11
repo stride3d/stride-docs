@@ -45,10 +45,10 @@ Xenko は 2 種類のアニメーション クリップをサポートします�
 
 ### Root Motion
 
-［Root Motion］を有効にすると、メイン モーションが [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) に適用されます。無効にすると、スケルトン ノードの内部で適用されます。
+［Root Motion］を有効にすると、メイン モーションが [TransformComponent](xref:Xenko.Engine.TransformComponent) に適用されます。無効にすると、スケルトン ノードの内部で適用されます。
 
 >[!NOTE]
->スケルトンがない場合は、モーションは [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) に常に適用されます。
+>スケルトンがない場合は、モーションは [TransformComponent](xref:Xenko.Engine.TransformComponent) に常に適用されます。
 
 ## 関連項目
 

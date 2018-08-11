@@ -66,7 +66,7 @@ For information about how to add scripts to entities, see [Use a script](../scri
 This script displays a sprite that advances to the next sprite in the index every second. After it reaches the end of the sprite index, it loops.
 
 ```cs
-using SiliconStudio.Xenko.Rendering.Sprites;
+using Xenko.Rendering.Sprites;
 
 public class Animation : SyncScript
 {

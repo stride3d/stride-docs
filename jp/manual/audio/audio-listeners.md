@@ -17,14 +17,14 @@
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. ［Property grid］で、［Add component］をクリックし、[オーディオ リスナー コンポーネント](xref:SiliconStudio.Xenko.Audio.AudioListener)を選択します。
+2. ［Property grid］で、［Add component］をクリックし、[オーディオ リスナー コンポーネント](xref:Xenko.Audio.AudioListener)を選択します。
 
     ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 
     エンティティはオーディオ リスナーになりました。
 
 > [!WARNING]
-iOS では、シーン内の[オーディオ リスナー コンポーネント](xref:SiliconStudio.Xenko.Audio.AudioListener)に対して複数のオブジェクトを作成できますが、実行時に使用されるオブジェクトは 1 つだけです。
+iOS では、シーン内の[オーディオ リスナー コンポーネント](xref:Xenko.Audio.AudioListener)に対して複数のオブジェクトを作成できますが、実行時に使用されるオブジェクトは 1 つだけです。
 
 ## 関連項目
 * [空間オーディオ](spatialized-audio.md)

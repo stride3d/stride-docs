@@ -2,11 +2,11 @@
 
 ## Create shaders in C&#35;
 
-You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. Shaders come in three types:
+You can create a shader at runtime with @'Xenko.Shaders.ShaderSource' objects. Shaders come in three types:
 
-- @'SiliconStudio.Xenko.Shaders.ShaderClassSource' correspond to a unique shader class
-- @'SiliconStudio.Xenko.Shaders.ShaderMixinSource' mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', set preprocessor values, define compositions
-- @'SiliconStudio.Xenko.Shaders.ShaderArraySource' are used for arrays of compositions
+- @'Xenko.Shaders.ShaderClassSource' correspond to a unique shader class
+- @'Xenko.Shaders.ShaderMixinSource' mix several @'Xenko.Shaders.ShaderSource', set preprocessor values, define compositions
+- @'Xenko.Shaders.ShaderArraySource' are used for arrays of compositions
 
 This method produces shaders at runtime. However, many platforms don't support HLSL and have no ability to compile shaders at runtime. Additionally, the approach doesn't benefit from the reusability of mixins.
 
@@ -23,7 +23,7 @@ An .xkfx file is a small program used to generate shader permutations. It takes 
 An example .xkfx file:
 
 ```cs
-using SiliconStudio.Xenko.Effects.Data;
+using Xenko.Effects.Data;
 
 namespace XenkoEffects
 {

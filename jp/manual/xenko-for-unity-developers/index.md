@@ -123,7 +123,7 @@ Game Studio でコンポーネントをエンティティに追加するには:
 
 ### Transform コンポーネント
 
-Unity® の GameObject と同じように、Xenko の各エンティティにはワールドでの位置、回転、拡大縮小を設定する [Transform コンポーネント](xref:SiliconStudio.Xenko.Engine.TransformComponent)があります。
+Unity® の GameObject と同じように、Xenko の各エンティティにはワールドでの位置、回転、拡大縮小を設定する [Transform コンポーネント](xref:Xenko.Engine.TransformComponent)があります。
 
 ![Transform component](media/xenko-vs-unity-entity-transform-component.png)
 
@@ -510,19 +510,19 @@ Unity® と同様に、Xenko では、スクリプト コンポーネントと�
 
 ![Create script in Xenko](media/xenko-vs-unity-create-script.png)
 
-Unity® では、`MonoBehaviour` スクリプトを作成すると、2 つの基底関数 `Start()` と `Update()` が作成されます。Xenko の [SyncScript](xref:SiliconStudio.Xenko.Engine.SyncScript) は同じように動作します。`MonoBehaviour` と同様に、[SyncScript](xref:SiliconStudio.Xenko.Engine.SyncScript) には次の 2 つのメソッドがあります。
+Unity® では、`MonoBehaviour` スクリプトを作成すると、2 つの基底関数 `Start()` と `Update()` が作成されます。Xenko の [SyncScript](xref:Xenko.Engine.SyncScript) は同じように動作します。`MonoBehaviour` と同様に、[SyncScript](xref:Xenko.Engine.SyncScript) には次の 2 つのメソッドがあります。
 
-* [Start()](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) は、スクリプトがロードされると呼び出されます。
+* [Start()](xref:Xenko.Engine.StartupScript.Start) は、スクリプトがロードされると呼び出されます。
 
-* [Update()](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) は、更新のたびに呼び出されます。
+* [Update()](xref:Xenko.Engine.SyncScript.Update) は、更新のたびに呼び出されます。
 
-`MonoBehaviour` とは異なる、すべての [SyncScript](xref:SiliconStudio.Xenko.Engine.SyncScript) で [Update()](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) メソッドを使用する必要があります。そうしないと、コードは正しく動作しません。
+`MonoBehaviour` とは異なる、すべての [SyncScript](xref:Xenko.Engine.SyncScript) で [Update()](xref:Xenko.Engine.SyncScript.Update) メソッドを使用する必要があります。そうしないと、コードは正しく動作しません。
 
 スクリプトをスタートアップ スクリプトまたは非同期スクリプトにしたい場合は、対応するスクリプトの種類を使用します。
 
-* [StartupScript](xref:SiliconStudio.Xenko.Engine.StartupScript): このスクリプトのメソッドは [Start()](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) の 1 つだけです。起動時にシーンとその内容を初期化します。
+* [StartupScript](xref:Xenko.Engine.StartupScript): このスクリプトのメソッドは [Start()](xref:Xenko.Engine.StartupScript.Start) の 1 つだけです。起動時にシーンとその内容を初期化します。
 
-* [AsyncScript](xref:SiliconStudio.Xenko.Engine.AsyncScript): 非同期スクリプトのメソッドは [Execute()](xref:SiliconStudio.Xenko.Engine.AsyncScript.Execute) の 1 つだけで、そのメソッド内で非同期/待機を使用できます。非同期スクリプトは、同期スクリプトのように 1 つずつロードされることはありません。すべてのスクリプトが並列にロードされます。
+* [AsyncScript](xref:Xenko.Engine.AsyncScript): 非同期スクリプトのメソッドは [Execute()](xref:Xenko.Engine.AsyncScript.Execute) の 1 つだけで、そのメソッド内で非同期/待機を使用できます。非同期スクリプトは、同期スクリプトのように 1 つずつロードされることはありません。すべてのスクリプトが並列にロードされます。
 
 ### アセンブリを再ロードする
 

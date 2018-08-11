@@ -70,10 +70,10 @@ To create a custom color transform, you need to write two files: an effect shade
     For example, the code below creates the class `MyColorTransform`, which uses the shader and supplies a value for the color `MyColor` (defined in the shader).
 
     ```cs
-    using SiliconStudio.Core;
-    using SiliconStudio.Core.Mathematics;
-    using SiliconStudio.Xenko.Rendering;
-    using SiliconStudio.Xenko.Rendering.Images;
+    using Xenko.Core;
+    using Xenko.Core.Mathematics;
+    using Xenko.Rendering;
+    using Xenko.Rendering.Images;
 
     namespace MyGame
     {

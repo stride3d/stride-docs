@@ -80,7 +80,7 @@
 
 ```cs
 using System;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Engine;
 
 namespace VRSandbox
 {

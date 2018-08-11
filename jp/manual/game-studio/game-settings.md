@@ -83,7 +83,7 @@ Graphics Compositor を設定するには:
 | Target graphics platform    | プロジェクトのビルド対象のターゲット プラットフォームです。これを［Default］に設定すると、最も適切なプラットフォームが選択されます。詳細については、「[グラフィックス プラットフォームを変更する](../platforms/change-the-graphics-platform.md)」を参照してください。
 
 > [!TIP]
-> プロジェクトが使用している既定のプラットフォームを確認するには、コード (スクリプト内など) にブレーク ポイントを追加し、プロジェクトを実行して、[GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) 変数の値を調べます。
+> プロジェクトが使用している既定のプラットフォームを確認するには、コード (スクリプト内など) にブレーク ポイントを追加し、プロジェクトを実行して、[GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) 変数の値を調べます。
 
 ## エディターの設定
 

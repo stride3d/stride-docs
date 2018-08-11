@@ -38,9 +38,9 @@ Visual Studio で新しいスクリプトを確認することもできます。
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Core.Mathematics;
+using Xenko.Input;
+using Xenko.Engine;
 
 namespace MyGame
 {
@@ -91,9 +91,9 @@ namespace MyGame
 	using System;
 	using System.Text;
 	using System.Threading.Tasks;
-	using SiliconStudio.Core.Mathematics;
-	using SiliconStudio.Xenko.Input;
-	using SiliconStudio.Xenko.Engine;
+	using Xenko.Core.Mathematics;
+	using Xenko.Input;
+	using Xenko.Engine;
 
 	namespace MyGame
 	{

@@ -5,17 +5,17 @@
 
 Global audio settings apply to all the audio in your project. 
 
-You can control the global audio settings by accessing the [AudioEngine](xref:SiliconStudio.Xenko.Audio.AudioEngine) **properties** class:
+You can control the global audio settings by accessing the [AudioEngine](xref:Xenko.Audio.AudioEngine) **properties** class:
 
 | Property | Function |
 |--- | --- |
-| [MasterVolume](xref:SiliconStudio.Xenko.Audio.AudioEngine.MasterVolume) | Sets the master volume. |
-| [PauseAudio](xref:SiliconStudio.Xenko.Audio.AudioEngine.PauseAudio) | Pauses all audio. |
-| [ResumeAudio](xref:SiliconStudio.Xenko.Audio.AudioEngine.ResumeAudio) | Resumes all audio. |
+| [MasterVolume](xref:Xenko.Audio.AudioEngine.MasterVolume) | Sets the master volume. |
+| [PauseAudio](xref:Xenko.Audio.AudioEngine.PauseAudio) | Pauses all audio. |
+| [ResumeAudio](xref:Xenko.Audio.AudioEngine.ResumeAudio) | Resumes all audio. |
 
-You can also control sounds individually using the [SoundInstance API](xref:SiliconStudio.Xenko.Audio.SoundInstance).
+You can also control sounds individually using the [SoundInstance API](xref:Xenko.Audio.SoundInstance).
 
 ## See also
 * [Spatialized audio](spatialized-audio.md)
 * [Non-spatialized audio](non-spatialized-audio.md)
-* [SoundInstance API documentation](xref:SiliconStudio.Xenko.Audio.SoundInstance)
+* [SoundInstance API documentation](xref:Xenko.Audio.SoundInstance)

@@ -3,12 +3,12 @@
 <span class="label label-doc-level">上級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-開発者独自のメカニズムを使用してオーディオを生成できます。そのためには、[DynamicSoundSource](xref:SiliconStudio.Xenko.Audio.DynamicSoundSource) のサブクラスを作成します。
-実装方法の例については、[`CompressedSoundSource` のソース コード](https://github.com/SiliconStudio/xenko/blob/master-1.8/sources/engine/SiliconStudio.Xenko.Audio/CompressedSoundSource.cs)を参照してください。
+開発者独自のメカニズムを使用してオーディオを生成できます。そのためには、[DynamicSoundSource](xref:Xenko.Audio.DynamicSoundSource) のサブクラスを作成します。
+実装方法の例については、[`CompressedSoundSource` のソース コード](https://github.com/SiliconStudio/xenko/blob/master-1.8/sources/engine/Xenko.Audio/CompressedSoundSource.cs)を参照してください。
 
 ## コード例
 
-実行時にカスタムの [DynamicSoundSource](xref:SiliconStudio.Xenko.Audio.DynamicSoundSource) を再生するには、次のコードを使用します。
+実行時にカスタムの [DynamicSoundSource](xref:Xenko.Audio.DynamicSoundSource) を再生するには、次のコードを使用します。
 
 ```
 int sampleRate = 48000;

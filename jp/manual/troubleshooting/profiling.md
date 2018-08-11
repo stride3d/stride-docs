@@ -42,7 +42,7 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
     ![Profiler at runtime](media/profiling-profiler-at-runtime.jpg)
 
     >[!NOTE]
-    >プロファイラーが表示するデータの種類を変更できます。詳細については、[Xenko プロファイラー API のドキュメント](xref:SiliconStudio.Core.Diagnostics.Profiler)を参照してください。
+    >プロファイラーが表示するデータの種類を変更できます。詳細については、[Xenko プロファイラー API のドキュメント](xref:Xenko.Core.Diagnostics.Profiler)を参照してください。
 
 ## 外部プロファイリング ツールを使用する
 

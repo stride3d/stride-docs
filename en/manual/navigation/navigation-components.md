@@ -52,7 +52,7 @@ void Move(Vector3 from, Vector3 to)
 }
 ```
 
-For more information, see the [NavigationComponent API documentation](xref:SiliconStudio.Xenko.Navigation.NavigationComponent).
+For more information, see the [NavigationComponent API documentation](xref:Xenko.Navigation.NavigationComponent).
 
 ## See also
 

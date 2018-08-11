@@ -17,15 +17,15 @@ Xenko handles input entirely via scripts. There are low-level and high-level API
 
 ## Handle input
 
-Handle input with the [InputManager](xref:SiliconStudio.Xenko.Input.InputManager) class. You can access this class from a script with its properties and methods.
+Handle input with the [InputManager](xref:Xenko.Input.InputManager) class. You can access this class from a script with its properties and methods.
 
-To check whether a particular input device is available, use the corresponding @'SiliconStudio.Xenko.Input.InputManager' property. For example, to check if a mouse is connected, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse).
+To check whether a particular input device is available, use the corresponding @'Xenko.Input.InputManager' property. For example, to check if a mouse is connected, use [Input.HasMouse](xref:Xenko.Input.InputManager.HasMouse).
 
 After you check the device availability, there are four ways to handle input in Xenko.
 
 ### Query state
 
-You can query the state of digital keys and buttons (ie _Up_ or _Down_) and the numeric values of analog buttons and sensors. For example, @'SiliconStudio.Xenko.Input.InputManager.DownKeys' gets a list of the keys that were in the state _Down_ in the last update.
+You can query the state of digital keys and buttons (ie _Up_ or _Down_) and the numeric values of analog buttons and sensors. For example, @'Xenko.Input.InputManager.DownKeys' gets a list of the keys that were in the state _Down_ in the last update.
 
 ![Query key and button states](media/index-state-one-action-between-updates.png)
 

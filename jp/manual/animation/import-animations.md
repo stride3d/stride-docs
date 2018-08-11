@@ -49,7 +49,7 @@
 
 ## アニメーション アセットを使用する
 
-アニメーション アセットを使用するには、[AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) をエンティティに追加した後、アニメーション アセットをアニメーション コンポーネントに追加します。詳細については、「[アニメーションのセットアップ](set-up-animations.md)」を参照してください。
+アニメーション アセットを使用するには、[AnimationComponent](xref:Xenko.Engine.AnimationComponent) をエンティティに追加した後、アニメーション アセットをアニメーション コンポーネントに追加します。詳細については、「[アニメーションのセットアップ](set-up-animations.md)」を参照してください。
 
 >[!NOTE]
 >スケルトンにメッシュを正しくスキニングしていることを確認してください。していない場合は、モデルを正しくアニメーション化できません。

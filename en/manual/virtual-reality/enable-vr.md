@@ -83,7 +83,7 @@ For now, this is done in a script. We recommend you use `IsDrawDesynchronized` i
 
 ```cs
 using System;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Engine;
 
 namespace VRSandbox
 {

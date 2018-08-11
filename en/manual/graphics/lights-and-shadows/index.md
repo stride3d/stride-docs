@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-Lights in Xenko are provided by [light components](xref:SiliconStudio.Xenko.Engine.LightComponent). There are several kinds of light.
+Lights in Xenko are provided by [light components](xref:Xenko.Engine.LightComponent). There are several kinds of light.
 
 ## In this section
 

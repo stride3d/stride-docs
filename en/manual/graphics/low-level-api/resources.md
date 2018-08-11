@@ -11,10 +11,10 @@ When [drawing vertices](draw-vertices.md) using an [effect](../effects-and-shade
 
 ## Automatic resource binding
 
-The @'SiliconStudio.Xenko.Rendering.EffectInstance' class handles the details of enumerating these resources from a loaded effect as well as binding them.
+The @'Xenko.Rendering.EffectInstance' class handles the details of enumerating these resources from a loaded effect as well as binding them.
 
-It exposes the @'SiliconStudio.Xenko.Graphics.RootSignature', which has to be set as [pipeline state](pipeline-state.md),
-and allows to fill constant buffers and bind resources based on a @'SiliconStudio.Xenko.Rendering.ParameterCollection'.
+It exposes the @'Xenko.Graphics.RootSignature', which has to be set as [pipeline state](pipeline-state.md),
+and allows to fill constant buffers and bind resources based on a @'Xenko.Rendering.ParameterCollection'.
 
 **Code:** Using an EffectInstance
 

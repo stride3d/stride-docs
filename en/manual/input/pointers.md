@@ -29,9 +29,9 @@ You can enable gesture recognition to detect gestures such as long presses and t
 
 ## The PointerEvent class
 
-[PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) reports pointer events. It contains the current **pointer status** and time information. It is thrown every time the **pointer** is modified.
+[PointerEvent](xref:Xenko.Input.PointerEvent) reports pointer events. It contains the current **pointer status** and time information. It is thrown every time the **pointer** is modified.
 
-You can access the list of **pointer events** since the last update using [InputManager.PointerEvents](xref:SiliconStudio.Xenko.Input.InputManager.PointerEvents). Xenko lists pointer events in chronological order. The list is cleared at every update, so you don't need to clear it manually.
+You can access the list of **pointer events** since the last update using [InputManager.PointerEvents](xref:Xenko.Input.InputManager.PointerEvents). Xenko lists pointer events in chronological order. The list is cleared at every update, so you don't need to clear it manually.
 
 ### Get pointer information
 
@@ -39,7 +39,7 @@ You can use the following properties to get information about the pointer that t
 
 |Property|Description
 |--------|-----------
-|[PointerEvent.PointerId](xref:SiliconStudio.Xenko.Input.PointerEvent.PointerId) | Indicates the ID of the pointer which triggered the event.
+|[PointerEvent.PointerId](xref:Xenko.Input.PointerEvent.PointerId) | Indicates the ID of the pointer which triggered the event.
 
 > [!Warning]
 > The ID of a pointer is valid only during a single _Pressed->Moved->Released_ sequence of pointer events.
@@ -61,24 +61,24 @@ You can get the pointer position in normalized or absolute coordinates.
 
 #### Normalized coordinates
 
-@'SiliconStudio.Xenko.Input.PointerEvent.Position' returns the pointer position in **normalized** X and Y coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution and you don't have to write separate code for different resolutions.
+@'Xenko.Input.PointerEvent.Position' returns the pointer position in **normalized** X and Y coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution and you don't have to write separate code for different resolutions.
 
 * (0,0): the pointer is in the top-left corner of the screen
 * (1,1): the pointer is in the bottom-right corner of the screen
 
 #### Absolute coordinates
 
-[PointerEvent.AbsolutePosition](xref:SiliconStudio.Xenko.Input.PointerEvent.AbsolutePosition) returns the pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).
+[PointerEvent.AbsolutePosition](xref:Xenko.Input.PointerEvent.AbsolutePosition) returns the pointer position in absolute X and Y coordinates (the actual screen size in pixels). For example, if the pointer is in the top-left corner of the screen, the values are (0,0). If the pointer is in the bottom-right corner, the values depends on the screen resolution (eg 1280, 720).
 
 > [!Tip]
-> To get the actual size of the screen, access [IPointerDevice.SurfaceSize](xref:SiliconStudio.Xenko.Input.IPointerDevice.SurfaceSize). For example:
+> To get the actual size of the screen, access [IPointerDevice.SurfaceSize](xref:Xenko.Input.IPointerDevice.SurfaceSize). For example:
 > ```cs
 > var surfaceSize = Input.Pointer.SurfaceSize;
 > ```
 
 ### Get pointer events
 
-Use the [PointerEvent.EventType](xref:SiliconStudio.Xenko.Input.PointerEvent.EventType) to check the pointer events.
+Use the [PointerEvent.EventType](xref:Xenko.Input.PointerEvent.EventType) to check the pointer events.
 
 There are five types of pointer event:
 
@@ -92,20 +92,20 @@ There are five types of pointer event:
 
 ### Get delta values
 
-[PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) gets the time elapsed from the previous @'SiliconStudio.Xenko.Input.PointerEvent'.
+[PointerEvent.DeltaTime](xref:Xenko.Input.PointerEvent.DeltaTime) gets the time elapsed from the previous @'Xenko.Input.PointerEvent'.
 
 You can get the delta position in normalized or absolute coordinates.
 
 ### Normalized delta values
 
-[PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **normalized** X,Y coordinates.
+[PointerEvent.DeltaPosition](xref:Xenko.Input.PointerEvent.DeltaPosition) gets the change in position since the previous @'Xenko.Input.PointerEvent' in **normalized** X,Y coordinates.
 
 > [!Note] 
 > Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **pointer state** is **down**).
 
 ### Absolute delta values
 
-[PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.AbsoluteDeltaPosition) gets the change in position since the previous @'SiliconStudio.Xenko.Input.PointerEvent' in **absolute** (X,Y) coordinates.
+[PointerEvent.DeltaPosition](xref:Xenko.Input.PointerEvent.AbsoluteDeltaPosition) gets the change in position since the previous @'Xenko.Input.PointerEvent' in **absolute** (X,Y) coordinates.
 
 ## Example code
 
@@ -116,10 +116,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Core.Mathematics;
+using Xenko.Engine;
 
-namespace SiliconStudio.Xenko.Input.Tests
+namespace Xenko.Input.Tests
 {
     public class PointerTestScript : AsyncScript
     {

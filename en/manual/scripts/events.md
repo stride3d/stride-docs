@@ -12,7 +12,7 @@ For example, imagine your game has a "Game Over" state that occurs when the play
 
 ## Create and broadcast an event
 
-Broadcasters in the Xenko API are of type [EventKey](xref:SiliconStudio.Xenko.Engine.Events.EventKey). They use the method [Broadcast](xref:SiliconStudio.Xenko.Engine.Events.EventKey#SiliconStudio_Xenko_Engine_Events_EventKey_Broadcast) to broadcast events to receivers.
+Broadcasters in the Xenko API are of type [EventKey](xref:Xenko.Engine.Events.EventKey). They use the method [Broadcast](xref:Xenko.Engine.Events.EventKey#Xenko_Engine_Events_EventKey_Broadcast) to broadcast events to receivers.
 
 For example, this code creates a "Game Over" event:
 
@@ -30,7 +30,7 @@ public static class GlobalEvents
 
 ## Create a receiver
 
-Receivers in the Xenko API are of type [EventReceiver](xref:SiliconStudio.Xenko.Engine.Events.EventReceiver).
+Receivers in the Xenko API are of type [EventReceiver](xref:Xenko.Engine.Events.EventReceiver).
 
 To receive the "Game Over" event described above, use:
 

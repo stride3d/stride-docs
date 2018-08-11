@@ -31,11 +31,11 @@ To look up an attribute, use `NodeName_AttributeName`. For example, if you have 
 ### Example script
 
 ```cs
-using SiliconStudio.Xenko.Animations;
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Rendering;
-using SiliconStudio.Xenko.Audio;
-using SiliconStudio.Xenko.Rendering.Materials;
+using Xenko.Animations;
+using Xenko.Engine;
+using Xenko.Rendering;
+using Xenko.Audio;
+using Xenko.Rendering.Materials;
  
 namespace Sample
 { 

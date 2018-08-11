@@ -3,7 +3,7 @@
 <span class="label label-doc-level">上級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-[AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) には、[AnimationComponent.BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder) プロパティがあります。再生されるアニメーション、アニメーションのブレンド方法、アニメーションの重みを全面的に制御したい場合は、`IBlendTreeBuilder` から継承するスクリプトを作成し、アニメーション コンポーネントの BlendTreeBuilder に割り当てます。
+[AnimationComponent](xref:Xenko.Engine.AnimationComponent) には、[AnimationComponent.BlendTreeBuilder](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_BlendTreeBuilder) プロパティがあります。再生されるアニメーション、アニメーションのブレンド方法、アニメーションの重みを全面的に制御したい場合は、`IBlendTreeBuilder` から継承するスクリプトを作成し、アニメーション コンポーネントの BlendTreeBuilder に割り当てます。
 
 アニメーション コンポーネントは、更新されるときに、アニメーション自体を更新するのではなく、スクリプトで `void BuildBlendTree(FastList<AnimationOperation> animationList)` を呼び出します。これにより、アニメーション クリップ、速度、ブレンドの任意の組み合わせを選択できますが、重労働をすべてスクリプト側で行う必要があるため、困難さも増します。
 

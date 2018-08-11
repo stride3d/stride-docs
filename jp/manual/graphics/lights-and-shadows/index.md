@@ -1,6 +1,6 @@
 # ライトとシャドウ
 
-Xenko のライトは、[ライト コンポーネント](xref:SiliconStudio.Xenko.Engine.LightComponent)によって提供されます。ライトには複数の種類があります。
+Xenko のライトは、[ライト コンポーネント](xref:Xenko.Engine.LightComponent)によって提供されます。ライトには複数の種類があります。
 
 ## このセクションの内容
 

@@ -56,7 +56,7 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 If you don't want Game Studio to show a property in the Property Grid, you can:
 
 * declare your member internal or private, or
-* use the [DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) attribute like this:
+* use the [DataMemberIgnore](xref:Xenko.Core.DataMemberIgnoreAttribute) attribute like this:
 
 ```cs
 

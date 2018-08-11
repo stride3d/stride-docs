@@ -76,7 +76,7 @@ You can create models in scripts at runtime. You can do this in several differen
     ```
 
     >[!Note]
-    >To use the code above, make sure you add `using SiliconStudio.Xenko.Extensions` to the top of your script.
+    >To use the code above, make sure you add `using Xenko.Extensions` to the top of your script.
 
     Alternatively, create a mesh using your own vertex and index buffers. For example:
 
@@ -94,7 +94,7 @@ Finally, you need to give the model one or more materials. There are two ways to
 
 ### Option 1: load a material in code
 
-1. In your code, load one or more materials and add them to the model. Because models can use multiple materials (one for each mesh in the model), use [Mesh.MaterialIndex](xref:SiliconStudio.Xenko.Rendering.Mesh.MaterialIndex) to specify which materials in the list are used for which mesh.
+1. In your code, load one or more materials and add them to the model. Because models can use multiple materials (one for each mesh in the model), use [Mesh.MaterialIndex](xref:Xenko.Rendering.Mesh.MaterialIndex) to specify which materials in the list are used for which mesh.
 
     For example:
 

@@ -3,12 +3,12 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can generate audio using your own mechanism. To do this, create a subclass of [DynamicSoundSource](xref:SiliconStudio.Xenko.Audio.DynamicSoundSource).
-For an example of how to implement this, see the [CompressedSoundSource` source code](https://github.com/SiliconStudio/xenko/blob/master-1.8/sources/engine/SiliconStudio.Xenko.Audio/CompressedSoundSource.cs).
+You can generate audio using your own mechanism. To do this, create a subclass of [DynamicSoundSource](xref:Xenko.Audio.DynamicSoundSource).
+For an example of how to implement this, see the [CompressedSoundSource` source code](https://github.com/SiliconStudio/xenko/blob/master-1.8/sources/engine/Xenko.Audio/CompressedSoundSource.cs).
 
 ## Example code
 
-To play a custom [DynamicSoundSource](xref:SiliconStudio.Xenko.Audio.DynamicSoundSource) at runtime, use:
+To play a custom [DynamicSoundSource](xref:Xenko.Audio.DynamicSoundSource) at runtime, use:
 
 ```
 int sampleRate = 48000;

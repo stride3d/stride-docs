@@ -44,7 +44,7 @@ In addition to the caches Xenko creates for your project, Game Studio keeps cach
 
 To speed up asset loading in the editor, Game Studio saves a cache of asset references. It contains data about every asset ever loaded in every project. This means it can grow very large over time.
 
-By default, the folder is in: *%temp%/Silicon Studio/Xenko*
+By default, the folder is in: *%temp%/Xenko*
 
 >[!Tip]
 >To check or change where Game Studio saves the cache, see **Edit > Settings > Environment > Build cache directory.**
@@ -54,7 +54,7 @@ To clean the cache, delete the folder and run Game Studio again.
 
 ### Settings cache
 
-Game Studio saves editor information (such as window positions and recently-opened projects) in: *%AppData%/Silicon Studio*
+Game Studio saves editor information (such as window positions and recently-opened projects) in: *%AppData%/Xenko*
 
 Game Studio also saves information about open tabs and the editor camera position in the `.xkpkg.user` file in the project folder (eg *~/MyGame/MyGame/MyGame.xkpkg.user*).
 

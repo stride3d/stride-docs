@@ -127,7 +127,7 @@ For more details, see [Navigation](../navigation/index.md).
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform. For more information, see [Set the graphics platform](../platforms/set-the-graphics-platform.md).
 
 > [!Tip]
-> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) variable.
 
 ## Streaming
 

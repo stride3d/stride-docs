@@ -33,6 +33,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Improve this documentation
 
-The Xenko documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/SiliconStudio/xenko-docs).
+The Xenko documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/xenko3d/xenko-docs).
 
-To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-2.0/GUIDELINES.md).
+To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/xenko3d/xenko-docs/blob/master/GUIDELINES.md).

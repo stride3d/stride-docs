@@ -25,22 +25,22 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 To play non-spatialized audio at runtime, create an instance of it and define its behavior in the code.
 
-The [SoundInstance](xref:SiliconStudio.Xenko.Audio.SoundInstance) controls audio at runtime with the following properties:
+The [SoundInstance](xref:Xenko.Audio.SoundInstance) controls audio at runtime with the following properties:
 
 | Property  | Function |
 |-------    |-------|
-| [IsLooping](xref:SiliconStudio.Xenko.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio. |
-| [Pan](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pan)       | Sets the balance between left and right speakers. By default, each speaker a value of 0.5. |
-| [Pitch](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pitch)     | Gets or sets the audio pitch (frequency). |
-| [PlayState](xref:SiliconStudio.Xenko.Audio.SoundInstance.PlayState)	| Gets the state of the [SoundInstance](xref:SiliconStudio.Xenko.Audio.SoundInstance). |
-| [Position](xref:SiliconStudio.Xenko.Audio.SoundInstance.Position)	| Gets the current play position of the audio. |
-| [Volume](xref:SiliconStudio.Xenko.Audio.SoundInstance.Volume)	| Sets the audio volume. |
+| [IsLooping](xref:Xenko.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio. |
+| [Pan](xref:Xenko.Audio.SoundInstance.Pan)       | Sets the balance between left and right speakers. By default, each speaker a value of 0.5. |
+| [Pitch](xref:Xenko.Audio.SoundInstance.Pitch)     | Gets or sets the audio pitch (frequency). |
+| [PlayState](xref:Xenko.Audio.SoundInstance.PlayState)	| Gets the state of the [SoundInstance](xref:Xenko.Audio.SoundInstance). |
+| [Position](xref:Xenko.Audio.SoundInstance.Position)	| Gets the current play position of the audio. |
+| [Volume](xref:Xenko.Audio.SoundInstance.Volume)	| Sets the audio volume. |
 
-For more details, see the [SoundInstance API documentation](xref:SiliconStudio.Xenko.Audio.SoundInstance).
+For more details, see the [SoundInstance API documentation](xref:Xenko.Audio.SoundInstance).
 
 > [!Note]
-If the sound is already playing, Xenko ignores all additional calls to [SoundInstance.Play](xref:SiliconStudio.Xenko.Audio.SoundInstance.Play).
-The same goes for [SoundInstance.Pause](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:SiliconStudio.Xenko.Audio.SoundInstance.Stop) (when a sound is already stopped).
+If the sound is already playing, Xenko ignores all additional calls to [SoundInstance.Play](xref:Xenko.Audio.SoundInstance.Play).
+The same goes for [SoundInstance.Pause](xref:Xenko.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:Xenko.Audio.SoundInstance.Stop) (when a sound is already stopped).
 
 For example, the following code:
 

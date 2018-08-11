@@ -3,13 +3,13 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class is the central class for displaying your game. It's used to create resources and present images on the screen. You can access it as a member of the @'SiliconStudio.Xenko.Engine.Game' and @'SiliconStudio.Xenko.Engine.ScriptComponent' classes.
+The @'Xenko.Graphics.GraphicsDevice' class is the central class for displaying your game. It's used to create resources and present images on the screen. You can access it as a member of the @'Xenko.Engine.Game' and @'Xenko.Engine.ScriptComponent' classes.
 
-Actions such as drawing, setting graphics states and using resources are recorded using @'SiliconStudio.Xenko.Graphics.CommandList' objects for later execution by the device.
+Actions such as drawing, setting graphics states and using resources are recorded using @'Xenko.Graphics.CommandList' objects for later execution by the device.
 
-Many command lists can be filled at the same time (eg one per thread). A default command list is available as member of the @'SiliconStudio.Xenko.Games.GameBase.GraphicsContext' of your @'SiliconStudio.Xenko.Engine.Game'.
+Many command lists can be filled at the same time (eg one per thread). A default command list is available as member of the @'Xenko.Games.GameBase.GraphicsContext' of your @'Xenko.Engine.Game'.
 
-In methods, these objects are typically provided through contexts such as @'SiliconStudio.Xenko.Rendering.RenderContext' and @'SiliconStudio.Xenko.Rendering.RenderDrawContext'.
+In methods, these objects are typically provided through contexts such as @'Xenko.Rendering.RenderContext' and @'Xenko.Rendering.RenderDrawContext'.
 
 Performing any drawing requires multiple steps, including:
 

@@ -623,7 +623,7 @@ Adding a link to a reference API can be done the following way:
 
 Example:
 ```
-Use the @'SiliconStudio.Xenko.Audio.SoundEffectInstance.Play' function start playing a sound.
+Use the @'Xenko.Audio.SoundEffectInstance.Play' function start playing a sound.
 Playing an ongoing sound has no effect. Playing a stopped sound restart the sound from beginning.
 ```
 

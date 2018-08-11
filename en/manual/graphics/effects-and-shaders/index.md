@@ -1,6 +1,6 @@
 # Effects and shaders
 
-Xenko uses a programmable shading pipeline. You can write [custom shaders](custom-shaders.md), create @'SiliconStudio.Xenko.Graphics.Effect's from them, and use them for drawing. The @'SiliconStudio.Xenko.Rendering.EffectSystem' class provides an easy way to load an effect.
+Xenko uses a programmable shading pipeline. You can write [custom shaders](custom-shaders.md), create @'Xenko.Graphics.Effect's from them, and use them for drawing. The @'Xenko.Rendering.EffectSystem' class provides an easy way to load an effect.
 
 ## Load an effect
 

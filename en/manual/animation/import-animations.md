@@ -47,7 +47,7 @@ You can view and edit their properties in the **Property Grid** (on the right by
 
 ## Use an animation asset
 
-To use an animation asset, add an [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
+To use an animation asset, add an [AnimationComponent](xref:Xenko.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
 
 >[!Note]
 >Make sure you correctly skin your mesh to the skeleton. If you don't, you won't be able to animate your model correctly.

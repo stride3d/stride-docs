@@ -17,14 +17,14 @@ To create an audio listener, attach an **audio listener component** to an entity
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click _Add Component_ and select [Audio listener component](xref:SiliconStudio.Xenko.Audio.AudioListener):
+2. In the **Property Grid**, click _Add Component_ and select [Audio listener component](xref:Xenko.Audio.AudioListener):
 
     ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 
     The entity is now an audio listener.
 
 > [!Warning] 
-On iOS, you can create multiple objects with [Audio listener component](xref:SiliconStudio.Xenko.Audio.AudioListener) in a scene, but only one is used at runtime.
+On iOS, you can create multiple objects with [Audio listener component](xref:Xenko.Audio.AudioListener) in a scene, but only one is used at runtime.
 
 ## See also
 * [Spatialized audio](spatialized-audio.md)

@@ -12,22 +12,22 @@ To reduce the number of draw calls, Xenko draws multiple elements using a sprite
 
 Xenko features many UI control components, including:
 
-* @'SiliconStudio.Xenko.UI.Controls.ImageElement'
-* @'SiliconStudio.Xenko.UI.Controls.ContentControl'
-  * @'SiliconStudio.Xenko.UI.Controls.ScrollViewer'
-  * @'SiliconStudio.Xenko.UI.Controls.Button'
-    * @'SiliconStudio.Xenko.UI.Controls.ToggleButton'
-  * @'SiliconStudio.Xenko.UI.Controls.ContentDecorator'
-* @'SiliconStudio.Xenko.UI.Controls.TextBlock'
-  * @'SiliconStudio.Xenko.UI.Controls.ScrollingText'
-* @'SiliconStudio.Xenko.UI.Controls.EditText' (displays soft keyboard on mobile devices)
-* @'SiliconStudio.Xenko.UI.Panels.Panel'
-  * @'SiliconStudio.Xenko.UI.Panels.StackPanel' (supports virtualization)
-  * @'SiliconStudio.Xenko.UI.Panels.Grid'
-  * @'SiliconStudio.Xenko.UI.Panels.UniformGrid'
-  * @'SiliconStudio.Xenko.UI.Panels.Canvas'
-* @'SiliconStudio.Xenko.UI.Controls.ScrollBar'
-* @'SiliconStudio.Xenko.UI.Controls.ModalElement'
+* @'Xenko.UI.Controls.ImageElement'
+* @'Xenko.UI.Controls.ContentControl'
+  * @'Xenko.UI.Controls.ScrollViewer'
+  * @'Xenko.UI.Controls.Button'
+    * @'Xenko.UI.Controls.ToggleButton'
+  * @'Xenko.UI.Controls.ContentDecorator'
+* @'Xenko.UI.Controls.TextBlock'
+  * @'Xenko.UI.Controls.ScrollingText'
+* @'Xenko.UI.Controls.EditText' (displays soft keyboard on mobile devices)
+* @'Xenko.UI.Panels.Panel'
+  * @'Xenko.UI.Panels.StackPanel' (supports virtualization)
+  * @'Xenko.UI.Panels.Grid'
+  * @'Xenko.UI.Panels.UniformGrid'
+  * @'Xenko.UI.Panels.Canvas'
+* @'Xenko.UI.Controls.ScrollBar'
+* @'Xenko.UI.Controls.ModalElement'
 
 You can also create your own.
 

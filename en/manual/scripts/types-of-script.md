@@ -9,7 +9,7 @@ When you write your script, inherit from the type of script with the behavior th
 
 ## Startup scripts
 
-Startup scripts only run when they are added or removed at runtime. They're mostly used to initialize game elements (eg spawning characters) and destroy them when the scene is unloaded. They have a [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method for initialization and a [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method. You can override either method if you need to.
+Startup scripts only run when they are added or removed at runtime. They're mostly used to initialize game elements (eg spawning characters) and destroy them when the scene is unloaded. They have a [Start](xref:Xenko.Engine.StartupScript.Start) method for initialization and a [Cancel](xref:Xenko.Engine.ScriptComponent.Cancel) method. You can override either method if you need to.
 
 Example:
 
@@ -27,9 +27,9 @@ public class StartUpScriptExample : StartupScript
 
 Synchronous scripts are initialized, then updated every frame, and finally canceled (when the script is removed).
 
-* The initialization code, if any, goes in the [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method.
-* The code performing the update goes in the [Update](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) method.
-* The code performing the cancellation goes in the [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method.
+* The initialization code, if any, goes in the [Start](xref:Xenko.Engine.StartupScript.Start) method.
+* The code performing the update goes in the [Update](xref:Xenko.Engine.SyncScript.Update) method.
+* The code performing the cancellation goes in the [Cancel](xref:Xenko.Engine.ScriptComponent.Cancel) method.
 
 The following script performs updates every frame, no matter what:
 
@@ -47,9 +47,9 @@ public class SampleSyncScript : SyncScript
 
 Asynchronous scripts are initialized only once, then canceled when removed from the scene.
 
-* Asynchronous code goes in the [Execute](xref:SiliconStudio.Xenko.Engine.AsyncScript.Execute) function.
+* Asynchronous code goes in the [Execute](xref:Xenko.Engine.AsyncScript.Execute) function.
 
-* Code performing the cancellation goes in the [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method.
+* Code performing the cancellation goes in the [Cancel](xref:Xenko.Engine.ScriptComponent.Cancel) method.
 
 The following script performs actions that depend on events and triggers:
 

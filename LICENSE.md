@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018 Silicon Studio Corp. (http://siliconstudio.co.jp)
-// Copyright (c) 2018 Xenko Team (https://xenko.com)
+// Copyright (c) 2018 Xenko contributors (https://xenko.com)
 
 All the Xenko documentation and the media it contains is licensed under the 
 Creative Commons Attribution 4.0 International License. 

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **log** information about your game while it runs using [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log).
+You can **log** information about your game while it runs using [Log](xref:Xenko.Engine.ScriptComponent.Log).
 
 Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. For example, you can create a log message that triggers when a character performs a certain action. This is useful to investigate how your game is performing.
 
@@ -15,7 +15,7 @@ The name of the module (such as the script containing the log message) is displa
 
 ![Logging in console](media/logging-in-console.png)
 
-The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'SiliconStudio.Core.Serialization.Contents.ContentManager'.
+The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'Xenko.Core.Serialization.Contents.ContentManager'.
 
 If you run your game from Visual Studio, log messages are shown in the Visual Studio **Output** window instead.
 
@@ -97,11 +97,11 @@ The following script checks that the texture `MyTexture` is loaded. When the tex
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SiliconStudio.Core.Diagnostics;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Graphics;
+using Xenko.Core.Diagnostics;
+using Xenko.Core.Mathematics;
+using Xenko.Input;
+using Xenko.Engine;
+using Xenko.Graphics;
 
 namespace MyGame
 {

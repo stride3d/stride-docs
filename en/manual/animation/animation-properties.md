@@ -52,15 +52,15 @@ Make sure you reference the same skeleton used by the model you want to animate.
 
 ## Root motion
 
-When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
+When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
 
 This is useful, for example, to animate entities that don't require skeletons, such as a [spot light](../graphics/lights-and-shadows/spot-lights.md) moving back and forth.
 
 >[!Note]
->If the animation has no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent), even if **root motion** is disabled.
+>If the animation has no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:Xenko.Engine.TransformComponent), even if **root motion** is disabled.
 
 >[!Note]
->The [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) is set to `0,0,0`.
+>The [TransformComponent](xref:Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Xenko.Engine.TransformComponent) is set to `0,0,0`.
 
 ## Import custom attributes
 

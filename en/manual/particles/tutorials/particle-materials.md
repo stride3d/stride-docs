@@ -120,7 +120,7 @@ If we define more streams in our shader (`ParticleCustomShader`), they're export
 The generated .cs file should now contain:
 
   ```cs
-namespace SiliconStudio.Xenko.Rendering
+namespace Xenko.Rendering
 {
     public static partial class ParticleCustomShaderKeys
     {
@@ -134,7 +134,7 @@ We don't need this stream for now, so we can delete it.
 We'll define some extra keys in `ParticleCustomMaterialKeys.cs` to use in our material and effects.
 
   ```cs
-namespace SiliconStudio.Xenko.Rendering
+namespace Xenko.Rendering
 {
     public partial class ParticleCustomShaderKeys
     {
@@ -158,7 +158,7 @@ namespace SiliconStudio.Xenko.Rendering
 }
 ```
 
-As we saw above, the generated class has the same name and the namespace is `SiliconStudio.Xenko.Rendering`, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
+As we saw above, the generated class has the same name and the namespace is `Xenko.Rendering`, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
 
 The rest of the code is self-explanatory. We'll need the map and value keys for shader generation later, and we'll set our generated code to the `BaseColor` and `BaseIntensity` keys respectively so the shader can use it.
 
@@ -206,7 +206,7 @@ By overriding the `Shading()` method we can define our custom behavior. Because 
 Our effect describes how to mix and compose the shaders. It's in `ParticleCustomEffect.xkfx`:
 
   ```cs
-namespace SiliconStudio.Xenko.Rendering
+namespace Xenko.Rendering
 {
     partial shader ParticleCustomEffect
     {
@@ -249,7 +249,7 @@ Last, we need a material which sets all the keys and uses the newly created effe
 
 #### Custom particle material
 
-We'll copy @'SiliconStudio.Xenko.Particles.Materials.ParticleMaterialComputeColor' into `ParticleCustomMaterial.cs` in our project and customize it to use two shaders for color binary trees.
+We'll copy @'Xenko.Particles.Materials.ParticleMaterialComputeColor' into `ParticleCustomMaterial.cs` in our project and customize it to use two shaders for color binary trees.
 
   ```cs
         [DataMemberIgnore]
@@ -269,7 +269,7 @@ The base class automatically tries to load the effect specified with `EffectName
         private AttributeDescription texCoord1 = new AttributeDescription("TEXCOORD1");
 ```
 
-In addition to the already existing @'SiliconStudio.Xenko.Rendering.Materials.IComputeColor', we'll use @'SiliconStudio.Xenko.Rendering.Materials.IComputeScalar' for intensity, which returns a float, rather than a float4. We will also add another  @'SiliconStudio.Xenko.Particles.Materials.UVBuilder' for a second texture coordinates animation.
+In addition to the already existing @'Xenko.Rendering.Materials.IComputeColor', we'll use @'Xenko.Rendering.Materials.IComputeScalar' for intensity, which returns a float, rather than a float4. We will also add another  @'Xenko.Particles.Materials.UVBuilder' for a second texture coordinates animation.
 
   ```cs
     var shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));

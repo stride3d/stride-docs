@@ -17,15 +17,15 @@ Xenko は、スクリプトを使用して入力を完全に処理します。�
 
 ## 入力を処理する
 
-入力は [InputManager](xref:SiliconStudio.Xenko.Input.InputManager) クラスで処理します。このクラスには、スクリプトからプロパティとメソッドを使用してアクセスできます。
+入力は [InputManager](xref:Xenko.Input.InputManager) クラスで処理します。このクラスには、スクリプトからプロパティとメソッドを使用してアクセスできます。
 
-特定の入力デバイスが使用できるかどうかを調べるには、対応する @'SiliconStudio.Xenko.Input.InputManager' プロパティを使用します。たとえば、マウスが接続されているかどうかを調べるには、[Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse) を使用します。
+特定の入力デバイスが使用できるかどうかを調べるには、対応する @'Xenko.Input.InputManager' プロパティを使用します。たとえば、マウスが接続されているかどうかを調べるには、[Input.HasMouse](xref:Xenko.Input.InputManager.HasMouse) を使用します。
 
 デバイスの使用可能性を調べた後、Xenko で入力を処理するには 4 つの方法があります。
 
 ### 状態を問い合わせる
 
-デジタル キーやボタンの状態 (_アップ_または_ダウン_) およびアナログ ボタンやセンサーの数値を問い合わせることができます。たとえば、@'SiliconStudio.Xenko.Input.InputManager.DownKeys' は、最後の更新で_ダウン_状態であったキーのリストを取得します。
+デジタル キーやボタンの状態 (_アップ_または_ダウン_) およびアナログ ボタンやセンサーの数値を問い合わせることができます。たとえば、@'Xenko.Input.InputManager.DownKeys' は、最後の更新で_ダウン_状態であったキーのリストを取得します。
 
 ![Query key and button states](media/index-state-one-action-between-updates.png)
 

@@ -31,7 +31,7 @@ Clears a frame, with a solid color.
 
 ## Camera renderer
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../cameras/camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras/index.md) in the scene so it can be displayed somewhere.
+Uses @'Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../cameras/camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras/index.md) in the scene so it can be displayed somewhere.
 
 ![Camera renderer properties](media/render-camera-1.png)
 
@@ -71,7 +71,7 @@ You configure the forward renderer properties in the **forward entry node**.
 
 ## Force aspect ratio scene renderer
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio and applies a letterbox if the ratio is different from the screen. Use this before the **render camera**.
+Uses @'Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio and applies a letterbox if the ratio is different from the screen. Use this before the **render camera**.
 
 ![Force aspect ratio](media/force-aspect-ratio-properties.png)
 

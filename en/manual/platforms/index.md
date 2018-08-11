@@ -13,7 +13,7 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 * [iOS 8.0 and later](ios.md)
 
 > [!TIP]
-> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:SiliconStudio.Core.Platform.Type) variable.
+> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:Xenko.Core.Platform.Type) variable.
 
 ## Supported graphics platforms
 

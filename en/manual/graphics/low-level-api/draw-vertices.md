@@ -17,7 +17,7 @@ Xenko provides the following set of built-in primitives:
 - Torus
 - Teapot
 
-They aren't automatically created along with the @'SiliconStudio.Xenko.Graphics.GraphicsDevice', so you have to instantiate them. You can do this through the @'SiliconStudio.Xenko.Graphics.GeometricPrimitives.GeometricPrimitive' class.
+They aren't automatically created along with the @'Xenko.Graphics.GraphicsDevice', so you have to instantiate them. You can do this through the @'Xenko.Graphics.GeometricPrimitives.GeometricPrimitive' class.
 
 **Code:** Creating and using a primitive
 
@@ -32,16 +32,16 @@ var myTorus = GeometricPrimitive.Torus.New(GraphicsDevice);
 myCube.Draw(CommandList, EffectInstance);
 ```
 
-They have no effect associated with them, so the user has to provide an @'SiliconStudio.Xenko.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../effects-and-shaders/index.md).
+They have no effect associated with them, so the user has to provide an @'Xenko.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../effects-and-shaders/index.md).
 
 ## Custom drawing
 
-Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a @'SiliconStudio.Xenko.Graphics.VertexDeclaration' has to be defined. A vertex declaration describes the elements of each vertex and their layout.
-For details, see the @'SiliconStudio.Xenko.Graphics.VertexElement' reference page.
+Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a @'Xenko.Graphics.VertexDeclaration' has to be defined. A vertex declaration describes the elements of each vertex and their layout.
+For details, see the @'Xenko.Graphics.VertexElement' reference page.
 
-Next, a vertex buffer can be created from an array of vertices. The vertex data type has to match the @'SiliconStudio.Xenko.Graphics.VertexDeclaration'.
+Next, a vertex buffer can be created from an array of vertices. The vertex data type has to match the @'Xenko.Graphics.VertexDeclaration'.
 
-Given vertex buffer and declaration, a @'SiliconStudio.Xenko.Graphics.VertexBufferBinding' can be created. 
+Given vertex buffer and declaration, a @'Xenko.Graphics.VertexBufferBinding' can be created. 
 
 **Code:** Creating a vertex buffer
 
@@ -57,9 +57,9 @@ var vertexBuffer = Buffer.Vertex.New(GraphicsDevice, vertices);
 var vertexBufferBinding = new VertexBufferBinding(vertexBuffer, layout, vertexCount);
 ```
 
-To draw the newly created vertex buffer, it has to be bound to the pipeline. The vertex layout and the @'SiliconStudio.Xenko.Graphics.PrimitiveType' to draw have to be included in the [pipeline state](pipeline-state.md) object. The buffer itself can be set dynamically.
+To draw the newly created vertex buffer, it has to be bound to the pipeline. The vertex layout and the @'Xenko.Graphics.PrimitiveType' to draw have to be included in the [pipeline state](pipeline-state.md) object. The buffer itself can be set dynamically.
 
-Afterwards, the vertices are ready to be rendered using @'SiliconStudio.Xenko.Graphics.CommandList.Draw(System.Int32,System.Int32)'.
+Afterwards, the vertices are ready to be rendered using @'Xenko.Graphics.CommandList.Draw(System.Int32,System.Int32)'.
 
 **Code:** Binding and drawing vertex buffers
 
@@ -79,7 +79,7 @@ commandList.Draw(vertexCount);
 ```
 
 It is also possible to draw indexed geometry. To use an index buffer, first create it similarly to the vertex buffer and bind it to the pipeline.
-It can then be used for drawing using @'SiliconStudio.Xenko.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)'.
+It can then be used for drawing using @'Xenko.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)'.
 
 **Code:** Drawing indexed vertices
 

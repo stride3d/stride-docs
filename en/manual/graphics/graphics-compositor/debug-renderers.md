@@ -25,11 +25,11 @@ For example, the **Debug physics shapes** script included in Xenko uses the debu
 ```cs
 using System.Linq;
 using System.Threading.Tasks;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Physics;
-using SiliconStudio.Xenko.Rendering;
-using SiliconStudio.Xenko.Rendering.Compositing;
+using Xenko.Input;
+using Xenko.Engine;
+using Xenko.Physics;
+using Xenko.Rendering;
+using Xenko.Rendering.Compositing;
 
 namespace MyGame
 {

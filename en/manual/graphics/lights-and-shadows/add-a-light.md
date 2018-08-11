@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-To add a light to a scene, add a [light component](xref:SiliconStudio.Xenko.Engine.LightComponent) to an entity.
+To add a light to a scene, add a [light component](xref:Xenko.Engine.LightComponent) to an entity.
 
 1. Select the entity you want to be a light.
 

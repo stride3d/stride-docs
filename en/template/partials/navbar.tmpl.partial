@@ -13,7 +13,7 @@
             <ul class="x_menu">
                 <li><a href="{{_rel}}.">Documentation</a></li>
                 <li><a href="{{_rel}}manual">Manual</a></li>
-                <li><a href="{{_rel}}api/SiliconStudio.Xenko.Engine.html">API</a></li>
+                <li><a href="{{_rel}}api/index.html">API</a></li>
                 <li><a href="{{_rel}}ReleaseNotes.html">Release Notes</a></li>
             </ul>
             -->

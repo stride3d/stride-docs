@@ -156,10 +156,10 @@ Let's write a script to change the size of the ball when it enters the trigger.
 3. Open the script, replace its content with the following code, and save the file:
 
     ```cs
-    using SiliconStudio.Xenko.Engine;
-    using SiliconStudio.Xenko.Physics;
+    using Xenko.Engine;
+    using Xenko.Physics;
     using System.Threading.Tasks;
-    using SiliconStudio.Core.Mathematics;
+    using Xenko.Core.Mathematics;
 
     namespace TransformTrigger
     // You can use any namespace you like for this script.
@@ -231,11 +231,11 @@ You can alter the script to make other changes when the sphere enters the trigge
 For example, you can switch the material on the sphere entity. This script switches the material on the Sphere entity from the **Sphere Material** to the **Ground Material** and back again:
 
 ```cs
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Physics;
+using Xenko.Engine;
+using Xenko.Physics;
 using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Rendering;
+using Xenko.Core.Mathematics;
+using Xenko.Rendering;
 
 namespace TransformTrigger
 // You can use any namespace you like for this script.

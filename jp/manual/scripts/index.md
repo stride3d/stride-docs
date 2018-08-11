@@ -11,19 +11,19 @@ Xenko のスクリプトは **C#** で記述します。Game Studio または別
 > [!NOTE]
 > このドキュメントでは C# については説明しません。
 
-スクリプトは [IScriptContext](xref:SiliconStudio.Xenko.Engine.IScriptContext) にアクセスでき、IScriptContext は Xenko エンジンの以下のメイン モジュールにアクセスします。
+スクリプトは [IScriptContext](xref:Xenko.Engine.IScriptContext) にアクセスでき、IScriptContext は Xenko エンジンの以下のメイン モジュールにアクセスします。
 
-* [Audio](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Audio): オーディオ システムです
-* [Content](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Content): アセットからコンテンツをロードして保存します
-* [EffectSystem](xref:SiliconStudio.Xenko.Engine.ScriptComponent.EffectSystem): エフェクトとシェーダーをロードしてコンパイルします
-* [Game](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Game): ゲームに関するすべての情報にアクセスします
-* [GraphicsDevice](xref:SiliconStudio.Xenko.Engine.ScriptComponent.GraphicsDevice): GPU リソースを作成するための低レベルのグラフィックス デバイスです
-* [Input](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Input): キーボード、マウス、ゲームパッドの状態とイベントです
-* [Services](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Services): 独自のサービスの登録に使用できるサービスのレジストリです
-* [SceneSystem](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SceneSystem): 現在表示されているシーンです
-* [Script](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Script): スクリプト マネージャーにアクセスして、スクリプトの終了をスケジュールまたは待機します
-* [SpriteAnimation](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SpriteAnimation): スプライトをアニメーション化します
-* [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log): スクリプトからのメッセージとエラーをログに記録します
+* [Audio](xref:Xenko.Engine.ScriptComponent.Audio): オーディオ システムです
+* [Content](xref:Xenko.Engine.ScriptComponent.Content): アセットからコンテンツをロードして保存します
+* [EffectSystem](xref:Xenko.Engine.ScriptComponent.EffectSystem): エフェクトとシェーダーをロードしてコンパイルします
+* [Game](xref:Xenko.Engine.ScriptComponent.Game): ゲームに関するすべての情報にアクセスします
+* [GraphicsDevice](xref:Xenko.Engine.ScriptComponent.GraphicsDevice): GPU リソースを作成するための低レベルのグラフィックス デバイスです
+* [Input](xref:Xenko.Engine.ScriptComponent.Input): キーボード、マウス、ゲームパッドの状態とイベントです
+* [Services](xref:Xenko.Engine.ScriptComponent.Services): 独自のサービスの登録に使用できるサービスのレジストリです
+* [SceneSystem](xref:Xenko.Engine.ScriptComponent.SceneSystem): 現在表示されているシーンです
+* [Script](xref:Xenko.Engine.ScriptComponent.Script): スクリプト マネージャーにアクセスして、スクリプトの終了をスケジュールまたは待機します
+* [SpriteAnimation](xref:Xenko.Engine.ScriptComponent.SpriteAnimation): スプライトをアニメーション化します
+* [Log](xref:Xenko.Engine.ScriptComponent.Log): スクリプトからのメッセージとエラーをログに記録します
 
 Xenko で C# の標準クラスを使用することもできますが、これらはスクリプトとは呼ばれず、Game Studio でエンティティにアタッチすることはできません。
 

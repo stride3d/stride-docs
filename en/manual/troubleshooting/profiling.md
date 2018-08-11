@@ -142,7 +142,7 @@ Number keys | Jump to a page
     Profiler.EnableProfiling(false, {mykey1,mykey2});
     ```
 
-* To access the prolifing key of a script, use [ProfilingKey](xref:SiliconStudio.Xenko.Engine.ScriptComponent.ProfilingKey).
+* To access the prolifing key of a script, use [ProfilingKey](xref:Xenko.Engine.ScriptComponent.ProfilingKey).
 
 ## Use external profiling tools
 

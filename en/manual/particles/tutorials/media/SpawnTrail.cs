@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SiliconStudio.Core;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Core;
+using Xenko.Engine;
 
 namespace MyTrailEffect
 {

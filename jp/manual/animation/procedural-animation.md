@@ -5,13 +5,13 @@
 
 **プロシージャル アニメーション**とは、アニメーションの代替となる方法です。アニメーションを自分で作成する代わりに、エンジン コンポーネントを使用して実行時に 3D モデルをアニメーション化できます。
 
-場合によっては、これによって一段と効率的で効果的なアニメーションを作成できます。たとえば、プレイヤーが収縮銃でモンスターを撃ったときに発生する収縮効果を考えてみましょう。複雑な収縮アニメーションを作成する代わりに、エンティティ [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) にアクセスし、敵のスケールを必要なサイズまで減らすだけで効果を実現できます。
+場合によっては、これによって一段と効率的で効果的なアニメーションを作成できます。たとえば、プレイヤーが収縮銃でモンスターを撃ったときに発生する収縮効果を考えてみましょう。複雑な収縮アニメーションを作成する代わりに、エンティティ [TransformComponent](xref:Xenko.Engine.TransformComponent) にアクセスし、敵のスケールを必要なサイズまで減らすだけで効果を実現できます。
 
 次のような複数のコンポーネントにアクセスして、モデルを実行時にアニメーション化できます。
 
-* [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent)
-* [LightComponent](xref:SiliconStudio.Xenko.Engine.LightComponent)
-* [RigidBodyComponent](xref:SiliconStudio.Xenko.Physics.RigidbodyComponent)
+* [TransformComponent](xref:Xenko.Engine.TransformComponent)
+* [LightComponent](xref:Xenko.Engine.LightComponent)
+* [RigidBodyComponent](xref:Xenko.Physics.RigidbodyComponent)
 
 ## コード サンプル
 

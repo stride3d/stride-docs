@@ -32,10 +32,10 @@ To do this, you need the following assets in your project:
 
     ![Enable root motion](media/enable-root-motion.png)
 
-    When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
+    When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
 
     >[!Note]
-    >If there is no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent), even if **root motion** is disabled.
+    >If there is no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:Xenko.Engine.TransformComponent), even if **root motion** is disabled.
 
 3. In the **Scene Editor**, select the entity that contains the camera you want to animate.
 
@@ -116,7 +116,7 @@ To do this, you need the following assets in your project:
     ![Add component](../../particles/tutorials/media/add-model-node-link.png)
 
     >[!Note]
-    >The [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) is set to `0,0,0`.
+    >The [TransformComponent](xref:Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Xenko.Engine.TransformComponent) is set to `0,0,0`.
 
     Game Studio adds a model link component to the entity.
 

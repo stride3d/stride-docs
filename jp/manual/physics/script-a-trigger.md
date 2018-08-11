@@ -156,10 +156,10 @@
 3. スクリプトを開き、内容を以下のコードに置き換えて、ファイルを保存します。
 
     ```cs
-    using SiliconStudio.Xenko.Engine;
-    using SiliconStudio.Xenko.Physics;
+    using Xenko.Engine;
+    using Xenko.Physics;
     using System.Threading.Tasks;
-    using SiliconStudio.Core.Mathematics;
+    using Xenko.Core.Mathematics;
 
     namespace TransformTrigger
     // このスクリプトには好みで任意の名前空間を使用できる。
@@ -231,11 +231,11 @@
 たとえば、球体エンティティのマテリアルを切り替えることができます。次のスクリプトは、Sphere エンティティのマテリアルを **Sphere Material** から **Ground Material** に切り替えて、元に戻します。
 
 ```cs
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Physics;
+using Xenko.Engine;
+using Xenko.Physics;
 using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Rendering;
+using Xenko.Core.Mathematics;
+using Xenko.Rendering;
 
 namespace TransformTrigger
 // このスクリプトには好みで任意の名前空間を使用できる。

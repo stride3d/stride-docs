@@ -5,7 +5,7 @@
 
 # Assets
 
-After creating your assets in Game Studio, @'SiliconStudio.Core.Serialization.Assets.AssetManager' is the class responsible for loading, unloading and saving assets.
+After creating your assets in Game Studio, @'Xenko.Core.Serialization.Assets.AssetManager' is the class responsible for loading, unloading and saving assets.
 
 ## Creating
 
@@ -22,7 +22,7 @@ For more information, see [Assets](../../game-studio/assets.md) for more details
 
 ## Loading
 
-Loading an asset should be done with the help of @'SiliconStudio.Core.Serialization.Assets.AssetManager' class:
+Loading an asset should be done with the help of @'Xenko.Core.Serialization.Assets.AssetManager' class:
 
 ```cs
 // Load an asset directly from a file:
@@ -54,7 +54,7 @@ An asset is actually loaded only during the first call to 'load'. All subsequent
 
 An asset is actually unload only when the number of call to unload match the number of call the load.
 
-The @'SiliconStudio.Core.Serialization.Assets.AssetManager.Get' method returns the reference to a loaded asset but does not increment the asset reference counter.
+The @'Xenko.Core.Serialization.Assets.AssetManager.Get' method returns the reference to a loaded asset but does not increment the asset reference counter.
 
 ```cs
  var firstReference = Content.Load<Texture>("MyTexture"); // load the asset and increase the reference counter (ref count = 1)

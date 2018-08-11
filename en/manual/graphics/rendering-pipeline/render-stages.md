@@ -9,7 +9,7 @@ Objects can subscribe to multiple render stages. For example, a mesh typically s
 
 ## Effect slots
 
-**Effect slots** determine which [effect/shader](../effects-and-shaders/index.md) a render stage uses. You choose the effect slot with @'SiliconStudio.Xenko.Rendering.RenderStage.EffectSlotName'.
+**Effect slots** determine which [effect/shader](../effects-and-shaders/index.md) a render stage uses. You choose the effect slot with @'Xenko.Rendering.RenderStage.EffectSlotName'.
 
 If multiple render stages exclusively render different objects, the stages can share the same effect slot. For example, as the opaque stage only renders opaque objects and the transparent stage only renders transparent objects, both stages can use the main effect slot.
 
@@ -26,17 +26,17 @@ A typical setup of render stages:
 
 ## Sort objects in a render stage
 
-@'SiliconStudio.Xenko.Rendering.RenderStage.SortMode' defines how Xenko sorts objects in that render stage. Xenko comes with several @'SiliconStudio.Xenko.Rendering.SortMode' implementations, such as:
+@'Xenko.Rendering.RenderStage.SortMode' defines how Xenko sorts objects in that render stage. Xenko comes with several @'Xenko.Rendering.SortMode' implementations, such as:
 
-- @'SiliconStudio.Xenko.Rendering.FrontToBackSortMode', which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque objects and shadows)
-- @'SiliconStudio.Xenko.Rendering.BackToFrontSortMode', which renders objects strictly from back to front (useful for transparent objects)
-- @'SiliconStudio.Xenko.Rendering.StateChangeSortMode', which tries to reduce state changes
+- @'Xenko.Rendering.FrontToBackSortMode', which renders objects from front to back with limited precision, and tries to avoid state changes in the same depth range of objects (useful for opaque objects and shadows)
+- @'Xenko.Rendering.BackToFrontSortMode', which renders objects strictly from back to front (useful for transparent objects)
+- @'Xenko.Rendering.StateChangeSortMode', which tries to reduce state changes
 
 Of course, you're free to implement your own, too.
 
 ## Filter objects in a render stage
 
-To create your own filter for objects in a render stage, inherit from @'SiliconStudio.Xenko.Rendering.RenderStageFilter'.
+To create your own filter for objects in a render stage, inherit from @'Xenko.Rendering.RenderStageFilter'.
 
 ### Render stage selectors
 
@@ -44,8 +44,8 @@ To create your own filter for objects in a render stage, inherit from @'SiliconS
 
 For example, this is the typical setup for meshes:
 
-- @'SiliconStudio.Xenko.Rendering.MeshTransparentRenderStageSelector' chooses either the `Main` or `Transparent` render stage, depending on the material properties. The default effect is `XenkoForwardShadingEffect` defined by Xenko (you can create your own if you want).
-- @'SiliconStudio.Xenko.Rendering.Shadows.ShadowMapRenderStageSelector' selects opaque meshes that cast shadows and adds them to the `ShadowMapCaster` render stage. The default effect is `XenkoForwardShadingEffect.ShadowMapCaster`, defined by Xenko.
+- @'Xenko.Rendering.MeshTransparentRenderStageSelector' chooses either the `Main` or `Transparent` render stage, depending on the material properties. The default effect is `XenkoForwardShadingEffect` defined by Xenko (you can create your own if you want).
+- @'Xenko.Rendering.Shadows.ShadowMapRenderStageSelector' selects opaque meshes that cast shadows and adds them to the `ShadowMapCaster` render stage. The default effect is `XenkoForwardShadingEffect.ShadowMapCaster`, defined by Xenko.
 
 Either can filter by [render group](../graphics-compositor/render-groups-and-masks.md).
 

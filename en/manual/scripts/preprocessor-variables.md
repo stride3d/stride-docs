@@ -3,10 +3,10 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-If you're developing for multiple platforms, you often need to write custom code for each platform. In most cases, the best way to do this is to use [Platform.Type](xref:SiliconStudio.Core.Platform.Type) and [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform). Alternatively, you can use **preprocessor variables**.
+If you're developing for multiple platforms, you often need to write custom code for each platform. In most cases, the best way to do this is to use [Platform.Type](xref:Xenko.Core.Platform.Type) and [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform). Alternatively, you can use **preprocessor variables**.
 
 > [!Warning]
-> We recommend you avoid using preprocessor variables where possible, and instead use [Platform.Type](xref:SiliconStudio.Core.Platform.Type) and [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform). This is because you might miss errors in your code, as only code for your target platform is checked at compile time.
+> We recommend you avoid using preprocessor variables where possible, and instead use [Platform.Type](xref:Xenko.Core.Platform.Type) and [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform). This is because you might miss errors in your code, as only code for your target platform is checked at compile time.
 
 ## Platforms
 
@@ -24,11 +24,11 @@ If you're developing for multiple platforms, you often need to write custom code
 
 | Variable                                      | Value                 |
 | --------------------------------------------- | --------------------- |
-| SILICONSTUDIO_XENKO_GRAPHICS_API_DIRECT3D   | Direct3D 11           |
-| SILICONSTUDIO_XENKO_GRAPHICS_API_OPENGL     | OpenGL (Core and ES)  |
-| SILICONSTUDIO_XENKO_GRAPHICS_API_OPENGLCORE | OpenGL Core (Desktop) |
-| SILICONSTUDIO_XENKO_GRAPHICS_API_OPENGLES   | OpenGL ES             |
-| SILICONSTUDIO_XENKO_GRAPHICS_API_VULKAN     | Vulkan                |
+| Xenko_GRAPHICS_API_DIRECT3D   | Direct3D 11           |
+| Xenko_GRAPHICS_API_OPENGL     | OpenGL (Core and ES)  |
+| Xenko_GRAPHICS_API_OPENGLCORE | OpenGL Core (Desktop) |
+| Xenko_GRAPHICS_API_OPENGLES   | OpenGL ES             |
+| Xenko_GRAPHICS_API_VULKAN     | Vulkan                |
 
 ## Example
 

@@ -58,7 +58,7 @@ Xenko overrides the graphics platform for the platforms you selected.
 
 2. Run the project. 
 
-3. Check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+3. Check the value of the [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) variable.
 
     For example, this project is using Vulkan:
 

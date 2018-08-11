@@ -1,6 +1,6 @@
 # Render features
 
-A @'SiliconStudio.Xenko.Rendering.RenderFeature' is responsible for drawing a given type of @'SiliconStudio.Xenko.Rendering.RenderObject'.
+A @'Xenko.Rendering.RenderFeature' is responsible for drawing a given type of @'Xenko.Rendering.RenderObject'.
 
 ## Render phases
 
@@ -18,7 +18,7 @@ The collect phase:
 
 ### Extract
 
-The **extract** phase copies data from game states of previously collected objects to short-lived render-specific structures. It's usually driven by the @'SiliconStudio.Xenko.Rendering.RenderSystem' and @'SiliconStudio.Xenko.Rendering.RenderFeature's.
+The **extract** phase copies data from game states of previously collected objects to short-lived render-specific structures. It's usually driven by the @'Xenko.Rendering.RenderSystem' and @'Xenko.Rendering.RenderFeature's.
 
 This should be as fast as possible and avoid heavy computations since game update and scripts are blocked. Heavy computations should be deferred to [Prepare](#prepare).
 
@@ -32,7 +32,7 @@ Example tasks:
 
 ### Prepare
 
-The **prepare** phase prepares GPU resources and performs heavy computations. This is usually driven by the @'SiliconStudio.Xenko.Rendering.RenderSystem' and @'SiliconStudio.Xenko.Rendering.RenderFeature's.
+The **prepare** phase prepares GPU resources and performs heavy computations. This is usually driven by the @'Xenko.Rendering.RenderSystem' and @'Xenko.Rendering.RenderFeature's.
 
 Example tasks:
 

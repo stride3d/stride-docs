@@ -54,7 +54,7 @@ For example, imagine you have two models: a knight, and a sword. The character h
 
 ## Offset
 
-To add an offset to the linked entity, use the entity's [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
+To add an offset to the linked entity, use the entity's [TransformComponent](xref:Xenko.Engine.TransformComponent).
 
 ![Transform](media/transform-component.png)
 

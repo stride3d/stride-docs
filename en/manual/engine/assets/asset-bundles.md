@@ -76,7 +76,7 @@ Bundles:
 
 # Load a bundle at runtime
 
-Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{SiliconStudio.Core.Storage.ObjectDatabase.LoadBundle})`:
+Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{Xenko.Core.Storage.ObjectDatabase.LoadBundle})`:
 
 ```cs
 // Load bundle

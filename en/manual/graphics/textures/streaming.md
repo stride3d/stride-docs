@@ -65,7 +65,7 @@ For instructions about how to access the global streaming settings, see the [Gam
 
 ## Access the streaming manager in code
 
-Use [Streaming](xref:SiliconStudio.Xenko.Streaming).
+Use [Streaming](xref:Xenko.Streaming).
 
 For example, to disable streaming globally, use:
 
@@ -87,7 +87,7 @@ var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.St
 
 ### Options
 
-There are three [StreamingOptions](xref:SiliconStudio.Xenko.Streaming.StreamingOptions):
+There are three [StreamingOptions](xref:Xenko.Streaming.StreamingOptions):
 
 * The `KeepLoaded` option keeps the texture in memory even when the memory budget is exceeded.
 
@@ -111,7 +111,7 @@ Streaming.SetResourceStreamingOptions(myTexture, myNewOptions);
 
 ## See also
 
-* [StreamingManager API](xref:SiliconStudio.Xenko.Streaming.StreamingManager)
+* [StreamingManager API](xref:Xenko.Streaming.StreamingManager)
 * [Textures index](index.md)
 * [Texture compression](compression.md)
 * [Game Settings](../../game-studio/game-settings.md)

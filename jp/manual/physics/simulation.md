@@ -3,19 +3,19 @@
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-Xenko の物理特性は、[Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) クラスによって制御されます。
-Xenko による [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) の初期化方法は、**GameSettings** アセットのプロパティでアクセスする [PhysicsSettings](xref:SiliconStudio.Xenko.Physics.PhysicsSettings) のフラグを修正することによって変更できます。
+Xenko の物理特性は、[Simulation](xref:Xenko.Physics.Simulation) クラスによって制御されます。
+Xenko による [Simulation](xref:Xenko.Physics.Simulation) の初期化方法は、**GameSettings** アセットのプロパティでアクセスする [PhysicsSettings](xref:Xenko.Physics.PhysicsSettings) のフラグを修正することによって変更できます。
 
 ![Physics Settings](media/simulation-physics-settings.png)
 
-* `CollisionsOnly` は、衝突検出を有効にして [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) を初期化しますが、他の物理特性はありません。オブジェクトは物理的な力に反応しません。
+* `CollisionsOnly` は、衝突検出を有効にして [Simulation](xref:Xenko.Physics.Simulation) を初期化しますが、他の物理特性はありません。オブジェクトは物理的な力に反応しません。
 
-* `ContinuousCollisionDetection` は、連続衝突検出 (CCD) を有効にして [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) を初期化します。CCD は、高速で移動するエンティティ (弾丸など) が誤って他のエンティティを通り抜けないようにします。
+* `ContinuousCollisionDetection` は、連続衝突検出 (CCD) を有効にして [Simulation](xref:Xenko.Physics.Simulation) を初期化します。CCD は、高速で移動するエンティティ (弾丸など) が誤って他のエンティティを通り抜けないようにします。
 
 > [!NOTE]
 > ``SoftBodySupport``、``MultiThreaded``、``UseHardwareWhenPossible`` の各フラグは、現在は無効になっています。
 
-実行時に、[Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) の一部のパラメーターを変更できます。
+実行時に、[Simulation](xref:Xenko.Physics.Simulation) の一部のパラメーターを変更できます。
 
 * `Gravity` — グローバル重力 ([ワールド単位](../game-studio/world-units.md)毎秒毎秒単位)
 * `FixedTimeStep` — シミュレーションの時間ステップの長さ (秒単位)

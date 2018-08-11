@@ -9,7 +9,7 @@ Xenko のスクリプトの主要な種類は、**スタートアップ スク�
 
 ## スタートアップ スクリプト
 
-スタートアップ スクリプトは、実行時に追加または削除されたときにのみ実行します。主として、ゲーム要素の初期化 (キャラクターの生成など) およびシーンがアンロードされるときのゲーム要素の破棄に使用されます。初期化用の [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) メソッドと、[Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) メソッドを持っています。どちらのメソッドも必要に応じてオーバーライドできます。
+スタートアップ スクリプトは、実行時に追加または削除されたときにのみ実行します。主として、ゲーム要素の初期化 (キャラクターの生成など) およびシーンがアンロードされるときのゲーム要素の破棄に使用されます。初期化用の [Start](xref:Xenko.Engine.StartupScript.Start) メソッドと、[Cancel](xref:Xenko.Engine.ScriptComponent.Cancel) メソッドを持っています。どちらのメソッドも必要に応じてオーバーライドできます。
 
 例:
 
@@ -27,9 +27,9 @@ public class StartUpScriptExample : StartupScript
 
 同期スクリプトは、初期化された後、フレームごとに更新され、最終的にキャンセルされます (スクリプトが削除されるとき)。
 
-* 初期化コードがある場合は、[Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) メソッドに記述します。
-* 更新を実行するコードは、[Update](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) メソッドに記述します。
-* キャンセルを実行するコードは、[Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) メソッドに記述します。
+* 初期化コードがある場合は、[Start](xref:Xenko.Engine.StartupScript.Start) メソッドに記述します。
+* 更新を実行するコードは、[Update](xref:Xenko.Engine.SyncScript.Update) メソッドに記述します。
+* キャンセルを実行するコードは、[Cancel](xref:Xenko.Engine.ScriptComponent.Cancel) メソッドに記述します。
 
 次のスクリプトは、無条件に、すべてのフレームで更新を実行します。
 
@@ -47,9 +47,9 @@ public class SampleSyncScript : SyncScript
 
 非同期スクリプトは、1 回だけ初期化された後、シーンから削除されるときにキャンセルされます。
 
-* 非同期コードは、[Execute](xref:"SiliconStudio.Xenko.Engine.AsyncScript.Execute") 関数に記述します。
+* 非同期コードは、[Execute](xref:"Xenko.Engine.AsyncScript.Execute") 関数に記述します。
 
-* キャンセルを実行するコードは、[Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) メソッドに記述します。
+* キャンセルを実行するコードは、[Cancel](xref:Xenko.Engine.ScriptComponent.Cancel) メソッドに記述します。
 
 次のスクリプトは、イベントとトリガーに応じたアクションを実行します。
 

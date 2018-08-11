@@ -14,25 +14,25 @@
 
 ジェスチャの認識を有効にするには:
 
-1. 認識するジェスチャの構成クラスのインスタンスを作成します。たとえば、ドラッグ ジェスチャの場合は、@'SiliconStudio.Xenko.Input.GestureConfigDrag' のインスタンスを作成します。
+1. 認識するジェスチャの構成クラスのインスタンスを作成します。たとえば、ドラッグ ジェスチャの場合は、@'Xenko.Input.GestureConfigDrag' のインスタンスを作成します。
 2. クラスのパラメーターを構成します。
-3. ジェスチャの構成を @'SiliconStudio.Xenko.Input.InputManager.Gestures' コレクションに追加します。
+3. ジェスチャの構成を @'Xenko.Input.InputManager.Gestures' コレクションに追加します。
 
 > [!WARNING]
-> ジェスチャの認識をアクティブにした後では、ジェスチャのパラメーターを変更できません。パラメーターを変更する必要がある場合は、@'SiliconStudio.Xenko.Input.InputManager.Gestures' コレクションからジェスチャを削除し、新しいパラメーターで新しいエントリを作成する必要があります。
+> ジェスチャの認識をアクティブにした後では、ジェスチャのパラメーターを変更できません。パラメーターを変更する必要がある場合は、@'Xenko.Input.InputManager.Gestures' コレクションからジェスチャを削除し、新しいパラメーターで新しいエントリを作成する必要があります。
 
 ### ジェスチャの認識を無効にする
 
-[InputManager.Gestures](xref:SiliconStudio.Xenko.Input.InputManager.Gestures) コレクションからジェスチャを削除します。
+[InputManager.Gestures](xref:Xenko.Input.InputManager.Gestures) コレクションからジェスチャを削除します。
 
 ## ジェスチャの認識
 
-入力システムは、ジェスチャを検出すると、@'SiliconStudio.Xenko.Input.GestureEvent' を [InputManager.GestureEvents](xref:SiliconStudio.Xenko.Input.InputManager.GestureEvents) のリストに追加します。イベントには、ジェスチャとその状態に関する情報が含まれます (ジェスチャの場所や使用された指の数など)。
+入力システムは、ジェスチャを検出すると、@'Xenko.Input.GestureEvent' を [InputManager.GestureEvents](xref:Xenko.Input.InputManager.GestureEvents) のリストに追加します。イベントには、ジェスチャとその状態に関する情報が含まれます (ジェスチャの場所や使用された指の数など)。
 
 > [!NOTE]
 > 各ジェスチャには、固有のジェスチャ イベント クラスが関連付けられています (後述)。
 
-[GestureEvent.Type](xref:SiliconStudio.Xenko.Input.GestureEvent.Type) フィールドは、どのジェスチャが認識されたかを示します。基底ジェスチャ イベントをジェスチャ固有のイベント型にキャストして、イベントに関するジェスチャ型固有の情報を取得できます。
+[GestureEvent.Type](xref:Xenko.Input.GestureEvent.Type) フィールドは、どのジェスチャが認識されたかを示します。基底ジェスチャ イベントをジェスチャ固有のイベント型にキャストして、イベントに関するジェスチャ型固有の情報を取得できます。
 
 Xenko は同時に複数のジェスチャを検出できるので、イベント リストは 1 回の更新で複数の項目を格納することができます。
 
@@ -40,7 +40,7 @@ Xenko は同時に複数のジェスチャを検出できるので、イベン�
 
 ## ジェスチャを構成する
 
-@'SiliconStudio.Xenko.Input.GestureConfig' クラスでは、次のようなパラメーターを構成できます。
+@'Xenko.Input.GestureConfig' クラスでは、次のようなパラメーターを構成できます。
 
 * ジェスチャが使用する指の数
 
@@ -65,7 +65,7 @@ Xenko は同時に複数のジェスチャを検出できるので、イベン�
 
 **単独**ジェスチャ (タップ、フリック、長押し) は常に_発生_状態になっています。**連続**ジェスチャ (ドラッグ、複合) は常に、_開始_状態で開始し、何らかの_変更_状態がそれに続き、_終了_状態で終了します。
 
-ジェスチャの現在の状態を問い合わせるには、トリガーされたジェスチャ イベントの [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) フィールドを使用します。
+ジェスチャの現在の状態を問い合わせるには、トリガーされたジェスチャ イベントの [GestureEvent.State](xref:Xenko.Input.GestureEvent.State) フィールドを使用します。
 
 ## ジェスチャの種類
 
@@ -93,14 +93,14 @@ Xenko がサポートするジェスチャには大きく分けて次の 2 つ�
 
 ユーザーは、画面に触れて、すぐに指を離します。
 
-**構成クラス**: @'SiliconStudio.Xenko.Input.GestureConfigTap'
+**構成クラス**: @'Xenko.Input.GestureConfigTap'
 
-**イベント クラス**: @'SiliconStudio.Xenko.Input.GestureEventTap'
+**イベント クラス**: @'Xenko.Input.GestureEventTap'
 
-画面に触れる指の数をジェスチャの間に変えることはできません。タップに必要な指の数を設定するには、@'SiliconStudio.Xenko.Input.GestureConfig.RequiredNumberOfFingers' を変更します。
+画面に触れる指の数をジェスチャの間に変えることはできません。タップに必要な指の数を設定するには、@'Xenko.Input.GestureConfig.RequiredNumberOfFingers' を変更します。
 
 > [!TIP]
-> シングル タップとマルチ タップを区別するため、システムはタップ イベントでのレイテンシを使用します。これを無効にするには、[GestureConfigTap.MaximumTimeBetweenTaps](xref:SiliconStudio.Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps) フィールドを **0** に設定します。
+> シングル タップとマルチ タップを区別するため、システムはタップ イベントでのレイテンシを使用します。これを無効にするには、[GestureConfigTap.MaximumTimeBetweenTaps](xref:Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps) フィールドを **0** に設定します。
 
 #### <a name="Flick">フリック</a>
 
@@ -108,16 +108,16 @@ Xenko がサポートするジェスチャには大きく分けて次の 2 つ�
 
 ユーザーは、画面に触れて、すばやい直線的な移動を行った後、指を離します。
 
-**構成クラス**: @'SiliconStudio.Xenko.Input.GestureConfigFlick'
+**構成クラス**: @'Xenko.Input.GestureConfigFlick'
 
-**イベント クラス**: @'SiliconStudio.Xenko.Input.GestureEventFlick'
+**イベント クラス**: @'Xenko.Input.GestureEventFlick'
 
 面に触れる指の数をジェスチャの間に変えることはできません。
 
-フリック ジェスチャの最小の長さを設定するには、[GestureConfigFlick.MinimumFlickLength](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength) を使用します。
+フリック ジェスチャの最小の長さを設定するには、[GestureConfigFlick.MinimumFlickLength](xref:Xenko.Input.GestureConfigFlick.MinimumFlickLength) を使用します。
 
 フリックの方向を**上下**または**左右**に制限するには、
-[GestureConfigFlick.FlickShape](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.FlickShape) を使用します。
+[GestureConfigFlick.FlickShape](xref:Xenko.Input.GestureConfigFlick.FlickShape) を使用します。
 
 #### <a name="Long-press">長押し</a>
 
@@ -125,13 +125,13 @@ Xenko がサポートするジェスチャには大きく分けて次の 2 つ�
 
 ユーザーは、画面に触れて、一定の時間、指を離さずに圧力をかけ続けます (既定の時間は 1 秒です)。
 
-**構成クラス**: [GestureConfigLongPress](xref:SiliconStudio.Xenko.Input.GestureConfigLongPress)
+**構成クラス**: [GestureConfigLongPress](xref:Xenko.Input.GestureConfigLongPress)
 
-**イベント クラス**: [GestureEventLongPress](xref:SiliconStudio.Xenko.Input.GestureEventLongPress)
+**イベント クラス**: [GestureEventLongPress](xref:Xenko.Input.GestureEventLongPress)
 
 画面に触れる指の数をジェスチャの間に変えることはできません。
 
-長押しジェスチャで押している最小限の時間の長さを変更するには、[GestureConfigLongPress.RequiredPressTime](xref:SiliconStudio.Xenko.Input.GestureConfigLongPress.RequiredPressTime) を変更します。
+長押しジェスチャで押している最小限の時間の長さを変更するには、[GestureConfigLongPress.RequiredPressTime](xref:Xenko.Input.GestureConfigLongPress.RequiredPressTime) を変更します。
 
 ### 連続ジェスチャ
 
@@ -141,15 +141,15 @@ Xenko がサポートするジェスチャには大きく分けて次の 2 つ�
 
 ユーザーは、画面に触れて、移動を行った後、指を離します。
 
-**構成クラス**: [GestureConfigDrag](xref:SiliconStudio.Xenko.Input.GestureConfigDrag)
+**構成クラス**: [GestureConfigDrag](xref:Xenko.Input.GestureConfigDrag)
 
-**イベント クラス**: [GestureEventDrag](xref:SiliconStudio.Xenko.Input.GestureEventDrag)
+**イベント クラス**: [GestureEventDrag](xref:Xenko.Input.GestureEventDrag)
 
 画面に触れる指の数をジェスチャの間に変えることはできません。
 
-短いドラッグを検出するには、[GestureConfigDrag.MinimumDragDistance](xref:SiliconStudio.Xenko.Input.GestureConfigDrag.MinimumDragDistance) を小さくします。
+短いドラッグを検出するには、[GestureConfigDrag.MinimumDragDistance](xref:Xenko.Input.GestureConfigDrag.MinimumDragDistance) を小さくします。
 
-ドラッグの方向を**上下**または**左右**に制限するには、[GestureConfigDrag.DragShape](xref:SiliconStudio.Xenko.Input.GestureConfigDrag.DragShape) を使用します。
+ドラッグの方向を**上下**または**左右**に制限するには、[GestureConfigDrag.DragShape](xref:Xenko.Input.GestureConfigDrag.DragShape) を使用します。
 
 #### <a name="Composite">複合</a>
 
@@ -157,9 +157,9 @@ Xenko がサポートするジェスチャには大きく分けて次の 2 つ�
 
 ユーザーは、2 本の指で画面に触れて、各指を個別に動かします。
 
-**構成クラス**: @'SiliconStudio.Xenko.Input.GestureConfigComposite'
+**構成クラス**: @'Xenko.Input.GestureConfigComposite'
 
-**イベント クラス**: @'SiliconStudio.Xenko.Input.GestureEventComposite'
+**イベント クラス**: @'Xenko.Input.GestureEventComposite'
 
 複合ジェスチャを行うには、正確に 2 本の指で画面に触れる必要があります。システムが 3 つの基本アクションのいずれかを検出すると、複合ジェスチャがトリガーされます。
 * _平行移動_: ユーザーは、2 本の指を一緒に同じ方向へ動かします。
@@ -213,7 +213,7 @@ var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zer
 
 ### ジェスチャ イベントにアクセスする
 
-認識されたジェスチャによってトリガーされたイベントのリストにアクセスするには、[InputManager.GestureEvents](xref:SiliconStudio.Xenko.Input.InputManager.GestureEvents) コレクションを使用します。このコレクションは、更新のたびに自動的に作成されます。
+認識されたジェスチャによってトリガーされたイベントのリストにアクセスするには、[InputManager.GestureEvents](xref:Xenko.Input.InputManager.GestureEvents) コレクションを使用します。このコレクションは、更新のたびに自動的に作成されます。
 
 ```cs
 var currentFrameGestureEvents = Input.GestureEvents;
@@ -221,7 +221,7 @@ var currentFrameGestureEvents = Input.GestureEvents;
 
 ### ジェスチャの種類を識別する
 
-[GestureEvent.Type](xref:SiliconStudio.Xenko.Input.GestureEvent.Type) フィールドを使用してジェスチャの種類を識別した後、それを適切なイベント型にキャストして、イベントに関する他の情報を取得します。
+[GestureEvent.Type](xref:Xenko.Input.GestureEvent.Type) フィールドを使用してジェスチャの種類を識別した後、それを適切なイベント型にキャストして、イベントに関する他の情報を取得します。
 
 ```cs
 foreach( var gestureEvent in Input.GestureEvents)
@@ -240,7 +240,7 @@ foreach( var gestureEvent in Input.GestureEvents)
 
 ### ジェスチャの状態を識別する
 
-ジェスチャ イベントの状態を取得するには、[GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) フィールドを使用します。
+ジェスチャ イベントの状態を取得するには、[GestureEvent.State](xref:Xenko.Input.GestureEvent.State) フィールドを使用します。
 
 ```cs
 switch(compositeGestureEvent.State)

@@ -86,7 +86,7 @@ We'll create a spawner which emits particles per second **and** in bursts every 
     }
 ```
 
-This class mimics the @'SiliconStudio.Xenko.Particles.Spawners.ParticleSpawner', with the addition of a `BurstCount` and a `burstTimer` to control how often and how many particles are spawned in bursts.
+This class mimics the @'Xenko.Particles.Spawners.ParticleSpawner', with the addition of a `BurstCount` and a `burstTimer` to control how often and how many particles are spawned in bursts.
 
 The `SpawnNew` method is called every frame to allow the spawner to calculate how many new particles should be emitted in the emitter based on the elapsed time.
 
@@ -129,7 +129,7 @@ We want to place the particles in a cone and shoot them outwards when they spawn
     }
 ```
 
-Our initializer simply defines an angle for the cone and strength for the velocity. Any scaling and rotation of the cone come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. For more information, see the @'SiliconStudio.Xenko.Particles.Initializers.ParticleInitializer'.
+Our initializer simply defines an angle for the cone and strength for the velocity. Any scaling and rotation of the cone come from the location inheritance and offset, which are common for all initializers and updaters and are ready to use. For more information, see the @'Xenko.Particles.Initializers.ParticleInitializer'.
 
 The constructor for the initializer is important, as it sets the list of required fields we'll use. The initializer sets the particle's position and velocity, so we add those, and needs to generate some randomness, so we also add the random seed which we are going to use. All particles have `Life` and `RandomSeed` fields when they spawn.
 
@@ -189,9 +189,9 @@ Because there's no such field yet, start by creating a new particle field. Let's
     }
 ```
 
-The field has type @'SiliconStudio.Core.Mathematics.Vector2', since we only need two values for the width and the height. No fields are added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, such as the custom updater below.
+The field has type @'Xenko.Core.Mathematics.Vector2', since we only need two values for the width and the height. No fields are added automatically to the particles, so even if you have many declarations, the particle size won't change. Fields are only added when we plug a module which requires them, such as the custom updater below.
 
-For API reference, see @'SiliconStudio.Xenko.Particles.Modules.ParticleUpdater'.
+For API reference, see @'Xenko.Particles.Modules.ParticleUpdater'.
 
   ```cs
     [DataContract("CustomParticleUpdater")] // Used for serialization so that our custom object can be saved. A good practice is to have the data contract have the same name as the class name.
@@ -272,7 +272,7 @@ public unsafe override int BuildVertexBuffer(ParticleVertexBuilder vtxBuilder, V
     ref Vector3 spaceTranslation, ref Quaternion spaceRotation, float spaceScale, ParticleSorter sorter)
 ```
 
-This method is called when it needs our shape builder to iterate over all particles and build the shape. The @'SiliconStudio.Xenko.Particles.VertexLayouts.ParticleVertexBuilder' is the wrapper around our vertex stream. We'll use it to write out the vertex data for the particles.
+This method is called when it needs our shape builder to iterate over all particles and build the shape. The @'Xenko.Particles.VertexLayouts.ParticleVertexBuilder' is the wrapper around our vertex stream. We'll use it to write out the vertex data for the particles.
 
 `inverseViewX` and `inverseViewY` are unit vectors in camera space passed down to the shape builder if we need to generate camera-facing shapes.
 

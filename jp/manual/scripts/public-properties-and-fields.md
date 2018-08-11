@@ -56,7 +56,7 @@ public class SampleSyncScript : StartupScript
 プロパティ グリッドにプロパティを表示したくない場合は、次の方法でできます。
 
 * メンバーを内部またはプライベートとして宣言します
-* または、[DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) 属性を次のように使用します。
+* または、[DataMemberIgnore](xref:Xenko.Core.DataMemberIgnoreAttribute) 属性を次のように使用します。
 
 ```cs
 

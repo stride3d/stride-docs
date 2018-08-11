@@ -123,7 +123,7 @@ To add a component to entity in Game Studio:
 
 ### Transform component
 
-Like GameObjects in Unity®, each entity in Xenko has a [Transform component](xref:SiliconStudio.Xenko.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
+Like GameObjects in Unity®, each entity in Xenko has a [Transform component](xref:Xenko.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
 
 ![Transform component](media/xenko-vs-unity-entity-transform-component.png)
 
@@ -510,19 +510,19 @@ To create a script, click **Add asset** button and select **Scripts**.
 
 ![Create script in Xenko](media/xenko-vs-unity-create-script.png)
 
-In Unity®, when you create a `MonoBehaviour` script, it has two base functions: `Start()` and `Update()`. Xenko has a [SyncScript](xref:SiliconStudio.Xenko.Engine.SyncScript) that works similarly. Like `MonoBehaviour`, [SyncScript](xref:SiliconStudio.Xenko.Engine.SyncScript) has two methods:
+In Unity®, when you create a `MonoBehaviour` script, it has two base functions: `Start()` and `Update()`. Xenko has a [SyncScript](xref:Xenko.Engine.SyncScript) that works similarly. Like `MonoBehaviour`, [SyncScript](xref:Xenko.Engine.SyncScript) has two methods:
 
-* [Start()](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) is called when it the script is loaded.
+* [Start()](xref:Xenko.Engine.StartupScript.Start) is called when it the script is loaded.
 
-* [Update()](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) is called every update.
+* [Update()](xref:Xenko.Engine.SyncScript.Update) is called every update.
 
-Unlike `MonoBehaviour`, you have to use [Update()](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) method in every [SyncScript](xref:SiliconStudio.Xenko.Engine.SyncScript), or your code won't work properly.
+Unlike `MonoBehaviour`, you have to use [Update()](xref:Xenko.Engine.SyncScript.Update) method in every [SyncScript](xref:Xenko.Engine.SyncScript), or your code won't work properly.
 
 If you want your script to be a startup or asynchronous, use the corresponding script types:
 
-* [StartupScript](xref:SiliconStudio.Xenko.Engine.StartupScript): this script has a single [Start()](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
+* [StartupScript](xref:Xenko.Engine.StartupScript): this script has a single [Start()](xref:Xenko.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
 
-* [AsyncScript](xref:SiliconStudio.Xenko.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:SiliconStudio.Xenko.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
+* [AsyncScript](xref:Xenko.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:Xenko.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
 
 ### Reload assemblies
 
