@@ -42,24 +42,14 @@ To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which 
 sudo apt-get install libsdl2-dev
 ```
 
-## Mono
-
-To install Mono, please refer to the [Mono Project](http://www.mono-project.com/docs/getting-started/install/linux/) installation instructions for Debian/Ubuntu. 
-
-Make sure version 4.4 is installed. To check which version you have installed, type:
-
-```
-mono --version
-```
-
 ### .NET Code
 
-For information about how to install .NET Core, see the [.NET Core instructions for Debian/Ubuntu](https://www.microsoft.com/net/core#ubuntu). 
+For information about how to install .NET Core, see the [.NET Core instructions for Debian/Ubuntu](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
 
-Make sure version 1.0 is installed. To check which version you have installed, type:
+Make sure version 2.1.300+ and runtime 2.1+ is installed. To check which version you have installed, type:
 
 ```
-dotnet --version
+dotnet --info
 ```
 
 ## See also
