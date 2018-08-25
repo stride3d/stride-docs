@@ -640,3 +640,13 @@ This should happen automatically but you might need a few tweaks afterwise (i.e.
 ### Yaml.Tests
 
 *   Fix unit tests using EmbeddedResources
+
+## Changelog
+
+### Version 3.0.0.4 — 25 August 2018
+
+* Reactivate Linux platform support [#17](https://github.com/xenko3d/xenko/issues/17)
+* SourceLink support: Visual Studio downloads Xenko debug source code on demand [#79](https://github.com/xenko3d/xenko/issues/79)
+* Windows Mixed Reality support for UWP [#85](https://github.com/xenko3d/xenko/pull/85)
+* Fix GameStudio crashing when editing files with the simple code editor [#110](https://github.com/xenko3d/xenko/issues/110)
+* GameStudio: New dark Theme and glyph icons [#4](https://github.com/xenko3d/xenko/issues/4) [#50](https://github.com/xenko3d/xenko/issues/50)
