@@ -3,7 +3,8 @@
 <div class="subnav navbar navbar-default">
 	<div class="container xk-flex" id="navbar">
 	<select id="xk-current-version" class="form-control col-lg-1 col-md-2 col-sm-3 col-xs-6">
-		<option value="latest">Latest version (3.0)</option>
+		<option value="latest">Latest version (3.1)</option>
+		<option value="3.0">3.0</option>
 	</select>
 		<!--<ul class="submenu-navbar"> 	 	
 			<li><a href="{{_rel}}manual/index.html">Manual</a></li>
