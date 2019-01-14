@@ -21,7 +21,7 @@ A **cubemap** is a six-sided texture. When these textures are assembled in a cub
 
 ![Merged skybox](media/skybox-assembled.jpg)
 
-Currently, Game Studio can't convert image files to cuebemaps (`.dds` files). Use another application to create a cubemap from separate image files, such as:
+Currently, Game Studio can't convert image files to cubemaps (`.dds` files). Use another application to create a cubemap from separate image files, such as:
 
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
