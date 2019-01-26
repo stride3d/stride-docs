@@ -67,10 +67,8 @@ Remarks:
 (or adjust the '../xenko' path in the _docfx.json_ file). Note that the build time is much more consequent
 when building both Manual and API documentation (you can use _build_manual_only.bat_ script 
 to build only the manual in that case).
-- For more details about the MarkDown format, see [GitHub MarkDown Guide]
-(https://guides.github.com/features/mastering-markdown/) or this [Tutorial](http://www.markdowntutorial.com/).
-- For more details about _DocFX_, see [DocFX Getting Started Page]
-(https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html)
+- For more details about the MarkDown format, see [GitHub MarkDown Guide](https://guides.github.com/features/mastering-markdown/) or this [Tutorial](http://www.markdowntutorial.com/).
+- For more details about _DocFX_, see [DocFX Getting Started Page](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html)
 
 # <a name="Organization"> Pages Organization 
 
