@@ -23,10 +23,13 @@
               "sources/engine/Xenko.VirtualReality/Xenko.VirtualReality.csproj",
               "sources/engine/Xenko.Navigation/Xenko.Navigation.csproj"
             ],
-			"cwd": "../../xenko",
+            "cwd": "../../xenko",
           }
         ],
-      "dest": "api"
+      "dest": "api",
+      "properties": {
+          "XenkoBuildDoc": "true"
+      }
     }
   ],
   "build": {
