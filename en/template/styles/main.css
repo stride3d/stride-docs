@@ -39,9 +39,7 @@ ul li  img, ol li img {
 /********************************************/
 
 .sidefilter {
-    top: 100px;
-    width: 280px;
-    display: none !important;
+    position: inherit;
 }
 
 .sidetoc {
@@ -74,10 +72,6 @@ th, td img{
     text-align: center;
     padding-top:5px;
     padding-bottom:5px;
-}
-
-.article, #search-results {
-    margin-top: 81px;
 }
 
 .search-list {
@@ -116,7 +110,7 @@ th, td img{
   }
   
   .article {
-    margin-top: 30px !important;
+    margin-top: 10px !important;
   }
   .sidenav #sidetoggle.xk-page-Manual #sidetoc,
   .sidenav #sidetoggle.xk-page-ReleaseNotes #sidetoc{
@@ -150,7 +144,6 @@ th, td img{
 .navbar-default .navbar-nav {
     /*border-left: 1px solid #e7e7e7;*/
     width: 530px;
-    height: 50px;
     margin-top: 0 !important;
 }
 
@@ -407,7 +400,6 @@ h5{
     .sidefilter, 
     .sidetoc{                
         width: 100%;
-        padding-bottom: 20px;
     } 
 }
 /* Redesign Documentation main page (05.12.2016) */
@@ -495,8 +487,7 @@ h5{
     background-color: #E8E8E8;
 }
 .xk-custom-breadcrumb{
-    margin-top: 15px;
-    padding: 15px 0 0 0;
+    padding: 0;
 }
 .xk-custom-breadcrumb ul{
     padding: 5px 0 0 0;
@@ -830,7 +821,7 @@ article h4{
     }
     #sidetoggle{
         position: fixed;
-        top: 90px;
+        top: 105px;
         z-index: 999;
         width: 280px;
         min-height: 100vh;
@@ -863,7 +854,6 @@ article h4{
     }
     #sidetoc{
         height: calc(100vh - 166px);
-        margin-top: 76px;
         overflow: auto;
         background-color: #f1f1f1;
     }
@@ -877,17 +867,9 @@ article h4{
     height: calc(100vh - 105px);
     margin-top: 0;
 }
-#sidetoggle.xk-page-Manual,
-#sidetoggle.xk-page-ReleaseNotes{
-    top: 105px;
-}
 #sidetoggle.xk-page-Api .sidefilter,
 #sidetoggle.xk-page-Default .sidefilter{
     display: block !important;
-}
-#sidetoggle.xk-page-Manual .sidetoc,
-#sidetoggle.xk-page-ReleaseNotes .sidetoc{
-    padding-top: 10px;
 }
 /*Preloader*/
 #floatingBarsG{

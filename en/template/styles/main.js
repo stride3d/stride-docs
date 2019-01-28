@@ -247,11 +247,11 @@ $(function() {
       })
     };
 
-    $('img').each(function(){
-      $(this).wrap('<a class="maximaze_image" href=' + $(this).attr('src') + '></a>').parent().html()
+    $('img').filter(function() { return $(this).parent().is(":not(.xk-documentation-image)"); }).each(function(){
+      $(this).wrap('<a class="maximize_image" href=' + $(this).attr('src') + '></a>').parent().html()
     });
 
-    $('.maximaze_image').magnificPopup({
+    $('.maximize_image').magnificPopup({
         type:'image'
     });
 });
