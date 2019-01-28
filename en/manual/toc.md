@@ -251,6 +251,10 @@
 ### [Display a UI in an overlay](virtual-reality/display-a-UI-in-an-overlay.md)
 ## [VR sickness](virtual-reality/vr-sickness.md)
 
+# [NuGet](nuget/index.md)
+## [Consume Packages](nuget/consume-packages.md)
+## [Create Packages](nuget/create-packages.md)
+
 # [Troubleshooting](troubleshooting/index.md)
 ## [Logging](troubleshooting/logging.md)
 ## [Debug text](troubleshooting/debug-text.md)

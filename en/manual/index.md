@@ -17,6 +17,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [NuGet](nuget/index.md)
+
 * <span class="label label-doc-highlight">New</span> [Video](video/index.md)
 
 * <span class="label label-doc-highlight">New</span> [Cached files](files-and-folders/cached-files.md)
