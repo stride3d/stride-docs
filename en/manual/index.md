@@ -6,7 +6,7 @@ _navRel: ../toc.html
 _tocTitle: 'Manual'
 ---
 
-# Xenko 3.0 manual
+# Xenko 3.1 manual
 
 ![Manual](get-started/media/game-editor-scene.jpg)
 
