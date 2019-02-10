@@ -129,6 +129,42 @@ Like GameObjects in Unity®, each entity in Xenko has a [Transform component](xr
 
 Even empty entities have a Transform component, because every entity in the scene must have a position.
 
+In Xenko, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+
+#### Local Position/Rotation/Scale
+Xenko uses position, rotation, and scale to refer to the local position, rotation and scale.
+
+| Unity®  | Xenko |
+| ----- | ------- |
+| `transform.localPosition` | `Transform.Position` |
+| `transform.localRotation` | `Transform.Rotation` |
+| `transform.localScale` | `Transform.Scale` |
+| `transform.localEulerAngles` | `Transform.RotationEulerXYZ` |
+
+#### World Position/Rotation/Scale
+In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the [WorldMatrix](xref:Xenko.Engine.TransformComponent.WorldMatrix).
+
+| Unity®  | Xenko |
+| ----- | ------- |
+| `transform.position` | `Transform.WorldMatrix.TranslationVector` |
+| `transform.rotation` | N/A |
+| `transform.scale` | N/A |
+| `transform.eulerAngles` | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)` |
+| `transform.scale` and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)` |
+| `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
+
+#### Transform Directions
+Unlike Unity, Xenko provides a Backward, Left, and Down property.
+
+| Unity®  | Xenko |
+| ----- | ------- |
+| `transform.forward` | `Transform.WorldMatrix.Forward` |
+| `transform.forward * -1` | `Transform.WorldMatrix.Backward` |
+| `transform.right` | `Transform.WorldMatrix.Right` |
+| `transform.right * -1` | `Transform.WorldMatrix.Left` |
+| `transform.up` | `Transform.WorldMatrix.Up` |
+| `transform.up * -1` | `Transform.WorldMatrix.Down` |
+
 ## Assets
 
 In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab. 
@@ -343,9 +379,9 @@ trigger.ProcessCollisions = true;
 while (Game.IsRunning)
 {
     // 1. Wait for an entity to collide with the trigger.
-    var firstCollision = await trigger.NewCollision();
+    Collision firstCollision = await trigger.NewCollision();
 
-    var otherCollider = trigger == firstCollision.ColliderA
+    PhysicsComponent otherCollider = trigger == firstCollision.ColliderA
         ? firstCollision.ColliderB
         : firstCollision.ColliderA;
     otherCollider.Entity.Transform.Scale = new Vector3(2.0f, 2.0f, 2.0f);
@@ -401,14 +437,14 @@ public static PhysicsComponent ScreenPositionToWorldPositionRaycast(Vector2 scre
     sPos.Y = 1f - screenPos.Y * 2f;
 
     sPos.Z = 0f;
-    var vectorNear = Vector3.Transform(sPos, invViewProj);
+    Vector4 vectorNear = Vector3.Transform(sPos, invViewProj);
     vectorNear /= vectorNear.W;
 
     sPos.Z = 1f;
-    var vectorFar = Vector3.Transform(sPos, invViewProj);
+    Vector4 vectorFar = Vector3.Transform(sPos, invViewProj);
     vectorFar /= vectorFar.W;
 
-    var result = simulation.Raycast(vectorNear.XYZ(), vectorFar.XYZ());
+    HitResult result = simulation.Raycast(vectorNear.XYZ(), vectorFar.XYZ());
     return result.Succeeded;
 }
 ```
@@ -579,7 +615,7 @@ public Quaternion SpawnRotation;
 public override void Start()
 {
     // Initialization of the script.
-    var car = CarPrefab.Instantiate();
+    List<Entity> car = CarPrefab.Instantiate();
     SceneSystem.SceneInstance.RootScene.Entities.AddRange(car);
     car.First().Transform.Position = SpawnPosition;
     car.First().Transform.Rotation = SpawnRotation;
