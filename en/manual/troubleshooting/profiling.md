@@ -178,6 +178,31 @@ Visual Studio has powerful in-built profiling tools that can identify common per
 
 For more information about the Visual Studio profiler, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/mt210448.aspx).
 
+### Use RenderDoc
+
+RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick and easy single-frame capture and detailed introspection of any application using Vulkan, D3D11, OpenGL & OpenGL ES or D3D12 across Windows 7 - 10, Linux, Android, or Nintendo Switch™.
+
+1. Download [RenderDoc](https://renderdoc.org/builds).
+
+2. Optional: in your executable project (Windows), locate `game.Run();` and insert the following code just before:
+
+   ```cs
+   game.GraphicsDeviceManager.Preferred.DeviceCreationFlags |= DeviceCreationFlags.Debug;
+   ```
+
+   This will enable render pass markers during rendering.
+   
+3. Optional: Add a package reference to `Xenko.Graphics.RenderDocPlugin`.
+
+   You can then use the @'Xenko.Graphics.RenderDocManager' class to trigger captures:
+   
+   ```cs
+   var renderDocManager = new RenderDocManager();
+   renderDocManager.StartCapture(GraphicsDevice, IntPtr.Zero);
+   // Some rendering code...
+   renderDocManager.EndFrameCapture(GraphicsDevice, IntPtr.Zero);
+   ```
+
 ## Common bottlenecks
 
 As CPU and GPU process different types of data, it's usually easy to identify which part is causing a bottleneck.
