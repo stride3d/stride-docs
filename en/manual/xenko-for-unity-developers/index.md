@@ -617,9 +617,9 @@ public override void Start()
     // Initialization of the script.
     List<Entity> car = CarPrefab.Instantiate();
     SceneSystem.SceneInstance.RootScene.Entities.AddRange(car);
-    car.First().Transform.Position = SpawnPosition;
-    car.First().Transform.Rotation = SpawnRotation;
-    car.First().Name = "MyNewEntity";
+    car[0].Transform.Position = SpawnPosition;
+    car[0].Transform.Rotation = SpawnRotation;
+    car[0].Name = "MyNewEntity";
 }
 ```
 
