@@ -183,13 +183,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
                     otherCollider.Entity.Transform.Scale = new Vector3(2.0f, 2.0f, 2.0f);
 
                     // 2. Wait for the entity to exit the trigger
-                    Collision collision;
-
-                    do
-                    {
-                        collision = await trigger.CollisionEnded();
-                    }
-                    while (collision != firstCollision);
+                    await firstCollision.Ended();
 
                     otherCollider.Entity.Transform.Scale= new Vector3(1.0f, 1.0f, 1.0f);
                 }
@@ -260,19 +254,15 @@ namespace TransformTrigger
                 // 1. Wait for an entity to collide with the trigger
                 var firstCollision = await trigger.NewCollision();
 
-                var otherCollider = trigger == firstCollision.ColliderA ? firstCollision.ColliderB : firstCollision.ColliderA;
+                var otherCollider = trigger == firstCollision.ColliderA
+                    ? firstCollision.ColliderB
+                    : firstCollision.ColliderA;
                     
                 // 2. Change the material on the entity
                 otherCollider.Entity.Get<ModelComponent>().Materials[0] = material2;
                 
                 // 3. Wait for the entity to exit the trigger
-                Collision collision;
-
-                do
-                {
-                    collision = await trigger.CollisionEnded();
-                }
-                while (collision != firstCollision);
+                await firstCollision.Ended();
 
                 // 4. Change the material back to the original one
                 otherCollider.Entity.Get<ModelComponent>().Materials[0] = material1;
