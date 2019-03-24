@@ -187,7 +187,7 @@ RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick
 2. Optional: in your executable project (Windows), locate `game.Run();` and insert the following code just before:
 
    ```cs
-   game.GraphicsDeviceManager.Preferred.DeviceCreationFlags |= DeviceCreationFlags.Debug;
+   game.GraphicsDeviceManager.DeviceCreationFlags |= DeviceCreationFlags.Debug;
    ```
 
    This will enable render pass markers during rendering.
