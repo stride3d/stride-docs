@@ -127,19 +127,19 @@ Number keys | Jump to a page
 * Enable profiling:
 
     ```cs
-    Profiler.EnableProfiling();
+    GameProfiler.EnableProfiling();
     ```
 
 * Enable profiling only for the profiler keys you specify:
 
     ```cs
-    Profiler.EnableProfiling(true, {mykey1,mykey2});
+    GameProfiler.EnableProfiling(true, {mykey1,mykey2});
     ```
 
 * Enable the profiling except for the profiler keys you specify:
 
     ```cs
-    Profiler.EnableProfiling(false, {mykey1,mykey2});
+    GameProfiler.EnableProfiling(false, {mykey1,mykey2});
     ```
 
 * To access the prolifing key of a script, use [ProfilingKey](xref:Xenko.Engine.ScriptComponent.ProfilingKey).
@@ -184,14 +184,20 @@ RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick
 
 1. Download [RenderDoc](https://renderdoc.org/builds).
 
-2. Optional: in your executable project (Windows), locate `game.Run();` and insert the following code just before:
+2. Optional: This step is optional and only necessary if you want to have render pass markers with name following the Graphics Compositor:
+
+   2.1. In your executable project (Windows), locate `game.Run();` and insert the following code just before:
 
    ```cs
    game.GraphicsDeviceManager.DeviceCreationFlags |= DeviceCreationFlags.Debug;
    ```
 
-   This will enable render pass markers during rendering.
-   
+   2.2. Also, make sure profiler is enabled by calling this code from any of your game script:
+
+    ```cs
+    GameProfiler.EnableProfiling();
+    ```
+
 3. Optional: Add a package reference to `Xenko.Graphics.RenderDocPlugin`.
 
    You can then use the @'Xenko.Graphics.RenderDocManager' class to trigger captures:
