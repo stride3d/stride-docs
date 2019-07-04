@@ -191,6 +191,8 @@ RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick
    ```cs
    game.GraphicsDeviceManager.DeviceCreationFlags |= DeviceCreationFlags.Debug;
    ```
+   >[!Note]
+   >If you have a `SharpDXException` of type `DXGI_ERROR_SDK_COMPONENT_MISSING`, please follow the instructions from https://docs.microsoft.com/en-us/windows/uwp/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features
 
    2.2. Also, make sure profiler is enabled by calling this code from any of your game script:
 
