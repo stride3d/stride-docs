@@ -6,7 +6,7 @@ There are three ways to use assets:
 
 * reference them in entity components
 * reference them in other assets
-* load them from code
+* load them from code as content
 
 ## Reference assets in components
 
@@ -58,8 +58,7 @@ You can see the references in a selected asset in the **References** tab. By def
 > If you can't see the References tab, make sure it's displayed under **View > References**.
 
 ## Load assets from code
-
-You can load assets at runtime and use them in your scripts.
+When loading in assets at runtime we speak of "Content" rather than assets. The loaded content refers to the asset and can then be used in your script.
 
 ```cs
 // Load a model (replace URL with valid URL)
@@ -82,7 +81,7 @@ SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
 
 ### Unload unneeded assets
 
-When loading assets from code, you should unload assets when you don't need them any more. If you don't, assets stay in memory, wasting GPU.
+When loading content from code, you should unload content when you don't need them any more. If you don't, content stays in memory, wasting GPU.
 
 To do unload an asset, use ``Content.Unload(myAsset)``.
 
