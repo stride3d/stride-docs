@@ -26,13 +26,15 @@ Hold the **right mouse button** and **move the mouse** to change the camera dire
 
 Hold the **right mouse button** and the **center mouse button** and move the mouse.
 
-<video controls autoplay loop height="240" width="320">
-                <source src="media/navigate-in-scene-walk-in-the-scene.mp4" type="video/mp4">
-</video>
- 
+
 ### Dolly
 
+<video controls autoplay loop height="240" width="320">
+                <source src="media/navigate-in-scene-dolly-camera.mp4" type="video/mp4">
+</video>
+
 To dolly (move the camera forward and backward), use the **mouse wheel**.
+
 
 ### Orbit
 
@@ -48,15 +50,16 @@ The point of rotation is always the center of the screen. To adjust the distance
 
 ### Focus on an entity
 
+<video controls autoplay loop height="240" width="320">
+                <source src="media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
+</video>
+
 After you select an entity, press the **F** key. This zooms in on the entity and centers it in the camera editor.
 
 You can also focus by clicking the **magnifying glass icon** next to the entity in the Entity Tree.
 
 ![Focus icon](media/focus-icon.png)
 
-<video controls autoplay loop height="240" width="320">
-                <source src="media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
-</video>
 
 > [!TIP] 
 > Focusing and then orbiting with **Alt + left mouse button** is useful for inspecting entities.
@@ -67,7 +70,7 @@ Action                 | Control
 -----------------------|--------------
 Move                    | Arrow keys + right mouse button <p><br>WASDQE keys + right mouse button </p></br><p>
 Look around             | Hold right mouse button + move mouse
-Pan                     | Middle mouse button + right mouse button + move mouse
+Dolly                     | Middle mouse button + right mouse button + move mouse
 Orbit                   | Alt key + left mouse button
 Zoom                    | Mouse wheel <p><br>Alt + Right mouse button + move mouse</p></br>
 Pan                    | Middle mouse button + move mouse
