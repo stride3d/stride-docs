@@ -5,6 +5,10 @@ body {
 body a{
     color: #3b73af;
 }
+p{
+    max-width: 1100px
+}
+
 /* AVDW: Updated style for notes */
 
 blockquote {
@@ -171,7 +175,6 @@ th, td img{
 /* make container auto adjust up to 1370px */
 .container {
   width: initial;
-  max-width: 1370px;
 }
 
 .toc .nav > li > a {
@@ -251,6 +254,7 @@ article table {
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
+    max-width: 1100px;
 }
 
 .TIP {
@@ -1126,6 +1130,7 @@ article h4{
 }
 .table-bordered{
     margin-bottom: 50px;
+    max-width: 1100px;
 }
 h4+.table-bordered{
     margin-bottom: 25px;
