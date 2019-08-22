@@ -15,6 +15,7 @@
                 <li><a href="{{_rel}}manual">Manual</a></li>
                 <li><a href="{{_rel}}api/index.html">API</a></li>
                 <li><a href="{{_rel}}ReleaseNotes.html">Release Notes</a></li>
+                <li><a href="{{_rel}}tutorials/tutorials.html">Tutorials</a></li>
             </ul>
             -->
              <ul class="x_menu">

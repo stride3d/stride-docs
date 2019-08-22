@@ -21,6 +21,7 @@
     <span class="xk-visibility"> ・<span><span id="xk-manual"></span> results</span> in manual </span>
     <span class="xk-visibility"> ・<span><span id="xk-api"></span> results</span> in API </span>
     <span class="xk-visibility"> ・ <span><span id="xk-releasenotes"></span> results</span> in release notes </span>
+    <span class="xk-visibility"> ・ <span><span id="xk-tutorials"></span> results</span> in tutorials </span>
     <span class="xk-visibility hidden"> ・ <span class="xk-searching-link"> All <span id="xk-all"></span> results </span></span>
   </div>-->
   <div class="sr-items"></div>

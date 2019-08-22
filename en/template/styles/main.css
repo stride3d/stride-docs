@@ -503,7 +503,7 @@ h5{
     margin-bottom: 10px;
     max-width: calc(100% - 5px);
 }
-.xk-custom-breadcrumb + article.content h2|{
+.xk-custom-breadcrumb + article.content h2{
     margin-top: 16px;
 }
 .xk-custom-breadcrumb + article.content h3,
@@ -584,17 +584,19 @@ h5{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 165px;
+    min-width: 128px;
 }
-.xk-documentation-list li:first-child .xk-documentation-image img{
+.xk-documentation-list .xk-documentation-image img{
     max-width: 128px;
 }
-.xk-documentation-list li:nth-child(2) .xk-documentation-image img{
+.xk-documentation-list li:nth-child(2) .xk-documentation-image img, .xk-documentation-list li:nth-child(3) .xk-documentation-image img{
+    max-width: 165px;
     max-width: 165px;
 }
-.xk-documentation-list li:last-child .xk-documentation-image img{
-    max-width: 165px;
+.xk-documentation-list  li:nth-child(1) .xk-documentation-chapter, .xk-documentation-list  li:nth-child(4) .xk-documentation-chapter{
+    padding-left: 40px;
 }
+
 @media only screen and (max-width: 768px){
     .xk-documentation-list{
         margin-left: -15px;

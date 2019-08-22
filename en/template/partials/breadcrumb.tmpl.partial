@@ -10,6 +10,7 @@
 			<li><a href="{{_rel}}manual/index.html">Manual</a></li>
 			<li><a href="{{_rel}}api/index.html">API</a></li>
 			<li><a href="{{_rel}}ReleaseNotes/index.html">Release notes</a></li> 	
+			<li><a href="{{_rel}}tutorials/index.html">Tutorials</a></li> 	
 		</ul>-->
 	</div>
 </div>

@@ -2,34 +2,34 @@
   "metadata": [
     {
       "src": [
-          {
-            "files": [
-              "sources/core/Xenko.Core/Xenko.Core.csproj",
-              "sources/core/Xenko.Core.IO/Xenko.Core.IO.csproj",
-              "sources/core/Xenko.Core.Mathematics/Xenko.Core.Mathematics.csproj",
-              "sources/core/Xenko.Core.MicroThreading/Xenko.Core.MicroThreading.csproj",
-              "sources/core/Xenko.Core.Serialization/Xenko.Core.Serialization.csproj",
-              "sources/assets/Xenko.Core.Assets/Xenko.Core.Assets.csproj",
-              "sources/engine/Xenko/Xenko.csproj",
-              "sources/engine/Xenko.Audio/Xenko.Audio.csproj",
-              "sources/engine/Xenko.Engine/Xenko.Engine.csproj",
-              "sources/engine/Xenko.Games/Xenko.Games.csproj",
-              "sources/engine/Xenko.Graphics/Xenko.Graphics.csproj",
-              "sources/engine/Xenko.Input/Xenko.Input.csproj",
-              "sources/engine/Xenko.Particles/Xenko.Particles.csproj",
-              "sources/engine/Xenko.Physics/Xenko.Physics.csproj",
-              "sources/engine/Xenko.Rendering/Xenko.Rendering.csproj",
-              "sources/engine/Xenko.Shaders/Xenko.Shaders.csproj",
-              "sources/engine/Xenko.UI/Xenko.UI.csproj",
-              "sources/engine/Xenko.VirtualReality/Xenko.VirtualReality.csproj",
-              "sources/engine/Xenko.Navigation/Xenko.Navigation.csproj"
-            ],
-            "cwd": "../../xenko",
-          }
-        ],
+        {
+          "files": [
+            "sources/core/Xenko.Core/Xenko.Core.csproj",
+            "sources/core/Xenko.Core.IO/Xenko.Core.IO.csproj",
+            "sources/core/Xenko.Core.Mathematics/Xenko.Core.Mathematics.csproj",
+            "sources/core/Xenko.Core.MicroThreading/Xenko.Core.MicroThreading.csproj",
+            "sources/core/Xenko.Core.Serialization/Xenko.Core.Serialization.csproj",
+            "sources/assets/Xenko.Core.Assets/Xenko.Core.Assets.csproj",
+            "sources/engine/Xenko/Xenko.csproj",
+            "sources/engine/Xenko.Audio/Xenko.Audio.csproj",
+            "sources/engine/Xenko.Engine/Xenko.Engine.csproj",
+            "sources/engine/Xenko.Games/Xenko.Games.csproj",
+            "sources/engine/Xenko.Graphics/Xenko.Graphics.csproj",
+            "sources/engine/Xenko.Input/Xenko.Input.csproj",
+            "sources/engine/Xenko.Particles/Xenko.Particles.csproj",
+            "sources/engine/Xenko.Physics/Xenko.Physics.csproj",
+            "sources/engine/Xenko.Rendering/Xenko.Rendering.csproj",
+            "sources/engine/Xenko.Shaders/Xenko.Shaders.csproj",
+            "sources/engine/Xenko.UI/Xenko.UI.csproj",
+            "sources/engine/Xenko.VirtualReality/Xenko.VirtualReality.csproj",
+            "sources/engine/Xenko.Navigation/Xenko.Navigation.csproj"
+          ],
+          "cwd": "../../xenko",
+        }
+      ],
       "dest": "api",
       "properties": {
-          "XenkoBuildDoc": "true"
+        "XenkoBuildDoc": "true"
       }
     }
   ],
@@ -38,7 +38,13 @@
     "content": [
       {
         "files": [
-          "toc.yml", "*.md", "manual/**/*.md", "api/*.md", "api/*.yml", "ReleaseNotes/*.md"
+          "toc.yml",
+          "*.md",
+          "manual/**/*.md",
+          "api/*.md",
+          "api/*.yml",
+          "ReleaseNotes/*.md",
+          "tutorials/**/*.md"
         ],
         "case": false,
         "noNegate": false,
@@ -51,14 +57,16 @@
     "resource": [
       {
         "files": [
-          "web.config", "download/**", "studio_getting_started_links.txt",
-		  "**/media/**/*.png", 
-		  "**/media/**/*.jpg", 
-		  "**/media/**/*.gif", 
-		  "**/media/**/*.mp4", 
-		  "**/media/**/*.zip", 
-		  "**/media/**/*.svg",
-		  "**/media/**/*.cs"
+          "web.config",
+          "download/**",
+          "studio_getting_started_links.txt",
+          "**/media/**/*.png",
+          "**/media/**/*.jpg",
+          "**/media/**/*.gif",
+          "**/media/**/*.mp4",
+          "**/media/**/*.zip",
+          "**/media/**/*.svg",
+          "**/media/**/*.cs"
         ],
         "case": false,
         "noNegate": false,
@@ -74,7 +82,8 @@
     },
     "dest": "../_site/en",
     "template": [
-      "default", "template"
+      "default",
+      "template"
     ],
     "serve": false
   }

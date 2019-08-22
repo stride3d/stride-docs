@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xenko.Engine" Version="3.1.0.1-beta02-0674" />
+
+    <PackageReference Include="Xenko.Video" Version="3.1.0.1-beta02-0674" />
+    <PackageReference Include="Xenko.Physics" Version="3.1.0.1-beta02-0674" />
+    <PackageReference Include="Xenko.Navigation" Version="3.1.0.1-beta02-0674" />
+    <PackageReference Include="Xenko.Particles" Version="3.1.0.1-beta02-0674" />
+    <PackageReference Include="Xenko.UI" Version="3.1.0.1-beta02-0674" />
+
+    <PackageReference Include="Xenko.Core.Assets.CompilerApp" Version="3.1.0.1-beta02-0674" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+</Project>

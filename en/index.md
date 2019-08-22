@@ -55,7 +55,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="Tutorials/index.html">
+		<a href="tutorials/index.html">
 			<div class="xk-documentation-image">
 				![Release notes](media/xk-icon-tutorials.png "Tutorials")
 			</div>
@@ -65,7 +65,7 @@
 				</h2>
 				<div class="xi_arrowLink"></div>
 				<p class="hidden-xs">
-					Tutorials of the Xenko API
+					Tutorials for the Xenko game engine
 				</p>
 			</div>
 		</a>
