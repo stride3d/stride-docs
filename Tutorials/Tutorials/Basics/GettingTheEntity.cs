@@ -15,7 +15,6 @@ namespace Tutorials.Basics {
             //We store the name of the Entity that we are attached to
             name = Entity.Name;
 
-
             //We retrieve the parent entity by using the GetParent() command.
             Entity parentEntity = Entity.GetParent();
 
@@ -25,12 +24,11 @@ namespace Tutorials.Basics {
                 parentName = parentEntity.Name;
             }
 
-
             //The above code can be shortened to 1 line by using the '?' operator  
             parentName = Entity.GetParent()?.Name;
         }
 
-        //Updates avery frame
+        //Updates every frame
         public override void Update() {
             //Using the 'DebugText.Print' command, we can quickly print information to the screen
             DebugText.TextColor = Color.Red;

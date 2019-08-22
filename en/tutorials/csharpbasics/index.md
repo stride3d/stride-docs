@@ -10,7 +10,7 @@ You can try out each individual script in by creating a new project and use the 
 * [Editor properties](editorproperties.md) 
 * [Get component](getcomponent.md) 
 * [DeltaTime](deltaTime.md) 
-* [Instianting entities](instantiatingentities.md) 
+* [Instantiating entities](instantiatingentities.md) 
 * [Destroing entities](destroyingentities.md) 
 * [Look at](lookAt.md) 
 * [GetKey](getKey.md) 

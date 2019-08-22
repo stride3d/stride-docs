@@ -28,6 +28,10 @@ footer {
   z-index: auto;
 }
 
+footer .inner-footer p{
+    max-width: none;
+}
+
 /* Updated style for menu items */
 
 .toc .level1 > li {
@@ -589,12 +593,12 @@ h5{
 .xk-documentation-list .xk-documentation-image img{
     max-width: 128px;
 }
+.xk-documentation-list  li:nth-child(1) .xk-documentation-chapter, .xk-documentation-list  li:nth-child(4) .xk-documentation-chapter{
+    padding-left: 20px;
+}
 .xk-documentation-list li:nth-child(2) .xk-documentation-image img, .xk-documentation-list li:nth-child(3) .xk-documentation-image img{
     max-width: 165px;
-    max-width: 165px;
-}
-.xk-documentation-list  li:nth-child(1) .xk-documentation-chapter, .xk-documentation-list  li:nth-child(4) .xk-documentation-chapter{
-    padding-left: 40px;
+    padding-left: -20px;
 }
 
 @media only screen and (max-width: 768px){
