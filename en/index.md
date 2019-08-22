@@ -54,4 +54,20 @@
 			</div>
 		</a>
 	</li>
+	<li>
+		<a href="Tutorials/index.html">
+			<div class="xk-documentation-image">
+				![Release notes](media/xk-icon-tutorials.png "Tutorials")
+			</div>
+			<div class="xk-documentation-chapter">
+				<h2>
+					Tutorials
+				</h2>
+				<div class="xi_arrowLink"></div>
+				<p class="hidden-xs">
+					Tutorials of the Xenko API
+				</p>
+			</div>
+		</a>
+	</li>
 </ul>
