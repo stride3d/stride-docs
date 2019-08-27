@@ -1,9 +1,10 @@
 # Editor properties
-This C# basics tutorial covers the entity object.
+You can find this sample in the tutorial project: **Scenes** -> **Basics** -> **4-Editor properties** 
 
 ## Explanation
-When a script is attached to an entity in the scene, we can access all properties of that Entity by using the 'Entity' property. We can find its name, its parent and its scene.
+This C# basics tutorial covers how to expose editor properties for Xenko game studio. By delcaring a public variable at the top of our script, we can create editor properties. Some of the most common properties are demonstrated.
+
+![Editor properties](media/editor-properties.png)
 
 ## Code
-You can find this sample in the tutorial project 
-<source>
+[!code-csharp[Entity](..\..\..\Tutorials\Tutorials\Basics\BasicsProperties.cs)]

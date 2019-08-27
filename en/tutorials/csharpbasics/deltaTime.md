@@ -1,9 +1,10 @@
-# C# basics - Getting the entity 
-This C# basics tutorial covers the entity object.
+# Deltatime
+You can find this sample in the tutorial project: **Scenes** -> **Basics** -> **2-DeltaTime** 
 
 ## Explanation
-When a script is attached to an entity in the scene, we can access all properties of that Entity by using the 'Entity' property. We can find its name, its parent and its scene.
+This C# basics tutorial covers the retrieval and usage of delta time. Games updates various times per second. This is called 'Frames Per Second' or shortened to 'FPS'. If we wanted to update a timer value, we would need a value that takes into account what the current amount of frames per second is. That is what delta time is used for. So whether your game runs 30 FPS or 120 FPS: you always want to have the same time scale.
+
+![Delta time](media/deltatime.png)
 
 ## Code
-You can find this sample in the tutorial project 
-<source>
+[!code-csharp[Entity](..\..\..\Tutorials\Tutorials\Basics\DeltaTime.cs)]
