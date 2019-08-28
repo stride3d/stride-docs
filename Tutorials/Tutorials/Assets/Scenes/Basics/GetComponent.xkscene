@@ -1,0 +1,89 @@
+!SceneAsset
+Id: 9e1b53ff-dc0c-410a-8972-14f949f83a01
+SerializedVersion: {Xenko: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 4983a88f-4495-485c-8110-babfb824fd09
+        - ref!! d4b27378-fcb3-4b3f-be94-c924e6724483
+        - ref!! 771ec28a-d635-48af-a09e-58453dad09db
+        - ref!! a96ff7c1-f612-40be-b936-dba94f49f15b
+    Parts:
+        -   Entity:
+                Id: 4983a88f-4495-485c-8110-babfb824fd09
+                Name: Camera
+                Components:
+                    d5dd94550dc377d8b1703c74aae2cee5: !TransformComponent
+                        Id: 609eeee4-edc1-402b-9f1f-4cc759ba8e0a
+                        Position: {X: 0.0, Y: 2.0, Z: -4.0}
+                        Rotation: {X: 5.70548142E-09, Y: 0.9914449, Z: 0.1305262, W: -4.33374332E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f1cc2f84c67fbd3cc50a22dd0ef605a5: !CameraComponent
+                        Id: 2a67b920-017f-45fd-b8c7-54ab53416021
+                        Name: null
+                        Projection: Perspective
+                        Slot: c9cb3666-f711-498c-9878-292e79ed7993
+        -   Entity:
+                Id: 771ec28a-d635-48af-a09e-58453dad09db
+                Name: Skybox light
+                Components:
+                    88b62d474d21080cf1a760192a108619: !TransformComponent
+                        Id: 9a135f64-c589-4b61-ae01-e7ad73726027
+                        Position: {X: 100.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    b6410438b41b6be62428102415f68a4e: !LightComponent
+                        Id: 378c54b8-7b7a-487c-bc13-31e967ee8197
+                        Type: !LightSkybox
+                            Skybox: ae4fd991-6290-4c24-b73b-25d81a1a4837:Materials/Skybox
+                    073131bbebf95a3cbbe2d431328d38b1: !BackgroundComponent
+                        Id: 6bb6d922-8f3b-40f7-af17-b691cd924678
+                        Texture: b7f73672-f9bf-44ae-8a04-0017010b4ca1:Materials/Skybox texture
+        -   Entity:
+                Id: a96ff7c1-f612-40be-b936-dba94f49f15b
+                Name: Theapot-Parent
+                Components:
+                    f8eee6f467c9263f9fdd120f5463f988: !TransformComponent
+                        Id: e3afb164-c852-4cb1-84f5-aac2e3410512
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3633cb40f574236299aec88b18c090d2: !ModelComponent
+                        Id: 60e9ce47-a7f9-4167-960e-6be77ab17fe0
+                        Model: 9a3a7dbc-7b08-478a-aab2-19afe1d6ce1c:Models/Teapot
+                        Materials: {}
+                    7a91bb5c959d23c5653c55584ba672a6: !Tutorials.Basics.AmmoComponent,Tutorials
+                        Id: a3e08204-700a-46ce-b884-49881cfd232b
+                        Clips: 0
+                    abd496ed6dd959fdf13a4f2245f2082b: !Tutorials.Basics.GettingAComponent,Tutorials
+                        Id: 28081f1e-a2e6-4d35-b524-41d6fe003119
+        -   Entity:
+                Id: d4b27378-fcb3-4b3f-be94-c924e6724483
+                Name: Directional light
+                Components:
+                    cf26351dfd6822268d36b77072bcc655: !TransformComponent
+                        Id: 11bce6a3-f130-4576-a7b5-57cf870065a3
+                        Position: {X: 100.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: 0.9659258, Z: 0.258819044, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e3f271d9c2060484c44e8dfef59ed0e3: !LightComponent
+                        Id: eec10734-f8b5-4dbe-a350-3c1cc573c07c
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
