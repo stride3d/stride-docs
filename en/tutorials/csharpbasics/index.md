@@ -7,7 +7,7 @@ You can try out each individual script in by creating a new project and use the 
 * [Delta time](deltaTime.md) 
 * [Transform Position](transformPosition.md) 
 * [Editor properties](editorProperties.md) 
-* [Get component](getcomponent.md) 
+* [Getting a component](getComponent.md) 
 * [Instantiating entities](instantiatingentities.md) 
 * [Destroing entities](destroyingentities.md) 
 * [Look at](lookAt.md) 
