@@ -77,7 +77,7 @@ Xenko renders the area between the near and far planes.
 | Near plane 0.1 (default); far plane: 50  | Near plane: 7; far plane 1000 (default)
 |--------------------|------------------
 | ![Far plane: 50](media/far-clip-50.png) | ![Near plane: 7](media/near-clip-7.png)
-| With a low **far plane** value, objects in the near distance aren't drawn. | With a low **near plane** value, objects close to the camera aren't drawn.
+| With a low **far plane** value, objects in the near distance aren't drawn. | With a high **near plane** value, objects close to the camera aren't drawn.
 
 ## Camera scripts
 
