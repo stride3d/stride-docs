@@ -31,6 +31,7 @@ namespace Tutorials.Basics {
         //Updates every frame
         public override void Update() {
             //Using the 'DebugText.Print' command, we can quickly print information to the screen
+            //NOTE: DebugText only works when debugging the game. During release it is automatically disabled
             DebugText.TextColor = Color.Red;
             DebugText.Print(parentName, new Int2(10, 20));
             DebugText.Print(name, new Int2(30, 40));

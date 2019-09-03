@@ -1,16 +1,16 @@
 # C# Basics
-These tutorials cover intermediate topics. You should be familiar with the Basics before you dive in to these tutorials.
+These tutorials cover the absolute basics of using C# when working with the Xenko game engine. Start here if you are new to Xenko or progamming. Althoug having some coding experience is useful, it is not mandatory to get started with these tutorials.
 
-You can try out each individual script in by creating a new project and use the API tutorials example template. Each script is demonstrated a new scene.
+IN REVIEW: You can try out each individual script in by creating a new project and use the API tutorials example template. Each script is demonstrated a new scene.
 
 * [Getting the Entity](entity.md)
-* [Delta time](deltaTime.md) 
+* [Child entities](childentities.md)
 * [Transform Position](transformPosition.md) 
 * [Editor properties](editorProperties.md) 
 * [Getting a component](getComponent.md) 
-* [Instantiating entities](instantiatingentities.md) 
-* [Destroing entities](destroyingentities.md) 
-* [Look at](lookAt.md) 
+* [Delta time](deltaTime.md) 
+* [Cloning an entity](cloningEntities.md) 
+* [Removing an entity](removeEntities.md) 
 * [GetKey](getKey.md) 
 * [GetMouse](getMouse.md) 
 * [GetButton](getButton.md) 

@@ -2,7 +2,7 @@
 Id: 66354f1a-ad5a-4504-b892-293a74e9a496
 SerializedVersion: {Xenko: 3.1.0.1}
 Tags: []
-DefaultScene: 9e1b53ff-dc0c-410a-8972-14f949f83a01:Scenes/Basics/Getting a component
+DefaultScene: 52a557d6-1f2c-4983-a0bb-2c12d562d3bf:Scenes/Basics/Cloning entities
 GraphicsCompositor: 6fbf9e7f-5a64-4144-9f7e-42ab89526670:GraphicsCompositor
 Defaults:
     - !Xenko.Audio.AudioEngineSettings,Xenko.Audio

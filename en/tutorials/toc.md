@@ -2,19 +2,21 @@
 # [Tutorials](index.md)
 ## [C# basics](csharpbasics/index.md)
 ### [Getting the Entity](csharpbasics/entity.md)
+### [Child entities](csharpbasics/childentities.md) 
 ### [DeltaTime](csharpbasics/deltaTime.md) 
 ### [Transform Position](csharpbasics/transformPosition.md) 
 ### [Editor properties](csharpbasics/editorproperties.md) 
 ### [Getting a component](csharpbasics/getcomponent.md) 
-### [Instianting entities](csharpbasics/instantiatingentities.md) 
-### [Destroing entities](csharpbasics/destroyingentities.md) 
-### [Look at](csharpbasics/lookAt.md) 
-### [GetKey](csharpbasics/getKey.md) 
-### [GetMouse](csharpbasics/getMouse.md) 
-### [GetButton](csharpbasics/getButton.md) 
+### [Cloning an entity](csharpbasics/cloningEntities.md) 
+### [Removing an entity](csharpbasics/destroyingentities.md) soon...
+### [GetKey](csharpbasics/getKey.md) soon...
+### [GetMouse](csharpbasics/getMouse.md) soon...
+### [GetButton](csharpbasics/getButton.md) soon...
 
 ## [C# intermediate](csharpintermediate/index.md)
-### [Raycasting](csharpintermediate/raycasting.md)
+### [Raycasting](csharpintermediate/raycasting.md) soon...
+### [Switching a scene](csharpintermediate/switchingscenes.md)soon...
+### [Loading a child scene](csharpintermediate/loadingchildscene.md)soon...
 
 ## [C# advanced](csharpadvanced/index.md)
 ### [Shader](csharpadvanced/shader.md)

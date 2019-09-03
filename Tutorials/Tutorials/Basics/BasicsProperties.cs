@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Xenko.Core;
 using Xenko.Core.Mathematics;
 using Xenko.Engine;
 
@@ -24,6 +25,10 @@ namespace Tutorials.Basics {
         //If we want a list of ojects like strings, integers or even Entities, we have to create the new List right away
         public List<string> stringList = new List<string>();
         public List<Entity> entityList = new List<Entity>();
+
+        //If we dont want a public property to be visible in the editor we can use '[DataMemberIgnore]'
+        [DataMemberIgnore]
+        public string aHiddenProperty = "HiddenInEditor";
 
         public override void Update() {
             DebugText.Print("Integer: " +           anInteger,          new Int2(30, 200));

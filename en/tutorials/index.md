@@ -13,17 +13,6 @@ These pages contain tutorials to learn more about the Xenko game engine
 All C# tutorials have code that you can try out yourself by downloading the tutorials project here <DOWNLOAD LINK> (or perhaps as a template?).
 
 
-## [C# basics](csharpbasics/index.md)
-These tutorials cover the absolute basics of using C# when working with the Xenko game engine. Start here if you are new to Xenko or progamming. Althoug having some coding experience is useful, it is not mandatory to get started with these tutorials.
-
-
-## [C# intermediate](csharpintermediate/index.md)
-These tutorials cover intermediate tutorial topics when programming with Xenko.
-
-
-## [C# advanced](csharpadvanced/index.md)
-These tutorials cover advanced tutorial topics when programming with Xenko.
-
-
-# Editor 
-
+| [C# basics](csharpbasics/index.md) | [C# intermediate](csharpintermediate/index.md) | [C# advanced](csharpadvanced/index.md) |                                               
+|---------------------------|----------------|----------------|
+| ![Editor properties](media/tutorial_basics.png) |![Editor properties](media/tutorial_intermediate.png) |![Editor properties](media/tutorial_advanced.png)
