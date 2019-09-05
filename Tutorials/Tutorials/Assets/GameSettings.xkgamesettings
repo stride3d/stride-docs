@@ -2,7 +2,7 @@
 Id: 66354f1a-ad5a-4504-b892-293a74e9a496
 SerializedVersion: {Xenko: 3.1.0.1}
 Tags: []
-DefaultScene: ee2eb459-7847-42b5-bd69-fc43a6625fd5:Scenes/Basics/Keyboard input
+DefaultScene: 328aea72-1405-48be-bf32-2363a61870f7:Scenes/Basics/Virtual buttons
 GraphicsCompositor: 6fbf9e7f-5a64-4144-9f7e-42ab89526670:GraphicsCompositor
 Defaults:
     - !Xenko.Audio.AudioEngineSettings,Xenko.Audio

@@ -81,5 +81,5 @@ Hierarchy:
                         Model: 5178da4c-69ec-4123-a502-ef9925474f3d:Models/Sphere
                         Materials:
                             0944ccdb2e13484e06b8de9bfe3e665f~0: ca5e832c-0dc0-42e8-bd85-fcb24bfd34f1:Materials/Green
-                    32ce3a8e6022e179df7e6e1307fdc8cd: !Tutorials.Basics.GettingTheEntity,Tutorials
+                    7075106a728dd702454bedcc071e10ed: !Tutorials.Basics.GettingTheEntity,Tutorials
                         Id: c6991602-3a4e-483c-a83c-977e108a0339

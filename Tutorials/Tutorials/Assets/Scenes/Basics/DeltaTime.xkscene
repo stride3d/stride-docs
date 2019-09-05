@@ -26,7 +26,7 @@ Hierarchy:
                         Model: 120c36db-8a04-4dfd-aa11-85d9b46d5143:Models/Cone
                         Materials:
                             f1158e4b83bb5b2ca9e839da74158310~0: 619de649-4998-4996-bd74-085eaffdbbeb:Materials/Yellow
-                    cbed46fc14a1c47c4d4eced695ed170b: !Tutorials.Basics.DeltaTime,Tutorials
+                    24b7f5bd3cfc36f8672b3b62ed606393: !Tutorials.Basics.DeltaTime,Tutorials
                         Id: 0caffdca-f049-425b-a955-661da41dfa94
         -   Entity:
                 Id: 52a3b5f6-5537-4513-ab9b-d6c1ff3e0e8f

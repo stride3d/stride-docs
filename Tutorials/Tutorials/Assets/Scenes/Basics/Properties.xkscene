@@ -50,7 +50,7 @@ Hierarchy:
                         Id: 2000ee21-442f-4031-a6bb-db244e0b9c13
                         Model: 9a3a7dbc-7b08-478a-aab2-19afe1d6ce1c:Models/Teapot
                         Materials: {}
-                    c8e9503a549427f69146c243e118f2d0: !Tutorials.Basics.BasicsProperties,Tutorials
+                    db7ae0113850db0d90246eb554f68d01: !Tutorials.Basics.BasicsProperties,Tutorials
                         Id: 5e0cdc70-b203-4246-9b97-823eafe43ddb
                         aBoolean: true
                         aFloat: 5.6

@@ -81,7 +81,7 @@ Hierarchy:
                         Id: 331cd9e3-dfda-439c-a617-0bb891bd29af
                         Model: 9a3a7dbc-7b08-478a-aab2-19afe1d6ce1c:Models/Teapot
                         Materials: {}
-                    a96ae365f5927b1855f63f18d3009d47: !Tutorials.Basics.CloneEntity,Tutorials
+                    4d154ca1859fcdfad9a7cb3fa631ba28: !Tutorials.Basics.CloneEntity,Tutorials
                         Id: c78f41d3-6d82-4e57-b6af-7a350bccae13
                         entityToClone: ref!! 23f2b5eb-4d46-436a-96a0-e3f317963ee3
         -   Entity:

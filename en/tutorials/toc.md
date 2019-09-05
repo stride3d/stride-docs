@@ -8,7 +8,7 @@
 ### [Editor properties](csharpbasics/editorproperties.md) 
 ### [Getting a component](csharpbasics/getcomponent.md) 
 ### [Cloning an entity](csharpbasics/cloningEntities.md) 
-### [Removing an entity](csharpbasics/destroyingentities.md) 
+### [Removing an entity](csharpbasics/removingEntities.md) 
 ### [Keyboard input](csharpbasics/keyboardInput.md) 
 ### [Mouse input](csharpbasics/mouseInput.md) 
 ### [Virtual buttons](csharpbasics/virtualButtons.md)

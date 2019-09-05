@@ -107,7 +107,7 @@ Hierarchy:
                         Id: 60e9ce47-a7f9-4167-960e-6be77ab17fe0
                         Model: 9a3a7dbc-7b08-478a-aab2-19afe1d6ce1c:Models/Teapot
                         Materials: {}
-                    04b78b37519c1bdc636bd519738bddbc: !Tutorials.Basics.ChildEntities,Tutorials
+                    6a803cec291743efe8dc9f9ccfbd1133: !Tutorials.Basics.ChildEntities,Tutorials
                         Id: 1415e205-e12b-4112-89b0-dcb2e1e335db
         -   Entity:
                 Id: b9149b06-d557-48ea-be39-4d0ed9e95198

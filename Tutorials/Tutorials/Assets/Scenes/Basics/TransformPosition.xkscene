@@ -98,5 +98,5 @@ Hierarchy:
                         Model: 9a3a7dbc-7b08-478a-aab2-19afe1d6ce1c:Models/Teapot
                         Materials:
                             89884ee883567432a2d5454ed2de3164~0: 619de649-4998-4996-bd74-085eaffdbbeb:Materials/Yellow
-                    119c35b4f547fd89594d2b38c6a65360: !Tutorials.Basics.BasicsTransformPosition,Tutorials
+                    f397d1c1e878220079b791a903144388: !Tutorials.Basics.BasicsTransformPosition,Tutorials
                         Id: 7db9e13c-7b03-4a1a-9a39-f5258fb6a72b

@@ -4,7 +4,7 @@ You can find this sample in the tutorial project: **Scenes** -> **Basics** -> **
 ## Explanation
 This C# basics tutorial covers how to get and remove components. Components are the of the most important concepts in Xenko. Every entity in the scene has a list of components. The transform for instance is also a component. When we make custom scripts that inherit from SyncScript or AsyncScript, they turn in to Components that we can attach to entities. Either using the editor or by code.
 
-![Delta time](media/getting-a-component.png)
+![Get a component](media/getting-a-component.png)
 
 ## Code
 ### AmmoComponent
