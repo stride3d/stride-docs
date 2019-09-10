@@ -228,11 +228,9 @@ Like Unity®, Xenko uses prefabs. Prefabs are "master" versions of objects that 
 
 ![Prefabs in Xenko](media/xenko-vs-unity-prefabs.png)
 
-Unlike Unity®, in Xenko, you can also add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
+Just like with Unity®, in Xenko, you can add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
 
 For example, imagine you create a *Vehicle* prefab with acceleration, braking, steering, and so on. Then you nest the *Vehicle* prefab inside prefabs of different types of vehicles: a taxi, bus,truck, etc. If you adjust a property in the *Vehicle* prefab, the changes are inherited by all other prefabs. For example, if you increase the Acceleration property in the *Vehicle* prefab, the acceleration property in the taxi, bus and truck prefabs also increase.
-
-To do this in Unity®, you have to create separate prefabs for each vehicle type and modify their acceleration parameters one by one.
 
 For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs/index.md).
 
