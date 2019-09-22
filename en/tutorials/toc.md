@@ -12,11 +12,3 @@
 ### [Keyboard input](csharpbasics/keyboardInput.md) 
 ### [Mouse input](csharpbasics/mouseInput.md) 
 ### [Virtual buttons](csharpbasics/virtualButtons.md)
-
-## [C# intermediate](csharpintermediate/index.md)
-### [Raycasting](csharpintermediate/raycasting.md) 
-### [Switching a scene](csharpintermediate/switchingscenes.md)
-### [Loading a child scene](csharpintermediate/loadingchildscene.md)
-
-## [C# advanced](csharpadvanced/index.md)
-### [Shader](csharpadvanced/shader.md)
