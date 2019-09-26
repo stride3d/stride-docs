@@ -81,7 +81,7 @@ These tutorials cover the absolute basics of using C# when working with the Xenk
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Getting a component</h2>
+       <h2>Get a component</h2>
     </div>
     <div class='tutorial_thumb'>
         <img src="media/getting-a-component_thumb.png">     
@@ -89,7 +89,7 @@ These tutorials cover the absolute basics of using C# when working with the Xenk
     <div class='tutorial_description'>
         What do you learn?
         <ul>
-            <li>Get a component</li> 
+            <li>Getting a component</li> 
             <li>Remove a component</li> 
             <li>Access methods of other components</li> 
         </ul>
@@ -100,7 +100,7 @@ These tutorials cover the absolute basics of using C# when working with the Xenk
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Adding a component </h2>
+       <h2>Add a component</h2>
     </div>
     <div class='tutorial_thumb'>
         <img src="media/adding-a-component_thumb.png">    
@@ -108,9 +108,9 @@ These tutorials cover the absolute basics of using C# when working with the Xenk
     <div class='tutorial_description'>
         What do you learn?
         <ul>
-            <li>Adding a component by code</li> 
+            <li>Adding a component</li> 
             <li>Removing all components of 1 type</li> 
-            <li>Create and attach a component if it doesn't exists</li> 
+            <li>Create a component if it doesn't exists</li> 
         </ul>
     </div>
     ](addComponent.md) 
@@ -173,6 +173,7 @@ These tutorials cover the absolute basics of using C# when working with the Xenk
     </div>
     ](removeEntities.md) 
 </div>
+
 
 <div class='tutorial'> 
     [
