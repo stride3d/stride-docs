@@ -8,7 +8,7 @@ To develop projects with Xenko, you need:
 |-----------------|----------------
 |Hard drive space | 5GB
 | Operating system | Windows 7, 8.1, 10 
-| IDE for writing code | Visual Studio 2015 or 2017
+| IDE for writing code | Visual Studio 2019
 | CPU | x64
 | GPU | Direct3D 10+ compatible GPU
 | RAM | 4GB (minimum), 8GB (recommended) 
@@ -28,7 +28,7 @@ To develop for mobile platforms, you also need:
 | iOS      | Mac computer, Xamarin* 
 
 > [!Note]
-> * Xamarin is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
+> * Xamarin is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 201, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
 
 For information about platforms Xenko supports, see [Platforms](../platforms/index.md).
 
