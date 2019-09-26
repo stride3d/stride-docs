@@ -13,4 +13,4 @@ This is the first component that we attach to an entity. In the second script, w
 
 ### Getting A Component
 This component script, will retrieve the AmmoComponent script above and use its public method.
-[!code-csharp[AmmoComponent](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\GettingAComponent.cs)]
+[!code-csharp[GettingAComponent](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\GettingAComponent.cs)]
