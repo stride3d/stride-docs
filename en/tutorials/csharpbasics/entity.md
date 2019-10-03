@@ -7,4 +7,4 @@ This C# basics tutorial covers how to get the entity object. When a script is at
 ![Getting the entity example](media/getting-the-entity.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\GettingTheEntity.cs)]
+[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\GettingTheEntity.cs)]

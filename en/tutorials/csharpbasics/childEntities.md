@@ -7,4 +7,4 @@ This C# basics tutorial covers how to get an enties children. Since those childr
 ![Child entities](media/child-entities.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\ChildEntities.cs)]
+[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\ChildEntities.cs)]

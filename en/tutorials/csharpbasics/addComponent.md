@@ -9,9 +9,9 @@ This C# basics tutorial covers how to add and remove components. In the previous
 ## Code
 ### AmmoComponent
 This is the AmmoComponent. We will not attach it to the entity in the editor. Instead we will add it ourselves in the AddingAComponent script.
-[!code-csharp[AmmoComponent](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\AmmoComponent.cs)]
+[!code-csharp[AmmoComponent](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\AmmoComponent.cs)]
 
 ### Adding A Component
 This component script, will add the AmmoComponent script to the entity. We then add another component (of the same type) before we remove all components of that type.
 Finally we learn how to automatically create a component, attach it to the entity and get a reference all in 1 line of code. This only works if the entity doesn't have any components of the given attached yet.
-[!code-csharp[AddingAComponent](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\AddingAComponent.cs)]
+[!code-csharp[AddingAComponent](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\AddingAComponent.cs)]

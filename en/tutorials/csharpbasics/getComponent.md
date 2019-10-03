@@ -9,8 +9,8 @@ This C# basics tutorial covers how to get and remove components. Components are 
 ## Code
 ### AmmoComponent
 This is the first component that we attach to an entity. In the second script, we will try to get this AmmoComponent.
-[!code-csharp[AmmoComponent](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\AmmoComponent.cs)]
+[!code-csharp[AmmoComponent](...\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\AmmoComponent.cs)]
 
 ### Getting A Component
 This component script, will retrieve the AmmoComponent script above and use its public method.
-[!code-csharp[GettingAComponent](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\GettingAComponent.cs)]
+[!code-csharp[GettingAComponent](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\GettingAComponent.cs)]

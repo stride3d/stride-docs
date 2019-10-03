@@ -7,4 +7,4 @@ This C# basics tutorial covers how to handle mouse input. We can check for the e
 ![Mouse input](media/mouse-input.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\MouseInput.cs)]
+[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\MouseInput.cs)]

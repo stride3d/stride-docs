@@ -7,4 +7,4 @@ This C# basics tutorial covers how to virtual buttons. Lets say that you a playe
 ![Virtual buttons](media/virtual-buttons.png)
 
 ## Code
-[!code-csharp[VirtualButtons](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\VirtualButtons.cs)]
+[!code-csharp[VirtualButtons](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\VirtualButtons.cs)]

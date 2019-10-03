@@ -7,4 +7,4 @@ This C# basics tutorial covers how to expose editor properties for Xenko game st
 ![Editor properties](media/editor-properties.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\BasicsProperties.cs)]
+[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\BasicsProperties.cs)]

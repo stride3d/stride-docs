@@ -7,4 +7,4 @@ This C# basics tutorial covers how to handle keyboard input. We can check for th
 ![Keyboard input](media/keyboard-input.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\Tutorials\C# Basics\CSharpBasics\Code\KeyboardInput.cs)]
+[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\C# Basics\CSharpBasics\CSharpBasics.Game\Code\KeyboardInput.cs)]
