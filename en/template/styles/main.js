@@ -255,3 +255,7 @@ $(function() {
         type:'image'
     });
 });
+
+function toggleLangDropDown(){
+  document.getElementById('x_head_langList').classList.toggle('lang-btn-drpdown-show');
+}

@@ -42,7 +42,7 @@
           <li class="twitter"><a href="https://twitter.com/xenko3d" target="_blank">Twitter</a></li>
           <li class="youtube"><a href="https://www.youtube.com/channel/UCfP5ubydYEslNRtacmZBjuQ" target="_blank">YouTube</a></li>
         </ul>
-        <div class="x_lang">
+        <div class="x_lang" onclick="toggleLangDropDown()">
           <p>LANGUAGE</p>
         </div>
       </div>

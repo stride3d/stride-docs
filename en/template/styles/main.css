@@ -1238,3 +1238,7 @@ h4.returns {
         margin: -75px 0 0;
     }
 }
+
+.lang-btn-drpdown-show{
+    height: auto !important;
+}
