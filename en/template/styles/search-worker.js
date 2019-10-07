@@ -1,10 +1,27 @@
 (function() {
   importScripts('lunr.min.js');
+
+  var searchData = [];
+  var searchDataRequest = new XMLHttpRequest();
+  searchDataRequest.open('GET', '../index.json', false);
+  searchDataRequest.onload = function() {
+   if (this.status != 200) {
+    return;
+   }
+   searchData = JSON.parse(this.responseText);
+  }
+  searchDataRequest.send();
+
   var lunrIndex = lunr(function() {
       this.pipeline.remove(lunr.stopWordFilter);
       this.ref('href');
       this.field('title', {boost: 50});
       this.field('keywords', {boost: 20});
+
+      for (var prop in searchData) {
+        this.add(searchData[prop]);
+      }
+      postMessage({e: 'index-ready'});
   });
   lunr.tokenizer.seperator = /[\s\-\.]+/;
 
@@ -20,22 +37,6 @@
     lunrIndex.pipeline.add(docfxStopWordFilter);
   }
   stopWordsRequest.send();
-
-  var searchData = {};
-  var searchDataRequest = new XMLHttpRequest();
-
-  searchDataRequest.open('GET', '../index.json');
-  searchDataRequest.onload = function() {
-    if (this.status != 200) {
-      return;
-    }
-    searchData = JSON.parse(this.responseText);
-    for (var prop in searchData) {
-      lunrIndex.add(searchData[prop]);
-    }
-    postMessage({e: 'index-ready'});
-  }
-  searchDataRequest.send();
 
   onmessage = function(oEvent) {
     var q = oEvent.data.q;
