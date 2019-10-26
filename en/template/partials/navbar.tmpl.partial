@@ -38,9 +38,10 @@
     </div>
     
     <ul class="x_sns">
-          <li class="facebook"><a href="https://www.facebook.com/xenko3d" target="_blank">Facebook</a></li>
-          <li class="twitter"><a href="https://twitter.com/xenko3d" target="_blank">Twitter</a></li>
-          <li class="youtube"><a href="https://www.youtube.com/channel/UCfP5ubydYEslNRtacmZBjuQ" target="_blank">YouTube</a></li>
+          <li class="discord"><a href="https://discord.gg/f6aerfE" target="_blank" title="Discord">Discord</a></li>
+          <li class="facebook"><a href="https://www.facebook.com/xenko3d" target="_blank" title="Facebook">Facebook</a></li>
+          <li class="twitter"><a href="https://twitter.com/xenko3d" target="_blank" title="Twitter">Twitter</a></li>
+          <li class="youtube"><a href="https://www.youtube.com/channel/UCfP5ubydYEslNRtacmZBjuQ" target="_blank" title="YouTube">YouTube</a></li>
         </ul>
         <div class="x_lang" onclick="toggleLangDropDown()">
           <p>LANGUAGE</p>
