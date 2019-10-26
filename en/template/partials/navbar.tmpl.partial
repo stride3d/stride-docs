@@ -42,7 +42,6 @@
           <li class="facebook"><a href="https://www.facebook.com/xenko3d" target="_blank" title="Facebook">Facebook</a></li>
           <li class="twitter"><a href="https://twitter.com/xenko3d" target="_blank" title="Twitter">Twitter</a></li>
           <li class="youtube"><a href="https://www.youtube.com/channel/UCfP5ubydYEslNRtacmZBjuQ" target="_blank" title="YouTube">YouTube</a></li>
-          <li class="gitter"><a href="https://gitter.im/xenko3d/xenko" target="_blank" title="Gitter">Gitter</a></li>
         </ul>
         <div class="x_lang" onclick="toggleLangDropDown()">
           <p>LANGUAGE</p>
