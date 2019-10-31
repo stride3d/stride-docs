@@ -10,4 +10,4 @@ _tocTitle: 'Tutorials'
 These pages contain tutorials to learn more about the Xenko game engine
 
 # C# tutorials 
-* [C# basics](csharpbasics/index.md)
+* [C# basics](csharpbeginner/index.md)

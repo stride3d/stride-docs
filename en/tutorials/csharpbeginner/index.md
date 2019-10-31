@@ -1,8 +1,9 @@
-# C# Basics
-These tutorials cover the absolute basics of using C# when working with the Xenko game engine. Start here if you are new to Xenko or progamming. Althoug having some coding experience is useful, it is not mandatory to get started with these tutorials.
+# C# Beginner
+These tutorials cover the beginner principles of using C# when working with the Xenko game engine. Start here if you are new to Xenko or progamming. Althoug having some coding experience is useful, it is not mandatory to get started with these tutorials.
+![Editor properties](media/C#_beginner_tutorial_scene.jpg)
 
-![Editor properties](media/C#_basics_tutorial_scene.jpg)
-You can create the tutorial project by starting the Xenko launcher, choosing a new Project and selecting: Tutorial -> C# basics. Every single scene is loaded as a child scene and demonstrates a sample script. 
+You can create the C# beginner tutorial project by starting the Xenko launcher. Create a new project and select the template: Tutorials -> C# beginner. Every single scene is loaded as a child scene and demonstrates a sample script. 
+![Editor properties](media/C#_beginner_tutorial_template.jpg)
 
 
 <div class='tutorial'>
