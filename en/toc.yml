@@ -7,3 +7,5 @@
   href: api/index.md
 - name: Release Notes
   href: ReleaseNotes/ReleaseNotes.md
+- name: Tutorials
+  href: tutorials/index.md
