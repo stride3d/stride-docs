@@ -1224,3 +1224,21 @@ h4.returns {
     font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
     display: none;
 }
+
+/* adjust anchor */
+:target:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin: -120px 0 0;
+}
+@media only screen and (max-width: 768px) {
+    :target:before {
+        height: 75px;
+        margin: -75px 0 0;
+    }
+}
+
+.lang-btn-drpdown-show{
+    height: auto !important;
+}

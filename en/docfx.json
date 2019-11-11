@@ -18,6 +18,7 @@
               "sources/engine/Xenko.Input/Xenko.Input.csproj",
               "sources/engine/Xenko.Particles/Xenko.Particles.csproj",
               "sources/engine/Xenko.Physics/Xenko.Physics.csproj",
+              "sources/engine/Xenko.Rendering/Xenko.Rendering.csproj",
               "sources/engine/Xenko.Shaders/Xenko.Shaders.csproj",
               "sources/engine/Xenko.UI/Xenko.UI.csproj",
               "sources/engine/Xenko.VirtualReality/Xenko.VirtualReality.csproj",

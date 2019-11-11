@@ -127,19 +127,19 @@ Number keys | Jump to a page
 * Enable profiling:
 
     ```cs
-    Profiler.EnableProfiling();
+    GameProfiler.EnableProfiling();
     ```
 
 * Enable profiling only for the profiler keys you specify:
 
     ```cs
-    Profiler.EnableProfiling(true, {mykey1,mykey2});
+    GameProfiler.EnableProfiling(true, {mykey1,mykey2});
     ```
 
 * Enable the profiling except for the profiler keys you specify:
 
     ```cs
-    Profiler.EnableProfiling(false, {mykey1,mykey2});
+    GameProfiler.EnableProfiling(false, {mykey1,mykey2});
     ```
 
 * To access the prolifing key of a script, use [ProfilingKey](xref:Xenko.Engine.ScriptComponent.ProfilingKey).
@@ -177,6 +177,39 @@ Visual Studio has powerful in-built profiling tools that can identify common per
     Visual Studio runs your application and begins profiling.
 
 For more information about the Visual Studio profiler, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/mt210448.aspx).
+
+### Use RenderDoc
+
+RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick and easy single-frame capture and detailed introspection of any application using Vulkan, D3D11, OpenGL & OpenGL ES or D3D12 across Windows 7 - 10, Linux, Android, or Nintendo Switch™.
+
+1. Download [RenderDoc](https://renderdoc.org/builds).
+
+2. Optional: This step is optional and only necessary if you want to have render pass markers with name following the Graphics Compositor:
+
+   2.1. In your executable project (Windows), locate `game.Run();` and insert the following code just before:
+
+   ```cs
+   game.GraphicsDeviceManager.DeviceCreationFlags |= DeviceCreationFlags.Debug;
+   ```
+   >[!Note]
+   >If you have a `SharpDXException` of type `DXGI_ERROR_SDK_COMPONENT_MISSING`, please follow the instructions from https://docs.microsoft.com/en-us/windows/uwp/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features
+
+   2.2. Also, make sure profiler is enabled by calling this code from any of your game script:
+
+    ```cs
+    GameProfiler.EnableProfiling();
+    ```
+
+3. Optional: Add a package reference to `Xenko.Graphics.RenderDocPlugin`.
+
+   You can then use the @'Xenko.Graphics.RenderDocManager' class to trigger captures:
+   
+   ```cs
+   var renderDocManager = new RenderDocManager();
+   renderDocManager.StartCapture(GraphicsDevice, IntPtr.Zero);
+   // Some rendering code...
+   renderDocManager.EndFrameCapture(GraphicsDevice, IntPtr.Zero);
+   ```
 
 ## Common bottlenecks
 

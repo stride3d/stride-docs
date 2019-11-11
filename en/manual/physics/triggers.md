@@ -24,9 +24,11 @@ You can see when something enters the trigger using the following code:
 
 ```cs
 // Wait for an entity to collide with the trigger
-                var firstCollision = await trigger.NewCollision();
+var firstCollision = await trigger.NewCollision();
 
-                var otherCollider = trigger == firstCollision.ColliderA ? firstCollision.ColliderB : firstCollision.ColliderA;
+var otherCollider = trigger == firstCollision.ColliderA
+    ? firstCollision.ColliderB
+    : firstCollision.ColliderA;
 ```
 
 Alternatively, directly access the `TrackingHashSet`:

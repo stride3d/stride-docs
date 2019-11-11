@@ -6,6 +6,9 @@
 Xenko's physics are controlled by the [Simulation](xref:Xenko.Physics.Simulation) class.
 You can change how Xenko initializes the [simulation](xref:Xenko.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:Xenko.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.
 
+>[!Note]
+>Your scene must have at least one [Collider](colliders.md) in order for Xenko to initialize the [Simulation](xref:Xenko.Physics.Simulation) instance.
+
 ![Physics Settings](media/simulation-physics-settings.png)
 
 * `CollisionsOnly` initializes the [Simulation](xref:Xenko.Physics.Simulation) with collision detection turned on, but no other physics. Objects won't react to physical forces.
