@@ -38,7 +38,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Get children of children</li> 
         </ul>
     </div>
-    ](childentities.md) 
+    ](child-entities.md) 
 </div>
 
 <div class='tutorial'>
@@ -56,7 +56,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Get the world position</li> 
         </ul>
     </div>
-    ](transformPosition.md) 
+    ](transform-position.md) 
 </div>
 
 
@@ -75,7 +75,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Hiding public properties</li> 
         </ul>
     </div>
-    ](editorProperties.md) 
+    ](editor-properties.md) 
 </div>
 
 <div class='tutorial'>
@@ -93,7 +93,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Access methods of other components</li> 
         </ul>
     </div>
-    ](getComponent.md) 
+    ](get-component.md) 
 </div>
 
 <div class='tutorial'>
@@ -111,7 +111,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Create a component if it doesn't exists</li> 
         </ul>
     </div>
-    ](addComponent.md) 
+    ](add-component.md) 
 </div>
 
 
@@ -130,7 +130,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Making a simple countdown timer</li> 
         </ul>
     </div>
-    ](deltaTime.md) 
+    ](delta-time.md) 
 </div>
 
 <div class='tutorial'>
@@ -148,7 +148,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Adding an entity as a child to a parent entity</li> 
         </ul>
     </div>
-    ](cloningEntities.md) 
+    ](cloning-entities.md) 
 </div>
 
 <div class='tutorial'>
@@ -166,7 +166,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Removing an entity from the scene</li> 
         </ul>
     </div>
-    ](removeEntity.md) 
+    ](remove-entity.md) 
 </div>
 
 
@@ -185,7 +185,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Releasing a key</li> 
         </ul>
     </div>
-    ](keyboardInput.md) 
+    ](keyboard-input.md) 
 </div>
 
 <div class='tutorial'>
@@ -204,7 +204,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Using the mouse wheel </li> 
         </ul>
     </div>
-    ](mouseInput.md) 
+    ](mouse-input.md) 
 </div>
 
 <div class='tutorial'>
@@ -222,6 +222,6 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Using the virtual buttons</li> 
         </ul>
     </div>
-    ](virtualButtons.md) 
+    ](virtual-buttons.md) 
 </div>
 
