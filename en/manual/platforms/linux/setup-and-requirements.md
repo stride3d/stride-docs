@@ -42,7 +42,7 @@ To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which 
 sudo apt-get install libsdl2-dev
 ```
 
-### .NET Code
+### .NET Core
 
 For information about how to install .NET Core, see the [.NET Core instructions for Debian/Ubuntu](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
 
