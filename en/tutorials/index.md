@@ -7,7 +7,7 @@ _tocTitle: 'Tutorials'
 ---
 
 # Xenko Tutorials
-These pages contain tutorials to learn more about the Xenko game engine
+These pages contain tutorials to learn more about the Xenko game engine.
 
 # C# tutorials 
 These tutorials cover programming with C#.
