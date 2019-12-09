@@ -198,8 +198,8 @@ These tutorials cover the beginner principles of using C# when working with the 
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Holding down a mousebutton</li> 
-            <li>Clicking or releasing a mousebutton</li> 
+            <li>Holding down a mouse button</li> 
+            <li>Clicking or releasing a mouse button</li> 
             
             <li>Using the mouse wheel </li> 
         </ul>
@@ -223,5 +223,24 @@ These tutorials cover the beginner principles of using C# when working with the 
         </ul>
     </div>
     ](virtual-buttons.md) 
+</div>
+
+
+<div class='tutorial'> 
+    [
+    <div class='tutorial_title'>
+       <h2>Linear Interpolation</h2>
+    </div>
+    <div class='xk-documentation-image'>
+        ![Linear Interpolation tutorial](media/linear-interpolation_thumb.png "Linear Interpolation tutorial") 
+    </div>
+    <div class='tutorial_description'>
+        <ul>
+            <li>Calculating 'lerp' value</li> 
+            <li>Lerp between vector 3</li> 
+            <li>Random values</li> 
+        </ul>
+    </div>
+    ](keyboard-input.md) 
 </div>
 
