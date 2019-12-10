@@ -1,14 +1,11 @@
 # Linear Interpolation
-You can find this sample in the tutorial project: **Menu** -> **Linear Iterpolation** 
+You can find this sample in the tutorial project: **Menu** &rarr; **Linear Iterpolation** 
 
 ## Explanation
-This C# Beginner tutorial covers how to expose editor properties for Xenko Game Studio. By creating a public variable at the top of our script, we can create editor properties. Some of the most common properties are demonstrated. We can also create public variables that are not shown in the editor.
+This C# Beginner tutorial covers linear interpolation which is often shortened to 'Lerp'. Sometimes you want to gradually change a value from a start value to a target value. This process is called linear interpolation. Xenko exposes several Lerp functions for various types. Among them are Vector2, Vector3 and Vector4.
 
-![Editor properties](media/editor-properties2.png)
+![Linear interpolation](media/lerp.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\PropertiesDEmo.cs)]
-
-The code above will result in the following properties inside Xenko game studio.
-
-![Editor properties](media/editor-properties.png)
+The example consists of a simple timer that resets after a couple seconds. When the timer starts, a start position and a randomly generated target position are stored. A box will move between these two positions. Every frame a 'Lerp value' is calculated. The lerp value is used to determined what the current position of a moving box should be. Once the timer is done, the current position will become the start position and a new target position is again randomly generated.
+[!code-csharp[Lerp](..\..\..\..\xenko\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\LerpDemo.cs)]
