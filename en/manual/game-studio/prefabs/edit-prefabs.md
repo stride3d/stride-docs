@@ -50,7 +50,7 @@ This video demonstrates what happens when we make changes to the prefab. The Sce
 
 * [Prefab index](index.md)
 * [Create a prefab](create-a-prefab.md)
-* [Use prefabs](index.md)
+* [Use prefabs](use-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
 * [Prefab models](prefab-models.md)

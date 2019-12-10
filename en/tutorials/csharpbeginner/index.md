@@ -262,3 +262,22 @@ These tutorials cover the beginner principles of using C# when working with the 
     ](loading-content.md) 
 </div>
 
+<div class='tutorial'> 
+    [
+    <div class='tutorial_title'>
+       <h2>Instantiating prefabs</h2>
+    </div>
+    <div class='xk-documentation-image'>
+        ![Instantiating prefabs tutorial](media/instantiating-prefabs_thumb.png "Instantiating prefabs tutorial") 
+    </div>
+    <div class='tutorial_description'>
+        <ul>
+            <li>Instantiate prefab</li> 
+            <li>Load prefab from content</li> 
+            <li>Parent prefab entity</li> 
+        </ul>
+    </div>
+    ](instantiating-prefabs.md) 
+</div>
+
+
