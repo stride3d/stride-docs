@@ -1,5 +1,5 @@
 # Adding a component
-You can find this sample in the tutorial project: **Menu** -> **Adding a component** 
+You can find this sample in the tutorial project: **Menu** &rarr; **Adding a component** 
 
 ## Explanation
 This C# Beginner tutorial covers how to add and remove components. In the previous tutorial we learned how we can retrieve components that are already attached to an entity through the editor. This tutorial shows that we can accomplish the same thing by code. We can add the same component several times to the same entity. We also learn how to remove all of components of the same type again.

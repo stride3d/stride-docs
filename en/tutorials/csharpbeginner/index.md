@@ -232,7 +232,7 @@ These tutorials cover the beginner principles of using C# when working with the 
        <h2>Linear Interpolation</h2>
     </div>
     <div class='xk-documentation-image'>
-        ![Linear Interpolation tutorial](media/linear-interpolation_thumb.png "Linear Interpolation tutorial") 
+        ![Linear Interpolation tutorial](media/lerp_thumb.png "Linear Interpolation tutorial") 
     </div>
     <div class='tutorial_description'>
         <ul>
@@ -241,6 +241,24 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Random values</li> 
         </ul>
     </div>
-    ](keyboard-input.md) 
+    ](linear-interpolation.md) 
+</div>
+
+<div class='tutorial'> 
+    [
+    <div class='tutorial_title'>
+       <h2>Loading content</h2>
+    </div>
+    <div class='xk-documentation-image'>
+        ![Loading content tutorial](media/loading-content_thumb.png "Loading content tutorial") 
+    </div>
+    <div class='tutorial_description'>
+        <ul>
+            <li>Loading content from code</li> 
+            <li>Unloading content</li> 
+            <li>Attach models to entities</li> 
+        </ul>
+    </div>
+    ](loading-content.md) 
 </div>
 

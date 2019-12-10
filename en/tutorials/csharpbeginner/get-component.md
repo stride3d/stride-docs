@@ -1,5 +1,5 @@
 # Getting a component
-You can find this sample in the tutorial project: **Menu** ->  **Getting a component** 
+You can find this sample in the tutorial project: **Menu** &rarr;  **Getting a component** 
 
 ## Explanation
 This C# beginner tutorial covers how to get and remove components. Components are the of the most important concepts in Xenko. Every entity in the scene has a list of components. The transform for instance is also a component. When we make custom scripts that inherit from SyncScript or AsyncScript, they turn into Components that we can attach to entities. We can attach these components to entities by using the editor or we can attach them by code.
