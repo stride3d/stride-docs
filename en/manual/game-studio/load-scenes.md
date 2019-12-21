@@ -1,6 +1,19 @@
 # Load and unload scenes at runtime
 
-The following code loads three scenes and adds them as children:
+## Loading scenes
+
+You can use `UrlReference<Scene>` properties on your scripts to assign **Scene** assets then load the via code:
+
+```cs
+public UrlReference<Scene> ChildSceneUrl { get; set; }
+
+//...
+var childScene = Content.Load(ChildSceneUrl);
+
+parentScene.Children.Add(childScene);
+```
+
+Alternatively you can load scenes by name. The following code loads three scenes and adds them as children:
 
 ```cs
 var myChildScene0 = Content.Load<Scene>(url0);
@@ -13,7 +26,7 @@ myChildScene1.Add(myChildScene2);
 ```
 
 >[!Note]
->Make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset View**).
+>If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset View**).
 
 >![Scenes included in root](media/scenes-included-in-root.png)
 
@@ -22,6 +35,23 @@ myChildScene1.Add(myChildScene2);
 >For more information about including assets in the build, see [Manage assets](manage-assets.md).
 
 For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
+
+## Unloading scenes
+
+Before a scene is unloaded remove it from the scene hierarchy:
+
+```cs
+parentScene.Children.Remove(childScene);
+
+//Alternatively
+childScene.Parent = null;
+```
+
+Once the scene asset is no longer required make sure to unload it:
+
+```cs
+Content.Unload(childScene);
+```
 
 ## Scene streaming script
 
@@ -57,7 +87,7 @@ Game Studio adds a scene streaming script to your project assets.
 
     ![Scene streaming properties](media/scene-streaming-script-properties.png)
 
-4. Under **Url**, specify the URL of the scene you want to load.
+4. Under **Url**, specify the scene asset you want to load.
 
 5. Under **Trigger**, specify the entity you created in step 1.
 

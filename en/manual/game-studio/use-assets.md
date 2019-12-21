@@ -110,7 +110,7 @@ namespace Examples
 {
     public class UrlReferenceExample : AsyncScript
     {
-        public UrlReference<Scene> NextSceneUrl { get; set; }        
+        public UrlReference<Scene> NextSceneUrl { get; set; }
 
         public override async Task Execute()
         {
