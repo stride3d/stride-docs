@@ -127,8 +127,11 @@ For example, the code below defines and uses the dynamic parameter `Frequency`:
 ```cs
 shader ComputeColorWave: ComputeColor, Texturing
 {
-    stage float Frequency = 1.0f;
-
+	cbuffer PerMaterial
+	{
+		stage float Frequency = 1.0f;
+	}
+	
     override float4 Compute()
     {
         return sin(( Global.Time ) * 2 * 3.14 * Frequency);
