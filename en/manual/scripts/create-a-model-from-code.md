@@ -126,8 +126,8 @@ For example:
 	    }
     };
     var material = Material.New(GraphicsDevice, materialDescription);
-    material.Parameters.Set(MaterialKeys.DiffuseValue, Color.Red);
-    model.Materials.Add(material);
+    material.Parameters[0].Set(MaterialKeys.DiffuseValue, Color.Red);
+    model.Materials.Add(0, material);
 ```
 
 ## See also
