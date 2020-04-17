@@ -7,4 +7,4 @@ This C# Beginner tutorial covers the Transform component of an entity. The Trans
 ![Transform Position](media/transform-position.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\TransformPositionDemo.cs)]
+[!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\TransformPositionDemo.cs)]

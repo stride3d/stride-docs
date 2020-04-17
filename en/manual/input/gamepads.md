@@ -6,7 +6,7 @@
 **Gamepads**, such as the Xbox Elite Wireless Controller and the PS4 DualShock, are popular input devices for consoles and desktop.
 
 > [!Note] 
-> Xenko is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings. Gamepad-specific features like the PS4 DualShock touchpad aren't supported.
+> Stride is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings. Gamepad-specific features like the PS4 DualShock touchpad aren't supported.
 
 ## Digital and analog buttons
 
@@ -14,7 +14,7 @@
 
 * **Analog** buttons return a value depending on how hard the user presses. The triggers are analog buttons, and return a value between 0 and 1. The thumbsticks are also analog, and return values between -1 and 1 on the X and Y axes. 
 
-The Xbox Elite controller buttons have the following names in Xenko:
+The Xbox Elite controller buttons have the following names in Stride:
 
 ![Xbox gamepad](media/input-gamepad-standard-gamepad.png)
 
@@ -24,13 +24,13 @@ The Xbox Elite controller buttons have the following names in Xenko:
 
 Before handling gamepad input:
 
-* To check if any gamepads are connected, use [InputManager.HasGamePad](xref:Xenko.Input.InputManager.HasGamePad).
+* To check if any gamepads are connected, use [InputManager.HasGamePad](xref:Stride.Input.InputManager.HasGamePad).
 
-* To check how many gamepads are connected, use [InputManager.GamePadCount](xref:Xenko.Input.InputManager.GamePadCount).
+* To check how many gamepads are connected, use [InputManager.GamePadCount](xref:Stride.Input.InputManager.GamePadCount).
 
-* To check if the current device has been disconnected, use the [InputManager.DeviceRemoved](xref:Xenko.Input.InputManager.DeviceRemoved) event.
+* To check if the current device has been disconnected, use the [InputManager.DeviceRemoved](xref:Stride.Input.InputManager.DeviceRemoved) event.
 
-* To check if a device has been connected, use the [InputManager.DeviceAdded](xref:Xenko.Input.InputManager.DeviceAdded) event.
+* To check if a device has been connected, use the [InputManager.DeviceAdded](xref:Stride.Input.InputManager.DeviceAdded) event.
 
 ### Digital buttons
 
@@ -38,36 +38,36 @@ To query the states and state changes of digital gamepad buttons, on the `GamePa
 
 | Method | Functionality
 |--------|--------------
-| [IsButtonDown(IGamePadDevice, GamePadButton)](xref:Xenko.Input.GamePadDeviceExtensions.IsButtonDown\(Xenko.Input.IGamePadDevice,Xenko.Input.GamePadButton\)) | Checks whether the button is in the _down_ state.
-| [IsButtonPressed(IGamePadDevice, GamePadButton)](xref:Xenko.Input.GamePadDeviceExtensions.IsButtonPressed\(Xenko.Input.IGamePadDevice,Xenko.Input.GamePadButton\)) | Checks whether the user has _pressed_ the button since the previous update. 
-| [IsButtonReleased(IGamePadDevice, GamePadButton)](xref:Xenko.Input.GamePadDeviceExtensions.IsButtonReleased\(Xenko.Input.IGamePadDevice,Xenko.Input.GamePadButton\)) | Checks whether the user has _released_ the button since the previous update.
+| [IsButtonDown(IGamePadDevice, GamePadButton)](xref:Stride.Input.GamePadDeviceExtensions.IsButtonDown\(Stride.Input.IGamePadDevice,Stride.Input.GamePadButton\)) | Checks whether the button is in the _down_ state.
+| [IsButtonPressed(IGamePadDevice, GamePadButton)](xref:Stride.Input.GamePadDeviceExtensions.IsButtonPressed\(Stride.Input.IGamePadDevice,Stride.Input.GamePadButton\)) | Checks whether the user has _pressed_ the button since the previous update. 
+| [IsButtonReleased(IGamePadDevice, GamePadButton)](xref:Stride.Input.GamePadDeviceExtensions.IsButtonReleased\(Stride.Input.IGamePadDevice,Stride.Input.GamePadButton\)) | Checks whether the user has _released_ the button since the previous update.
 
 **Button (GamePadButton)** is the gamepad button you want to check.
 
-You can also get the state of digital buttons using [GamePadState.Buttons](xref:Xenko.Input.GamePadState.Buttons).
+You can also get the state of digital buttons using [GamePadState.Buttons](xref:Stride.Input.GamePadState.Buttons).
 
 > [!Note] 
-> The [GamePadState.Buttons](xref:Xenko.Input.GamePadState.Buttons) field is a bitmask that uses binary system. Depending on the bitmask value, you can determine which buttons are *up* or *down*.
+> The [GamePadState.Buttons](xref:Stride.Input.GamePadState.Buttons) field is a bitmask that uses binary system. Depending on the bitmask value, you can determine which buttons are *up* or *down*.
 
-To get the gamepad state, use [IGamePadDevice.State](xref:Xenko.Input.IGamePadDevice.State).
+To get the gamepad state, use [IGamePadDevice.State](xref:Stride.Input.IGamePadDevice.State).
 
 ### Analog buttons
 
 To query values of analog buttons, first get the current state of gamepad using 
-[GetGamePadByIndex(index)](xref:Xenko.Input.InputManager.GetGamePadByIndex\(System.Int32\)), where _index (Integer)_ is the index of the gamepad you want to check.
+[GetGamePadByIndex(index)](xref:Stride.Input.InputManager.GetGamePadByIndex\(System.Int32\)), where _index (Integer)_ is the index of the gamepad you want to check.
 
 > [!WARNING]
-> The value returned by [IGamePadDevice.State](xref:Xenko.Input.IGamePadDevice.State) is the state of the gamepad at the **current** update. You can't reuse this value for the next updates. You have to query it again in every update.
+> The value returned by [IGamePadDevice.State](xref:Stride.Input.IGamePadDevice.State) is the state of the gamepad at the **current** update. You can't reuse this value for the next updates. You have to query it again in every update.
 
 To get trigger and thumbstick positions, use these 
-[GamePadState](xref:Xenko.Input.GamePadState) fields:
+[GamePadState](xref:Stride.Input.GamePadState) fields:
 
 | Field | Description 
 |-------|------------
-| [GamePadState.LeftThumb](xref:Xenko.Input.GamePadState.LeftThumb) | Left thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
-| [GamePadState.RightThumb](xref:Xenko.Input.GamePadState.RightThumb) | Right thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
-| [GamePadState.LeftTrigger](xref:Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axes. |
-| [GamePadState.RightTrigger](xref:Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
+| [GamePadState.LeftThumb](xref:Stride.Input.GamePadState.LeftThumb) | Left thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
+| [GamePadState.RightThumb](xref:Stride.Input.GamePadState.RightThumb) | Right thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
+| [GamePadState.LeftTrigger](xref:Stride.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axes. |
+| [GamePadState.RightTrigger](xref:Stride.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
 
 Thumbsticks move along the X and Y axes. Their positions read as follows:
 
@@ -80,16 +80,16 @@ Triggers move along the X axis. Their positions read as follows:
 
 ### Vibration
 
-To set the gamepad vibration level, use [IGamePadDevice.SetVibration](xref:Xenko.Input.IGamePadDevice.SetVibration\(System.Single,System.Single,System.Single,System.Single\)).
+To set the gamepad vibration level, use [IGamePadDevice.SetVibration](xref:Stride.Input.IGamePadDevice.SetVibration\(System.Single,System.Single,System.Single,System.Single\)).
 
 > [!Note] 
-> Xenko currently only supports vibration for Xbox gamepads.
+> Stride currently only supports vibration for Xbox gamepads.
 
 ## Example code
 
 ```cs
-using Xenko.Core.Mathematics;
-using Xenko.Engine;
+using Stride.Core.Mathematics;
+using Stride.Engine;
 
 public class TestScript : SyncScript
 {

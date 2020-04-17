@@ -7,4 +7,4 @@ This C# Beginner tutorial covers the retrieval and usage of delta time. A games 
 ![Delta Time](media/deltatime.png)
 
 ## Code
-[!code-csharp[DeltaTime](..\..\..\..\xenko\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\DeltaTimeDemo.cs)]
+[!code-csharp[DeltaTime](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\DeltaTimeDemo.cs)]

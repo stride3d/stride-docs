@@ -18,7 +18,7 @@ You can use the **navigation** system to control how characters and other object
 
 ## Sample project
 
-For an example of how to implement navigation, including enabling and disabling [dynamic navigation](dynamic-navigation.md) at runtime, see the **top-down RPG** sample project included with Xenko.
+For an example of how to implement navigation, including enabling and disabling [dynamic navigation](dynamic-navigation.md) at runtime, see the **top-down RPG** sample project included with Stride.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/NoOutlineAE.jpg">

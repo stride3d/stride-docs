@@ -12,7 +12,7 @@
 
 ## イベントを作成してブロードキャストする
 
-Xenko API のブロードキャスターは [EventKey](xref:Xenko.Engine.Events.EventKey) 型です。ブロードキャスターは、[Broadcast](xref:Xenko.Engine.Events.EventKey#Xenko_Engine_Events_EventKey_Broadcast) メソッドを使用してイベントをレシーバーにブロードキャストします。
+Stride API のブロードキャスターは [EventKey](xref:Stride.Engine.Events.EventKey) 型です。ブロードキャスターは、[Broadcast](xref:Stride.Engine.Events.EventKey#Stride_Engine_Events_EventKey_Broadcast) メソッドを使用してイベントをレシーバーにブロードキャストします。
 
 たとえば、次のコードは「ゲーム オーバー」イベントを作成します。
 
@@ -30,7 +30,7 @@ public static class GlobalEvents
 
 ## レシーバーを作成する
 
-Xenko API のレシーバーは [EventReceiver](xref:Xenko.Engine.Events.EventReceiver) 型です。
+Stride API のレシーバーは [EventReceiver](xref:Stride.Engine.Events.EventReceiver) 型です。
 
 上で説明した「ゲーム オーバー」イベントを受け取るには、次のコードを使用します。
 

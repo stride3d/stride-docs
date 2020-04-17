@@ -169,21 +169,21 @@ $(function () {
   }
   function redirectToCurrentDocVersion() {
     // Set current doc version at start of page
-    if ($('#xk-current-version').length > 0) {
+    if ($('#stride-current-version').length > 0) {
       var urlSplits = window.location.pathname.split('/');
       var urlVersion = urlSplits[1];
-      if ($('#xk-current-version option[value="' + urlVersion + '"]').length <= 0) {
-        $("#xk-current-version").val('latest');
+      if ($('#stride-current-version option[value="' + urlVersion + '"]').length <= 0) {
+        $("#stride-current-version").val('latest');
       } else {
-        $("#xk-current-version").val(urlVersion);
+        $("#stride-current-version").val(urlVersion);
       }
 
     }
-    $('#xk-current-version').on('change', function () {
+    $('#stride-current-version').on('change', function () {
       var hostVersion = window.location.host;
       var pathVersion = window.location.pathname;
       var urlLanguage = window.location.pathname.split('/')[2];
-      var targetVersion = $("#xk-current-version").val();
+      var targetVersion = $("#stride-current-version").val();
 
       if (targetVersion == "latest" || targetVersion >= '2') {
         urlLanguage += '/';
@@ -249,7 +249,7 @@ $(function () {
     })
   };
 
-  $('img').filter(function () { return $(this).parent().is(":not(.xk-documentation-image)"); }).each(function () {
+  $('img').filter(function () { return $(this).parent().is(":not(.stride-documentation-image)"); }).each(function () {
     $(this).wrap('<a class="maximize_image" href=' + $(this).attr('src') + '></a>').parent().html()
   });
 

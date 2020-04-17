@@ -2,7 +2,7 @@
 
 ![Requirements](media/requirements.png)
 
-Xenko でプロジェクトを開発するには、次のものが必要です。
+Stride でプロジェクトを開発するには、次のものが必要です。
 
 | 要件     | 仕様
 |-----------------|----------------
@@ -30,11 +30,11 @@ RAM の要件は、プロジェクトによって異なります。
 > [!NOTE]
 > * Xamarin は Visual Studio のライセンスに含まれます。Visual Studio 2017 で Xamarin をインストールする方法については、[この MSDN ページ](https://docs.microsoft.com/ja-jp/visualstudio/cross-platform/setup-and-install)を参照してください。
 
-Xenko がサポートするプラットフォームについては、「[プラットフォーム](../platforms/index.md)」を参照してください。
+Stride がサポートするプラットフォームについては、「[プラットフォーム](../platforms/index.md)」を参照してください。
 
-## Xenko で作成したゲームを実行する
+## Stride で作成したゲームを実行する
 
-Xenko で作成したゲームを実行するには、次のものが必要です。
+Stride で作成したゲームを実行するには、次のものが必要です。
 
 - .NET 4.6.1
 - DirectX11 (Windows 10 以降に含まれます)、OpenGL、または Vulkan

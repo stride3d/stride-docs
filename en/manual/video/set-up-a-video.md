@@ -11,10 +11,10 @@
 </p>
 
 >[!Note]
->Xenko supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Xenko doesn't have to convert them.
+>Stride supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Stride doesn't have to convert them.
 
 >[!Note]
->Currently, Xenko doesn't support video on iOS platforms.
+>Currently, Stride doesn't support video on iOS platforms.
 
 ## 1. Add a video asset
 
@@ -32,7 +32,7 @@ Before you can use a video in your game, you need to import it as an [asset](../
 
 3. Click **OK**.
 
-    Xenko adds the video as an asset in the **Asset View**. If you imported audio tracks from the video file, Xenko adds them as separate [audio assets](../audio/index.md).
+    Stride adds the video as an asset in the **Asset View**. If you imported audio tracks from the video file, Stride adds them as separate [audio assets](../audio/index.md).
 
     ![Video and audio assets](media/video-and-audio-assets.png)
 
@@ -52,7 +52,7 @@ Before you can use a video in your game, you need to import it as an [asset](../
 
     ![Add video component](media/add-component.png)
 
-    Xenko adds a **video component** to the entity.
+    Stride adds a **video component** to the entity.
 
     ![Video component](media/video-component.png)
 
@@ -66,7 +66,7 @@ Before you can use a video in your game, you need to import it as an [asset](../
 
     Models that use this texture will display the video.
 
-    When the video isn't playing in your scene, Xenko displays the texture instead. 
+    When the video isn't playing in your scene, Stride displays the texture instead. 
 
 ## 3. Create a script to play the video
 
@@ -114,7 +114,7 @@ myVideoComponent.Instance.Play();
 
     ![My video script](media/add-video-script.png)
 
-    Xenko adds the script as a component.
+    Stride adds the script as a component.
 
     You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **Property Grid** under the script component properties.
 

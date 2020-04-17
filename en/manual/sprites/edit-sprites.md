@@ -96,7 +96,7 @@ If you want to use the entire sprite sheet image for the sprite, you can do this
 
 ### Set transparency
 
-By default, Xenko treats transparent areas of the sprite sheet as transparent at runtime. Alternatively, you can set a key color as transparent. To do this, select **Use color key** and define a color. For example, if you set absolute black (#FF000000), areas of absolute black are transparent at runtime.
+By default, Stride treats transparent areas of the sprite sheet as transparent at runtime. Alternatively, you can set a key color as transparent. To do this, select **Use color key** and define a color. For example, if you set absolute black (#FF000000), areas of absolute black are transparent at runtime.
 
 ![Select color key](media/color-key.png)
 
@@ -116,7 +116,7 @@ You can set the properties of individual sprites in the **Property Grid**.
 | Name | The name of this sprite. You can also edit this by double-clicking a sprite in the sprite list in the Sprite Editor
 | Texture region | The region of the sprite sheet used for this sprite
 | Pixels per unit | The number of pixels representing a unit in the scene. The higher this number, the smaller the sprite is rendered in the scene
-| Orientation | If you select **Rotated90**, Xenko rotates the sprite 90 degrees at runtime
+| Orientation | If you select **Rotated90**, Stride rotates the sprite 90 degrees at runtime
 | Center | The position of the center of the sprite, in pixels. By default, the center is **0, 0**. Note: this property is only available if the sprite sheet type is set to **Sprite2D** in the Sprite Editor.
 | Center from middle | Have the value in the Center property represent the offset of the sprite center from the middle of the sprite. Note: this property is only available if the sprite sheet type is set to **Sprite2D** in the Sprite Editor.
 | Borders |  The size in pixels of the sprite borders (areas that don't deform when stretched). X is the left border, Y is the top, Z is the right, and W is the bottom. For more information, see [Set sprite borders](set-sprite-borders.md). Note: this property is only available if the sprite sheet is set to **UI** on the left.

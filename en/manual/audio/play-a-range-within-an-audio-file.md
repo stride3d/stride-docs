@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can have Xenko play only certain portions of an audio asset. This means, for example, that you can create multiple samples from a single audio asset by specifying different ranges in different [SoundInstance](xref:Xenko.Audio.SoundInstance) objects.
+You can have Stride play only certain portions of an audio asset. This means, for example, that you can create multiple samples from a single audio asset by specifying different ranges in different [SoundInstance](xref:Stride.Audio.SoundInstance) objects.
 
 ![Loop points](media/audio-advanced-features-loop-points.png)
 
@@ -11,10 +11,10 @@ You can use the following properties, methods, and structures:
 
 | Property, method, or structure | Function |
 |---------|-----------|
-| [Sound.TotalLength](xref:Xenko.Audio.Sound.TotalLength) | The total length of the [sound](xref:Xenko.Audio.Sound). |
-| [SoundInstance.SetRange(PlayRange)](xref:Xenko.Audio.SoundInstance.SetRange(Xenko.Audio.PlayRange)) | Sets the time range to play within the audio asset. |
-| [PlayRange](xref:Xenko.Audio.PlayRange) | Time information, including the range's starting point and length. |
-| [SoundInstance.Position](xref:Xenko.Audio.SoundInstance.Position) | Gets the current play position as **TimeSpan**. |
+| [Sound.TotalLength](xref:Stride.Audio.Sound.TotalLength) | The total length of the [sound](xref:Stride.Audio.Sound). |
+| [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Audio.PlayRange)) | Sets the time range to play within the audio asset. |
+| [PlayRange](xref:Stride.Audio.PlayRange) | Time information, including the range's starting point and length. |
+| [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position) | Gets the current play position as **TimeSpan**. |
 
 For example:
 

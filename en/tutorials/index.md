@@ -6,15 +6,15 @@ _navRel: ../toc.html
 _tocTitle: 'Tutorials'
 ---
 
-# Xenko Tutorials
-These pages contain tutorials to learn more about the Xenko game engine.
+# Stride Tutorials
+These pages contain tutorials to learn more about the Stride game engine.
 
 # C# tutorials 
 These tutorials cover programming with C#.
 
 <div class='tutorial'>
     <a href="csharpbeginner/index.md"> 
-        <div class='xk-documentation-image'>
+        <div class='stride-documentation-image'>
             ![C# beginner tutorials](media/csharp-beginner.png "C# beginner tutorials")
         </div>
         <div class='tutorial_description'>

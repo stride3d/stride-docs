@@ -18,7 +18,7 @@ To do this:
 
     ![Graphics Compositor editor](media/graphics-compositor-VR-template.png)
 
-2. Select the **forward render node** connected to the editor node. For example, in the screenshot below (taken from the Xenko VR sample project), the editor is connected to the lower forward renderer node.
+2. Select the **forward render node** connected to the editor node. For example, in the screenshot below (taken from the Stride VR sample project), the editor is connected to the lower forward renderer node.
 
     ![Node connections](media/node-connections.png)
 
@@ -55,7 +55,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 
     ![Select forward renderer](media/select-editor-forward-renderer.png)
 
-    Xenko links the editor to the forward renderer node.
+    Stride links the editor to the forward renderer node.
 
     ![Node connections](media/node-connections.png)
 
@@ -69,7 +69,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
     > [!Note]
     > Make sure the forward renderer has VR enabled. For instructions, see [Enable VR](enable-vr.md).
 
-Xenko displays the scene preview in your VR device. To display the scene on your monitor instead, disable **VRRendererSettings** in the properties of the new forward renderer.
+Stride displays the scene preview in your VR device. To display the scene on your monitor instead, disable **VRRendererSettings** in the properties of the new forward renderer.
 
 ![Enable VR](media/vr-renderer-settings.png)
 

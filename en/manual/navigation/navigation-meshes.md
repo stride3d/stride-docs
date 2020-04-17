@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Level designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Navigation meshes** form the area that entities with navigation components can navigate. Xenko creates a layer in the navigation mesh for each [navigation group](navigation-groups.md) you create.
+**Navigation meshes** form the area that entities with navigation components can navigate. Stride creates a layer in the navigation mesh for each [navigation group](navigation-groups.md) you create.
 
 Game Studio displays navigation meshes as colored overlays in your scene. The overlay shows where entities in the navigation group for that layer can move. The mesh updates in real time as you edit your scene.
 
@@ -40,7 +40,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     ![Choose navigation group](media/choose-navigation-group-in-navigation-mesh.png)
 
-    Xenko builds a layer in the navigation mesh for this group. For more information about groups, including how to create them, see [Navigation groups](navigation-groups.md).
+    Stride builds a layer in the navigation mesh for this group. For more information about groups, including how to create them, see [Navigation groups](navigation-groups.md).
 
 5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh.
 

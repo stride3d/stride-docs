@@ -1,8 +1,8 @@
 # Audio
 
-You can import sound files and use them in your games. Xenko supports audio features including 3D spatialized audio, streaming, and low-latency playback.
+You can import sound files and use them in your games. Stride supports audio features including 3D spatialized audio, streaming, and low-latency playback.
 
-![Audio in Xenko](media/audio-index-intro-picture.png)
+![Audio in Stride](media/audio-index-intro-picture.png)
 
 ## In this section
 

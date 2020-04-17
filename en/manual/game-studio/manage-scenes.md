@@ -33,7 +33,7 @@ There are several ways to make a scene a child of another scene:
 
 ## Set the default scene
 
-The **default scene** is the scene Xenko loads at runtime. You can set this in the [Game Settings](game-settings.md) asset.
+The **default scene** is the scene Stride loads at runtime. You can set this in the [Game Settings](game-settings.md) asset.
 
 1. In the **Solution Explorer** (the bottom-left pane by default), select the **Assets folder**.
 
@@ -51,7 +51,7 @@ The **default scene** is the scene Xenko loads at runtime. You can set this in t
 
 2. Select the default scene and click **OK**.
 
-Xenko loads this scene at runtime.
+Stride loads this scene at runtime.
 
 For more information about the Game Settings asset, see [Game Settings](game-settings.md).
 

@@ -36,7 +36,7 @@
 
 ## アニメーションのサンプル
 
-Xenko でのアニメーションの動き方の例を見るには、**Sample: animation** サンプル プロジェクトを読み込んでください。
+Stride でのアニメーションの動き方の例を見るには、**Sample: animation** サンプル プロジェクトを読み込んでください。
 
 ![Animations](media/animations-index1.png)
 

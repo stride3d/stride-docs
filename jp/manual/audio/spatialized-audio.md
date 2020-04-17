@@ -15,7 +15,7 @@
 
 ![Doppler effect](media/audio-index-play-audio-doppler-effect.png)
 
-リアルな 3D オーディオをシミュレートするため、Xenko はシーン内にある次の 2 つのエンティティの位置を追跡しています。
+リアルな 3D オーディオをシミュレートするため、Stride はシーン内にある次の 2 つのエンティティの位置を追跡しています。
 
 * **[オーディオ エミッター](audio-emitters.md)**: オーディオを生成します
 * **[オーディオ リスナー](audio-listeners.md)**: オーディオ エミッターによって生成されたサウンドを聴きます
@@ -40,7 +40,7 @@
     ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
 
 > [!NOTE]
-> Xenko は空間オーディオをモノラル (単一チャンネル) オーディオとして処理します。ソース ファイルが変更されることはありません。
+> Stride は空間オーディオをモノラル (単一チャンネル) オーディオとして処理します。ソース ファイルが変更されることはありません。
 
 ## 関連項目
 

@@ -25,7 +25,7 @@ myChildScene1.Add(myChildScene2);
 
 ## シーンストリーマー スクリプト
 
-Xenko には、[トリガー](../physics/triggers.md)を使用してシーンをロードする Scene Streaming スクリプトも含まれます。
+Stride には、[トリガー](../physics/triggers.md)を使用してシーンをロードする Scene Streaming スクリプトも含まれます。
 
 >[!NOTE]
 >Scene Streaming スクリプトは例として含まれています。シーンをロードする方法として常に最適であるとは限りません。必要に応じて自由に変更してください。

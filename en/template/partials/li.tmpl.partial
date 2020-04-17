@@ -8,7 +8,7 @@
     {{/leaf}}
     {{#topicHref}}
     {{#type}}
-    <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}" class="xk-{{type}}">{{name}}</a>
+    <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}" class="stride-{{type}}">{{name}}</a>
     {{/type}}
     {{^type}}
     <a href="{{topicHref}}" name="{{tocHref}}" title="{{name}}">{{name}}</a>

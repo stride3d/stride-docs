@@ -188,7 +188,7 @@ Next to **Render mask**, click **Change values** and select the render groups yo
 
 ## Sample
 
-For an example of rendering to a texture in a project, see the **Animation** sample included with Xenko.
+For an example of rendering to a texture in a project, see the **Animation** sample included with Stride.
 
 ## See also
 

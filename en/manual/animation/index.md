@@ -36,7 +36,7 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 
 ## Animation samples
 
-For an example of how animations work in Xenko, load the **Sample: animation** sample project.
+For an example of how animations work in Stride, load the **Sample: animation** sample project.
 
 ![Animations](media/animations-index1.png)
 

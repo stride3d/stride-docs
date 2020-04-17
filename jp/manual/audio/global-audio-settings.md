@@ -5,17 +5,17 @@
 
 グローバル オーディオ設定は、プロジェクト内のすべてのオーディオに適用されます。
 
-グローバル オーディオ設定は、[AudioEngine](xref:Xenko.Audio.AudioEngine) **プロパティ** クラスにアクセスすることによって制御できます。
+グローバル オーディオ設定は、[AudioEngine](xref:Stride.Audio.AudioEngine) **プロパティ** クラスにアクセスすることによって制御できます。
 
 | プロパティ | 機能 |
 |--- | --- |
-| [MasterVolume](xref:Xenko.Audio.AudioEngine.MasterVolume) | マスター ボリュームを設定します。 |
-| [PauseAudio](xref:Xenko.Audio.AudioEngine.PauseAudio) | すべてのオーディオを一時停止します。 |
-| [ResumeAudio](xref:Xenko.Audio.AudioEngine.ResumeAudio) | すべてのオーディオを再開します。 |
+| [MasterVolume](xref:Stride.Audio.AudioEngine.MasterVolume) | マスター ボリュームを設定します。 |
+| [PauseAudio](xref:Stride.Audio.AudioEngine.PauseAudio) | すべてのオーディオを一時停止します。 |
+| [ResumeAudio](xref:Stride.Audio.AudioEngine.ResumeAudio) | すべてのオーディオを再開します。 |
 
-[SoundInstance API](xref:Xenko.Audio.SoundInstance) を使用してサウンドを個別に制御することもできます。
+[SoundInstance API](xref:Stride.Audio.SoundInstance) を使用してサウンドを個別に制御することもできます。
 
 ## 関連項目
 * [空間オーディオ](spatialized-audio.md)
 * [非空間オーディオ](non-spatialized-audio.md)
-* [SoundInstance API ドキュメント](xref:Xenko.Audio.SoundInstance)
+* [SoundInstance API ドキュメント](xref:Stride.Audio.SoundInstance)

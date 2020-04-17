@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-**Directional lights** come uniformly from one direction. They're often used for simulating large, distant light sources such as the sun, and cast shadows. By default, new scenes you create in Xenko contain a directional light.
+**Directional lights** come uniformly from one direction. They're often used for simulating large, distant light sources such as the sun, and cast shadows. By default, new scenes you create in Stride contain a directional light.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 

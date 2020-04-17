@@ -6,14 +6,14 @@ _navRel: ../toc.html
 _tocTitle: 'Manual'
 ---
 
-# Xenko 3.1 manual
+# Stride 4.0 manual
 
 ![Manual](get-started/media/game-editor-scene.jpg)
 
-These pages contain information about how to use Xenko, an open-source C# game engine.
+These pages contain information about how to use Stride, an open-source C# game engine.
 
 >[!Note]
->The Xenko manual is under construction and updated regularly with new content. Follow [Xenko on Twitter](https://twitter.com/xenko3d?lang=en) for documentation updates.
+>The Stride manual is under construction and updated regularly with new content. Follow [Stride on Twitter](https://twitter.com/stride3d?lang=en) for documentation updates.
 
 ## Latest documentation
 
@@ -35,6 +35,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Improve this documentation
 
-The Xenko documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/xenko3d/xenko-docs).
+The Stride documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/stride3d/stride-docs).
 
-To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/xenko3d/xenko-docs/blob/master/GUIDELINES.md).
+To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/stride3d/stride-docs/blob/master/GUIDELINES.md).

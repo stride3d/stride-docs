@@ -8,9 +8,9 @@
 >[!NOTE]
 >レイキャスティングは**コライダー**を使用して交差を計算します。コライダー コンポーネントを持たないエンティティは無視されます。詳細については、「[コライダー](colliders.md)」を参照してください。
 
-レイキャストを使用するには、現在の [Simulation](xref:Xenko.Physics.Simulation) で、[Simulation.Raycast](xref:Xenko.Physics.Simulation.Raycast\(Xenko.Core.Mathematics.Vector3,Xenko.Core.Mathematics.Vector3\)) を使用します。
+レイキャストを使用するには、現在の [Simulation](xref:Stride.Physics.Simulation) で、[Simulation.Raycast](xref:Stride.Physics.Simulation.Raycast\(Stride.Core.Mathematics.Vector3,Stride.Core.Mathematics.Vector3\)) を使用します。
 
-レイキャスティングのレイについては、Xenko に含まれる **Physics Sample** プロジェクトを参照してください。
+レイキャスティングのレイについては、Stride に含まれる **Physics Sample** プロジェクトを参照してください。
 
 ## コード例
 

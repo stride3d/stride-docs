@@ -7,4 +7,4 @@ This C# Beginner tutorial covers how to get an entities children. Since those ch
 ![Child entities](media/removing-entity.png)
 
 ## Code
-[!code-csharp[Entity](..\..\..\..\xenko\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\RemoveEntitiesDemo.cs)]
+[!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\RemoveEntitiesDemo.cs)]

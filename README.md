@@ -1,7 +1,7 @@
-Xenko documentation
+Stride documentation
 =======
 
-Welcome to the Xenko documentation repository. This repository contains all the source files for the Xenko documentation (http://doc.xenko.com/). 
+Welcome to the Stride documentation repository. This repository contains all the source files for the Stride documentation (http://doc.stride3d.net/). 
 
 Anyone is welcome to contribute! Before you start, please take the time to read the [guidelines](GUIDELINES.md). 
 

@@ -1,12 +1,12 @@
-# Xenko が実行しない
+# Stride が実行しない
 
-Xenko の実行で問題がある場合は、すべての前提条件がインストールされていることを確認します。
+Stride の実行で問題がある場合は、すべての前提条件がインストールされていることを確認します。
 
 * .NET Framework 4.6.2
 * Visual C++ 再頒布可能パッケージ 2015 または 2017
 * Visual Studio Build Tools
 
-または、Xenko をアンインストールし、Xenko インストーラーを再実行して、メッセージが表示されたら前提条件をインストールします。
+または、Stride をアンインストールし、Stride インストーラーを再実行して、メッセージが表示されたら前提条件をインストールします。
 
 ## .NET Framework 4.6.2
 
@@ -37,4 +37,4 @@ Visual Studio がインストールされていない場合は、**Visual Studio
 
 ## 関連項目
 
-* [Xenko をインストールする](../get-started/install-xenko.md)
+* [Stride をインストールする](../get-started/install-stride.md)

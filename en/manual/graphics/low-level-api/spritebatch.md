@@ -10,7 +10,7 @@ A sprite batch is a collection of sprites (2D textured planes).
 
 ## Create a sprite batch
 
-Xenko offers a easy way to deal will batches of sprites through the @'Xenko.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
+Stride offers a easy way to deal will batches of sprites through the @'Stride.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
 
 **Code:** Creating a sprite batch
 
@@ -30,7 +30,7 @@ You can also set states like the ones discussed on the [Pipeline state](pipeline
 
 ## Draw a sprite batch
 
-The @'Xenko.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a list of features, see the @'Xenko.Graphics.SpriteBatch' API documentation.
+The @'Stride.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a list of features, see the @'Stride.Graphics.SpriteBatch' API documentation.
 
 **Code:** Drawing a sprite batch
 
@@ -45,15 +45,15 @@ spriteBatch.Draw(myTexture, new Vector2(10, 20));
 spriteBatch.End();
 ```
 
-There are five modes to draw a sprite batch. They are enumerated in the @'Xenko.Graphics.SpriteSortMode' enum:
+There are five modes to draw a sprite batch. They are enumerated in the @'Stride.Graphics.SpriteSortMode' enum:
 
 - Deferred (default mode): the sprites are drawn at the same time at the end to reduce the drawcall overhead
-- Immediate: the sprites are draw after each each @'Xenko.Graphics.SpriteBatch.Draw' call
+- Immediate: the sprites are draw after each each @'Stride.Graphics.SpriteBatch.Draw' call
 - Texture: Deferred mode but sprites are sorted based on their texture to reduce effect parameters update
 - BackToFront: Deferred mode with a sort based on the z-order of the sprites
 - FrontToBack: Deferred mode with a sort based on the z-order of the sprites
 
-To set the mode, specify it in the @'Xenko.Graphics.SpriteBatch.Begin' method.
+To set the mode, specify it in the @'Stride.Graphics.SpriteBatch.Begin' method.
 
 **Code:** Deferred drawing of the sprite batch
 
@@ -77,7 +77,7 @@ You can set several parameters on the sprite. For example:
 - center offset
 - color tint
 
-For a full list, see the @'Xenko.Graphics.SpriteBatch' API documentation, especially the **Draw** methods.
+For a full list, see the @'Stride.Graphics.SpriteBatch' API documentation, especially the **Draw** methods.
 
 **Code:** More complex sprite batch drawing
 

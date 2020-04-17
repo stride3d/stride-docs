@@ -7,14 +7,14 @@
 > [!NOTE]
 > スプラッシュ画面は、ゲームがリリース モードでビルドされている場合にのみ表示されます。
 
-既定のスプラッシュ画面は Xenko のロゴです。
+既定のスプラッシュ画面は Stride のロゴです。
 
-![Default splash screen](media/XenkoDefaultSplashScreen.png)
+![Default splash screen](media/StrideDefaultSplashScreen.png)
 
 Game Settings で指定できるスプラッシュ画面は 1 つだけです。複数のスプラッシュ画面を使用したい場合は、手動で実装する必要があります。
 
 > [!WARNING]
-> [Xenko エンド ユーザー ライセンス契約](http://xenko.com/legal/eula)の条項に従い、Xenko Personal (無料) のユーザーは "Powered by Xenko" のロゴをスプラッシュ画面に表示する必要があります。無料ライセンスで Xenko を使用している場合は、スプラッシュ画面の画像を編集できますが (たとえば、Xenko のロゴの上や下にロゴを追加する)、[Xenko ロゴの規則 (PDF)](https://xenko.com/legal/xenko-logo-regulations.pdf) に従う必要があります。
+> [Stride エンド ユーザー ライセンス契約](http://stride3d.net/legal/eula)の条項に従い、Stride Personal (無料) のユーザーは "Powered by Stride" のロゴをスプラッシュ画面に表示する必要があります。無料ライセンスで Stride を使用している場合は、スプラッシュ画面の画像を編集できますが (たとえば、Stride のロゴの上や下にロゴを追加する)、[Stride ロゴの規則 (PDF)](https://stride3d.net/legal/stride-logo-regulations.pdf) に従う必要があります。
 
 ## スプラッシュ画面を編集する
 
@@ -36,7 +36,7 @@ Game Settings で指定できるスプラッシュ画面は 1 つだけです。
 
 | プロパティ | 説明
 |----------|------------
-| Texture  | スプラッシュ画面として表示される画像 (会社のロゴなど) です。既定値は *XenkoDefaultSplashScreen* です。
+| Texture  | スプラッシュ画面として表示される画像 (会社のロゴなど) です。既定値は *StrideDefaultSplashScreen* です。
 | Color    | スプラッシュ画面がフェードインする色です。既定値は黒 (*#FF000000*) です。
 
 >[!TIP]

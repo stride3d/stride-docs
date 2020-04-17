@@ -13,7 +13,7 @@ Emitters contain further controls such as [spawners](spawners.md), [initializers
 | Property         | Description
 | ---------------- | -----------
 | Emitter name     | A unique identifier for the particle emitter
-| Max particles    | The maximum number of active particles the emitter can manage at a given time, based on the particles' spawn rate and lifespan. If you leave this at 0, Xenko uses its own estimate.
+| Max particles    | The maximum number of active particles the emitter can manage at a given time, based on the particles' spawn rate and lifespan. If you leave this at 0, Stride uses its own estimate.
 | Lifespan         | New particles have a lifespan between these two values
 | Space            | Particles in **world** space remain in the world space when the emitter moves away from them. Particles in **local** space always exist in the emitter's local coordinate system; if the emitter moves, rotates, or scales, the particles move with it.
 | Randomize        | Particles use pseudo-random values for everything which requires randomness. If you set this to **Time**, different emitters generate different random numbers. If you set it to **Fixed**, different instances of the same effect behave identically. **Position** acts as Fixed but is different for different positions.

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-ここでは、Oculus Rift および Vive デバイスのサポートをゲームに追加する方法を説明します。Xenko は他の VR デバイスをまだサポートしていません。
+ここでは、Oculus Rift および Vive デバイスのサポートをゲームに追加する方法を説明します。Stride は他の VR デバイスをまだサポートしていません。
 
 1. ［Asset view］(既定では下部のペイン) で、**Graphics Compositor** アセットをダブルクリックします。
 
@@ -80,7 +80,7 @@
 
 ```cs
 using System;
-using Xenko.Engine;
+using Stride.Engine;
 
 namespace VRSandbox
 {

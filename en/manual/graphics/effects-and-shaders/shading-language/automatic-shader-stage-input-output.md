@@ -98,9 +98,9 @@ Schematically, adding a new attribute requires you to update all the stages and 
 
 ![media/hlsl_add_normal.png](media/hlsl_add_normal.png) 
 
-## XKSL
+## SDSL
 
-XKSL has a convenient way to pass parameters across the different stages of your shader. The stream variables are:
+SDSL has a convenient way to pass parameters across the different stages of your shader. The stream variables are:
 
 - variables
 - defined like any shader member, with the stream keyword
@@ -150,11 +150,11 @@ shader ShaderA : BaseShader, StreamShader
 }
 ```
 
-### Example of XKSL shader
+### Example of SDSL shader
 
-Let's look at the same HLSL shader as the first example but in XKSL.
+Let's look at the same HLSL shader as the first example but in SDSL.
 
-**Code:** Same shader in XKSL
+**Code:** Same shader in SDSL
 
 ```cs
 shader MyShader : ShaderBase
@@ -176,7 +176,7 @@ shader MyShader : ShaderBase
 
 Now let's add the normal computation.
 
-**Code:** Modified shader in XKSL
+**Code:** Modified shader in SDSL
 
 ```cs
 shader MyShader : ShaderBase
@@ -197,9 +197,9 @@ shader MyShader : ShaderBase
 };
 ```
 
-In XKSL, adding a new attribute is as simple as adding it to the pool of streams and using it where you want.
+In SDSL, adding a new attribute is as simple as adding it to the pool of streams and using it where you want.
 
-![media/xksl_add_normal.png](media/xksl_add_normal.png)
+![media/sdsl_add_normal.png](media/sdsl_add_normal.png)
 
 ## See also
 

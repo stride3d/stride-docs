@@ -6,7 +6,7 @@
 
 After a particle spawns, it can change over time before it disappears. **Updaters** act on all living particles over time, changing attributes such as position, velocity, color, and so on. For example, a gravity force updates the particle's velocity at a constant rate, accelerating it toward the ground.
 
-Xenko features several built-in updaters. The [custom particles](tutorials/custom-particles.md) sample demonstrates how you can add updaters to the engine.
+Stride features several built-in updaters. The [custom particles](tutorials/custom-particles.md) sample demonstrates how you can add updaters to the engine.
 
 ## Common properties
 

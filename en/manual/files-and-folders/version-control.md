@@ -20,7 +20,7 @@ Visual Studio also puts **.obj** folders inside each code folder. For the same r
 
 **Resource files** are files imported into Game Studio and used by assets. They include image files (eg `.png`, `.jpg`), audio files (eg `.mp3`, `.wav`), and models (eg `.fbx`). We recommend you save these files in the **Resources** folder in your project folder.
 
-We don't recommend you save resource files in the Assets folder. You might be used to organizing files this way if you use Unity®, as Unity® requires resource files and asset files to be in the same folder. Xenko doesn't require this, and doing so has downsides.
+We don't recommend you save resource files in the Assets folder. You might be used to organizing files this way if you use Unity®, as Unity® requires resource files and asset files to be in the same folder. Stride doesn't require this, and doing so has downsides.
 
 For example, imagine an artist has edited 10GB of textures and committed them to source control. At the same time, a designer needs to edit an asset quickly. To do this, the designer gets the latest version of the asset from source control. However, because the assets and resource files are in the same folder, the designer is forced to get the 10gb of files at the same time. If the files are in a separate folder, however, the designer only has to get the folder they need. Additionally, as asset files are much smaller than resource files, it's much faster to navigate the asset history in a dedicated asset folder.
 
@@ -37,7 +37,7 @@ Following these suggestions, an example folder structure might look like this:
 ```cs
 - MyGame
     - Assets
-        - texture.xktex
+        - texture.sdtex
     - Bin
     - MyGame.Game
     - MyGame.Platform
@@ -53,8 +53,8 @@ You could even create separate folders for different kinds of content creation f
 ```cs
 - MyGame
     - Assets
-        - texture.xktex
-        - model.xktex
+        - texture.sdtex
+        - model.sdtex
     - Bin
     - MyGame.Game
     - MyGame.Platform

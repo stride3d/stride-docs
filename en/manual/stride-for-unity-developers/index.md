@@ -1,14 +1,14 @@
-# Xenko for Unity® developers
+# Stride for Unity® developers
 
-Xenko and Unity® both use C# and share many concepts, with a few major differences.
+Stride and Unity® both use C# and share many concepts, with a few major differences.
 
-![Xenko for Unity® developers](media/xenko-vs-unity-opening-image.png)
+![Stride for Unity® developers](media/stride-vs-unity-opening-image.png)
 
 ## Editor
 
-The Xenko editor is **Game Studio**. This is the equivalent of the Unity® Editor.
+The Stride editor is **Game Studio**. This is the equivalent of the Unity® Editor.
 
-![Xenko and Unity®  interface comparison](media/xenko-vs-unity-interface-comparison.png)
+![Stride and Unity®  interface comparison](media/stride-vs-unity-interface-comparison.png)
 
 *Unity® screenshot taken from [Calling a web-service from a Unity3D scene](http://through-the-interface.typepad.com/through_the_interface/2012/04/calling-a-web-service-from-a-unity3d-scene.html) by Kean Walmsley.*
 
@@ -18,9 +18,9 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 
 ## Terminology
 
-Unity® and Xenko use mostly common terms, with a few differences:
+Unity® and Stride use mostly common terms, with a few differences:
 
-| Unity®  | Xenko |
+| Unity®  | Stride |
 | ----- | ------- |
 | Hierarchy panel | Entity Tree |
 | Inspector	| Property Grid |
@@ -31,7 +31,7 @@ Unity® and Xenko use mostly common terms, with a few differences:
 
 ## Folders and files
 
-Like Unity®, Xenko projects are stored in a directory that contains:
+Like Unity®, Stride projects are stored in a directory that contains:
 
 * the project ``.sln`` solution file, which you can open with Game Studio or any IDE such as Visual Studio
 
@@ -41,7 +41,7 @@ Like Unity®, Xenko projects are stored in a directory that contains:
 
 * **Assets** contains the asset files which represent elements in your game.
 
-* **Bin** contains the compiled binaries and data. Xenko creates the folder when you build the project, with a subdirectory for each platform.
+* **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
 
 * **MyPackage.Game** contains your source code.
 
@@ -51,25 +51,25 @@ Like Unity®, Xenko projects are stored in a directory that contains:
 
 * **Resources** is a suggested location for files such as images and audio files used by your assets.
 
-Xenko and Unity® differ in the following ways:
+Stride and Unity® differ in the following ways:
 
-* Xenko doesn't automatically copy resource files to your project folder when you import them into assets. You have to do this yourself. We recommend you save them in the **Resources** folder.
+* Stride doesn't automatically copy resource files to your project folder when you import them into assets. You have to do this yourself. We recommend you save them in the **Resources** folder.
 
-* Xenko doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
+* Stride doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
 
-For more information about project structure in Xenko, including advice about how to organize and share your files, see the [Project structure](../files-and-folders/project-structure.md) page.
+For more information about project structure in Stride, including advice about how to organize and share your files, see the [Project structure](../files-and-folders/project-structure.md) page.
 
 ### Open the project directory from Game Studio
 
 You can open the project directory from **Project > Show in explorer** in Game Studio.
 
-![Open project directory from Game Studio](media/xenko-vs-unity-open-project-in-windows-explorer.png)
+![Open project directory from Game Studio](media/stride-vs-unity-open-project-in-windows-explorer.png)
 
 ## Game settings
 
 Unity® saves global settings in separate assets (ie Graphics Settings, Quality Settings, Audio Manager, and so on). 
 
-Xenko saves global settings in a single asset, the **Game Settings** asset. You can configure:
+Stride saves global settings in a single asset, the **Game Settings** asset. You can configure:
 
 * The **default scene**
 * **Rendering settings**
@@ -84,17 +84,17 @@ To use the Game Settings asset, in the **Asset View**, select **GameSettings** a
 
 ## Scenes
 
-Like Unity®, in Xenko you place all objects in a scene. Game Studio stores scenes as separate ``.xkscene`` assets in your project directory.
+Like Unity®, in Stride you place all objects in a scene. Game Studio stores scenes as separate ``.sdscene`` assets in your project directory.
 
 ### Set the default scene
 
-You can have multiple scenes in your project. Xenko loads the default scene at runtime.
+You can have multiple scenes in your project. Stride loads the default scene at runtime.
 
 To set the default scene:
 
 1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
     
-    ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
+    ![Set default scene](media/stride-vs-unity-game-settings-default-scene.png)
 
     The **Select an asset** window opens.
 
@@ -104,37 +104,37 @@ For more information about scenes, see [Scenes](../game-studio/scenes.md).
 
 ## Entities vs GameObjects
 
-In Unity®, objects in the scene are called **GameObjects**. In Xenko, they're called **entities**.
+In Unity®, objects in the scene are called **GameObjects**. In Stride, they're called **entities**.
 
-![Entities in Xenko](media/xenko-vs-unity-entities.jpg)
+![Entities in Stride](media/stride-vs-unity-entities.jpg)
 
 Like GameObjects, entities are carriers for components such as transform components, model components, audio components, and so on. If you're used to working with GameObjects in Unity®, you should have no problem using entities in Game Studio.
 
 ## Entity components
 
-In Xenko, you add components to entities just like you add components to GameObjects in Unity®.
+In Stride, you add components to entities just like you add components to GameObjects in Unity®.
 
 To add a component to entity in Game Studio:
 
 1. Select the entity you want to add the component to.
 2. In the **Property Grid** (on the right by default), click **Add component** and select the component from the drop-down list.
 
-    ![Add component](media/xenko-vs-unity-add-component-to-entity.png)
+    ![Add component](media/stride-vs-unity-add-component-to-entity.png)
 
 ### Transform component
 
-Like GameObjects in Unity®, each entity in Xenko has a [Transform component](xref:Xenko.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
+Like GameObjects in Unity®, each entity in Stride has a [Transform component](xref:Stride.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
 
-![Transform component](media/xenko-vs-unity-entity-transform-component.png)
+![Transform component](media/stride-vs-unity-entity-transform-component.png)
 
 Even empty entities have a Transform component, because every entity in the scene must have a position.
 
-In Xenko, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
-Xenko uses position, rotation, and scale to refer to the local position, rotation and scale.
+Stride uses position, rotation, and scale to refer to the local position, rotation and scale.
 
-| Unity®  | Xenko |
+| Unity®  | Stride |
 | ----- | ------- |
 | `transform.localPosition` | `Transform.Position` |
 | `transform.localRotation` | `Transform.Rotation` |
@@ -142,9 +142,9 @@ Xenko uses position, rotation, and scale to refer to the local position, rotatio
 | `transform.localEulerAngles` | `Transform.RotationEulerXYZ` |
 
 #### World Position/Rotation/Scale
-In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the [WorldMatrix](xref:Xenko.Engine.TransformComponent.WorldMatrix).
+In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the [WorldMatrix](xref:Stride.Engine.TransformComponent.WorldMatrix).
 
-| Unity®  | Xenko |
+| Unity®  | Stride |
 | ----- | ------- |
 | `transform.position` | `Transform.WorldMatrix.TranslationVector` |
 | `transform.rotation` | N/A |
@@ -154,9 +154,9 @@ In comparison to Unity, many of the Transform component's properties related to 
 | `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
 #### Transform Directions
-Unlike Unity, Xenko provides a Backward, Left, and Down property.
+Unlike Unity, Stride provides a Backward, Left, and Down property.
 
-| Unity®  | Xenko |
+| Unity®  | Stride |
 | ----- | ------- |
 | `transform.forward` | `Transform.WorldMatrix.Forward` |
 | `transform.forward * -1` | `Transform.WorldMatrix.Backward` |
@@ -169,7 +169,7 @@ Unlike Unity, Xenko provides a Backward, Left, and Down property.
 
 In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab. 
 
-Xenko is similar. You select an asset in the **Asset View** and edit its properties in the **Property Grid**.
+Stride is similar. You select an asset in the **Asset View** and edit its properties in the **Property Grid**.
 
 ![Asset and properties](media/asset-and-properties.png)
 
@@ -190,7 +190,7 @@ To open the dedicated editor for these types of asset:
 
 The editor opens in a new tab. You can arrange the tabs how you like, or float them as separate windows, just like tabs in web browsers.
 
-![Dedicated Xenko editors](media/xenko-vs-unity-different-editors.png)
+![Dedicated Stride editors](media/stride-vs-unity-different-editors.png)
 
 >[!Note]
 >When you modify resource files outside Game Studio, the corresponding assets update automatically in Game Studio.
@@ -201,14 +201,14 @@ To import an asset, drag it from Explorer to the **Asset View**. You can also cl
 
 As soon as you add an asset to your project, you can edit its properties in the **Property Grid**.
 
-![Add asset](media/xenko-vs-unity-add-asset.png)
+![Add asset](media/stride-vs-unity-add-asset.png)
 
 >[!Note]
-> Unlike Unity®, Xenko doesn't automatically copy resource files to the project directory when you import them to projects.
+> Unlike Unity®, Stride doesn't automatically copy resource files to the project directory when you import them to projects.
 
 ### Supported file formats
 
-Like Unity®, Xenko supports file formats including:
+Like Unity®, Stride supports file formats including:
 
 | Asset type  | Supported formats                                           
 |------|---|
@@ -220,19 +220,19 @@ Like Unity®, Xenko supports file formats including:
 For more information about assets, see [Assets](../game-studio/assets.md).
 
 > [!Note]
-> * Xenko currently doesn't support movie files.
+> * Stride currently doesn't support movie files.
 
 ## Prefabs
 
-Like Unity®, Xenko uses prefabs. Prefabs are "master" versions of objects that you can reuse wherever you need. When you change a prefab, every instance of the prefab changes too.
+Like Unity®, Stride uses prefabs. Prefabs are "master" versions of objects that you can reuse wherever you need. When you change a prefab, every instance of the prefab changes too.
 
-![Prefabs in Xenko](media/xenko-vs-unity-prefabs.png)
+![Prefabs in Stride](media/stride-vs-unity-prefabs.png)
 
-Just like with Unity®, in Xenko, you can add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
+Just like with Unity®, in Stride, you can add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
 
 For example, imagine you create a *Vehicle* prefab with acceleration, braking, steering, and so on. Then you nest the *Vehicle* prefab inside prefabs of different types of vehicles: a taxi, bus,truck, etc. If you adjust a property in the *Vehicle* prefab, the changes are inherited by all other prefabs. For example, if you increase the Acceleration property in the *Vehicle* prefab, the acceleration property in the taxi, bus and truck prefabs also increase.
 
-For more information about using prefabs in Xenko, see [Prefabs](../game-studio/prefabs/index.md).
+For more information about using prefabs in Stride, see [Prefabs](../game-studio/prefabs/index.md).
 
 ## Archetypes
 
@@ -256,9 +256,9 @@ For more information about archetypes, see [Archetypes](../game-studio/archetype
 
 ## Input
 
-Xenko supports a variety of inputs. The code samples below demonstrate the difference in input code between Xenko and Unity®.
+Stride supports a variety of inputs. The code samples below demonstrate the difference in input code between Stride and Unity®.
 
-For more information about Input in Xenko, see [Input](../input/index.md).
+For more information about Input in Stride, see [Input](../input/index.md).
 
 ## Unity
 ```cs
@@ -284,7 +284,7 @@ void Update()
 
 ## Physics
 
-Just like Unity®, Xenko has three types of collider:
+Just like Unity®, Stride has three types of collider:
 
 * static colliders
 * rigidbodies
@@ -316,7 +316,7 @@ void DisableRagdoll()
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 public class KinematicX : SyncScript
@@ -347,7 +347,7 @@ public class KinematicX : SyncScript
 }
 ```
 
-For more information about rigidbodies in Xenko, see [Rigidbodies](../physics/rigid-bodies.md).
+For more information about rigidbodies in Stride, see [Rigidbodies](../physics/rigid-bodies.md).
 
 ### Triggers
 
@@ -367,7 +367,7 @@ void OnTriggerExit(Collider Other)
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 var trigger = Entity.Get<PhysicsComponent>();
@@ -397,7 +397,7 @@ while (Game.IsRunning)
 }
 ```
 
-For more information about triggers in Xenko, see [Triggers](../physics/triggers.md)
+For more information about triggers in Stride, see [Triggers](../physics/triggers.md)
 
 ### Raycasting
 
@@ -423,7 +423,7 @@ Collider FindGOCameraIsLookingAt()
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 public static PhysicsComponent ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera, Simulation simulation)
@@ -446,31 +446,31 @@ public static PhysicsComponent ScreenPositionToWorldPositionRaycast(Vector2 scre
     return result.Succeeded;
 }
 ```
-For more information about Raycasting in Xenko, see [Raycasting](../physics/raycasting.md).
+For more information about Raycasting in Stride, see [Raycasting](../physics/raycasting.md).
 
 ## Scripts
 
-Xenko saves scripts in a subfolder in the **MyGame.Game** folder in the project directory. 
+Stride saves scripts in a subfolder in the **MyGame.Game** folder in the project directory. 
 
 To open a script in the Game Studio script editor, double-click it in the **Asset View**. The script editor has syntax highlighting, auto-completion, and live diagnostics.
 
-![Xenko script editor](media/xenko-vs-unity-script-editor.png)
+![Stride script editor](media/stride-vs-unity-script-editor.png)
 
-You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Xenko reloads them automatically.
+You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Stride reloads them automatically.
 
-If you install the Visual Studio plug-in during the Xenko installation, you can open your project in Visual Studio from Game Studio. To do this, in the Game Studio toolbar, click **Open in IDE**.
+If you install the Visual Studio plug-in during the Stride installation, you can open your project in Visual Studio from Game Studio. To do this, in the Game Studio toolbar, click **Open in IDE**.
 
-![Open project in Visual Studio](media/xenko-vs-unity-open-project-in-visual-studio.png)
+![Open project in Visual Studio](media/stride-vs-unity-open-project-in-visual-studio.png)
 
 Alternatively, right-click the script in the **Asset View** and click **Open asset file**:
 
-![Open asset file](media/xenko-vs-unity-open-asset-file.png)
+![Open asset file](media/stride-vs-unity-open-asset-file.png)
 
 ### Event functions (Start, Update, Execute, etc)
 
 In Unity®, you work with MonoBehaviours with Start(), Update(), and other methods.
 
-Instead of MonoBehaviours, Xenko has three types of scripts: SyncScript, AsyncScript, StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
+Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
 
 ### Unity® MonoBehaviour
 
@@ -483,7 +483,7 @@ public class BasicMethods : MonoBehaviour
 }
 ```
 
-### Xenko SyncScript
+### Stride SyncScript
 
 ```cs
 public class BasicMethods : SyncScript
@@ -494,7 +494,7 @@ public class BasicMethods : SyncScript
 }
 ```
 
-### Xenko AsyncScript
+### Stride AsyncScript
 
 ```cs
 public class BasicMethods : AsyncScript
@@ -516,7 +516,7 @@ public class BasicMethods : AsyncScript
 }
 ```
 
-### Xenko StartupScript
+### Stride StartupScript
 
 ```cs
 public class BasicMethods : StartupScript
@@ -536,27 +536,27 @@ public class BasicMethods : StartupScript
 
 ## Script components
 
-Like Unity®, in Xenko, you attach scripts to entities by adding them as script components.
+Like Unity®, in Stride, you attach scripts to entities by adding them as script components.
 
 ### Create a script
 
 To create a script, click **Add asset** button and select **Scripts**.
 
-![Create script in Xenko](media/xenko-vs-unity-create-script.png)
+![Create script in Stride](media/stride-vs-unity-create-script.png)
 
-In Unity®, when you create a `MonoBehaviour` script, it has two base functions: `Start()` and `Update()`. Xenko has a [SyncScript](xref:Xenko.Engine.SyncScript) that works similarly. Like `MonoBehaviour`, [SyncScript](xref:Xenko.Engine.SyncScript) has two methods:
+In Unity®, when you create a `MonoBehaviour` script, it has two base functions: `Start()` and `Update()`. Stride has a [SyncScript](xref:Stride.Engine.SyncScript) that works similarly. Like `MonoBehaviour`, [SyncScript](xref:Stride.Engine.SyncScript) has two methods:
 
-* [Start()](xref:Xenko.Engine.StartupScript.Start) is called when it the script is loaded.
+* [Start()](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
 
-* [Update()](xref:Xenko.Engine.SyncScript.Update) is called every update.
+* [Update()](xref:Stride.Engine.SyncScript.Update) is called every update.
 
-Unlike `MonoBehaviour`, you have to use [Update()](xref:Xenko.Engine.SyncScript.Update) method in every [SyncScript](xref:Xenko.Engine.SyncScript), or your code won't work properly.
+Unlike `MonoBehaviour`, you have to use [Update()](xref:Stride.Engine.SyncScript.Update) method in every [SyncScript](xref:Stride.Engine.SyncScript), or your code won't work properly.
 
 If you want your script to be a startup or asynchronous, use the corresponding script types:
 
-* [StartupScript](xref:Xenko.Engine.StartupScript): this script has a single [Start()](xref:Xenko.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
+* [StartupScript](xref:Stride.Engine.StartupScript): this script has a single [Start()](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
 
-* [AsyncScript](xref:Xenko.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:Xenko.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
+* [AsyncScript](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:Stride.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
 
 ### Reload assemblies
 
@@ -574,13 +574,13 @@ Unlike Unity®, after you create a script, you have to reload the assemblies man
 
 ![Add script component](../scripts/media/add-script-component.png)
 
-In Unity®, script components are grouped under **Components > Scripts**. In Xenko, scripts are not grouped. Instead, Game Studio lists them alphabetically with other components.
+In Unity®, script components are grouped under **Components > Scripts**. In Stride, scripts are not grouped. Instead, Game Studio lists them alphabetically with other components.
 
-For more information about adding scripts in Xenko, see [Use a script](../scripts/use-a-script.md).
+For more information about adding scripts in Stride, see [Use a script](../scripts/use-a-script.md).
 
 ## Scripting gameplay
 
-Unity® and Xenko both use C#. However, scripting gameplay in Xenko is a little different from Unity®.
+Unity® and Stride both use C#. However, scripting gameplay in Stride is a little different from Unity®.
 
 ### Instantiate Entity / GameObject
 
@@ -600,9 +600,9 @@ void Start()
 }
 ```
 
-#### Xenko
+#### Stride
 
-In Xenko, you can instantiate **Entities** similarly to Unity® GameObjects:
+In Stride, you can instantiate **Entities** similarly to Unity® GameObjects:
 
 ```cs
 // Declared public member fields and properties displayed in the Game Studio Property Grid.
@@ -623,7 +623,7 @@ public override void Start()
 
 ### Use default values
 
-Each class in Unity® has certain default values. If you don't override these properties in the script, the default values will be used. This works the same in Xenko:
+Each class in Unity® has certain default values. If you don't override these properties in the script, the default values will be used. This works the same in Stride:
 
 #### Unity®
 
@@ -642,7 +642,7 @@ void Start()
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 // Declared public member fields and properties displayed in the Game Studio Property Grid.
@@ -669,7 +669,7 @@ public override void Start()
 MyGameObject.SetActive(false);
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 Entity.EnableAll(false, true);
@@ -683,7 +683,7 @@ Entity.EnableAll(false, true);
 Light lightComponent = GetComponent<Light>();
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 LightComponent lightComponent = Entity.Get<LightComponent>();
@@ -697,7 +697,7 @@ LightComponent lightComponent = Entity.Get<LightComponent>();
 GameObject ParentGO = lightComponent.gameObject;
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 Entity ParentEntity = lightComponent.Entity;

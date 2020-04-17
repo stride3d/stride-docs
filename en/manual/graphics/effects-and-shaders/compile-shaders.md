@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Xenko converts Xenko shaders (`xlsl` and `.xlfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
+Stride converts Stride shaders (`xlsl` and `.xlfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
 
 | Platform       | Shader language 
 | -------------- | ---- 
@@ -12,17 +12,17 @@ Xenko converts Xenko shaders (`xlsl` and `.xlfx` files) into the shader language
 | Vulkan         | SPIR-V
 | iOS            | OpenGL ES
 
-Xenko can convert the shaders at runtime (when the game is running) or at build time (when the editor builds the game assets). When Xenko generates shaders at runtime, rendering stops until the shader is compiled. This is usually something you want to avoid in your release build — especially on mobile platforms, which have less CPU, so the pause can be more noticable.
+Stride can convert the shaders at runtime (when the game is running) or at build time (when the editor builds the game assets). When Stride generates shaders at runtime, rendering stops until the shader is compiled. This is usually something you want to avoid in your release build — especially on mobile platforms, which have less CPU, so the pause can be more noticable.
 
-## How Xenko converts shaders at runtime
+## How Stride converts shaders at runtime
 
-Xenko can't know in advance which shaders will be used at runtime. This is because users might generate new shader permutations by, for example, changing material parameters or modifying post-effect parameters from scripts. Additionally, the final shaders depend on the graphics features on the execution platform.
+Stride can't know in advance which shaders will be used at runtime. This is because users might generate new shader permutations by, for example, changing material parameters or modifying post-effect parameters from scripts. Additionally, the final shaders depend on the graphics features on the execution platform.
 
-1. When Xenko needs a new shader at runtime, it checks its database to see if the shader has already been converted. If the shader is in the database, Xenko uses it.
+1. When Stride needs a new shader at runtime, it checks its database to see if the shader has already been converted. If the shader is in the database, Stride uses it.
 
-2. If the shader hasn't already been converted, Xenko compiles it — either locally (on the device) or remotely (in Game Studio), depending on the package **User Settings** (see below).
+2. If the shader hasn't already been converted, Stride compiles it — either locally (on the device) or remotely (in Game Studio), depending on the package **User Settings** (see below).
 
-3. If **Record used effects** is enabled in the package **User Settings** (see below), Xenko notifies Game Studio that it needs a new shader.
+3. If **Record used effects** is enabled in the package **User Settings** (see below), Stride notifies Game Studio that it needs a new shader.
 
 4. Game Studio notifies you that there are new shaders to import.
 
@@ -36,7 +36,7 @@ Xenko can't know in advance which shaders will be used at runtime. This is becau
 
     ![Effect log](media/effect-log.png)
 
-## Change how Xenko compiles shaders
+## Change how Stride compiles shaders
 
 1. In Game Studio, in the **Solution Explorer**, select the package and click **Package properties**.
 
@@ -60,7 +60,7 @@ If you enable **Record used effects**, Game Studio adds new shaders to the Effec
 
 ## Compile shaders remotely when developing for iOS
 
-As iOS devices can't connect directly to PC, to convert Xenko shaders remotely when developing for iOS, you need to use a Python script as a relay between the device, a Mac, and the developer PC.
+As iOS devices can't connect directly to PC, to convert Stride shaders remotely when developing for iOS, you need to use a Python script as a relay between the device, a Mac, and the developer PC.
 
 1. Make sure your PC and Mac are connected to the same network.
 
@@ -68,7 +68,7 @@ As iOS devices can't connect directly to PC, to convert Xenko shaders remotely w
 
 3. Download and unzip [ios-tcreplay.zip](media/ios-tcprelay.zip).
 
-4. Open **Terminal**, navigate to the folder where you unzipped the file, and execute **xenko-ios-relay.py MyPcName**, where **MyPcName** is the name of your developer PC.
+4. Open **Terminal**, navigate to the folder where you unzipped the file, and execute **stride-ios-relay.py MyPcName**, where **MyPcName** is the name of your developer PC.
 
     >[!Tip]
     >To find the name of your developer PC, on the PC, press the Windows key, type **About**, and press **Enter**. The PC name is listed under **PC name**.

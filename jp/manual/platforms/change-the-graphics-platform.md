@@ -53,7 +53,7 @@
 
 1. ゲームのコード (スクリプト内など) にブレーク ポイントを追加します。
 2. プロジェクトを実行します。
-3. [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) 変数の値を調べます。
+3. [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform) 変数の値を調べます。
 
     たとえば、このプロジェクトは Vulkan を使用しています。
 

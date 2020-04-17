@@ -7,7 +7,7 @@
 
 次のスクリーンショットでは、騎士、ライト、背景、カメラ エンティティを含むシーンが示されています。
 
-![Basic scene in Xenko](../get-started/media/scene-creation-basic-scene-in-xenko.png)
+![Basic scene in Stride](../get-started/media/scene-creation-basic-scene-in-stride.png)
 
 シーンは一種の[アセット](/assets.md)です。シーンは複雑なアセットなので、専用のエディターである**シーン エディター**があります。
 

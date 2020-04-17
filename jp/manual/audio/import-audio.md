@@ -19,7 +19,7 @@
     ![Choose Asset type](media/import-audio-choose-asset-type.png)
 
     * ［Sound effect］: メモリから直接再生する小さいファイルに推奨されます。
-    * ［Spatialized sound］: サウンド アセットを[空間オーディオ](spatialized-audio.md)として処理します。Xenko はオーディオ ファイルをモノラル (単一チャンネル) オーディオとして処理することに注意してください。ソース ファイルは影響を受けません。
+    * ［Spatialized sound］: サウンド アセットを[空間オーディオ](spatialized-audio.md)として処理します。Stride はオーディオ ファイルをモノラル (単一チャンネル) オーディオとして処理することに注意してください。ソース ファイルは影響を受けません。
     * ［Music］: メモリを節約するためにディスクからストリーミングする大きいファイルに推奨されます。
 
 インポートしたオーディオ ファイルは、［Asset view］でアセットとして選択できます。

@@ -14,7 +14,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## 1. Create a shader
 
-1. Make sure you have the [Xenko Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Xenko shading language](../../effects-and-shaders/index.md)) to `.cs` files.
+1. Make sure you have the [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Stride shading language](../../effects-and-shaders/index.md)) to `.cs` files.
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-ide-icon.png) (**Open in IDE**) to open your project in Visual Studio.
 
@@ -26,17 +26,17 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![Select class](../../effects-and-shaders/media/select-class.png)
 
-5. In the **Name** field, specify a name with the extension **.xksl** (eg *MyColorTransformShader.xksl*), and click **Add**.
+5. In the **Name** field, specify a name with the extension **.sdsl** (eg *MyColorTransformShader.sdsl*), and click **Add**.
 
     ![Create post effect](media/create-post-effect.png)
 
-    The Xenko Visual Studio extension automatically generates a `.cs` file from the `.xksl` file. The Solution Explorer lists it as a child of the `.xskl` file.
+    The Stride Visual Studio extension automatically generates a `.cs` file from the `.sdsl` file. The Solution Explorer lists it as a child of the `.xskl` file.
 
     ![My post effect](media/my-post-effect.png)
 
-6. Open the `.xksl` file, remove the existing lines, and write your shader.
+6. Open the `.sdsl` file, remove the existing lines, and write your shader.
 
-    Shaders are written in Xenko Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
+    Shaders are written in Stride Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
 
     For example, the shader below multiplies the image color by the `MyColor` parameter:
 
@@ -53,7 +53,7 @@ To create a custom color transform, you need to write two files: an effect shade
     };
     ```
     >[!Note]
-    >Make sure the shader name in the file (eg `MyColorTransformShader` in the code above) is the same as the filename (eg *MyColorTransformShader.xksl*).
+    >Make sure the shader name in the file (eg `MyColorTransformShader` in the code above) is the same as the filename (eg *MyColorTransformShader.sdsl*).
 
 ## 2. Create a C# class
 
@@ -70,10 +70,10 @@ To create a custom color transform, you need to write two files: an effect shade
     For example, the code below creates the class `MyColorTransform`, which uses the shader and supplies a value for the color `MyColor` (defined in the shader).
 
     ```cs
-    using Xenko.Core;
-    using Xenko.Core.Mathematics;
-    using Xenko.Rendering;
-    using Xenko.Rendering.Images;
+    using Stride.Core;
+    using Stride.Core.Mathematics;
+    using Stride.Rendering;
+    using Stride.Rendering.Images;
 
     namespace MyGame
     {
@@ -154,4 +154,4 @@ To create a custom color transform, you need to write two files: an effect shade
 * [Graphics compositor](../../graphics-compositor/index.md)
 * [Post effects](../index.md)
 * [Color transforms](index.md)
-* [Xenko Visual Studio extension](../../../get-started/visual-studio-extension.md)
+* [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md)

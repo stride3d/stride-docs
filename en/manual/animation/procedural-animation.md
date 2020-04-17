@@ -5,13 +5,13 @@
 
 **Procedural animation** is an alternative method of animation. Instead of creating animations yourself, you can use engine components to animate 3D models at runtime. 
 
-In some cases, this creates more effective and efficient animations. For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:Xenko.Engine.TransformComponent) and simply scale the enemy down to the required size.
+In some cases, this creates more effective and efficient animations. For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:Stride.Engine.TransformComponent) and simply scale the enemy down to the required size.
 
 You can access multiple components to animate your models at runtime, including:
 
-* [TransformComponent](xref:Xenko.Engine.TransformComponent)
-* [LightComponent](xref:Xenko.Engine.LightComponent)
-* [RigidBodyComponent](xref:Xenko.Physics.RigidbodyComponent)
+* [TransformComponent](xref:Stride.Engine.TransformComponent)
+* [LightComponent](xref:Stride.Engine.LightComponent)
+* [RigidBodyComponent](xref:Stride.Physics.RigidbodyComponent)
 
 ## Code sample
 

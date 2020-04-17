@@ -2,7 +2,7 @@
 
 # File system
 
-We recommend you use the static class @'Xenko.Core.IO.VirtualFileSystem' to access files across platforms. It offers all basic operations such as reading, writing, copying, checking existence and deleting files.
+We recommend you use the static class @'Stride.Core.IO.VirtualFileSystem' to access files across platforms. It offers all basic operations such as reading, writing, copying, checking existence and deleting files.
 
 > [!Note]
 > The path separator is / (Unix/Linux convention).    

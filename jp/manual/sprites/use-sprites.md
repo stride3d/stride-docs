@@ -47,7 +47,7 @@
 このスクリプトは、1 秒ごとにインデックスの順序でスプライトを順番に表示します。スプライトのインデックスの最後に達すると、ループします。
 
 ```cs
-using Xenko.Rendering.Sprites;
+using Stride.Rendering.Sprites;
 
 public class Animation : SyncScript
 {

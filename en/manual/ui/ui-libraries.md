@@ -6,7 +6,7 @@
 
 **UI libraries** contain **UI elements** such as grids, buttons, sliders and so on that you can use and re-use in your [UI pages](UI-pages.md). 
 
-Xenko projects include a **standard library** of UI elements. You can create your own libraries of custom elements too.
+Stride projects include a **standard library** of UI elements. You can create your own libraries of custom elements too.
 
 ![UI library](media/UI-library.png)
 

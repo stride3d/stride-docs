@@ -13,16 +13,16 @@
     <div class="blockG" id="rotateG_07"></div>
     <div class="blockG" id="rotateG_08"></div>
   </div>
-  <!--<div id="xk-search-summary">
+  <!--<div id="stride-search-summary">
     Showing 
-    <span id="xk-current"></span> 
+    <span id="stride-current"></span> 
     results 
-    <span id="xk-current-chapter"></span> 
-    <span class="xk-visibility"> ・<span><span id="xk-manual"></span> results</span> in manual </span>
-    <span class="xk-visibility"> ・<span><span id="xk-api"></span> results</span> in API </span>
-    <span class="xk-visibility"> ・ <span><span id="xk-releasenotes"></span> results</span> in release notes </span>
-    <span class="xk-visibility"> ・ <span><span id="xk-tutorials"></span> results</span> in tutorials </span>
-    <span class="xk-visibility hidden"> ・ <span class="xk-searching-link"> All <span id="xk-all"></span> results </span></span>
+    <span id="stride-current-chapter"></span> 
+    <span class="stride-visibility"> ・<span><span id="stride-manual"></span> results</span> in manual </span>
+    <span class="stride-visibility"> ・<span><span id="stride-api"></span> results</span> in API </span>
+    <span class="stride-visibility"> ・ <span><span id="stride-releasenotes"></span> results</span> in release notes </span>
+    <span class="stride-visibility"> ・ <span><span id="stride-tutorials"></span> results</span> in tutorials </span>
+    <span class="stride-visibility hidden"> ・ <span class="stride-searching-link"> All <span id="stride-all"></span> results </span></span>
   </div>-->
   <div class="sr-items"></div>
   <ul id="pagination"></ul>

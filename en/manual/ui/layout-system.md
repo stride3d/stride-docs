@@ -4,33 +4,33 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-The Xenko UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout). Much of the WPF documentation also applies to the Xenko layout system.
+The Stride UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout). Much of the WPF documentation also applies to the Stride layout system.
 
-Every @'Xenko.UI.UIElement' in the Xenko UI system has a surrounding rectangle used in layouts. Xenko computes layouts according to the @'Xenko.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'Xenko.UI.Panels.Panel' elements (which arrange children in specific ways). 
+Every @'Stride.UI.UIElement' in the Stride UI system has a surrounding rectangle used in layouts. Stride computes layouts according to the @'Stride.UI.UIElement' requirement, available screen space, constraints, margins, padding, and the special behavior of @'Stride.UI.Panels.Panel' elements (which arrange children in specific ways). 
 
-Processing this data recursively, the layout system computes a position and size for every @'Xenko.UI.UIElement' in the UI system.
+Processing this data recursively, the layout system computes a position and size for every @'Stride.UI.UIElement' in the UI system.
 
 ## Measure and arrange
 
-Xenko performs the layout process recursively in two passes: [Measure](xref:Xenko.UI.UIElement.Measure(Xenko.Core.Mathematics.Vector3)) and [Arrange](xref:Xenko.UI.UIElement.Arrange(Xenko.Core.Mathematics.Vector3,System.Boolean)).
+Stride performs the layout process recursively in two passes: [Measure](xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)) and [Arrange](xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)).
 
 ### Measure
 
-In the [Measure](xref:Xenko.UI.UIElement.Measure(Xenko.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:Xenko.UI.UIElement#Xenko_UI_UIElement_DesiredSize) according to the properties you set, such as @'Xenko.UI.UIElement.Width', @'Xenko.UI.UIElement.Height', and @'Xenko.UI.UIElement.Margin'.
+In the [Measure](xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)) pass, each element recursively computes its [DesiredSize](xref:Stride.UI.UIElement#Stride_UI_UIElement_DesiredSize) according to the properties you set, such as @'Stride.UI.UIElement.Width', @'Stride.UI.UIElement.Height', and @'Stride.UI.UIElement.Margin'.
 
-Some @'Xenko.UI.Panels.Panel' elements call [Measure](xref:Xenko.UI.UIElement.Measure(Xenko.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:Xenko.UI.UIElement#Xenko_UI_UIElement_DesiredSize) of their children, and act accordingly.
+Some @'Stride.UI.Panels.Panel' elements call [Measure](xref:Stride.UI.UIElement.Measure(Stride.Core.Mathematics.Vector3)) recursively to determine the  [DesiredSize](xref:Stride.UI.UIElement#Stride_UI_UIElement_DesiredSize) of their children, and act accordingly.
 
 ### Arrange
 
-The [Arrange](xref:Xenko.UI.UIElement.Arrange(Xenko.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
+The [Arrange](xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)) pass arranges the elements, taking into account:
 
-* @'Xenko.UI.UIElement.Margin'
-* @'Xenko.UI.UIElement.Width'
-* @'Xenko.UI.UIElement.Height'
-* @'Xenko.UI.UIElement.HorizontalAlignment'
-* @'Xenko.UI.UIElement.VerticalAlignment' 
-* @'Xenko.UI.Panels.Panel'
-* specific [Arrange](xref:Xenko.UI.UIElement.Arrange(Xenko.Core.Mathematics.Vector3,System.Boolean)) rules
+* @'Stride.UI.UIElement.Margin'
+* @'Stride.UI.UIElement.Width'
+* @'Stride.UI.UIElement.Height'
+* @'Stride.UI.UIElement.HorizontalAlignment'
+* @'Stride.UI.UIElement.VerticalAlignment' 
+* @'Stride.UI.Panels.Panel'
+* specific [Arrange](xref:Stride.UI.UIElement.Arrange(Stride.Core.Mathematics.Vector3,System.Boolean)) rules
 
 ## See also
 

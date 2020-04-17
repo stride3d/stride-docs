@@ -20,7 +20,7 @@ You set the graphics platform in the [game settings](../game-studio/game-setting
 
     ![Select graphics platform](media/change-graphics-platform.png)
 
-    If you select **Default**, Xenko uses the graphics platform appropriate for your platform (eg Windows, Android) when you build.
+    If you select **Default**, Stride uses the graphics platform appropriate for your platform (eg Windows, Android) when you build.
 
 | Platform      | Default graphics platform 
 |---------------|-------------
@@ -30,7 +30,7 @@ You set the graphics platform in the [game settings](../game-studio/game-setting
 
 ## Override the graphics platform
 
-You can override the graphics platform Xenko uses for specific platforms. For example, you can have Linux use Vulkan while other platforms use the default.
+You can override the graphics platform Stride uses for specific platforms. For example, you can have Linux use Vulkan while other platforms use the default.
 
 1. With the **GameSettings** asset selected, in the Property Grid, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
@@ -50,7 +50,7 @@ You can override the graphics platform Xenko uses for specific platforms. For ex
 
     ![Select graphics platform override](media/select-override-graphics-platform.png)
 
-Xenko overrides the graphics platform for the platforms you selected.
+Stride overrides the graphics platform for the platforms you selected.
 
 ## Check which graphics platform your project uses
 
@@ -58,7 +58,7 @@ Xenko overrides the graphics platform for the platforms you selected.
 
 2. Run the project. 
 
-3. Check the value of the [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) variable.
+3. Check the value of the [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform) variable.
 
     For example, this project is using Vulkan:
 

@@ -3,11 +3,11 @@
 <span class="label label-doc-level">上級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-[AnimationComponent](xref:Xenko.Engine.AnimationComponent) には、[AnimationComponent.BlendTreeBuilder](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_BlendTreeBuilder) プロパティがあります。再生されるアニメーション、アニメーションのブレンド方法、アニメーションの重みを全面的に制御したい場合は、`IBlendTreeBuilder` から継承するスクリプトを作成し、アニメーション コンポーネントの BlendTreeBuilder に割り当てます。
+[AnimationComponent](xref:Stride.Engine.AnimationComponent) には、[AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) プロパティがあります。再生されるアニメーション、アニメーションのブレンド方法、アニメーションの重みを全面的に制御したい場合は、`IBlendTreeBuilder` から継承するスクリプトを作成し、アニメーション コンポーネントの BlendTreeBuilder に割り当てます。
 
 アニメーション コンポーネントは、更新されるときに、アニメーション自体を更新するのではなく、スクリプトで `void BuildBlendTree(FastList<AnimationOperation> animationList)` を呼び出します。これにより、アニメーション クリップ、速度、ブレンドの任意の組み合わせを選択できますが、重労働をすべてスクリプト側で行う必要があるため、困難さも増します。
 
-Xenko に含まれるテンプレート ［First-person shooter］、［Third-person platformer］、[Top-down RPG］は、カスタム ブレンド ツリーを使用する方法の例です。
+Stride に含まれるテンプレート ［First-person shooter］、［Third-person platformer］、[Top-down RPG］は、カスタム ブレンド ツリーを使用する方法の例です。
 
 ## コード サンプル
 

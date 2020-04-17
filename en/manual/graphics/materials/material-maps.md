@@ -93,7 +93,7 @@ For an example of a ComputeColor shader, see the [Particle materials tutorial](.
 
 Sample the color/scalar from a [texture](../textures/index.md).
 
-For example, the images below demonstrate how the texture changes the way Xenko blends materials.
+For example, the images below demonstrate how the texture changes the way Stride blends materials.
 
 ![Blend map diagram](media/blend-map-diagram.png)
 

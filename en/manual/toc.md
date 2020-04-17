@@ -1,14 +1,14 @@
 
 # [Requirements](requirements/index.md)
 
-# [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
+# [Stride for Unity® developers](stride-for-unity-developers/index.md)
 
-# [Xenko Launcher](xenko-launcher/index.md)
+# [Stride Launcher](stride-launcher/index.md)
 
 # [Get started](get-started/index.md)
-## [Install Xenko](get-started/install-xenko.md)
+## [Install Stride](get-started/install-stride.md)
 ## [Visual Studio extension](get-started/visual-studio-extension.md)
-## [Launch Xenko](get-started/launch-xenko.md)
+## [Launch Stride](get-started/launch-stride.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Game Studio](game-studio/index.md)
 ## [Assets](game-studio/assets.md)
@@ -259,7 +259,7 @@
 ## [Logging](troubleshooting/logging.md)
 ## [Debug text](troubleshooting/debug-text.md)
 ## [Profiling](troubleshooting/profiling.md)
-## [Xenko doesn't run](troubleshooting/xenko-doesnt-run.md)
+## [Stride doesn't run](troubleshooting/stride-doesnt-run.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 ## [Full call stack not available](troubleshooting/full-call-stack-not-available.md)

@@ -8,9 +8,9 @@
 >[!Note]
 >Raycasting uses **colliders** to calculate intersections. It ignores entities that have no collider component. For more information, see [Colliders](colliders.md).
 
-To use a raycast, in the current [Simulation](xref:Xenko.Physics.Simulation), use [Simulation.Raycast](xref:Xenko.Physics.Simulation.Raycast\(Xenko.Core.Mathematics.Vector3,Xenko.Core.Mathematics.Vector3\)).
+To use a raycast, in the current [Simulation](xref:Stride.Physics.Simulation), use [Simulation.Raycast](xref:Stride.Physics.Simulation.Raycast\(Stride.Core.Mathematics.Vector3,Stride.Core.Mathematics.Vector3\)).
 
-For an example of raycasting, see the **Physics Sample** project included with Xenko.
+For an example of raycasting, see the **Physics Sample** project included with Stride.
 
 ## Example code
 

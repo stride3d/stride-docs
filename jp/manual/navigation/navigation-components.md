@@ -52,7 +52,7 @@ void Move(Vector3 from, Vector3 to)
 }
 ```
 
-詳細については、[NavigationComponent API のドキュメント](xref:Xenko.Navigation.NavigationComponent)を参照してください。
+詳細については、[NavigationComponent API のドキュメント](xref:Stride.Navigation.NavigationComponent)を参照してください。
 
 ## 関連項目
 

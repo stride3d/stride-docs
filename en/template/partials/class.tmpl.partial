@@ -2,7 +2,7 @@
 
 {{>partials/class.header}}
 {{#children}}
-<div class="xk-{{id}}-wrapper">
+<div class="stride-{{id}}-wrapper">
 <h2 id="{{id}}">{{>partials/classSubtitle}}</h2>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
@@ -14,8 +14,8 @@
   <tbody>
 {{#children}}
     <tr>
-      <td class="xk-icon-column">
-        <span class="xk-{{type}}-icon"></span>
+      <td class="stride-icon-column">
+        <span class="stride-{{type}}-icon"></span>
       </td>
       <td><a href="#{{id}}">{{name.0.value}}</a></td>
       <td>{{{summary}}}</td>
@@ -30,22 +30,22 @@
   <a href="{{sourceurl}}">{{__global.viewSource}}</a>
 </span>{{/sourceurl}}
 {{/_disableContribution}}
-<h3 id="{{id}}" data-uid="{{uid}}" class="xk-bordered-title">{{name.0.value}}</h3>
+<h3 id="{{id}}" data-uid="{{uid}}" class="stride-bordered-title">{{name.0.value}}</h3>
 <div class="markdown level1 summary">{{{summary}}}</div>
 <div class="markdown level1 conceptual">{{{conceptual}}}</div>
 {{#syntax}}
 <div class="codewrapper">
   <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
 </div>
-<div class="xk-{{type}}">
+<div class="stride-{{type}}">
 {{#fieldValue}}
-<div class="xk-fieldValue">
+<div class="stride-fieldValue">
   <i>Type: </i>{{{type.specName.0.value}}}
   <p>{{{description}}}</p>
 </div>
 {{/fieldValue}}
 {{#propertyValue}}
-<div class="xk-propertyValue">
+<div class="stride-propertyValue">
   <i>Type: </i>{{{type.specName.0.value}}}
   <p>{{{description}}}</p>
 </div>
@@ -79,7 +79,7 @@
 {{/parameters.0}}
 {{#syntax.return}}
 <h4 class="returns">{{__global.returns}}</h4>
-<div class="xk-returns">
+<div class="stride-returns">
   <i>Type: </i>{{{type.specName.0.value}}}
   <p>{{{description}}}</p>
 </div>
@@ -106,8 +106,8 @@
 </table>
 {{/syntax.typeParameters.0}}
 {{#eventType}}
-<h5 class="eventType xk-hidden-table">{{__global.eventType}}</h5>
-<table class="table table-bordered table-striped table-condensed xk-hidden-table">
+<h5 class="eventType stride-hidden-table">{{__global.eventType}}</h5>
+<table class="table table-bordered table-striped table-condensed stride-hidden-table">
   <thead>
     <tr>
       <th colspan="2">{{__global.type}}</th>
@@ -116,8 +116,8 @@
   </thead>
   <tbody>
     <tr>
-      <td class="xk-icon-column">
-        <span class="xk-events-icon"></span>
+      <td class="stride-icon-column">
+        <span class="stride-events-icon"></span>
       </td>
       <td>{{{type.specName.0.value}}}</td>
       <td>{{{description}}}</td>

@@ -6,7 +6,7 @@ There are many ways to remap colors from an HDR space to an LDR, depending on th
 
 ![media/tonemap-1.png](media/tonemap-1.png) 
 
-Xenko supports several tone-mapping operators out of the box:
+Stride supports several tone-mapping operators out of the box:
 
 - Reinhard (the classic operator)
 - Exponential

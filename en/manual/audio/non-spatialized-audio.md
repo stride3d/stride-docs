@@ -13,7 +13,7 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 1. [Import the audio as a audio asset](import-audio.md).
 
-2. Make sure the audio asset is a **root asset**. Root assets are assets that Xenko includes in the build so they can be used at runtime.
+2. Make sure the audio asset is a **root asset**. Root assets are assets that Stride includes in the build so they can be used at runtime.
 
     In the **Asset View**, right-click the asset and select **Include in build as root asset**:
 
@@ -25,22 +25,22 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 To play non-spatialized audio at runtime, create an instance of it and define its behavior in the code.
 
-The [SoundInstance](xref:Xenko.Audio.SoundInstance) controls audio at runtime with the following properties:
+The [SoundInstance](xref:Stride.Audio.SoundInstance) controls audio at runtime with the following properties:
 
 | Property  | Function |
 |-------    |-------|
-| [IsLooping](xref:Xenko.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio. |
-| [Pan](xref:Xenko.Audio.SoundInstance.Pan)       | Sets the balance between left and right speakers. By default, each speaker a value of 0.5. |
-| [Pitch](xref:Xenko.Audio.SoundInstance.Pitch)     | Gets or sets the audio pitch (frequency). |
-| [PlayState](xref:Xenko.Audio.SoundInstance.PlayState)	| Gets the state of the [SoundInstance](xref:Xenko.Audio.SoundInstance). |
-| [Position](xref:Xenko.Audio.SoundInstance.Position)	| Gets the current play position of the audio. |
-| [Volume](xref:Xenko.Audio.SoundInstance.Volume)	| Sets the audio volume. |
+| [IsLooping](xref:Stride.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio. |
+| [Pan](xref:Stride.Audio.SoundInstance.Pan)       | Sets the balance between left and right speakers. By default, each speaker a value of 0.5. |
+| [Pitch](xref:Stride.Audio.SoundInstance.Pitch)     | Gets or sets the audio pitch (frequency). |
+| [PlayState](xref:Stride.Audio.SoundInstance.PlayState)	| Gets the state of the [SoundInstance](xref:Stride.Audio.SoundInstance). |
+| [Position](xref:Stride.Audio.SoundInstance.Position)	| Gets the current play position of the audio. |
+| [Volume](xref:Stride.Audio.SoundInstance.Volume)	| Sets the audio volume. |
 
-For more details, see the [SoundInstance API documentation](xref:Xenko.Audio.SoundInstance).
+For more details, see the [SoundInstance API documentation](xref:Stride.Audio.SoundInstance).
 
 > [!Note]
-If the sound is already playing, Xenko ignores all additional calls to [SoundInstance.Play](xref:Xenko.Audio.SoundInstance.Play).
-The same goes for [SoundInstance.Pause](xref:Xenko.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:Xenko.Audio.SoundInstance.Stop) (when a sound is already stopped).
+If the sound is already playing, Stride ignores all additional calls to [SoundInstance.Play](xref:Stride.Audio.SoundInstance.Play).
+The same goes for [SoundInstance.Pause](xref:Stride.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:Stride.Audio.SoundInstance.Stop) (when a sound is already stopped).
 
 For example, the following code:
 

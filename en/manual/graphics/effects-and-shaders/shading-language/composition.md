@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-In addition to the inheritance system, XKSL introduces the concept of **composition**. A composition is a member whose type is another shader class. It's defined the same way as variables.
+In addition to the inheritance system, SDSL introduces the concept of **composition**. A composition is a member whose type is another shader class. It's defined the same way as variables.
 
 You can compose with an instance of the desired shader class or an instance of a shader class that inherits from the desired one.
 

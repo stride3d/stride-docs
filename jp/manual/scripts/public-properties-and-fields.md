@@ -26,10 +26,10 @@ public class SampleSyncScript : StartupScript
 
 `DelayTimeOut` プロパティはスクリプト コンポーネントのプロパティに表示されます。
 
-![Public property appears in the property grid](media/scripts-in-xenko-change-value-public-property.png)
+![Public property appears in the property grid](media/scripts-in-stride-change-value-public-property.png)
 
 >[!NOTE]
->原則として、Game Studio でプロパティまたはフィールドを表示したい場合、ゲッターおよびセッターは可能な限り何も行わないようにする必要があります。たとえば、メソッドを呼び出したり、Xenko のランタイム API にアクセスしたりしないようにする必要があります。
+>原則として、Game Studio でプロパティまたはフィールドを表示したい場合、ゲッターおよびセッターは可能な限り何も行わないようにする必要があります。たとえば、メソッドを呼び出したり、Stride のランタイム API にアクセスしたりしないようにする必要があります。
 
 >たとえば、以下のコードは、実行時にのみ使用できる `Entity.Components` にアクセスしようとしているため、問題になります。
 
@@ -56,7 +56,7 @@ public class SampleSyncScript : StartupScript
 プロパティ グリッドにプロパティを表示したくない場合は、次の方法でできます。
 
 * メンバーを内部またはプライベートとして宣言します
-* または、[DataMemberIgnore](xref:Xenko.Core.DataMemberIgnoreAttribute) 属性を次のように使用します。
+* または、[DataMemberIgnore](xref:Stride.Core.DataMemberIgnoreAttribute) 属性を次のように使用します。
 
 ```cs
 
@@ -68,7 +68,7 @@ public class SampleSyncScript : StartupScript
 
 プロパティが表示されなくなります。
 
-![パブリック プロパティは ```［DataMemberIgnore］``` で非表示になっている](media/scripts-in-xenko-public-property-with-datamemberignore.png)
+![パブリック プロパティは ```［DataMemberIgnore］``` で非表示になっている](media/scripts-in-stride-public-property-with-datamemberignore.png)
 
 ## 関連項目
 

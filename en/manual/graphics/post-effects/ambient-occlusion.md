@@ -23,7 +23,7 @@
 | Samples | The number of pixels sampled to determine how occluded a point is. Higher values reduce noise, but affect performance. Use with **Blur count** to find a balance between results and performance.
 | Projection scale | Scales the sample radius. In most cases, `1` (no scaling) produces the most accurate result.
 | Intensity | The strength of the darkening effect in occluded areas
-| Sample bias | The angle at which Xenko considers an area of geometry an occluder. At high values, only narrow joins and crevices are considered occluders.
+| Sample bias | The angle at which Stride considers an area of geometry an occluder. At high values, only narrow joins and crevices are considered occluders.
 | Sample radius | Use with **projection scale** to control the radius of the occlusion effect
 | Blur count | The number of times the ambient occlusion image is blurred. Higher numbers reduce noise, but can produce artifacts.
 | Blur scale | The blur radius in pixels

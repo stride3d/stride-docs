@@ -1,6 +1,6 @@
 # ライトとシャドウ
 
-Xenko のライトは、[ライト コンポーネント](xref:Xenko.Engine.LightComponent)によって提供されます。ライトには複数の種類があります。
+Stride のライトは、[ライト コンポーネント](xref:Stride.Engine.LightComponent)によって提供されます。ライトには複数の種類があります。
 
 ## このセクションの内容
 

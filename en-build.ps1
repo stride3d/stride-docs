@@ -14,7 +14,7 @@ if ($API)
     Write-Host "Generating API documentation..."
 
     # Run nuget restore
-    ..\xenko\build\.nuget\nuget restore ..\xenko\build\Xenko.sln
+    ..\stride\build\.nuget\nuget restore ..\stride\build\Stride.sln
 	if ($LastExitCode -ne 0)
 	{
 		Write-Host "Failed to restore nuget packages"

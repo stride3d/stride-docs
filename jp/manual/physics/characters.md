@@ -3,7 +3,7 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>
 
-**キャラクター** コライダーは、プレイヤーおよび NPC などのスクリプトで制御されたキャラクターに使用されます。[キャラクター コンポーネント](xref:Xenko.Physics.CharacterComponent)であるエンティティは、[SetVelocity](xref:Xenko.Physics.CharacterComponent.SetVelocity\(Xenko.Core.Mathematics.Vector3\))、[Jump](xref:Xenko.Physics.CharacterComponent.Jump)、[Teleport](xref:Xenko.Physics.CharacterComponent.Teleport\(Xenko.Core.Mathematics.Vector3\)) によってのみ移動できます。
+**キャラクター** コライダーは、プレイヤーおよび NPC などのスクリプトで制御されたキャラクターに使用されます。[キャラクター コンポーネント](xref:Stride.Physics.CharacterComponent)であるエンティティは、[SetVelocity](xref:Stride.Physics.CharacterComponent.SetVelocity\(Stride.Core.Mathematics.Vector3\))、[Jump](xref:Stride.Physics.CharacterComponent.Jump)、[Teleport](xref:Stride.Physics.CharacterComponent.Teleport\(Stride.Core.Mathematics.Vector3\)) によってのみ移動できます。
 
 ## キャラクター コンポーネントをエンティティに追加する
 

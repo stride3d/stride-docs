@@ -70,7 +70,7 @@ The near and far planes determine where the camera's view begins and ends.
 
 * The **far plane**, also known as the draw distance, is the furthest point the camera can see. Objects beyond this point aren't drawn. The default setting is 1000.
 
-Xenko renders the area between the near and far planes.
+Stride renders the area between the near and far planes.
 
 ![Camera position](../../get-started/media/camera-position.png)
 
@@ -81,7 +81,7 @@ Xenko renders the area between the near and far planes.
 
 ## Camera scripts
 
-You can control cameras using **camera scripts**. Xenko includes three camera script templates: an FPS camera script, a side-scrolling camera script, and a basic camera controller script.
+You can control cameras using **camera scripts**. Stride includes three camera script templates: an FPS camera script, a side-scrolling camera script, and a basic camera controller script.
 
 ### Add a camera script in Game Studio
 

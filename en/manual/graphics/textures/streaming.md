@@ -4,18 +4,18 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-When you **stream** textures, Xenko only loads them when they're needed. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
+When you **stream** textures, Stride only loads them when they're needed. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
 
 >[!Note]
 >Currently, only textures can be streamed.
 
-## How Xenko streams textures
+## How Stride streams textures
 
-Instead of loading a texture when Xenko loads the scene (with all its mipmaps), Xenko only loads it when it's used (eg a model using the texture is onscreen). 
+Instead of loading a texture when Stride loads the scene (with all its mipmaps), Stride only loads it when it's used (eg a model using the texture is onscreen). 
 
-When the texture is no longer needed (ie no objects that use the texture are onscreen), Xenko unloads it.
+When the texture is no longer needed (ie no objects that use the texture are onscreen), Stride unloads it.
 
-Currently, there's no loading priority for textures. For example, Xenko doesn't load textures based on distance; instead, Xenko loads them all in sequence.
+Currently, there's no loading priority for textures. For example, Stride doesn't load textures based on distance; instead, Stride loads them all in sequence.
 
 ### Using streaming with mipmaps
 
@@ -58,14 +58,14 @@ For instructions about how to access the global streaming settings, see the [Gam
 | Property             | Description
 |----------------------|------------
 | Streaming            | Enable streaming
-| Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
+| Update interval | How frequently Stride updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
 | Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but might slow down the framerate.
 | Resource timeout (ms)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
-| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
+| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Stride unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
 ## Access the streaming manager in code
 
-Use [Streaming](xref:Xenko.Streaming).
+Use [Streaming](xref:Stride.Streaming).
 
 For example, to disable streaming globally, use:
 
@@ -87,7 +87,7 @@ var texture = Content.Load<Texture>("myTexture", ContentManagerLoaderSettings.St
 
 ### Options
 
-There are three [StreamingOptions](xref:Xenko.Streaming.StreamingOptions):
+There are three [StreamingOptions](xref:Stride.Streaming.StreamingOptions):
 
 * The `KeepLoaded` option keeps the texture in memory even when the memory budget is exceeded.
 
@@ -111,7 +111,7 @@ Streaming.SetResourceStreamingOptions(myTexture, myNewOptions);
 
 ## See also
 
-* [StreamingManager API](xref:Xenko.Streaming.StreamingManager)
+* [StreamingManager API](xref:Stride.Streaming.StreamingManager)
 * [Textures index](index.md)
 * [Texture compression](compression.md)
 * [Game Settings](../../game-studio/game-settings.md)

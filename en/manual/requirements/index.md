@@ -2,7 +2,7 @@
 
 ![Requirements](media/requirements.png)
 
-To develop projects with Xenko, you need:
+To develop projects with Stride, you need:
 
 | Requirement     | Specifications 
 |-----------------|----------------
@@ -30,11 +30,11 @@ To develop for mobile platforms, you also need:
 > [!Note]
 > * Xamarin is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 201, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
 
-For information about platforms Xenko supports, see [Platforms](../platforms/index.md).
+For information about platforms Stride supports, see [Platforms](../platforms/index.md).
 
-## Run games made with Xenko
+## Run games made with Stride
 
-To run games made with Xenko, you need:
+To run games made with Stride, you need:
 
 - .NET 4.6.1
 - DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan

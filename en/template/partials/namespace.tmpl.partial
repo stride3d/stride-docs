@@ -14,7 +14,7 @@
   {{{remarks}}}
   {{/remarks}}
 </div>
-<div class="xk-namespaces-list">
+<div class="stride-namespaces-list">
 {{#namespaces}}
 <h2 id="{{namespaces}}">{{namespaces}}</h2>
 {{/namespaces}}
@@ -30,12 +30,12 @@
 </div>
 {{#children}}
   <h2 id="{{id}}">{{>partials/namespaceSubtitle}}</h2>
-  <div class="table-responsive xk-documentation-table">
+  <div class="table-responsive stride-documentation-table">
     <table class="table table-bordered table-striped table-condensed">
         {{#children}}  
         <tr>
-            <td class="xk-icon-column">
-               <span class="xk-{{type}}-icon"></span>
+            <td class="stride-icon-column">
+               <span class="stride-{{type}}-icon"></span>
             </td>
             <td>
                 <p><xref href="{{uid}}" altProperty="fullName" displayProperty="name"/></p>

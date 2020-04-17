@@ -53,20 +53,20 @@ MyModelComponent.Materials[ExistingOrNewMaterialIndex] = myMaterial;
 
 ### Merging meshes
 
-When Xenko draws a model with meshes, it performs one GPU draw call for each mesh. By default, to improve performance, at build time, Xenko merges meshes that share materials.
+When Stride draws a model with meshes, it performs one GPU draw call for each mesh. By default, to improve performance, at build time, Stride merges meshes that share materials.
 
 ![Mesh](media/material-slot-diagram-2.png)
 
 In the example above, there are five meshes and five draw calls. After merging, there are three meshes and three draw calls.
 
 >[!Note]
->When Xenko merges meshes, it merges the vertex and index buffers. This means you can't draw the meshes separately at runtime, and you can't change the original mesh position (transformation matrix). The meshes become a single mesh with a single material and a single transformation matrix (relative to the model).
+>When Stride merges meshes, it merges the vertex and index buffers. This means you can't draw the meshes separately at runtime, and you can't change the original mesh position (transformation matrix). The meshes become a single mesh with a single material and a single transformation matrix (relative to the model).
 
 >[!Note]
->When Xenko merges meshes, it changes the draw order of elements. In the case of transparent materials, this can produce different results.
+>When Stride merges meshes, it changes the draw order of elements. In the case of transparent materials, this can produce different results.
 
 >[!Note]
->When you create a [physics collider from a model](../../physics/collider-shapes.md), Xenko builds separate convex hulls for each mesh in the model. If the meshes are merged, only one mesh remains per material, so convex hulls are also built from merged meshes.
+>When you create a [physics collider from a model](../../physics/collider-shapes.md), Stride builds separate convex hulls for each mesh in the model. If the meshes are merged, only one mesh remains per material, so convex hulls are also built from merged meshes.
 
 ### Disable mesh merging
 

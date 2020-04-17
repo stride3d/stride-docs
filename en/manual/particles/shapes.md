@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Because particles are essentially only points in space, they have no defined shape. Instead, Xenko draws shapes **between** the points. 
+Because particles are essentially only points in space, they have no defined shape. Instead, Stride draws shapes **between** the points. 
 
 The major difference between particle shapes is whether they always face the camera, or if they can rotate freely in 3D space.
 
@@ -24,7 +24,7 @@ Because they always face the camera, billboards support angular rotation only. T
 
 Quads are identical to billboards, but don't rotate to face the camera, and so support 3D orientation and rotation.
 
-Xenko draws billboard particles to the **Size** value in the particle effect properties. If you don't specify a size, Xenko expands the quads to 1m x 1m. 
+Stride draws billboard particles to the **Size** value in the particle effect properties. If you don't specify a size, Stride expands the quads to 1m x 1m. 
 
 ![media/particles-reference-shapebuilders-1.png](media/particles-reference-shapebuilders-1.png) 
 

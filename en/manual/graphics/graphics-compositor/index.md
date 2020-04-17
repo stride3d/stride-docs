@@ -18,7 +18,7 @@ The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) 
 
 ## Create a graphics compositor
 
-Xenko includes a graphics compositor when you create a project.
+Stride includes a graphics compositor when you create a project.
 
 If you need to create another graphics compositor, in the **Asset View**, click **Add asset** and select **Misc > Graphics compositor**.
 
@@ -31,7 +31,7 @@ You can choose one of two presets:
 
 ## Set the graphics compositor
 
-You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](../../game-studio/game-settings.md).
+You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Stride uses the graphics compositor you specify in [Game Settings](../../game-studio/game-settings.md).
 
 ![Set default scene](../../game-studio/media/game-settings-graphics-compositor.png)
 

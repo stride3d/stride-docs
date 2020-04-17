@@ -3,13 +3,13 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Xenko uses the @'Xenko.Graphics.Texture' class to interact with texture objects in code.
+Stride uses the @'Stride.Graphics.Texture' class to interact with texture objects in code.
 
 For more information about rendering to a texture, see [Render textures](../graphics-compositor/render-textures.md).
 
 ## Load a texture
 
-To load a texture from an asset in Xenko, call this function:
+To load a texture from an asset in Stride, call this function:
 
 ```cs
 // loads the texture called duck.dds (or .png etc.)
@@ -20,7 +20,7 @@ This automatically generates a texture object with all its fields correctly fill
 
 ## Create a texture
 
-You can also create textures without any assets (eg to be used as render target). To do this, call the constructor of the @'Xenko.Graphics.Texture' class. See the @'Xenko.Graphics.Texture' class reference to get the full list of available options and parameters. Some texture formats might not be available on all platforms.
+You can also create textures without any assets (eg to be used as render target). To do this, call the constructor of the @'Stride.Graphics.Texture' class. See the @'Stride.Graphics.Texture' class reference to get the full list of available options and parameters. Some texture formats might not be available on all platforms.
 
 ### Code: Create a texture
 
@@ -32,7 +32,7 @@ var myTexture = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.R8G8B
 
 ### Create a render target
 
-The @'Xenko.Graphics.GraphicsPresenter' class always provides a default render target and a depth buffer. They are accessible through the @'Xenko.Graphics.GraphicsPresenter.BackBuffer' and @'Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' properties. The presenter is exposed by the @'Xenko.Graphics.GraphicsDevice.Presenter' property of the @'Xenko.Graphics.GraphicsDevice'. However, you might want to use your own buffer to perform off-screen rendering or post-processes. As a result, Xenko offers a simple way to create textures that can act as render textures and a depth buffers.
+The @'Stride.Graphics.GraphicsPresenter' class always provides a default render target and a depth buffer. They are accessible through the @'Stride.Graphics.GraphicsPresenter.BackBuffer' and @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' properties. The presenter is exposed by the @'Stride.Graphics.GraphicsDevice.Presenter' property of the @'Stride.Graphics.GraphicsDevice'. However, you might want to use your own buffer to perform off-screen rendering or post-processes. As a result, Stride offers a simple way to create textures that can act as render textures and a depth buffers.
 
 ### Code: Create a custom render target and depth buffer
 
@@ -45,7 +45,7 @@ var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D
 ```
 
 >[!Note]
->Don't forget the flag @'Xenko.Graphics.TextureFlags.RenderTarget' to enable the render target behavior.
+>Don't forget the flag @'Stride.Graphics.TextureFlags.RenderTarget' to enable the render target behavior.
 >
 >Make sure the PixelFormat is correct, especially for the depth buffer. Be careful of the available formats on the target platform.
 
@@ -66,14 +66,14 @@ CommandList.SetRenderTargetAndViewport(GraphicsDevice.Presenter.DepthStencilBuff
 >[!Note]
 >Make sure both the render target and the depth buffer have the same size. Otherwise, the depth buffer isn't used.
 
-You can set multiple render textures at the same time. See the overloads of @'Xenko.Graphics.CommandList.SetRenderTargets(Xenko.Graphics.Texture,Xenko.Graphics.Texture[])' and @'Xenko.Graphics.CommandList.SetRenderTargetsAndViewport(Xenko.Graphics.Texture,Xenko.Graphics.Texture[])' method.
+You can set multiple render textures at the same time. See the overloads of @'Stride.Graphics.CommandList.SetRenderTargets(Stride.Graphics.Texture,Stride.Graphics.Texture[])' and @'Stride.Graphics.CommandList.SetRenderTargetsAndViewport(Stride.Graphics.Texture,Stride.Graphics.Texture[])' method.
 
 >[!Note]
->Only the @'Xenko.Graphics.GraphicsPresenter.BackBuffer' is displayed on screen, so you need to render it to display something.
+>Only the @'Stride.Graphics.GraphicsPresenter.BackBuffer' is displayed on screen, so you need to render it to display something.
 
 ### Clear a render target
 
-To clear render textures, call the @'Xenko.Graphics.CommandList.Clear(Xenko.Graphics.Texture,Xenko.Core.Mathematics.Color4)' and @'Xenko.Graphics.CommandList.Clear(Xenko.Graphics.Texture,Xenko.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
+To clear render textures, call the @'Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Core.Mathematics.Color4)' and @'Stride.Graphics.CommandList.Clear(Stride.Graphics.Texture,Stride.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
 
 ### Code: Clear the targets
 
@@ -83,15 +83,15 @@ CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, DepthStencilClear
 ```
 
 >[!Note]
->Don't forget to clear the @'Xenko.Graphics.GraphicsPresenter.BackBuffer' and the @'Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame. If you don't, you might get unexpected behavior depending on the device. If you want to keep the contents of a frame, use an intermediate render target.
+>Don't forget to clear the @'Stride.Graphics.GraphicsPresenter.BackBuffer' and the @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame. If you don't, you might get unexpected behavior depending on the device. If you want to keep the contents of a frame, use an intermediate render target.
 
 ## Viewport
 
-@'Xenko.Graphics.CommandList.SetRenderTargetAndViewport(Xenko.Graphics.Texture,Xenko.Graphics.Texture)' adjusts the current @'Xenko.Graphics.Viewport' to the full size of the render target.
+@'Stride.Graphics.CommandList.SetRenderTargetAndViewport(Stride.Graphics.Texture,Stride.Graphics.Texture)' adjusts the current @'Stride.Graphics.Viewport' to the full size of the render target.
 
-If you only want to render to a subset of the texture, set the render target and viewport separately using @'Xenko.Graphics.CommandList.SetRenderTarget(Xenko.Graphics.Texture,Xenko.Graphics.Texture)' and @'Xenko.Graphics.CommandList.SetViewport(Xenko.Graphics.Viewport)'.
+If you only want to render to a subset of the texture, set the render target and viewport separately using @'Stride.Graphics.CommandList.SetRenderTarget(Stride.Graphics.Texture,Stride.Graphics.Texture)' and @'Stride.Graphics.CommandList.SetViewport(Stride.Graphics.Viewport)'.
 
-You can bind multiple viewports using @'Xenko.Graphics.CommandList.SetViewports(Xenko.Graphics.Viewport[])' and @'Xenko.Graphics.CommandList.SetViewports(System.Int32,Xenko.Graphics.Viewport[])' overloads for use with a geometry shader.
+You can bind multiple viewports using @'Stride.Graphics.CommandList.SetViewports(Stride.Graphics.Viewport[])' and @'Stride.Graphics.CommandList.SetViewports(System.Int32,Stride.Graphics.Viewport[])' overloads for use with a geometry shader.
 
 ### Code: Set the viewports
 
@@ -106,7 +106,7 @@ CommandList.SetViewport(viewport);
 
 ## Scissor
 
-The @'Xenko.Graphics.CommandList.SetScissorRectangle(Xenko.Core.Mathematics.Rectangle)' and @'Xenko.Graphics.CommandList.SetScissorRectangles(Xenko.Core.Mathematics.Rectangle[])' methods set the scissors. Unlike the viewport, you need to provide the coordinates of the location of the vertices defining the scissor instead of its size.
+The @'Stride.Graphics.CommandList.SetScissorRectangle(Stride.Core.Mathematics.Rectangle)' and @'Stride.Graphics.CommandList.SetScissorRectangles(Stride.Core.Mathematics.Rectangle[])' methods set the scissors. Unlike the viewport, you need to provide the coordinates of the location of the vertices defining the scissor instead of its size.
 
 ### Code: Set the scissor
 

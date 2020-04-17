@@ -14,7 +14,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\manual\\particles\\tutorials\\media\\sword-slash-1.mp4",
+      "src" : "C:\\Users\\james.duffy\\Documents\\stride-docs\\manual\\particles\\tutorials\\media\\sword-slash-1.mp4",
       "rect" : [0, 0, 1280, 720],
       "lastMod" : "20161216T073543",
       "sourceTracks" : [

@@ -19,9 +19,9 @@ Basic rules:
 # Create a bundle
 
 > [!Note]
-> Creating currently requires some manual steps (i.e. editing `xkpkg` by hand).
+> Creating currently requires some manual steps (i.e. editing `sdpkg` by hand).
 
-Open the `xkprj` file of the game executable and add the following configuration:
+Open the `sdprj` file of the game executable and add the following configuration:
 
 Example:
 
@@ -76,7 +76,7 @@ Bundles:
 
 # Load a bundle at runtime
 
-Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{Xenko.Core.Storage.ObjectDatabase.LoadBundle})`:
+Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{Stride.Core.Storage.ObjectDatabase.LoadBundle})`:
 
 ```cs
 // Load bundle

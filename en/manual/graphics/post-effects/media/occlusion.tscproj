@@ -14,7 +14,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\ambient-occlusion-on.jpg",
+      "src" : "C:\\Users\\james.duffy\\Documents\\stride-docs\\en\\manual\\graphics\\post-effects\\media\\ambient-occlusion-on.jpg",
       "rect" : [0, 0, 736, 663],
       "lastMod" : "20171004T080916",
       "sourceTracks" : [
@@ -32,7 +32,7 @@
     },
     {
       "id" : 2,
-      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\ambient-occlusion-off.jpg",
+      "src" : "C:\\Users\\james.duffy\\Documents\\stride-docs\\en\\manual\\graphics\\post-effects\\media\\ambient-occlusion-off.jpg",
       "rect" : [0, 0, 736, 663],
       "lastMod" : "20171004T081426",
       "sourceTracks" : [
@@ -50,7 +50,7 @@
     },
     {
       "id" : 3,
-      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-off.jpg",
+      "src" : "C:\\Users\\james.duffy\\Documents\\stride-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-off.jpg",
       "rect" : [0, 0, 838, 922],
       "lastMod" : "20171005T022009",
       "sourceTracks" : [
@@ -68,7 +68,7 @@
     },
     {
       "id" : 4,
-      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-on.jpg",
+      "src" : "C:\\Users\\james.duffy\\Documents\\stride-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-on.jpg",
       "rect" : [0, 0, 838, 922],
       "lastMod" : "20171005T022034",
       "sourceTracks" : [
@@ -86,7 +86,7 @@
     },
     {
       "id" : 5,
-      "src" : "C:\\Users\\james.duffy\\Documents\\xenko-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-only.jpg",
+      "src" : "C:\\Users\\james.duffy\\Documents\\stride-docs\\en\\manual\\graphics\\post-effects\\media\\occlusion-only.jpg",
       "rect" : [0, 0, 838, 922],
       "lastMod" : "20171005T022052",
       "sourceTracks" : [

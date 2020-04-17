@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can set which audio device Xenko uses. For example, you can access the _Oculus Rift_ audio device from your custom game constructor.
+You can set which audio device Stride uses. For example, you can access the _Oculus Rift_ audio device from your custom game constructor.
 
-If you don't specify a device, Xenko uses the default audio advice.
+If you don't specify a device, Stride uses the default audio advice.
 
 ## Example code
 

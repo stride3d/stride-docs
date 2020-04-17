@@ -3,19 +3,19 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **log** information about your game while it runs using [Log](xref:Xenko.Engine.ScriptComponent.Log).
+You can **log** information about your game while it runs using [Log](xref:Stride.Engine.ScriptComponent.Log).
 
 Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. For example, you can create a log message that triggers when a character performs a certain action. This is useful to investigate how your game is performing.
 
 >[!Note]
 >Logging is disabled when you build the game in release mode.
 
-When you use logging and run your game in debug mode, Xenko opens a console in a second window to display logging information. The messages are color-coded by level. 
+When you use logging and run your game in debug mode, Stride opens a console in a second window to display logging information. The messages are color-coded by level. 
 The name of the module (such as the script containing the log message) is displayed in brackets. This is followed by the log level (eg **Warning**, **Error**, etc), then the log message.
 
 ![Logging in console](media/logging-in-console.png)
 
-The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'Xenko.Core.Serialization.Contents.ContentManager'.
+The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'Stride.Core.Serialization.Contents.ContentManager'.
 
 If you run your game from Visual Studio, log messages are shown in the Visual Studio **Output** window instead.
 
@@ -97,11 +97,11 @@ The following script checks that the texture `MyTexture` is loaded. When the tex
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xenko.Core.Diagnostics;
-using Xenko.Core.Mathematics;
-using Xenko.Input;
-using Xenko.Engine;
-using Xenko.Graphics;
+using Stride.Core.Diagnostics;
+using Stride.Core.Mathematics;
+using Stride.Input;
+using Stride.Engine;
+using Stride.Graphics;
 
 namespace MyGame
 {

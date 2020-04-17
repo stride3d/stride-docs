@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
   <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
-  <link rel="stylesheet" href="//xenko.com/css/site.css">
+  <link rel="stylesheet" href="//stride3d.net/css/site.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-  <script src="//xenko.com/scripts/site.doc.js" type="text/javascript"></script>
-  <link rel="icon" type="image/png" href="//xenko.com/favicon.png"> 
+  <script src="//stride3d.net/scripts/site.doc.js" type="text/javascript"></script>
+  <link rel="icon" type="image/png" href="//stride3d.net/favicon.png"> 
   <link rel="stylesheet" href="{{_rel}}styles/main.css">
   <meta property="docfx:navrel" content="{{_navRel}}">
   <meta property="docfx:tocrel" content="{{_tocRel}}">

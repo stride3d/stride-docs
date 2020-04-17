@@ -17,7 +17,7 @@ An **empty project** is project that contains only the bare minimum to make a ga
 
 To create an empty project:
 
-1. In the **Xenko Launcher**, click **Start** to start Game Studio. 
+1. In the **Stride Launcher**, click **Start** to start Game Studio. 
 
     The **New/open project** dialog opens.
     
@@ -42,9 +42,9 @@ To create an empty project:
     > [!Note]
     >  To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio).
 
-    If your development system is missing prerequisites for any of the platforms you select, Xenko displays a warning.
+    If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
 
-7. Under **Asset Packs**, you can select additional assets to include in your project. These include assets such as animations and materials. The asset packs are fun to play with when you're learning how to use Xenko, but they're not necessary.
+7. Under **Asset Packs**, you can select additional assets to include in your project. These include assets such as animations and materials. The asset packs are fun to play with when you're learning how to use Stride, but they're not necessary.
 
 8. Under **Rendering**, select the options you want.  
     
@@ -59,11 +59,11 @@ To create an empty project:
 
 10. Click **OK**.
 
-Xenko creates the project and opens it in Game Studio. For more information, see [Game Studio](../game-studio/index.md).
+Stride creates the project and opens it in Game Studio. For more information, see [Game Studio](../game-studio/index.md).
 
 ## Create a project from a sample or template
 
-Xenko includes several sample projects demonstrating each part of the engine (2D, 3D, sprites, fonts, UI, audio, input, etc). It also includes template games to help you make your own game. 
+Stride includes several sample projects demonstrating each part of the engine (2D, 3D, sprites, fonts, UI, audio, input, etc). It also includes template games to help you make your own game. 
     
 To create a project from a sample or template:
 
@@ -83,7 +83,7 @@ To create a project from a sample or template:
     	
  5. Select the platforms you want your game to support and click **OK**.
 
-Xenko creates the project and opens it in Game Studio. 
+Stride creates the project and opens it in Game Studio. 
 
 ## What's next?
 

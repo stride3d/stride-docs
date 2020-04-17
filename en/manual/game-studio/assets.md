@@ -6,7 +6,7 @@ An **asset** is a representation of an element of your game inside Game Studio, 
 
 Some assets require **resource files**. For example, texture assets need image files and audio assets need audio files. Other types of assets (such as scenes, physics colliders, and game settings) don't use resource files, and can be created entirely in Game Studio.
 
-You can compile and optimize assets with a special compiler provided by Xenko. Compiled assets are packed together as reusable bundles.
+You can compile and optimize assets with a special compiler provided by Stride. Compiled assets are packed together as reusable bundles.
 
 ![Assets displayed in the Asset View](../get-started/media/asset-creation-asset-view-tab-knight.png)
 

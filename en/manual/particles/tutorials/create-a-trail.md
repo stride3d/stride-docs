@@ -14,7 +14,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
 ## 1. Create a project
 
-1. In the Xenko Launcher, click **Start** and select **New Game**.
+1. In the Stride Launcher, click **Start** and select **New Game**.
 
 2. In the **Create a new game** dialog, under Asset Packs, select **Animated Models**. The Animated Models pack contains assets we'll be using in this example. (Note that we'll make our particle effect from scratch.)
 
@@ -79,7 +79,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![SwordModel child entity](media/SwordModel-child-entity.png)
 
-14. With the in the **Property Grid**, click **Add component** and select **Model Node Link**. This is called a **Bone Link** in some versions of Xenko.
+14. With the in the **Property Grid**, click **Add component** and select **Model Node Link**. This is called a **Bone Link** in some versions of Stride.
 
     ![Add Model Node Link](media/add-model-node-link.png)
 
@@ -119,7 +119,7 @@ First we'll build a basic trail, just to see how it looks.
 
     ![Set Shape to Trail](media/emitter-shape-trail.png)
 
-5. Unfortunately, we need to make a brief detour due to a bug in Xenko. Under the **Shape** properties, set the **Axis** to **Center**. (The shape should really be set to Edge, but the Edge and Center settings are reversed in the UI. This will be fixed in Xenko 1.9.3.)
+5. Unfortunately, we need to make a brief detour due to a bug in Stride. Under the **Shape** properties, set the **Axis** to **Center**. (The shape should really be set to Edge, but the Edge and Center settings are reversed in the UI. This will be fixed in Stride 1.9.3.)
 
     ![Set Axis to Center](media/set-axis-to-center.png)
 
@@ -284,11 +284,11 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
 2. In Visual Studio, right-click the game project and select **Add > New item**. In the **Name** field, give your script the name *SpawnTrail*, and click **Add**.
 
-3. Replace the script content with the code in this script: [SpawnTrail.cs](https://github.com/SiliconStudio/xenko-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs)
+3. Replace the script content with the code in this script: [SpawnTrail.cs](https://github.com/SiliconStudio/stride-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs)
 
-    This is a modified version of the Prefab Instance script included in Xenko. Instead of listening to events or key presses, it listens to animation changes — such as our sword swing animation.
+    This is a modified version of the Prefab Instance script included in Stride. Instead of listening to events or key presses, it listens to animation changes — such as our sword swing animation.
 
-4. In the script, make sure the ``namespace`` is correct. This usually matches your Xenko project name (eg *MyTrailEffect*).
+4. In the script, make sure the ``namespace`` is correct. This usually matches your Stride project name (eg *MyTrailEffect*).
 
     ![Namespace](media/script-namespace.png)
 

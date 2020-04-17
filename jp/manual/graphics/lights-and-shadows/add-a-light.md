@@ -1,6 +1,6 @@
 # ライトを追加する
 
-シーンにライトを追加するには、[ライト コンポーネント](xref:Xenko.Engine.LightComponent)をエンティティに追加します。
+シーンにライトを追加するには、[ライト コンポーネント](xref:Stride.Engine.LightComponent)をエンティティに追加します。
 
 1. ライトにするエンティティを選択します。
 

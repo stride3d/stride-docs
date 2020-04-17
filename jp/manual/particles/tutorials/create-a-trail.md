@@ -14,7 +14,7 @@
 
 ## 1. プロジェクトを作成する
 
-1. Xenko Launcher で、［Start］をクリックして、［New Game］を選択します。
+1. Stride Launcher で、［Start］をクリックして、［New Game］を選択します。
 
 2. ［Create a new game］ダイアログの［Asset Packs］で、［Animated Models］を選択します。Animated Models パックには、この例で使用するアセットが含まれます(ここではパーティクル効果を最初から作成することに注意してください)。
 
@@ -88,7 +88,7 @@
 
     ![Set Shape to Trail](media/emitter-shape-trail.png)
 
-5. ここで、Xenko のバグのために少し回り道をする必要があります。［Shape］のプロパティで、［Axis］を［Center］に設定します。(シェイプは本当は［Edge］に設定する必要がありますが、［Edge］と［Center］の設定が UI では逆になっています。この問題は Xenko 1.9.3 で解決されます。)
+5. ここで、Stride のバグのために少し回り道をする必要があります。［Shape］のプロパティで、［Axis］を［Center］に設定します。(シェイプは本当は［Edge］に設定する必要がありますが、［Edge］と［Center］の設定が UI では逆になっています。この問題は Stride 1.9.3 で解決されます。)
 
     ![Set Axis to Center](media/set-axis-to-center.png)
 
@@ -253,11 +253,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 2. Visual Studio でゲーム プロジェクトを右クリックし、［追加］>［新しいアイテム］を選択します。[名前］フィールドにスクリプトの名前として「*SpawnTrail*」と入力し、［追加］をクリックします。
 
-3. スクリプトの内容を、スクリプト [SpawnTrail.cs](https://github.com/SiliconStudio/xenko-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs) のコードに置き換えます。
+3. スクリプトの内容を、スクリプト [SpawnTrail.cs](https://github.com/SiliconStudio/stride-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs) のコードに置き換えます。
 
-    これは、Xenko に含まれるプレハブ インスタンス スクリプトを変更したものです。イベントまたはキーの押下をリッスンするのではなく、剣撃アニメーションのようなアニメーションの変化をリッスンします。
+    これは、Stride に含まれるプレハブ インスタンス スクリプトを変更したものです。イベントまたはキーの押下をリッスンするのではなく、剣撃アニメーションのようなアニメーションの変化をリッスンします。
 
-4. スクリプトで、``namespace`` が正しいことを確認します。これは通常、Xenko プロジェクトの名前 (*MyTrailEffect* など) と一致します。
+4. スクリプトで、``namespace`` が正しいことを確認します。これは通常、Stride プロジェクトの名前 (*MyTrailEffect* など) と一致します。
 
     ![Namespace](media/script-namespace.png)
 

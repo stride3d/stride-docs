@@ -85,7 +85,7 @@ Under the **Surface** properties, you can define a [Normal maps](../textures/nor
 | ------------ | ---------------
 | Normal map   | The normal map color provider
 | Scale and offset | Interpret values from the texture as positive values ranging from `0.0` to `1.0`. The shader applies a scale to get the range `-1.0` to `1.0`.
-| Reconstruct Z    | If there's no Z component in the texture, reconstruct it from the X and Y components. This assumes that X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 and that Z is always positive, so no normal vector can point to the back side of the surface. We recommend you enable this option, as Xenko might remove the Z component when you compress normal maps.
+| Reconstruct Z    | If there's no Z component in the texture, reconstruct it from the X and Y components. This assumes that X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 and that Z is always positive, so no normal vector can point to the back side of the surface. We recommend you enable this option, as Stride might remove the Z component when you compress normal maps.
 
 For more information about normal maps, see the [normal maps](../textures/normal-maps.md) page.
 

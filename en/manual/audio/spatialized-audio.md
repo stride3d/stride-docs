@@ -15,7 +15,7 @@ For example, the frequency (pitch) of the sound coming from a moving object vari
 
 ![Doppler effect](media/audio-index-play-audio-doppler-effect.png)
 
-To simulate realistic 3D audio, Xenko tracks the positions of two entities in the scene:
+To simulate realistic 3D audio, Stride tracks the positions of two entities in the scene:
 
 * **[audio emitters](audio-emitters.md)**, which emit audio
 * **[audio listeners](audio-listeners.md)**, which hear the sound emitted by audio emitters
@@ -40,7 +40,7 @@ You can also set audio to spatialized in the asset's **Property Grid**:
     ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
 
 > [!Note] 
-> Xenko processes spatialized audio as mono (single-channel) audio. It doesn't alter the source file.
+> Stride processes spatialized audio as mono (single-channel) audio. It doesn't alter the source file.
 
 ## See also
 

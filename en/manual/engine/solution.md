@@ -2,9 +2,9 @@
 
 <div class="doc-incomplete"/>
 
-In Xenko Studio, the **Solution Explorer** displays the hierarchy of your game.
+In Stride Studio, the **Solution Explorer** displays the hierarchy of your game.
 
-The content of each package is grouped into two categories: Local packages and External packages. Local packages are the ones that you have created. External packages are the one that you have downloaded from the Internet; for example, the default Xenko package. If you open a package file (```.xkpkg```), a single package of the local package category is visible. If you open a solution file (```.sln```) and the solution contains more that one package, you can see several packages.
+The content of each package is grouped into two categories: Local packages and External packages. Local packages are the ones that you have created. External packages are the one that you have downloaded from the Internet; for example, the default Stride package. If you open a package file (```.sdpkg```), a single package of the local package category is visible. If you open a solution file (```.sln```) and the solution contains more that one package, you can see several packages.
 
 Each package contains the following three base elements:
 
@@ -17,4 +17,4 @@ Each package contains the following three base elements:
 >[!Note]
 >You can change the hierarchy in the **Solution Explorer** by creating folders and renaming or deleting objects.
 
-Xenko uses Visual Studio solution files to list all the packages and code project related to a game. Thus, you can easily integrate Xenko Studio and Visual Studio for your project because they use the same root file. By default, Xenko Studio creates a new solution file when you create a new project, and manages references to both C# projects and packages.
+Stride uses Visual Studio solution files to list all the packages and code project related to a game. Thus, you can easily integrate Stride Studio and Visual Studio for your project because they use the same root file. By default, Stride Studio creates a new solution file when you create a new project, and manages references to both C# projects and packages.

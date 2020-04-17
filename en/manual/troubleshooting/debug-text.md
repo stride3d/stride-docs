@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can print debug text at runtime with [DebugText](xref:Xenko.Engine.ScriptComponent.DebugText). For example, you can use this to display a message when a problem occurs.
+You can print debug text at runtime with [DebugText](xref:Stride.Engine.ScriptComponent.DebugText). For example, you can use this to display a message when a problem occurs.
 
 >[!Note]
 >Debug text is automatically disabled when you build the game in release mode.
@@ -31,9 +31,9 @@ DebugText.Visible = false;
 The following script checks that the texture `MyTexture` is loaded. If it isn't loaded, the game displays the debug text "MyTexture not loaded".
 
 ```cs
-using Xenko.Core.Mathematics;
-using Xenko.Engine;
-using Xenko.Graphics;
+using Stride.Core.Mathematics;
+using Stride.Engine;
+using Stride.Graphics;
 
 namespace MyGame
 {

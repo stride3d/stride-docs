@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 
 >[!Note]
->In some versions of Xenko, **Model node links** are called **Bone links**.
+>In some versions of Stride, **Model node links** are called **Bone links**.
 
 The **model node link** component attaches an entity to a node of a skeleton on another entity.
 
@@ -42,7 +42,7 @@ For example, imagine you have two models: a knight, and a sword. The character h
     >The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
     >[!Tip]
-    >If you don't specify a model, Xenko links the entity to the model on the parent entity.
+    >If you don't specify a model, Stride links the entity to the model on the parent entity.
 
 5. In **Node name**, select the node in the model you want to attach this entity to.
 
@@ -54,7 +54,7 @@ For example, imagine you have two models: a knight, and a sword. The character h
 
 ## Offset
 
-To add an offset to the linked entity, use the entity's [TransformComponent](xref:Xenko.Engine.TransformComponent).
+To add an offset to the linked entity, use the entity's [TransformComponent](xref:Stride.Engine.TransformComponent).
 
 ![Transform](media/transform-component.png)
 
