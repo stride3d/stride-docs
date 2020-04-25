@@ -31,7 +31,7 @@ Clears a frame, with a solid color.
 
 ## Camera renderer
 
-Uses @'Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../cameras/camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras/index.md) in the scene so it can be displayed somewhere.
+Uses @'Stride.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](../cameras/camera-slots.md). The **render camera** renderer takes the input from a [camera](../cameras/index.md) in the scene so it can be displayed somewhere.
 
 ![Camera renderer properties](media/render-camera-1.png)
 
@@ -47,7 +47,7 @@ Uses @'Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view f
 The **scene renderer collection** executes multiple renderers (eg camera renderer, render texture, etc) in sequence. This lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
 
 >[!Note]
->Xenko executes the renderers in list order.
+>Stride executes the renderers in list order.
 
 To add a renderer to the collection, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select the renderer you want to add.
 
@@ -71,7 +71,7 @@ You configure the forward renderer properties in the **forward entry node**.
 
 ## Force aspect ratio scene renderer
 
-Uses @'Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio and applies a letterbox if the ratio is different from the screen. Use this before the **render camera**.
+Uses @'Stride.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio and applies a letterbox if the ratio is different from the screen. Use this before the **render camera**.
 
 ![Force aspect ratio](media/force-aspect-ratio-properties.png)
 

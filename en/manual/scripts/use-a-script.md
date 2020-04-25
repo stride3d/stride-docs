@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-To use a script, add it to an entity as a component. You can do this in Game Studio or in code. Xenko runs scripts when the entity they are attached to loads.
+To use a script, add it to an entity as a component. You can do this in Game Studio or in code. Stride runs scripts when the entity they are attached to loads.
 
-You can add a single script to as many entities as you need. You can also add multiple scripts to single entities; in this case, Xenko creates multiple instances of the script. This means the same script can have different values in its [public properties and fields](public-properties-and-fields.md).
+You can add a single script to as many entities as you need. You can also add multiple scripts to single entities; in this case, Stride creates multiple instances of the script. This means the same script can have different values in its [public properties and fields](public-properties-and-fields.md).
 
 ## Add a script in Game Studio
 

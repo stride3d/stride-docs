@@ -131,7 +131,7 @@
 
 ## VR テンプレート
 
-VR ゲームに実装された UI オーバーレイの例については、Xenko に付属する VR テンプレートを参照してください。
+VR ゲームに実装された UI オーバーレイの例については、Stride に付属する VR テンプレートを参照してください。
 
 ![VR template](media/template-virtual-reality.png)
 

@@ -6,9 +6,9 @@ _navRel: ../toc.html
 _tocTitle: 'API'
 ---
 
-# Xenko API
+# Stride API
 
-These pages contain information about the Xenko scripting API, grouped by namespace. 
+These pages contain information about the Stride scripting API, grouped by namespace. 
 
 To use this section, you should be familiar with scripting. 
 

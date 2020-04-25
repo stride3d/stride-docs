@@ -3,10 +3,10 @@
 <span class="label label-doc-level">上級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-複数のプラットフォームを対象とする開発を行っていると、プラットフォームごとにカスタム コードを作成することが必要な場合がよくあります。通常、そのための最善の方法は [Platform.Type](xref:Xenko.Core.Platform.Type) および [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) を使用することです。もう 1 つの方法として、**プリプロセッサ変数**を使用することもできます。
+複数のプラットフォームを対象とする開発を行っていると、プラットフォームごとにカスタム コードを作成することが必要な場合がよくあります。通常、そのための最善の方法は [Platform.Type](xref:Stride.Core.Platform.Type) および [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform) を使用することです。もう 1 つの方法として、**プリプロセッサ変数**を使用することもできます。
 
 > [!WARNING]
-> 可能な場合はプリプロセッサ変数を使わずに、[Platform.Type](xref:Xenko.Core.Platform.Type) および [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) を使用することをお勧めします。これは、コンパイル時にターゲット プラットフォーム用のコードのみがチェックされ、コードのエラーが見落とされる可能性があるためです。
+> 可能な場合はプリプロセッサ変数を使わずに、[Platform.Type](xref:Stride.Core.Platform.Type) および [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform) を使用することをお勧めします。これは、コンパイル時にターゲット プラットフォーム用のコードのみがチェックされ、コードのエラーが見落とされる可能性があるためです。
 
 ## プラットフォーム
 
@@ -24,11 +24,11 @@
 
 | 変数                                      | 値                 |
 | --------------------------------------------- | --------------------- |
-| Xenko_GRAPHICS_API_DIRECT3D   | Direct3D 11           |
-| Xenko_GRAPHICS_API_OPENGL     | OpenGL (Core および ES)  |
-| Xenko_GRAPHICS_API_OPENGLCORE | OpenGL Core (Desktop) |
-| Xenko_GRAPHICS_API_OPENGLES   | OpenGL ES             |
-| Xenko_GRAPHICS_API_VULKAN     | Vulkan                |
+| Stride_GRAPHICS_API_DIRECT3D   | Direct3D 11           |
+| Stride_GRAPHICS_API_OPENGL     | OpenGL (Core および ES)  |
+| Stride_GRAPHICS_API_OPENGLCORE | OpenGL Core (Desktop) |
+| Stride_GRAPHICS_API_OPENGLES   | OpenGL ES             |
+| Stride_GRAPHICS_API_VULKAN     | Vulkan                |
 
 ## 例
 

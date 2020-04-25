@@ -40,4 +40,4 @@ There is several ways to do that: `nuget.exe` client, `dotnet.exe` client or [nu
 
 For additional information, please reference to [Publishing packages](https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package) in NuGet documentation.
 
-Once your package is properly listed, it can now be [consumed](consume-packages.md) by other Xenko users!
+Once your package is properly listed, it can now be [consumed](consume-packages.md) by other Stride users!

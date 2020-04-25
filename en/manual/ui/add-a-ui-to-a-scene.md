@@ -33,7 +33,7 @@ After you create a [UI page](ui-pages.md), add it to the scene as a component on
 
 > ![Disable UI component](media/disable-UI-component.png)
 
-> Remember to enable the component again before you run the game. If you don't, Xenko doesn't display the UI.
+> Remember to enable the component again before you run the game. If you don't, Stride doesn't display the UI.
 
 ### Assign a UI page to a UI page component in code
 
@@ -80,16 +80,16 @@ public void InitializeUI()
 | Resolution         | The UI resolution in pixels
 | Size               | Gets or sets the actual size of the UI component in world units
 | Resolution stretch | How the virtual resolution value should be used (`FixedWithFixedHeight`, `FixedWithAdaptableHeight`, or `FixedHeightAdaptableWidth`)
-| Billboard          | If selected, the UI always faces the camera. **Note:** Disabling billboard mode causes UI text errors in the current version of Xenko
+| Billboard          | If selected, the UI always faces the camera. **Note:** Disabling billboard mode causes UI text errors in the current version of Stride
 | Snap text          | If selected, the UI text is snapped to the closest pixel
-| Fixed size         | Gets or sets the value indicating whether the UI should always be a fixed size on screen (eg a component with a height of 1 will use 0.1 of the screen). **Note:** This feature doesn't work in the current version of Xenko
+| Fixed size         | Gets or sets the value indicating whether the UI should always be a fixed size on screen (eg a component with a height of 1 will use 0.1 of the screen). **Note:** This feature doesn't work in the current version of Stride
 | Render group       | The [render group](../graphics/graphics-compositor/render-groups-and-masks.md) the UI uses
 
 ## UI scripts
 
 To make UIs interactive, you need to add a script. Without scripts, UIs are simply non-interactive images. 
 
-For an example of a UI implemented in Xenko, see the **game menu UI** sample included with Xenko.
+For an example of a UI implemented in Stride, see the **game menu UI** sample included with Stride.
 
 ![Sample UI project](media/ui-sample-project.png)
 

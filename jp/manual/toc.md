@@ -1,14 +1,14 @@
 ﻿
 # [要件](requirements/index.md)
 
-# [Unity® 向け Xenko 開発者](xenko-for-unity-developers/index.md)
+# [Unity® 向け Stride 開発者](stride-for-unity-developers/index.md)
 
-# [Xenko Launcher](xenko-launcher/index.md)
+# [Stride Launcher](stride-launcher/index.md)
 
 # [はじめに](get-started/index.md)
-## [Xenko をインストールする](get-started/install-xenko.md)
+## [Stride をインストールする](get-started/install-stride.md)
 ## [Visual Studio 拡張機能](get-started/visual-studio-extension.md)
-## [Xenko を起動する](get-started/launch-xenko.md)
+## [Stride を起動する](get-started/launch-stride.md)
 ## [プロジェクトを作成する](get-started/create-a-project.md)
 ## [Game Studio](game-studio/index.md)
 ## [アセット](game-studio/assets.md)
@@ -239,7 +239,7 @@
 
 # [トラブルシューティング](troubleshooting/index.md)
 ## [プロファイリング](troubleshooting/profiling.md)
-## [Xenko が実行しない](troubleshooting/xenko-doesnt-run.md)
+## [Stride が実行しない](troubleshooting/stride-doesnt-run.md)
 ## [既定値の変更が実行時に無視される](troubleshooting/default-value-changes-ignored-at-runtime.md)
 ## [ライトがシャドウをキャストしない](troubleshooting/lights-dont-cast-shadows.md)
 ## [完全な呼び出し履歴を使用できない](troubleshooting/full-call-stack-not-available.md)

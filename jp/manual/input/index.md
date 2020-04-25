@@ -7,7 +7,7 @@
 
 ![Input devices](media/input_intro.png)
 
-Xenko は、スクリプトを使用して入力を完全に処理します。さまざまな入力の種類を処理するため、低レベルと高レベルの API があります。
+Stride は、スクリプトを使用して入力を完全に処理します。さまざまな入力の種類を処理するため、低レベルと高レベルの API があります。
 
 * **低レベル**の API はハードウェアに近いので低遅延です。[ポインター](pointers.md)、[キーボード](keyboards.md)、[マウス](mouse.md)、[ゲームパッド](gamepads.md)、一部の[センサー](sensors.md)からの入力を速く処理できます。
 
@@ -17,21 +17,21 @@ Xenko は、スクリプトを使用して入力を完全に処理します。�
 
 ## 入力を処理する
 
-入力は [InputManager](xref:Xenko.Input.InputManager) クラスで処理します。このクラスには、スクリプトからプロパティとメソッドを使用してアクセスできます。
+入力は [InputManager](xref:Stride.Input.InputManager) クラスで処理します。このクラスには、スクリプトからプロパティとメソッドを使用してアクセスできます。
 
-特定の入力デバイスが使用できるかどうかを調べるには、対応する @'Xenko.Input.InputManager' プロパティを使用します。たとえば、マウスが接続されているかどうかを調べるには、[Input.HasMouse](xref:Xenko.Input.InputManager.HasMouse) を使用します。
+特定の入力デバイスが使用できるかどうかを調べるには、対応する @'Stride.Input.InputManager' プロパティを使用します。たとえば、マウスが接続されているかどうかを調べるには、[Input.HasMouse](xref:Stride.Input.InputManager.HasMouse) を使用します。
 
-デバイスの使用可能性を調べた後、Xenko で入力を処理するには 4 つの方法があります。
+デバイスの使用可能性を調べた後、Stride で入力を処理するには 4 つの方法があります。
 
 ### 状態を問い合わせる
 
-デジタル キーやボタンの状態 (_アップ_または_ダウン_) およびアナログ ボタンやセンサーの数値を問い合わせることができます。たとえば、@'Xenko.Input.InputManager.DownKeys' は、最後の更新で_ダウン_状態であったキーのリストを取得します。
+デジタル キーやボタンの状態 (_アップ_または_ダウン_) およびアナログ ボタンやセンサーの数値を問い合わせることができます。たとえば、@'Stride.Input.InputManager.DownKeys' は、最後の更新で_ダウン_状態であったキーのリストを取得します。
 
 ![Query key and button states](media/index-state-one-action-between-updates.png)
 
 ![Analog stick positions](media/index-state-analog-stick-position.png)
 
-更新の間にユーザーが複数のアクションを実行する場合があります。更新の間に状態の変化がなかった場合 (最終結果が同じ)、Xenko はアクションを登録しません。
+更新の間にユーザーが複数のアクションを実行する場合があります。更新の間に状態の変化がなかった場合 (最終結果が同じ)、Stride はアクションを登録しません。
 
 ![Several actions between updates](media/index-state-several-actions-between-updates.png)
 
@@ -48,7 +48,7 @@ Xenko は、スクリプトを使用して入力を完全に処理します。�
 
     ![Mouse wheel delta](media/index-state-change-mouse-wheel-scroll.png)
 
-2 つの更新の間に、ユーザーが複数のアクションを実行している場合があります。2 つの更新の間に状態の変化がなかった場合 (最終結果が同じ)、Xenko はアクションを登録しません。
+2 つの更新の間に、ユーザーが複数のアクションを実行している場合があります。2 つの更新の間に状態の変化がなかった場合 (最終結果が同じ)、Stride はアクションを登録しません。
 
 ### イベントのリストを問い合わせる
 
@@ -57,7 +57,7 @@ Xenko は、スクリプトを使用して入力を完全に処理します。�
 ![Several actions between updates](media/index-events-list-several-actions-between-updates.png)
 
 > [!NOTE]
-> 2 つの更新の間にユーザーが複数のアクションを実行した場合でも、Xenko はそのすべてのイベントを登録します。
+> 2 つの更新の間にユーザーが複数のアクションを実行した場合でも、Stride はそのすべてのイベントを登録します。
 
 ### 仮想ボタンを使用する
 

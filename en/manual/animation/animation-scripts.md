@@ -5,18 +5,18 @@
 
 Animations are controlled using scripts. 
 
-You can add an [AnimationComponent](xref:Xenko.Engine.AnimationComponent) to an entity and [set up its parameters](set-up-animations.md) in Game Studio. The [AnimationComponent](xref:Xenko.Engine.AnimationComponent) class is designed to be used mainly from a script. 
+You can add an [AnimationComponent](xref:Stride.Engine.AnimationComponent) to an entity and [set up its parameters](set-up-animations.md) in Game Studio. The [AnimationComponent](xref:Stride.Engine.AnimationComponent) class is designed to be used mainly from a script. 
 
 The more useful properties include:
 
 | Property | Description
 | -------- | -----------
-| [Animations](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_Animations) | Gets the animation clips associated with this [AnimationComponent](xref:Xenko.Engine.AnimationComponent)
-| [BlendTreeBuilder](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md)
-| [PlayingAnimations](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation
+| [Animations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_Animations) | Gets the animation clips associated with this [AnimationComponent](xref:Stride.Engine.AnimationComponent)
+| [BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md)
+| [PlayingAnimations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation
 
 >[!Note]
->Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:Xenko.Engine.AnimationComponent).
+>Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:Stride.Engine.AnimationComponent).
 
 >![Animations added to component](media/animations-added-to-component.png)
 
@@ -24,7 +24,7 @@ The more useful properties include:
 
 ## Use the pre-built **AnimationStart** script
 
-Xenko includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation scripts.
+Stride includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation scripts.
 
 To use the **AnimationStart** script:
 
@@ -49,7 +49,7 @@ To use the **AnimationStart** script:
 This sample script assigns a simple animation to a character based on its walking speed.
 
 ```cs
-using Xenko.Engine;
+using Stride.Engine;
 
 namespace AdditiveAnimation
 {

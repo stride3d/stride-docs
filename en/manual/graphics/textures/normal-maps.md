@@ -17,7 +17,7 @@
 
 *(Images courtesy of Paolo Cignoni, shared under [Attribution-ShareAlike 1.0 Generic (CC BY-SA 1.0)](https://creativecommons.org/licenses/by-sa/1.0/)*
 
-Normal maps usually represent small changes of the normal vector (the vector which points away from the surface). Xenko uses the most common convention: the X and Y components follow the tangent and the bitangent of the surface, and the Z component follows the normal vector of the surface. This means that a value of `(0, 0, 1)` coincides with the normal vector and represents no change, while a value of `(-1, 0, 0)` tilts to the "left" (ie negative X value in the tangent (local) space).
+Normal maps usually represent small changes of the normal vector (the vector which points away from the surface). Stride uses the most common convention: the X and Y components follow the tangent and the bitangent of the surface, and the Z component follows the normal vector of the surface. This means that a value of `(0, 0, 1)` coincides with the normal vector and represents no change, while a value of `(-1, 0, 0)` tilts to the "left" (ie negative X value in the tangent (local) space).
 
 ![media/material-attributes-13.png](../materials/media/material-attributes-13.png) 
 
@@ -31,7 +31,7 @@ Normal maps usually represent small changes of the normal vector (the vector whi
 
     ![Normal map](media/normal-map-expanded-properties.png)
 
-    This means Xenko assumes the texture is in linear color space and converts it to a format suited for normal maps.
+    This means Stride assumes the texture is in linear color space and converts it to a format suited for normal maps.
 
 3. In the **Asset View**, select the material you want to use the normal map.
 

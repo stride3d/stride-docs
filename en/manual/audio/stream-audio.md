@@ -4,11 +4,11 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-By default, Xenko plays audio directly from memory. This is useful for short sound effects such as gunshots or footsteps.
+By default, Stride plays audio directly from memory. This is useful for short sound effects such as gunshots or footsteps.
 
 ![Non-streamed audio](media/audio-index-non-streamed-audio.png)
 
-Alternatively, Xenko can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Xenko plays it while buffering the following sequences in parallel. This saves a lot of memory when used for larger audio files such as background music and character dialogue.
+Alternatively, Stride can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Stride plays it while buffering the following sequences in parallel. This saves a lot of memory when used for larger audio files such as background music and character dialogue.
 
 > [!Note] 
 Streaming audio increases latency unless you preload it with the ReadyToPlay task (see below).

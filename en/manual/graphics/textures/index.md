@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Textures** are images mainly used in [materials](../materials/index.md). Xenko maps textures to the surfaces the material covers.
+**Textures** are images mainly used in [materials](../materials/index.md). Stride maps textures to the surfaces the material covers.
 
 Textures can add color information to a material — for example, to add a brick pattern to a wall or a wood pattern to a table. The values of the pixels in a texture (**texels**) can also be used for other calculations, such as in specular maps, metalness maps, or [normal maps](normal-maps.md). 
 
@@ -28,8 +28,8 @@ You can use the following file types as textures:
 * `.tiff`
 
 > [!Note]
-> * Xenko only imports the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Xenko; they appear as static images.
-> * Xenko currently doesn't support movie files.
+> * Stride only imports the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Stride; they appear as static images.
+> * Stride currently doesn't support movie files.
 
 ## Add a texture
 

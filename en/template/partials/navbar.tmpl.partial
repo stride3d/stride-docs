@@ -1,11 +1,11 @@
   <div id="x_wrap">
-    <div id="xk-header">
+    <div id="stride-header">
       
 
 <!-- Static navbar -->
   <div id="x_head_openBG"></div>
   <div id="x_head">
-    <h1><a href="//xenko.com">Xenko</a></h1>
+    <h1><a href="//stride3d.net">Stride</a></h1>
     <div id="x_menuButton"><span>OPEN / CLOSE</span></div>
     <div id="x_head_container">
         
@@ -19,15 +19,15 @@
             </ul>
             -->
              <ul class="x_menu">
-                <li><a href="//xenko.com/features">Features</a></li>
-                <li><a href="//xenko.com/blog">Blog</a></li>
+                <li><a href="//stride3d.net/features">Features</a></li>
+                <li><a href="//stride3d.net/blog">Blog</a></li>
                 <li class="active"><a href="{{_rel}}.">Documentation</a></li>
-                <li><a href="//xenko.com/community">Community</a></li>
+                <li><a href="//stride3d.net/community">Community</a></li>
             </ul>
 
       <div id="x_head_subContainer">
 
-    <a class="x_download" href="//xenko.com/download" target="_self"><span>(icon)</span> Download</a>
+    <a class="x_download" href="//stride3d.net/download" target="_self"><span>(icon)</span> Download</a>
 
     <h3 class="x_search_title"></h3>
     <div class="x_search">
@@ -40,9 +40,9 @@
     
     <ul class="x_sns">
           <li class="discord"><a href="https://discord.gg/f6aerfE" target="_blank" title="Discord">Discord</a></li>
-          <li class="facebook"><a href="https://www.facebook.com/xenko3d" target="_blank" title="Facebook">Facebook</a></li>
-          <li class="twitter"><a href="https://twitter.com/xenko3d" target="_blank" title="Twitter">Twitter</a></li>
-          <li class="youtube"><a href="https://www.youtube.com/channel/UCfP5ubydYEslNRtacmZBjuQ" target="_blank" title="YouTube">YouTube</a></li>
+          <li class="facebook"><a href="https://www.facebook.com/stride3d" target="_blank" title="Facebook">Facebook</a></li>
+          <li class="twitter"><a href="https://twitter.com/stridedotnet" target="_blank" title="Twitter">Twitter</a></li>
+          <li class="youtube"><a href="https://www.youtube.com/c/Stride3D" target="_blank" title="YouTube">YouTube</a></li>
         </ul>
         <div class="x_lang" onclick="toggleLangDropDown()">
           <p>LANGUAGE</p>

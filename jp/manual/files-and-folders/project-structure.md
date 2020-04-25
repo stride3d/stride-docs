@@ -1,8 +1,8 @@
 # プロジェクトの構造
 
-Xenko では、プロジェクトは [Visual Studio ソリューション ファイル](https://msdn.microsoft.com/ja-jp/library/bb165951.aspx?f=255&MSPPError=-2147217396)として保存されます。Xenko Game Studio や、Visual Studio などの任意の IDE で、プロジェクトを開くことができます。
+Stride では、プロジェクトは [Visual Studio ソリューション ファイル](https://msdn.microsoft.com/ja-jp/library/bb165951.aspx?f=255&MSPPError=-2147217396)として保存されます。Stride Game Studio や、Visual Studio などの任意の IDE で、プロジェクトを開くことができます。
 
-Xenko では、プロジェクト ファイルは**パッケージ**にまとめられます。各パッケージは、複数のフォルダーと、パッケージについて記述されている *.xkpkg ファイルで構成されます。
+Stride では、プロジェクト ファイルは**パッケージ**にまとめられます。各パッケージは、複数のフォルダーと、パッケージについて記述されている *.sdpkg ファイルで構成されます。
 
 プロジェクトは、1 つまたは複数のパッケージを含むことができます。パッケージはプロジェクト間で共有できます。
 

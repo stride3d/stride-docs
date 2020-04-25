@@ -2,30 +2,30 @@
 
 ## Create shaders in C&#35;
 
-You can create a shader at runtime with @'Xenko.Shaders.ShaderSource' objects. Shaders come in three types:
+You can create a shader at runtime with @'Stride.Shaders.ShaderSource' objects. Shaders come in three types:
 
-- @'Xenko.Shaders.ShaderClassSource' correspond to a unique shader class
-- @'Xenko.Shaders.ShaderMixinSource' mix several @'Xenko.Shaders.ShaderSource', set preprocessor values, define compositions
-- @'Xenko.Shaders.ShaderArraySource' are used for arrays of compositions
+- @'Stride.Shaders.ShaderClassSource' correspond to a unique shader class
+- @'Stride.Shaders.ShaderMixinSource' mix several @'Stride.Shaders.ShaderSource', set preprocessor values, define compositions
+- @'Stride.Shaders.ShaderArraySource' are used for arrays of compositions
 
 This method produces shaders at runtime. However, many platforms don't support HLSL and have no ability to compile shaders at runtime. Additionally, the approach doesn't benefit from the reusability of mixins.
 
-## Xenko Effects (XKFX)
+## Stride Effects (XKFX)
 
 Many shaders are variations or combinations of pre-existing shaders. For example, some meshes cast shadows, others receive them, and others need skinning. To reuse code, it's a good idea to select which parts to use through conditions (eg "Skinning required"). This is often solved by "uber shaders": monolithic shaders configured by a set of preprocessor parameters.
 
-Xenko offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by shader classes can be mixed together by a shader mixer. This process can use more complex logic, described in Xenko Effect (*.xkfx) files.
+Stride offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by shader classes can be mixed together by a shader mixer. This process can use more complex logic, described in Stride Effect (*.sdfx) files.
 
 ### General syntax
 
-An .xkfx file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produces a `ShaderMixinSource` ready to be compiled.
+An .sdfx file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produces a `ShaderMixinSource` ready to be compiled.
 
-An example .xkfx file:
+An example .sdfx file:
 
 ```cs
-using Xenko.Effects.Data;
+using Stride.Effects.Data;
 
-namespace XenkoEffects
+namespace StrideEffects
 {
 	params MyParameters
 	{

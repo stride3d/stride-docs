@@ -1,6 +1,6 @@
 # Pipeline states
 
-Xenko gives you total control over the graphics pipeline state. This includes:
+Stride gives you total control over the graphics pipeline state. This includes:
 
 - rasterizer state
 - depth and stencil state
@@ -9,7 +9,7 @@ Xenko gives you total control over the graphics pipeline state. This includes:
 - input layout
 - output description
 
-State is compiled into immutable @'Xenko.Graphics.PipelineState' objects, which describe the whole pipeline. They are then bound using a @'Xenko.Graphics.CommandList'.
+State is compiled into immutable @'Stride.Graphics.PipelineState' objects, which describe the whole pipeline. They are then bound using a @'Stride.Graphics.CommandList'.
 
 **Code:** Create state objects
 
@@ -22,7 +22,7 @@ var pipelineState = PipelineState.New(GraphicsDevice, ref pipelineStateDescripti
 CommandList.SetPipelineState(pipelineState);
 ```
 
-The @'Xenko.Graphics.MutablePipelineState' class let you set states independently, while caching the underlying pipeline states.
+The @'Stride.Graphics.MutablePipelineState' class let you set states independently, while caching the underlying pipeline states.
 
 **Code:** Mutable pipeline state
 
@@ -40,11 +40,11 @@ CommandList.SetPipelineState(mutablePipelineState.CurrentState);
 
 # Rasterizer state
 
-The rasterizer can be set using the @'Xenko.Graphics.PipelineStateDescription.RasterizerState' property. A set of predefined descriptions is held by the @'Xenko.Graphics.RasterizerStates' class. They deal with the cull mode, and should be enough for most use cases:
+The rasterizer can be set using the @'Stride.Graphics.PipelineStateDescription.RasterizerState' property. A set of predefined descriptions is held by the @'Stride.Graphics.RasterizerStates' class. They deal with the cull mode, and should be enough for most use cases:
 
-- @'Xenko.Graphics.RasterizerStates.CullNone': no culling
-- @'Xenko.Graphics.RasterizerStates.CullFront': front-face culling
-- @'Xenko.Graphics.RasterizerStates.CullBack': back-face culling
+- @'Stride.Graphics.RasterizerStates.CullNone': no culling
+- @'Stride.Graphics.RasterizerStates.CullFront': front-face culling
+- @'Stride.Graphics.RasterizerStates.CullBack': back-face culling
 
 **Code:** Set the cull mode
 
@@ -54,7 +54,7 @@ pipelineStateDescription.RasterizerState = RasterizerStates.CullFront;
 pipelineStateDescription.RasterizerState = RasterizerStates.CullBack;
 ```
 
-You can create your own custom state. For the list of options and default values, see the @'Xenko.Graphics.RasterizerStateDescription' API documentation.
+You can create your own custom state. For the list of options and default values, see the @'Stride.Graphics.RasterizerStateDescription' API documentation.
 
 **Code:** Custom rasterizer states
 
@@ -66,12 +66,12 @@ pipelineStateDescription.RasterizerState = rasterizerStateDescription;
 
 # Depth and stencil states
 
-The @'Xenko.Graphics.PipelineStateDescription.DepthStencilState' property contains the depth and stencil states. A set of commonly used states is defined by the @'Xenko.Graphics.DepthStencilStates' class:
+The @'Stride.Graphics.PipelineStateDescription.DepthStencilState' property contains the depth and stencil states. A set of commonly used states is defined by the @'Stride.Graphics.DepthStencilStates' class:
 
-- @'Xenko.Graphics.DepthStencilStates.Default': depth read and write with a less-than comparison
-- @'Xenko.Graphics.DepthStencilStates.DefaultInverse': read and write with a greater-or-equals comparison
-- @'Xenko.Graphics.DepthStencilStates.DepthRead': read only with a less-than comparison
-- @'Xenko.Graphics.DepthStencilStates.None': neither read nor write
+- @'Stride.Graphics.DepthStencilStates.Default': depth read and write with a less-than comparison
+- @'Stride.Graphics.DepthStencilStates.DefaultInverse': read and write with a greater-or-equals comparison
+- @'Stride.Graphics.DepthStencilStates.DepthRead': read only with a less-than comparison
+- @'Stride.Graphics.DepthStencilStates.None': neither read nor write
 
 **Code:** Setting the depth state
 
@@ -82,7 +82,7 @@ pipelineStateDescription.DepthStencilState = DepthStencilStates.DepthRead;
 pipelineStateDescription.DepthStencilState = DepthStencilStates.None;
 ```
 
-You can also set custom depth and stencil states. For the  list of options and default values, see the @'Xenko.Graphics.DepthStencilStateDescription' API documentation.
+You can also set custom depth and stencil states. For the  list of options and default values, see the @'Stride.Graphics.DepthStencilStateDescription' API documentation.
 
 **Code:** Custom depth and stencil state
 
@@ -92,7 +92,7 @@ var depthStencilStateDescription = new DepthStencilStateDescription(true, false)
 pipelineStateDescription.DepthStencilState = depthStencilStateDescription;
 ```
 
-The stencil reference isn't part of the @'Xenko.Graphics.PipelineState'. It's set using @'Xenko.Graphics.CommandList.SetStencilReference(System.Int32)'.
+The stencil reference isn't part of the @'Stride.Graphics.PipelineState'. It's set using @'Stride.Graphics.CommandList.SetStencilReference(System.Int32)'.
 
 **Code:** Set the stencil reference
 
@@ -103,12 +103,12 @@ CommandList.SetStencilReference(2);
 
 # Blend state
 
-The @'Xenko.Graphics.PipelineStateDescription.BlendState' and @'Xenko.Graphics.PipelineStateDescription.SampleMask' properties control blending. The @'Xenko.Graphics.BlendStates' class defines a set of commonly used blend states:
+The @'Stride.Graphics.PipelineStateDescription.BlendState' and @'Stride.Graphics.PipelineStateDescription.SampleMask' properties control blending. The @'Stride.Graphics.BlendStates' class defines a set of commonly used blend states:
 
-- @'Xenko.Graphics.BlendStates.Additive': sums the colors 
-- @'Xenko.Graphics.BlendStates.AlphaBlend': sums the colors using the alpha of the source on the destination color
-- @'Xenko.Graphics.BlendStates.NonPremultiplied': sums using the alpha of the source on both colors
-- @'Xenko.Graphics.BlendStates.Opaque': replaces the color
+- @'Stride.Graphics.BlendStates.Additive': sums the colors 
+- @'Stride.Graphics.BlendStates.AlphaBlend': sums the colors using the alpha of the source on the destination color
+- @'Stride.Graphics.BlendStates.NonPremultiplied': sums using the alpha of the source on both colors
+- @'Stride.Graphics.BlendStates.Opaque': replaces the color
 
 **Code:** Set the blend state
 
@@ -123,7 +123,7 @@ pipelineStateDescription.BlendState = BlendStates.Opaque;
 pipelineStateDescription.SampleMask = 0xFFFFFFFF;
 ```
 
-You can set custom depth and blend states. For a list of options and default values, see the @'Xenko.Graphics.BlendStateDescription' API documentation.
+You can set custom depth and blend states. For a list of options and default values, see the @'Stride.Graphics.BlendStateDescription' API documentation.
 
 **Code:** Custom blend state
 
@@ -141,7 +141,7 @@ blendStateDescription.RenderTargets[0] = blendStateRenderTargetDescription;
 pipelineStateDescription.BlendState = blendStateDescription;
 ```
 
-The blend factor isn't part of the @'Xenko.Graphics.PipelineState'. It's set using @'Xenko.Graphics.CommandList.SetBlendFactor(Xenko.Core.Mathematics.Color4)'.
+The blend factor isn't part of the @'Stride.Graphics.PipelineState'. It's set using @'Stride.Graphics.CommandList.SetBlendFactor(Stride.Core.Mathematics.Color4)'.
 
 **Code:** Set the blend factor
 
@@ -152,12 +152,12 @@ CommandList.SetBlendFactor(Color4.White);
 ## Effects
 
 The pipeline state also includes the shaders you want to use for drawing.
-To bind an @'Xenko.Graphics.Effect' to the pipeline, set the @'Xenko.Graphics.PipelineStateDescription.EffectBytecode'
-and @'Xenko.Graphics.PipelineStateDescription.RootSignature' properties of the @'Xenko.Graphics.PipelineStateDescription' to the matching values of the effect.
+To bind an @'Stride.Graphics.Effect' to the pipeline, set the @'Stride.Graphics.PipelineStateDescription.EffectBytecode'
+and @'Stride.Graphics.PipelineStateDescription.RootSignature' properties of the @'Stride.Graphics.PipelineStateDescription' to the matching values of the effect.
 
-An @'Xenko.Shaders.EffectBytecode' contains the actual shader programs. For more information, see [Effects and Shaders](../effects-and-shaders/index.md).
+An @'Stride.Shaders.EffectBytecode' contains the actual shader programs. For more information, see [Effects and Shaders](../effects-and-shaders/index.md).
 
-The @'Xenko.Graphics.RootSignature' describes the number and kind of resources expected by the effect. The next chapter covers how to [bind resources](resources.md) to the pipeline.
+The @'Stride.Graphics.RootSignature' describes the number and kind of resources expected by the effect. The next chapter covers how to [bind resources](resources.md) to the pipeline.
 
 **Code:** Bind an effect
 
@@ -169,9 +169,9 @@ pipelineStateDescription.RootSignature = effectInstance.RootSignature;
 
 ## Input layout
 
-The pipeline state describes the layout in which vertices are sent to the device through the @'Xenko.Graphics.PipelineStateDescription.InputElements' and @'Xenko.Graphics.PipelineStateDescription.PrimitiveType' properties.
+The pipeline state describes the layout in which vertices are sent to the device through the @'Stride.Graphics.PipelineStateDescription.InputElements' and @'Stride.Graphics.PipelineStateDescription.PrimitiveType' properties.
 
-The [Draw vertices](draw-vertices.md) page describes how to create custom vertex buffers and their @'Xenko.Graphics.VertexDeclaration' in more detail.
+The [Draw vertices](draw-vertices.md) page describes how to create custom vertex buffers and their @'Stride.Graphics.VertexDeclaration' in more detail.
 
 **Code:** Set an input layout
 
@@ -183,7 +183,7 @@ pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 
 ## Output description
 
-The @'Xenko.Graphics.PipelineStateDescription.Output' property of the @'Xenko.Graphics.PipelineStateDescription' defines the number and @'Xenko.Graphics.PixelFormat' of all bound render textures.
+The @'Stride.Graphics.PipelineStateDescription.Output' property of the @'Stride.Graphics.PipelineStateDescription' defines the number and @'Stride.Graphics.PixelFormat' of all bound render textures.
 
 For information on how to bind render textures to the pipeline, see [Textures and render textures](textures-and-render-textures.md).
 
@@ -194,7 +194,7 @@ var renderOutputDescription = new RenderOutputDescription(GraphicsDevice.Present
 pipelineStateDescription.Output = renderOutputDescription;
 ```
 
-You can use the @'Xenko.Graphics.RenderOutputDescription.CaptureState(Xenko.Graphics.CommandList)' to retrieve the output description last set on a @'Xenko.Graphics.CommandList'. This is especially useful in combination with @'Xenko.Graphics.MutablePipelineState', when the render target might not be known up front.
+You can use the @'Stride.Graphics.RenderOutputDescription.CaptureState(Stride.Graphics.CommandList)' to retrieve the output description last set on a @'Stride.Graphics.CommandList'. This is especially useful in combination with @'Stride.Graphics.MutablePipelineState', when the render target might not be known up front.
 
 **Code:** Capture output description
 

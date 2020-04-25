@@ -1,5 +1,5 @@
 # C# Beginner
-These tutorials cover the beginner principles of using C# when working with the Xenko game engine. Start here if you are new to Xenko or progamming. Althoug having some coding experience is useful, it is not mandatory to get started with these tutorials. You can create the C# beginner tutorial project by starting the Xenko launcher. Create a new project and select the template: Tutorials -> C# beginner. Every single scene is loaded as a child scene and demonstrates a sample script. 
+These tutorials cover the beginner principles of using C# when working with the Stride game engine. Start here if you are new to Stride or programming. Although having some coding experience is useful, it is not mandatory to get started with these tutorials. You can create the C# beginner tutorial project by starting the Stride launcher. Create a new project and select the template: Tutorials -> C# beginner. Every single scene is loaded as a child scene and demonstrates a sample script. 
 
 ![Editor properties](media/csharp_beginner_tutorial_template.jpg)
 
@@ -9,7 +9,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Getting the Entity</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Getting the Entity tutorial](media/getting-the-entity_thumb.png "Getting the Entity") 
     </div>
     <div class='tutorial_description'>
@@ -28,7 +28,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Child entities</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Child entities tutorial](media/child-entities_thumb.png "Child entities") 
     </div>
     <div class='tutorial_description'>
@@ -46,7 +46,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>The transform</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![The transform tutorial](media/transform-position_thumb.png "The transform") 
     </div>
     <div class='tutorial_description'>
@@ -65,7 +65,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Editor properties</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Editor properties tutorial](media/editor-properties_thumb.png "Editor properties")  
     </div>
     <div class='tutorial_description'>
@@ -83,7 +83,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Getting a component</h2>
     </div>
-    <div class='xk-documentation-image'>   
+    <div class='stride-documentation-image'>   
         ![Get a component tutorial](media/getting-a-component_thumb.png "Get a component")
     </div>
     <div class='tutorial_description'>
@@ -101,7 +101,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Adding a component</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Add a component tutorial](media/adding-a-component_thumb.png "Add a component")
     </div>
     <div class='tutorial_description'>
@@ -120,7 +120,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Delta time</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Delta time tutorial](media/deltatime_thumb.png "Delta time")
     </div>
     <div class='tutorial_description'>
@@ -138,7 +138,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Cloning an entity</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Cloning an entity tutorial](media/cloning-entities_thumb.png "Cloning an entity")
     </div>
     <div class='tutorial_description'>
@@ -156,7 +156,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Removing an entity</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Removing an entity tutorial](media/removing-entity_thumb.png "Removing an entity")   
     </div>
     <div class='tutorial_description'>
@@ -175,7 +175,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Keyboard input</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Keyboard input tutorial](media/keyboard-input_thumb.png "Keyboard input tutorial") 
     </div>
     <div class='tutorial_description'>
@@ -193,13 +193,13 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Mouse input</h2>
     </div>
-    <div class='xk-documentation-image'> 
+    <div class='stride-documentation-image'> 
         ![Mouse input tutorial](media/mouse-input_thumb.png "Mouse input tutorial")
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Holding down a mousebutton</li> 
-            <li>Clicking or releasing a mousebutton</li> 
+            <li>Holding down a mouse button</li> 
+            <li>Clicking or releasing a mouse button</li> 
             
             <li>Using the mouse wheel </li> 
         </ul>
@@ -212,7 +212,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_title'>
        <h2>Virtual buttons</h2>
     </div>
-    <div class='xk-documentation-image'>
+    <div class='stride-documentation-image'>
         ![Virtual buttons tutorial](media/virtual-buttons_thumb.png "Virtual buttons tutorial")
     </div>
     <div class='tutorial_description'>
@@ -224,4 +224,60 @@ These tutorials cover the beginner principles of using C# when working with the 
     </div>
     ](virtual-buttons.md) 
 </div>
+
+
+<div class='tutorial'> 
+    [
+    <div class='tutorial_title'>
+       <h2>Linear Interpolation</h2>
+    </div>
+    <div class='stride-documentation-image'>
+        ![Linear Interpolation tutorial](media/lerp_thumb.png "Linear Interpolation tutorial") 
+    </div>
+    <div class='tutorial_description'>
+        <ul>
+            <li>Calculating 'lerp' value</li> 
+            <li>Lerp between vector 3</li> 
+            <li>Random values</li> 
+        </ul>
+    </div>
+    ](linear-interpolation.md) 
+</div>
+
+<div class='tutorial'> 
+    [
+    <div class='tutorial_title'>
+       <h2>Loading content</h2>
+    </div>
+    <div class='stride-documentation-image'>
+        ![Loading content tutorial](media/loading-content_thumb.png "Loading content tutorial") 
+    </div>
+    <div class='tutorial_description'>
+        <ul>
+            <li>Loading content from code</li> 
+            <li>Unloading content</li> 
+            <li>Attach models to entities</li> 
+        </ul>
+    </div>
+    ](loading-content.md) 
+</div>
+
+<div class='tutorial'> 
+    [
+    <div class='tutorial_title'>
+       <h2>Instantiating prefabs</h2>
+    </div>
+    <div class='stride-documentation-image'>
+        ![Instantiating prefabs tutorial](media/instantiating-prefabs_thumb.png "Instantiating prefabs tutorial") 
+    </div>
+    <div class='tutorial_description'>
+        <ul>
+            <li>Instantiate prefab</li> 
+            <li>Load prefab from content</li> 
+            <li>Parent prefab entity</li> 
+        </ul>
+    </div>
+    ](instantiating-prefabs.md) 
+</div>
+
 

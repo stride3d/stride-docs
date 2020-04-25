@@ -26,10 +26,10 @@ public class SampleSyncScript : StartupScript
 
 Game Studio shows the `DelayTimeOut` property in the script component properties:
 
-![Public property appears in the Property Grid](media/scripts-in-xenko-change-value-public-property.png)
+![Public property appears in the Property Grid](media/scripts-in-stride-change-value-public-property.png)
 
 >[!Note]
->As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Xenko runtime API.
+>As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
 
 >For example, the following code will create problems, as it tries to access `Entity.Components`, which is only available at runtime:
 
@@ -56,7 +56,7 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 If you don't want Game Studio to show a property in the Property Grid, you can:
 
 * declare your member internal or private, or
-* use the [DataMemberIgnore](xref:Xenko.Core.DataMemberIgnoreAttribute) attribute like this:
+* use the [DataMemberIgnore](xref:Stride.Core.DataMemberIgnoreAttribute) attribute like this:
 
 ```cs
 
@@ -68,7 +68,7 @@ If you don't want Game Studio to show a property in the Property Grid, you can:
 
 Game Studio no longer shows the property:
 
-![Public property been hidden with ```[DataMemberIgnore]```](media/scripts-in-xenko-public-property-with-datamemberignore.png)
+![Public property been hidden with ```[DataMemberIgnore]```](media/scripts-in-stride-public-property-with-datamemberignore.png)
 
 ## See also
 

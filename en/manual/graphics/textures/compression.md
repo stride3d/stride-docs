@@ -10,7 +10,7 @@
 
 For color textures, compression is best used for visually busy images, where the effects are less noticeable. You probably don't want to compress textures with fine edges, such as logos used in [splash screens](../../game-studio/splash-screen.md).
 
-Compression converts the texture to a multiple of 4. If the texture isn't already a multiple of 4, Xenko expands it.
+Compression converts the texture to a multiple of 4. If the texture isn't already a multiple of 4, Stride expands it.
 
 Compression removes data from the image based on the texture type:
 

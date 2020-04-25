@@ -12,7 +12,7 @@ For example, imagine your game has a "Game Over" state that occurs when the play
 
 ## Create and broadcast an event
 
-Broadcasters in the Xenko API are of type [EventKey](xref:Xenko.Engine.Events.EventKey) or [EventKey&lt;T>](xref:Xenko.Engine.Events.EventKey`1). They use the method [Broadcast](xref:Xenko.Engine.Events.EventKey#Xenko_Engine_Events_EventKey_Broadcast) or [Broadcast(T)](xref:Xenko.Engine.Events.EventKey`1#Xenko_Engine_Events_EventKey_1_Broadcast__0_) to broadcast events to receivers.
+Broadcasters in the Stride API are of type [EventKey](xref:Stride.Engine.Events.EventKey) or [EventKey&lt;T>](xref:Stride.Engine.Events.EventKey`1). They use the method [Broadcast](xref:Stride.Engine.Events.EventKey#Stride_Engine_Events_EventKey_Broadcast) or [Broadcast(T)](xref:Stride.Engine.Events.EventKey`1#Stride_Engine_Events_EventKey_1_Broadcast__0_) to broadcast events to receivers.
 
 For example, this code creates two "Game Over" events. One with a non-generic and the other with a generic version of EventKey:
 
@@ -32,7 +32,7 @@ public static class GlobalEvents
 
 ## Create a receiver
 
-Receivers in the Xenko API are of type [EventReceiver](xref:Xenko.Engine.Events.EventReceiver) or [EventReceiver&lt;T>](xref:Xenko.Engine.Events.EventReceiver`1).
+Receivers in the Stride API are of type [EventReceiver](xref:Stride.Engine.Events.EventReceiver) or [EventReceiver&lt;T>](xref:Stride.Engine.Events.EventReceiver`1).
 
 To receive the "Game Over" events described above, use:
 

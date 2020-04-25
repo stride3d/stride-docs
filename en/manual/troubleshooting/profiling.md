@@ -3,11 +3,11 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can **profile** your project to check its runtime performance and find problems. Use the Xenko **Game Profiler** script or an external profiling tool such as the Performance Profiler in Visual Studio.
+You can **profile** your project to check its runtime performance and find problems. Use the Stride **Game Profiler** script or an external profiling tool such as the Performance Profiler in Visual Studio.
 
 ![Profiling](media/profiling.png)
 
-## Profile with the Xenko **Game Profiler** script
+## Profile with the Stride **Game Profiler** script
 
 The **Game Profiler** script shows how performance costs change at runtime. This helps isolate bottlenecks and find their cause.
 
@@ -142,11 +142,11 @@ Number keys | Jump to a page
     GameProfiler.EnableProfiling(false, {mykey1,mykey2});
     ```
 
-* To access the prolifing key of a script, use [ProfilingKey](xref:Xenko.Engine.ScriptComponent.ProfilingKey).
+* To access the prolifing key of a script, use [ProfilingKey](xref:Stride.Engine.ScriptComponent.ProfilingKey).
 
 ## Use external profiling tools
 
-Instead of using the Xenko Game Profiler, you can use external profiling tools to profile your project.
+Instead of using the Stride Game Profiler, you can use external profiling tools to profile your project.
 
 | Profiler | Type | Platforms
 | ---- | ---- | -----
@@ -200,9 +200,9 @@ RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick
     GameProfiler.EnableProfiling();
     ```
 
-3. Optional: Add a package reference to `Xenko.Graphics.RenderDocPlugin`.
+3. Optional: Add a package reference to `Stride.Graphics.RenderDocPlugin`.
 
-   You can then use the @'Xenko.Graphics.RenderDocManager' class to trigger captures:
+   You can then use the @'Stride.Graphics.RenderDocManager' class to trigger captures:
    
    ```cs
    var renderDocManager = new RenderDocManager();

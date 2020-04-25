@@ -6,7 +6,7 @@
 In this tutorial, we'll create a [trigger](../physics/triggers.md) that doubles the size of a ball when the ball passes through it.
 
 >[!Note]
->The screenshots and videos in this tutorial were made using an earlier version of Xenko, so some parts of the UI, and the default skybox and sphere, might look different from your version.
+>The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
 
 ## 1. Create a bouncing ball
 
@@ -156,10 +156,10 @@ Let's write a script to change the size of the ball when it enters the trigger.
 3. Open the script, replace its content with the following code, and save the file:
 
     ```cs
-    using Xenko.Engine;
-    using Xenko.Physics;
+    using Stride.Engine;
+    using Stride.Physics;
     using System.Threading.Tasks;
-    using Xenko.Core.Mathematics;
+    using Stride.Core.Mathematics;
 
     namespace TransformTrigger
     // You can use any namespace you like for this script.
@@ -225,11 +225,11 @@ You can alter the script to make other changes when the sphere enters the trigge
 For example, you can switch the material on the sphere entity. This script switches the material on the Sphere entity from the **Sphere Material** to the **Ground Material** and back again:
 
 ```cs
-using Xenko.Engine;
-using Xenko.Physics;
+using Stride.Engine;
+using Stride.Physics;
 using System.Threading.Tasks;
-using Xenko.Core.Mathematics;
-using Xenko.Rendering;
+using Stride.Core.Mathematics;
+using Stride.Rendering;
 
 namespace TransformTrigger
 // You can use any namespace you like for this script.

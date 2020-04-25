@@ -1,12 +1,12 @@
 # Virtual reality (VR)
 
-Xenko currently supports the Oculus Rift and Vive virtual reality (VR) devices.
+Stride currently supports the Oculus Rift and Vive virtual reality (VR) devices.
 
 ![Virtual reality](media/virtual-reality.png)
 
 ## VR template
 
-Xenko includes a VR template you can use to check out VR implementation.
+Stride includes a VR template you can use to check out VR implementation.
 
 ![VR template](media/template-virtual-reality.png)
 

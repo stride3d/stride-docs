@@ -13,3 +13,6 @@
 ### [Keyboard input](csharpbeginner/keyboard-input.md) 
 ### [Mouse input](csharpbeginner/mouse-input.md) 
 ### [Virtual buttons](csharpbeginner/virtual-buttons.md)
+### [Linear Interpolation](csharpbeginner/linear-interpolation.md)
+### [Loading content](csharpbeginner/loading-content.md)
+### [Instantiating prefabs](csharpbeginner/instantiating-prefabs.md)

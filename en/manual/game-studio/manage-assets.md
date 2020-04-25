@@ -71,9 +71,9 @@ Assets are contained in the **Assets** folder of your project package. You can s
  
 ## Include assets in the build
 
-By default, Xenko doesn't include every asset when you build the game. This is because you might not need every asset at runtime — for example, if the asset is incomplete.
+By default, Stride doesn't include every asset when you build the game. This is because you might not need every asset at runtime — for example, if the asset is incomplete.
 
-Xenko only includes assets which:
+Stride only includes assets which:
 
 * you've specifically marked for inclusion (**root assets**), or 
 * are **referenced** by a root asset

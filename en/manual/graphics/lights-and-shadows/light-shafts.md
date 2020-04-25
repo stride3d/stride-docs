@@ -10,13 +10,13 @@
    <source src="media/lightshaft_CoS_640.mp4" type="video/mp4">
 </video>
 
-Xenko light shafts are based on [shadow maps](shadows.md) and use raymarching rather than post effects, so they're visible even when the light source isn't. Any light source that casts shadows (ie [point lights](point-lights.md), [directional lights](directional-lights.md) and [spot lights](spot-lights.md)) can cast light shafts.
+Stride light shafts are based on [shadow maps](shadows.md) and use raymarching rather than post effects, so they're visible even when the light source isn't. Any light source that casts shadows (ie [point lights](point-lights.md), [directional lights](directional-lights.md) and [spot lights](spot-lights.md)) can cast light shafts.
 
 To create light shafts, use three components together: **lights**, **light shafts**, and **light shaft bounding volumes**.
 
 ## 1. Enable light shafts in the graphics compositor
 
-By default, Xenko disables light shafts in new projects. To enable them:
+By default, Stride disables light shafts in new projects. To enable them:
 
 1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 

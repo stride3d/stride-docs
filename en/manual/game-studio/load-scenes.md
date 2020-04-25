@@ -55,7 +55,7 @@ Content.Unload(childScene);
 
 ## Scene streaming script
 
-Xenko also includes a scene streaming script that uses a [trigger](../physics/triggers.md) to load scenes. 
+Stride also includes a scene streaming script that uses a [trigger](../physics/triggers.md) to load scenes. 
 
 >[!Note]
 >The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
@@ -70,7 +70,7 @@ Game Studio adds a scene streaming script to your project assets.
 
 ### Use the scene streaming script
 
-1. Create a trigger entity. When this is triggered at runtime, Xenko loads the scene. For more information about creating triggers, see [Triggers](../physics/triggers.md).
+1. Create a trigger entity. When this is triggered at runtime, Stride loads the scene. For more information about creating triggers, see [Triggers](../physics/triggers.md).
 
     How the entity is triggered is defined in the collider properties. For more information, see [Colliders](../physics/colliders.md).
 
@@ -91,7 +91,7 @@ Game Studio adds a scene streaming script to your project assets.
 
 5. Under **Trigger**, specify the entity you created in step 1.
 
-At runtime, when the trigger you created in step 1 is triggered, Xenko loads the scene you specified in step 4.
+At runtime, when the trigger you created in step 1 is triggered, Stride loads the scene you specified in step 4.
 
 ### Scene streaming script properties
 

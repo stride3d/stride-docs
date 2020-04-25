@@ -9,7 +9,7 @@
 * スケルトン
 * アニメーション
 
-これらのアセットは、3D モデル ファイルからインポートできます。Xenko でサポートされているモデル ファイルの種類は、``.3ds``、``.blend``、``.dae``、``.dxf``、``.fbx``、``.md2``、``.md3``、``.obj``、``.x`` です。
+これらのアセットは、3D モデル ファイルからインポートできます。Stride でサポートされているモデル ファイルの種類は、``.3ds``、``.blend``、``.dae``、``.dxf``、``.fbx``、``.md2``、``.md3``、``.obj``、``.x`` です。
 
 ## モデル、スケルトン、アニメーションをモデル ファイルからインポートする
 
@@ -29,7 +29,7 @@
 
     ![Choose asset type](media/create-and-add-assets-choose-asset-type.png)
 
-    *［3D model］を選択した場合、Xenko はモデル ファイル内で見つかった追加のマテリアル、テクスチャ、スケルトンをインポートできます。また、モデルからスケルトンをインポートすること (［Import new skeleton］)、スケルトンをインポートしないこと (［Don't use skeleton］)、または下のフィールドで異なるスケルトンを指定すること (［Use existing skeleton］) もできます。
+    *［3D model］を選択した場合、Stride はモデル ファイル内で見つかった追加のマテリアル、テクスチャ、スケルトンをインポートできます。また、モデルからスケルトンをインポートすること (［Import new skeleton］)、スケルトンをインポートしないこと (［Don't use skeleton］)、または下のフィールドで異なるスケルトンを指定すること (［Use existing skeleton］) もできます。
 
     ![Choose asset type](media/create-and-add-assets-model-import-parameters.png)
 
@@ -49,7 +49,7 @@
 
 ## アニメーション アセットを使用する
 
-アニメーション アセットを使用するには、[AnimationComponent](xref:Xenko.Engine.AnimationComponent) をエンティティに追加した後、アニメーション アセットをアニメーション コンポーネントに追加します。詳細については、「[アニメーションのセットアップ](set-up-animations.md)」を参照してください。
+アニメーション アセットを使用するには、[AnimationComponent](xref:Stride.Engine.AnimationComponent) をエンティティに追加した後、アニメーション アセットをアニメーション コンポーネントに追加します。詳細については、「[アニメーションのセットアップ](set-up-animations.md)」を参照してください。
 
 >[!NOTE]
 >スケルトンにメッシュを正しくスキニングしていることを確認してください。していない場合は、モデルを正しくアニメーション化できません。

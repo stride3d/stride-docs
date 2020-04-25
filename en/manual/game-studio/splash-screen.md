@@ -7,9 +7,9 @@ The **splash screen** is the image (usually a logo) displayed when your game sta
 > [!Note]
 > The splash screen is only displayed when the game is built in release mode.
 
-The default splash screen is the Xenko logo.
+The default splash screen is the Stride logo.
 
-![Default splash screen](media/XenkoDefaultSplashScreen.png)
+![Default splash screen](media/StrideDefaultSplashScreen.png)
 
 You can only specify one splash screen in Game Settings. If you want to add more, you need to implement them manually.
 
@@ -33,7 +33,7 @@ The splash screen settings are part of the **Game settings** asset.
 
 | Property | Description
 |----------|------------
-| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *XenkoDefaultSplashScreen*. 
+| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *StrideDefaultSplashScreen*. 
 | Color    | The color the splash screen fades in on top of. By default, this is black (*#FF000000*).
 
 >[!Tip]

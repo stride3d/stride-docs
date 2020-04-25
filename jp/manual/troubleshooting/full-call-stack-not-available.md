@@ -1,6 +1,6 @@
 # 完全な呼び出し履歴を使用できない
 
-Visual Studio の設定によっては、Xenko で例外がスローされたときに、Visual Studio で Xenko ランタイム .DLL ファイルまたは .NET Framework アセンブリからの呼び出し履歴のみが表示され、ユーザー コードの呼び出し履歴が表示されないことがあります。
+Visual Studio の設定によっては、Stride で例外がスローされたときに、Visual Studio で Stride ランタイム .DLL ファイルまたは .NET Framework アセンブリからの呼び出し履歴のみが表示され、ユーザー コードの呼び出し履歴が表示されないことがあります。
 
 例外がスローされたときにすぐに中断するには、追加の条件を Visual Studio の［例外設定］に追加します。
 

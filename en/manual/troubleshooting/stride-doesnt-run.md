@@ -1,12 +1,12 @@
-# Xenko doesn't run
+# Stride doesn't run
 
-If you're having trouble running Xenko, make sure you've installed all the prerequisites:
+If you're having trouble running Stride, make sure you've installed all the prerequisites:
 
 * .NET Framework 4.6.2
 * Visual C++ Redistributable 2015 or 2017
 * Build Tools for Visual Studio
 
-Alternatively, uninstall Xenko, restart the Xenko installer, and install the prerequisites when prompted.
+Alternatively, uninstall Stride, restart the Stride installer, and install the prerequisites when prompted.
 
 ## .NET Framework 4.6.2
 
@@ -37,4 +37,4 @@ If you don't have Visual Studio installed, you need to install **Build Tools for
 
 ## See also
 
-* [Install Xenko](../get-started/install-xenko.md)
+* [Install Stride](../get-started/install-stride.md)

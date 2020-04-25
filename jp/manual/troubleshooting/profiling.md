@@ -3,13 +3,13 @@
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-プロジェクトを**プロファイリング**して、実行時のパフォーマンスをチェックし、問題を発見できます。Xenko のプロファイラーや、Visual Studio のパフォーマンス プロファイラーなどの外部プロファイリング ツールを使用できます。
+プロジェクトを**プロファイリング**して、実行時のパフォーマンスをチェックし、問題を発見できます。Stride のプロファイラーや、Visual Studio のパフォーマンス プロファイラーなどの外部プロファイリング ツールを使用できます。
 
 ![Profiling](media/profiling.png)
 
-## Xenko のプロファイル
+## Stride のプロファイル
 
-Xenko のプロファイラーは、実行時のパフォーマンス コストの変化を表示します。これは、ボトルネックを特定して根本原因を明らかにするのに役立ちます。
+Stride のプロファイラーは、実行時のパフォーマンス コストの変化を表示します。これは、ボトルネックを特定して根本原因を明らかにするのに役立ちます。
 
 スクリプトをシーンに追加することによって、プロジェクトをプロファイリングできます。
 
@@ -42,7 +42,7 @@ Xenko のプロファイラーは、実行時のパフォーマンス コスト�
     ![Profiler at runtime](media/profiling-profiler-at-runtime.jpg)
 
     >[!NOTE]
-    >プロファイラーが表示するデータの種類を変更できます。詳細については、[Xenko プロファイラー API のドキュメント](xref:Xenko.Core.Diagnostics.Profiler)を参照してください。
+    >プロファイラーが表示するデータの種類を変更できます。詳細については、[Stride プロファイラー API のドキュメント](xref:Stride.Core.Diagnostics.Profiler)を参照してください。
 
 ## 外部プロファイリング ツールを使用する
 

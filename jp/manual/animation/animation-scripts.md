@@ -5,18 +5,18 @@
 
 アニメーションは、スクリプトを使用して制御します。
 
-[AnimationComponent](xref:Xenko.Engine.AnimationComponent) をエンティティに追加し、Game Studio で[そのパラメーターを設定](set-up-animations.md)できます。[AnimationComponent](xref:Xenko.Engine.AnimationComponent) クラスは、主としてスクリプトから使用するように設計されています。
+[AnimationComponent](xref:Stride.Engine.AnimationComponent) をエンティティに追加し、Game Studio で[そのパラメーターを設定](set-up-animations.md)できます。[AnimationComponent](xref:Stride.Engine.AnimationComponent) クラスは、主としてスクリプトから使用するように設計されています。
 
 他にも次のような便利なプロパティがあります。
 
 | プロパティ | 説明
 | -------- | -----------
-| [Animations](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_Animations) | この [AnimationComponent](xref:Xenko.Engine.AnimationComponent) に関連付けられているアニメーション クリップを取得します
-| [BlendTreeBuilder](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_BlendTreeBuilder) | アニメーション ブレンド ツリー ビルダーを取得または設定します。カスタム ブレンド ツリーを作成できることに注意してください。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください
-| [PlayingAnimations](xref:Xenko.Engine.AnimationComponent#Xenko_Engine_AnimationComponent_PlayingAnimations) | アクティブなアニメーションのリストを取得します。それを使用して、スタートアップ アニメーションをカスタマイズします。再生中のアニメーションはアニメーション プロセッサによって自動的に更新されるので、リストを変更するとき、または再生中のアニメーションに対する参照を保持するときは、注意してください
+| [Animations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_Animations) | この [AnimationComponent](xref:Stride.Engine.AnimationComponent) に関連付けられているアニメーション クリップを取得します
+| [BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) | アニメーション ブレンド ツリー ビルダーを取得または設定します。カスタム ブレンド ツリーを作成できることに注意してください。詳細については、「[カスタム ブレンド ツリー](custom-blend-trees.md)」を参照してください
+| [PlayingAnimations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_PlayingAnimations) | アクティブなアニメーションのリストを取得します。それを使用して、スタートアップ アニメーションをカスタマイズします。再生中のアニメーションはアニメーション プロセッサによって自動的に更新されるので、リストを変更するとき、または再生中のアニメーションに対する参照を保持するときは、注意してください
 
 >[!NOTE]
->スクリプトで参照しているアニメーション クリップは、[AnimationComponent](xref:Xenko.Engine.AnimationComponent) の下の同じエンティティに追加する必要があります。
+>スクリプトで参照しているアニメーション クリップは、[AnimationComponent](xref:Stride.Engine.AnimationComponent) の下の同じエンティティに追加する必要があります。
 
 >![Animations added to component](media/animations-added-to-component.png)
 
@@ -24,7 +24,7 @@
 
 ## 作成済みの **AnimationStart** スクリプトを使用する
 
-Xenko にはあらかじめ作成されている **AnimationStart** スクリプトが含まれます。このスクリプトをテンプレートとして使用し、独自のアニメーション スクリプトを作成できます。
+Stride にはあらかじめ作成されている **AnimationStart** スクリプトが含まれます。このスクリプトをテンプレートとして使用し、独自のアニメーション スクリプトを作成できます。
 
 **AnimationStart** スクリプトを使用するには:
 
@@ -49,7 +49,7 @@ Xenko にはあらかじめ作成されている **AnimationStart** スクリプ
 次のサンプル スクリプトは、キャラクターが歩く速さに合わせて簡単なアニメーションを割り当てます。
 
 ```cs
-using Xenko.Engine;
+using Stride.Engine;
 
 namespace AdditiveAnimation
 {

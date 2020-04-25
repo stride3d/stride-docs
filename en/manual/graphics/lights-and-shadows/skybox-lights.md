@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A **skybox light** is an [ambient light](ambient-lights.md) emitted by a [skybox](../textures/skyboxes-and-backgrounds.md). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+A **skybox light** is an [ambient light](ambient-lights.md) emitted by a [skybox](../textures/skyboxes-and-backgrounds.md). Stride analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
@@ -28,7 +28,7 @@ Notice how the skybox texture colors are reflected.
 
 ## Set up a skybox light
 
-To use a skybox as a light, you need to add a skybox asset, then select it in a [Light component](xref:Xenko.Engine.LightComponent).
+To use a skybox as a light, you need to add a skybox asset, then select it in a [Light component](xref:Stride.Engine.LightComponent).
 
 1. In the **Asset View**, click ![Add asset](media/engine-skybox-add-new-asset-button.png)
 
@@ -46,7 +46,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
 4. Select the entity you want to be the skybox light.
 
-5. In the **Property Grid** (on the right by default), click **Add component** and select [Light](xref:Xenko.Engine.LightComponent).
+5. In the **Property Grid** (on the right by default), click **Add component** and select [Light](xref:Stride.Engine.LightComponent).
 
     ![Background component properties](media/skybox-add-light-component.png)
 
@@ -62,11 +62,11 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
 	![Select an asset](media/select-skybox-asset.png)
 
-The [Light component](xref:Xenko.Engine.LightComponent) uses the skybox asset to light the scene.
+The [Light component](xref:Stride.Engine.LightComponent) uses the skybox asset to light the scene.
 
 ## Skybox asset properties
 
-When you use a skybox as a light, Xenko uses it both in compressed form ([spherical harmonics (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) and as a texture to light different kinds of material. You can control the detail of both in the skybox asset properties.
+When you use a skybox as a light, Stride uses it both in compressed form ([spherical harmonics (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) and as a texture to light different kinds of material. You can control the detail of both in the skybox asset properties.
 
 ![Skybox lighting properties](media/skybox-asset-properties.png)
 

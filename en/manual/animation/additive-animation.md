@@ -17,7 +17,7 @@ A **difference clip** describes the difference between two animation clips: a **
 
 Take the *Reload* animation above, which we want to add to other animation clips. This is our **source** clip (S). Because the *Reload* animation mainly involves the arms, it will blend well with animations that don't involve the arms (such as idling and crouching). We can use one of these animations — let's say the *Idle* animation — as our **reference** clip (R).
 
-Xenko calculates the difference between the source and reference clips to create the **difference clip** (D). The difference clip encodes the difference between the source and reference clips. We can express it as D = S - R.
+Stride calculates the difference between the source and reference clips to create the **difference clip** (D). The difference clip encodes the difference between the source and reference clips. We can express it as D = S - R.
 
 We can use use the difference clip to blend the source and reference animations. We can also use the same difference clip to blend the source animation with **other** animations. If the animation you add it to is sufficiently similar to the original reference clip, then the animations blend effectively. For example, you could use it to add the reload animation to any animation that doesn't use the arms, such as crouching.
 
@@ -49,7 +49,7 @@ We can use use the difference clip to blend the source and reference animations.
 
 7. Under **Type**, choose **Difference Clip**.
 
-8. Under **Reference**, specify the animation you want to use as your **reference clip**. This is the animation Xenko references to create a difference clip.
+8. Under **Reference**, specify the animation you want to use as your **reference clip**. This is the animation Stride references to create a difference clip.
 
     ![Choose reference file](media/animations-additive-animations-2.png)
 

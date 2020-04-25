@@ -10,7 +10,7 @@ To deploy your game on iOS devices, you need to connect the device to a Mac with
 
 2. Make sure your iOS device is provisioned. For instructions, see [Device provisioning](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/) in the Xamarin documentation.
 
-3. Make sure the iOS platform is added to your Xenko project. To do this, in Game Studio, right-click the solution, select **Update package > Update Platforms**, and make sure **iOS** is selected.
+3. Make sure the iOS platform is added to your Stride project. To do this, in Game Studio, right-click the solution, select **Update package > Update Platforms**, and make sure **iOS** is selected.
 
     ![Add iOS](media/add-ios-platform.png)
 
@@ -87,7 +87,7 @@ To make redeploying each time faster, make your debug packages as small as possi
 
 ## Compile shaders on iOS
 
-As converting Xenko shaders to OpenGL shaders on iPhone devices is slow, we recommend you convert them remotely (ie in Game Studio).
+As converting Stride shaders to OpenGL shaders on iPhone devices is slow, we recommend you convert them remotely (ie in Game Studio).
 
 Our recommended workflow is:
 

@@ -4,32 +4,32 @@
       "src": [
         {
           "files": [
-            "sources/core/Xenko.Core/Xenko.Core.csproj",
-            "sources/core/Xenko.Core.IO/Xenko.Core.IO.csproj",
-            "sources/core/Xenko.Core.Mathematics/Xenko.Core.Mathematics.csproj",
-            "sources/core/Xenko.Core.MicroThreading/Xenko.Core.MicroThreading.csproj",
-            "sources/core/Xenko.Core.Serialization/Xenko.Core.Serialization.csproj",
-            "sources/assets/Xenko.Core.Assets/Xenko.Core.Assets.csproj",
-            "sources/engine/Xenko/Xenko.csproj",
-            "sources/engine/Xenko.Audio/Xenko.Audio.csproj",
-            "sources/engine/Xenko.Engine/Xenko.Engine.csproj",
-            "sources/engine/Xenko.Games/Xenko.Games.csproj",
-            "sources/engine/Xenko.Graphics/Xenko.Graphics.csproj",
-            "sources/engine/Xenko.Input/Xenko.Input.csproj",
-            "sources/engine/Xenko.Particles/Xenko.Particles.csproj",
-            "sources/engine/Xenko.Physics/Xenko.Physics.csproj",
-            "sources/engine/Xenko.Rendering/Xenko.Rendering.csproj",
-            "sources/engine/Xenko.Shaders/Xenko.Shaders.csproj",
-            "sources/engine/Xenko.UI/Xenko.UI.csproj",
-            "sources/engine/Xenko.VirtualReality/Xenko.VirtualReality.csproj",
-            "sources/engine/Xenko.Navigation/Xenko.Navigation.csproj"
+            "sources/core/Stride.Core/Stride.Core.csproj",
+            "sources/core/Stride.Core.IO/Stride.Core.IO.csproj",
+            "sources/core/Stride.Core.Mathematics/Stride.Core.Mathematics.csproj",
+            "sources/core/Stride.Core.MicroThreading/Stride.Core.MicroThreading.csproj",
+            "sources/core/Stride.Core.Serialization/Stride.Core.Serialization.csproj",
+            "sources/assets/Stride.Core.Assets/Stride.Core.Assets.csproj",
+            "sources/engine/Stride/Stride.csproj",
+            "sources/engine/Stride.Audio/Stride.Audio.csproj",
+            "sources/engine/Stride.Engine/Stride.Engine.csproj",
+            "sources/engine/Stride.Games/Stride.Games.csproj",
+            "sources/engine/Stride.Graphics/Stride.Graphics.csproj",
+            "sources/engine/Stride.Input/Stride.Input.csproj",
+            "sources/engine/Stride.Particles/Stride.Particles.csproj",
+            "sources/engine/Stride.Physics/Stride.Physics.csproj",
+            "sources/engine/Stride.Rendering/Stride.Rendering.csproj",
+            "sources/engine/Stride.Shaders/Stride.Shaders.csproj",
+            "sources/engine/Stride.UI/Stride.UI.csproj",
+            "sources/engine/Stride.VirtualReality/Stride.VirtualReality.csproj",
+            "sources/engine/Stride.Navigation/Stride.Navigation.csproj"
           ],
-          "cwd": "../../xenko",
+          "cwd": "../../stride",
         }
       ],
       "dest": "api",
       "properties": {
-        "XenkoBuildDoc": "true"
+        "StrideBuildDoc": "true"
       }
     }
   ],
@@ -77,7 +77,7 @@
       }
     ],
     "globalMetadata": {
-      "_appTitle": "Xenko",
+      "_appTitle": "Stride",
       "_enableSearch": true
     },
     "dest": "../_site/en",

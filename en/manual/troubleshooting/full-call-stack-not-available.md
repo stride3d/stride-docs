@@ -1,6 +1,6 @@
 # Full call stack not available
 
-Depending on your Visual Studio settings, when an exception is thrown in Xenko, Visual Studio might only show the call stack from the Xenko runtime .DLL files or .NET framework assemblies, not user code.
+Depending on your Visual Studio settings, when an exception is thrown in Stride, Visual Studio might only show the call stack from the Stride runtime .DLL files or .NET framework assemblies, not user code.
 
 To break as soon as an exception is thrown, add additional conditions to the Visual Studio **Exception Settings**.
 

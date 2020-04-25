@@ -31,7 +31,7 @@ Assets that will be compiled and packaged in your project are:
 
 One important thing to understand is that "Mark as root" is not part of the asset, it is stored in the "current" package (the one that is in bold in the Solution Explorer).
 
-It means that if "MyGame" is current package, if you check "Mark as Root" on Silver Material (part of SharedPackage), this information will be stored in MyGame.xkpkg as part of the reference to SharedPackage.
+It means that if "MyGame" is current package, if you check "Mark as Root" on Silver Material (part of SharedPackage), this information will be stored in MyGame.sdpkg as part of the reference to SharedPackage.
 
 As a result, you can use a shared package from multiple games even if you have different explicit roots.
  

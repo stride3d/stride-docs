@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This page explains how to add support for the Oculus Rift and Vive devices to your game. Xenko doesn't support other VR devices yet.
+This page explains how to add support for the Oculus Rift and Vive devices to your game. Stride doesn't support other VR devices yet.
 
 1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -83,7 +83,7 @@ For now, this is done in a script. We recommend you use `IsDrawDesynchronized` i
 
 ```cs
 using System;
-using Xenko.Engine;
+using Stride.Engine;
 
 namespace VRSandbox
 {

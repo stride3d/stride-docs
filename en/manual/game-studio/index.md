@@ -2,7 +2,7 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-**Game Studio** is the central tool for game and application production in Xenko. In Game Studio, you can:
+**Game Studio** is the central tool for game and application production in Stride. In Game Studio, you can:
 
 * create and arrange scenes
 * import assets, modify their parameters and see changes in real time in the preview window

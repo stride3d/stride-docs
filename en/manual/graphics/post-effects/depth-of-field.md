@@ -7,7 +7,7 @@ By default, rendering produces a very sharp image, which can look artificial. **
 
 ![media/realworld_dof_agave_flowers.jpg](media/realworld_dof_agave_flowers.jpg) 
 
-To create the effect, Xenko creates several versions of the original image with different intensities of blur, and interpolates between them. The more layers used, the better the quality, but at performance cost.
+To create the effect, Stride creates several versions of the original image with different intensities of blur, and interpolates between them. The more layers used, the better the quality, but at performance cost.
 
 ## Properties
 

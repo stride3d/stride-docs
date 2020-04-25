@@ -26,7 +26,7 @@ This means local reflections work well in enclosed areas such as corridors and r
 
 ## Algorithm
 
-Xenko processes local reflections in four passes:
+Stride processes local reflections in four passes:
 
 1. The **raycast** pass performs screenspace ray tracing over the depth buffer to find intersections.
 

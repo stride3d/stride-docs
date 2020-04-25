@@ -6,7 +6,7 @@
 In this tutorial, we'll use the [static collider and rigidbody components](colliders.md) to create a ball bouncing on a floor.
 
 >[!Note]
->The screenshots and videos in this tutorial were made using an earlier version of Xenko, so some parts of the UI, and the default skybox and sphere, might look different from your version.
+>The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
 
 ## 1. Create a new project
 

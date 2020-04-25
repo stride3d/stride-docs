@@ -16,7 +16,7 @@ The screenshot below shows a [point light](point-lights.md) surrounded by light 
 
 ![Cornell box](media/light-probes-cornell.png)
 
-Xenko colors pixels within a light probe area to simulate the effect of light bouncing from nearby surfaces. To find a color for a given pixel, Xenko interpolates from the lighting captured by the four surrounding light probes.
+Stride colors pixels within a light probe area to simulate the effect of light bouncing from nearby surfaces. To find a color for a given pixel, Stride interpolates from the lighting captured by the four surrounding light probes.
 
 For example, in the screenshot below, notice how the red of the wall is reflected on the other objects. In the Scene Editor, this is also visible on the surface of the light probes themselves.
 
@@ -26,7 +26,7 @@ Light probes affect all objects in the area they cover, including static and dyn
 
 ## 1. Enable light probes in the graphics compositor
 
-Xenko enables light probes by default in new projects. To make sure light probes are enabled:
+Stride enables light probes by default in new projects. To make sure light probes are enabled:
 
 1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 

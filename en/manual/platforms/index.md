@@ -2,7 +2,7 @@
 
 ![Platforms](media/game-engine-system-requirements-intro-pic.png)
 
-Xenko is cross-platform game engine. This means you can create your game once, then compile and deploy it on all the platforms Xenko supports. The engine converts C# and shaders to the different native languages, and abstracts the concepts that differ between platforms, so you don't have to adapt your code for each platform.
+Stride is cross-platform game engine. This means you can create your game once, then compile and deploy it on all the platforms Stride supports. The engine converts C# and shaders to the different native languages, and abstracts the concepts that differ between platforms, so you don't have to adapt your code for each platform.
 
 ## Supported platforms
 
@@ -13,7 +13,7 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 * [iOS 8.0 and later](ios.md)
 
 > [!TIP]
-> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:Xenko.Core.Platform.Type) variable.
+> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:Stride.Core.Platform.Type) variable.
 
 ## Supported graphics platforms
 
@@ -23,8 +23,8 @@ Xenko is cross-platform game engine. This means you can create your game once, t
 * Vulkan
 
 >[!Note]
->Xenko only supports MSAA (multisample anti-aliasing) for Direct3D 11 and later.
->Depending on your device's OpenGL shader compiler, Xenko might not run with OpenGL ES2.
+>Stride only supports MSAA (multisample anti-aliasing) for Direct3D 11 and later.
+>Depending on your device's OpenGL shader compiler, Stride might not run with OpenGL ES2.
 
 >[!Warning]
 >Direct3D 9 doesn't support HDR textures. Using HDR textures with DirextX 9 will crash your game.
@@ -39,7 +39,7 @@ For more information, see [Set the graphics platform](set-the-graphics-platform.
 
 ## Preprocessor variables
 
-Xenko defines preprocessor variables if you want to write code that compiles only under a specific platform. For more information, see [Preprocessor variables](../scripts/preprocessor-variables.md).
+Stride defines preprocessor variables if you want to write code that compiles only under a specific platform. For more information, see [Preprocessor variables](../scripts/preprocessor-variables.md).
 
 ## In this section
 

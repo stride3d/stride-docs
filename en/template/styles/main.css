@@ -131,8 +131,8 @@ td img {
     .article {
         margin-top: 10px !important;
     }
-    .sidenav #sidetoggle.xk-page-Manual #sidetoc,
-    .sidenav #sidetoggle.xk-page-ReleaseNotes #sidetoc {
+    .sidenav #sidetoggle.stride-page-Manual #sidetoc,
+    .sidenav #sidetoggle.stride-page-ReleaseNotes #sidetoc {
         height: auto;
         margin-bottom: -50px;
     }
@@ -142,7 +142,7 @@ td img {
 }
 
 
-/* Already defined on navbar, but since we have conflict with current Xenko navbar we redefine them on breadcrumb */
+/* Already defined on navbar, but since we have conflict with current Stride navbar we redefine them on breadcrumb */
 
 .navbar {
     z-index: 50;
@@ -438,7 +438,7 @@ h5 {
     font-size: 16px;
 }
 
-.xk-documentation-table {
+.stride-documentation-table {
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -497,14 +497,14 @@ h5 {
     padding-right: 20px;
 }
 
-.xk-documentation-list {
+.stride-documentation-list {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-left: 35px;
 }
 
-.xk-documentation-list li {
+.stride-documentation-list li {
     margin-left: 0;
     position: relative;
     margin-bottom: 15px;
@@ -519,7 +519,7 @@ h5 {
     align-items: stretch;
 }
 
-.xk-documentation-list li>a {
+.stride-documentation-list li>a {
     display: block;
     width: 100%;
     height: 100%;
@@ -533,26 +533,26 @@ h5 {
     align-items: stretch;
 }
 
-.xk-documentation-list li>a>h2 {
+.stride-documentation-list li>a>h2 {
     margin-left: -3px;
 }
 
-.xk-documentation-list li a p {
+.stride-documentation-list li a p {
     margin-right: 60px;
     padding-right: 50px;
 }
 
-.xk-documentation-list li a h2,
-.xk-documentation-list li a p {
+.stride-documentation-list li a h2,
+.stride-documentation-list li a p {
     color: #000;
     position: relative;
 }
 
-.xk-documentation-list li a h2:before {
+.stride-documentation-list li a h2:before {
     display: none;
 }
 
-.xk-documentation-list li .xi_arrowLink {
+.stride-documentation-list li .xi_arrowLink {
     width: 48px;
     height: 78px;
     float: right;
@@ -561,55 +561,55 @@ h5 {
     right: 40px;
     display: block;
     overflow: hidden;
-    background: url(http://xenko.com/media/api-icons/svg/arrow.svg) no-repeat -26px 50%;
+    background: url(http://stride3d.net/media/api-icons/svg/arrow.svg) no-repeat -26px 50%;
     background-size: 140px 200px;
 }
 
-.xk-documentation-list li:hover .xi_arrowLink {
+.stride-documentation-list li:hover .xi_arrowLink {
     background-position: 100% 50%;
 }
 
-.xk-documentation-list li:hover {
+.stride-documentation-list li:hover {
     background-color: #E8E8E8;
 }
 
-.xk-custom-breadcrumb {
+.stride-custom-breadcrumb {
     padding: 0;
 }
 
-.xk-custom-breadcrumb ul {
+.stride-custom-breadcrumb ul {
     padding: 5px 0 0 0;
     margin: 0;
     background: transparent;
 }
 
-.xk-custom-breadcrumb+article.content h1 {
+.stride-custom-breadcrumb+article.content h1 {
     margin-top: 36px;
     margin-bottom: 10px;
     max-width: calc(100% - 5px);
 }
 
-.xk-custom-breadcrumb+article.content h2 {
+.stride-custom-breadcrumb+article.content h2 {
     margin-top: 16px;
 }
 
-.xk-custom-breadcrumb+article.content h3,
-.xk-custom-breadcrumb+article.content h4 {
+.stride-custom-breadcrumb+article.content h3,
+.stride-custom-breadcrumb+article.content h4 {
     margin-top: 28px;
     margin-bottom: 10px;
 }
 
 #_content h1:first-child,
-.xk-margin-default {
+.stride-margin-default {
     margin-top: 10px !important;
 }
 
 @media screen and (max-width: 768px) {
-    .xk-documentation-list li a p:after {
+    .stride-documentation-list li a p:after {
         display: none;
     }
-    .xk-custom-breadcrumb+article.content h1,
-    .xk-custom-breadcrumb+article.content h2 {
+    .stride-custom-breadcrumb+article.content h1,
+    .stride-custom-breadcrumb+article.content h2 {
         margin-top: 6px;
         margin-bottom: 10px;
         max-width: 100%;
@@ -623,10 +623,10 @@ h5 {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .xk-documentation-list li a p {
+    .stride-documentation-list li a p {
         padding-right: 10px;
     }
-    .xk-documentation-list li .xi_arrowLink {
+    .stride-documentation-list li .xi_arrowLink {
         top: 12px;
         right: 10px;
     }
@@ -672,7 +672,7 @@ h5 {
     }
 }
 
-.xk-documentation-image {
+.stride-documentation-image {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -683,44 +683,44 @@ h5 {
     min-width: 128px;
 }
 
-.xk-documentation-list .xk-documentation-image img {
+.stride-documentation-list .stride-documentation-image img {
     max-width: 128px;
 }
 
-.xk-documentation-list li:nth-child(1) .xk-documentation-chapter,
-.xk-documentation-list li:nth-child(4) .xk-documentation-chapter {
+.stride-documentation-list li:nth-child(1) .stride-documentation-chapter,
+.stride-documentation-list li:nth-child(4) .stride-documentation-chapter {
     padding-left: 20px;
 }
 
-.xk-documentation-list li:nth-child(2) .xk-documentation-image img,
-.xk-documentation-list li:nth-child(3) .xk-documentation-image img {
+.stride-documentation-list li:nth-child(2) .stride-documentation-image img,
+.stride-documentation-list li:nth-child(3) .stride-documentation-image img {
     max-width: 165px;
     margin-left: -20px;
 }
 
 @media only screen and (max-width: 768px) {
-    .xk-documentation-list {
+    .stride-documentation-list {
         margin-left: -15px;
         margin-right: -15px;
         margin-top: -70px;
         margin-bottom: -80px;
     }
-    .xk-documentation-list li {
+    .stride-documentation-list li {
         min-height: auto;
     }
-    .xk-documentation-image {
+    .stride-documentation-image {
         width: 30%;
         min-width: 0;
         padding-right: 15px;
     }
-    .xk-documentation-image img {
+    .stride-documentation-image img {
         width: 100%;
     }
-    .xk-documentation-list li {
+    .stride-documentation-list li {
         margin: 10px 0 20px 0;
         padding: 20px 0;
     }
-    .xk-documentation-list li>a {
+    .stride-documentation-list li>a {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -730,7 +730,7 @@ h5 {
         height: auto;
         position: relative;
     }
-    .xk-documentation-list li .xi_arrowLink {
+    .stride-documentation-list li .xi_arrowLink {
         position: absolute;
         top: calc(50% - 25px);
         right: 38px;
@@ -739,16 +739,16 @@ h5 {
         background-size: 92px 200px;
         background-position: -7px 50%;
     }
-    .xk-documentation-list li:hover .xi_arrowLink {
+    .stride-documentation-list li:hover .xi_arrowLink {
         background-size: 92px 200px;
     }
-    .xk-documentation-list li>a>h2 {
+    .stride-documentation-list li>a>h2 {
         padding-right: 65px;
         margin: 0 !important;
     }
-    .xk-documentation-list li:first-child .xk-documentation-image img,
-    .xk-documentation-list li:nth-child(2) .xk-documentation-image img,
-    .xk-documentation-list li:last-child .xk-documentation-image img {
+    .stride-documentation-list li:first-child .stride-documentation-image img,
+    .stride-documentation-list li:nth-child(2) .stride-documentation-image img,
+    .stride-documentation-list li:last-child .stride-documentation-image img {
         margin-top: 0 !important;
     }
 }
@@ -756,16 +756,16 @@ h5 {
 
 /* Class page fixes */
 
-.xk-bordered-title {
+.stride-bordered-title {
     border-bottom: 1px solid #ccc;
 }
 
-.xk-methods-wrapper .xk-hidden-table.xk-returns-table,
-.xk-hidden-table {
+.stride-methods-wrapper .stride-hidden-table.stride-returns-table,
+.stride-hidden-table {
     display: none;
 }
 
-.xk-methods-wrapper .xk-hidden-table {
+.stride-methods-wrapper .stride-hidden-table {
     display: table;
 }
 
@@ -799,7 +799,7 @@ article h4 {
     padding-left: 10px;
 }
 
-.expand-stub+.xk-custom-icon {
+.expand-stub+.stride-custom-icon {
     display: none;
 }
 
@@ -807,140 +807,140 @@ article h4 {
     left: 0;
 }
 
-.xk-Class:before,
-.xk-class-icon {
+.stride-Class:before,
+.stride-class-icon {
     content: " ";
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("../media/api-icons/xk-Class-icon.png");
+    background: url("../media/api-icons/stride-Class-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
     top: 8px;
 }
 
-.xk-Delegate:before {
+.stride-Delegate:before {
     content: " ";
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("../media/api-icons/xk-Delegate-icon.png");
+    background: url("../media/api-icons/stride-Delegate-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
     top: 8px;
 }
 
-.xk-Enum:before,
-.xk-enum-icon {
+.stride-Enum:before,
+.stride-enum-icon {
     content: " ";
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("../media/api-icons/xk-Enum-icon.png");
+    background: url("../media/api-icons/stride-Enum-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
     top: 8px;
 }
 
-.xk-method-icon {
+.stride-method-icon {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("../media/api-icons/xk-Method-icon.png");
+    background: url("../media/api-icons/stride-Method-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
     background-size: 100% 100%
 }
 
-.xk-Interface:before,
-.xk-interface-icon {
+.stride-Interface:before,
+.stride-interface-icon {
     content: " ";
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("../media/api-icons/xk-Interface-icon.png");
+    background: url("../media/api-icons/stride-Interface-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
     top: 8px;
 }
 
-.xk-field-icon {
+.stride-field-icon {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("../media/api-icons/xk-Field-icon.png");
+    background: url("../media/api-icons/stride-Field-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
     background-size: 100% 100%
 }
 
-.xk-Struct:before,
-.xk-struct-icon {
+.stride-Struct:before,
+.stride-struct-icon {
     content: " ";
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("../media/api-icons/xk-Struct-icon.png");
+    background: url("../media/api-icons/stride-Struct-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
     top: 8px;
 }
 
-.xk-property-icon {
+.stride-property-icon {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("../media/api-icons/xk-Property-icon.png");
+    background: url("../media/api-icons/stride-Property-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
     background-size: 100% 100%
 }
 
-.xk-constructor-icon {
+.stride-constructor-icon {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("../media/api-icons/xk-Construct-icon.png");
+    background: url("../media/api-icons/stride-Construct-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
     background-size: 100% 100%
 }
 
-.xk-events-icon {
+.stride-events-icon {
     content: " ";
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("../media/api-icons/xk-Events-icon.png");
+    background: url("../media/api-icons/stride-Events-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
     background-size: 100% 100%
 }
 
-.xk-icon-column {
+.stride-icon-column {
     width: 45px;
     position: relative;
     min-width: 40px;
 }
 
-.xk-icon-column .xk-struct-icon,
-.xk-icon-column .xk-interface-icon,
-.xk-icon-column .xk-enum-icon,
-.xk-icon-column .xk-class-icon {
+.stride-icon-column .stride-struct-icon,
+.stride-icon-column .stride-interface-icon,
+.stride-icon-column .stride-enum-icon,
+.stride-icon-column .stride-class-icon {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -999,14 +999,14 @@ article h4 {
 
 /*Hide filter area at the Manual amd ReleaseNotes pages*/
 
-#sidetoggle.xk-page-Manual #sidetoc,
-#sidetoggle.xk-page-ReleaseNotes #sidetoc {
+#sidetoggle.stride-page-Manual #sidetoc,
+#sidetoggle.stride-page-ReleaseNotes #sidetoc {
     height: calc(100vh - 105px);
     margin-top: 0;
 }
 
-#sidetoggle.xk-page-Api .sidefilter,
-#sidetoggle.xk-page-Default .sidefilter {
+#sidetoggle.stride-page-Api .sidefilter,
+#sidetoggle.stride-page-Default .sidefilter {
     display: block !important;
 }
 
@@ -1221,13 +1221,13 @@ article h4 {
     margin-bottom: 20px;
 }
 
-#xk-current-version.form-control {
+#stride-current-version.form-control {
     width: auto;
     height: auto;
     padding: 3px 0px;
 }
 
-.xk-flex {
+.stride-flex {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1236,19 +1236,19 @@ article h4 {
     align-items: center;
 }
 
-#xk-current-version.form-control {
+#stride-current-version.form-control {
     border-radius: 0;
     padding: 5px 10px 5px 2px;
     margin: 10px 10px 10px 0px;
 }
 
-#xk-current-version.form-control:active,
-#xk-current-version.form-control:focus,
-#xk-current-version.form-control:hover {
+#stride-current-version.form-control:active,
+#stride-current-version.form-control:focus,
+#stride-current-version.form-control:hover {
     outline: none;
 }
 
-#xk-current-version+.submenu-navbar {
+#stride-current-version+.submenu-navbar {
     margin-left: 10px;
 }
 
@@ -1263,7 +1263,7 @@ article h4 {
     padding-bottom: 0;
 }
 
-.xk-constructor h4 {
+.stride-constructor h4 {
     display: none;
 }
 
@@ -1276,16 +1276,16 @@ h4+.table-bordered {
     margin-bottom: 25px;
 }
 
-.xk-property h4,
-.xk-property .xk-parameters {
+.stride-property h4,
+.stride-property .stride-parameters {
     display: none;
 }
 
-.xk-method {
+.stride-method {
     margin-bottom: 10px;
 }
 
-.xk-returns p {
+.stride-returns p {
     padding: 0;
     min-height: 0;
     margin: 0;
@@ -1310,7 +1310,7 @@ h4.returns {
 }
 
 #search-results .page-item.prev a.page-link {
-    background-image: url(https://xenko.com/images/svg/arrow_red_mini_8.svg);
+    background-image: url(https://stride3d.net/images/svg/arrow_red_mini_8.svg);
     margin-left: 0;
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
@@ -1334,7 +1334,7 @@ h4.returns {
 
 #search-results .page-item.prev.disabled a.page-link,
 #search-results .page-item.next.disabled a.page-link {
-    background-image: url(https://xenko.com/images/svg/arrow_gray_8.svg);
+    background-image: url(https://stride3d.net/images/svg/arrow_gray_8.svg);
 }
 
 .page-item.active a.page-link,
@@ -1343,7 +1343,7 @@ h4.returns {
 }
 
 #search-results .page-item.next a.page-link {
-    background: url(https://xenko.com/images/svg/arrow_red_mini_8.svg);
+    background: url(https://stride3d.net/images/svg/arrow_red_mini_8.svg);
     display: inline-block;
     width: 38px;
     height: 39px;
@@ -1367,17 +1367,17 @@ h4.returns {
     border-color: #ddd;
 }
 
-.xk-searching-link {
+.stride-searching-link {
     text-decoration: underline;
     color: #3b73af;
 }
 
-.xk-searching-link:hover {
+.stride-searching-link:hover {
     cursor: pointer;
     text-decoration: none;
 }
 
-#xk-search-summary {
+#stride-search-summary {
     margin-bottom: 10px;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;

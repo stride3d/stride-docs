@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">デザイナー</span>
 <span class="label label-doc-audience">プログラマー</span>
 
-スカイボックス ライトは、[スカイボックス](../textures/skyboxes-and-backgrounds.md)によって放射される[アンビエント ライト](ambient-lights.md)です。Xenko は、スカイボックスのキューブマップを分析し、[イメージベースのライティング (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting) を使用してライティングを生成します。
+スカイボックス ライトは、[スカイボックス](../textures/skyboxes-and-backgrounds.md)によって放射される[アンビエント ライト](ambient-lights.md)です。Stride は、スカイボックスのキューブマップを分析し、[イメージベースのライティング (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting) を使用してライティングを生成します。
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
@@ -27,7 +27,7 @@
 
 ## スカイボックス ライトをセットアップする
 
-スカイボックスをライトとして使用するには、スカイボックス アセットを追加した後、[ライト コンポーネント](xref:Xenko.Engine.LightComponent)でそれを選択する必要があります。
+スカイボックスをライトとして使用するには、スカイボックス アセットを追加した後、[ライト コンポーネント](xref:Stride.Engine.LightComponent)でそれを選択する必要があります。
 
 1. ［Asset view］で ![Add asset](media/engine-skybox-add-new-asset-button.png) をクリックします。
 
@@ -45,7 +45,7 @@
 
 4. スカイボックス ライトにするエンティティを選択します。
 
-5. ［Properties grid］ (既定では右側) で、［Add component］をクリックし、[[Light](xref:Xenko.Engine.LightComponent)] を選択します。
+5. ［Properties grid］ (既定では右側) で、［Add component］をクリックし、[[Light](xref:Stride.Engine.LightComponent)] を選択します。
 
     ![Background component properties](media/skybox-add-light-component.png)
 
@@ -61,11 +61,11 @@
 
 	![Asset picker](media/select-skybox-asset.png)
 
-[ライト コンポーネント](xref:Xenko.Engine.LightComponent)は、スカイボックス アセットを使用してシーンをライティングします。
+[ライト コンポーネント](xref:Stride.Engine.LightComponent)は、スカイボックス アセットを使用してシーンをライティングします。
 
 ## スカイボックス アセットのプロパティ
 
-スカイボックスをライトとして使用すると、Xenko はそれを、圧縮形式 ([球面調和 (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) と、異なる種類のマテリアルをライティングするためのテクスチャの両方として使用します。両方の詳細を、スカイボックス アセットのプロパティで制御できます。
+スカイボックスをライトとして使用すると、Stride はそれを、圧縮形式 ([球面調和 (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) と、異なる種類のマテリアルをライティングするためのテクスチャの両方として使用します。両方の詳細を、スカイボックス アセットのプロパティで制御できます。
 
 ![Skybox lighting properties](media/skybox-asset-properties.png)
 

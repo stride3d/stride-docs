@@ -3,7 +3,7 @@
 >[!Note]
 >Before following these instructions, make sure you've followed the instructions in [Linux - Setup and requirements](setup-and-requirements.md).
 
-1. In the Xenko launcher, create a new game and select Linux as a target platform.
+1. In the Stride launcher, create a new game and select Linux as a target platform.
 
     ![New Game](media/platform_choice.png)
 
@@ -53,7 +53,7 @@ There are two additional settings that control the execution of a game:
 
 ## Compile outside Game Studio
 
-Like any Xenko project, you can also compile the project directly from Visual Studio or from the command line. In both cases, you need to select a valid configuration:
+Like any Stride project, you can also compile the project directly from Visual Studio or from the command line. In both cases, you need to select a valid configuration:
 
 * Debug
 * Release

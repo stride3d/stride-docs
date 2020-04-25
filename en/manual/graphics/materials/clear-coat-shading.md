@@ -12,7 +12,7 @@ Real vehicles typically have three layers of paint applied to the body, as in th
 
 ![Diagram](media/paint-layers.png)
 
-To keep the shading simple, Xenko only simulates the **base coat** (including optional metal flakes) and **clear coat** layers. Xenko blends the layers depending on how far the camera is from the material. This reduces visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
+To keep the shading simple, Stride only simulates the **base coat** (including optional metal flakes) and **clear coat** layers. Stride blends the layers depending on how far the camera is from the material. This reduces visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
 
 Clear-coat shading has several advantages over creating the effect manually with [material layers](material-layers.md):
 
@@ -22,7 +22,7 @@ Clear-coat shading has several advantages over creating the effect manually with
 
 ## Add a clear-coat material
 
-Xenko includes a clear-coat material template. To add it, in the **Asset View**, click **Add asset** and select **Material > PBR material: clear coat**.
+Stride includes a clear-coat material template. To add it, in the **Asset View**, click **Add asset** and select **Material > PBR material: clear coat**.
 
 ![Add clear coat](media/add-clear-coat.png)
 
@@ -54,10 +54,10 @@ The metal flake properties simulate a metallic paint effect. To disable the effe
 | Metal flakes diffuse map  |  The [diffuse map](shading-attributes.md) used by the metal flake layer (the layer above the base paint). For a coherent result, use a value close to the base paint value.
 | Metal flakes gloss map | The [gloss map](geometry-attributes.md) used by the metal flake layer. For a coherent result, use the **metal flake normal map** as a mask. 
 | Metal flakes metalness map | The [metalness map](shading-attributes.md) used by the metal flake layer. For best results, use high values.
-| Metal flake normal map  | The [normal map](../textures/normal-maps.md) used by the metal flake layer. This shapes the flake geometry. A metal flake normal map  (**XenkoClearCoatMetalFlakesNM**) is included in the Xenko assets package. If the texture has a high UV scale, enable **Use random texture coordinates** below to reduce tiling effects. To disable the metal flakes effect, remove the normal map.
+| Metal flake normal map  | The [normal map](../textures/normal-maps.md) used by the metal flake layer. This shapes the flake geometry. A metal flake normal map  (**StrideClearCoatMetalFlakesNM**) is included in the Stride assets package. If the texture has a high UV scale, enable **Use random texture coordinates** below to reduce tiling effects. To disable the metal flakes effect, remove the normal map.
 | Coat gloss map  | The [gloss map](geometry-attributes.md) used by the clear coat layer. Change this value to simulate different kinds of paint (eg matte).
 | Clear coat metalness map  | The [metalness map](shading-attributes.md) used by the clear coat layer
-| Orange peel normal map  | The [normal map](../textures/normal-maps.md) used by the clear coat layer to create an "orange peel" effect. This reflects light in different angles, simulating paint imperfections whereby the texture appears bumpy, like the skin of an orange. An orange peel normal map (**XenkoClearCoatOrangePeelNM**) is included in the Xenko assets package.
+| Orange peel normal map  | The [normal map](../textures/normal-maps.md) used by the clear coat layer to create an "orange peel" effect. This reflects light in different angles, simulating paint imperfections whereby the texture appears bumpy, like the skin of an orange. An orange peel normal map (**StrideClearCoatOrangePeelNM**) is included in the Stride assets package.
 | Layer transition distance  | The distance (in meters) at which the base paint layer transitions to the metal flake layer. This helps fight visual artifacts caused by the metal flake normal map (which becomes more visible as the camera moves away from the material).
 
 ## Reduce tiling and artifacts
@@ -70,9 +70,9 @@ Values over `1.0` might produce tiling artifacts, as in the image below (note th
 
 ![Artifact](media/clear-coat-artifact1.jpg)
 
-### XenkoClearCoatMetalFlakesNM
+### StrideClearCoatMetalFlakesNM
 
-The metal flakes in the metal flake normal map included in the Xenko assets package (**XenkoClearCoatMetalFlakesNM**) are quite large. For this reason, we recommend you: 
+The metal flakes in the metal flake normal map included in the Stride assets package (**StrideClearCoatMetalFlakesNM**) are quite large. For this reason, we recommend you: 
 
 * use a high **UV scale factor** which tiles the texture (thereby shrinking the flakes) 
 

@@ -26,11 +26,11 @@ Blend maps work the same way as any other kind of material map. For more informa
 
 ## Shading models
 
-Xenko blends materials differently depending on whether their shading models (eg diffuse models, specular models, etc) are different.
+Stride blends materials differently depending on whether their shading models (eg diffuse models, specular models, etc) are different.
 
-If you blend materials that have **identical** shading models, Xenko collects the **attributes** of the materials, then applies the shading models to all of them. This saves GPU.
+If you blend materials that have **identical** shading models, Stride collects the **attributes** of the materials, then applies the shading models to all of them. This saves GPU.
 
-If the materials have **different** shading models, Xenko applies each material's shading models to that material's attributes, then blends the results. This uses more GPU.
+If the materials have **different** shading models, Stride applies each material's shading models to that material's attributes, then blends the results. This uses more GPU.
 
 ## Add a layer
 

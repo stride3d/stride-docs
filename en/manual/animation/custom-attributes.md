@@ -20,7 +20,7 @@ Currently, you can only import custom **animated** attributes. Attributes that a
 
     ![Custom attributes](media/import-custom-attributes.png)
 
-    When the assets are built, Xenko imports the custom attributes from the FBX file.
+    When the assets are built, Stride imports the custom attributes from the FBX file.
 
 ## 2. Control custom attributes with a script
 
@@ -31,11 +31,11 @@ To look up an attribute, use `NodeName_AttributeName`. For example, if you have 
 ### Example script
 
 ```cs
-using Xenko.Animations;
-using Xenko.Engine;
-using Xenko.Rendering;
-using Xenko.Audio;
-using Xenko.Rendering.Materials;
+using Stride.Animations;
+using Stride.Engine;
+using Stride.Rendering;
+using Stride.Audio;
+using Stride.Rendering.Materials;
  
 namespace Sample
 { 

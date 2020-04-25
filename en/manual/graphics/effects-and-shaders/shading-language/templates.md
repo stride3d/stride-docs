@@ -1,6 +1,6 @@
 # Templates
 
-Shader templating is available in XKSL. Unlike many templating systems, pdxsl requires strong typed templates. The available types are:
+Shader templating is available in SDSL. Unlike many templating systems, sdsl requires strong typed templates. The available types are:
 
 - value types from HLSL (float, int, float2, float3, float4)
 - 2D textures

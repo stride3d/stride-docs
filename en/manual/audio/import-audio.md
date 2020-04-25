@@ -21,7 +21,7 @@ You can import audio files to use as **audio assets** in your project. You can i
 
     * **Sound effect**: Recommended for smaller files that you want to play directly from memory.
 
-    * **Spatialized sound**: Process the audio asset as [spatialized audio](spatialized-audio.md). Note that Xenko processes audio files as mono (single-channel) audio. The source file is unaffected.
+    * **Spatialized sound**: Process the audio asset as [spatialized audio](spatialized-audio.md). Note that Stride processes audio files as mono (single-channel) audio. The source file is unaffected.
     
     * **Music**: Recommended for larger files that you want to stream from disk to save memory.
 
@@ -43,7 +43,7 @@ You can also import a [video](../video/index.md) file and choose to import only 
 
     ![Import video](media/import-audio-only.png)
 
-    Xenko adds the audio tracks from the video to the **Asset View**.
+    Stride adds the audio tracks from the video to the **Asset View**.
 
 ## See also
 

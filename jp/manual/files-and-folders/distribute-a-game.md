@@ -24,7 +24,7 @@
 
     >[!NOTE]
     >
-    >Xenko プロジェクトに追加したプラットフォームに対してのみ、ビルドを作成できます。これを行う方法については、「[プラットフォームを追加または削除する](../platforms/add-or-remove-a-platform.md)」を参照してください。
+    >Stride プロジェクトに追加したプラットフォームに対してのみ、ビルドを作成できます。これを行う方法については、「[プラットフォームを追加または削除する](../platforms/add-or-remove-a-platform.md)」を参照してください。
     >
     >Android または iOS 用にビルドするには、Xamarin が必要です。Xamarin は Visual Studio のライセンスに含まれます。Visual Studio 2017 で Xamarin をインストールする方法については、[この MSDN ページ](https://docs.microsoft.com/ja-jp/visualstudio/cross-platform/setup-and-install)を参照してください。
 
@@ -49,13 +49,13 @@
 
 * `x64`、`x86`、`data` 以外のフォルダー
 
-* カスタム構成ファイル (つまり、Xenko で作成されないファイル) など、他の必要のないファイル
+* カスタム構成ファイル (つまり、Stride で作成されないファイル) など、他の必要のないファイル
 
 ## 3. ゲームを配布する
 
 リリース ビルドを作成した後は、目的に最も適した方法で配布します。
 
-Xenko で作成されたゲームを Windows で実行するには、次のものが必要です。
+Stride で作成されたゲームを Windows で実行するには、次のものが必要です。
 
 * .NET 4.6.1
 

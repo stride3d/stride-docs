@@ -1,6 +1,6 @@
 # Cached files
 
-When you build your project, Xenko caches the assets and code in folders inside the project.
+When you build your project, Stride caches the assets and code in folders inside the project.
 
 You might want to clean the cache if:
 
@@ -14,7 +14,7 @@ You might want to clean the cache if:
 
     ![Clean solution](media/clean-solution.png)
 
-2. If you have the [Xenko Visual Studio extension](../get-started/visual-studio-extension.md) installed, you can also clean the asset cache. To do this, under **Xenko**, select **Clean intermediate assets for Solution**.
+2. If you have the [Stride Visual Studio extension](../get-started/visual-studio-extension.md) installed, you can also clean the asset cache. To do this, under **Stride**, select **Clean intermediate assets for Solution**.
 
     ![Clean solution](media/clean-assets.png)
 
@@ -38,13 +38,13 @@ If cleaning the cache from Visual Studio doesn't work, try deleting the files ma
 
 ## Clear the Game Studio caches
 
-In addition to the caches Xenko creates for your project, Game Studio keeps caches for the editor.
+In addition to the caches Stride creates for your project, Game Studio keeps caches for the editor.
 
 ### Asset cache
 
 To speed up asset loading in the editor, Game Studio saves a cache of asset references. It contains data about every asset ever loaded in every project. This means it can grow very large over time.
 
-By default, the folder is in: *%temp%/Xenko*
+By default, the folder is in: *%temp%/Stride*
 
 >[!Tip]
 >To check or change where Game Studio saves the cache, see **Edit > Settings > Environment > Build cache directory.**
@@ -54,9 +54,9 @@ To clean the cache, delete the folder and run Game Studio again.
 
 ### Settings cache
 
-Game Studio saves editor information (such as window positions and recently-opened projects) in: *%AppData%/Xenko*
+Game Studio saves editor information (such as window positions and recently-opened projects) in: *%AppData%/Stride*
 
-Game Studio also saves information about open tabs and the editor camera position in the `.xkpkg.user` file in the project folder (eg *~/MyGame/MyGame/MyGame.xkpkg.user*).
+Game Studio also saves information about open tabs and the editor camera position in the `.sdpkg.user` file in the project folder (eg *~/MyGame/MyGame/MyGame.sdpkg.user*).
 
 These files are small, but you might want to delete them if you get Game Studio into a bad state. Deleting them doesn't affect anything in your project.
 

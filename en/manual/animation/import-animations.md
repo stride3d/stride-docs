@@ -9,7 +9,7 @@ To animate a model, you need to use three kinds of assets together:
 * skeletons
 * animations
 
-You can import these assets from 3D model files. Xenko supports the following model file types: ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
+You can import these assets from 3D model files. Stride supports the following model file types: ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
 
 ## Import a model, skeleton, or animation from a model file
 
@@ -29,13 +29,13 @@ You can import these assets from 3D model files. Xenko supports the following mo
 
     ![Choose asset type](media/create-and-add-assets-choose-asset-type.png)
 
-    * If you choose **3D model**, Xenko can import any additional materials, textures and skeletons it finds in the model file. You can also import the skeleton from the model (**Import new skeleton**), import no skeleton (**Don't use skeleton**), or specify a different skeleton (**Use existing skeleton**) in the lower field.
+    * If you choose **3D model**, Stride can import any additional materials, textures and skeletons it finds in the model file. You can also import the skeleton from the model (**Import new skeleton**), import no skeleton (**Don't use skeleton**), or specify a different skeleton (**Use existing skeleton**) in the lower field.
 
     ![Choose asset type](media/create-and-add-assets-model-import-parameters.png)
 
-    * If you choose **Skeleton**, Xenko imports only the skeleton from the model file. You might want to do this, for example, if you want to use it for a new skeleton that uses a subset of its nodes.
+    * If you choose **Skeleton**, Stride imports only the skeleton from the model file. You might want to do this, for example, if you want to use it for a new skeleton that uses a subset of its nodes.
 
-    * If you choose **Animation**, Xenko imports only the animation from the model file. This is sufficient for regular animations; for additive information, there are some extra steps. For details, see [Additive animation](additive-animation.md).
+    * If you choose **Animation**, Stride imports only the animation from the model file. This is sufficient for regular animations; for additive information, there are some extra steps. For details, see [Additive animation](additive-animation.md).
 
 After you import the assets, Game Studio adds them to the **Asset View**.
 
@@ -47,7 +47,7 @@ You can view and edit their properties in the **Property Grid** (on the right by
 
 ## Use an animation asset
 
-To use an animation asset, add an [AnimationComponent](xref:Xenko.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
+To use an animation asset, add an [AnimationComponent](xref:Stride.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
 
 >[!Note]
 >Make sure you correctly skin your mesh to the skeleton. If you don't, you won't be able to animate your model correctly.

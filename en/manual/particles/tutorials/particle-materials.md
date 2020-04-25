@@ -26,7 +26,7 @@ Select one of the particle entities and navigate to its source particle system, 
 
 The **red particle system** has a very simple customization. Since the [material maps](../../graphics/materials/material-maps.md) already provide an option to use shaders as a leaf node input, we can create a custom shader and assign it to that node.
 
-First, create a shader (`ComputeColorRed.xksl`) with a derived class for `ComputeColor`:
+First, create a shader (`ComputeColorRed.sdsl`) with a derived class for `ComputeColor`:
 
   ```cs
 class ComputeColorRed : ComputeColor
@@ -50,7 +50,7 @@ Once the shader is loaded, you can access it in the **Property Grid** under the 
 
 ![media/particles-samples-material-3.png](media/particles-samples-material-3.png)
 
-The particles are red. With Game Studio running, edit and save `ComputeColorRed.xksl` to make them yellow.
+The particles are red. With Game Studio running, edit and save `ComputeColorRed.sdsl` to make them yellow.
 
   ```cs
 class ComputeColorRed : ComputeColor
@@ -62,13 +62,13 @@ class ComputeColorRed : ComputeColor
 };
 ```
 
-Because Xenko supports dynamic shader compilation, the particles immediately turn yellow.
+Because Stride supports dynamic shader compilation, the particles immediately turn yellow.
 
 ### Radial particle system
 
 For the next shader we'll use texture coordinates expose arbitrary values to the editor.
 
-Check `ComputeColorRadial.xksl`.
+Check `ComputeColorRadial.sdsl`.
 
   ```cs
 class ComputeColorRadial<float4 ColorCenter, float4 ColorEdge> : ComputeColor, Texturing
@@ -108,7 +108,7 @@ This demonstrates how to create custom materials and effects for the particles. 
 
 Parameter keys are used to map data and pass it to the shader. Some of them are generated, and we can define our own too.
 
-If we define more streams in our shader (`ParticleCustomShader`), they're exported to an automatically generated class. Try adding the following to `ParticleCustomShader.xksl`:
+If we define more streams in our shader (`ParticleCustomShader`), they're exported to an automatically generated class. Try adding the following to `ParticleCustomShader.sdsl`:
 
   ```cs
     // -------------------------------------
@@ -120,7 +120,7 @@ If we define more streams in our shader (`ParticleCustomShader`), they're export
 The generated .cs file should now contain:
 
   ```cs
-namespace Xenko.Rendering
+namespace Stride.Rendering
 {
     public static partial class ParticleCustomShaderKeys
     {
@@ -134,7 +134,7 @@ We don't need this stream for now, so we can delete it.
 We'll define some extra keys in `ParticleCustomMaterialKeys.cs` to use in our material and effects.
 
   ```cs
-namespace Xenko.Rendering
+namespace Stride.Rendering
 {
     public partial class ParticleCustomShaderKeys
     {
@@ -158,13 +158,13 @@ namespace Xenko.Rendering
 }
 ```
 
-As we saw above, the generated class has the same name and the namespace is `Xenko.Rendering`, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
+As we saw above, the generated class has the same name and the namespace is `Stride.Rendering`, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
 
 The rest of the code is self-explanatory. We'll need the map and value keys for shader generation later, and we'll set our generated code to the `BaseColor` and `BaseIntensity` keys respectively so the shader can use it.
 
 #### Custom Shader
 
-Let's look at `ParticleCustomShader.xksl`:
+Let's look at `ParticleCustomShader.sdsl`:
 
   ```cs
 
@@ -203,10 +203,10 @@ By overriding the `Shading()` method we can define our custom behavior. Because 
 
 #### Custom effect
 
-Our effect describes how to mix and compose the shaders. It's in `ParticleCustomEffect.xkfx`:
+Our effect describes how to mix and compose the shaders. It's in `ParticleCustomEffect.sdfx`:
 
   ```cs
-namespace Xenko.Rendering
+namespace Stride.Rendering
 {
     partial shader ParticleCustomEffect
     {
@@ -216,10 +216,10 @@ namespace Xenko.Rendering
         // Use the ParticleCustomShaderKeys for constant attributes, defined in this project
         using params ParticleCustomShaderKeys;
 
-        // Inherit from the ParticleBaseEffect.xkfx, defined in the game engine
+        // Inherit from the ParticleBaseEffect.sdfx, defined in the game engine
         mixin ParticleBaseEffect;
 
-        // Use the ParticleCustomShader.xksl, defined in this project
+        // Use the ParticleCustomShader.sdsl, defined in this project
         mixin ParticleCustomShader;
 
         // If the user-defined shader for the baseColor is not null use it
@@ -249,7 +249,7 @@ Last, we need a material which sets all the keys and uses the newly created effe
 
 #### Custom particle material
 
-We'll copy @'Xenko.Particles.Materials.ParticleMaterialComputeColor' into `ParticleCustomMaterial.cs` in our project and customize it to use two shaders for color binary trees.
+We'll copy @'Stride.Particles.Materials.ParticleMaterialComputeColor' into `ParticleCustomMaterial.cs` in our project and customize it to use two shaders for color binary trees.
 
   ```cs
         [DataMemberIgnore]
@@ -269,7 +269,7 @@ The base class automatically tries to load the effect specified with `EffectName
         private AttributeDescription texCoord1 = new AttributeDescription("TEXCOORD1");
 ```
 
-In addition to the already existing @'Xenko.Rendering.Materials.IComputeColor', we'll use @'Xenko.Rendering.Materials.IComputeScalar' for intensity, which returns a float, rather than a float4. We will also add another  @'Xenko.Particles.Materials.UVBuilder' for a second texture coordinates animation.
+In addition to the already existing @'Stride.Rendering.Materials.IComputeColor', we'll use @'Stride.Rendering.Materials.IComputeScalar' for intensity, which returns a float, rather than a float4. We will also add another  @'Stride.Particles.Materials.UVBuilder' for a second texture coordinates animation.
 
   ```cs
     var shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));

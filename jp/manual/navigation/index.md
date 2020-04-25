@@ -18,7 +18,7 @@
 
 ## サンプル プロジェクト
 
-実行時の[動的ナビゲーション](dynamic-navigation.md)の有効化や無効化など、ナビゲーションの実装方法の例については、Xenko に含まれる **Top-down RPG** サンプル プロジェクトを参照してください。
+実行時の[動的ナビゲーション](dynamic-navigation.md)の有効化や無効化など、ナビゲーションの実装方法の例については、Stride に含まれる **Top-down RPG** サンプル プロジェクトを参照してください。
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/NoOutlineAE.jpg">

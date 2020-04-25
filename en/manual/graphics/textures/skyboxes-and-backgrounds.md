@@ -9,7 +9,7 @@
 You can use **cubemaps** or **360° panoramic textures** as skyboxes. You can also [use them to light the scene](../lights-and-shadows/skybox-lights.md).
 
 > [!Note]
-> Currently, Xenko doesn't support skydomes or local skyboxes.
+> Currently, Stride doesn't support skydomes or local skyboxes.
 
 Alternatively, you can display a **2D background**, which is often useful for 2D games.
 
@@ -75,7 +75,7 @@ You add these like other color textures.
 
 To create a skybox, add a cubemap or 360° panoramic texture to a **background component**.
 
-Xenko includes an entity with a background component in the project by default. Only one background can be active in a scene at a time. If there are multiple backgrounds, Xenko only loads the first.
+Stride includes an entity with a background component in the project by default. Only one background can be active in a scene at a time. If there are multiple backgrounds, Stride only loads the first.
 
 You can add background components to as many entities as you need. You might want to include more than one background, for example, if you want to switch skyboxes at runtime.
 
@@ -95,7 +95,7 @@ You can add background components to as many entities as you need. You might wan
 
 ## Use a skybox as a light source
 
-You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](../lights-and-shadows/skybox-lights.md).
+You can use a skybox to light the scene. Stride analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](../lights-and-shadows/skybox-lights.md).
 
 ## Change the skybox at runtime
 
@@ -132,7 +132,7 @@ To do this, in the **Background** component properties, select **2D background**
 
 ![Background component properties](media/is-2d.png)
 
-If you enable this with a cubemap, Xenko uses the first face of the cubemap as the background.
+If you enable this with a cubemap, Stride uses the first face of the cubemap as the background.
 
 ## Use a video as a skybox
 

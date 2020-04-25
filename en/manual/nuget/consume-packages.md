@@ -18,11 +18,11 @@ First of all, after saving all your changes, open your project with Visual Studi
 
    ![Visual Studio Start button](media/manage-nuget-packages.png)
 
-2. For our example, let's use `Xenko.AssetPack.BuildingBlocks` package:
+2. For our example, let's use `Stride.AssetPack.BuildingBlocks` package:
    * Choose "nuget.org" or "All" as the **Package source**
    * Make sure **Include prerelease** is checked (if necessary)
    * Go to the **Browse** tab
-   * **Search** for a Xenko asset package (i.e. **Xenko.AssetPack.BuildingBlocks**) and select **Install**
+   * **Search** for a Stride asset package (i.e. **Stride.AssetPack.BuildingBlocks**) and select **Install**
 
    ![Install package](media/install-package.png)
 

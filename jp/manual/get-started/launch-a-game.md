@@ -64,7 +64,7 @@ Game.Window.IsBorderLess = true;
 次に例を示します。
 
 ```cs
-using Xenko.Engine;
+using Stride.Engine;
 
 namespace MyGame
 {

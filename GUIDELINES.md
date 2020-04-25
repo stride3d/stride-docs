@@ -4,7 +4,7 @@ breaks: false
 
 # Guidelines
 
-Xenko users will be reading your articles to learn about the engine in their every day work. 
+Stride users will be reading your articles to learn about the engine in their every day work. 
 Your goal is to write pages that are easy to understand and accessible to all. 
 To help you in your quest and to have an unified documentation easy to use,
 we ask you to follow to the below Guidelines when writing.
@@ -31,7 +31,7 @@ we ask you to follow to the below Guidelines when writing.
 * [Formatting](#Formatting)
   * [Text Styling](#Styling)
   * [Definitions](#Definitions)
-    * [Xenko Terms](#XenkoTerms)
+    * [Stride Terms](#StrideTerms)
     * [Video Game Terms](#VideoGameTerms)
     * [Job Specific Terms](#JobTerms)
   * [Page References](#References)
@@ -120,14 +120,14 @@ We recommend active voice because it is more readable. Passive voice can be more
 
 ##  <a name="SimpleVocabulary"> Simple Vocabulary </a>
 
-Keep in mind that Xenko users are not all native English speaker when you write your articles.
+Keep in mind that Stride users are not all native English speaker when you write your articles.
 Your audience is international and they probably don't have the vocabulary you have.
 
 As a general rule try to *target a 5th grade reading level" when you write.
 
 #  <a name="PagesContent"> Pages Content </a>
 
-Xenko documentation is composed of different types of pages. The expected content and layout
+Stride documentation is composed of different types of pages. The expected content and layout
 of the page directly depends on the type. Before writing your article, start by identifying the 
 type of page you are targeting, then follow the below templates for content and layout.
 
@@ -136,12 +136,12 @@ with a few generic recommendations for the content.
 
 ##  <a name="GettingStarted"> Getting Started Pages </a>
 
-Getting Started articles aim at guiding new Xenko users in their first steps. Pages should cover only basic 
+Getting Started articles aim at guiding new Stride users in their first steps. Pages should cover only basic 
 and essential topics and don't need to explain concepts in depth. Only one subject should be covered per page.
 
 Pages targeting any kind of audience should be inserted directly under the Getting Started root page.
 Pages targeting a specific audience should be inserted under a page specifying the audience. Getting
-Started pages order should follow the progress of a Xenko new user.
+Started pages order should follow the progress of a Stride new user.
 
 A Getting Started page consists of the following content:
 
@@ -153,10 +153,10 @@ A Getting Started page consists of the following content:
 
 Example:
 ```
-# Design Scenes with Xenko.
+# Design Scenes with Stride.
 
 Scenes are an essential element of your game. They allow you to divide the content of your game into levels and modules.
-In this article you will learn how to create and populate scenes from the editor in Xenko.
+In this article you will learn how to create and populate scenes from the editor in Stride.
 
 [Scene Image](media/scene.png)
 
@@ -187,7 +187,7 @@ Example
 
 In this tutorial you will create a simple 2D game from scratch. You will learn how to create a scene,
 perform collisions between elements and add a UI to your game.
-This tutorial assumes that you know how to create a new project and import assets in Xenko.
+This tutorial assumes that you know how to create a new project and import assets in Stride.
 
 [My 2D Game Image](media/my2dGame.png)
 
@@ -212,7 +212,7 @@ Example
 
 Previous [Use Physics Collisions](UsePhysicsCollision.md) | Next [Deploy your game](DeployYourGame.md)
 
-In this page you will add a simple UI to your game. You will learn how to create a UI using Xenko default 
+In this page you will add a simple UI to your game. You will learn how to create a UI using Stride default 
 design and make it interact with the gameplay.
 
 [My Game UI Image](media/MyGameUI.png)
@@ -257,7 +257,7 @@ Example
 
 Physics allows you to make physics simulations in your game.
 
-Xenko has a physic system fully integrated in its game studio. Its dedicated physic editor allows you to
+Stride has a physic system fully integrated in its game studio. Its dedicated physic editor allows you to
 directly edit physic shapes of objects or to automatically generate them from the models. 
 
 In this section you will learn how to simulate collisions between objects, add trigger regions, apply 
@@ -360,7 +360,7 @@ Try to keep your explanation short and simple and when possible add an image or 
 that corresponds to the concept next to your text.
 
 This guideline is even more important for Getting Started, Tutorials and HOWTO pages,
-where the text should correspond more to instructions than explanations about Xenko concepts.
+where the text should correspond more to instructions than explanations about Stride concepts.
 In those pages, you should either try to explain the concept in a simple lline or replace the
 explanation by a reference to the page dedicated to the concept.
 
@@ -526,9 +526,9 @@ Put every UI element or Window names in italic using the *Text in italic* syntax
 When you write your articles, you should be careful of properly defining all the terms that can be
 unknown by the user. We can basically distinguish the following three types of terms.
 
-###  <a name="XenkoTerms"> Xenko Terms </a>
+###  <a name="StrideTerms"> Stride Terms </a>
 
-These terms are specific to Xenko and absolutely need to be defined. These are terms like Asset,
+These terms are specific to Stride and absolutely need to be defined. These are terms like Asset,
 Live Scripting, Graphic Compositor, etc. You don't necessary need to create a dedicated page for each term. 
 You can define the term in the middle of a parent page if the concept is simple to explain. 
 Add the following tagg TODO virgile when we are done in editor doc. 
@@ -545,8 +545,8 @@ TODO @virgile: update this
 ###  <a name="VideoGameTerms"> Video Game Terms </a>
 
 These terms are specific to the game and graphic industry. 
-They should be briefly defined in one sentence in the Xenko documentation.
-If the topic is important for Xenko (e.g.: Forward rendering, etc.) we will elaborate more on the matter.
+They should be briefly defined in one sentence in the Stride documentation.
+If the topic is important for Stride (e.g.: Forward rendering, etc.) we will elaborate more on the matter.
 If not a link to an external site (wikipedia, etc) can also be used.
 The brief definition will be used to build tooltip in the documentation and Game Studio. 
 Only the first occurrence of the page should be linked.
@@ -555,7 +555,7 @@ Example
 ```
 TODO @virgile
 
-In Xenko you can choose between @forward-rendering and @deffered-rendering. (<-link to a dedicated pages).
+In Stride you can choose between @forward-rendering and @deffered-rendering. (<-link to a dedicated pages).
 
 Depending on the rendering model the [Shaders](http://wikipedia/shaders) are completely different. 
 (<- external reference)
@@ -569,7 +569,7 @@ be skipped.
 ###  <a name="JobTerms"> Job Specific Terms </a>
 
 These terms are specific to a role in the development process. They need to be defined only the when 
-the expected audience for the page is wider than just the specific job or when the term is used in the Xenko API. Most of the time we will 
+the expected audience for the page is wider than just the specific job or when the term is used in the Stride API. Most of the time we will 
 define them by using a link to an external page and adding a tooltip definition. Only the first occurrence
 of the page has to be defined.
 
@@ -623,7 +623,7 @@ Adding a link to a reference API can be done the following way:
 
 Example:
 ```
-Use the @'Xenko.Audio.SoundEffectInstance.Play' function start playing a sound.
+Use the @'Stride.Audio.SoundEffectInstance.Play' function start playing a sound.
 Playing an ongoing sound has no effect. Playing a stopped sound restart the sound from beginning.
 ```
 
@@ -665,7 +665,7 @@ There are several kinds of labels:
 * Level (Beginner, Intermediate, Advanced) with `label-doc-level`
 * Audience (Artist, Programmer, Designer) with `label-doc-audience`
 * Platform (iOS, Android, etc.) with `label-doc-platform`
-* Version where the feature have been introduced (Xenko 2.1, etc.)with `label-doc-version`
+* Version where the feature have been introduced (Stride 2.1, etc.)with `label-doc-version`
 
 Example:
 ```

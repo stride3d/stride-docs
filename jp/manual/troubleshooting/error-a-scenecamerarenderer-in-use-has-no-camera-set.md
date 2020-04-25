@@ -1,7 +1,7 @@
 # エラー: "A SceneCameraRenderer in use has no camera assigned to its ［Slot］. Make sure a camera is enabled and assigned to the ［Slot］."
 
 >[!NOTE]
->前のバージョン Xenko では、このエラー メッセージは "A SceneCameraRenderer in use has no camera set. Make sure the camera component to use is enabled and has its［Slot］property correctly set." でした。
+>前のバージョン Stride では、このエラー メッセージは "A SceneCameraRenderer in use has no camera set. Make sure the camera component to use is enabled and has its［Slot］property correctly set." でした。
 
 このエラーは、シーン レンダラーで使用できるカメラがないことを意味します。これには複数の原因が考えられます。
 

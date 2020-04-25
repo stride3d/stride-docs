@@ -6,7 +6,7 @@
 このチュートリアルでは、通過するボールのサイズを 2 倍にする[トリガー](../physics/triggers.md)を作成します。
 
 >[!NOTE]
->このチュートリアルのスクリーンショットとビデオは、前のバージョンの Xenko を使用して作成されました。そのため、UI の一部および既定のスカイボックスと球体は、お使いのバージョンと異なる場合があります。
+>このチュートリアルのスクリーンショットとビデオは、前のバージョンの Stride を使用して作成されました。そのため、UI の一部および既定のスカイボックスと球体は、お使いのバージョンと異なる場合があります。
 
 ## 1. 跳ね返るボールを作成する
 
@@ -156,10 +156,10 @@
 3. スクリプトを開き、内容を以下のコードに置き換えて、ファイルを保存します。
 
     ```cs
-    using Xenko.Engine;
-    using Xenko.Physics;
+    using Stride.Engine;
+    using Stride.Physics;
     using System.Threading.Tasks;
-    using Xenko.Core.Mathematics;
+    using Stride.Core.Mathematics;
 
     namespace TransformTrigger
     // このスクリプトには好みで任意の名前空間を使用できる。
@@ -231,11 +231,11 @@
 たとえば、球体エンティティのマテリアルを切り替えることができます。次のスクリプトは、Sphere エンティティのマテリアルを **Sphere Material** から **Ground Material** に切り替えて、元に戻します。
 
 ```cs
-using Xenko.Engine;
-using Xenko.Physics;
+using Stride.Engine;
+using Stride.Physics;
 using System.Threading.Tasks;
-using Xenko.Core.Mathematics;
-using Xenko.Rendering;
+using Stride.Core.Mathematics;
+using Stride.Rendering;
 
 namespace TransformTrigger
 // このスクリプトには好みで任意の名前空間を使用できる。

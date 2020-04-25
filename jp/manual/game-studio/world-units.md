@@ -1,10 +1,10 @@
 # ワールド単位
 
-Xenko では、1 単位は 1 メートルです。これは、物理特性およびレンダリング エンジンで使用されます。
+Stride では、1 単位は 1 メートルです。これは、物理特性およびレンダリング エンジンで使用されます。
 
 Game Studio では、単位がグリッドとして表示されます。
 
-![Grid in scene editor](../get-started/media/scene-creation-basic-scene-in-xenko.png)
+![Grid in scene editor](../get-started/media/scene-creation-basic-scene-in-stride.png)
 
 ## 関連項目
 

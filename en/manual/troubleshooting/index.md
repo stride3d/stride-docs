@@ -1,13 +1,13 @@
 # Troubleshooting
 
-These pages describe how to fix problems with Xenko.
+These pages describe how to fix problems with Stride.
 
 ![Troubleshooting](media/troubleshooting.png)
 
 * [Logging](logging.md)
 * [Debug text](debug-text.md)
 * [Profiling](profiling.md)
-* [Xenko doesn't run](xenko-doesnt-run.md)
+* [Stride doesn't run](stride-doesnt-run.md)
 * [Default value changes ignored at runtime](default-value-changes-ignored-at-runtime.md)
 * [Lights don't cast shadows](lights-dont-cast-shadows.md)
 * [Full call stack not available](full-call-stack-not-available.md)

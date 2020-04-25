@@ -9,7 +9,7 @@
 
 Constraints can either link two rigidbodies together, or link a single rigidbody to a point in the world. They allow for interaction and dependency among rigidbodies. 
 
-There are six [types of constraints](xref:Xenko.Physics.ConstraintTypes):
+There are six [types of constraints](xref:Stride.Physics.ConstraintTypes):
 
 * hinges
 * gears
@@ -25,34 +25,34 @@ For a demonstration of the different constraints, load the **PhysicsSample** sam
 > [!Note]
 > Currently, you can only use constraints from scripts.
 
-To create a constraint, use the [Simulation](xref:Xenko.Physics.Simulation) static method [CreateConstraint](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)):
+To create a constraint, use the [Simulation](xref:Stride.Physics.Simulation) static method [CreateConstraint](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)):
 
 ```cs
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix frameA, bool useReferenceFrameA);
 ```
 
-This links [RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) to the world at its current location.
-The boolean [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) specifies which coordinate system the limit is applied to (either [RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) or the world).
+This links [RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) to the world at its current location.
+The boolean [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) specifies which coordinate system the limit is applied to (either [RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) or the world).
 
 > [!Note]
-> * In the case of [ConstraintTypes.Point2Point](xref:Xenko.Physics.ConstraintTypes), the frame represents a pivot in A. Only the translation vector is considered. [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
-> * In the case of [ConstraintTypes.Hinge](xref:Xenko.Physics.ConstraintTypes), the frame represents a pivot in A and Axis in A. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world.
-> * In the case of [ConstraintTypes.ConeTwist](xref:Xenko.Physics.ConstraintTypes), [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
-> * [ConstraintTypes.Gear](xref:Xenko.Physics.ConstraintTypes) needs two rigidbodies to be created. This function will throw an exception.
+> * In the case of [ConstraintTypes.Point2Point](xref:Stride.Physics.ConstraintTypes), the frame represents a pivot in A. Only the translation vector is considered. [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
+> * In the case of [ConstraintTypes.Hinge](xref:Stride.Physics.ConstraintTypes), the frame represents a pivot in A and Axis in A. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world.
+> * In the case of [ConstraintTypes.ConeTwist](xref:Stride.Physics.ConstraintTypes), [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
+> * [ConstraintTypes.Gear](xref:Stride.Physics.ConstraintTypes) needs two rigidbodies to be created. This function will throw an exception.
 
 ```cs
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyComponent rigidBodyB, Matrix frameA, Matrix frameB, bool useReferenceFrameA)
 ```
 
-This method links [RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) to  [RigidBodyB](xref:Xenko.Physics.Constraint.RigidBodyB).
+This method links [RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) to  [RigidBodyB](xref:Stride.Physics.Constraint.RigidBodyB).
 
 > [!Note]
-> * In the case of [ConstraintTypes.Point2Point](xref:Xenko.Physics.ConstraintTypes), the frame represents a pivot in A or B. Only the translation vector is considered. [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
-> * In the case of [ConstraintTypes.Hinge](xref:Xenko.Physics.ConstraintTypes) the frame represents pivot in A/B and Axis in A/B. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world in this case.
-> * In the case of [ConstraintTypes.ConeTwist](xref:Xenko.Physics.ConstraintTypes), [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
-> * In the case of [ConstraintTypes.Gear](xref:Xenko.Physics.ConstraintTypes), [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) is ignored. The frame just represents the axis either in A or B; only the translation vector (which should contain the axis) is used.
+> * In the case of [ConstraintTypes.Point2Point](xref:Stride.Physics.ConstraintTypes), the frame represents a pivot in A or B. Only the translation vector is considered. [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
+> * In the case of [ConstraintTypes.Hinge](xref:Stride.Physics.ConstraintTypes) the frame represents pivot in A/B and Axis in A/B. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world in this case.
+> * In the case of [ConstraintTypes.ConeTwist](xref:Stride.Physics.ConstraintTypes), [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
+> * In the case of [ConstraintTypes.Gear](xref:Stride.Physics.ConstraintTypes), [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored. The frame just represents the axis either in A or B; only the translation vector (which should contain the axis) is used.
 
-The boolean [useReferenceFrameA](xref:Xenko.Physics.Simulation.CreateConstraint\(Xenko.Physics.ConstraintTypes,Xenko.Physics.RigidbodyComponent,Xenko.Core.Mathematics.Matrix,System.Boolean\)) determines which coordinate system ([RigidBodyA](xref:Xenko.Physics.Constraint.RigidBodyA) or [RigidBodyB](xref:Xenko.Physics.Constraint.RigidBodyB)) the limits are applied to.
+The boolean [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) determines which coordinate system ([RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) or [RigidBodyB](xref:Stride.Physics.Constraint.RigidBodyB)) the limits are applied to.
 
 ## Add constraints to the simulation
 
@@ -69,7 +69,7 @@ var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);
 ```
 
-The parameter [disableCollisionsBetweenLinkedBodies](xref:Xenko.Physics.Simulation.AddConstraint\(Xenko.Physics.Constraint,System.Boolean\))
+The parameter [disableCollisionsBetweenLinkedBodies](xref:Stride.Physics.Simulation.AddConstraint\(Stride.Physics.Constraint,System.Boolean\))
  stops linked bodies colliding with each other.
 
 Likewise, to remove a constraint from the simulation, use:

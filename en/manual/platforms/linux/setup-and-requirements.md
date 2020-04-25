@@ -1,6 +1,6 @@
 # Setup and requirements
 
-To develop for Linux using Xenko, you need a Linux PC with a graphics card that supports at least OpenGL 4.2 or Vulkan 1.0. The preferred Linux distribution for Xenko is Ubuntu 16.04 or later, as this was the setup we used to develop the Linux version of Xenko.
+To develop for Linux using Stride, you need a Linux PC with a graphics card that supports at least OpenGL 4.2 or Vulkan 1.0. The preferred Linux distribution for Stride is Ubuntu 16.04 or later, as this was the setup we used to develop the Linux version of Stride.
 
 The instructions below assume you have Ubuntu 16.04 installed. You might need to adapt them according to your Linux distribution.
 
@@ -42,7 +42,7 @@ To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which 
 sudo apt-get install libsdl2-dev
 ```
 
-### .NET Code
+### .NET Core
 
 For information about how to install .NET Core, see the [.NET Core instructions for Debian/Ubuntu](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
 

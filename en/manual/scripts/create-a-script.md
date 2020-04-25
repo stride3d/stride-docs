@@ -38,9 +38,9 @@ You can also see the new script in Visual Studio.
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using Xenko.Core.Mathematics;
-using Xenko.Input;
-using Xenko.Engine;
+using Stride.Core.Mathematics;
+using Stride.Input;
+using Stride.Engine;
 
 namespace MyGame
 {
@@ -91,9 +91,9 @@ namespace MyGame
 	using System;
 	using System.Text;
 	using System.Threading.Tasks;
-	using Xenko.Core.Mathematics;
-	using Xenko.Input;
-	using Xenko.Engine;
+	using Stride.Core.Mathematics;
+	using Stride.Input;
+	using Stride.Engine;
 		
 	namespace MyGame
 	{

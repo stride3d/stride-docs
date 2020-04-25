@@ -20,16 +20,16 @@ In most cases, you want the debug renderer to share an entry point with one or m
 
 To use the debug renderer, reference it in your script and add debug render stages.
 
-For example, the **Debug physics shapes** script included in Xenko uses the debug renderer to display collider shapes at runtime.
+For example, the **Debug physics shapes** script included in Stride uses the debug renderer to display collider shapes at runtime.
 
 ```cs
 using System.Linq;
 using System.Threading.Tasks;
-using Xenko.Input;
-using Xenko.Engine;
-using Xenko.Physics;
-using Xenko.Rendering;
-using Xenko.Rendering.Compositing;
+using Stride.Input;
+using Stride.Engine;
+using Stride.Physics;
+using Stride.Rendering;
+using Stride.Rendering.Compositing;
 
 namespace MyGame
 {
@@ -52,7 +52,7 @@ namespace MyGame
             var meshRenderFeature = compositor.RenderFeatures.OfType<MeshRenderFeature>().First();
             meshRenderFeature.RenderStageSelectors.Add(new SimpleGroupToRenderStageSelector
             {
-                EffectName = "XenkoForwardShadingEffect",
+                EffectName = "StrideForwardShadingEffect",
                 RenderGroup = (RenderGroupMask)(1 << (int)RenderGroup),
                 RenderStage = shapesRenderState,
             });

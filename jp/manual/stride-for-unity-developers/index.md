@@ -1,14 +1,14 @@
-# Unity® 向け Xenko 開発者
+# Unity® 向け Stride 開発者
 
-Xenko と Unity® はどちらも C# を使用し、多くの概念を共有していますが、いくつか大きな違いがあります。
+Stride と Unity® はどちらも C# を使用し、多くの概念を共有していますが、いくつか大きな違いがあります。
 
-![Xenko for Unity® developers](media/xenko-vs-unity-opening-image.png)
+![Stride for Unity® developers](media/stride-vs-unity-opening-image.png)
 
 ## エディター
 
-Xenko のエディターは **Game Studio** です。これは Unity® Editor と同等のものです。
+Stride のエディターは **Game Studio** です。これは Unity® Editor と同等のものです。
 
-![Xenko and Unity®  interface comparison](media/xenko-vs-unity-interface-comparison.png)
+![Stride and Unity®  interface comparison](media/stride-vs-unity-interface-comparison.png)
 
 *[Unity3D シーンからの Web サービスの呼び出し](http://through-the-interface.typepad.com/through_the_interface/2012/04/calling-a-web-service-from-a-unity3d-scene.html)から取得された Unity® のスクリーンショット (Kean Walmsley 氏提供)。*
 
@@ -18,9 +18,9 @@ Game Studio の詳細については、「[Game Studio](../game-studio/index.md)
 
 ## 用語
 
-Unity® と Xenko ではほぼ共通の用語が使用されていますが、いくつか違いがあります。
+Unity® と Stride ではほぼ共通の用語が使用されていますが、いくつか違いがあります。
 
-| Unity®  | Xenko |
+| Unity®  | Stride |
 | ----- | ------- |
 | Hierarchy panel | エンティティ ツリー |
 | Inspector	| Property grid |
@@ -31,7 +31,7 @@ Unity® と Xenko ではほぼ共通の用語が使用されていますが、�
 
 ## フォルダーとファイル
 
-Unity® と同様に、Xenko プロジェクトは以下を含むディレクトリに格納されます。
+Unity® と同様に、Stride プロジェクトは以下を含むディレクトリに格納されます。
 
 * プロジェクトの ``.sln`` ソリューション ファイル。Game Studio または Visual Studio などの任意の IDE で開くことができます。
 
@@ -51,25 +51,25 @@ Unity® と同様に、Xenko プロジェクトは以下を含むディレクト
 
 *［Resources］は、アセットによって使用される画像ファイルやオーディオ ファイルなどのファイルに推奨される場所です。
 
-Xenko と Unity® は次の点が異なります。
+Stride と Unity® は次の点が異なります。
 
-* Xenko では、リソース ファイルをアセットにインポートしても、リソース ファイルはプロジェクト フォルダーに自動的にコピーされません。手動で行う必要があります。リソース ファイルは［Resources］フォルダーに保存することをお勧めします。
+* Stride では、リソース ファイルをアセットにインポートしても、リソース ファイルはプロジェクト フォルダーに自動的にコピーされません。手動で行う必要があります。リソース ファイルは［Resources］フォルダーに保存することをお勧めします。
 
-* Xenko では、リソース ファイルとアセット ファイルが同じフォルダーに存在する必要はありません。必要であればリソース ファイルを［Assets］フォルダーに保存できますが、［Resources］フォルダーに保存することをお勧めします。このようにすれば、バージョン管理によるプロジェクトの共有が容易になります。
+* Stride では、リソース ファイルとアセット ファイルが同じフォルダーに存在する必要はありません。必要であればリソース ファイルを［Assets］フォルダーに保存できますが、［Resources］フォルダーに保存することをお勧めします。このようにすれば、バージョン管理によるプロジェクトの共有が容易になります。
 
-Xenko でのプロジェクトの構造およびファイルの編成と共有の方法に関するアドバイスについては、「[プロジェクトの構造](../files-and-folders/project-structure.md)」ページを参照してください。
+Stride でのプロジェクトの構造およびファイルの編成と共有の方法に関するアドバイスについては、「[プロジェクトの構造](../files-and-folders/project-structure.md)」ページを参照してください。
 
 ### Game Studio からプロジェクト ディレクトリを開く
 
 Game Studio の［Project］>［Show in Explorer］からプロジェクト ディレクトリを開くことができます。
 
-![Open project directory from Game Studio](media/xenko-vs-unity-open-project-in-windows-explorer.png)
+![Open project directory from Game Studio](media/stride-vs-unity-open-project-in-windows-explorer.png)
 
 ## ゲームの設定
 
 Unity® では、グローバルな設定が個別のアセットに保存されます (グラフィックスの設定、品質の設定、オーディオ マネージャーなど)。
 
-Xenko では、グローバルな設定は 1 つのアセット (［Game Settings］アセット) に保存されます。以下の情報を構成できます。
+Stride では、グローバルな設定は 1 つのアセット (［Game Settings］アセット) に保存されます。以下の情報を構成できます。
 
 * **既定のシーン**
 * **レンダリングの設定**
@@ -84,7 +84,7 @@ Game Settings アセットを使用するには、［Asset view］で［Game Set
 
 ## シーン
 
-Unity® と同様に、Xenko ではすべてのオブジェクトをシーンに配置します。シーンは、独立した ``.xkscene`` アセットとしてプロジェクト ディレクトリに格納されます。
+Unity® と同様に、Stride ではすべてのオブジェクトをシーンに配置します。シーンは、独立した ``.sdscene`` アセットとしてプロジェクト ディレクトリに格納されます。
 
 ### 既定のシーンを設定する
 
@@ -94,7 +94,7 @@ Unity® と同様に、Xenko ではすべてのオブジェクトをシーンに
 
 1. ［Game Settings］のプロパティで、［Default Scene］の隣の ![Hand icon](~/manual/game-studio/media/hand-icon.png) (［Select an asset］) をクリックします。
 
-    ![Set default scene](media/xenko-vs-unity-game-settings-default-scene.png)
+    ![Set default scene](media/stride-vs-unity-game-settings-default-scene.png)
 
    ［Select an asset］ウィンドウが開きます。
 
@@ -104,28 +104,28 @@ Unity® と同様に、Xenko ではすべてのオブジェクトをシーンに
 
 ## エンティティと GameObject
 
-Unity® では、シーン内のオブジェクトは **GameObject** と呼ばれます。Xenko では**エンティティ**と呼びます。
+Unity® では、シーン内のオブジェクトは **GameObject** と呼ばれます。Stride では**エンティティ**と呼びます。
 
-![Entities in Xenko](media/xenko-vs-unity-entities.jpg)
+![Entities in Stride](media/stride-vs-unity-entities.jpg)
 
 GameObject と同様に、エンティティには変換コンポーネント、モデル コンポーネント、オーディオ コンポーネントなどのコンポーネントが格納されます。Unity® の GameObject を使い慣れている場合、Game Studio のエンティティも問題なく使用できるはずです。
 
 ## エンティティのコンポーネント
 
-Unity® で GameObject にコンポーネントを追加するのと同じように、Xenko ではエンティティにコンポーネントを追加します。
+Unity® で GameObject にコンポーネントを追加するのと同じように、Stride ではエンティティにコンポーネントを追加します。
 
 Game Studio でコンポーネントをエンティティに追加するには:
 
 1. コンポーネントを追加するエンティティを選択します。
 2. ［Property grid］(既定では右側) で［Add component］をクリックし、ドロップダウン リストからコンポーネントを選択します。
 
-    ![Add component](media/xenko-vs-unity-add-component-to-entity.png)
+    ![Add component](media/stride-vs-unity-add-component-to-entity.png)
 
 ### Transform コンポーネント
 
-Unity® の GameObject と同じように、Xenko の各エンティティにはワールドでの位置、回転、拡大縮小を設定する [Transform コンポーネント](xref:Xenko.Engine.TransformComponent)があります。
+Unity® の GameObject と同じように、Stride の各エンティティにはワールドでの位置、回転、拡大縮小を設定する [Transform コンポーネント](xref:Stride.Engine.TransformComponent)があります。
 
-![Transform component](media/xenko-vs-unity-entity-transform-component.png)
+![Transform component](media/stride-vs-unity-entity-transform-component.png)
 
 シーン内のすべてのエンティティは位置を持つ必要があるため、空のエンティティにも Transform コンポーネントがあります。
 
@@ -133,7 +133,7 @@ Unity® の GameObject と同じように、Xenko の各エンティティには
 
 Unity® では、［Project browser］でアセットを選択し、［Inspector］タブでプロパティを編集します。
 
-Xenko も同様です。［Asset view］でアセットを選択し、［Property grid］でプロパティを編集します。
+Stride も同様です。［Asset view］でアセットを選択し、［Property grid］でプロパティを編集します。
 
 ![Asset and properties](media/asset-and-properties.png)
 
@@ -154,7 +154,7 @@ Xenko も同様です。［Asset view］でアセットを選択し、［Propert
 
 新しいタブでエディターが開きます。自由にタブを配置することも、Web ブラウザーのタブのように別のウィンドウにすることもできます。
 
-![Dedicated Xenko editors](media/xenko-vs-unity-different-editors.png)
+![Dedicated Stride editors](media/stride-vs-unity-different-editors.png)
 
 >[!NOTE]
 >Game Studio の外部でリソース ファイルを変更すると、Game Studio で対応するリソースが自動的に更新されます。
@@ -165,14 +165,14 @@ Xenko も同様です。［Asset view］でアセットを選択し、［Propert
 
 プロジェクトにアセットを追加するとすぐに、［Property grid］でプロパティを編集できます。
 
-![Add asset](media/xenko-vs-unity-add-asset.png)
+![Add asset](media/stride-vs-unity-add-asset.png)
 
 >[!NOTE]
-> Unity® とは異なり、Xenko ではリソース ファイルをプロジェクトにインポートしても、リソース ファイルはプロジェクト ディレクトリに自動的にコピーされません。
+> Unity® とは異なり、Stride ではリソース ファイルをプロジェクトにインポートしても、リソース ファイルはプロジェクト ディレクトリに自動的にコピーされません。
 
 ### サポートされるファイル形式
 
-Unity® と同様に、Xenko では次のファイル形式がサポートされています。
+Unity® と同様に、Stride では次のファイル形式がサポートされています。
 
 | アセットの種類  | サポートされる形式                                           
 |------|---|
@@ -184,21 +184,21 @@ Unity® と同様に、Xenko では次のファイル形式がサポートされ
 アセットの詳細については、「[アセット](../game-studio/assets.md)」を参照してください。
 
 > [!NOTE]
-> * 現在、Xenko は動画ファイルをサポートしていません。
+> * 現在、Stride は動画ファイルをサポートしていません。
 
 ## プレハブ
 
-Unity® と同様に、Xenko ではプレハブが使用されます。プレハブとはオブジェクトの「マスター」バージョンであり、必要な場所で再利用できます。プレハブを変更すると、そのプレハブのすべてのインスタンスも変わります。
+Unity® と同様に、Stride ではプレハブが使用されます。プレハブとはオブジェクトの「マスター」バージョンであり、必要な場所で再利用できます。プレハブを変更すると、そのプレハブのすべてのインスタンスも変わります。
 
-![Prefabs in Xenko](media/xenko-vs-unity-prefabs.png)
+![Prefabs in Stride](media/stride-vs-unity-prefabs.png)
 
-Unity® とは異なり、Xenko ではプレハブを他のプレハブに追加することもできます。これは**入れ子になったプレハブ**と呼ばれます。入れ子になったプレハブを変更した場合、すべての依存するプレハブが変更を自動的に継承します。
+Unity® とは異なり、Stride ではプレハブを他のプレハブに追加することもできます。これは**入れ子になったプレハブ**と呼ばれます。入れ子になったプレハブを変更した場合、すべての依存するプレハブが変更を自動的に継承します。
 
 たとえば、加速、ブレーキ、ステアリングなどを持つ［Vehicle］プレハブを作成しているものとします。［Vehicle］プレハブを、タクシー、バス、トラックなどの異なる種類の自動車のプレハブに入れ子にできます。［Vehicle］プレハブでプロパティを調整すると、他のすべてのプレハブに変更が継承されます。たとえば、［Vehicle］プレハブで加速プロパティを大きくすると、タクシー、バス、トラックの加速プロパティも大きくなります。
 
 Unity® でこれを行うには、自動車の種類ごとに異なるプレハブを作成し、加速パラメーターを 1 つずつ変更する必要があります。
 
-Xenko でのプレハブの使用の詳細については、「[プレハブ](../game-studio/prefabs/index.md)」を参照してください。
+Stride でのプレハブの使用の詳細については、「[プレハブ](../game-studio/prefabs/index.md)」を参照してください。
 
 ## アーキタイプ
 
@@ -222,9 +222,9 @@ Archetype
 
 ## 入力
 
-Xenko はさまざまな入力をサポートします。以下のコード サンプルでは、Xenko と Unity® での入力コードの違いを示します。
+Stride はさまざまな入力をサポートします。以下のコード サンプルでは、Stride と Unity® での入力コードの違いを示します。
 
-Xenko での入力の詳細については、「[入力](../input/index.md)」を参照してください。
+Stride での入力の詳細については、「[入力](../input/index.md)」を参照してください。
 
 #### Unity®
 ```cs
@@ -250,7 +250,7 @@ void Update()
 
 ## 物理特性
 
-Unity® と同様に、Xenko にも 3 種類のコライダーがあります。
+Unity® と同様に、Stride にも 3 種類のコライダーがあります。
 
 * 静的コライダー
 * 剛体
@@ -282,7 +282,7 @@ void DisableRagdoll()
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 public class KinematicX : SyncScript
@@ -313,7 +313,7 @@ public class KinematicX : SyncScript
 }
 ```
 
-Xenko での剛体の詳細については、「[剛体](../physics/rigid-bodies.md)」を参照してください。
+Stride での剛体の詳細については、「[剛体](../physics/rigid-bodies.md)」を参照してください。
 
 ### トリガー
 
@@ -333,7 +333,7 @@ void OnTriggerExit(Collider Other)
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 var trigger = Entity.Get<PhysicsComponent>();
@@ -363,7 +363,7 @@ while (Game.IsRunning)
 }
 ```
 
-Xenko でのトリガーの詳細については、「[トリガー](../physics/triggers.md)」を参照してください。
+Stride でのトリガーの詳細については、「[トリガー](../physics/triggers.md)」を参照してください。
 
 ### レイキャスティング
 
@@ -389,7 +389,7 @@ Collider FindGOCameraIsLookingAt()
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 public static PhysicsComponent ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera, Simulation simulation)
@@ -412,31 +412,31 @@ public static PhysicsComponent ScreenPositionToWorldPositionRaycast(Vector2 scre
     return result.Succeeded;
 }
 ```
-Xenko でのレイキャスティングの詳細については、「[レイキャスティング](../physics/raycasting.md)」を参照してください。
+Stride でのレイキャスティングの詳細については、「[レイキャスティング](../physics/raycasting.md)」を参照してください。
 
 ## スクリプト
 
-Xenko では、スクリプトはプロジェクト ディレクトリの［MyGame.Game］フォルダーのサブフォルダーに保存されます。
+Stride では、スクリプトはプロジェクト ディレクトリの［MyGame.Game］フォルダーのサブフォルダーに保存されます。
 
 Game Studio のスクリプト エディターでスクリプトを開くには、［Asset view］でスクリプトをダブルクリックします。スクリプト エディターには、構文の強調表示、オートコンプリート、ライブ診断の機能があります。
 
-![Xenko script editor](media/xenko-vs-unity-script-editor.png)
+![Stride script editor](media/stride-vs-unity-script-editor.png)
 
 Visual Studio などの他の IDE でスクリプトを編集することもできます。外部 IDE でスクリプトを編集すると、自動的に再ロードされます。
 
-Xenko をインストールするときに Visual Studio プラグインをインストールすると、Game Studio からプロジェクトを Visual Studio で開くことができます。そのためには、Game Studio ツールバーで［Open in IDE］をクリックします。
+Stride をインストールするときに Visual Studio プラグインをインストールすると、Game Studio からプロジェクトを Visual Studio で開くことができます。そのためには、Game Studio ツールバーで［Open in IDE］をクリックします。
 
-![Open project in Visual Studio](media/xenko-vs-unity-open-project-in-visual-studio.png)
+![Open project in Visual Studio](media/stride-vs-unity-open-project-in-visual-studio.png)
 
 または、［Asset view］でスクリプトを右クリックし、［Open asset file］をクリックします。
 
-![Open asset file](media/xenko-vs-unity-open-asset-file.png)
+![Open asset file](media/stride-vs-unity-open-asset-file.png)
 
 ### イベント関数 (Start、Update、Execute など)
 
 Unity® では、Start()、Update()、その他のメソッドで MonoBehaviour を操作します。
 
-MonoBehaviour の代わりに、Xenko には SyncScript、AsyncScript、StartupScript の 3 種類のスクリプトがあります。詳細については、「[スクリプトの種類](../scripts/types-of-script.md)」を参照してください。
+MonoBehaviour の代わりに、Stride には SyncScript、AsyncScript、StartupScript の 3 種類のスクリプトがあります。詳細については、「[スクリプトの種類](../scripts/types-of-script.md)」を参照してください。
 
 ### Unity® の MonoBehaviour
 
@@ -449,7 +449,7 @@ public class BasicMethods : MonoBehaviour
 }
 ```
 
-### Xenko の SyncScript
+### Stride の SyncScript
 
 ```cs
 public class BasicMethods : SyncScript
@@ -460,7 +460,7 @@ public class BasicMethods : SyncScript
 }
 ```
 
-### Xenko の AsyncScript
+### Stride の AsyncScript
 
 ```cs
 public class BasicMethods : AsyncScript
@@ -482,7 +482,7 @@ public class BasicMethods : AsyncScript
 }
 ```
 
-### Xenko の StartupScript
+### Stride の StartupScript
 
 ```cs
 public class BasicMethods : StartupScript
@@ -502,27 +502,27 @@ public class BasicMethods : StartupScript
 
 ## スクリプト コンポーネント
 
-Unity® と同様に、Xenko では、スクリプト コンポーネントとして追加することによってスクリプトをエンティティにアタッチします。
+Unity® と同様に、Stride では、スクリプト コンポーネントとして追加することによってスクリプトをエンティティにアタッチします。
 
 ### スクリプトを作成する
 
 スクリプトを作成するには、［Add asset］ボタンをクリックして、［Scripts］を選択します。
 
-![Create script in Xenko](media/xenko-vs-unity-create-script.png)
+![Create script in Stride](media/stride-vs-unity-create-script.png)
 
-Unity® では、`MonoBehaviour` スクリプトを作成すると、2 つの基底関数 `Start()` と `Update()` が作成されます。Xenko の [SyncScript](xref:Xenko.Engine.SyncScript) は同じように動作します。`MonoBehaviour` と同様に、[SyncScript](xref:Xenko.Engine.SyncScript) には次の 2 つのメソッドがあります。
+Unity® では、`MonoBehaviour` スクリプトを作成すると、2 つの基底関数 `Start()` と `Update()` が作成されます。Stride の [SyncScript](xref:Stride.Engine.SyncScript) は同じように動作します。`MonoBehaviour` と同様に、[SyncScript](xref:Stride.Engine.SyncScript) には次の 2 つのメソッドがあります。
 
-* [Start()](xref:Xenko.Engine.StartupScript.Start) は、スクリプトがロードされると呼び出されます。
+* [Start()](xref:Stride.Engine.StartupScript.Start) は、スクリプトがロードされると呼び出されます。
 
-* [Update()](xref:Xenko.Engine.SyncScript.Update) は、更新のたびに呼び出されます。
+* [Update()](xref:Stride.Engine.SyncScript.Update) は、更新のたびに呼び出されます。
 
-`MonoBehaviour` とは異なる、すべての [SyncScript](xref:Xenko.Engine.SyncScript) で [Update()](xref:Xenko.Engine.SyncScript.Update) メソッドを使用する必要があります。そうしないと、コードは正しく動作しません。
+`MonoBehaviour` とは異なる、すべての [SyncScript](xref:Stride.Engine.SyncScript) で [Update()](xref:Stride.Engine.SyncScript.Update) メソッドを使用する必要があります。そうしないと、コードは正しく動作しません。
 
 スクリプトをスタートアップ スクリプトまたは非同期スクリプトにしたい場合は、対応するスクリプトの種類を使用します。
 
-* [StartupScript](xref:Xenko.Engine.StartupScript): このスクリプトのメソッドは [Start()](xref:Xenko.Engine.StartupScript.Start) の 1 つだけです。起動時にシーンとその内容を初期化します。
+* [StartupScript](xref:Stride.Engine.StartupScript): このスクリプトのメソッドは [Start()](xref:Stride.Engine.StartupScript.Start) の 1 つだけです。起動時にシーンとその内容を初期化します。
 
-* [AsyncScript](xref:Xenko.Engine.AsyncScript): 非同期スクリプトのメソッドは [Execute()](xref:Xenko.Engine.AsyncScript.Execute) の 1 つだけで、そのメソッド内で非同期/待機を使用できます。非同期スクリプトは、同期スクリプトのように 1 つずつロードされることはありません。すべてのスクリプトが並列にロードされます。
+* [AsyncScript](xref:Stride.Engine.AsyncScript): 非同期スクリプトのメソッドは [Execute()](xref:Stride.Engine.AsyncScript.Execute) の 1 つだけで、そのメソッド内で非同期/待機を使用できます。非同期スクリプトは、同期スクリプトのように 1 つずつロードされることはありません。すべてのスクリプトが並列にロードされます。
 
 ### アセンブリを再ロードする
 
@@ -540,13 +540,13 @@ Unity® とは異なり、スクリプトを作成した後は、アセンブリ
 
 ![Add script component](../scripts/media/add-script-component.png)
 
-Unity® では、スクリプト コンポーネントは［Components］>［Scripts］の下にグループ化されています。Xenko では、スクリプトはグループ化されません。Game Studio では、他のコンポーネントと一緒にアルファベット順に一覧表示されます。
+Unity® では、スクリプト コンポーネントは［Components］>［Scripts］の下にグループ化されています。Stride では、スクリプトはグループ化されません。Game Studio では、他のコンポーネントと一緒にアルファベット順に一覧表示されます。
 
-Xenko でのスクリプトの追加の詳細については、「[スクリプトを使用する](../scripts/use-a-script.md)」を参照してください。
+Stride でのスクリプトの追加の詳細については、「[スクリプトを使用する](../scripts/use-a-script.md)」を参照してください。
 
 ## ゲームプレイのスクリプト化
 
-Unity® と Xenko はどちらも C# を使用します。ただし、Xenko でのゲームプレイのスクリプト化は Unity® と少し異なります。
+Unity® と Stride はどちらも C# を使用します。ただし、Stride でのゲームプレイのスクリプト化は Unity® と少し異なります。
 
 ### エンティティ/GameObject をインスタンス化する
 
@@ -566,9 +566,9 @@ void Start()
 }
 ```
 
-#### Xenko
+#### Stride
 
-Xenko では、Unity® の GameObject と同じように**エンティティ**をインスタンス化できます。
+Stride では、Unity® の GameObject と同じように**エンティティ**をインスタンス化できます。
 
 ```cs
 // Game Studio のプロパティ グリッドに表示される、宣言されたパブリック メンバー フィールドとプロパティ。
@@ -589,7 +589,7 @@ public override void Start()
 
 ### 既定値を使用する
 
-Unity® の各クラスには特定の既定値があります。スクリプトでこれらのプロパティをオーバーライドしないと、既定値が使用されます。これは Xenko でも同じです。
+Unity® の各クラスには特定の既定値があります。スクリプトでこれらのプロパティをオーバーライドしないと、既定値が使用されます。これは Stride でも同じです。
 
 #### Unity®
 
@@ -608,7 +608,7 @@ void Start()
 }
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 // Game Studio のプロパティ グリッドに表示される、宣言されたパブリック メンバー フィールドとプロパティ。
@@ -635,7 +635,7 @@ public override void Start()
 MyGameObject.SetActive(false);
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 Entity.EnableAll(false, true);
@@ -649,7 +649,7 @@ Entity.EnableAll(false, true);
 Light lightComponent = GetComponent<Light>();
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 LightComponent lightComponent = Entity.Get<LightComponent>();
@@ -663,7 +663,7 @@ LightComponent lightComponent = Entity.Get<LightComponent>();
 GameObject ParentGO = lightComponent.gameObject;
 ```
 
-#### Xenko
+#### Stride
 
 ```cs
 Entity ParentEntity = lightComponent.Entity;

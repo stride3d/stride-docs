@@ -1,8 +1,8 @@
 # オーディオ
 
-サウンド ファイルをインポートして、それをゲームやアプリケーションで使用できます。Xenko は、3D 空間オーディオ、ストリーミング、低遅延再生などのオーディオ機能をサポートしています。
+サウンド ファイルをインポートして、それをゲームやアプリケーションで使用できます。Stride は、3D 空間オーディオ、ストリーミング、低遅延再生などのオーディオ機能をサポートしています。
 
-![Audio in Xenko](media/audio-index-intro-picture.png)
+![Audio in Stride](media/audio-index-intro-picture.png)
 
 ## このセクションの内容
 

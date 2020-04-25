@@ -12,7 +12,7 @@ The function for each stage has a predefined name, so we recommend you don't cha
 
 These are all void methods.
 
-The geometry and tessellation shaders need some kind of predefined structure as input and output. However, since Xenko shaders are generic, it's impossible to know beforehand what the structure will be. As a result, these shaders use `Input` and `Output` structures that are automatically generated to fit the final shader.
+The geometry and tessellation shaders need some kind of predefined structure as input and output. However, since Stride shaders are generic, it's impossible to know beforehand what the structure will be. As a result, these shaders use `Input` and `Output` structures that are automatically generated to fit the final shader.
 
 ## Vertex shader
 

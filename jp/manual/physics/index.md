@@ -1,8 +1,8 @@
 # 物理特性
 
-![Physics in Xenko](media/physics-index-physics-in-xenko.png)
+![Physics in Stride](media/physics-index-physics-in-stride.png)
 
-Xenko は、重力や衝突といった現実世界の物理特性をシミュレートします。このセクションでは、物理特性コンポーネントの動作方法、プロジェクトへの追加方法、スクリプトでの使用方法を説明します。
+Stride は、重力や衝突といった現実世界の物理特性をシミュレートします。このセクションでは、物理特性コンポーネントの動作方法、プロジェクトへの追加方法、スクリプトでの使用方法を説明します。
 
 ## このセクションの内容
 
@@ -15,7 +15,7 @@ Xenko は、重力や衝突といった現実世界の物理特性をシミュ�
     * [トリガー](triggers.md): トリガーを使用して通過するオブジェクトを検出します
     * [制約](constraints.md): 魅力的で現実的な物理特性を作成します
 * [レイキャスティング](raycasting.md): 交差するオブジェクトをトレースします
-* [シミュレーション](simulation.md): Xenko が物理特性を制御する方法です
+* [シミュレーション](simulation.md): Stride が物理特性を制御する方法です
 
 ### チュートリアル
 
@@ -24,4 +24,4 @@ Xenko は、重力や衝突といった現実世界の物理特性をシミュ�
 
 ## その他の参照情報
 
-Xenko では、オープンソースの [Bullet Physics](http://bulletphysics.org/wordpress/) エンジンが使用されています。詳細については、[Bullet のユーザー マニュアル](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf)を参照してください。
+Stride では、オープンソースの [Bullet Physics](http://bulletphysics.org/wordpress/) エンジンが使用されています。詳細については、[Bullet のユーザー マニュアル](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf)を参照してください。

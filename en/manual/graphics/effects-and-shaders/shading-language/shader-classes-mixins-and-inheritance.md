@@ -1,13 +1,13 @@
 # Shader classes, mixins and inheritance
 
-Xenko Shading Language (XKSL) is an extension of HLSL, which makes it closer to C# syntax and concepts. The language is object-oriented:
+Stride Shading Language (SDSL) is an extension of HLSL, which makes it closer to C# syntax and concepts. The language is object-oriented:
 
 - shader classes are the foundation of the code
 - shader classes contain methods and members
 - shader classes can be inherited, methods can be overridden
 - member types can be shader classes
 
-XKSL uses an original way to handle multiple inheritance. Inheritance is performed through mixins, so the order of inheritance is crucial:
+SDSL uses an original way to handle multiple inheritance. Inheritance is performed through mixins, so the order of inheritance is crucial:
 
 - the order of inheritance defines the actual implementation of a method (the last override)
 - if a mixin appears several times in the inheritance, only the first occurrence is taken into account (as well as its members and methods)
@@ -15,7 +15,7 @@ XKSL uses an original way to handle multiple inheritance. Inheritance is perform
 
 ## Keywords
 
-XKSL uses the keywords as HLSL, and adds new ones:
+SDSL uses the keywords as HLSL, and adds new ones:
 
 - `stage`: method and member keyword. This keyword makes sure the method or member is only defined once and is the same in the compositions.
 - `stream`: member keyword. The member is accessible at every stage of the shader. For more information, see [Automatic shader stage input/out](automatic-shader-stage-input-output.md).
@@ -30,11 +30,11 @@ XKSL uses the keywords as HLSL, and adds new ones:
 
 ## Abstract methods
 
-Abstract methods are available in XKSL. They should be prefixed with the `abstract` keyword. You can inherit from a shader class with abstract methods without having to implement them; the compiler will simply produce a harmless warning. However, you should implement it in your final shader to prevent a compilation error.
+Abstract methods are available in SDSL. They should be prefixed with the `abstract` keyword. You can inherit from a shader class with abstract methods without having to implement them; the compiler will simply produce a harmless warning. However, you should implement it in your final shader to prevent a compilation error.
 
 ## Annotations
 
-Like HLSL, annotations are available in XKSL. Some of the most useful ones are:
+Like HLSL, annotations are available in SDSL. Some of the most useful ones are:
 
 - `[Color]` for float4 variables. The ParameterKey will have the type `Color4` instead of `Vector4`. It also specifies to Game Studio that this variable should be treated as a color, so you can edit it in Game Studio.
 - `[Link(...)]` specifies which ParameterKey to use to set this value. However, an independent default key is still created.

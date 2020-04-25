@@ -11,7 +11,7 @@ The photo below demonstrates a real-life example of the effect:
 
 *(Image courtesy of Davepoo2014, shared under [Creative Commons Attribution-Share Alike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/deed.en))*
 
-The screenshots below demonstrate the use of subsurface scattering in Xenko to render wax:
+The screenshots below demonstrate the use of subsurface scattering in Stride to render wax:
 
 | Subsurface scattering off       | Subsurface scattering on
 |---------------------------------|------------------------

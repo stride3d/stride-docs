@@ -1,12 +1,12 @@
 # Shading language
 
-Xenko provides a superset of the [HLSL Shading language](http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561%28v=vs.85%29.aspx), bringing advanced and higher level language constructions, with:
+Stride provides a superset of the [HLSL Shading language](http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561%28v=vs.85%29.aspx), bringing advanced and higher level language constructions, with:
 
 - **extensibility** to allow shaders to be extended easily using object-oriented programming concepts such as classes, inheritance, and composition
 - **modularity** to provide a set modular shaders each focusing on a single rendering technique, more easily manageable
 - **reusability** to maximize code reuse between shaders
 
-Xenko Shading Language (XSL) is automatically transformed to an existing shading language (HLSL, GLSL, GLSL ES).
+Stride Shading Language (XSL) is automatically transformed to an existing shading language (HLSL, GLSL, GLSL ES).
 
 ## In this section
 

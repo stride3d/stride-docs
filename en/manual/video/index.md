@@ -12,7 +12,7 @@ You can import **video files** and use them in your scenes.
 </p>
 
 >[!Note]
->Currently, Xenko doesn't support video on iOS platforms.
+>Currently, Stride doesn't support video on iOS platforms.
 
 ## In this section
 

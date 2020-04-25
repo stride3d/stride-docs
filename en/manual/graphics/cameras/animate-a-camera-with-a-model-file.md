@@ -7,9 +7,9 @@ Like other entities, you can [animate](../../animation/index.md) cameras using a
 
 >[!Note]
 >To animate a camera using a model file, you first need to bake the animation using your modeling tool (eg Maya, 3ds Max or Blender).
->Xenko doesn't support cameras animated using target cameras.
+>Stride doesn't support cameras animated using target cameras.
 
-If the camera moves independently, the simplest method is to export the camera animation as a separate file, enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. If the animations include FOV or near or far plane animations, the Xenko camera updates accordingly. With this method, you don't need a model or a skeleton.
+If the camera moves independently, the simplest method is to export the camera animation as a separate file, enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. If the animations include FOV or near or far plane animations, the Stride camera updates accordingly. With this method, you don't need a model or a skeleton.
 
 If you want the camera to move in tandem with another animation — for example, if the camera is held by a cameraman character with its own model, skeleton and animation — use a [model node link](../../animation/model-node-links.md) component to link the camera entity to the cameraman's movements.
 
@@ -32,10 +32,10 @@ To do this, you need the following assets in your project:
 
     ![Enable root motion](media/enable-root-motion.png)
 
-    When root motion is enabled, Xenko applies the **root node animation** to the [TransformComponent](xref:Xenko.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
+    When root motion is enabled, Stride applies the **root node animation** to the [TransformComponent](xref:Stride.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
 
     >[!Note]
-    >If there is no skeleton specified in **Skeleton**, Xenko always applies the animation to [TransformComponent](xref:Xenko.Engine.TransformComponent), even if **root motion** is disabled.
+    >If there is no skeleton specified in **Skeleton**, Stride always applies the animation to [TransformComponent](xref:Stride.Engine.TransformComponent), even if **root motion** is disabled.
 
 3. In the **Scene Editor**, select the entity that contains the camera you want to animate.
 
@@ -87,7 +87,7 @@ To do this, you need the following assets in your project:
 
 11. Select the animation asset you want to use to animate the camera and click **OK**.
 
-At runtime, the camera uses the animation. If the animation includes FOV or near or far plane animations, the Xenko camera updates accordingly.
+At runtime, the camera uses the animation. If the animation includes FOV or near or far plane animations, the Stride camera updates accordingly.
 
 ## Attach the camera to a node on another model
 
@@ -116,7 +116,7 @@ To do this, you need the following assets in your project:
     ![Add component](../../particles/tutorials/media/add-model-node-link.png)
 
     >[!Note]
-    >The [TransformComponent](xref:Xenko.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Xenko.Engine.TransformComponent) is set to `0,0,0`.
+    >The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
 
     Game Studio adds a model link component to the entity.
 
@@ -126,7 +126,7 @@ To do this, you need the following assets in your project:
 
     ![Select an entity](../../animation/media/select-an-entity-window.png)
 
-    Alternatively, leave the **Target** field blank. In the **Entity Tree**, drag the **camera entity** you want to animate to the entity that contains the model. Xenko links the entity to the model on the parent entity.
+    Alternatively, leave the **Target** field blank. In the **Entity Tree**, drag the **camera entity** you want to animate to the entity that contains the model. Stride links the entity to the model on the parent entity.
 
     ![Parent and child](media/parent-and-child.png)
 

@@ -1,6 +1,6 @@
 # Files and folders
 
-This section explains Xenko's files and folders and the best way to organize them in development.
+This section explains Stride's files and folders and the best way to organize them in development.
 
 ## In this section
 

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:Xenko.Physics.CharacterComponent.SetVelocity\(Xenko.Core.Mathematics.Vector3\)), [Jump](xref:Xenko.Physics.CharacterComponent.Jump), and [Teleport](xref:Xenko.Physics.CharacterComponent.Teleport\(Xenko.Core.Mathematics.Vector3\)).
+**Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:Stride.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:Stride.Physics.CharacterComponent.SetVelocity\(Stride.Core.Mathematics.Vector3\)), [Jump](xref:Stride.Physics.CharacterComponent.Jump), and [Teleport](xref:Stride.Physics.CharacterComponent.Teleport\(Stride.Core.Mathematics.Vector3\)).
 
 ## Add a character component to an entity
 

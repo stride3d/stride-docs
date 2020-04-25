@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-To create **ribbons** and **trails**, Xenko builds the mesh data as a strip connecting the particles, rather than individual quads. Ribbons and trails are often used to create visual effects such as sword slashes.
+To create **ribbons** and **trails**, Stride builds the mesh data as a strip connecting the particles, rather than individual quads. Ribbons and trails are often used to create visual effects such as sword slashes.
 
 ![media/particles-tutorials-ribbons-0.jpg](media/ribbons-and-trails.jpg)
 
@@ -85,7 +85,7 @@ You can add extra segments between adjacent particles to smooth the lines betwee
 
      ![Diagram: particle smoothing](media/diagram-smoothing-fast.png)
  
- * **Best** — This generally creates the smoothest effect, but requires more CPU. It calculates a circumcircle around every three sequential particles along the control axis, then adds extra control points on the circle, keeping the segments in an arc. For the first and the last segment, there is only one arc to be followed, but for mid-sections, two different arcs from two different circles overlap; Xenko interpolates the control points from the first arc and the second as the point approaches the second particle. You can set the number of segments between every two particles with the **Segments** property.
+ * **Best** — This generally creates the smoothest effect, but requires more CPU. It calculates a circumcircle around every three sequential particles along the control axis, then adds extra control points on the circle, keeping the segments in an arc. For the first and the last segment, there is only one arc to be followed, but for mid-sections, two different arcs from two different circles overlap; Stride interpolates the control points from the first arc and the second as the point approaches the second particle. You can set the number of segments between every two particles with the **Segments** property.
 
     ![Diagram: particle smoothing](media/diagram-smoothing-best.png)
 
@@ -95,7 +95,7 @@ This video shows the difference between the three smoothing methods. Note that t
 
 ## Sample project
 
-For an example of a project that uses ribbons and trails, try the **Ribbon Particles Sample** included with Xenko.
+For an example of a project that uses ribbons and trails, try the **Ribbon Particles Sample** included with Stride.
 
 ## See also
 

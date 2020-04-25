@@ -1,8 +1,8 @@
 # Physics
 
-![Physics in Xenko](media/physics-index-physics-in-xenko.png)
+![Physics in Stride](media/physics-index-physics-in-stride.png)
 
-Xenko simulates real-world physics such as gravity and collisions. This section explains how physics components work, how to add them to your project, and how to use them with scripts.
+Stride simulates real-world physics such as gravity and collisions. This section explains how physics components work, how to add them to your project, and how to use them with scripts.
 
 ## In this section
 
@@ -15,7 +15,7 @@ Xenko simulates real-world physics such as gravity and collisions. This section 
     * [Triggers](triggers.md): Use triggers to detect passing objects
     * [Constraints](constraints.md): Create appealing and realistic physics
 * [Raycasting](raycasting.md): Trace intersecting objects
-* [Simulation](simulation.md): How Xenko controls physics
+* [Simulation](simulation.md): How Stride controls physics
 
 ### Tutorials
 
@@ -24,4 +24,4 @@ Xenko simulates real-world physics such as gravity and collisions. This section 
 
 ## Further reference
 
-Xenko uses the open-source [Bullet Physics](http://bulletphysics.org/wordpress/) engine. For detailed information, see the [Bullet User Manual](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf).
+Stride uses the open-source [Bullet Physics](http://bulletphysics.org/wordpress/) engine. For detailed information, see the [Bullet User Manual](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf).

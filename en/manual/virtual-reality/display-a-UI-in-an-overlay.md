@@ -131,7 +131,7 @@ Your game is now ready to render the UI to an overlay in your VR device.
 
 ## VR template
 
-For an example of a UI overlay implemented in a VR game, see the VR template included with Xenko.
+For an example of a UI overlay implemented in a VR game, see the VR template included with Stride.
 
 ![VR template](media/template-virtual-reality.png)
 

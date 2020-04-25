@@ -22,7 +22,7 @@ You can configure the global settings of your game in the **Game Settings** asse
 
 ## Default scene
 
-You can have multiple scenes in your project. The **default scene** is the scene Xenko loads at runtime.
+You can have multiple scenes in your project. The **default scene** is the scene Stride loads at runtime.
 
 To set the default scene:
 
@@ -108,7 +108,7 @@ For more details, see [Navigation](../navigation/index.md).
 
 | Property        | Description         
 |-----------------|----------------
-| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here currently aren't enabled in Xenko.
+| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here currently aren't enabled in Stride.
 | Max sub steps   | The maximum number of simulations the physics engine can run in a frame to compensate for slowdown.
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
 
@@ -124,10 +124,10 @@ For more details, see [Navigation](../navigation/index.md).
 | Default graphics profile    | The graphics feature level required by the project
 | Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
-| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform. For more information, see [Set the graphics platform](../platforms/set-the-graphics-platform.md).
+| Target graphics platform    | The target platform Stride builds the project for. If you set this to **Default**, Stride chooses the most appropriate platform. For more information, see [Set the graphics platform](../platforms/set-the-graphics-platform.md).
 
 > [!Tip]
-> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:Xenko.Graphics.GraphicsDevice.Platform) variable.
+> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform) variable.
 
 ## Streaming
 
@@ -136,10 +136,10 @@ For more details, see [Navigation](../navigation/index.md).
 | Property             | Description
 |----------------------|------------
 | Streaming            | Enable streaming
-| Update interval | How frequently Xenko updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
+| Update interval | How frequently Stride updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations.
 | Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but might slow down the framerate.
 | Resource timeout (ms)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
-| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Xenko unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
+| Memory budget (in MB) | When the memory used by streaming exceeds this budget, Stride unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
 >[!Note]
 >Currently, only textures can be streamed.
@@ -209,7 +209,7 @@ After you add a platform filter, you can select it under **Override > Specific f
 
 ## Splash screen
 
-The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.
+The **splash screen** is displayed when your game starts. The default is the Stride splash screen.
 
 > [!Note]
 > The splash screen is only displayed when the game is built in release mode.
@@ -218,7 +218,7 @@ The **splash screen** is displayed when your game starts. The default is the Xen
 
 | Property | Description
 |----------|------------
-| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *XenkoDefaultSplashScreen*. 
+| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *StrideDefaultSplashScreen*. 
 | Color    | The color the splash screen fades in on top of. By default, this is black  (*#FF000000*).
 
 For more information, see [Splash screen](/splash-screen.md).

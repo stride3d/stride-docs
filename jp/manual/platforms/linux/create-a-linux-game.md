@@ -3,7 +3,7 @@
 >[!NOTE]
 >以下の説明を読む前に、「[Linux - セットアップと要件](setup-and-requirements.md)」の説明に従ってください。
 
-1. Xenko Launcher で、新しいゲームを作成し、ターゲット プラットフォームとして Linux を選択します。
+1. Stride Launcher で、新しいゲームを作成し、ターゲット プラットフォームとして Linux を選択します。
 
     ![New Game](media/platform_choice.png)
 
@@ -53,7 +53,7 @@
 
 ## Game Studio の外でコンパイルする
 
-他の Xenko プロジェクトと同様に、Visual Studio またはコマンド ラインから直接プロジェクトをコンパイルすることもできます。どちらの場合も、有効な構成を選択する必要があります。
+他の Stride プロジェクトと同様に、Visual Studio またはコマンド ラインから直接プロジェクトをコンパイルすることもできます。どちらの場合も、有効な構成を選択する必要があります。
 
 * Debug
 * Release
