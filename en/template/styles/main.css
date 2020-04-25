@@ -200,6 +200,12 @@ td img {
     width: initial;
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        padding-top: 20px;
+    }
+}
+
 .toc .nav>li>a {
     margin-left: 5px;
 }
@@ -709,7 +715,6 @@ h5 {
         min-height: auto;
     }
     .stride-documentation-image {
-        width: 30%;
         min-width: 0;
         padding-right: 15px;
     }
@@ -1409,20 +1414,23 @@ h4.returns {
     padding: 10px;
 }
 
+
 /* adjust anchor */
+
 :target:before {
     content: "";
     display: block;
     height: 120px;
     margin: -120px 0 0;
 }
+
 @media only screen and (max-width: 768px) {
-    :target:before {
+     :target:before {
         height: 75px;
         margin: -75px 0 0;
     }
 }
 
-.lang-btn-drpdown-show{
+.lang-btn-drpdown-show {
     height: auto !important;
 }
