@@ -13,8 +13,9 @@ if ($API)
 {
     Write-Host "Generating API documentation..."
 
-    # Run nuget restore
-    ..\stride\build\.nuget\nuget restore ..\stride\build\Stride.sln
+    # Run MSBuild restore
+	$msbuild = & ("${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe") -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe | select-object -first 1
+    & $msbuild ..\stride\build\Stride.sln /t:Restore
 	if ($LastExitCode -ne 0)
 	{
 		Write-Host "Failed to restore nuget packages"
