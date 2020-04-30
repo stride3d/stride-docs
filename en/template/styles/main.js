@@ -191,7 +191,7 @@ $(function () {
         urlLanguage = '';
       }
 
-      var sectionVersion;
+      var sectionVersion = '';
       if (/manual/.test(pathVersion)) {
         sectionVersion = 'manual'
       } else if (/api/.test(pathVersion)) {
