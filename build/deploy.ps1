@@ -7,7 +7,7 @@ Write-Host Executing `'WAWSDeploy.exe ../stride_doc.zip $deploymentProfile /v /t
 # Process versions.json
 Write-Host Updating list of versions
 $response = Invoke-RestMethod -Uri http://xenko-doc.azurewebsites.net/versions.json
-$response.versions = $response.versions + $deploymentProfile | select -Unique | Sort-Object -Property @{Expression={ new-object System.Version ($_) }; Descending = $True}
+$response.versions = ($response.versions + $deploymentProfile) | select -Unique | Sort-Object -Property @{Expression={ new-object System.Version ($_) }; Descending = $True}
 # Save file
 New-Item -Name "_siteroot" -ItemType "directory"
 $response | ConvertTo-Json | Out-File -Encoding UTF8NoBOM "_siteroot/versions.json"
