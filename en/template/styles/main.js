@@ -182,27 +182,22 @@ $(function () {
     $('#stride-current-version').on('change', function () {
       var hostVersion = window.location.host;
       var pathVersion = window.location.pathname;
-      var urlLanguage = window.location.pathname.split('/')[2];
       var targetVersion = $("#stride-current-version").val();
 
-      if (targetVersion == "latest" || targetVersion >= '2') {
-        urlLanguage += '/';
-      } else {
-        urlLanguage = '';
-      }
-
-      var sectionVersion = '';
-      if (/manual/.test(pathVersion)) {
-        sectionVersion = 'manual'
-      } else if (/api/.test(pathVersion)) {
-        sectionVersion = 'api'
-      } else if (/ReleaseNotes/.test(pathVersion)) {
-        sectionVersion = 'ReleaseNotes'
-      } else if (/tutorials/.test(pathVersion)) {
-        sectionVersion = 'tutorials'
-      }
-      var newAddress = '//' + hostVersion + '/' + targetVersion + '/' + urlLanguage + sectionVersion
-      $(window).attr('location', newAddress);
+      // Generate page URL in other version
+      var newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.substring(pathVersion.indexOf('/', 1) + 1);
+      // Check if address exists
+      $.get(newAddress)
+        .fail(function() {
+          // It didn't work, let's just go to top page of the section (i.e. manual, api, release notes, etc.)
+          newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.split('/')[2];
+          if (pathVersion.split('/').length >= 4)
+            newAddress += '/' + pathVersion.split('/')[3];
+        })
+        .always(function() {
+          // Go to page
+          $(window).attr('location', newAddress);
+        });
     })
   }
 
@@ -260,7 +255,6 @@ $(function () {
     $.getJSON('/versions.json', function(data) {
       $("#stride-current-version").empty();
       data.versions.forEach(function(version) {
-        console.log(version);
         var url = version;
         $("#stride-current-version").append('<option value="' + url + '">' + version + '</option>');
       });
