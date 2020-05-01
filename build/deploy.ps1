@@ -10,12 +10,12 @@ $response = Invoke-RestMethod -Uri http://xenko-doc.azurewebsites.net/versions.j
 $response.versions = ($response.versions + $deploymentProfile) | select -Unique | Sort-Object -Property @{Expression={ new-object System.Version ($_) }; Descending = $True}
 # Save file
 New-Item -Name "_siteroot" -ItemType "directory"
-$response | ConvertTo-Json | Out-File -Encoding UTF8NoBOM "_siteroot/versions.json"
+$response | ConvertTo-Json | Out-File -Encoding utf8 "_siteroot/versions.json"
 
 # Only update web.config if we are the latest version
 if ($response.versions[0] -eq $deploymentProfile)
 {
-	(Get-Content -path "web.config" -Raw) -Replace '%deployment_version%', $version | Set-Content -Encoding UTF8NoBOM -Path "_siteroot\web.config"
+	(Get-Content -path "web.config" -Raw) -Replace '%deployment_version%', $version | Set-Content -Encoding utf8 -Path "_siteroot\web.config"
 }
 
 # Upload versions.json and web.config
