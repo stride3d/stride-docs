@@ -1,5 +1,6 @@
-/_site
-/externals
+/_site/
+/build/_siteroot/
+/externals/
 /obj
 en/api/*.yml
 en/api/.manifest

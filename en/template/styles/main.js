@@ -205,7 +205,6 @@ $(function () {
       $(window).attr('location', newAddress);
     })
   }
-  redirectToCurrentDocVersion();
 
   // Language check function
 
@@ -256,6 +255,25 @@ $(function () {
   $('.maximize_image').magnificPopup({
     type: 'image'
   });
+
+  function loadVersions() {
+    $.getJSON('/versions.json', function(data) {
+      $("#stride-current-version").empty();
+      data.versions.forEach(function(version) {
+        console.log(version);
+        var url = version;
+        $("#stride-current-version").append('<option value="' + url + '">' + version + '</option>');
+      });
+      var urlSplits = window.location.pathname.split('/');
+      var urlVersion = urlSplits[1];
+      if (urlVersion == 'latest') {
+        urlVersion = data.versions[0];
+      }
+      $("#stride-current-version").val(urlVersion).change();
+      redirectToCurrentDocVersion();
+    });
+  };
+  loadVersions();
 });
 
 function toggleLangDropDown(){
