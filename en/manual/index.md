@@ -13,7 +13,7 @@ _tocTitle: 'Manual'
 These pages contain information about how to use Stride, an open-source C# game engine.
 
 >[!Note]
->The Stride manual is under construction and updated regularly with new content. Follow [Stride on Twitter](https://twitter.com/stride3d?lang=en) for documentation updates.
+>The Stride manual is under construction and updated regularly with new content. Follow [Stride on Twitter](https://twitter.com/stridedotnet?lang=en) for documentation updates.
 
 ## Latest documentation
 
