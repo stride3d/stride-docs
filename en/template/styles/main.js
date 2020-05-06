@@ -26,18 +26,22 @@ $(function () {
   function apiDocSizeControl() {
     "use srtict"
     function resizableTOC() {
-      // If object "sizes" saved already
+      // Get started space parameters
+      var startSidebarWidth = $('#sidetoggle').width();
+      var contentMargin = + $($('.article.grid-right')[0]).css('marginLeft').split('px')[0];
+
       if (localStorage.getItem('sizes') != null) {
         // Get the sizes from local storage
         var sizes = JSON.parse(localStorage.getItem('sizes'));
+
+        sidebarSizeDivide = sizes.sidebarWidth - startSidebarWidth;
         // Set width to sidebar
         $('#sidetoggle').css('width', sizes.sidebarWidth);
-        // Set width and margin to content part
+        // Set sizes for content part
         $($('.article.grid-right')[0]).css({
-          'width': sizes.contentWidth,
-          'marginLeft': sizes.contentMargin
+          'marginLeft': contentMargin + sidebarSizeDivide
         });
-        // Wait, while filter is aviable
+        // Wait, while filter is availiable
         var filterTimer = setInterval(function () {
           if ($($('.sidefilter')[0]).length > 0) {
             var filter = $($('.sidefilter')[0]);
@@ -54,10 +58,6 @@ $(function () {
       } else {
         $('.container.body-content.hide-when-search').show();
       }
-      // Get started space parameters
-      var startSidebarWidth = $('#sidetoggle').width();
-      var contentWidth = $($('.article.grid-right')[0]).width();
-      var contentMargin = + $($('.article.grid-right')[0]).css('marginLeft').split('px')[0];
       // Start resizable function
       $('#sidetoggle').resizable({
         containment: ".container.body-content.hide-when-search",
@@ -70,15 +70,11 @@ $(function () {
           // Create "Sizes" object
           var sizes = {
             sidebarWidth: ui.size.width,
-            contentWidth: contentWidth - sidebarSizeDivide,
-            contentMargin: contentMargin + sidebarSizeDivide
           }
           // Set sizes for content part
           $($('.article.grid-right')[0]).css({
-            'width': sizes.contentWidth,
-            'marginLeft': sizes.contentMargin
+            'marginLeft': contentMargin + sidebarSizeDivide
           });
-          // Set sizes for filter
           $($('.sidefilter')[0]).css('width', sizes.sidebarWidth);
           localStorage.setItem('sizes', JSON.stringify(sizes))
         }
