@@ -164,17 +164,6 @@ $(function () {
     }
   }
   function redirectToCurrentDocVersion() {
-    // Set current doc version at start of page
-    if ($('#stride-current-version').length > 0) {
-      var urlSplits = window.location.pathname.split('/');
-      var urlVersion = urlSplits[1];
-      if ($('#stride-current-version option[value="' + urlVersion + '"]').length <= 0) {
-        $("#stride-current-version").val('latest');
-      } else {
-        $("#stride-current-version").val(urlVersion);
-      }
-
-    }
     $('#stride-current-version').on('change', function () {
       var hostVersion = window.location.host;
       var pathVersion = window.location.pathname;
