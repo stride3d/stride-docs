@@ -55,7 +55,7 @@ ol li img {
 /********************************************/
 
 .comment-section {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .sidefilter {
@@ -508,6 +508,7 @@ h5 {
 }
 
 .stride-documentation-list {
+    display: contents;
     list-style: none;
     margin: 0;
     padding: 0;
