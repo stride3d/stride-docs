@@ -54,6 +54,10 @@ ol li img {
 
 /********************************************/
 
+.comment-section {
+    margin-top: 20px;
+}
+
 .sidefilter {
     position: inherit;
 }
@@ -504,6 +508,7 @@ h5 {
 }
 
 .stride-documentation-list {
+    display: contents;
     list-style: none;
     margin: 0;
     padding: 0;

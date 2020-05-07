@@ -1,4 +1,8 @@
-param ($version, $deploymentProfile, $deploymentPassword)
+param ($deploymentProfile, $deploymentPassword)
+
+# This is the version used in the https://doc.stride3d.net/<version> url
+# Please update this if branching for a new release!
+$version = "4.0"
 
 # Deploy doc on the target
 Write-Host Executing `'WAWSDeploy.exe ../stride_doc.zip $deploymentProfile /v /t $version /d /p XXXXXXXXXXXXX`'
@@ -10,7 +14,7 @@ $response = Invoke-RestMethod -Uri http://xenko-doc.azurewebsites.net/versions.j
 $response.versions = ($response.versions + $version) | select -Unique | Sort-Object -Property @{Expression={ new-object System.Version ($_) }; Descending = $True}
 # Save file
 New-Item -Name "_siteroot" -ItemType "directory"
-$response | ConvertTo-Json | Out-File -Encoding utf8 "_siteroot/versions.json"
+$response | ConvertTo-Json | Out-File -Encoding ascii "_siteroot/versions.json"
 
 # Only update web.config if we are the latest version
 if ($response.versions[0] -eq $version)
