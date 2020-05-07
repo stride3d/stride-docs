@@ -94,21 +94,23 @@ You can create models in scripts at runtime. You can do this in several differen
     vertices[0].Position = new Vector3(0f,0f,1f);            
     vertices[1].Position = new Vector3(0f,1f,0f);
     vertices[2].Position = new Vector3(0f,1f,1f);
-    var vertexBuffer = 
-        Stride.Graphics.Buffer.Vertex.New(GraphicsDevice, 
-	                                  vertices, GraphicsResourceUsage.Dynamic);
+    var vertexBuffer = Stride.Graphics.Buffer.Vertex.New(GraphicsDevice, vertices,
+                                                         GraphicsResourceUsage.Dynamic);
     int[] indices = { 0, 2, 1 };
     var indexBuffer = Stride.Graphics.Buffer.Index.New(GraphicsDevice, indices);
 
-    var customMesh = new Stride.Rendering.Mesh { 
-    Draw = new Stride.Rendering.MeshDraw { 
-        /* Vertex buffer and index buffer setup */ 
-        PrimitiveType = Stride.Graphics.PrimitiveType.TriangleList,
-        DrawCount = indicies.Length,
-        IndexBuffer = new IndexBufferBinding(indexBuffer, true, indices.Length),
-        VertexBuffers = new[] { new VertexBufferBinding(vertexBuffer, 
-	                                   VertexPositionTexture.Layout, vertexBuffer.ElementCount) },
-      } };            
+    var customMesh = new Stride.Rendering.Mesh
+    { 
+        Draw = new Stride.Rendering.MeshDraw
+        { 
+            /* Vertex buffer and index buffer setup */ 
+            PrimitiveType = Stride.Graphics.PrimitiveType.TriangleList,
+            DrawCount = indicies.Length,
+            IndexBuffer = new IndexBufferBinding(indexBuffer, true, indices.Length),
+            VertexBuffers = new[] { new VertexBufferBinding(vertexBuffer, 
+                                      VertexPositionTexture.Layout, vertexBuffer.ElementCount) },
+        }
+    };            
     // add the mesh to the model
     model.Meshes.Add(customMesh);
     ```
