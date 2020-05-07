@@ -7,3 +7,4 @@ en/api/.manifest
 en/obj/
 jp_tmp/*
 build.log
+.vscode/**
