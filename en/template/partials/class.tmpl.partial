@@ -1,152 +1,81 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 
 {{>partials/class.header}}
-{{#children}}
-<div class="stride-{{id}}-wrapper">
-<h2 id="{{id}}">{{>partials/classSubtitle}}</h2>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th colspan="2">{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-{{#children}}
-    <tr>
-      <td class="stride-icon-column">
-        <span class="stride-{{type}}-icon"></span>
-      </td>
-      <td><a href="#{{id}}">{{name.0.value}}</a></td>
-      <td>{{{summary}}}</td>
-    </tr>
+
+{{>partials/class.sectionSummary}}  
+
+{{#children}}       {{!  ----- this includes Properties, Methods, etc -----  }}
+
+  {{^_disableContribution}}
+  {{#docurl}}
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="{{docurl}}">{{__global.improveThisDoc}}</a>
+  </span>{{/docurl}}
+  {{#sourceurl}}
+  <span class="small pull-right mobile-hide">
+    <a href="{{sourceurl}}">{{__global.viewSource}}</a>
+  </span>{{/sourceurl}}
+  {{/_disableContribution}}
+
+
+  <h3 id="{{id}}">{{>partials/classSubtitle}}</h3>
+  {{>partials/class.sectionDetailed}}  
 {{/children}}
-  </tbody>
-</table>
-{{#children}}
-{{^_disableContribution}}
-{{#sourceurl}}
-<span class="small pull-right mobile-hide">
-  <a href="{{sourceurl}}">{{__global.viewSource}}</a>
-</span>{{/sourceurl}}
-{{/_disableContribution}}
-<h3 id="{{id}}" data-uid="{{uid}}" class="stride-bordered-title">{{name.0.value}}</h3>
-<div class="markdown level1 summary">{{{summary}}}</div>
-<div class="markdown level1 conceptual">{{{conceptual}}}</div>
-{{#syntax}}
-<div class="codewrapper">
-  <pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
+
+<hr> 
+
+<!------ inherited members --------> 
+
+{{#inheritedMembers.0}}
+<h3 id="inheritedMembers_header">{{__global.inheritedMembers}}</h3>
+<div class="inheritedMembers">
+{{/inheritedMembers.0}}
+{{#inheritedMembers}}
+  <div>
+  {{#definition}}
+    <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
+  {{/definition}}
+  {{^definition}}
+    <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
+  {{/definition}}
+  </div>
+{{/inheritedMembers}}
+{{#inheritedMembers.0}}
 </div>
-<div class="stride-{{type}}">
-{{#fieldValue}}
-<div class="stride-fieldValue">
-  <i>Type: </i>{{{type.specName.0.value}}}
-  <p>{{{description}}}</p>
+{{/inheritedMembers.0}}
+
+
+
+{{#extensionMethods.0}}
+<h3 id="extensionmethods">{{__global.extensionMethods}}</h3>
+{{/extensionMethods.0}}
+{{#extensionMethods}}
+<div>
+  {{#definition}}
+    <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
+  {{/definition}}
+  {{^definition}}
+    <xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
+  {{/definition}}
 </div>
-{{/fieldValue}}
-{{#propertyValue}}
-<div class="stride-propertyValue">
-  <i>Type: </i>{{{type.specName.0.value}}}
-  <p>{{{description}}}</p>
+{{/extensionMethods}}
+
+
+
+
+{{#seealso.0}}
+<h3 id="seealso">{{__global.seealso}}</h3>
+<div class="seealso">
+{{/seealso.0}}
+{{#seealso}}
+  {{#isCref}}
+    <div>{{{type.specName.0.value}}}</div>
+  {{/isCref}}
+  {{^isCref}}
+    <div>{{{url}}}</div>
+  {{/isCref}}
+{{/seealso}}
+{{#seealso.0}}
 </div>
-{{/propertyValue}}
-</div>
-{{#remarks}}
-<div class="markdown level1 remarks">{{{remarks}}}</div>
-{{/remarks}}
-{{#parameters.0}}
-<h4 class="parameters">{{__global.parameters}}</h4>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-{{/parameters.0}}
-{{#parameters}}
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td><em>{{{id}}}</em></td>
-      <td>{{{description}}}</td>
-    </tr>
-{{/parameters}}
-{{#parameters.0}}
-  </tbody>
-</table>
-{{/parameters.0}}
-{{#syntax.return}}
-<h4 class="returns">{{__global.returns}}</h4>
-<div class="stride-returns">
-  <i>Type: </i>{{{type.specName.0.value}}}
-  <p>{{{description}}}</p>
-</div>
-{{/syntax.return}}
-{{#syntax.typeParameters.0}}
-<h4 class="typeParameters">{{__global.typeParameters}}</h4>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.name}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-{{/syntax.typeParameters.0}}
-{{#syntax.typeParameters}}
-    <tr>
-      <td><em>{{{id}}}</em></td>
-      <td>{{{description}}}</td>
-    </tr>
-{{/syntax.typeParameters}}
-{{#syntax.typeParameters.0}}
-  </tbody>
-</table>
-{{/syntax.typeParameters.0}}
-{{#eventType}}
-<h5 class="eventType stride-hidden-table">{{__global.eventType}}</h5>
-<table class="table table-bordered table-striped table-condensed stride-hidden-table">
-  <thead>
-    <tr>
-      <th colspan="2">{{__global.type}}</th>
-      <th>{{__global.description}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="stride-icon-column">
-        <span class="stride-events-icon"></span>
-      </td>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-  </tbody>
-</table>
-{{/eventType}}
-{{/syntax}}
-{{#exceptions.0}}
-<h4 class="exceptions">{{__global.exceptions}}</h4>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.type}}</th>
-      <th>{{__global.condition}}</th>
-    </tr>
-  </thead>
-  <tbody>
-{{/exceptions.0}}
-{{#exceptions}}
-    <tr>
-      <td>{{{type.specName.0.value}}}</td>
-      <td>{{{description}}}</td>
-    </tr>
-{{/exceptions}}
-{{#exceptions.0}}
-  </tbody>
-</table>
-{{/exceptions.0}}
-{{/children}}
-</div>
-{{/children}}
+{{/seealso.0}}

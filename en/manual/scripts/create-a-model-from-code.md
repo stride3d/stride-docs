@@ -87,8 +87,37 @@ You can create models in scripts at runtime. You can do this in several differen
     model.Meshes.Add(mesh);
     ```
 
-    >[!Note]
-    >For information about how to set up vertex and index buffers, see [Drawing vertices](../graphics/low-level-api/draw-vertices.md).
+5. Here is a more complete example that draws a custom triangle..
+
+    ```cs
+    var vertices = new VertexPositionTexture[3];
+    vertices[0].Position = new Vector3(0f,0f,1f);            
+    vertices[1].Position = new Vector3(0f,1f,0f);
+    vertices[2].Position = new Vector3(0f,1f,1f);
+    var vertexBuffer = Stride.Graphics.Buffer.Vertex.New(GraphicsDevice, vertices,
+                                                         GraphicsResourceUsage.Dynamic);
+    int[] indices = { 0, 2, 1 };
+    var indexBuffer = Stride.Graphics.Buffer.Index.New(GraphicsDevice, indices);
+
+    var customMesh = new Stride.Rendering.Mesh
+    { 
+        Draw = new Stride.Rendering.MeshDraw
+        { 
+            /* Vertex buffer and index buffer setup */ 
+            PrimitiveType = Stride.Graphics.PrimitiveType.TriangleList,
+            DrawCount = indicies.Length,
+            IndexBuffer = new IndexBufferBinding(indexBuffer, true, indices.Length),
+            VertexBuffers = new[] { new VertexBufferBinding(vertexBuffer, 
+                                      VertexPositionTexture.Layout, vertexBuffer.ElementCount) },
+        }
+    };            
+    // add the mesh to the model
+    model.Meshes.Add(customMesh);
+    ```
+
+
+>[!Note]
+>For more information about how to set up vertex and index buffers, see [Drawing vertices](../graphics/low-level-api/draw-vertices.md).
 
 Finally, you need to give the model one or more materials. There are two ways to do this.
 
