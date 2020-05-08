@@ -52,7 +52,7 @@ These tutorials cover the beginner principles of using C# when working with the 
     <div class='tutorial_description'>
         <ul>
             <li>Accessing the Transform component</li> 
-            <li>Get the local postion</li> 
+            <li>Get the local position</li> 
             <li>Get the world position</li> 
         </ul>
     </div>
@@ -166,7 +166,7 @@ These tutorials cover the beginner principles of using C# when working with the 
             <li>Removing an entity from the scene</li> 
         </ul>
     </div>
-    ](remove-entity.md) 
+    ](removing-entities.md) 
 </div>
 
 
