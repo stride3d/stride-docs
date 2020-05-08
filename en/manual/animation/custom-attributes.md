@@ -36,64 +36,62 @@ using Stride.Engine;
 using Stride.Rendering;
 using Stride.Audio;
 using Stride.Rendering.Materials;
- 
+using System.Linq;
+
 namespace Sample
-{ 
+{
     public class HologramScript : SyncScript
-    { 
+    {
         public Material MyMaterial;
- 
+
         private AnimationComponent animationComponent;
         private AnimationProcessor animationProcessor;
- 
-        public override void Start() 
-        { 
-            base.Start(); 
- 
-            animationComponent = Entity.GetOrCreate<AnimationComponent>(); 
-            animationProcessor = 
-SceneSystem.SceneInstance.Processors.OfType<AnimationProcessor>().FirstOrDefault();     
-        } 
- 
-        public override void Update() 
-        { 
-            if (animationProcessor == null || MyMaterial == null) 
-                return; 
- 
-   // Animation result may be Null if animation hasn't been played yet. 
-            var animResult = 
-animationProcessor.GetAnimationClipResult(animationComponent); 
-            if (animResult == null) 
-                return; 
- 
-   // Read the value of the animated custom attribute: 
-   float emmisiveIntensity; 
-            unsafe 
-            { 
-                fixed (byte* structures = animResult.Data) 
-                { 
-                    foreach (var channel in animResult.Channels) 
-                    { 
-                        if (!channel.IsUserCustomProperty) 
-                            continue; 
-                         
-                        var structureData = (float*)(structures + channel.Offset); 
-                        var factor = *structureData++; 
-                        if (factor == 0.0f) 
-                            continue; 
- 
-                        var value = *structureData; 
-                        if (channel.PropertyName == 
-"myNode_myProperty") 
-                            emmisiveIntensity = value; 
-                    } 
-                } 
-            } 
-    
-   // Bind the material parameter: 
-  
- MyMaterial.Passes[0].Parameters.Set(MaterialKeys.EmissiveIntensity, 
-emmisiveIntensity) 
-        } 
-    } 
+
+        public override void Start()
+        {
+            base.Start();
+
+            animationComponent = Entity.GetOrCreate<AnimationComponent>();
+            animationProcessor = SceneSystem.SceneInstance.Processors.OfType<AnimationProcessor>().FirstOrDefault();
+        }
+
+        public override void Update()
+        {
+            if (animationProcessor == null || MyMaterial == null)
+                return;
+
+            // Animation result may be Null if animation hasn't been played yet.
+            var animResult = animationProcessor.GetAnimationClipResult(animationComponent);
+            if (animResult == null)
+                return;
+
+            // Read the value of the animated custom attribute:
+            float emissiveIntensity = 0;
+            unsafe
+            {
+                fixed (byte* structures = animResult.Data)
+                {
+                    foreach (var channel in animResult.Channels)
+                    {
+                        if (!channel.IsUserCustomProperty)
+                            continue;
+
+                        var structureData = (float*)(structures + channel.Offset);
+                        var factor = *structureData++;
+                        if (factor == 0.0f)
+                            continue;
+
+                        var value = *structureData;
+                        if (channel.PropertyName == "myNode_myProperty")
+                            emissiveIntensity = value;
+                    }
+                }
+            }
+
+            // Bind the material parameter:
+
+            MyMaterial.Passes[0].Parameters.Set(MaterialKeys.EmissiveIntensity, emissiveIntensity);
+        }
+    }
 }
+```
