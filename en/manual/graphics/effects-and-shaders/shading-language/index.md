@@ -6,7 +6,7 @@ Stride provides a superset of the [HLSL Shading language](http://msdn.microsoft.
 - **modularity** to provide a set modular shaders each focusing on a single rendering technique, more easily manageable
 - **reusability** to maximize code reuse between shaders
 
-Stride Shading Language (XSL) is automatically transformed to an existing shading language (HLSL, GLSL, GLSL ES).
+Stride Shading Language (SDSL) is automatically transformed to an existing shading language (HLSL, GLSL, GLSL ES).
 
 ## In this section
 
