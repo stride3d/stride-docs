@@ -44,9 +44,15 @@
 >[!TIP]
 >You can zoom in and out using **Ctrl + mousewheel** to make precise selections.
 
+> [!TIP]
+>
+> For fine-tune control over the sprite borders, adjusting one-by-one in the **Property Grid**
+>
+> ![Adjust sprite borders from Property grid](media/adjust-sprite-border-from-property-grid.png)
+
 ## Lock the sprite borders
 
-By default, sprite borders move as you resize the texture region. To stop this happening, click **Lock the sprite borders** in the toolbar.
+By default, sprite borders move as you resize the texture region. To stop this from happening, click **Lock the sprite borders** in the toolbar.
 
 ![Lock icon](media/lock-icon.png)
 
