@@ -110,16 +110,16 @@ You can set the properties of individual sprites in the **Property Grid**.
 
 ![Adjust frame properties](media/adjust-frame-properties.png)
 
-| Property | Description
-|--------------------|-------------------------
-| Source | The path to the sprite sheet
-| Name | The name of this sprite. You can also edit this by double-clicking a sprite in the sprite list in the Sprite Editor
-| Texture region | The region of the sprite sheet used for this sprite
-| Pixels per unit | The number of pixels representing a unit in the scene. The higher this number, the smaller the sprite is rendered in the scene
-| Orientation | If you select **Rotated90**, Stride rotates the sprite 90 degrees at runtime
-| Center | The position of the center of the sprite, in pixels. By default, the center is **0, 0**. Note: this property is only available if the sprite sheet type is set to **Sprite2D** in the Sprite Editor.
-| Center from middle | Have the value in the Center property represent the offset of the sprite center from the middle of the sprite. Note: this property is only available if the sprite sheet type is set to **Sprite2D** in the Sprite Editor.
-| Borders |  The size in pixels of the sprite borders (areas that don't deform when stretched). X is the left border, Y is the top, Z is the right, and W is the bottom. For more information, see [Set sprite borders](set-sprite-borders.md). Note: this property is only available if the sprite sheet is set to **UI** on the left.
+| Property | Description |
+|--------------------|------------------------- |
+| Source | The path to the sprite sheet |
+| Name | The name of this sprite. You can also edit this by double-clicking a sprite in the sprite list in the Sprite Editor |
+| Texture region | The region of the sprite sheet used for this sprite |
+| Pixels per unit | The number of pixels representing a unit in the scene. The higher this number, the smaller the sprite is rendered in the scene |
+| Orientation | If you select **Rotated90**, Stride rotates the sprite 90 degrees at runtime |
+| Center | The position of the center of the sprite, in pixels. By default, the center is **0, 0**. Note: this property is only available if the sprite sheet type is set to **Sprite2D** in the Sprite Editor. |
+| Center from middle | Have the value in the Center property represent the offset of the sprite center from the middle of the sprite. Note: this property is only available if the sprite sheet type is set to **Sprite2D** in the Sprite Editor. |
+| Borders |  The size in pixels of the sprite borders (areas that don't deform when stretched). X is the left border, Y is the top, Z is the right, and W is the bottom. For more information, see [Set sprite borders](set-sprite-borders.md). Note: this property is only available if the sprite sheet is set to **UI** on the left. |
 
 ## Sprite sheet properties
 
@@ -134,25 +134,19 @@ Many of the properties are the same as texture properties.
 
 ![Sprite sheet properties](media/sprite-sheet-properties.png)
 
-| Property | Description 
-|--------------------|---------------
+| Property | Description |
+|--------------------|---------------|
 | Sheet Type | Specify whether this sprite sheet is used for 2D sprites or UI elements. If you select **Sprite sheet for UI**, you can define [sprite borders](set-sprite-borders.md) in the sprites.|
-| Color Key Color | The color used for transparency at runtime. This is only applied if **Color Key Enabled** is selected below
-| Color Key Enabled | Use the color set in the **Color Key Color** property for transparency at runtime. If this isn't selected, the project uses transparent areas of the sprite sheet instead
-| Format | The texture format all sprites in the sprite sheet are compressed to (compressed, 32-bit, 16-bit, or as-is)
-| ColorSpace | The color space for the sprites in the sprite sheet (Auto, Linear, or Gamma)
-| Alpha | The texture alpha format which all the sprites in the sprite sheet are converted to (None, Mask, Explicit, Interpolated, or Auto) |
-| Sheet Type | Whether this sprite sheet is used for 2D sprites or UI elements. If you select **Sprite sheet for UI**, you can define [sprite borders](set-sprite-borders.md) in the sprites.|
-| Color Key Color | The color used for transparency at runtime. This is only applied if **Color Key Enabled** is selected below
-| Color Key Enabled | Use the color set in the **Color Key Color** property for transparency at runtime. If this isn't selected, the project uses transparent areas of the sprite sheet instead
-| Format | The texture format all sprites in the sprite sheet are compressed to (compressed, 32-bit, 16-bit, or as-is)
-| ColorSpace | The color space for the sprites in the sprite sheet (Auto, Linear, or Gamma)
+| Color Key Color | The color used for transparency at runtime. This is only applied if **Color Key Enabled** is selected below |
+| Color Key Enabled | Use the color set in the **Color Key Color** property for transparency at runtime. If this isn't selected, the project uses transparent areas of the sprite sheet instead |
+| Compress | Compress the texture to a format based on the target platform. The final texture size will be a multiple of 4. |
+| ColorSpace | The color space for the sprites in the sprite sheet (Auto, Linear, or Gamma) |
 | Alpha | The texture alpha format which all the sprites in the sprite sheet are converted to (None, Mask, Explicit, Interpolated, or Auto) |
 | Generate Mipmaps | Generates mipmaps for all sprites in the sprite sheet |
-| Premultiply Alpha |  Premultiply all color components of the images by their alpha component
-| Allow Multipacking | Generate multiple atlas textures if the sprites can't fit into a single atlas
-| Allow rotations | Rotate sprites inside the sprite sheet to optimize space. This doesn't affect how sprites are displayed at runtime.
-| Border size | The size in pixels of the border around the sprites. This prevents side effects in the sprite sheet.
+| Premultiply Alpha |  Premultiply all color components of the images by their alpha component |
+| Allow Multipacking | Generate multiple atlas textures if the sprites can't fit into a single atlas |
+| Allow rotations | Rotate sprites inside the sprite sheet to optimize space. This doesn't affect how sprites are displayed at runtime. |
+| Border size | The size in pixels of the border around the sprites. This prevents side effects in the sprite sheet. |
 
 ## See also
 
