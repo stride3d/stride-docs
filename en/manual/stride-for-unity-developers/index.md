@@ -155,6 +155,7 @@ In comparison to Unity, many of the Transform component's properties related to 
 
 #### Transform Directions
 Unlike Unity, Stride provides a Backward, Left, and Down property.
+Note that those are matrix properties, so setting one of those is not enough to properly rotate the matrix.
 
 | Unity®  | Stride |
 | ----- | ------- |
