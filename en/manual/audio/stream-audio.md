@@ -33,6 +33,6 @@ music.Play();
 
 ## See also
 * [Global audio settings](global-audio-settings.md)
-* [Aduio asset properties](audio-asset-properties.md)
+* [Audio asset properties](audio-asset-properties.md)
 * [Spatialized audio](spatialized-audio.md)
 * [Non-spatialized audio](non-spatialized-audio.md)
