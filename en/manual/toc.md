@@ -114,6 +114,7 @@
 ### [Light probes](graphics/lights-and-shadows/light-probes.md)
 ### [Light shafts](graphics/lights-and-shadows/light-shafts.md)
 ### [Shadows](graphics/lights-and-shadows/shadows.md)
+### [Voxel Cone Tracing GI](graphics/lights-and-shadows/voxel-cone-tracing-gi.md)
 ## [Post effects](graphics/post-effects/index.md)
 ### [Anti-aliasing](graphics/post-effects/anti-aliasing.md)
 ### [Ambient occlusion](graphics/post-effects/ambient-occlusion.md)
