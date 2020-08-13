@@ -34,10 +34,10 @@ If you're developing for multiple platforms, you often need to write custom code
 
 ```cs
 
-#if SILICONSTUDIO_PLATFORM_WINDOWS
+#if STRIDE_PLATFORM_WINDOWS
     // Windows-specific code goes here...
 
-#elif SILICONSTUDIO_PLATFORM_MONO_MOBILE
+#elif STRIDE_PLATFORM_MONO_MOBILE
     // iOS and Android-specific code goes here...
 
 #else
