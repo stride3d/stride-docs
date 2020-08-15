@@ -48,9 +48,24 @@ We also expect dropping .NET Framework and supporting only .NET Core will greatl
 
 Later down the road, we plan to switch to .NET 5 once it's in good enough shape.
 
-### GPU Instancing
+### GPU Instancing the smart way
 
-TODO
+Aka geometry instancing. Thanks to another big community contribution, Stride now supports GPU instancing per model. The nice thing about it is, that it plays together with the entity-component system. Simply add an Instancing component to a entity with a model. Now you can choose between 3 ways of how to generate the instances:
+
+* EntityTransform, uses the transformation of other entities with an Instance component. This allows to add components like physics, audio, etc. to each instance.
+* UserArray, for providing an array of matrices via script
+* UserBuffer, for providing a structured buffer (GPU resource) of matrices via script
+
+New component Instancing that controls the instancing of a "Master" entity with a model
+New component Instance that represents a single instance and references an Instancing component
+Instancing has 3 strategies for collecting the instance transformations:
+
+UserArray and UserBuffer allow specifying how the world transformation of the "Master" entity is used:
+Ignore, only the instance transformation is used
+PreMultiply, World is multiplied before the instance transformation
+PostMultiply, World is multiplied after the instance transformation
+EntityTransform mode has support in Game Studio and always uses Ignore mode so the gizmos match
+Picking individual instances in Game Studio works as well and selects the entity with the respective Instance component
 
 ### Graphics API: different selection mechanism + Vulkan improvements
 
