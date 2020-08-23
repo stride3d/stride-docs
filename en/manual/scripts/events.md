@@ -20,7 +20,7 @@ For example, this code creates two "Game Over" events. One with a non-generic an
 public static class GlobalEvents
 {
     public static EventKey GameOverEventKey = new EventKey("Global", "Game Over");
-    public static EventKey<string> GameOverWithDataEventKey = new EventKeyKey<string>("Global", "Game Over With Data");
+    public static EventKey<string> GameOverWithDataEventKey = new EventKey<string>("Global", "Game Over With Data");
 
     public static void SendGameOverEvent()
     {
