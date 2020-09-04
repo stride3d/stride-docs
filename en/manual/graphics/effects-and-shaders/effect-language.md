@@ -10,7 +10,7 @@ You can create a shader at runtime with @'Stride.Shaders.ShaderSource' objects. 
 
 This method produces shaders at runtime. However, many platforms don't support HLSL and have no ability to compile shaders at runtime. Additionally, the approach doesn't benefit from the reusability of mixins.
 
-## Stride Effects (XKFX)
+## Stride Effects (SDFX)
 
 Many shaders are variations or combinations of pre-existing shaders. For example, some meshes cast shadows, others receive them, and others need skinning. To reuse code, it's a good idea to select which parts to use through conditions (eg "Skinning required"). This is often solved by "uber shaders": monolithic shaders configured by a set of preprocessor parameters.
 
