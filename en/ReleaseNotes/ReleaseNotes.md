@@ -22,7 +22,7 @@ Here it is in action:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AZytf15FRks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-As you can see, there's many customization and settings available in the editor:
+As you can see, there are many customizations and settings available in the editor:
 
 ![Voxel Cone Tracing GI](media/ReleaseNotes-4.0/voxelgi.jpg)
 
@@ -48,24 +48,34 @@ We also expect dropping .NET Framework and supporting only .NET Core will greatl
 
 Later down the road, we plan to switch to .NET 5 once it's in good enough shape.
 
-### GPU Instancing the smart way
+### Flexible GPU Instancing
 
-Aka geometry instancing. Thanks to another big community contribution, Stride now supports GPU instancing per model. The nice thing about it is, that it plays together with the entity-component system. Simply add an Instancing component to a entity with a model. Now you can choose between 3 ways of how to generate the instances:
+Aka geometry instancing. Thanks to another big community contribution sponsored by [vvvv](https://visualprogramming.net/), Stride now supports GPU instancing per model.
 
-* EntityTransform, uses the transformation of other entities with an Instance component. This allows to add components like physics, audio, etc. to each instance.
-* UserArray, for providing an array of matrices via script
-* UserBuffer, for providing a structured buffer (GPU resource) of matrices via script
+![Instancing Header](media/ReleaseNotes-4.0/instancing-header.jpg)
 
-New component Instancing that controls the instancing of a "Master" entity with a model
-New component Instance that represents a single instance and references an Instancing component
-Instancing has 3 strategies for collecting the instance transformations:
+The nice thing about it is, that it plays together with the entity-component system: Simply add an Instancing component to an entity with a model. Then you can choose between 3 ways of how you generate the instances:
 
-UserArray and UserBuffer allow specifying how the world transformation of the "Master" entity is used:
-Ignore, only the instance transformation is used
-PreMultiply, World is multiplied before the instance transformation
-PostMultiply, World is multiplied after the instance transformation
-EntityTransform mode has support in Game Studio and always uses Ignore mode so the gizmos match
-Picking individual instances in Game Studio works as well and selects the entity with the respective Instance component
+* _EntityTransform_, uses the transformation of other entities with an Instance component. This allows to add components like physics, audio, etc. to each instance.
+* _UserArray_, for providing an array of matrices via script
+* _UserBuffer_, for providing a structured buffer (GPU resource) of matrices via script
+
+![Instancing Types](media/ReleaseNotes-4.0/instancing-types.png)
+
+_UserArray_ and _UserBuffer_ even allow you to specify how the matrix is multiplied with the parent transformation.
+
+It even works with skinning:
+
+![Instancing Skinning](media/ReleaseNotes-4.0/instancing-skinning.jpg)
+
+Picking individual instances in Game Studio works as well and selects the entity with the respective Instance component.
+
+There are also have two new entity templates:
+
+![Instancing Templates](media/ReleaseNotes-4.0/instancing-templates.png)
+
+An example project that shows the new features can be found here: [StrideTransformationInstancing](https://github.com/tebjan/StrideTransformationInstancing)
+
 
 ### Graphics API: different selection mechanism + Vulkan improvements
 
@@ -91,3 +101,15 @@ The C# beginner series should be fully recorded by the end of July 2020.
 After those videos are done, Jorn will put his focus on the C# Intermediate project template. Here a is work in progress screenshot on the raycasting tutorial:
 
 ![Raycast tutorial](media/ReleaseNotes-4.0/doc-raycast-tutorial.jpg)
+
+### New Developers are Welcome!
+The Stride GitHub repository has more closed pull requests than open issues. This is a good sign! But in order to move faster and adapt to new technologies, we would be very happy to see more new talents in our friendly and professional developer community.
+
+There are several good reasons to join us:
+* Writing engine code in C# is fun and quite productive
+* Stride users will work with what you create
+* We are happy to help, should you get stuck
+* You can learn a lot, the Stride code base is very professional and has high quality standards
+* An open-source contribution is a great addition to your portfolio
+
+No matter whether you (or someone you know) can contribute documentation updates or new rendering technologies, we welcome everyone!
