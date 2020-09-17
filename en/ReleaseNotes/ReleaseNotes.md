@@ -6,7 +6,7 @@ July 17, 2020
 
 ### Xenko is now Stride!
 
-The Xenko game engine has been renamed to Stride. From now on, all source code, blogs and tutorials will use the name ‘Stride’ instead of ‘Xenko’.
+The Xenko game engine has been renamed to Stride. From now on, all source code, blogs, and tutorials will use the name ‘Stride’ instead of ‘Xenko’.
 
 Here is the new logo:
 
@@ -34,15 +34,15 @@ Here's the original [forum post](https://forums.stride3d.net/t/voxel-gi-implemen
 
 As a first step toward .NET 5, Stride editor and toolchain is now running with .NET Core! Runtime has been working with .NET Core for a few versions already.
 
-This allows to have scripts and custom assets in a project targetting `.NET Standard 2.1` or `.NET Core`.
+This allows us to have scripts and custom assets in a project targetting `.NET Standard 2.1` or `.NET Core`.
 
 If you have scripts or custom assets in a .NET Framework project rather than a .NET Standard project, you can still choose between `.NET Core` and `.NET Framework` within the launcher:
 
 ![Framework selection in launcher](media/ReleaseNotes-4.0/launcher-netcore.jpg)
 
-Framework will also be displayed in Game Studio toolbar for easier identification while both coexist.
+The framework will also be displayed in the Game Studio toolbar for easier identification while both coexist.
 
-.NET Framework version can be considered deprecated and will likely be removed in future release (likely 4.1) to allow us to take full advantage of [C# 8.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8) and soon-to-come [C# 9.0](https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/).
+.NET Framework version can be considered deprecated and will likely be removed in a future release (likely 4.1) to allow us to take full advantage of [C# 8.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8) and soon-to-come [C# 9.0](https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/).
 
 We also expect dropping .NET Framework and supporting only .NET Core will greatly simplify our installation process since we won't depend on specific workloads or packages of Visual Studio being installed anymore. This was a recurring issue with our users.
 
@@ -56,7 +56,7 @@ Aka geometry instancing. Thanks to another big community contribution sponsored 
 
 The nice thing about it is, that it plays together with the entity-component system: Simply add an Instancing component to an entity with a model. Then you can choose between 3 ways of how you generate the instances:
 
-* _EntityTransform_, uses the transformation of other entities with an Instance component. This allows to add components like physics, audio, etc. to each instance.
+* _EntityTransform_, uses the transformation of other entities with an Instance component. This allows you to add components like physics, audio, etc. to each instance.
 * _UserArray_, for providing an array of matrices via script
 * _UserBuffer_, for providing a structured buffer (GPU resource) of matrices via script
 
@@ -70,7 +70,7 @@ It even works with skinning:
 
 Picking individual instances in Game Studio works as well and selects the entity with the respective Instance component.
 
-There are also have two new entity templates:
+There are also two new entity templates for easy setup:
 
 ![Instancing Templates](media/ReleaseNotes-4.0/instancing-templates.png)
 
@@ -81,11 +81,11 @@ An example project that shows the new features can be found here: [StrideTransfo
 
 There's been a big overhaul on Stride build system to make Graphics API selection work in a more future-proof way.
 
-It was previously relying on custom `RuntimeIdentifier` being set in the solution. This didn't work very well because it was completely orthogonal to existing `RuntimeIdentifier`, and sometimes not having good fallbacks.
+It was previously relying on the custom `RuntimeIdentifier` being set in the solution. This didn't work very well because it was completely orthogonal to the existing `RuntimeIdentifier`, and sometimes not having good fallbacks.
 
-From now on, user project will use `StrideGraphicsApi` in the `.csproj` project file to specify the graphics API. We hope to expose this in the editor later.
+From now on, the user project will use `StrideGraphicsApi` in the `.csproj` project file to specify the graphics API. We hope to expose this in the editor later.
 
-We also took the opportunity to improve state of Vulkan renderer (thanks to a switch to [Vortice.Vulkan bindings](https://github.com/amerkoleci/Vortice.Vulkan) from [Amer Koleci](https://github.com/amerkoleci)) and automatize graphics unit tests, currently running for D3D11 and Vulkan. 
+We also took the opportunity to improve the state of Vulkan renderer (thanks to a switch to [Vortice.Vulkan bindings](https://github.com/amerkoleci/Vortice.Vulkan) from [Amer Koleci](https://github.com/amerkoleci)) and automatize graphics unit tests, currently running for D3D11 and Vulkan. 
 
 It's still a work in progress so expect more in future releases.
 
@@ -109,7 +109,7 @@ There are several good reasons to join us:
 * Writing engine code in C# is fun and quite productive
 * Stride users will work with what you create
 * We are happy to help, should you get stuck
-* You can learn a lot, the Stride code base is very professional and has high quality standards
+* You can learn a lot, the Stride code base is very professional and has high-quality standards
 * An open-source contribution is a great addition to your portfolio
 
-No matter whether you (or someone you know) can contribute documentation updates or new rendering technologies, we welcome everyone!
+No matter whether you (or someone you know) can contribute documentation updates, UI improvements, bug fixes, or new rendering technologies, we welcome everyone!
