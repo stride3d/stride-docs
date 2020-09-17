@@ -116,7 +116,7 @@ An **emissive** material is a surface that emits light.
 
 ![media/material-attributes-37.png](media/material-attributes-37.png) 
 
-With HDR and a [bloom post-processing effect](../post-effects/bloom.md), we can see the influence of an emissive material:
+With HDR, a [Bloom](../post-effects/bloom.md) and a [Bright filter](../post-effects/bright-filter.md) post-processing effects, we can see the influence of an emissive material:
 
 ![media/material-attributes-38.png](media/material-attributes-38.png) 
 
