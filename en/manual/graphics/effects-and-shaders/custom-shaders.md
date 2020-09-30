@@ -33,7 +33,7 @@ You can also use custom shaders to create custom post effects. For more informat
 
 6. Open the `.sdsl` file, remove the existing lines, and write your shader.
 
-    Shaders are written in Stride Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
+    Shaders are written in Stride Shading Language (SDSL), which is based on HLSL. For more information, see [Shading language](index.md).
 
     For example, this shader creates a green color (`RGBA 0;1;0;1`):
 
