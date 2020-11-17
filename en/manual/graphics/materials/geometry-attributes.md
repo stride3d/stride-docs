@@ -12,7 +12,7 @@ The material **geometry** attributes define the shape of a material.
 
 Real-time tessellation uses a HW feature of the GPU to massively subdivide triangles. This increases the realism and potential of deformations of the surface geometry.
 
-You can choose **none**, **flat tessellation**, or **point normal tesellation**.
+You can choose **none**, **flat tessellation**, or **point normal tessellation**.
 
 | No tessellation  | Flat tessellation | Point normal tessellation 
 | --------------  | -------------- | -------------------- 
