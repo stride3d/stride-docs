@@ -8,7 +8,7 @@
 
     **Stride セットアップ ウィザード**が開きます。
 
-3. Stride には .NET Framework 4.6.2 が必要です。ない場合は、インストールを求めるメッセージが表示されます。
+3. Stride には .NET Framework 4.7.2 が必要です。ない場合は、インストールを求めるメッセージが表示されます。
 
     ![Prerequisites installer](media/prerequisites-installer.png)
 

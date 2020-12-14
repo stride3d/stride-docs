@@ -2,15 +2,15 @@
 
 Stride の実行で問題がある場合は、すべての前提条件がインストールされていることを確認します。
 
-* .NET Framework 4.6.2
+* .NET Framework 4.7.2
 * Visual C++ 再頒布可能パッケージ 2015 または 2017
 * Visual Studio Build Tools
 
 または、Stride をアンインストールし、Stride インストーラーを再実行して、メッセージが表示されたら前提条件をインストールします。
 
-## .NET Framework 4.6.2
+## .NET Framework 4.7.2
 
-.NET Framework 4.6.2 がインストールされているかどうか確認するには、［コントロール パネル］>［プログラム］>［プログラムと機能］で、**.NET 4.6.2** を含むエントリを探します。
+.NET Framework 4.7.2 がインストールされているかどうか確認するには、［コントロール パネル］>［プログラム］>［プログラムと機能］で、**.NET 4.7.2** を含むエントリを探します。
 
 ![Programs and features](media/programs-and-features.png)
 

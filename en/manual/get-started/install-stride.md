@@ -8,14 +8,14 @@
  
     The **Stride Setup Wizard** opens.
 
-3. Stride requires .NET Framework 4.6.2. If you don't have this, Stride prompts you to install it.
+3. Stride requires .NET Framework 4.7.2. If you don't have this, Stride prompts you to install it.
 
     ![Prerequisites installer](media/prerequisites-installer.png)
 
     Click **Next** and follow the prompts.
 
     > [!Note]
-    > Alternatively, you can [download the .NET Framework from the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53345) and restart the Stride installer.
+    > Alternatively, you can [download the .NET Framework from the Microsoft Download Center](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net472-web-installer) and restart the Stride installer.
 	
 4. The **Stride Setup Wizard** opens.
 
