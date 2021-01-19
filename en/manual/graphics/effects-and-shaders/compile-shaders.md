@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Stride converts Stride shaders (`xlsl` and `.xlfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
+Stride converts Stride shaders (`sdsl` and `.sdfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
 
 | Platform       | Shader language 
 | -------------- | ---- 
