@@ -1,6 +1,6 @@
 # Stride 4.0 Release Notes
 
-July 17, 2020
+February 1st, 2021
 
 ## Highlights
 
