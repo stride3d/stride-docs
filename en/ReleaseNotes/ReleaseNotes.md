@@ -30,23 +30,21 @@ There's a documentation page explaining [how to set up the project with Voxel Co
 
 Here's the original [forum post](https://forums.stride3d.net/t/voxel-gi-implementation/1947) and [pull request](https://github.com/stride3d/stride/pull/583). Thanks again for this great contribution!
 
-### .NET Core
+### .NET 5
 
-As a first step toward .NET 5, Stride editor and toolchain is now running with .NET Core! Runtime has been working with .NET Core for a few versions already.
+Stride editor and toolchain is now running with .NET 5! Runtime has been working with .NET Core for a few versions already.
 
-This allows us to have scripts and custom assets in a project targetting `.NET Standard 2.1` or `.NET Core`.
+This allows us to have scripts and custom assets in a project targetting `.NET Standard 2.1` or `.NET 5`.
 
-If you have scripts or custom assets in a .NET Framework project rather than a .NET Standard project, you can still choose between `.NET Core` and `.NET Framework` within the launcher:
+If you have scripts or custom assets in a .NET Framework project rather than a .NET Standard project, you can still choose between `.NET 5` and `.NET Framework` within the launcher:
 
-![Framework selection in launcher](media/ReleaseNotes-4.0/launcher-netcore.jpg)
+![Framework selection in launcher](media/ReleaseNotes-4.0/launcher-net5.png)
 
 The framework will also be displayed in the Game Studio toolbar for easier identification while both coexist.
 
 .NET Framework version can be considered deprecated and will likely be removed in a future release (likely 4.1) to allow us to take full advantage of [C# 8.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8) and soon-to-come [C# 9.0](https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/).
 
-We also expect dropping .NET Framework and supporting only .NET Core will greatly simplify our installation process since we won't depend on specific workloads or packages of Visual Studio being installed anymore. This was a recurring issue with our users.
-
-Later down the road, we plan to switch to .NET 5 once it's in good enough shape.
+We also expect dropping .NET Framework and supporting only .NET 5 will greatly simplify our installation process since we won't depend on specific workloads or packages of Visual Studio being installed anymore. This was a recurring issue with our users.
 
 ### Flexible GPU Instancing
 
