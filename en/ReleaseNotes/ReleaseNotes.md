@@ -106,6 +106,7 @@ After those videos are done, Jorn will put his focus on the C# Intermediate proj
 The Stride GitHub repository has more closed pull requests than open issues. This is a good sign! But in order to move faster and adapt to new technologies, we would be very happy to see more new talents in our friendly and professional developer community.
 
 There are several good reasons to join us:
+
 * Writing engine code in C# is fun and quite productive
 * Stride users will work with what you create
 * We are happy to help, should you get stuck
