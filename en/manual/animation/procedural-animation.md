@@ -7,13 +7,18 @@
 
 In some cases, this creates more effective and efficient animations. For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:Stride.Engine.TransformComponent) and simply scale the enemy down to the required size.
 
-You can access multiple components to animate your models at runtime, including:
+The animation can animate a wide variety of components besides, including:
 
 * [TransformComponent](xref:Stride.Engine.TransformComponent)
 * [LightComponent](xref:Stride.Engine.LightComponent)
 * [RigidBodyComponent](xref:Stride.Physics.RigidbodyComponent)
+* [Custom components](xref:Stride.Engine.EntityComponent)
 
-## Code sample
+Stride's animation system works just like Blender or Maya's curve animation editor. Each bone/value is assigned a [curve](xref:Stride.Animations.AnimationCurve) composed of several [points](xref:Stride.Animations.KeyFrameData) that are interpolated either in linear, cubic or constant fashion.
+
+## Code samples
+
+### Transform component
 
 ```cs
 public class AnimationScript : StartupScript
@@ -68,6 +73,60 @@ public class AnimationScript : StartupScript
     }
 }
 ```
+
+
+### Light component's color
+
+```csharp
+public class AnimationLight : StartupScript
+{
+    public override void Start()
+    {
+        // Our entity should have a light component
+        var lightC = Entity.Get<LightComponent>();
+
+        // We initialize the AnimationClip and store the some type names for later use.
+        var clip = new AnimationClip { Duration = TimeSpan.FromSeconds(1) };
+        var colorLightBaseName = typeof(ColorLightBase).AssemblyQualifiedName;
+        var colorRgbProviderName = typeof(ColorRgbProvider).AssemblyQualifiedName;
+
+        // We point to the path of the color property of the light component
+        clip.AddCurve(
+            $"[LightComponent.Key].Type.({colorLightBaseName})Color.({colorRgbProviderName})Value", 
+            CreateLightColorCurve()
+        );
+
+        // Repeat and play!
+        clip.RepeatMode = AnimationRepeatMode.LoopInfinite;
+        var animC = Entity.GetOrCreate<AnimationComponent>();
+        animC.Animations.Add("LightCurve",clip);
+        animC.Play("LightCurve");
+    }
+    private AnimationCurve CreateLightColorCurve()
+    {
+        return new AnimationCurve<Vector3>
+        {
+            InterpolationType = AnimationCurveInterpolationType.Linear,
+            KeyFrames =
+            {
+                CreateKeyFrame(0.00f, Vector3.UnitX), // First key frame makes the light red
+
+                CreateKeyFrame(0.50f, Vector3.UnitZ), // then blue
+
+                CreateKeyFrame(1.00f, Vector3.UnitX), // then red again so we can loop
+            }
+        };
+    }
+
+    private static KeyFrameData<T> CreateKeyFrame<T>(float keyTime, T value)
+    {
+        return new KeyFrameData<T>((CompressedTimeSpan)TimeSpan.FromSeconds(keyTime), value);
+    }
+}
+```
+
+>[!NOTE]
+> If you need to animate a bone procedurally you must use the `NodeTransformations` field of the `Skeleton`.
 
 ## See also
 
