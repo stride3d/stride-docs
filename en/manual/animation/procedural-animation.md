@@ -7,7 +7,7 @@
 
 In some cases, this creates more effective and efficient animations. For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:Stride.Engine.TransformComponent) and simply scale the enemy down to the required size.
 
-The animation can animate a wide variety of components besides, including:
+The animation can animate a wide variety of components besides Skeleton bones, including:
 
 * [TransformComponent](xref:Stride.Engine.TransformComponent)
 * [LightComponent](xref:Stride.Engine.LightComponent)
