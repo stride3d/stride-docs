@@ -85,18 +85,18 @@ public class AnimationLight : StartupScript
         // Our entity should have a light component
         var lightC = Entity.Get<LightComponent>();
 
-        // We initialize the AnimationClip and store the some type names for later use.
+        // Create an AnimationClip and store unserializable types. Make sure you set its duration properly.
         var clip = new AnimationClip { Duration = TimeSpan.FromSeconds(1) };
         var colorLightBaseName = typeof(ColorLightBase).AssemblyQualifiedName;
         var colorRgbProviderName = typeof(ColorRgbProvider).AssemblyQualifiedName;
 
-        // We point to the path of the color property of the light component
+        // Point to the path of the color property of the light component
         clip.AddCurve(
             $"[LightComponent.Key].Type.({colorLightBaseName})Color.({colorRgbProviderName})Value", 
             CreateLightColorCurve()
         );
 
-        // Repeat and play!
+        // Play the animation right away and loop it.
         clip.RepeatMode = AnimationRepeatMode.LoopInfinite;
         var animC = Entity.GetOrCreate<AnimationComponent>();
         animC.Animations.Add("LightCurve",clip);
@@ -109,11 +109,11 @@ public class AnimationLight : StartupScript
             InterpolationType = AnimationCurveInterpolationType.Linear,
             KeyFrames =
             {
-                CreateKeyFrame(0.00f, Vector3.UnitX), // First key frame makes the light red
+                CreateKeyFrame(0.00f, Vector3.UnitX), // Make the first keyframe a red color
 
                 CreateKeyFrame(0.50f, Vector3.UnitZ), // then blue
 
-                CreateKeyFrame(1.00f, Vector3.UnitX), // then red again so we can loop
+                CreateKeyFrame(1.00f, Vector3.UnitX), // then red again
             }
         };
     }
