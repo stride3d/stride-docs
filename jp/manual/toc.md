@@ -30,6 +30,8 @@
 ## [加算アニメーション](animation/additive-animation.md)
 ## [プロシージャル アニメーション](animation/procedural-animation.md)
 ## [カスタム ブレンド ツリー](animation/custom-blend-trees.md)
+## [Model node links](animation/model-node-links.md)
+## [Custom attributes](animation/custom-attributes.md)
 
 # [オーディオ](audio/index.md)
 ## [オーディオのインポート](audio/import-audio.md)
