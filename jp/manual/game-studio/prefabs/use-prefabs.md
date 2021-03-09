@@ -1,4 +1,4 @@
-# プレハブを使用する
+# プレハブの使用
 
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">プログラマー</span>

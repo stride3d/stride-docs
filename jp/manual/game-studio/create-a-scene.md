@@ -1,4 +1,4 @@
-# シーンを作成して開く
+# シーンの作成
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">レベル デザイナー</span>

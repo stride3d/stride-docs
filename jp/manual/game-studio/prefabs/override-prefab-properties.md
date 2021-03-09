@@ -1,4 +1,4 @@
-# プレハブのプロパティをオーバーライドする
+# プレハブ プロパティのオーバーライド
 
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">プログラマー</span>

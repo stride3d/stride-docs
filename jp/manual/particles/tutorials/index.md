@@ -1,4 +1,4 @@
-# チュートリアル
+# パーティクルのチュートリアル
 
 * [継承](inheritance.md)
 * [レーザーと稲光](lasers-and-lightning.md)

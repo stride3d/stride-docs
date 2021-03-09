@@ -1,4 +1,4 @@
-# 跳ね返るボールを作成する
+# 跳ね返るボールの作成
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>

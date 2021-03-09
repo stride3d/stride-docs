@@ -1,4 +1,4 @@
-# Linux 用ゲームを作成する
+# Linux 用ゲームの作成
 
 >[!NOTE]
 >以下の説明を読む前に、「[Linux - セットアップと要件](setup-and-requirements.md)」の説明に従ってください。

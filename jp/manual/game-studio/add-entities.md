@@ -1,4 +1,4 @@
-# エンティティを追加する
+# エンティティの追加
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">レベル デザイナー</span>
