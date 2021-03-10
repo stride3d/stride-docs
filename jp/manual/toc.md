@@ -142,7 +142,7 @@
 #### [シェーダークラス、ミックスイン、継承](graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.md)
 #### [コンポジション](graphics/effects-and-shaders/shading-language/composition.md)
 #### [テンプレート](graphics/effects-and-shaders/shading-language/templates.md)
-#### [自動シェーダー ステージ入出力](graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)
+#### [シェーダー ステージ入出力の自動管理](graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)
 #### [シェーダー ステージ](graphics/effects-and-shaders/shading-language/shader-stages.md)
 ### [カスタム シェーダー](graphics/effects-and-shaders/custom-shaders.md)
 ### [シェーダーのコンパイル](graphics/effects-and-shaders/compile-shaders.md)

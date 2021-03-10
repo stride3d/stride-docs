@@ -309,7 +309,7 @@ This behavior is useful when you want to repeat a simple function but with diffe
 * [シェーディング言語](index.md)
     - [シェーダークラス、ミックスイン、継承](shader-classes-mixins-and-inheritance.md)
     - [テンプレート](templates.md)
-    - [自動シェーダー ステージ入出力](automatic-shader-stage-input-output.md)
+    - [シェーダー ステージ入出力の自動管理](automatic-shader-stage-input-output.md)
 	- [シェーダー ステージ](shader-stages.md)
 
 <!--

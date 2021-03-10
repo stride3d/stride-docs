@@ -1,4 +1,4 @@
-# 自動シェーダーステージ入出力
+# シェーダーステージ入出力の自動管理
 <!--
 # Automatic shader stage input/output
 -->
