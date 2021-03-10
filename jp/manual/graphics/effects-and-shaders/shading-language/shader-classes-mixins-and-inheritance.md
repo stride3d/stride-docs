@@ -89,10 +89,10 @@ HLSL と同様に、SDSL でもアノテーションが利用できます。最�
 Like HLSL, annotations are available in SDSL. Some of the most useful ones are:
 -->
 
-- `[Color]`：float4 変数に付けます。ParameterKey の型は、`Vector4` ではなく `Color4` になります。また、この変数を色として扱うよう Game Studio に指示することで、Game Studio 上で編集できるようになります。
-- `[Link(...)]`：値を設定するために使用する ParameterKey を指定します。ただし、独立したデフォルトのキーが作成されます。
-- `[Map(...)]`：値を設定するために使用する ParameterKey を指定します。新しい ParameterKey は作成されません。
-- `[RenameLink]`：ParameterKey の作成を妨げます。これは `[Link()]` と一緒に使ってください。
+- `[Color]`：float4 変数に付けます。このエフェクトパラメータのキーの型は、`Vector4` ではなく `Color4` になります。また、この変数を色として扱うよう Game Studio に指示することで、Game Studio 上で編集できるようになります。
+- `[Link(...)]`：値を設定するために使用するエフェクトパラメータのキーを指定します。ただし、独立したデフォルトのキーが作成されます。
+- `[Map(...)]`：値を設定するために使用するエフェクトパラメータのキーを指定します。新しいパラメーターキーは作成されません。
+- `[RenameLink]`：エフェクトパラメータのキーの作成を回避します。`[Link()]` と一緒に使ってください。
 
 <!--
 - `[Color]` for float4 variables. The ParameterKey will have the type `Color4` instead of `Vector4`. It also specifies to Game Studio that this variable should be treated as a color, so you can edit it in Game Studio.
