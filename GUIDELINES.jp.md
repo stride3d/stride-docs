@@ -52,7 +52,7 @@ we ask you to follow to the below Guidelines when writing.
   * [プラットフォーム固有の補足](#PlatformRemarks)
   * [通知事項](#Notices)
   * [メディア](#Media)
-    * [ビデオ]](#Videos)
+    * [ビデオ](#Videos)
     * [画像](#Images)
     * [ダイアグラム](#Diagrams)
   * [表（テーブル）](#Tables)
