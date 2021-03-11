@@ -135,7 +135,7 @@
 #### [カスタム シーン レンダラー](graphics/graphics-compositor/custom-scene-renderers.md)
 ### [デバッグ レンダラー](graphics/graphics-compositor/debug-renderers.md)
 ### [レンダー テクスチャー](graphics/graphics-compositor/render-textures.md)
-### [レンダー グループとマスク](graphics/graphics-compositor/render-groups-and-masks.md)
+### [レンダーグループとレンダーマスク](graphics/graphics-compositor/render-groups-and-masks.md)
 ## [エフェクトとシェーダー](graphics/effects-and-shaders/index.md)
 ### [エフェクト言語](graphics/effects-and-shaders/effect-language.md)
 ### [シェーディング言語](graphics/effects-and-shaders/shading-language/index.md)
