@@ -88,7 +88,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 2. **プロパティグリッド**の**カメラ**コンポーネントのプロパティの **Slot** で、カメラを割り当てたいスロットを選択します。
 
     > [!Note]
-    > ドロップダウンメニューには、[ゲームの設定](../../game-studio/game-settings.md)で選択したグラフィックコンポジターのカメラスロットがリストアップされます。
+    > ドロップダウンメニューには、[ゲームの設定](../../game-studio/game-settings.md)で選択したグラフィックスコンポジターのカメラスロットがリストアップされます。
 
     ![media/graphics-compositor-overview-2.png](../graphics-compositor/media/graphics-compositor-overview-2.png)
 
