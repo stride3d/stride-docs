@@ -161,7 +161,7 @@ Game Studio blends the material layers using the blend map you specified. You ca
 * [マテリアルマップ](material-maps.md)
 * [マテリアル属性](material-attributes.md)
 * [マテリアルスロット](material-slots.md)
-* [開発者向けマテリアル](materials-for-developers.md)
+* [開発者向けのマテリアル情報](materials-for-developers.md)
 
 <!--
 * [Material maps](material-maps.md)

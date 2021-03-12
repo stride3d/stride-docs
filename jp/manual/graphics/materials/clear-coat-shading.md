@@ -200,7 +200,7 @@ Alternatively, use a normal map with a higher density of smaller metal flakes.
     * [その他の属性](misc-attributes.md)
 * [マテリアル レイヤー](material-layers.md)
 * [マテリアル スロット](material-slots.md)
-* [開発者用マテリアル](materials-for-developers.md)
+* [開発者向けのマテリアル情報](materials-for-developers.md)
 
 <!--
 * [Material maps](material-maps.md)

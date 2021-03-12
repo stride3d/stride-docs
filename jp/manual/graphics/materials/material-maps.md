@@ -251,7 +251,7 @@ For example, the images below demonstrate how the texture changes the way Stride
 - [マテリアル属性](material-attributes.md)
 - [マテリアルレイヤー](material-layers.md)
 - [マテリアルスロット](material-slots.md)
-- [開発者向けマテリアル](materials-for-developers.md)
+- [開発者向けのマテリアル情報](materials-for-developers.md)
 
 <!--
 - [Material attributes](material-attributes.md)

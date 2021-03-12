@@ -68,7 +68,7 @@ You can also write [custom shaders](../effects-and-shaders/custom-shaders.md) to
 * [マテリアル マップ](material-maps.md)
 * [マテリアル レイヤー](material-layers.md)
 * [マテリアル スロット](material-slots.md)
-* [開発者向けマテリアル](materials-for-developers.md)
+* [開発者向けのマテリアル情報](materials-for-developers.md)
 * [カスタムシェーダー](../effects-and-shaders/custom-shaders.md)
 
 <!--

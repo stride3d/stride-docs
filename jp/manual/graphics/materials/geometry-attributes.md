@@ -284,7 +284,7 @@ If you have local reflections enabled, the scene is reflected in materials with 
     * [クリアコートシェーディング](clear-coat-shading.md)
 * [マテリアル レイヤー](material-layers.md)
 * [マテリアル スロット](material-slots.md)
-* [開発者向けマテリアル](materials-for-developers.md)
+* [開発者向けのマテリアル情報](materials-for-developers.md)
 * [カスタムシェーダー](../effects-and-shaders/custom-shaders.md)
 
 <!--

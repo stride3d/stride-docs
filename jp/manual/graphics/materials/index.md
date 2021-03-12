@@ -39,7 +39,7 @@ In practice, materials generate partial definitions of shaders integrated as par
         * [クリアコートシェーディング](clear-coat-shading.md)
 * [マテリアルレイヤー](material-layers.md)
 * [マテリアルスロット](material-slots.md)
-* [開発者向けマテリアル](materials-for-developers.md)
+* [開発者向けのマテリアル情報](materials-for-developers.md)
 
 <!--
 * [Material maps](material-maps.md)

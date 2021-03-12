@@ -98,7 +98,7 @@
 #### [クリアコート シェーディング](graphics/materials/clear-coat-shading.md)
 ### [マテリアル レイヤー](graphics/materials/material-layers.md)
 ### [マテリアル スロット](graphics/materials/material-slots.md)
-### [開発者用マテリアル](graphics/materials/materials-for-developers.md)
+### [開発者向けのマテリアル情報](graphics/materials/materials-for-developers.md)
 ## [テクスチャ](graphics/textures/index.md)
 ### [法線マップ](graphics/textures/normal-maps.md)
 ### [テクスチャ 圧縮](graphics/textures/compression.md)
