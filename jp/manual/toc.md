@@ -94,6 +94,7 @@
 ### [マテリアル 属性](graphics/materials/material-attributes.md)
 #### [ジオメトリ 属性](graphics/materials/geometry-attributes.md)
 #### [シェーディング 属性](graphics/materials/shading-attributes.md)
+##### [サブサーフェス スキャタリング](graphics/materials/subsurface-scattering.md)
 #### [その他の属性](graphics/materials/misc-attributes.md)
 #### [クリアコート シェーディング](graphics/materials/clear-coat-shading.md)
 ### [マテリアル レイヤー](graphics/materials/material-layers.md)
