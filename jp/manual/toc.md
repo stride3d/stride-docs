@@ -119,7 +119,7 @@
 ### [アンチエイリアス](graphics/post-effects/anti-aliasing.md)
 ### [アンビエント オクルージョン](graphics/post-effects/ambient-occlusion.md)
 ### [ブルーム](graphics/post-effects/bloom.md)
-### [輝度フィルター](graphics/post-effects/bright-filter.md)
+### [明度フィルター](graphics/post-effects/bright-filter.md)
 ### [色変換](graphics/post-effects/color-transforms/index.md)
 #### [フィルム グレイン](graphics/post-effects/color-transforms/film-grain.md)
 #### [ガンマ補正](graphics/post-effects/color-transforms/gamma-correction.md)
