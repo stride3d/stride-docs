@@ -178,7 +178,7 @@
 # [パーティクル](particles/index.md)
 ## [パーティクルの作成](particles/create-particles.md)
 ## [エミッター](particles/emitters.md)
-### [形状](particles/shapes.md)
+### [シェイプ](particles/shapes.md)
 #### [リボンと軌跡](particles/ribbons-and-trails.md)
 ### [パーティクル マテリアル](particles/materials.md)
 ### [パーティクル スポーナー](particles/spawners.md)

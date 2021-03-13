@@ -8,7 +8,7 @@
 
 * [パーティクルを作成する](create-particles.md)
     * [エミッター](emitters.md)
-        * [形状](shapes.md)
+        * [シェイプ](shapes.md)
             * [リボンと残影](ribbons-and-trails.md)
         * [マテリアル](materials.md)
         * [スポーナー](spawners.md)
