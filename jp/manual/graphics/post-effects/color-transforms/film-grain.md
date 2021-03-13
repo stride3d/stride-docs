@@ -64,7 +64,7 @@ The pattern locally modifies the luminance of the pixels affected.
 
 * [ガンマ補正](gamma-correction.md)
 * [トーンマップ](tonemap.md)
-* [ビネット](vignetting.md)
+* [ヴィネッティング](vignetting.md)
 
 <!--
 * [Gamma correction](gamma-correction.md)

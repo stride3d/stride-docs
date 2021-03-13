@@ -125,7 +125,7 @@
 #### [フィルム グレイン](graphics/post-effects/color-transforms/film-grain.md)
 #### [ガンマ補正](graphics/post-effects/color-transforms/gamma-correction.md)
 #### [トーンマップ](graphics/post-effects/color-transforms/tonemap.md)
-#### [ビネット](graphics/post-effects/color-transforms/vignetting.md)
+#### [ヴィネッティング](graphics/post-effects/color-transforms/vignetting.md)
 #### [カスタム色変換](graphics/post-effects/color-transforms/custom-color-transforms.md)
 ### [被写界深度](graphics/post-effects/depth-of-field.md)
 ### [レンズ フレア](graphics/post-effects/lens-flare.md)

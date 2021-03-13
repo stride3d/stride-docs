@@ -42,7 +42,7 @@ Stride supports several tone-mapping operators out of the box:
 
 * [フィルム グレイン](film-grain.md)
 * [ガンマ補正](gamma-correction.md)
-* [ビネット](vignetting.md)
+* [ヴィネッティング](vignetting.md)
 
 <!--
 * [Film grain](film-grain.md)

@@ -58,7 +58,7 @@ Non-gamma-corrected images have dark areas appear darker than they're supposed t
 
 * [フィルム グレイン](film-grain.md)
 * [トーンマップ](tonemap.md)
-* [ビネット](vignetting.md)
+* [ヴィネッティング](vignetting.md)
 * [カスタム色変換](custom-color-transforms.md)
 
 <!--
