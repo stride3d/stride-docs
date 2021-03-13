@@ -67,7 +67,7 @@
 ## See also
 -->
 
-* [アンチエイリアス](anti-aliasing.md)
+* [アンチエイリアシング](anti-aliasing.md)
 * [ブルーム](bloom.md)
 * [明度フィルター](bright-filter.md)
 * [色変換](color-transforms/index.md)

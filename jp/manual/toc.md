@@ -117,7 +117,7 @@
 ### [シャドウ](graphics/lights-and-shadows/shadows.md)
 ### [ボクセルコーントレーシング GI](graphics/lights-and-shadows/voxel-cone-tracing-gi.md)
 ## [ポストエフェクト](graphics/post-effects/index.md)
-### [アンチエイリアス](graphics/post-effects/anti-aliasing.md)
+### [アンチエイリアシング](graphics/post-effects/anti-aliasing.md)
 ### [アンビエント オクルージョン](graphics/post-effects/ambient-occlusion.md)
 ### [ブルーム](graphics/post-effects/bloom.md)
 ### [明度フィルター](graphics/post-effects/bright-filter.md)
