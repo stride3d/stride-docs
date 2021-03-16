@@ -181,7 +181,7 @@ The second initializer is **Position from parent** and initializes the particle 
 
 * [チュートリアル: 軌跡の作詞](create-a-trail.md)
 * [チュートリアル: カスタムパーティクル](custom-particles.md)
-* [チュートリアル: レーザーとライティング](lasers-and-lightning.md)
+* [チュートリアル: レーザーと稲光](lasers-and-lightning.md)
 * [パーティクル](../index.md)
 * [パーティクルの作成](../create-particles.md)
 

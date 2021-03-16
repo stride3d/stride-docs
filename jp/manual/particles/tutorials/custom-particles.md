@@ -477,7 +477,7 @@ You can then reload the scripts in Game Studio. If they don't load, relaunch you
 * [チュートリアル: 軌跡の作成](create-a-trail.md)
 * [チュートリアル: パーティクル マテリアル](particle-materials.md)
 * [チュートリアル: 継承](inheritance.md)
-* [チュートリアル: レーザーとライティング](lasers-and-lightning.md)
+* [チュートリアル: レーザーと稲光](lasers-and-lightning.md)
 * [パーティクル](../index.md)
 * [パーティクルの作成](../create-particles.md)
 
