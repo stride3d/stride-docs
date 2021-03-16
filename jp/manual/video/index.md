@@ -1,9 +1,19 @@
+# ビデオ
+<!--
 # Video
+-->
 
+<span class="label label-doc-level">初級</span>
+<span class="label label-doc-audience">デザイナー</span>
+<!--
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
+-->
 
+**ビデオファイル**をインポートして、シーンで使うことができます。
+<!--
 You can import **video files** and use them in your scenes.
+-->
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/video-thumbnail.jpg">
@@ -12,10 +22,24 @@ You can import **video files** and use them in your scenes.
 </p>
 
 >[!Note]
+>今のところ、Stride は iOS プラットフォームではビデオをサポートしていません。
+
+<!--
+>[!Note]
 >Currently, Stride doesn't support video on iOS platforms.
+-->
 
+## このセクションの内容
+<!--
 ## In this section
+-->
 
+* [ビデオのセットアップ](set-up-a-video.md)
+* [ビデオ プロパティ](video-properties.md)
+* [ビデオをスカイボックスとして使用](use-a-video-as-a-skybox.md)
+
+<!--
 * [Set up a video](set-up-a-video.md)
 * [Video properties](video-properties.md)
 * [Use a video as a skybox](use-a-video-as-a-skybox.md)
+-->
