@@ -32,6 +32,7 @@ Foreach ($post in $posts)
 }
 
 Write-Host "End write files"
+Copy-Item jp/index.md jp_tmp -Force
 Copy-Item jp/manual -Recurse jp_tmp -Force
 Copy-Item en/docfx.json jp_tmp -Force
 (Get-Content jp_tmp/docfx.json) -replace "_site/en","_site/jp" | Set-Content jp_tmp/docfx.json

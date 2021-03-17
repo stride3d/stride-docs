@@ -1,4 +1,4 @@
-# サウンド アセット内の範囲を再生する
+# オーディオファイルの範囲再生
 
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">プログラマー</span>

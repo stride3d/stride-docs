@@ -1,4 +1,4 @@
-# Stride を起動する
+# Stride の起動
 
 <span class="label label-doc-level">初級</span>
 

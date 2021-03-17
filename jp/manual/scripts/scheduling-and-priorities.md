@@ -1,4 +1,4 @@
-# スケジュール設定と優先順位
+# スケジューリングと優先度
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>

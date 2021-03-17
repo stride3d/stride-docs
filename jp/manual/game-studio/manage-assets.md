@@ -1,4 +1,4 @@
-# アセットを管理する
+# アセットの管理
 
 <span class="label label-doc-level">初級</span>
 

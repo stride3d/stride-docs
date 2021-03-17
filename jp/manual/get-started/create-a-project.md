@@ -1,4 +1,4 @@
-# プロジェクトを作成する
+# プロジェクトの作成
 
 <span class="label label-doc-level">初級</span>
 

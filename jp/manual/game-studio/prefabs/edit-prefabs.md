@@ -1,4 +1,4 @@
-# プレハブを編集する
+# プレハブの編集
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>

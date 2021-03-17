@@ -1,4 +1,4 @@
-# ゲームを起動する
+# ゲームの起動
 
 <span class="label label-doc-level">初級</span>
 

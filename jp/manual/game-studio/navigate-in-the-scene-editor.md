@@ -1,5 +1,4 @@
-
-# シーン エディター内を移動する
+# シーン エディターでの移動
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">レベル デザイナー</span>

@@ -1,4 +1,4 @@
-# アセットを作成する
+# アセットの作成
 
 <span class="label label-doc-level">初級</span>
 

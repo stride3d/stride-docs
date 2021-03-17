@@ -1,4 +1,4 @@
-# リボンと残影
+# リボンと軌跡
 
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">アーティスト</span>

@@ -1,4 +1,4 @@
-# スプライトの境界を設定する
+# スプライトの境界の設定
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>

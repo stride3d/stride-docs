@@ -1,4 +1,4 @@
-# VR を有効にする
+# VR の有効化
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>
