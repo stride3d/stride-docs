@@ -23,6 +23,7 @@ To create the effect, Stride creates several versions of the original image with
 ## See also
 
 * [Anti-aliasing](anti-aliasing.md)
+* [Fog](fog.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
