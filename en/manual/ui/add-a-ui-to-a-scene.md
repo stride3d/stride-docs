@@ -76,6 +76,7 @@ public void InitializeUI()
 | Property           | Description
 |--------------------|----------------
 | Page               | The UI page displayed by the component
+| Sampler		| Texture sampling method: Point (Nearest), Linear (**Default option** ), or Anisotropic
 | Full screen        | **Note:** We recommend you use this as other stuff is broken
 | Resolution         | The UI resolution in pixels
 | Size               | Gets or sets the actual size of the UI component in world units
