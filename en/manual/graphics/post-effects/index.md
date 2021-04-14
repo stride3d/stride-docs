@@ -45,6 +45,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
 * [Anti-aliasing](anti-aliasing.md)
 * [Fog](fog.md)
+* [Outline](outline.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
