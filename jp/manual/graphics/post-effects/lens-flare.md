@@ -49,6 +49,7 @@ The artifacts are generally aligned along the line defined by the original brigh
 -->
 
 * [アンチエイリアシング](anti-aliasing.md)
+* [アウトライン](outline.md)
 * [アンビエント オクルージョン](ambient-occlusion.md)
 * [ブルーム](bloom.md)
 * [明度フィルター](bright-filter.md)
@@ -58,6 +59,7 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 <!--
 * [Anti-aliasing](anti-aliasing.md)
+* [Outline](outline.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)

@@ -50,6 +50,7 @@ Stride also includes **MSAA** (multisample anti-aliasing), but this isn't a post
 -->
 
 * [アンビエント オクルージョン](ambient-occlusion.md)
+* [アウトライン](outline.md)
 * [ブルーム](bloom.md)
 * [明度フィルター](bright-filter.md)
 * [色変換](color-transforms/index.md)
@@ -59,6 +60,7 @@ Stride also includes **MSAA** (multisample anti-aliasing), but this isn't a post
 
 <!--
 * [Ambient occlusion](ambient-occlusion.md)
+* [Outline](outline.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

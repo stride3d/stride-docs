@@ -51,6 +51,7 @@ To create the effect, Stride creates several versions of the original image with
 -->
 
 * [アンチエイリアシング](anti-aliasing.md)
+* [アウトライン](outline.md)
 * [アンビエント オクルージョン](ambient-occlusion.md)
 * [ブルーム](bloom.md)
 * [明度フィルター](bright-filter.md)
@@ -60,6 +61,7 @@ To create the effect, Stride creates several versions of the original image with
 
 <!--
 * [Anti-aliasing](anti-aliasing.md)
+* [Outline](outline.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)

@@ -59,6 +59,7 @@ It uses the result of the [bright filter](bright-filter.md) effect as input.
 -->
 
 * [アンチエイリアシング](anti-aliasing.md)
+* [アウトライン](outline.md)
 * [アンビエント オクルージョン](ambient-occlusion.md)
 * [明度フィルター](bright-filter.md)
 * [色変換](color-transforms/index.md)
@@ -68,6 +69,7 @@ It uses the result of the [bright filter](bright-filter.md) effect as input.
 
 <!--
 * [Anti-aliasing](anti-aliasing.md)
+* [Outline](outline.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

@@ -68,6 +68,7 @@
 -->
 
 * [アンチエイリアシング](anti-aliasing.md)
+* [アウトライン](outline.md)
 * [ブルーム](bloom.md)
 * [明度フィルター](bright-filter.md)
 * [色変換](color-transforms/index.md)
@@ -78,6 +79,7 @@
 
 <!--
 * [Anti-aliasing](anti-aliasing.md)
+* [Outline](outline.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

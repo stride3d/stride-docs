@@ -50,6 +50,7 @@ Similar to the [bloom effect](bloom.md), the **light streak** effect uses the re
 -->
 
 * [アンチエイリアシング](anti-aliasing.md)
+* [アウトライン](outline.md)
 * [アンビエント オクルージョン](ambient-occlusion.md)
 * [ブルーム](bloom.md)
 * [明度フィルター](bright-filter.md)
@@ -59,6 +60,7 @@ Similar to the [bloom effect](bloom.md), the **light streak** effect uses the re
 
 <!--
 * [Anti-aliasing](anti-aliasing.md)
+* [Outline](outline.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
