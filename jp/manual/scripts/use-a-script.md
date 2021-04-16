@@ -1,4 +1,4 @@
-# スクリプトを使用する
+# スクリプトの使用
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>

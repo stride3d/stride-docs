@@ -1,4 +1,4 @@
-# Unity® 向け Stride 開発者
+# Unity® 開発者のための Stride
 
 Stride と Unity® はどちらも C# を使用し、多くの概念を共有していますが、いくつか大きな違いがあります。
 

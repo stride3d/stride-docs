@@ -1,4 +1,4 @@
-# アセットを使用する
+# アセットの使用
 
 <span class="label label-doc-level">初級</span>
 

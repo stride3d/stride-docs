@@ -1,4 +1,4 @@
-# 制約
+# コンストレイント
 
 <div class="doc-incomplete"/>
 
