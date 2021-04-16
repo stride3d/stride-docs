@@ -33,6 +33,7 @@
 ## See also
 
 * [Anti-aliasing](anti-aliasing.md)
+* [Fog](fog.md)
 * [Outline](outline.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)

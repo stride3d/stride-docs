@@ -27,6 +27,7 @@ It uses the result of the [bright filter](bright-filter.md) effect as input.
 ## See also
 
 * [Anti-aliasing](anti-aliasing.md)
+* [Fog](fog.md)
 * [Outline](outline.md)
 * [Ambient occlusion](ambient-occlusion.md)
 * [Bright filter](bright-filter.md)
