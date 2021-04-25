@@ -1,4 +1,4 @@
-# Bloom
+# Fog
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Artist</span>
