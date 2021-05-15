@@ -90,7 +90,7 @@ public class MySoundScript : SyncScript
     public override void Update()
     {
         // 音楽が再生されていなくて、再生する必要がある場合は、音楽を再生する。
-        if (PlayMusic & musicInstance.PlayState != SoundPlayState.Playing)
+        if (PlayMusic & musicInstance.PlayState != PlayState.Playing)
         {
             musicInstance.Play();
         }
