@@ -1,4 +1,4 @@
-# Bloom
+# Outline
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Artist</span>
