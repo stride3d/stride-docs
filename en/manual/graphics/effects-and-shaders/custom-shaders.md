@@ -27,7 +27,7 @@ You can also use custom shaders to create custom post effects. For more informat
 
     ![Select class](media/rename-file.png)
 
-    The Stride Visual Studio extension automatically generates a `.cs` file from the `.sdsl` file. The Solution Explorer lists it as a child of the `.xskl` file.
+    The Stride Visual Studio extension automatically generates a `.cs` file from the `.sdsl` file. The Solution Explorer lists it as a child of the `.sdsl` file.
 
     ![My shader](media/my-shader.png)
 
