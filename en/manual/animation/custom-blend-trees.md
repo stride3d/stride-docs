@@ -84,7 +84,7 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
         // Build the animation blend tree (stack)
         blendStack.Add(AnimationOperation.NewPush(animEvaluatorWalk, timeWalk));    // Will PUSH animation state to be evaluated at the specified Time.
         blendStack.Add(AnimationOperation.NewPush(animEvaluatorRun, timeRun));      // Will PUSH another animation state to be evaluated at the specified Time.
-        blendStack.Add(AnimationOperation.NewBlend(AnimationBlendOperation.LinearBlend, LerpFactor));   // Will POP the last two states, blend them with the factor and PUSH back the result.
+        blendStack.Add(AnimationOperation.NewBlend(CoreAnimationOperation.Blend, LerpFactor));   // Will POP the last two states, blend them with the factor and PUSH back the result.
 
         // NOTE
         // Because the blending operations are laid out in a stack you have to pack the operations in this manner.
