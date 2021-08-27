@@ -3,6 +3,9 @@ These tutorials cover the beginner principles of using C# when working with the 
 
 ![Editor properties](media/csharp_beginner_tutorial_template.jpg)
 
+## Youtube Tutorial Series
+There is a YouTube series covering this CSharpBeginner course.  It is a great companion and may be found here: https://www.youtube.com/watch?v=Z2kUQhSmdr0&list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi
+
 # All tutorials 
 <div class='tutorial'>
     [
