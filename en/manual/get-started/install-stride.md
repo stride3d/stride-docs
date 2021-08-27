@@ -8,7 +8,7 @@
  
     The **Stride Setup Wizard** opens.
 
-3. Stride requires .NET Framework 4.7.2. If you don't have this, Stride prompts you to install it.
+3. Stride depends on the .NET Runtime. If you don't have the particular version it needs, Stride prompts you to install it.
 
     ![Prerequisites installer](media/prerequisites-installer.png)
 
