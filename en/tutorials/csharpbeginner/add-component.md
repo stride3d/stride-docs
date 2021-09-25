@@ -6,6 +6,9 @@ This C# Beginner tutorial covers how to add and remove components. In the previo
 
 ![Add a component](media/adding-a-component.png)
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KGuBSRyRmVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Code
 ### AmmoComponent
 This is the AmmoComponent. We will not attach it to the entity in the editor. Instead we will add it ourselves in the AddingAComponent script.

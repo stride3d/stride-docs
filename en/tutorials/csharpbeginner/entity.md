@@ -6,5 +6,7 @@ This C# Beginner tutorial covers how to get the entity object. When a script is 
 
 ![Getting the entity example](media/getting-the-entity.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DUmZujopcY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Code
 [!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\GettingTheEntityDemo.cs)]

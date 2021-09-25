@@ -6,5 +6,8 @@ This C# Beginner tutorial covers how to create virtual buttons. Lets say that yo
 
 ![Virtual buttons](media/virtual-buttons.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uWgson2IIhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Code
 [!code-csharp[VirtualButtons](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\VirtualButtonsDemo.cs)]

@@ -6,6 +6,9 @@ This C# Beginner tutorial covers how to expose editor properties for Stride Game
 
 ![Editor properties](media/editor-properties2.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GPiWbfsG5F0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Code
 [!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\PropertiesDEmo.cs)]
 
