@@ -6,6 +6,8 @@ This C# beginner tutorial covers how to get and remove components. Components ar
 
 ![Get a component](media/getting-a-component.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qRZG8qXkvDQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Code
 ### AmmoComponent
 This is the first component that we attach to an entity. In the second script, we will try to get this AmmoComponent.

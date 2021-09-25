@@ -6,5 +6,7 @@ This C# Beginner tutorial covers how to handle mouse input. We can check for the
 
 ![Mouse input](media/mouse-input.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HuA80JIZ8hA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Code
 [!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\MouseInputDemo.cs)]

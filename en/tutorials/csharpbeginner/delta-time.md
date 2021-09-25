@@ -6,5 +6,7 @@ This C# Beginner tutorial covers the retrieval and usage of delta time. A games 
 
 ![Delta Time](media/deltatime.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WMGY8JOqzeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Code
 [!code-csharp[DeltaTime](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\DeltaTimeDemo.cs)]
