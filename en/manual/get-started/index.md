@@ -5,7 +5,7 @@ uid: ../toc.md
 
 <span class="label label-doc-level">Beginner</span>
 
-This chapter explains everything you need to start using Stride from scratch. 
+This chapter explains everything you need to start using Stride from scratch. For video tutorials, have a look at the the [Tutorials](https://doc.stride3d.net/latest/en/tutorials/index.html).
 
 ![Game Studio](media/get-started.jpg)
 
