@@ -12,12 +12,13 @@ The @'Stride.Rendering.Compositing.SceneRendererBase' provides a default impleme
 public sealed class MyCustomRenderer : SceneRendererBase
 {
     // Implements the DrawCore method
-    protected override void DrawCore(RenderContext context, RenderFrame output)
+    protected override void DrawCore(RenderContext context, RenderDrawContext drawContext)
     {
         // Access to the graphics device
-        var graphicsDevice = context.GraphicsDevice;
-        // Clears the currrent render target
-        graphicsDevice.Clear(output.RenderTargets[0], Color.CornflowerBlue);
+        var graphicsDevice = drawContext.GraphicsDevice;
+        var commandList = drawContext.CommandList;
+        // Clears the current render target
+        commandList.Clear(commandList.RenderTargets[0], Color.CornflowerBlue);
         // [...] 
     }
 }
@@ -29,12 +30,13 @@ To develop a renderer and attach it to a method directly, use @'Stride.Rendering
 
 ```cs
 var sceneRenderer = new DelegateSceneRenderer(
-    (renderContext, frame) =>
+    (drawContext) =>
     {
         // Access to the graphics device
-        var graphicsDevice = context.GraphicsDevice;
-        // Clears the currrent render target
-        graphicsDevice.Clear(output.RenderTargets[0], Color.CornflowerBlue);
+        var graphicsDevice = drawContext.GraphicsDevice;
+        var commandList = drawContext.CommandList;
+        // Clears the current render target
+        commandList.Clear(commandList.RenderTargets[0], Color.CornflowerBlue);
         // [...] 
    });
 ```

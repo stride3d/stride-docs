@@ -6,6 +6,9 @@ This C# Beginner tutorial covers how to load content from code. Assets like mode
 
 ![Loading content](media/loading-content.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_c4Cv4k3YyI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Code
 With the L and U key you can either Load or Unload the model of a mannequin. If there is a model loaded, you can use the S key to spawn a new entity with the loaded mannequin model. The C clears all of the spawned entities in the scene. This demo demonstrates that when models are unloaded, any entities that reference the model are still existing in the scene.
 [!code-csharp[Loading content](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\LoadingContentDemo.cs)]

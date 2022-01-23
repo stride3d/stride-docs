@@ -1,4 +1,4 @@
-# プラットフォームを追加または削除する
+# プラットフォームの追加と削除
 
 <span class="label label-doc-level">初級</span>
 

@@ -33,6 +33,8 @@
 ## See also
 
 * [Anti-aliasing](anti-aliasing.md)
+* [Fog](fog.md)
+* [Outline](outline.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

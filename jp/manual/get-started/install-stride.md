@@ -1,4 +1,4 @@
-# Stride をインストールする
+# Stride のインストール
 
 <span class="label label-doc-level">初級</span>
 

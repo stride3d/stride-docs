@@ -1,4 +1,4 @@
-# オーディオ デバイスを設定する
+# オーディオ デバイスの設定
 
 <span class="label label-doc-level">上級</span>
 <span class="label label-doc-audience">プログラマー</span>

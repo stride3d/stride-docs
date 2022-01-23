@@ -8,9 +8,13 @@ $version = "4.0"
 Write-Host Executing `'WAWSDeploy.exe ../stride_doc.zip $deploymentProfile /v /t $version /d /p XXXXXXXXXXXXX`'
 ./WAWSDeploy.exe ../stride_doc.zip $deploymentProfile /v /t $version /d /p $deploymentPassword
 
+# Find host URL from deployment profile
+[xml]$deploymentProfileXml = Get-Content $deploymentProfile
+$deployUrl = $deploymentProfileXml.publishData.publishProfile[0].destinationAppUrl
+
 # Process versions.json
 Write-Host Updating list of versions
-$response = Invoke-RestMethod -Uri http://xenko-doc.azurewebsites.net/versions.json
+$response = Invoke-RestMethod -Uri $deployUrl/versions.json
 $response.versions = ($response.versions + $version) | select -Unique | Sort-Object -Property @{Expression={ new-object System.Version ($_) }; Descending = $True}
 # Save file
 New-Item -Name "_siteroot" -ItemType "directory"

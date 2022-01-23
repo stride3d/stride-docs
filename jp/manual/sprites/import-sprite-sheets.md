@@ -1,4 +1,4 @@
-# スプライト シートをインポートする
+# スプライト シートのインポート
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">デザイナー</span>

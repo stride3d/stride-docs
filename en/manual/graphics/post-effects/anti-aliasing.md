@@ -22,6 +22,8 @@ Stride also includes **MSAA** (multisample anti-aliasing), but this isn't a post
 ## See also
 
 * [Ambient occlusion](ambient-occlusion.md)
+* [Fog](fog.md)
+* [Outline](outline.md)
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
 * [Color transforms](color-transforms/index.md)

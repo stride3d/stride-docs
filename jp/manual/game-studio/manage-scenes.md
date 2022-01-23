@@ -1,4 +1,4 @@
-# シーンを管理する
+# シーンの管理
 
 <span class="label label-doc-level">初級</span>
 <span class="label label-doc-audience">プログラマー</span>

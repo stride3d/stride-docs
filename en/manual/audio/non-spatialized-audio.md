@@ -91,7 +91,7 @@ public class MySoundScript : SyncScript
     public override void Update()
     {
         // If music isn't playing but should be, play the music.
-        if (PlayMusic & musicInstance.PlayState != SoundPlayState.Playing)
+        if (PlayMusic & musicInstance.PlayState != PlayState.Playing)
         {
             musicInstance.Play();
         }

@@ -1,4 +1,4 @@
-# 加算アニメーション
+# 加算アニメーション（Additive Animation）
 
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">デザイナー</span>

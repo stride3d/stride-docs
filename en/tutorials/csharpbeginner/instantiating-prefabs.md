@@ -6,5 +6,8 @@ This C# Beginner tutorial covers how to instantiate prefabs. A prefab is a "mast
 
 ![Instantiating Prefabs](media/instantiating-prefabs.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/19u2QACzdAk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Code
 [!code-csharp[Instantiating Prefabs](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\InstantiatingPrefabsDemo.cs)]

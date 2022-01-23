@@ -1,4 +1,4 @@
-# チュートリアル: 残影を作成する
+# チュートリアル: 軌跡の作成
 
 <span class="label label-doc-level">中級</span>
 <span class="label label-doc-audience">アーティスト</span>
