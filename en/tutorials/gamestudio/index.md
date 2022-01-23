@@ -1,8 +1,8 @@
 # Game studio
 The Stride engine comes with an editor called Game Studio. The videos below cover the basics of the UI and how various concepts work inside the editor. 
 
-[!Note]
-These videos were recorded back when Stride was called 'Xenko'. Other than the name and logo change, the UI remains almost 100% identical installer.
+> [!NOTE]
+> These videos were recorded when Stride was called 'Xenko'. Other than the name and logo change, the UI is almost 100% identical.
 
 # Playlist 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLM8hj-JyVnYr-usNqX5aeXG0IwTY9FVge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
