@@ -4,4 +4,4 @@ In this tutorial we learn about models in Stride game studio. We learn about 5 d
 > [!NOTE]
 > These videos were recorded when Stride was called 'Xenko'. Other than the name and logo change, the UI is almost 100% identical.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/55WSNO3YHos&" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/55WSNO3YHos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
