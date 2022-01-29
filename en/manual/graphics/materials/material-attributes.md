@@ -31,7 +31,3 @@ You can also write [custom shaders](../effects-and-shaders/custom-shaders.md) to
 * [Material slots](material-slots.md)
 * [Materials for developers](materials-for-developers.md)
 * [Custom shaders](../effects-and-shaders/custom-shaders.md)
-
-Wikipedia is edited by volunteers; the only time and resources wasted is their own. Editors should work in the areas they find interesting and believe will help the project, whether that's as small as [[correcting grammar|Wikipedia:Comprised_of]] or as big as writing FAs. (I do both.) 
-
-In this case, renaming the Windows article will be a trivial task if no one opposes it. I started the Talk page discussion first to 1) make sure my logic was sound 2) check I wasn't stepping on toes. I was being polite. 
