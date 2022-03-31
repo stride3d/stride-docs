@@ -427,7 +427,7 @@ Collider FindGOCameraIsLookingAt()
 #### Stride
 
 ```cs
-public static PhysicsComponent ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera, Simulation simulation)
+public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera, Simulation simulation)
 {
     Matrix invViewProj = Matrix.Invert(camera.ViewProjectionMatrix);
 
