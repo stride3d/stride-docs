@@ -41,3 +41,19 @@ These pages contain tutorials to learn more about the Stride game engine.
     </a>
 </div>
 
+<div class='tutorial'>
+    <a href="csharpintermediate/index.md"> 
+        <div class='stride-documentation-image'>
+            ![C# intermediate tutorials](media/csharp-intermediate.png "C# intermediate tutorials")
+        </div>
+        <div class='tutorial_description'>
+            <ul>
+                <li>UI basics</li> 
+                <li>Collisions</li> 
+                <li>Racysting</li> 
+                <li>First person camera</li> 
+            </ul>
+        </div>
+    </a>
+</div>
+
