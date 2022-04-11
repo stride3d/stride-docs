@@ -11,9 +11,10 @@ Rigid bodies determine how entites in our scene behave on gravity, whether they 
 
 ## Code
 ### Stride editor UI pages
-The code below will look for a Page component that has been added to the current entity. On that page we search for UI elements like buttons and textfields. We than tell those UI elements what happends when we click on them, or that something needs to be done when a text value changes.
+The code below looks for the rigidbody component that is attached to our entity. The rigidbody component contains all information we need for setting up triggers. The "IsTrigger" property determines that our collider doesn't stop other physics objects, but that it does trigger events in code (if they are set up at least).
+
+We spawn a sphere which also has a rigidbody. This sphere has a mass and is affected by gravity. The sphere will fall down and eventually roll through our collider box. In our update loop we check if there are collisions happening. If there are collisions, we get the colliding object and print out some text on screen. Once there sphere leaves the trigger box, our update loop sees that we no longer having collisions.
+
+Instead of a using our update loop, we can also use collision events. 
 [!code-csharp[editorpages](..\..\..\..\stride\samples\Tutorials\CSharpIntermediate\CSharpIntermediate\CSharpIntermediate.Game\02_Collision-Triggers/CollisionTriggerDemo.cs)]
 
-### UI pages made entirely by code
-This script will create everything from scratch: a UI page, a stackpanel, a button, a textfield and the interactive logic behind it.
-[!code-csharp[uibycode](..\..\..\..\stride\samples\Tutorials\CSharpIntermediate\CSharpIntermediate\CSharpIntermediate.Game\01_UI-Basics\UIByCode)]
