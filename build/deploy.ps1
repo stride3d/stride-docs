@@ -2,7 +2,7 @@ param ($deploymentProfile, $deploymentPassword)
 
 # This is the version used in the https://doc.stride3d.net/<version> url
 # Please update this if branching for a new release!
-$version = "4.0"
+$version = "4.1"
 
 # Deploy doc on the target
 Write-Host Executing `'WAWSDeploy.exe ../stride_doc.zip $deploymentProfile /v /t $version /d /p XXXXXXXXXXXXX`'
