@@ -5,10 +5,6 @@ All tutorials have a Youtube video. You can watch the entire Beginners playlist 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z2kUQhSmdr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-## Youtube Tutorial Series
-There is a YouTube series covering this CSharpBeginner course.  It is a great companion and may be found here: https://www.youtube.com/watch?v=Z2kUQhSmdr0&list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi
-
 # All tutorials 
 <div class='tutorial'>
     [

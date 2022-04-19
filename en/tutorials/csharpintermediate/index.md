@@ -1,289 +1,212 @@
-# C# Beginner
-These tutorials cover the beginner principles of using C# when working with the Stride game engine. Start here if you are new to Stride. Note: these tutorials are not a introduction to C# itself. Although having some coding experience is useful, it is not mandatory to get started with these tutorials. You can create the C# beginner tutorial project by starting the Stride launcher. Create a new project and select the template: Tutorials -> C# beginner. Every single scene is loaded as a child scene and demonstrates a sample script. 
+# C# Intermediate
+These tutorials cover various intermediate principles of using C# when working with the Stride game engine. It is recommended that you go through all the C# Beginner tutorials first before going through all the intermediate tutorials. You can create the C# intermediate tutorial project by starting the Stride launcher. Create a new project and select the template: Tutorials -> C# intermediate. Every single tutorial has a 'Start' and a 'Completed' scene. You can view the Completed scenes to see what the end result of each tutorial will roughly look like. If you are following along with the videos, you can use the Start scenes as a good starting point. Those scenes only contain the bare minimum setup. 
 
-All tutorials have a Youtube video. You can watch the entire Beginners playlist here: https://www.youtube.com/playlist?list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi 
+All tutorials have a Youtube video. You can watch the entire Intermediate playlist here: https://www.youtube.com/playlist?list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z2kUQhSmdr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-## Youtube Tutorial Series
-There is a YouTube series covering this CSharpBeginner course.  It is a great companion and may be found here: https://www.youtube.com/watch?v=Z2kUQhSmdr0&list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi
 
 # All tutorials 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Getting the Entity</h2>
+       <h2>UI Basics</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Getting the Entity tutorial](media/getting-the-entity_thumb.png "Getting the Entity") 
+        ![UI Basics](media/ui-basics_thumb.png "UI basics") 
     </div>
     <div class='tutorial_description'>
 
         <ul>
-            <li>Retrieve the entity</li> 
-            <li>Retrieve the parent</li> 
-            <li>Print debug text</li> 
+            <li>UI editor</li> 
+            <li>Hooking up events</li> 
+            <li>UI by code</li> 
         </ul>
     </div>
-    ](entity.md) 
+    ](ui-basics.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Child entities</h2>
+       <h2>Collision triggers</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Child entities tutorial](media/child-entities_thumb.png "Child entities") 
+        ![Collision triggers](media/collision-triggers_thumb.png "Collision triggers") 
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Get a specific child entity</li> 
-            <li>Get children in a list</li> 
-            <li>Get children of children</li> 
+            <li>Colliders</li> 
+            <li>Trigger events</li> 
+            <li>Colliding entities</li> 
         </ul>
     </div>
-    ](child-entities.md) 
+    ](collision-triggers.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>The transform</h2>
+       <h2>Raycasting</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![The transform tutorial](media/transform-position_thumb.png "The transform") 
+        ![Raycasting](media/raycasting_thumb.png "Raycasting") 
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Accessing the Transform component</li> 
-            <li>Get the local position</li> 
-            <li>Get the world position</li> 
+            <li>Raycasting</li> 
+            <li>Collision groups</li> 
+            <li>Pentrative raycasting</li> 
         </ul>
     </div>
-    ](transform-position.md) 
+    ](raycasting.md) 
 </div>
 
 
 <div class='tutorial'> 
     [
     <div class='tutorial_title'>
-       <h2>Editor properties</h2>
+       <h2>Project and Unproject</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Editor properties tutorial](media/editor-properties_thumb.png "Editor properties")  
+        ![Project and Unproject](media/project-unproject_thumb.png "Project and Unproject")  
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Defining various editor properties</li> 
-            <li>Defining lists</li> 
-            <li>Hiding public properties</li> 
+            <li>Projecting</li> 
+            <li>Unprojecting</li> 
+            <li>Viewports</li> 
         </ul>
     </div>
-    ](editor-properties.md) 
+    ](project-and-unproject.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Getting a component</h2>
+       <h2>Async scripts</h2>
     </div>
     <div class='stride-documentation-image'>   
-        ![Get a component tutorial](media/getting-a-component_thumb.png "Get a component")
+        ![Async scripts](media/async-scripts_thumb.png "Async scripts")
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Getting a component</li> 
-            <li>Remove a component</li> 
-            <li>Access methods of other components</li> 
+            <li>Asynchronous scripts</li> 
+            <li>Async collision triggers</li> 
+            <li>Async web api</li> 
         </ul>
     </div>
-    ](get-component.md) 
+    ](async-scripts.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Adding a component</h2>
+       <h2>Scenes</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Add a component tutorial](media/adding-a-component_thumb.png "Add a component")
+        ![Scenes](media/scenes_thumb.png "Scenes")
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Adding a component</li> 
-            <li>Removing all components of 1 type</li> 
-            <li>Create a component if it doesn't exists</li> 
+            <li>Child scenes</li> 
+            <li>Removing a scene</li> 
+            <li>(Re)loading a scene</li> 
         </ul>
     </div>
-    ](add-component.md) 
+    ](scenes.md) 
 </div>
 
 
 <div class='tutorial'> 
     [
     <div class='tutorial_title'>
-       <h2>Delta time</h2>
+       <h2>Animation basics</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Delta time tutorial](media/deltatime_thumb.png "Delta time")
+        ![Animation basics](media/animation-basics_thumb.png "Animation basics")
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Retrieving delta time</li> 
-            <li>Making a simple timer</li> 
-            <li>Making a simple countdown timer</li> 
+            <li>Animation clips</li> 
+            <li>Play and pause</li> 
+            <li>Cross fade</li> 
         </ul>
     </div>
-    ](delta-time.md) 
+    ](animation-basics.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Cloning an entity</h2>
+       <h2>Audio</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Cloning an entity tutorial](media/cloning-entities_thumb.png "Cloning an entity")
+        ![Audio](media/audio_thumb.png "Audio")
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Cloning an entity</li> 
-            <li>Adding an entity to the current scene</li> 
-            <li>Adding an entity as a child to a parent entity</li> 
+            <li>Sounds and music</li> 
+            <li>Spatialized sound</li> 
+            <li>Streaming music</li> 
         </ul>
     </div>
-    ](cloning-entities.md) 
+    ](sound.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Removing an entity</h2>
+       <h2>First person camera</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Removing an entity tutorial](media/removing-entity_thumb.png "Removing an entity")   
+        ![First person camera](media/first-person-camera_thumb.png "First person camera")   
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Cloning new entities using a timer</li> 
-            <li>Removing entities using a timer</li> 
-            <li>Removing an entity from the scene</li> 
+            <li>Mouse movement</li> 
+            <li>Applying rotation</li> 
+            <li>Limited camera angles</li> 
         </ul>
     </div>
-    ](removing-entities.md) 
+    ](first-person-camera.md) 
 </div>
 
 
-<div class='tutorial'> 
+<div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Keyboard input</h2>
+       <h2>Third person camera</h2>
     </div>
     <div class='stride-documentation-image'>
-        ![Keyboard input tutorial](media/keyboard-input_thumb.png "Keyboard input tutorial") 
+        ![Third person camera](media/third-person-camera_thumb.png "Third person camera")   
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Holding down a key</li> 
-            <li>Clicking a key</li> 
-            <li>Releasing a key</li> 
+            <li>Third person offset</li> 
+            <li>Wall clamping</li> 
+            <li>First person fallback</li> 
         </ul>
     </div>
-    ](keyboard-input.md) 
+    ](third-person-camera.md) 
 </div>
 
 <div class='tutorial'>
     [
     <div class='tutorial_title'>
-       <h2>Mouse input</h2>
+       <h2>Navigation</h2>
     </div>
     <div class='stride-documentation-image'> 
-        ![Mouse input tutorial](media/mouse-input_thumb.png "Mouse input tutorial")
+        ![Navigation](media/navigation_thumb.png "Navigation")
     </div>
     <div class='tutorial_description'>
         <ul>
-            <li>Holding down a mouse button</li> 
-            <li>Clicking or releasing a mouse button</li> 
-            
-            <li>Using the mouse wheel </li> 
+            <li>Navigation meshes</li> 
+            <li>Navigation settings</li> 
+            <li>Pathfinding</li> 
         </ul>
     </div>
-    ](mouse-input.md) 
+    ](navigation.md) 
 </div>
 
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Virtual buttons</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Virtual buttons tutorial](media/virtual-buttons_thumb.png "Virtual buttons tutorial")
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Defining a virtual key configuration</li> 
-            <li>Binding input to the configuration</li> 
-            <li>Using the virtual buttons</li> 
-        </ul>
-    </div>
-    ](virtual-buttons.md) 
-</div>
-
-
-<div class='tutorial'> 
-    [
-    <div class='tutorial_title'>
-       <h2>Linear Interpolation</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Linear Interpolation tutorial](media/lerp_thumb.png "Linear Interpolation tutorial") 
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Calculating 'lerp' value</li> 
-            <li>Lerp between vector 3</li> 
-            <li>Random values</li> 
-        </ul>
-    </div>
-    ](linear-interpolation.md) 
-</div>
-
-<div class='tutorial'> 
-    [
-    <div class='tutorial_title'>
-       <h2>Loading content</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Loading content tutorial](media/loading-content_thumb.png "Loading content tutorial") 
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Loading content from code</li> 
-            <li>Unloading content</li> 
-            <li>Attach models to entities</li> 
-        </ul>
-    </div>
-    ](loading-content.md) 
-</div>
-
-<div class='tutorial'> 
-    [
-    <div class='tutorial_title'>
-       <h2>Instantiating prefabs</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Instantiating prefabs tutorial](media/instantiating-prefabs_thumb.png "Instantiating prefabs tutorial") 
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Instantiate prefab</li> 
-            <li>Load prefab from content</li> 
-            <li>Parent prefab entity</li> 
-        </ul>
-    </div>
-    ](instantiating-prefabs.md) 
-</div>
 
 

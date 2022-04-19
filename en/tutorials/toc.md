@@ -40,4 +40,4 @@
 ### [Audio](csharpintermediate/audio.md) 
 ### [First person camera](csharpintermediate/first-person-camera.md) 
 ### [Third person camera](csharpintermediate/third-person-camera.md) 
-### [Navigation](csharpintermediate/naviogation.md) 
+### [Navigation](csharpintermediate/navigation.md) 
