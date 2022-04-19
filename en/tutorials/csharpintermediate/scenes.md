@@ -1,14 +1,18 @@
-# Transform Position
-You can find this sample in the tutorial project: **Menu** &rarr; **Transform Position** 
+# Scenes
 
 ## Explanation
-This C# Beginner tutorial covers the Transform component of an entity. The Transform component is such a commonly used component, that you can quick access it via 'Entity.Transform'. The transform contains all kinds of properties and methods for Position, Rotation and Scale. In this example we learn the difference between local and world position.
+This C# Intermediate tutorial covers loading/unloading scenes and child scenes. Levels in Stride are build using 'Scenes'. A scene is hierarchy of the objects or entities in your world. A single scene can contain an infinite amount of child scenes which can be loaded and unloaded at any point. Those child scenes can be loaded with an offset if desired.
 
-![Transform Position](media/transform-position.png)
+![Transform Position](media/scenes.png)
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2N6NhijZuJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Code
-[!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\TransformPositionDemo.cs)]
+### Loading a child scene
+[!code-csharp[editorpages](..\..\..\..\stride\samples\Tutorials\CSharpIntermediate\CSharpIntermediate\CSharpIntermediate.Game\06_Scenes\LoadChildScene.cs)]
+
+### (Re)loading a scene
+
+[!code-csharp[editorpages](..\..\..\..\stride\samples\Tutorials\CSharpIntermediate\CSharpIntermediate\CSharpIntermediate.Game\06_Scenes\LoadScene.cs)]
