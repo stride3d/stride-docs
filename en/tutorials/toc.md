@@ -13,7 +13,7 @@
 ### [Models](gamestudio/10-models.md)
 ### [Physics intro](gamestudio/11-physics-intro.md)
 ### [Static colliders](gamestudio/12-static-colliders.md)
-## [C# intermediate](csharpbeginner/index.md)
+## [C# Beginner](csharpbeginner/index.md)
 ### [Getting the Entity](csharpbeginner/entity.md)
 ### [Child entities](csharpbeginner/child-entities.md) 
 ### [Transform Position](csharpbeginner/transform-Position.md) 

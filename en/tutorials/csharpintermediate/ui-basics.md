@@ -7,7 +7,7 @@ Those UI elements can be referenced in code, so that can set up events like "but
 
 ![Cloning entities](media/ui-basics.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TzwGe4RzAb4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rB5duwfs1mU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Code
 ### Stride editor UI pages
