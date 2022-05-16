@@ -1,9 +1,8 @@
 # C# Intermediate
 These tutorials cover various intermediate principles of using C# when working with the Stride game engine. It is recommended that you go through all the C# Beginner tutorials first before going through all the intermediate tutorials. You can create the C# intermediate tutorial project by starting the Stride launcher. Create a new project and select the template: Tutorials -> C# intermediate. Every single tutorial has a 'Start' and a 'Completed' scene. You can view the Completed scenes to see what the end result of each tutorial will roughly look like. If you are following along with the videos, you can use the Start scenes as a good starting point. Those scenes only contain the bare minimum setup. 
 
-All tutorials have a Youtube video. You can watch the entire Intermediate playlist here: https://www.youtube.com/watch?v=WBQmXKPXbCA&list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WBQmXKPXbCA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" 
+title="Stride C# intermediate youtube playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # All tutorials 
 <div class='tutorial'>
