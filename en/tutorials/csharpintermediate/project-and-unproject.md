@@ -11,11 +11,8 @@ From 2D to 3D is often used to convert a mouse coordinate in to the looking dire
 
 
 ## Code
-
 ### Project
-The example consists of a s
 [!code-csharp[project](..\..\..\..\stride\samples\Tutorials\CSharpIntermediate\CSharpIntermediate\CSharpIntermediate.Game\04_Project-UnProject\ProjectDemo.cs)]
 
 ## Unproject
-The example consists of a s
 [!code-csharp[unproject](..\..\..\..\stride\samples\Tutorials\CSharpIntermediate\CSharpIntermediate\CSharpIntermediate.Game\04_Project-UnProject\UnprojectDemo.cs)]
