@@ -149,7 +149,7 @@ title="Stride C# intermediate youtube playlist" frameborder="0" allow="accelerom
             <li>Streaming music</li> 
         </ul>
     </div>
-    ](sound.md) 
+    ](audio.md) 
 </div>
 
 <div class='tutorial'>

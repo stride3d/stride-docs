@@ -32,7 +32,7 @@
 ## [C# Intermediate](csharpintermediate/index.md)
 ### [UI basics](csharpintermediate/ui-basics.md)
 ### [Collision triggers](csharpintermediate/collision-triggers.md) 
-### [Racyasting](csharpintermediate/racaysting.md) 
+### [Racyasting](csharpintermediate/raycasting.md) 
 ### [Project and Unproject](csharpintermediate/project-and-unproject.md) 
 ### [Async scripts](csharpintermediate/async-scripts.md) 
 ### [Scenes](csharpintermediate/scenes.md) 
