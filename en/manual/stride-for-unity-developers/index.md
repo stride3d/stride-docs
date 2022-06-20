@@ -261,7 +261,7 @@ Stride supports a variety of inputs. The code samples below demonstrate the diff
 
 For more information about Input in Stride, see [Input](../input/index.md).
 
-## Unity
+#### Unity®
 ```cs
 void Update()
 {
@@ -279,6 +279,27 @@ void Update()
 
     float Horiz = Input.GetAxis("Horizontal");
     float Vert = Input.GetAxis("Vertical");
+    //Do something else.
+}
+```
+#### Stride
+```cs
+public override void Update()
+{
+    // true for one frame in which the space bar was pressed
+    if(Input.IsKeyDown(Keys.Space))
+    {
+        // Do something.
+    }
+
+    // true while this joystick button is down
+    if (Input.GameControllers[0].IsButtonDown(0))
+    {
+        // Do something.
+    }
+
+    float Horiz = (Input.IsKeyDown(Keys.Left) ? -1f : 0) + (Input.IsKeyDown(Keys.Right) ? 1f : 0);
+    float Vert = (Input.IsKeyDown(Keys.Down) ? -1f : 0) + (Input.IsKeyDown(Keys.Up) ? 1f : 0);
     //Do something else.
 }
 ```
