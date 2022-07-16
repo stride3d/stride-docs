@@ -68,8 +68,7 @@ This feature also updates the text on the CameraOrientationGizmo to be XYZ inste
 ### Intermediate tutorials
 One of the first Open Collective sub-projects is the [intermediate C# tutorials project](https://opencollective.com/stride3d/projects/stride-intermediate-tutorials). After discussion in community meetings and with various contributors donating directly to this project, the amount for this project to be included in Stride quickly became a realization.
 
-![Intermediate tutorials intro screen](/images/blog/2022-07-16-release-stride-4-1/intermediate-tutorials.jpg)
-![preview(to be removed)](https://i.imgur.com/7GVEiSR.jpg)
+![Intermediate tutorials intro screen](https://i.imgur.com/7GVEiSR.jpg)
 
 With Stride 4.1, you will be able to select the C# intermediate tutorials project as a new template project. The template project contains (at the moment of writing) 11 topics that every developer will want to have a look at.
 1.    UI basics
