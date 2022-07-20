@@ -1,7 +1,7 @@
 
 # [Требования](requirements/index.md)
 
-# [Stride3d для Unity® разработчиков](stride-for-unity-developers/index.md)
+# [Stride для Unity® разработчиков](stride-for-unity-developers/index.md)
 
 # [Лаунчер Stride](stride-launcher/index.md)
 
@@ -29,7 +29,7 @@
 ## [Скрипты анимации](animation/animation-scripts.md)
 ## [Аддитивная анимация](animation/additive-animation.md)
 ## [Процедурная анимация](animation/procedural-animation.md)
-## [Пользовательские blend trees](animation/custom-blend-trees.md)
+## [Пользовательские деревья смешивания](animation/custom-blend-trees.md)
 ## [Model node links](animation/model-node-links.md)
 ## [Пользовательские атрибуты](animation/custom-attributes.md)
 
@@ -217,7 +217,7 @@
 
 # [Сценарии](scripts/index.md)
 ## [Виды сценариев](scripts/types-of-script.md)
-## [Создайте сценарий](scripts/create-a-script.md)
+## [Создайте скрипт](scripts/create-a-script.md)
 ## [Использование сенария](scripts/use-a-script.md)
 ## [Публичные свойства и поля](scripts/public-properties-and-fields.md)
 ## [Планирование и приоритеты](scripts/scheduling-and-priorities.md)

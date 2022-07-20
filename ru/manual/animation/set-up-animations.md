@@ -1,96 +1,99 @@
 # Set up animations
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
+<span class="label label-doc-audience">Область / Код</span>
 
-After you [import animation assets](import-animations.md), you need add them to an entity and play them with a script.
+После того как Вы [импортировали анимацию из ассетов](import-animations.md), Вам нужно добавить их в сущность и проиграть их с помощью скрипта.
 
-## 1. Add animation assets to an entity
+## 1. Добавьте ассет анимации в сущность
 
-1. In the **Scene Editor**, select the entity you want to animate.
+1. В **Scene Editor**, выберите сущность, которую хотите анимировать.
 
-    ![Select an entity](media/select-entity.png)
+    ![Выбор сущности](media/select-entity.png)
 
     >[!Note]
-    >To animate an entity, the entity must have a model component.
+    >Чтобы анимировать сущность, сущность должна иметь компонент модели.
 
-2. In the **Property Grid**, click **Add component** and choose **Animations**.
+2. В **Property Grid**, нажмите **Add component** и выберите **Animations**.
 
-    ![Select an entity](media/select-animation-component.png)
+    ![Выбор сущности](media/select-animation-component.png)
 
-    Game Studio adds an animation component to the entity.
+    Game Studio добавит компонент анимации в сущность.
 
-3. In the animation component properties, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) to add a new animation to the library.
+3. В свойствах компонентов анимации рядом с **Animations**, нажмите ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) чтобы добавить новую анимацию в библиотеку.
 
-4. Type a name for the animation and press Enter.
+4. Введите имя для анимации и нажмите Enter.
 
-    ![Add animation](media/add-animation.png)
+    ![Добавление анимации](media/add-animation.png)
 
     >[!Tip]
-    >When you play animations using scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
+    >Когда вы играете в анимации, используя сценарии позже, вы используете это имя, **НЕ** имя ассета анимации.Чтобы облегчить определение анимации, мы рекомендуем вам дать свою анимацию то же имя, что и ассету анимации.
     
-5. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+5. Нажмите ![иконку руки](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    ![Pick asset up](media/pick-asset-up.png)
+    ![Выберите ассет](media/pick-asset-up.png)
 
-    The **Select an asset** window opens.
+    Откроется **Select an asset** окно.
 
-6. Browse to the animation asset you want to add and click **OK**.
+6. Выберите ассет анимации, который вы хотите добавить и нажать **OK**.
 
-    ![Select an asset](media/asset-picker.png)
+    ![Выбор ассета](media/asset-picker.png)
 
-    Game Studio adds the animation asset to the entity.
+    Game Studio добавит ассет анимации в сущность.
 
-    ![Animation asset added](media/animation-asset-added.png)
+    ![Добавленный ассет анимации](media/animation-asset-added.png)
 
-You can add as many animations to the animation component as you need. The Property Grid lists them in alphabetical order.
+Вы можете добавить столько анимаций в компонент анимации, сколько вам нужно. *Property Grid* перечисляет их в алфавитном порядке.
 
-![Animations list](media/animations-list.png)
+![Список анимаций](media/animations-list.png)
 
-## 2. Create a script to play the animations
+## 2. Создайте скрипт, чтобы проиграть анимацию
 
-After you add animations to an entity, you need to play them with a [script](../scripts/index.md).
+После того, как вы добавите анимацию в сущность, вам нужно проиграть их с помощью [скрипта](../scripts/index.md).
 
-### Example script
+### Пример скрипта
 
 ```cs
-    public class SimpleAnimationScript : StartupScript
+
+...
+
+public class SimpleAnimationScript : StartupScript
+{
+    public override void Start()
     {
-        public override void Start()
-        {
-            Entity.Get<AnimationComponent>().Play("Walk");
-        }
+        Entity.Get<AnimationComponent>().Play("Walk");
     }
+}
 ```
 
-This script looks for an animation with the name *Walk* under the animation component on the entity.
+Этот сценарий ищет анимацию с именем *Walk* в компоненте анимации на объекте.
 
-For more information about creating animation scripts, see [animation scripts](animation-scripts.md).
+Для получения дополнительной информации о создании скриптов анимации см.[скрипты анимации](animation-scripts.md).
 
-## 3. Add the script to the entity
+## 3. Добавить скрипт в сущность
 
-1. In the **Scene Editor**, select the entity you want to animate.
+1. В **Scene Editor**, выберите сущность, которую хотите анимировать.
 
-    ![Select an entity](media/select-entity.png)
+    ![Выбор сущности](media/select-entity.png)
 
-2. In the **Property Grid**, click **Add component** and choose the animation script you want to add.
+2. В **Property Grid**, нажмите **Add component** и выберите скрипт анимации, который вы хотите добавить.
 
-    ![Select an entity](media/add-animation-script-component.png)
+    ![Выбор сущности](media/add-animation-script-component.png)
 
-Game Studio adds the script as a component. You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **Property Grid** under the script component properties.
+Game Studio добавит скрипт в качестве компонента. Вы можете настроить [публичные переменные, которые вы определяете в скрипте](../scripts/public-properties-and-fields.md) в **Property Grid** под свойствами компонентов скрипта.
 
-![Select an entity](media/animations-setup3.png)
+![Выбор сущности](media/animations-setup3.png)
 
-## See also
+## Смотрите так же
 
-* [Animation index](index.md)
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

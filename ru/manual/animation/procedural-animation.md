@@ -1,26 +1,29 @@
 # Procedural animation
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Средняя</span>
+<span class="label label-doc-audience">Область / Код</span>
 
-**Procedural animation** is an alternative method of animation. Instead of creating animations yourself, you can use engine components to animate 3D models at runtime. 
+**Procedural animation** это альтернативный метод анимации. Вместо того, чтобы создавать анимацию самостоятельно, вы можете использовать компоненты Stride для анимирования 3D моделей во время выполнения.
 
-In some cases, this creates more effective and efficient animations. For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:Stride.Engine.TransformComponent) and simply scale the enemy down to the required size.
+В некоторых случаях это создает более эффективную и эффективную анимацию.Например, представьте себе эффект уменьшения, который происходит, когда игрок стреляет в монстра с уменьшающим оружием. Вместо создания сложной сжимающийся анимации, вы можете получить доступ к сущности [TransformComponent](xref:Stride.Engine.TransformComponent) и просто масштабируйте врага до требуемого размера.
 
-The animation can animate a wide variety of components besides Skeleton bones, including:
+Анимация может анимировать широкий спектр компонентов, помимо костей скелета, включая:
 
 * [TransformComponent](xref:Stride.Engine.TransformComponent)
 * [LightComponent](xref:Stride.Engine.LightComponent)
 * [RigidBodyComponent](xref:Stride.Physics.RigidbodyComponent)
 * [Custom components](xref:Stride.Engine.EntityComponent)
 
-Stride's animation system works just like Blender or Maya's curve animation editor. Each bone/value is assigned a [curve](xref:Stride.Animations.AnimationCurve) composed of several [points](xref:Stride.Animations.KeyFrameData) that are interpolated either in linear, cubic or constant fashion.
+Система анимации Stride работает так же, как Blender или редактор анимации Maya. Каждому кости / значению присваивается [кривая](xref:Stride.Animations.AnimationCurve), которая состоит из нескольких [точек](xref:Stride.Animations.KeyFrameData) которые интерполированы либо в линейным, кубическим или прямым алгоритмом.
 
-## Code samples
+## Примеры кода
 
-### Transform component
+### Преобразование компонента
 
 ```cs
+
+...
+
 public class AnimationScript : StartupScript
 {
     public override void Start()
@@ -77,7 +80,10 @@ public class AnimationScript : StartupScript
 
 ### Light component's color
 
-```csharp
+```cs
+
+...
+
 public class AnimationLight : StartupScript
 {
     public override void Start()
@@ -126,17 +132,17 @@ public class AnimationLight : StartupScript
 ```
 
 >[!NOTE]
-> If you need to animate a bone procedurally you must use the `NodeTransformations` field of the `Skeleton`.
+> Если вам нужно анимировать процедурную кость, вы должны использовать `NodeTransformations` поле `Skeleton`.
 
-## See also
+## Смотрите так же
 
-* [Animation index](index.md)
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

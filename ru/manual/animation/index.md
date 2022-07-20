@@ -1,56 +1,55 @@
-# Animation
+# Анимация
 
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
+<span class="label label-doc-audience">Область / Код</span>
 
-3D models are animated by adding three kinds of asset: 
+3D модели анимированы путем добавления трех видов ассетов: 
 
-* a skeleton
-* a skinned model
-* an animation clip
+* скелет
+* модель
+* анимация
 
 >[!Note]
->For information about 2D animation, see [Sprites](../sprites/index.md).
+>Для получения информации о 2D анимации см. [Спрайты](../sprites/index.md).
 
-## Skeletons
+## Скелеты (Skeletons)
 
-**Skeletons** are digital structures that describe deformation patterns of 3D models. Skeletons are made of bones that form a hierarchy. When parent bones change their position, they also affect the positions of child bones. For example, a hand bone might have five child bones (the fingers and thumb); when the hand moves up and down, the fingers and thumb move with it.
+**Skeletons** это цифровые структуры, которые описывают паттерны деформации трехмерных моделей. Скелеты сделаны из костей, которые образуют иерархию. Когда родительские кости меняют свою позицию, они также влияют на позиции дочерних костей. Например, кость руки может иметь пять дочерних костей (пальцы руки как у читающего); Когда рука движется вверх и вниз, пальцы и большой палец движутся вместе с ней.
 
-Skeletons don't have to resemble the skeletons of real humans or animals. You can make skeletons to animate any 3D model.
-
->[!NOTE]
->There's currently no way to visualize skeletons in Game Studio.
-
-## Skinned models
-
-**Skinning** is the process of assigning weights to vertices and bones they depend on. Each vertex usually depends on one to four bones.
-
-**Skinned models** are models that have been skinned to match a skeleton. The **skin** describes how vertices of the mesh transform when bones move. 
+Скелеты не должны напоминать скелеты настоящих людей или животных. Вы можете сделать скелеты, чтобы оживить любую 3D модель.
 
 >[!NOTE]
->In Game Studio, you can only create simple 3D models such as spheres and cubes. For information about how to do this, see [Create assets](../game-studio/create-assets.md). To create more complex models, use dedicated software like 3DS Max, Maya, or Blender, then [import the model into Game Studio](import-animations.md).
+>В настоящее время нет способа визуализировать скелет в Game Studio.
 
-## Animation clips
+## Модель (Skinned models)
 
-**Animation clips** describe the pose of a **skeleton** at a particular moment. The skeleton moves according to the animation. The mesh vertices transform (skin) to match the current pose.
+**Skinning** это процесс назначения веса для вершин и костей, от которых они зависят. Каждая вершина обычно зависит от одной четырех костей.
 
-## Animation samples
+**Skinned models** это модели, которые являются поверхностью, и соответствуют скелету. **Skin** описывает, как вершины сетки двигаются, когда двигаются кости. 
 
-For an example of how animations work in Stride, load the **Sample: animation** sample project.
+>[!NOTE]
+>В Game Studio вы можете создавать только простые 3D модели, такие как сферы и кубы. Для получения информации о том, как это сделать, см. [Создание ассета](../game-studio/create-assets.md). Чтобы создать более сложные модели, используйте специализированное программное обеспечение, такое как 3DS Max, Maya или Blender, а после [импортируйте модели в Game Studio](import-animations.md).
 
-![Animations](media/animations-index1.png)
+## Анимации
 
-The templates **First-person shooter**, **Third-person platformer** and **Top-down RPG** also include some advanced animation techniques.
+**Animation clips** описывают позы **skeleton** в конкретный момент. Скелет движется в соответствии с анимацией. Модель трансформируются в соответствии с текущей позой.
+## Примеры работы с анимацией
 
-## In this section
+Для примера того, как анимация работает в Stride, загрузите **Sample: animation** шаблон с примером.
 
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+![Анимации](media/animations-index1.png)
+
+Шаблоны **First-person shooter**, **Third-person platformer** и **Top-down RPG** также включайте некоторые продвинутые методы анимации.
+
+## В этой секции
+
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

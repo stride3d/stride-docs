@@ -1,14 +1,14 @@
-# Model node links
+# Связи узлов моделей
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
 >[!Note]
->In some versions of Stride, **Model node links** are called **Bone links**.
+>В некоторых версиях Stride, **Model node links** называются **Bone links**.
 
-The **model node link** component attaches an entity to a node of a skeleton on another entity.
+**model node link** компонент прикрепляет сущность к узлу скелета на другой сущности.
 
-For example, imagine you have two models: a knight, and a sword. The character has a sword swinging animation. You can use a model link node to place the sword in the knight's hand and attach it to the correct node in the knight skeleton, so the sword swings with the knight animation.
+Например, представьте, что у вас есть две модели: рыцарь и меч. У персонажа есть анимация на меча. Вы можете использовать узел ссылки модели, чтобы поместить меч в руку рыцаря и прикрепить его к правильному узлу в рыцарском скелете, чтобы меч поворачивается с анимацией рыцаря.
 
 <p>
 <video autoplay loop class="responsive-video" poster="../particles/tutorials/media/sword-slash-1.jpg">
@@ -16,62 +16,63 @@ For example, imagine you have two models: a knight, and a sword. The character h
 </video>
 </p>
 
-## Set up a model node link component
+## Настройка компонента связи узлов моделей
 
-1. In the **Scene Editor**, select the entity you want to link to a node in another entity.
+1. В **Scene Editor**, выберите сущность, которую вы хотите связать с узлом в другой сущности.
 
-2. In the **Property Grid**, click **Add component** and select **Model node link**.
+2. В **Property Grid**, нажмите **Add component** и выберите **Model node link**.
 
-    ![Add component](../particles/tutorials/media/add-model-node-link.png)
+    ![Добавление компонента](../particles/tutorials/media/add-model-node-link.png)
 
-    Game Studio adds a model node link component to the entity.
+    Game Studio добавит компонент связи узлов моделей.
 
-    ![Model node link component](media/model-node-component.png)
+    ![Компонент связи узлов моделей](media/model-node-component.png)
 
-    The component only has two properties: **Node name** and **Target**.
+    Компонент имеет только два свойства: **Node name** и **Target**.
 
-3. Next to **Target**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png).
+3. Далее в **Target**, нажмите ![иконку руки](~/manual/game-studio/media/hand-icon.png).
 
-    The **Select an entity** window opens.
+    Откроется **Select an entity** окно.
 
-    ![Select an entity](media/select-an-entity-window.png)
+    ![Выбор сущности из списка](media/select-an-entity-window.png)
 
-4. Select the model you want to link the entity to and click **OK**.
+4. Выберите модель, с которой вы хотите связать объект, и нажмите **OK**.
 
     >[!Note]
-    >The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
+    >Сущность, к которой вы привязываетесь, должна иметь модель со скелетом, даже если модель не видно во время выполнения.
 
     >[!Tip]
-    >If you don't specify a model, Stride links the entity to the model on the parent entity.
+    >Если вы не указываете модель, Stride свяжите сущность с моделью на родительской сущности.
 
-5. In **Node name**, select the node in the model you want to attach this entity to.
+5. В **Node name**, выберите узел в модели, с которой вы хотите связать сущность.
 
-    ![Select node](media/select-node.png)
+    ![Выбор узла](media/select-node.png)
 
-    After you link the node, the Entity Tree shows the link in blue next to the entity name.
+    После того, как вы связываете узел, дерево сущностей показывает ссылку синим рядом с именем объекта.
     
-    ![Model node link](media/model-node-link-sword-added.png)
+    ![Связь узлов моделей](media/model-node-link-sword-added.png)
 
-## Offset
+## Смещение (Offset)
 
-To add an offset to the linked entity, use the entity's [TransformComponent](xref:Stride.Engine.TransformComponent).
+Чтобы добавить смещение в связанную сущность, используйте компонент [TransformComponent](xref:Stride.Engine.TransformComponent).
 
 ![Transform](media/transform-component.png)
 
 >[!Note]
->If you don't want to add an offset, make sure the values are all set to `0,0,0`.
+>Если вы не хотите добавлять смещение, убедитесь, что все значения установлены на `0,0,0`.
 
-## See also
+## Смотрите так же
 
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)
 
 For examples of how model node links are used, see:
 

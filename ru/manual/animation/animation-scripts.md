@@ -1,113 +1,112 @@
-# Animation scripts
+# Скрипты анимации
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Средняя</span>
+<span class="label label-doc-audience">Область / Код</span>
 
-Animations are controlled using scripts. 
+Анимации контролируются с помощью скриптов.
 
-You can add an [AnimationComponent](xref:Stride.Engine.AnimationComponent) to an entity and [set up its parameters](set-up-animations.md) in Game Studio. The [AnimationComponent](xref:Stride.Engine.AnimationComponent) class is designed to be used mainly from a script. 
+Вы можете добавить [AnimationComponent](xref:Stride.Engine.AnimationComponent) в сущности и [настроить параметры анимации](set-up-animations.md) в Game Studio. [AnimationComponent](xref:Stride.Engine.AnimationComponent) класс предназначен для использования в основном из скриптов. 
 
 The more useful properties include:
 
-| Property | Description
+| Свойство | Описание
 | -------- | -----------
-| [Animations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_Animations) | Gets the animation clips associated with this [AnimationComponent](xref:Stride.Engine.AnimationComponent)
-| [BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md)
-| [PlayingAnimations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation
+| [Animations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_Animations) | Получает анимацию, связанные с этим
+[AnimationComponent](xref:Stride.Engine.AnimationComponent)
+| [BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) | Получает или устанавливает дерево смешивания анимации. Обратите внимание, что вы можете создавать пользовательские деревья смешивания; Для получения дополнительной информации см. [Пользовательские деревья смешивания](custom-blend-trees.md)
+| [PlayingAnimations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_PlayingAnimations) | Получает список активных анимаций.Используйте его, чтобы настроить старт анимации. Игровая анимация автоматически обновляется процессором анимации, поэтому будьте осторожны при изменении списка или сохраняют ссылку на воспроизводимую анимацию
 
 >[!Note]
->Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:Stride.Engine.AnimationComponent).
+>Анимации на которые вы ссылаетесь в скрипте, должны быть добавлены в ту же сущность под [AnimationComponent](xref:Stride.Engine.AnimationComponent).
 
->![Animations added to component](media/animations-added-to-component.png)
+>![Анимации добавленные в компонент](media/animations-added-to-component.png)
 
->For more information, see [Set up animations](set-up-animations.md).
+>Для получения дополнительной информации см. [Настройка анимации](set-up-animations.md).
 
-## Use the pre-built **AnimationStart** script
+## Использование встроеного **AnimationStart** скрипт
 
-Stride includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation scripts.
+Stride содержит встроенный **AnimationStart** скрипт. Вы можете использовать этот скрипт в качестве шаблона, чтобы написать свои собственные скрипты анимации.
 
-To use the **AnimationStart** script:
+Что бы использовать **AnimationStart** скрипт:
 
-1. In the **Asset View** (bottom pane by default), click **Add asset**.
+1. В **Asset View** (нижняя панель по умолчанию), нажмите **Add asset**.
 
-2. Choose **Add asset > Scripts > Animation start**.
+2. Выберите **Add asset > Scripts > Animation start**.
 
-    ![Add animation script](media/animations-additive-animations-animation-start.png)
+    ![Добавление скрипта анимации](media/animations-additive-animations-animation-start.png)
 
-3. Specify a name for the script and click **Create script**.
+3. Укажите имя скрипта и нажмите **Create script**.
 
-    ![Create script](media/name-animation-script.png)
+    ![Создание скрипта](media/name-animation-script.png)
 
-    3a. If Game Studio asks if you want to save your script, click **Save script**.
+    3a. Если Game Studio спрашивает, хотите ли вы сохранить свой скрипт, нажмите **Save script**.
     
-    3b. If Game Studio asks if you want to reload the assemblies, click **Reload assemblies**.
+    3b. Если Game Studio спрашивает, хотите ли вы перезагрузить сборки, нажмите **Reload assemblies**.
 
-4. Edit the script as necessary and save it.
+4. Отредактируйте скрипт по мере необходимости и сохраните его.
 
-## Example animation script
+## Пример скрипта анимации
 
-This sample script assigns a simple animation to a character based on its walking speed.
+Этот пример скрипта назначает простую анимацию персонажу, основанную на скорости ходьбы.
 
 ```cs
-using Stride.Engine;
 
-namespace AdditiveAnimation
+...
+
+public class AnimationClipExample : SyncScript
 {
-    public class AnimationClipExample : SyncScript
+    public float MovementSpeed { get; set; } = 0f;
+
+    private float walkingSpeedLimit = 1.0f;
+
+    // Assuming the script is attached to an entity which has an animation component
+    private AnimationComponent animationComponent;
+
+    public override void Start()
     {
-        public float MovementSpeed { get; set; } = 0f;
+        // Cache some variables we'll need later
+        animationComponent = Entity.Get<AnimationComponent>();
+        animationComponent.Play("Idle");
+    }
 
-        private float walkingSpeedLimit = 1.0f;
+    protected void PlayAnimation(string name)
+    {
+        if (!animationComponent.IsPlaying(name))
+            animationComponent.Play(name);
+    }
 
-        // Assuming the script is attached to an entity which has an animation component
-        private AnimationComponent animationComponent;
-
-        public override void Start()
+    public override void Update()
+    {
+        if (MovementSpeed <= 0)
         {
-            // Cache some variables we'll need later
-            animationComponent = Entity.Get<AnimationComponent>();
-            animationComponent.Play("Idle");
+            PlayAnimation("Idle");
         }
-
-        protected void PlayAnimation(string name)
+        else if (MovementSpeed <= walkingSpeedLimit)
         {
-            if (!animationComponent.IsPlaying(name))
-                animationComponent.Play(name);
+            PlayAnimation("Walk");
         }
-
-        public override void Update()
+        else 
         {
-            if (MovementSpeed <= 0)
-            {
-                PlayAnimation("Idle");
-            }
-            else if (MovementSpeed <= walkingSpeedLimit)
-            {
-                PlayAnimation("Walk");
-            }
-            else 
-            {
-                PlayAnimation("Run");
-            }
+            PlayAnimation("Run");
         }
     }
 }
+
 ```
 
-## Override the animation blend tree
+## Переопределение дерева смешивания анимации
 
-You can also override the animation blend tree and do all animation blending in the script. The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG*, which use some advanced techniques, are examples of how to do this. For more information, see [custom blend trees](custom-blend-trees.md).
+Вы также можете переопределить дерево смешивания анимации и сделать все смешивание анимации в скрипте. Шаблоны *First-person shooter*, *Third-person platformer* и *Top-down RPG*, которые используют некоторые продвинутые методы, являются примерами того, как это сделать. Для получения дополнительной информации см. [Пользовательские деревья смешивания](custom-blend-trees.md).
 
-## See also
+## Смотрите так же
 
-* [Scripts](../scripts/index.md)
-* [Animation index](index.md)
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

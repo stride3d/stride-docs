@@ -1,9 +1,9 @@
 # Preview animations
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-level">Сложность / Средняя</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
-After you [import an animation](import-animations.md), you can preview it in the **Asset Preview**.
+Псоле того как Вы [импортировали анимацию](import-animations.md), вы можете просмотреть её в **Asset Preview**.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media\animations-import-animations-animation-preview.jpg">
@@ -11,41 +11,41 @@ After you [import an animation](import-animations.md), you can preview it in the
 </video>
 </p>
 
-By default, the Asset Preview is in the bottom-right under the **Asset Preview** tab.
+По умолчанию предпросмотр ассета находится в правом нижнем углу под **Asset Preview** вкладкой.
 
-![Asset Preview tab](media/animations-import-animations-asset-preview-tab.png)
+![Вкладка препросмотра ассета](media/animations-import-animations-asset-preview-tab.png)
 
 >[!Tip]
->To rotate the animation, click and drag the mouse.  
+>Чтобы вращать анимацию, зажмите и перетащите мышь.
 
-The animation preview uses the model selected in the **preview model** in the **animation asset properties**.
+Предварительный просмотр анимации использует модель, выбранную в **preview model** в **animation asset properties**.
 
-## Set the preview model
+## Настройка модельи предпросмотра
 
-1. In the **Asset View** (at the bottom by default), select the animation asset.
+1. В **Asset View** (внизу по умолчанию), выберите ассет анимации.
 
-    ![Select asset](media/select-asset.png)
+    ![Выбор ассета](media/select-asset.png)
 
-2. In the **Property Grid** (on the right by default), under **Preview model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+2. В **Property Grid** (справа по умолчанию), под **Preview model**, нажмите ![икноку руки](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    ![Select an asset](media/pick-an-asset-up.png)
+    ![Выбор ассета](media/pick-an-asset-up.png)
 
-    The **Select an asset** window opens.
+    Откроется **Select an asset** окно.
 
-3. Select the model you want to use to preview the animation.
+3. Выберите модель, которую вы хотите использовать для предпросмотра анимации.
 
     >[!Note]
-    >Make sure the model and the animation share identical skeletons.
+    >Убедитесь, что модель и анимация используют одинаковый скелет.
 
-## See also
+## Смотрите так же
 
-* [Animation index](index.md)
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

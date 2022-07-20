@@ -1,17 +1,20 @@
-# Custom blend trees
+# Пользовательские деревья смешивания
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Сложная</span>
+<span class="label label-doc-audience">Область / Код</span>
 
-The [AnimationComponent](xref:Stride.Engine.AnimationComponent) has the property [AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
+[AnimationComponent](xref:Stride.Engine.AnimationComponent) содержит свойство [AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder). Если вам нужен абсолютный контроль над тем, какие проигрывается анимации, как они смешиваются и какие веса у них есть, вы можете создать сценарий, который наследует от `IBlendTreeBuilder` и назначьте его для `BlendTreeBuilder` под вашим компонентом анимации.
 
-When the animation component is updated, it calls `void BuildBlendTree(FastList<AnimationOperation> animationList)` on your script instead of updating the animations itself. This allows you to choose any combination of animation clips, speeds and blends, but is also more difficult, as all the heavy lifting is now on the script side.
+Когда компонент анимации обновляется, он вызывает `void BuildBlendTree(FastList<AnimationOperation> animationList)` на вашем сценарии вместо того, чтобы обновлять саму анимацию.Это позволяет вам выбрать любую комбинацию анимаций, скоростей и примисей, но это также сложнее, так как вся комплексность сейчас находится на стороне скрипта.
 
-The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG*, included with Stride, are examples of how to use custom blend trees.
+Шаблоны *First-person shooter*, *Third-person platformer* и *Top-down RPG*, примеры того, как использовать индивидуальные смешиваемые деревья.
 
-## Code sample
+## Пример кода
 
 ```cs
+
+...
+
 public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
 {
     /// <summary>
@@ -96,16 +99,15 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
     }
 }
 ```
+## Смотрите так же
 
-## See also
-
-* [Animation index](index.md)
-* [Import animations](import-animations.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

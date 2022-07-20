@@ -1,66 +1,66 @@
-﻿# Import animations
+﻿# Импорт анимации
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
-To animate a model, you need to use three kinds of assets together:
+Чтобы анимировать модель, вам нужно использовать три вида ассетов вместе:
 
-* models
-* skeletons
-* animations
+* скелет
+* модель
+* анимация
 
-You can import these assets from 3D model files. Stride supports the following model file types: ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
+Вы можете импортировать эти ассеты из файлов 3D моделей. Stride поддерживает следующие расширения файлов модели: ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
 
-## Import a model, skeleton, or animation from a model file
+## Импортировать модель, скелет или анимацию из модельного файла
 
-1. Drag the model file from Explorer to the **Asset View** (in the bottom pane by default).
+1. Перетащите файл модели из *Проводника* в **Asset View** (в нижней панели по умолчанию).
 
-    ![Choose asset type](media/create-and-add-assets-drag-and-drop-model.png)
+    ![Выбор типа ассета](media/create-and-add-assets-drag-and-drop-model.png)
 
-    Alternatively, in the **Asset View**:
+    Или, в **Asset View**:
 
-    1a. Click ![Add asset](media/create-and-add-assets-add-new-asset-button.png) and select **Import directly from files**.
+    1a. Нажмите ![Добавить ассет](media/create-and-add-assets-add-new-asset-button.png) и выберите **Import directly from files**.
     
-    ![Choose asset type](media/create-and-add-assets-add-new1.png)
+    ![Выбор типа ассета](media/create-and-add-assets-add-new1.png)
 
-    2b. Browse to the file and click **Open**.
+    2b. Выберите файл и нажмите **Open**.
 
-2. Specify whether you want to import the **3D model**, **animation**, or **skeleton** from the model file.
+2. Укажите, хотите ли вы импортировать **3D model**, **animation**, или **skeleton** из файла модели.
 
-    ![Choose asset type](media/create-and-add-assets-choose-asset-type.png)
+    ![Выбор типа ассета](media/create-and-add-assets-choose-asset-type.png)
 
-    * If you choose **3D model**, Stride can import any additional materials, textures and skeletons it finds in the model file. You can also import the skeleton from the model (**Import new skeleton**), import no skeleton (**Don't use skeleton**), or specify a different skeleton (**Use existing skeleton**) in the lower field.
+    * Если вы выберете **3D model**, Stride может импортировать любые дополнительные материалы, текстуры и скелеты, которые он находит в файле модели. Вы также можете импортировать новый скелет (**Import new skeleton**), импорт без скелета (**Don't use skeleton**), выбрать другой скелет (**Use existing skeleton**) в поле ниже.
 
-    ![Choose asset type](media/create-and-add-assets-model-import-parameters.png)
+    ![Выбор типа ассета](media/create-and-add-assets-model-import-parameters.png)
 
-    * If you choose **Skeleton**, Stride imports only the skeleton from the model file. You might want to do this, for example, if you want to use it for a new skeleton that uses a subset of its nodes.
+    * Если вы выберете **Skeleton**, Stride импортирует только скелет из модели. Возможно, вы захотите сделать это, например, если вы хотите использовать его для нового скелета, который использует подмножество его узлов.
 
-    * If you choose **Animation**, Stride imports only the animation from the model file. This is sufficient for regular animations; for additive information, there are some extra steps. For details, see [Additive animation](additive-animation.md).
+    * Если вы выберете **Animation**, Stride импортирует только анимацию из модели. Этого достаточно для обычных анимаций; Для дополнительной информации есть несколько дополнительных шагов. Для получения подробной информации см. [Аддитивная анимация](additive-animation.md).
 
-After you import the assets, Game Studio adds them to the **Asset View**.
+После того, как вы импортировали ассеты, Game Studio добавляет их в **Asset View**.
 
-![Assets in Asset View](media/assets-in-asset-view1.png)
+![Ассеты в Asset View](media/assets-in-asset-view1.png)
 
-You can view and edit their properties in the **Property Grid** (on the right by default). For more information, see [Animation properties](animation-properties.md).
+Вы можете просматривать и редактировать их свойства в **Property Grid** (справа по умолчанию).Для получения дополнительной информации см.[Свойства анимации](animation-properties.md).
 
-![Properties](media/animations-properties.png)
+![Свойства](media/animations-properties.png)
 
-## Use an animation asset
+## Использование ассета анимации
 
-To use an animation asset, add an [AnimationComponent](xref:Stride.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
+Чтобы использовать ассет анимации, добавьте [AnimationComponent](xref:Stride.Engine.AnimationComponent) к сущности, затем добавьте ассет анимации в компонент анимации. Для получения дополнительной информации см. [Настройка анимации](set-up-animations.md).
 
 >[!Note]
->Make sure you correctly skin your mesh to the skeleton. If you don't, you won't be able to animate your model correctly.
+>Убедитесь, что у вас правильная сетка, которая подходит для этого скелета. Если вы этого не сделаете, вы не сможете правильно анимировать свою модель.
 
-## See also
+## Смотрите так же
 
-* [Animation index](index.md)
-* [Animation properties](animation-properties.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)

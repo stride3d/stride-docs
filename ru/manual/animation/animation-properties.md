@@ -1,79 +1,85 @@
-# Animation properties
+# Свойства анимации
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-level">Сложность / Легкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
-After you [import an animation](import-animations.md), you can select it in the **Asset View** (in the bottom pane by default) and view and edit its properties in the **Property Grid** (on the right by default).
+После того как вы [испортировали анимацию](import-animations.md), вы можете выбрать в **Asset View** (в нижней панели по умолчанию) и просматривать и редактировать свои свойства в **Property Grid** (справа по умолчанию).
 
-![Assets in Asset View](media/assets-in-asset-view1.png)
+![Ассеты в Asset View](media/assets-in-asset-view1.png)
 
-![Properties](media/animations-properties.png)
+![Свойства](media/animations-properties.png)
 
-## Source
+## Источник
 
-The source file used by the animation asset. If you change this, Game Studio re-imports the animation.
+Исходный файл, используемый анимацией. Если вы измените это, Game Studio повторно импортирует анимацию.
 
-## Clip duration
+## Продолжительность клипа
 
-By default, clip duration is disabled. This means the animation starts at frame 0 and runs to the last written keyframe in the file.
+По умолчанию продолжительность клипа отключена. Это означает, что анимация начинается в Frame 0 и работает до последнего написанного ключа в файле.
 
-However, single animation tracks sometimes include several animations. In this case, you have to split the track. To do this, enable **Clip duration** and adjust the **start** and **end** frames to match the duration of each animation.
+Тем не менее, одиночные анимационные треки иногда включают несколько анимаций. В этом случае вы должны разделить трек. Для этого включить **Clip duration** и настроить **start** и **end** кадры чтобы соответствовать продолжительности каждой анимации.
 
-The start and end frames are still limited by the keyframes exported in the file. For example, if you originally exported frames 20 to 40 from the animation tool, the start frame cannot be lower than 20 and the end frame cannot be higher than 40.
+Начальные и конечные рамки по прежнему ограничены ключевыми фреймами, экспортируемыми в файле. Например, если вы изначально экспортировали кадры с 20 по 40 из инструмента анимации, начальный кадр не может быть ниже 20, а конечный кадр не может быть выше 40.
 
-By default, Game Studio assumes the frame rate is 30. You can change this in the **Game settings** asset properties under **Editor settings > Animation frame rate**.
+По умолчанию, Game Studio предполагает, что частота кадров составляет 30. Вы можете изменить это в **Game settings** настройках ассета в **Editor settings > Animation frame rate**.
  
-## Pivot position
+## Якорь поворота (Pivot)
 
 Game Studio assumes the pivot is the origin of the coordinate system local to the animation. It should be set to `(0, 0, 0)`. If your animation was shifted from the origin when exported, you can use this property to re-adjust it.
 
-## Scale import
+Game Studio предполагает, что Pivot является происхождением системы координат, локальной для анимации. Это должно быть установлено на `(0, 0, 0)`.Если ваша анимация была смещена отностительно центра при экспорте, вы можете использовать это свойство, чтобы повторно настроить центр.
 
-The scale import should be set to `1`. Stride detects the units in which your data was exported and adjusts it automatically. If there are no export settings in your animation file and the scale appears incorrect, you can use the scale import property to re-adjust it.
+## Масштаб импорта (Import scale)
 
-## Repeat mode
+Масштаб импорта должен быть установлен на `1`. Stride обнаруживает единицы, в которых ваши данные были экспортированы, и автоматически настраивает их. Если в вашей анимации нет настройки экспорта, а масштаб является неверным, вы можете использовать свойство импорта Scale для повторной настройки.
 
-You can choose **PlayOnce**, **LoopInfinite** or **PlayOnce&Hold**. This is just a *hint* for the engine. When you assign an animation asset to the model, you can specify differently. If you don't specify the mode later, Stride uses the attribute you set here by default.
+## Режимы анимации (Repeat mode)
+
+Вы можете выбрать **PlayOnce**, **LoopInfinite** или **PlayOnce&Hold**. Это просто *подсказка* для Stride. При применении вы можете указать по различные варианты. Если вы не указаете режим позже, Stride использует атрибут, который вы устанавливаете здесь по умолчанию.
  
-## Type
+## Тип (Type)
 
-Stride supports two types of animation clip. Regular animations default to **Animation clip** and are used with linear blending if mixed. For **Difference clip**, there are few more settings. For more information, see [Additive animation](additive-animation.md).
+Stepride поддерживает два типа анимационного клипа. Стандартная анимации по умолчанию **Animation clip** и используются с линейным смешиванием. Для **Difference clip**, доступно ещё несколько настроек. Для получения дополнительной информации см. [Аддитивная анимация](additive-animation.md).
 
-## Skeleton
+## Скелет (Skeleton)
 
-If you want to animate bones/joints, the animation needs a skeleton.
+Если вы хотите анимировать кости / суставы, анимация нуждается в скелете.
 
-Skeletons are made of bones that form a hierarchy. When parent bones change their position, they also affect the positions of child bones. For example, a hand bone might have five child bones (the fingers and thumb); when the hand moves up and down, the fingers and thumb move with it.
+Скелеты сделаны из костей, которые образуют иерархию. Когда родительские кости меняют свою позицию, они также влияют на позиции дочерних костей. Например, кость руки может иметь пять дочерних костей (пальцы руки как у читающего); Когда рука движется вверх и вниз, пальцы и большой палец движутся вместе с ней.
 
-Make sure you reference the same skeleton used by the model you want to animate. If there are missing bones or other differences between the bone/joint hierarchy of the skeleton in your animation file and the target skeleton, Stride retargets the animation as closely as possible.
+Убедитесь, что вы ссылаетесь на тот же скелет, который использовался моделью, которую вы хотите анимировать. Если в вашей анимации и целевом скелете не хватает костей или есть другие различия между иерархией кости / сустава скелета, Stride перестроит скелет как можно ближе к анимации.
 
 >[!NOTE]
->There's currently no way to visualize skeletons in Game Studio.
+>В настоящее время нет способа визуализировать скелеты в Game Studio.
 
-## Root motion
+## Корневое движение
 
-When root motion is enabled, Stride applies the **root node animation** to the [TransformComponent](xref:Stride.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
+Когда корневое движение включено, Stride применяет **root node animation** к [TransformComponent](xref:Stride.Engine.TransformComponent) сущности, в которую вы добавляете анимацию, вместо того, чтобы применять ее к скелету.
 
-This is useful, for example, to animate entities that don't require skeletons, such as a [spot light](../graphics/lights-and-shadows/spot-lights.md) moving back and forth.
-
->[!Note]
->If the animation has no skeleton specified in **Skeleton**, Stride always applies the animation to [TransformComponent](xref:Stride.Engine.TransformComponent), even if **root motion** is disabled.
+Это полезно, например, для анимирования сущностей, которые не требуют скелетов, таких как [направленный свет](../graphics/lights-and-shadows/spot-lights.md) двигающийся вперёд назад.
 
 >[!Note]
->The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
+>Если в анимации нет скелета, указанного в **Skeleton**, Stride всегда применяет анимацию к [TransformComponent](xref:Stride.Engine.TransformComponent), даже если **root motion** отключено.
 
-## Import custom attributes
+>[!Note]
+>[TransformComponent](xref:Stride.Engine.TransformComponent) применяет смещение в позицию узела модели. Если вы не хотите добавлять смещение, убедитесь, что[TransformComponent](xref:Stride.Engine.TransformComponent) выствален в `0,0,0`.
 
-If you have custom attribute in the animation file...
+## Импорт пользовательских аттрибутов
 
-## See also
+Если у вас есть пользовательский атрибут в файле анимации ...  
 
-* [Animation index](index.md)
-* [Import animations](import-animations.md)
-* [Set up animations](set-up-animations.md)
-* [Preview animations](preview-animations.md)
-* [Animation scripts](animation-scripts.md)
-* [Additive animation](additive-animation.md)
-* [Procedural animation](procedural-animation.md)
-* [Custom blend trees](custom-blend-trees.md)
-* [Model node links](model-node-links.md)
+>[!Note]
+> а нет ничего дальше в оригинальной документации. умываю руки
+
+## Смотрите так же
+
+* [Импорт анимации](import-animations.md)
+* [Свойства анимации](animation-properties.md)
+* [Настройка анимации](set-up-animations.md)
+* [Предпросмотр анимации](preview-animations.md)
+* [Скрипты анимации](animation-scripts.md)
+* [Аддитивная анимация](additive-animation.md)
+* [Процедурная анимация](procedural-animation.md)
+* [Пользовательские деревья смешивания](custom-blend-trees.md)
+* [Связи узлов моделей](model-node-links.md)
+* [Пользовательские аттрибуты](custom-attributes.md)
