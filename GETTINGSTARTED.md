@@ -54,7 +54,8 @@ All the documentation content is formatted using the MarkDown format.
 
 To locally edit, build and test the documentation:
 
-1. Checkout this repository on your PC  
+1. Checkout this repository on your PC
+   - make sure LFS (Large File Storage) is used e.g., ```git lfs clone https://github.com/stride3d/stride-docs.git```
 2. Make your changes to the adequate MarkDown files  
 3. If you added a new MarkDown file, reference it inside the _toc.md_ files to include it in the build  
 4. Double-click on the _build.bat_ batch file to build the doc  
