@@ -1,4 +1,4 @@
-# Связи узлов моделей
+# Связка узлов моделей
 
 <span class="label label-doc-level">Сложность / Лёгкая</span>
 <span class="label label-doc-audience">Область / Дизайн</span>

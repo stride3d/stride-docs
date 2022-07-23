@@ -207,7 +207,7 @@ $(function () {
   }
 
   $('#x_head_langList li a').on('click', function () {
-    var patt = /\/(en|jp)\//;
+    var patt = /\/(en|jp|ru)\//;
     var lang = "/" + $(this).data('language') + "/";
     window.location.href = window.location.href.replace(patt, lang);
   });

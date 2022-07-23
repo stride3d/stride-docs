@@ -24,7 +24,7 @@
             "sources/engine/Stride.VirtualReality/Stride.VirtualReality.csproj",
             "sources/engine/Stride.Navigation/Stride.Navigation.csproj"
           ],
-          "cwd": "../../stride",
+          "cwd": "../../stride"
         }
       ],
       "dest": "api",

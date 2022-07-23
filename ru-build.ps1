@@ -36,6 +36,7 @@ Copy-Item ru/index.md ru_tmp -Force
 Copy-Item ru/manual -Recurse ru_tmp -Force
 Copy-Item en/docfx.json ru_tmp -Force
 (Get-Content ru_tmp/docfx.json) -replace "_site/en","_site/ru" | Set-Content ru_tmp/docfx.json
+(Get-Content ru_tmp/docfx.json) -replace '"_enableSearch": true','"_enableSearch": false' | Set-Content ru_tmp/docfx.json
 deps\docfx\docfx.exe build ru_tmp\docfx.json
 Remove-Item ru_tmp -recurse 
 if ($LastExitCode -ne 0)

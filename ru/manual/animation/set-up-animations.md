@@ -1,4 +1,4 @@
-# Set up animations
+# Настройка анимации
 
 <span class="label label-doc-level">Сложность / Лёгкая</span>
 <span class="label label-doc-audience">Область / Дизайн</span>

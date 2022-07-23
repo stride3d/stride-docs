@@ -1,4 +1,4 @@
-# Preview animations
+# Предпросмотр анимации
 
 <span class="label label-doc-level">Сложность / Средняя</span>
 <span class="label label-doc-audience">Область / Дизайн</span>

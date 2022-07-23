@@ -30,7 +30,7 @@
 ## [Аддитивная анимация](animation/additive-animation.md)
 ## [Процедурная анимация](animation/procedural-animation.md)
 ## [Пользовательские деревья смешивания](animation/custom-blend-trees.md)
-## [Model node links](animation/model-node-links.md)
+## [Связка узлов моделей](animation/model-node-links.md)
 ## [Пользовательские атрибуты](animation/custom-attributes.md)
 
 # [Аудио](audio/index.md)

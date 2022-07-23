@@ -36,6 +36,7 @@ Copy-Item jp/index.md jp_tmp -Force
 Copy-Item jp/manual -Recurse jp_tmp -Force
 Copy-Item en/docfx.json jp_tmp -Force
 (Get-Content jp_tmp/docfx.json) -replace "_site/en","_site/jp" | Set-Content jp_tmp/docfx.json
+(Get-Content jp_tmp/docfx.json) -replace '"_enableSearch": true','"_enableSearch": false' | Set-Content jp_tmp/docfx.json
 deps\docfx\docfx.exe build jp_tmp\docfx.json
 Remove-Item jp_tmp -recurse 
 if ($LastExitCode -ne 0)

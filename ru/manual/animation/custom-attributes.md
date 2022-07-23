@@ -1,4 +1,4 @@
-# Custom attributes
+# Пользовательские аттрибуты
 
 <span class="label label-doc-level">Сложность / Средняя</span>
 

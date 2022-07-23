@@ -1,4 +1,4 @@
-# Procedural animation
+# Процедурная анимация
 
 <span class="label label-doc-level">Сложность / Средняя</span>
 <span class="label label-doc-audience">Область / Код</span>
