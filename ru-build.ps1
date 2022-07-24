@@ -45,5 +45,5 @@ if ($LastExitCode -ne 0)
 	exit $LastExitCode
 }
 
-Write-Host "Japanese documentation built."
+Write-Host "Russian documentation built."
 Stop-Transcript
