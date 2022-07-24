@@ -6,7 +6,7 @@ _navRel: ../toc.html
 _tocTitle: 'Manual'
 ---
 
-# Stride 4.0 manual
+# Stride manual
 
 ![Manual](get-started/media/game-editor-scene.jpg)
 
