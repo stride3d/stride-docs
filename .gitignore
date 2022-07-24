@@ -8,3 +8,4 @@ en/obj/
 jp_tmp/*
 build.log
 .vscode/**
+.vs/**
