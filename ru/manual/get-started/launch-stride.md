@@ -1,57 +1,57 @@
-# Launch Stride
+# Запуск Stride
 
-<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
 
-With the **Stride launcher**, you can install, manage and run different versions of Stride.
+С **Stride launcher**, Вы можете устанавливать, управлять и запускать разные версии Stride.
 
 ![Stride launcher](media/stride-launcher-interface.png)
 
-## Install the latest version of Stride
+## Установка последней версии Stride
 
-If you don't have Stride installed, the Stride Launcher prompts you to install the latest version.
+Если у вас нет установленного Stride, Stride Launcher предложит Вам установить посденюю версию.
 
-![No version installed](media/stride-launcher-install-last-version.png)
+![Нет установленных версий](media/stride-launcher-install-last-version.png)
 
-If you choose to install the latest version, the Stride Launcher asks if you want to install the Stride Visual Studio extension. 
+Если вы решите установить последнюю версию, Stride launcher спросит, хотите ли вы установить расширение Stride для Visual Studio. 
 
-![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
+![Установка Visual Studio расширения](media/install-VS-plug-in-prompt.png)
 
-The Stride Visual Studio extension adds syntax highlighting, live code validation, error checking, and navigation. It also lets you you [edit shaders directly from Visual Studio](../graphics/effects-and-shaders/custom-shaders.md). You don't need to install the extension to use Stride, but we recommend it, especially for programmers.
+Stride Visual Studio расширение добавляет выделение синтаксиса, проверку кода в режиме реального времени, проверку ошибок и навигацию. Это также позволяет Вам [редактировать шейдеры прямо из Visual Studio](../graphics/effects-and-shaders/custom-shaders.md). Вам не нужно устанавливать расширение для использования Stride, но мы рекомендуем его, особенно для разработчиков.
 
-## Manage different versions of Stride
+## Управление разными версиями Stride
 
-You can install multiple versions of Stride and launch them from the Stride Launcher.
+Вы можете установить несколько версий Stride и запускать их из Stride Launcher.
 
-![Manage versions of Stride](media/stride-launcher-various-versions.png)
+![Управление версиями Stride](media/stride-launcher-various-versions.png)
 
-You might need to use an older version of Stride to work with old projects. Newer versions of Stride might contain changes that require old projects to be upgraded.
+Возможно, Вам понадобится использовать более старую версию Stride для работы со старыми проектами. Более новые версии шага могут содержать изменения, которые требуют обновления старых проектов.
 
-For minor versions, only the last number of the version number changes (1.9.0, 1.9.1, 1.9.2, etc). Minor versions don't contain breaking changes, so they're safe to install and use with your existing projects.
+Для незначительных версий только последнее число номера версии изменяется (1.9.0, 1.9.1, 1.9.2 и т.д.). Незначительные версии не содержат критических изменений, поэтому они безопасны для установки и использования с вашими существующими проектами.
 
 >[!Note]
->You can't revert to earlier minor versions. For example, you can install both Stride 1.9 and 1.8 side by side, but you can't revert from Stride 1.9.2 to Stride 1.9.1.
+> Вы не можете вернуться к более ранним второстепенным версиям. Например, вы можете установить как Stride 1,9, так и 1,8 рядом, но вы не можете вернуться от Stride 1.9.2, чтобы использовать Stride 1.9.1.
 
-* To see the release notes for a particular version, click the **note icon** next to the version name.
+* Чтобы увидеть заметки о выпуске для конкретной версии, нажмите **note icon** рядом с названием версии.
 
-* To install a particular version, click the **Download and install** icon next to the 
-version name.
+* Чтобы установить определенную версию, нажмите **Download and install** значок рядом с
+название версии.
 
-## Start Game Studio
+## Запуск Game Studio
 
-Now you've installed Stride, it's time to start Game Studio and build a project.
+Теперь вы установили Stride, пришло время запустить Game Studio и создать проект.
 
-1. Under **Switch/update version**, select the version of Stride you want to use. 
+1. Под **Switch/update version**, выберите версию Stride, которую хотите использовать. 
 
-   The version number is updated on the **Start** button.
+   Номер версии обновляется на кнопке **Start**.
 
-   ![Start button](media/stride-launcher-start-button.png)
+   ![Кнопка запуска](media/stride-launcher-start-button.png)
 
-2. Click **Start** to launch Game Studio. 
+2. Нажмите **Start** что бы запустить Game Studio. 
 
-## What's next?
+## Что дальше?
 
-* [Create your first project in Game Studio](create-a-project.md)
+* [Создайте свой первый проект в Game Studio](create-a-project.md)
 
-## See also
+## Смотрите так же
 
-For more details about the Stride launcher, see the [Stride launcher](../stride-launcher/index.md) page.
+Для получения более подробной информации о Stride launcher, см. [Stride launcher](../stride-launcher/index.md) страницу.

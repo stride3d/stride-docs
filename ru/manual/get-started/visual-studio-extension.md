@@ -1,21 +1,21 @@
-# Visual Studio extension
+# Расширение для Visual Studio
 
-<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
 
-The **Stride Visual Studio extension** adds syntax highlighting, live code validation, error checking, and navigation. It also lets you you [edit shaders directly from Visual Studio](../graphics/effects-and-shaders/custom-shaders.md).
+**Stride Visual Studio расширение** добавляет выделение синтаксиса, проверку кода в режиме реального времени, проверку ошибок и навигацию. Это также позволяет вам [редактировать шейдеры прямо из Visual Studio](../graphics/effects-and-shaders/custom-shaders.md).
 
-You don't need to install the extension to use Stride, but we recommend it, especially for programmers.
+Вам не нужно устанавливать расширение для использования Stride, но мы рекомендуем его, особенно для разработчиков.
 
-## Install the Stride Visual Studio Extension
+## Установка Stride Visual Studio расширения
 
-When you [install Stride](install-stride.md), Stride asks if you want to install the Visual Studio extension.
+Когда вы [устанавливаете Stride](install-stride.md), Stride спрашивает, хотите ли вы установить Visual Studio расширение.
 
-![Install extension](media/install-VS-plug-in-prompt.png)
+![Установка расширения](media/install-VS-plug-in-prompt.png)
 
-Alternatively, you can install or reinstall the extension at any time in the Stride Launcher under **Plug-in**.
+В качестве альтернативы, вы можете установить или переустановить расширение в любое время в Stride Launcher под **Plug-in**.
 
-![Reinstall extension](media/reinstall-extension.png)
+![Переустанка расширения](media/reinstall-extension.png)
 
-## See also
+## Смотрите так же
 
-* [Custom shaders](../graphics/effects-and-shaders/custom-shaders.md)
+* [Пользовательские шейдеры](../graphics/effects-and-shaders/custom-shaders.md)

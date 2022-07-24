@@ -1,99 +1,99 @@
-# Install Stride
+# Установка Stride
 
-<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
 
-1. Download the Stride installer (**StrideSetup.exe**) from the [Stride website](http://stride3d.net/download/).
+1. Скачайте Stride установщик (**StrideSetup.exe**) с [Stride веб-сайта](http://stride3d.net/download/).
  
-2. Double-click the **StrideSetup.exe** file.
+2. Запустите файл **StrideSetup.exe**.
  
-    The **Stride Setup Wizard** opens.
+    Откроется окно **Stride Setup Wizard**.
 
-3. Stride depends on the .NET Runtime. If you don't have the particular version it needs, Stride prompts you to install it.
+3. Stride зависит от .NET runtime. Если у вас нет конкретной версии, в которой он нуждается, попросит вас установить нужную.
 
-    ![Prerequisites installer](media/prerequisites-installer.png)
+    ![Начальное окно](media/prerequisites-installer.png)
 
-    Click **Next** and follow the prompts.
+    Нажмите **Next** и следуйте подсказкам.
 
     > [!Note]
-    > Alternatively, you can [download the .NET Framework from the Microsoft Download Center](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net472-web-installer) and restart the Stride installer.
+    > В качестве альтернативы вы можете [скачать .NET из центра загрузки Microsoft](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net472-web-installer) и перезапустить Stride установщик.
 	
-4. The **Stride Setup Wizard** opens.
+4. Откроется **Stride Setup Wizard** окно.
 
-     ![Stride Setup Wizard](media/install-stride-setup-wizard.png)
+     ![Мастер установки Stride](media/install-stride-setup-wizard.png)
  
-     Click **Next**.
+     Нажмите **Next**.
  
-    The **Stride License Agreement** window opens.
+    Откроется окно **Stride License Agreement**.
 
-    ![Stride license agreement window](media/install-stride-license-agreement.png)
+    ![Окно пользовательского соглашения Stride](media/install-stride-license-agreement.png)
 
-    Click **Accept**.
+    Нажмите **Accept**.
 	
-5. The **Stride installation type** window opens.
+5. Откроется окно **Stride installation type**.
 
-    ![Stride installation type window](media/install-stride-installation-type.png)
+    ![Окно видов установки Stride](media/install-stride-installation-type.png)
 	
-    Select an installation type and click **Next**. 
+    Выберите тип установки и нажмите **Next**. 
 
-6.  The **Select installation folder** window opens.
+6.  Откроется окно **Select installation folder**.
 
-    ![Select installation folder window](media/install-stride-select-installation-folder.png)
+    ![Выбор пути установки](media/install-stride-select-installation-folder.png)
 
-    Select a folder to install Stride to and click **Next**.
+    Выберите папку, где хотите установить Stride и нажмите **Next**.
 	
-7. The **Create application shortcuts** window opens.
+7. Откроется окно **Create application shortcuts**.
     
-    ![Create application shortcuts window](media/install-stride-create-application-shortcuts.png)
+    ![Окно создания ярлыков](media/install-stride-create-application-shortcuts.png)
 
-    Choose which shortcuts you want Stride to create, and click **Next**.
+    Выберите, какие ярлыки вы хотите создать для Stride, и нажмите **Next**.
 	
-8. The **Ready to Install** window opens.
+8. Откроется окно **Ready to Install**.
     
-    ![Ready to install window](media/install-stride-ready-to-install.png)
+    ![Окно Ready to install](media/install-stride-ready-to-install.png)
 
-    Click **Install**.
+    Нажмите **Install**.
 
-9.  Installation begins.
+9.  Начнётся установка.
  
-    ![Installation status](media/install-stride-installation-status.png)
+    ![Прогресс установки](media/install-stride-installation-status.png)
 
-    After the installer closes, Stride creates shortcuts in locations you selected and the **Stride Launcher** opens. 
+    После закрытия установщика Stride создает ярлыки в выбранных вами местах и откроется **Stride Launcher** окно. 
 
     ![Stride Launcher](media/stride-launcher.png)
 
-    The Stride Launcher prompts you to install the latest version of Stride.
+    Stride Launcher предложит Вам установить последнюю версию Stride.
 
-    ![No version installed](media/stride-launcher-install-last-version.png)
+    ![Нет установленных версий](media/stride-launcher-install-last-version.png)
 
-    Click **Yes**.
+    Нажмите **Yes**.
 
-10. The Stride Launcher asks if you want to install the Visual Studio integration. This lets you edit shaders directly from Visual Studio and provides syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.
+10. Stride Launcher спросит, хотите ли вы установить расширение Visual Studio. Это позволяет вам редактировать шейдеры непосредственно из Visual Studio и обеспечивает выделение синтаксиса, анализ живого кода с проверкой, проверкой ошибок и навигацией. Установка расширения не является обязательной, но мы рекомендуем ее.
 
-    ![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
+    ![Установка Visual Studio расширения](media/install-VS-plug-in-prompt.png)
 
-11. Windows confirms that Stride can make changes to your computer.
+11. Окно подтверждения, что Stride может вносить изменения на Ваш компьютер.
 
-    ![Prerequisites installer](media/prerequsites-installer2.png)
+    ![Окно подтверждения](media/prerequsites-installer2.png)
 
-    Click **Yes**.
+    Нажмите **Yes**.
     
-12. The Stride Launcher checks if the prerequisite **Visual C++ Redistributable** is installed. If it's not installed, follow the prompts to install it.
+12. Stride Launcher проверит что **Visual C++ Redistributable** установлен. Если он не установлен, следуйте подсказкам для его установки.
 
-13. The Stride Launcher checks if the prerequisite **Build Tools for Visual Studio** is installed. If you have Visual Studio, then this is already installed. If it's not installed, follow the prompts to install it.
+13. Stride Launcher проверит что **Build Tools for Visual Studio** установленны. Если у вас есть Visual Studio, то это уже установлено .Если он не установлен, следуйте подсказкам для его установки.
 
-    ![Installing VS build tools](media/installing-vs-build-tools.png)
+    ![Установка средст сборки VS ](media/installing-vs-build-tools.png)
 
     >[!Note]
-    > Windows uses the Visual Studio installer to install **Build Tools for Visual Studio**, but it doesn't install Visual Studio.
+    > Windows использует установщик Visual Studio для установки **Build Tools for Visual Studio**, но он не устанавливает Visual Studio.
 
-Stride is now installed and ready to use.
+Stride теперь установлен и готов к использованию.
 
 >[!Note]
 
-> If you don't install the prerequisites, Stride won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Stride doesn't run](../troubleshooting/stride-doesnt-run.md).
+> Если вы не установите необходимые компоненты, Stride не запустится. В этом случае вы можете загрузить и установить необходимые компоненты отдельно. Для получения инструкций см. [Решение проблем — Stride не запускается](../troubleshooting/stride-doesnt-run.md).
 
-> Alternatively, uninstall Stride, restart the Stride installer, and install the prerequisites when prompted.
+> В качестве альтернативы, удалите  Stride, перезапустите установщик Ыекшву и установите необходимые компоненты.
 
-## What's next?
+## Что дальше?
 
-* [Launch Stride](launch-stride.md)
+* [Запуск Stride](launch-stride.md)

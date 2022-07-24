@@ -6,10 +6,10 @@
 # [Лаунчер Stride](stride-launcher/index.md)
 
 # [Начало работы](get-started/index.md)
-## [Установить Stride](get-started/install-stride.md)
+## [Установка Stride](get-started/install-stride.md)
 ## [Visual Studio расширение](get-started/visual-studio-extension.md)
 ## [Запуск Stride](get-started/launch-stride.md)
-## [Создайте проект](get-started/create-a-project.md)
+## [Создание проекта](get-started/create-a-project.md)
 ## [Game Studio](game-studio/index.md)
 ## [Ассеты](game-studio/assets.md)
 ### [Создание ассет](game-studio/create-assets.md)
@@ -19,7 +19,7 @@
 ### [Добавление сущностей](game-studio/add-entities.md)
 ### [Управление сущностями](game-studio/manage-entities.md)
 ### [Навигация в редакторе сцены](game-studio/navigate-in-the-scene-editor.md)
-## [Запустить игру](get-started/launch-a-game.md)
+## [Запуск игры](get-started/launch-a-game.md)
 
 # [Анимации](animation/index.md)
 ## [Импорт анимации](animation/import-animations.md)

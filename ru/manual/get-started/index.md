@@ -1,21 +1,21 @@
 ---
 uid: ../toc.md
 ---
-# Get started with Stride
+# Начало работы с Stride
 
-<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
 
-This chapter explains everything you need to start using Stride from scratch. For video tutorials, have a look at the the [Tutorials](https://doc.stride3d.net/latest/en/tutorials/index.html).
+Эта статья объясняет все, что вам нужно, чтобы начать использовать Stride с нуля. Для видеоуроков, посмотрите [Гайды](https://doc.stride3d.net/latest/en/tutorials/index.html).
 
 ![Game Studio](media/get-started.jpg)
 
-## In this section
+## В этой секции
 
-* [Install Stride](install-stride.md)
-* [Launch Stride](launch-Stride.md)
-* [Visual Studio extension](visual-studio-extension.md)
-* [Create a project](create-a-project.md)
+* [Установка Stride](install-stride.md)
+* [Запуск Stride](launch-Stride.md)
+* [Visual Studio расширение](visual-studio-extension.md)
+* [Создание проекта](create-a-project.md)
 * [Game Studio](../game-studio/index.md)
-* [Assets](../game-studio/assets.md)
-* [Introduction to scenes](../game-studio/scenes.md)
-* [Launch your game](launch-a-game.md)
+* [Ассеты](../game-studio/assets.md)
+* [Введение в сцены](../game-studio/scenes.md)
+* [Запуск Вашей игры](launch-a-game.md)
