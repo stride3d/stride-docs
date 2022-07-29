@@ -6,6 +6,8 @@ Assuming that your request was approved, as an example, let's add a Spanish lang
 
 1. Clone the repo ```git lfs clone https://github.com/stride3d/stride-docs.git```
    - Make sure LFS (Large File Storage) is used
+1. Create your working branch
+   - If you make big updates, it is better to keep your updates in the separate branch, so you can keep your main branch in the sync with the main repository
 1. Copy **\en\manual** folder to **\es\manual**
 1. Copy **\en\index.md** file to **\es\index.md**
 1. Translate whatever you need in the **\es** folder
@@ -20,6 +22,7 @@ Assuming that your request was approved, as an example, let's add a Spanish lang
 1. Duplicate **\jp-build.ps1** to **\es-build.ps1**
     - Update content jp to es
     - Update ```'doc-no-translated'``` with ```'doc-no-translated doc-no-translated-es'```
+        - Note: We keep also the original ```doc-no-translated``` because it is used in the docs generator logic
 1. Update **\en\template\styles\main.css**
     - Duplicate class ```.doc-no-translated::after```, and place the new one **below**, rename it to ```.doc-no-translated-es::after```
     - Translate the text to es
@@ -30,6 +33,7 @@ Assuming that your request was approved, as an example, let's add a Spanish lang
 1. Test the build with **build.bat** if you also have Stride repository, or just **build_manual_only.bat**, or **es-build.bat**
 1. Run **run_local_website.bat**. It opens the local version of the doc in your browser
 1. Test that you can switch the languages in the top menu
+1. If all is working as expected, submit PR
 
 ## Current Language Contributors 
 
