@@ -27,7 +27,7 @@ Assuming that your request was approved, as an example, let's add a Spanish lang
     - Update content jp to es
 1. Duplicate **\run_local_website_jp.bat** to **\run_local_website_es.bat**
     - Update content jp to es
-1. Test the build with **build.bat** if you have also got Stride repository, or just **build_manual_only.bat**, or **es-build.bat**
+1. Test the build with **build.bat** if you also have Stride repository, or just **build_manual_only.bat**, or **es-build.bat**
 1. Run **run_local_website.bat**. It opens the local version of the doc in your browser
 1. Test that you can switch the languages in the top menu
 
