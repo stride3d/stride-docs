@@ -6,7 +6,7 @@ Assuming that your request was approved, as an example, let's add a Spanish lang
 
 1. Clone the repo ```git lfs clone https://github.com/stride3d/stride-docs.git```
    - Make sure LFS (Large File Storage) is used
-1. Create your working branch
+1. Create your working branch from the main branch
    - If you make big updates, it is better to keep your updates in the separate branch, so you can keep your main branch in the sync with the main repository
 1. Copy **\en\manual** folder to **\es\manual**
 1. Copy **\en\index.md** file to **\es\index.md**
