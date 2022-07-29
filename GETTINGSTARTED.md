@@ -4,6 +4,7 @@ This addresses the following topics:
 * [Contribution Terms](#Terms)
 * [Contribution Workflow](#Workflow)
 * [Edit and Build Locally](#Build)
+* [New Language](#NewLanguage)
 * [Pages Organization](#Organization)
 * [Doc Guidelines](#Guidelines)
 
@@ -71,6 +72,10 @@ to build only the manual in that case).
 - For more details about the MarkDown format, see [GitHub MarkDown Guide](https://guides.github.com/features/mastering-markdown/) or this [Tutorial](http://www.markdowntutorial.com/).
 - For more details about _DocFX_, see [DocFX Getting Started Page](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html)
 
+# <a name="NewLanguage"> New Language
+   
+If you are interested in translating the documentation to a language that is not yet supported, please read these [New Language Workflow](NewLanguageWorkflow.md) instructions.
+   
 # <a name="Organization"> Pages Organization 
 
 Articles should be organized in folders. Media and code files should be stored in folders named _media_ and _code_
