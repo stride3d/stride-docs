@@ -40,7 +40,7 @@ Assuming that your request was approved, as an example, let's add a Spanish lang
 Please notify these contributors if any changes need to be made
 - EN language: Anyone in our Discord Documentation channel
 - RU language: @\~FallenParadise\~ in our Discord Documentation channel
-- JP language:
+- JP language: Anyone in our Discord Documentation channel
 
 ## Troubleshooting
 
