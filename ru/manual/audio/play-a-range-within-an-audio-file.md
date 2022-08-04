@@ -1,22 +1,22 @@
-# Play a range within an audio asset
+# Воспроизвести диапазон в звуковом ассете
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Средняя</span>
+<span class="label label-doc-audience">Область / Разработка</span>
 
-You can have Stride play only certain portions of an audio asset. This means, for example, that you can create multiple samples from a single audio asset by specifying different ranges in different [SoundInstance](xref:Stride.Audio.SoundInstance) objects.
+Вы можете заставить Stride воспроизводить только определенные части аудио ассета.  Это означает, например, что вы можете создать несколько семплов из одного аудиоресурса, указав разные диапазоны в разных объектах [SoundInstance](xref:Stride.Audio.SoundInstance).
 
-![Loop points](media/audio-advanced-features-loop-points.png)
+![диапазон](media/audio-advanced-features-loop-points.png)
 
-You can use the following properties, methods, and structures:
+Вы можете использовать следующие свойства, методы и структуры:
 
-| Property, method, or structure | Function |
+|  Свойство, метод или структура |  Функция |
 |---------|-----------|
-| [Sound.TotalLength](xref:Stride.Audio.Sound.TotalLength) | The total length of the [sound](xref:Stride.Audio.Sound). |
-| [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Audio.PlayRange)) | Sets the time range to play within the audio asset. |
-| [PlayRange](xref:Stride.Audio.PlayRange) | Time information, including the range's starting point and length. |
-| [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position) | Gets the current play position as **TimeSpan**. |
+|  [Sound.TotalLength](xref:Stride.Audio.Sound.TotalLength) |  Общая длина [звука](xref:Stride.Audio.Sound).  |
+|  [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Audio.PlayRange)) |  Устанавливает диапазон для воспроизведения аудио ассета.  |
+|  [PlayRange](xref:Stride.Audio.PlayRange) |  Информация о времени, включая начальную точку и длину диапазона.  |
+|  [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position) |  Получает текущую позицию воспроизведения как **TimeSpan**.  |
 
-For example:
+Например:
 
 ```cs
 //Assume sample length is 5 seconds.
@@ -26,7 +26,8 @@ var duration = TimeSpan.FromSeconds(2);
 mySoundInstance.SetRange(new PlayRange(begin, duration));
 ```
 
-## See also
-* [Global audio settings](global-audio-settings.md)
-* [Spatialized audio](spatialized-audio.md)
-* [Non-spatialized audio](non-spatialized-audio.md)
+## Смотрите также
+
+* [Импорт аудио](import-audio.md)
+* [Глобальные настройки звука](global-audio-settings.md)
+* [Пространственный звук](spatialized-audio.md)

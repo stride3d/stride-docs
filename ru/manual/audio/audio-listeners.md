@@ -1,32 +1,31 @@
-# Audio listeners
+# Аудио слушатели
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
-An **audio listener** is an entity that listens for audio emitted by [audio emitters](audio-emitters.md) to create [spatialized audio](spatialized-audio.md). There can be multiple audio listeners in a scene. This is common, for example, in multiplayer games, where each player camera is an audio listener.
+**Audio listener** является сущностью, которая слушает аудио, излучаемое [audio emitters](audio-emitters.md) что бы создать [Пространственный звук](spatialized-audio.md). В сцене может быть несколько слушателей аудио. Это обычно для многопользовательских игр, где каждая камера игрока является аудио слушателем.
 
-You don't need to configure audio listeners. All settings for sound effects, including _Volume_ and _Pitch_ (_Frequency_), are configured on the audio emitter.
+Вам не нужно настраивать слушатели аудио. Все настройки для звуковых эффектов, включая _Volume_ и _Pitch_ (_Frequency_), настроены на аудио эмитере.
 
-If there's no audio listener in the scene, you won't hear audio from audio emitters.
+Если в сцене нет слушателя аудио, вы не услышите аудио из аудио эмитеров.
 
-## Add an audio listener component to an entity
+## Добавить компонент слушателя аудио в сущность
 
-To create an audio listener, attach an **audio listener component** to an entity. You can attach this component to any entity.
+Чтобы создать аудио слушателя, прикрепите **audio listener component** к сущности. Вы можете прикрепить этот компонент к любой сущности.
 
-1. In **Scene view**, select the entity you want to be an audio listener:
+1. В **Scene view**, выберите сущность, которую вы хотите использовать как аудио слушатель:
 
-    ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
+    ![Выбор сущности](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click _Add Component_ and select [Audio listener component](xref:Stride.Audio.AudioListener):
+2. В **Property Grid**, нажмите _Add Component_ и выберите [Audio listener component](xref:Stride.Audio.AudioListener):
 
-    ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
+    ![Добавление компонента AudioListener](media/audio-add-audiolistener-component.png)
 
-    The entity is now an audio listener.
+    Сущность теперь является аудио слушателем.
 
 > [!Warning] 
-On iOS, you can create multiple objects with [Audio listener component](xref:Stride.Audio.AudioListener) in a scene, but only one is used at runtime.
-
-## See also
-* [Spatialized audio](spatialized-audio.md)
-* [Audio emitters](audio-emitters.md)
-* [Global audio settings](global-audio-settings.md)
+На iOS вы можете создать несколько объектов с [Audio listener компонентом](xref:Stride.Audio.AudioListener) в сцене, но только один используется во время выполнения.
+## Смотрите также
+* [Пространственный звук](spatialized-audio.md)
+* [Аудио эмитеры](audio-emitters.md)
+* [Глобальные настройки звука](global-audio-settings.md)

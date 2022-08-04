@@ -1,16 +1,16 @@
-# Custom audio data
+# Пользовательские аудиоданные
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Сложная</span>
+<span class="label label-doc-audience">Область / Разработка</span>
 
-You can generate audio using your own mechanism. To do this, create a subclass of [DynamicSoundSource](xref:Stride.Audio.DynamicSoundSource).
-For an example of how to implement this, see the [CompressedSoundSource` source code](https://github.com/SiliconStudio/stride/blob/master-1.8/sources/engine/Stride.Audio/CompressedSoundSource.cs).
+Вы можете генерировать аудио, используя свой собственный механизм. Для этого создайте подкласс [DynamicSoundSource](xref:Stride.Audio.DynamicSoundSource).
+Вот пример того, как это реализовать, см. [CompressedSoundSource исходный код](https://github.com/SiliconStudio/stride/blob/master-1.8/sources/engine/Stride.Audio/CompressedSoundSource.cs).
 
-## Example code
+## Пример кода
 
-To play a custom [DynamicSoundSource](xref:Stride.Audio.DynamicSoundSource) at runtime, use:
+Что бы проигать пользовательский звук [DynamicSoundSource](xref:Stride.Audio.DynamicSoundSource) во время выполнения, используйте:
 
-```
+```cs
 int sampleRate = 48000;
 bool mono = false;
 bool spatialized = false;
@@ -22,5 +22,7 @@ await myCustomInstance.ReadyToPlay();
 myCustomInstance.Play();
 ```
 
-## See also
-* [Global audio settings](global-audio-settings.md)
+## Смотрите также
+* [Пространственный звук](spatialized-audio.md)
+* [Аудио эмитеры](audio-emitters.md)
+* [Глобальные настройки звука](global-audio-settings.md)

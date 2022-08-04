@@ -1,50 +1,50 @@
-# Spatialized audio
+# Пространственный звук
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
+<span class="label label-doc-audience">Область / Разработка</span>
 
-**Spatialized audio**, also called **3D audio**, simulates three-dimensional sound.
-This creates more realistic audio than [non-spatialized audio](non-spatialized-audio.md). 
+**Пространственное аудио**, также называемое **3D-аудио**, имитирует трехмерный звук.
+Это создает более реалистичный звук, чем [непространственный звук](non-spatialized-audio.md).
 
-In real life, our experience of sound is affected by factors including its volume, the surrounding area (such as a cave or small room), and the position and movement of the sound source. We can usually tell approximately where a sound is coming from and whether it's moving.
+В реальной жизни на наше восприятие звука влияют такие факторы, как его громкость, окружающая местность (например, пещера или небольшая комната), а также положение и движение источника звука.  Обычно мы можем примерно сказать, откуда исходит звук и движется ли он.
 
-![Spatialized audio](media/audio-index-spatialized-audio.png) 
+![Пространственное аудио](media/audio-index-spatialized-audio.png)
 
-For example, the frequency (pitch) of the sound coming from a moving object varies depending on the observer's position (the [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect)). Sound from an approaching source has a higher frequency than sound from a receding source:
+Например, частота (высота) звука, исходящего от движущегося объекта, меняется в зависимости от положения наблюдателя ([эффект Доплера](https://en.wikipedia.org/wiki/Doppler_effect)).  Звук от приближающегося источника имеет более высокую частоту, чем звук от удаляющегося источника:
 
-![Doppler effect](media/audio-index-play-audio-doppler-effect.png)
+![Эффект Доплера](media/audio-index-play-audio-doppler-effect.png)
 
-To simulate realistic 3D audio, Stride tracks the positions of two entities in the scene:
+Для имитации реалистичного 3D-звука Stride отслеживает положение двух объектов в сцене:
 
-* **[audio emitters](audio-emitters.md)**, which emit audio
-* **[audio listeners](audio-listeners.md)**, which hear the sound emitted by audio emitters
+* **[аудиоизлучатели](audio-emitters.md)**, которые излучают звук
+* **[аудиослушатели](audio-listeners.md)**, которые слышат звук, издаваемый аудиоизлучателями
 
-You must have both audio emitters and audio listeners to hear spatialized sound in a scene.
+У вас должны быть как аудио эмиттеры, так и аудиослушатели, чтобы слышать пространственный звук в сцене.
 
-Spatialized audio is widely used for sound effects in platform, desktop, and VR games. For example, a gun might make a gunshot sound when fired, or a character might make a footstep sound when they take a step.
-
-> [!Note] 
-> Spatialized audio uses more CPU than non-spatialized audio.
-
-## Enable spatialized audio
-
-When you [import your audio](import-audio.md), select *Spatialized Sound* as the asset type.
-
-You can also set audio to spatialized in the asset's **Property Grid**:
-
-1. In **Asset View**, select _Audio Asset_.
-
-2. In the **Property Grid**, select the **Spatialized** checkbox:
-
-    ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
+Пространственное аудио широко используется для звуковых эффектов в платформенных, настольных и VR-играх. Например, пистолет может издавать звук выстрела, или персонаж может издавать звук шагов.
 
 > [!Note] 
-> Stride processes spatialized audio as mono (single-channel) audio. It doesn't alter the source file.
+> Пространственное аудио использует больше ЦП, чем непространственное аудио.
 
-## See also
+## Включение пространственного звука
 
-* [Audio emitters](audio-emitters.md)
-* [Audio listeners](audio-listeners.md)
+Когда вы [импортируете аудио](import-audio.md), выберите *Spatialized Sound* в качестве типа актива.
+
+Вы также можете настроить аудио на пространственное в **Property Grid**:
+
+2. В **Asset View** выберите _Audio Asset_.
+
+4. В **Property Grid** установите флажок **Spatialized**:
+
+    ![Выберите пространственный звук](media/audio-asset-properties-property-grid-spatialized-sound.png)
+
+> [!Note] 
+> Stride обрабатывает пространственный звук как монофонический (одноканальный) звук.  Он не изменяет исходный файл.
+
+## Смотрите также
+
+* [Аудио излучатели](audio-emitters.md)
+* [Аудиослушатели](audio-listeners.md)
 * [HRTF](hrtf.md)
-* [Global audio settings](global-audio-settings.md)
+* [Глобальные настройки звука](global-audio-settings.md)

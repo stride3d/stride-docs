@@ -1,84 +1,85 @@
-# Audio emitters
+# Аудио эмиттеры
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Разработка</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
-[Audio emitter components](xref:Stride.Audio.AudioEmitter) emit audio used to create [spatialized audio](spatialized-audio.md). You can add them to any entity.
+[Аудио эмиттер (компонент)](xref:Stride.Audio.AudioEmitter) излучает звук, используемый для создания [пространственного звука](spatialized-audio.md). Вы можете добавить их в любую сущность.
 
-The pitch and volume of the sound changes as the [audio listener](audio-listeners.md) moves closer to and away from the audio emitter.
+Высота и громкость звука меняются в зависимости от [аудио слушателя](audio-listeners.md) приближения и отдаления от источника звука.
 
 > [!Note] 
-You need at least one [AudioListenerComponent](xref:Stride.Audio.AudioListener) in the scene to hear audio from audio emitters.
+Вам нужен хотя бы один [AudioListenerComponent](xref:Stride.Audio.AudioListener) на сцене, чтобы услышать звук от аудио эмиттеров.
 
-## 1. Set up an audio emitter asset
+## 1. Настройка аудио эмитерра
 
-1. In the **Scene view**, select an entity you want to be an audio emitter.
+1. В **Scene view**, выберие сущность, к которой хотите добавить аудио эмиттер.
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click **Add component** and select **Audio Emitter**.
+2. В **Property Grid**, нажмите **Add component** и выберите **Audio Emitter**.
 
-    ![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
+    ![Добавление компонента AudioEmitter](media/audio-add-audioemitter-component-select-entity.png)
 
-    Now we need to add audio to the emitter.
+    Теперь нам нужно добавить звук в эмиттер.
 
-3.  Under **Audio Emitter**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and specify a name for the audio.
+3.  Под **Audio Emitter**, нажмите ![зелёную кнопку плюс](~/manual/game-studio/media/green-plus-icon.png) (**Add**) и укажите имя для аудио.
 
     ![Add new sound entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
-4. From the **Asset View**, drag and drop an audio asset to the audio you just added:
+4. Из **Asset View**, перетащите аудио ассет в только что добавленный компонент:
 
-    ![Drag and drop an audio asset](media/audio-play-drag-and-drop-audio-asset.gif)
+    ![Перетаскивание аудио ассета](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+    В качестве альтернативы нажмите ![Иконку руки](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
-    ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
+    ![Выбор аудио ассета](media/audio-play-audioemitter-component-pick-an-asset.png)
 
-    Then choose an audio asset:
+    Затем выберите аудио ассет:
 
-    ![Select audio  asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
+    ![Выбор аудио ассета](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
-5. Repeat steps 3 and 4 to add as many audio assets as you need.
+5. Повторите шаги 3 и 4, чтобы добавить столько аудио ассетов, сколько вам нужно.
 
-6. Configure the properties for this audio emitter.
+6. Настройте свойства для этого аудио эмитера.
 
-    ![Audio emitter properties](media/audio-emitter-properties.png)
+    ![Свойства аудио эмитера](media/audio-emitter-properties.png)
 
-| Property           | Description  
+| Свойство           | Описание
 |--------------------|-------------
-| Use HRTF           | Enable head-related transfer function (HRTF). With this enabled, sounds appear to come from a specific point in 3D space, synthesizing binaural audio. For more information, see [HRTF](hrtf.md).
-| Directional factor | How directional the audio is, from 0 (min) to 1 (max). If set to 0, the audio is emitted from all directions. You can control this with a slider or number value. 
-| Environment        | The reverb type for the audio, simulating reverberation of real environments (small, medium, large, or outdoors).
+| Использовать HRTF           | Включить переносную функцию, связанную с головой (HRTF). С этой включённой опцией, звук будет исходить из определенной точки в трехмерном пространстве, эмулируя бинаурального звука. Для получения дополнительной информации см. [HRTF](hrtf.md).
+| Фактор направленности | Насколько направлено звук, от 0 (мин) до 1 (макс). Если установлено в 0, звук излучается со всех сторон.Вы можете управлять этим с помощью слайдера или численного значения. 
+| Окружение        | Тип реверберации для аудио, имитируя реверберацию реальных сред (небольшая, средняя, большая или на открытом воздухе).
 
-## 2. Create a script to play the audio
+## 2. Создайте скрипт для воспроизведения аудио
 
 Now we need to create a script to play and configure the audio asset.
 
-1. In your script, instantiate [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) for each sound you want to use in the script.
+1. В вашем скрипте создайте экземпляр [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) для каждого звука, который вы хотите использовать в сценарии.
 
-   For example, say we have two sounds, **MySound1** and **MySound2**:
+   Например, скажем, у нас есть два звука, **MySound1** и **MySound2**:
    
 	```cs
+    // я как переводчик напоминаю что это надо делать в Start а не в Update
 	AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
 	AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
 	AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
 	```
 
-2. Use the following [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) properties and methods to play and configure the audio:
+2. Используйте следующее [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) свойства и методы воспроизведения и настройки звука:
 
-| Property / method | Description |
+| Свойство / метод | Описание |
 |-------    |-------|
-| [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping) | Loops audio. Has no effect if [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget) is set to true.|
-| [Pitch](xref:Stride.Audio.AudioEmitterSoundController.Pitch)     | Gets or sets sound pitch (frequency). Use with caution for spatialized audio. |
-| [PlayState](xref:Stride.Audio.AudioEmitterSoundController.PlayState)	| Gets the current state of the audio emitter sound controller. |
-| [Volume](xref:Stride.Audio.AudioEmitterSoundController.Volume)	| Volume of the audio. | 
-| [Pause()](xref:Stride.Audio.AudioEmitterSoundController.Pause)	| Pauses audio. |
-| [Play()](xref:Stride.Audio.AudioEmitterSoundController.Play)      | Plays audio. |
-| [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget)| Plays audio once, then clears the memory. Useful for short sounds such as gunshots. Overrides [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping).|
-| [Stop()](xref:Stride.Audio.AudioEmitterSoundController.Stop)	| Stops audio. |
+| [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping) | Зациклить аудио. Не имеет никакого эффекта, если [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget) включён.|
+| [Pitch](xref:Stride.Audio.AudioEmitterSoundController.Pitch)     | Получает или устанавливает высоту звука (частоту). Использовать с осторожностью для пространственного аудио. |
+| [PlayState](xref:Stride.Audio.AudioEmitterSoundController.PlayState)	| Получает текущее состояние контроллера звука. |
+| [Volume](xref:Stride.Audio.AudioEmitterSoundController.Volume)	| Громкость звука. | 
+| [Pause()](xref:Stride.Audio.AudioEmitterSoundController.Pause)	| Пауза. |
+| [Play()](xref:Stride.Audio.AudioEmitterSoundController.Play)      | Проиграть аудио. |
+| [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget)| Играет аудио один раз, затем очищает память. Полезно для коротких звуков, таких как выстрелы. Переопределяет [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping).|
+| [Stop()](xref:Stride.Audio.AudioEmitterSoundController.Stop)	| Остановить аудио. |
 
-For example:
+Например:
 
 ```cs
 mySound1Controller.IsLooping = true;
@@ -87,21 +88,21 @@ mySound1Controller.Volume = 0.5f;
 mySound1Controller.Play();
 ```
 
-This sound will loop at double the original pitch and half the original volume. For more information, see the [AudioEmitterSoundController Stride API documentation](xref:Stride.Audio.AudioEmitterSoundController).
+Этот звук будет зацикливаться на удвоении оригинальной высоты и половины оригинальной громкости. Для получения дополнительной информации см.[AudioEmitterSoundController Stride API documentation](xref:Stride.Audio.AudioEmitterSoundController).
 
-## 3. Add the script to the audio emitter entity
+## 3. Добавьте скрипт в сущность с аудио эмитером
 
-Game Studio lists the script as a component under **Add component**. Add the script to the audio emitter entity.
+Game Studio перечисляет скрипт как компонент под **Add component**. Добавьте скрипт в сущность аудио эмитера.
 
 1. In the **Scene view**, select an entity you want to be an audio emitter.
 
-    ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
+    ![Выбор сущности](media/audio-add-audiolistener-component-select-entity.png)
 
-2. Click **Add component** and select the script.
+2. Нажмите **Add component** и выберите скрипт.
 
-    ![Add audio script](media/add-sound-script.png)
+    ![Добавление скрипта](media/add-sound-script.png)
 
-## See also
-* [Spatialized audio](spatialized-audio.md)
-* [Audio listeners](audio-listeners.md)
-* [Global audio settings](global-audio-settings.md)
+## Смотрите также
+* [Пространственный аудио](spatialized-audio.md)
+* [Аудио слушатели](audio-listeners.md)
+* [Глобальные настройки звука](global-audio-settings.md)

@@ -1,29 +1,29 @@
-# Stream audio
+# Потоковое аудио
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
+<span class="label label-doc-audience">Область / Разработка</span>
 
-By default, Stride plays audio directly from memory. This is useful for short sound effects such as gunshots or footsteps.
+По умолчанию Stride воспроизводит аудио прямо из памяти.  Это полезно для коротких звуковых эффектов, таких как выстрелы или шаги.
 
-![Non-streamed audio](media/audio-index-non-streamed-audio.png)
+![Непотоковое аудио](media/audio-index-non-streamed-audio.png)
 
-Alternatively, Stride can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Stride plays it while buffering the following sequences in parallel. This saves a lot of memory when used for larger audio files such as background music and character dialogue.
+Кроме того, Stride может буферизовать звук и передавать его последовательно.  Как только первая последовательность буферизируется, Stride воспроизводит ее, одновременно буферизуя следующие последовательности.  Это экономит много памяти при использовании для больших аудиофайлов, таких как фоновая музыка и диалоги персонажей.
 
 > [!Note] 
-Streaming audio increases latency unless you preload it with the ReadyToPlay task (see below).
+Потоковое аудио увеличивает задержку, если вы предварительно не загрузите его с помощью задачи ReadyToPlay (см. ниже).
 
-![Streamed audio](media/audio-index-streamed-audio.png)
+![Потоковое аудио](media/audio-index-streamed-audio.png)
 
-To stream an audio asset:
+Для потоковой передачи аудио:
 
-1. In the **Asset View**, select the audio asset.
+1. В **Asset View** выберите звуковой ассет.
 
-2. In the **Property Grid**, select **Stream From Disk**:
+2. В **Property Grid** выберите **Stream From Disk**:
 
-    ![Audio asset properties](media/audio-asset-properties-property-grid.png)
+    ![Свойства аудио ассета](media/audio-asset-properties-property-grid.png)
 
-In the script for the asset, you can configure an audio file to play once the audio engine buffers enough audio samples. To do this, use this task:
+В скрипте для вы можете настроить аудиофайл для воспроизведения, как только звуковой движок буферизует достаточное количество аудиосэмплов.  Для этого используйте эту задачу:
 
 ```cs
 SoundInstance music = musicSound.CreateInstance();
@@ -31,8 +31,8 @@ await music.ReadyToPlay();
 music.Play();
 ```
 
-## See also
-* [Global audio settings](global-audio-settings.md)
-* [Audio asset properties](audio-asset-properties.md)
-* [Spatialized audio](spatialized-audio.md)
-* [Non-spatialized audio](non-spatialized-audio.md)
+## Смотрите также
+* [Глобальные настройки звука](global-audio-settings.md)
+* [Свойства аудиоактива](audio-asset-properties.md)
+* [Пространственное аудио](spatialized-audio.md)
+* [Непространственный звук](non-spatialized-audio.md)

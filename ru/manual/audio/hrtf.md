@@ -1,10 +1,10 @@
-# Head-related transfer function (HRTF) audio
+# Аудио переносной функции, связанной с головой (HRTF)
 
-**Head-related transfer function (HRTF)** is an advanced way of rendering audio so that sounds appear to come from a specific point in 3D space, synthesizing binaural audio. It provides more realistic audio than standard [spatialized audio](spatialized-audio.md). For example, with HRTF, the player can hear whether a character is above or below them. This is particularly useful for [VR applications](../virtual-reality/index.md), as it increases immersion.
+**Head-related transfer function (HRTF)** — это расширенный способ воспроизведения звука, при котором кажется, что звуки исходят из определенной точки в трехмерном пространстве, синтезируя бинауральный звук. Он обеспечивает более реалистичный звук, чем стандартный [пространственный звук](spatialized-audio.md). Например, с помощью HRTF игрок может слышать, находится ли персонаж над ним или под ним. Это особенно полезно для [VR приложений](../virtual-reality/index.md), так как это увеличивает погружение.
 
-Players don't need special hardware to use HRTF. However, the effect works much better with headphones than speakers.
+Игрокам не нужно специальное оборудование для использования HRTF. Тем не менее, эффект работает намного лучше с наушниками, чем с динамиками.
 
-This video demonstrates the effect of HRTF audio:
+Это видео демонстрирует эффект аудио HRTF:
 
 <p>
 <video class="embed-responsive-item" poster="media/hrtf-first-frame.jpg" controls>
@@ -13,47 +13,47 @@ This video demonstrates the effect of HRTF audio:
 </p>
 
 >[!Note]
->For now, you can only use HRTF on Windows 10.
+>На данный момент вы можете использовать HRTF только на Windows 10.
 
-## Enable HRTF
+## Включение HRTF
 
-To use HRTF, first enable it globally in the **Game Settings** asset, then enable HRTF on the entities you want to use it with.
+Чтобы использовать HRTF, сначала включите его глобально в **Game Settings** ассете, затем включите HRTF для объектов, с которыми вы хотите его использовать.
 
-### 1. Enable HRTF globally
+### 1. Включить HRTF глобально
 
-1. In the **Solution Explorer** (the bottom-left pane by default), select the **Assets folder**.
+1. В **Solution Explorer** (по умолчанию нижняя левая панель), выберите **Assets folder**.
 
-    ![Select Assets folder asset](../game-studio/media/select-asset-folder.png)
+    ![Выбор Assets folder asset](../game-studio/media/select-asset-folder.png)
 
-2. In the **Asset View** (the bottom pane by default), select the **GameSettings** asset.
+2. В **Asset View** (нижняя панель по умолчанию), выберите **GameSettings** ассет.
 
-    ![Select Game Settings asset](../game-studio/media/select-game-settings-asset.png)
+    ![Выбор Game Settings ассета](../game-studio/media/select-game-settings-asset.png)
 
-3. In the **Property Grid** (the right-hand pane by default), under **Audio settings**, select **HRTF support**.
+3. В **Property Grid** (правая панель по умолчанию), под **Audio settings**, выберите **HRTF support**.
 
-    ![Audio settings](../game-studio/media/audio-settings.png)
+    ![Аудио настройки](../game-studio/media/audio-settings.png)
 
-For more information about the Game Settings asset, see [Game settings](../game-studio/game-settings.md).
+Для получения дополнительной информации об ассете «Game Settings» см. [Game settings](../game-studio/game-settings.md).
 
-### 2. Enable HRTF on the entities
+### 2. Включите HRTF на сущностях
 
-1. Select the entity with the [audio emitter](audio-emitters.md) that contains the sound you want to enable for HRTF.
+1. Выберите сущность с [аудио эмитером](audio-emitters.md) который содержит звук, который вы хотите включить для HRTF.
 
-2. In the **Property Grid** (on the right by default), under **Audio emitter**, select **Use HRTF**.
+2. В **Property Grid** (справа по умолчанию), под **Audio emitter**, выберите **Use HRTF**.
 
-    ![Audio emitter properties](media/audio-emitter-properties.png)
+    ![Свойства аудио эмитера](media/audio-emitter-properties.png)
 
-    Sounds emitted from this entity will use HRTF.
+    Звуки, излучаемые из этой сущности, будут использовать HRTF.
 
     >[!Note]
-    >The HRTF option applies to every sound emitted from this audio emitter.
+    > Параметр HRTF применяется к каждому звуку, излучаемому из этого аудио эмитера.
     
-For more information about audio emitters, including the properties you can change, see [Audio emitters](audio-emitters.md).
+Для получения дополнительной информации об источниках звука, включая свойства, которые вы можете изменить, см. [Audio emitters](audio-emitters.md).
 
-### See also
+### Смотрите также
 
 * [Head-related transfer function (Wikipedia)](https://en.wikipedia.org/wiki/Head-related_transfer_function)
-* [Spatialized audio](spatialized-audio.md)
-* [Audio emitters](audio-emitters.md)
-* [Audio listeners](audio-listeners.md)
+* [Пространственный аудио](spatialized-audio.md)
+* [Аудио эмитеры](audio-emitters.md)
+* [Аудио слушатели](audio-listeners.md)
 * [Game settings](../game-studio/game-settings.md)

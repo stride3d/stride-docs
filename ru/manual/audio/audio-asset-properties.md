@@ -1,20 +1,20 @@
-# Audio asset properties
+# Свойства аудио ассетов
 
-After you select an audio asset in the **Asset View**, you can configure its properties in the **Property Grid**.
+После выбора аудио ассета в **Asset View**, вы можете настроить его свойства в **Property Grid**.
 
-![Audio asset properties](media/audio-asset-properties.png)
+![Свойства аудио ассета](media/audio-asset-properties.png)
 
-| Property | Description
+| Свойство | Описание
 |----------|----------
-| **Source** | The source audio file (note that Stride never alters source files)
-| **Compression ratio** | Set the compression rate from `1` (no compression) to `40` (maximum). Greater compression optimizes memory use, but decreases audio quality. Stride compresses audio files with the open-source [Opus/Celt](https://en.wikipedia.org/wiki/CELT) codec.
-|**Sample rate** | The rate at which Stride [resamples](https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate) the source file. The higher the sample rate, the higher the audio quality. Typical sample rates are 44.1 kHz (44,100 Hz), 48 kHz, 88.2 kHz, and 96 kHz. Note that high sampling rates doesn't improve the quality of low-quality audio files.       
-| **Spatialized**  | Simulate 3D audio (see [spatialized audio](spatialized-audio.md))
-| **Stream from disk** | Streaming is useful for larger audio files, as it saves memory. For more information, see [Stream audio](stream-audio.md).
+| **Source** | Исходный аудио файл (обратите внимание на то, что Stride никогда не изменяет исходные файлы)
+| **Compression ratio** | Выбор частоты сжатия от `1` (без компресии (сжатия) ) до `40` (максимальное). Большее сжатие оптимизирует использование памяти, но снижает качество звука. Stride сжимает аудиофайлы используя кодеки с открытым исходным кодом [Opus/Celt](https://en.wikipedia.org/wiki/CELT).
+|**Sample rate** | Частота, с которой Stride [дискретезирует](https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate) исходный файл. Чем выше скорость дискретизации, тем выше качество звука. Типичные показатели выборки составляют 44,1 кГц (44 100 Гц), 48 кГц, 88,2 кГц и 96 кГц. Обратите внимание, что высокие показатели отбора проб не улучшают качество низкокачественных аудиофайлов.       
+| **Spatialized**  | Симулировать 3D аудио (смотрите [пространственный звук](spatialized-audio.md))
+| **Stream from disk** | Потоковая передача полезна для более крупных аудиофайлов, поскольку он экономит память. Для получения дополнительной информации см. [Стриминг аудио](stream-audio.md).
 
-## See also
+## Смотрите так же
 
-* [Import audio](import-audio.md)
-* [Global audio settings](global-audio-settings.md)
-* [Spatialized audio](spatialized-audio.md)
-* [Non-spatialized audio](non-spatialized-audio.md)
+* [Импорт аудио](import-audio.md)
+* [Глобальные настройки звука](global-audio-settings.md)
+* [Пространственный звук](spatialized-audio.md)
+* [Не-пространственное аудио](non-spatialized-audio.md)

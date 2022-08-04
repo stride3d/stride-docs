@@ -1,53 +1,56 @@
-# Import audio
+# Импорт аудио
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-level">Сложность / Лёгкая</span>
+<span class="label label-doc-audience">Область / Дизайн</span>
 
-You can import audio files to use as **audio assets** in your project. You can import file types including .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, and .mpc.
+Вы можете импортировать аудиофайлы для использования в качестве **audio assets** в Вашем проекте. Вы можете импортировать типы файлов, включая .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, and .mpc.
 
-1. Drag and drop the audio file from Windows Explorer to the **Asset View**:
+1. Перетащите аудиофайл из Windows Explorer в **Asset View**:
 
-    ![Drag and drop](media/import-setup-drag-and-drop-audio-to-asset-view.gif)
+    ![Перетаскивание](media/import-setup-drag-and-drop-audio-to-asset-view.gif)
 
-    Alternatively, in the **Asset View**:
+    Альтернативно, в **Asset View**:
 
-    1. Click ![](media/index-audio-add-new-asset-button.png)
+    1. Нажмите ![](media/index-audio-add-new-asset-button.png)
 
-    2. Click ![](media/index-audio-import-audio-directly-from-file.png) (**Import audio directly from file**) and select the audio file.
+    2. Нажмите ![](media/index-audio-import-audio-directly-from-file.png) (**Import audio directly from file**) и выберите аудиофайл.
 
-2. To give the audio asset some default properties, choose a preset. (You can always [change the properties in the Property Grid later](audio-asset-properties.md).)
+2. Чтобы дать аудио ассету некоторые свойства по умолчанию, выберите пресет. (Вы всегда можете [изменить свойства в Property Grid позже](audio-asset-properties.md).)
 
-    ![Choose Asset type](media/import-audio-choose-asset-type.png)
+    ![Выбор типа ассета](media/import-audio-choose-asset-type.png)
 
-    * **Sound effect**: Recommended for smaller files that you want to play directly from memory.
+    * **Sound effect**: Рекомендуется для небольших файлов, которые вы хотите воспроизвести непосредственно из памяти.
 
-    * **Spatialized sound**: Process the audio asset as [spatialized audio](spatialized-audio.md). Note that Stride processes audio files as mono (single-channel) audio. The source file is unaffected.
+    * **Spatialized sound**: Обработать аудио ассет как [пространственный звук](spatialized-audio.md). Обратите внимание, что Stride обрабатывает аудиофайлы как моно (одноканальный) аудио. Исходный файл не изменяется.
     
-    * **Music**: Recommended for larger files that you want to stream from disk to save memory.
+    * **Music**: Рекомендуется для более крупных файлов, которые вы хотите транслировать с диска для экономии памяти.
 
-After you import an audio file, you can select it as an asset in the **Asset View**.
+После импорта аудиофайла вы можете выбрать его в качестве ассета в **Asset View**.
 
-## Import audio from a video file
+## Импорт аудио из видеофайла
 
-You can also import a [video](../video/index.md) file and choose to import only the audio tracks from it.
+Вы также можете импортировать [видеофайл](../video/index.md) и выбрать, импортировать только аудио из него.
 
-1. In the **Asset View**, click **Add assett** and select **Media > Video**.
+1. В **Asset View**, нажмите **Add assett** и выберите **Media > Video**.
 
-    ![Add video asset](../video/media/add-video-asset.png)
+    ![Добавление видео ассета](../video/media/add-video-asset.png)
 
-2. Browse to the video you want to import audio from and click **Open**.
+2. Выберите видео, из которого вы хотите импортировать аудио и нажмите **Open**.
 
-    Alternatively, drag the file from **Explorer** into the **Asset View**.
+    В качестве альтернативы перетащите файл из **Explorer** в **Asset View**.
+
+>[!Note]
+> Тут не понимаю смысл. Что значит очистить
 
 3. Clear **Import video** and click **OK**.
 
     ![Import video](media/import-audio-only.png)
 
-    Stride adds the audio tracks from the video to the **Asset View**.
+    Stride добавляет аудио треки из видео в **Asset View**.
 
-## See also
+## Смотрите также
 
-* [Spatialized audio](spatialized-audio.md)
-* [Non-spatialized audio](non-spatialized-audio.md)
-* [Global audio settings](global-audio-settings.md)
-* [Video](../video/index.md)
+* [Пространственный звук](spatialized-audio.md)
+* [Не-пространственный звук](non-spatialized-audio.md)
+* [Глобальные настройки звука](global-audio-settings.md)
+* [Видео](../video/index.md)

@@ -1,20 +1,20 @@
-# Audio
+# Звук
 
-You can import sound files and use them in your games. Stride supports audio features including 3D spatialized audio, streaming, and low-latency playback.
+Вы можете импортировать звуковые файлы и использовать их в своих играх.Stepde поддерживает аудиофункциональные функции, включая 3D-пространственное аудио, потоковое и воспроизведение с низкой задержкой.
 
-![Audio in Stride](media/audio-index-intro-picture.png)
+![Звук в Stride](media/audio-index-intro-picture.png)
 
-## In this section
+## В этой секции
 
-* [Import audio](import-audio.md)
-* [Audio asset properties](audio-asset-properties.md)
-* [Non-spatialized audio](non-spatialized-audio.md)
-* [Spatialized audio](spatialized-audio.md)
-    * [Audio emitters](audio-emitters.md)
-    * [Audio listeners](audio-listeners.md)
+* [Импорт аудио](import-audio.md)
+* [Свойства аудио ассетов](audio-asset-properties.md)
+* [Не-пространственный звук](non-spatialized-audio.md)
+* [Пространственный звук](spatialized-audio.md)
+    * [Аудио эмитеры](audio-emitters.md)
+    * [Аудио слушатели](audio-listeners.md)
     * [HRTF](hrtf.md)
-* [Stream audio](stream-audio.md)
-* [Global audio settings](global-audio-settings.md)
-* [Play a range within an audio file](play-a-range-within-an-audio-file.md)
-* [Custom audio data](custom-audio-data.md)
-* [Set an audio device](set-an-audio-device.md)
+* [Стриминг аудио](stream-audio.md)
+* [Глобальные настройки звука](global-audio-settings.md)
+* [Воспроизведение участка аудиофайла](play-a-range-within-an-audio-file.md)
+* [Пользовательское аудио](custom-audio-data.md)
+* [Найстройка аудио устройства](set-an-audio-device.md)
