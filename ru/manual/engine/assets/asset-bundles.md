@@ -1,33 +1,33 @@
-# Asset bundles
+# Сборки ассеты
 
 >[!Warning]
->This section is out of date. For now, you should only use it for reference.
+>Этот раздел устарел. На данный момент вы должны использовать его только для справки.
 
-A bundle of assets allows to package assets into a single archive that can be downloaded into the game at a specific time.
+Пакет ассетов позволяет упаковать ассеты в единый архив, который можно загрузить в игру в определенное время.
 
-It allows creation of **Downloadable Content (DLC)**.
+Он позволяет создавать **Downloadable Content (DLC)**.
 
-Basic rules:
+Основные правила:
 
-- A project can generate several bundle.
-- A bundle is created from several **assets selectors**  (Currently, only the `PathSelector` and `TagSelector` are supported)
-- A bundle can have dependencies to others bundles
-- Every bundle implicitly references `default` bundle, where every asset which shouldn't go in a specific bundle will be packaged
-- Once a bundle is deployed into the game, all assets from this bundle and all its dependencies are accessible
-- Bundle resolution is done through an asynchronous callback that allows you to download bundle, and will be called once per dependency (similar to AssemblyResolve event).
+- Проект может генерировать несколько пакетов.
+- Пакет создается из нескольких **assets selectors** (в настоящее время поддерживаются только `PathSelector` и `TagSelector`)
+- Пакет может иметь зависимости от других пакетов
+- Каждый пакет неявно ссылается на пакет по умолчанию, где каждый актив, который не должен входить в определенный пакет, будет упакован.
+- После развертывания пакета в игре становятся доступными все активы из этого пакета и все его зависимости.
+- Разрешение пакета выполняется с помощью асинхронного обратного вызова, который позволяет загрузить пакет и будет вызываться один раз для каждой зависимости (аналогично событию AssemblyResolve).
 
-# Create a bundle
+# Создйтеь бандл
 
 > [!Note]
-> Creating currently requires some manual steps (i.e. editing `sdpkg` by hand).
+> Создание в настоящее время требует некоторых ручных действий (например, редактирование `sdpkg` вручную).
 
-Open the `sdprj` file of the game executable and add the following configuration:
+Откройте файл `sdprj` исполняемого файла игры и добавьте следующую конфигурацию:
 
-Example:
+Пример:
 
-- A bundle named `MyBundleName` will embed assets with tags `MyTag1` and `MyTag2`
-- A bundle named `MyBundleName2` will embed assets with tags `MyTag3` and `MyTag4`. This bundle has a dependency to `MyBundleName`
-- There is also a `PathSelector` which follow the `.gitignore` filtering convention.
+- Пакет с именем `MyBundleName` будет включать активы с тегами `MyTag1` и `MyTag2`.
+- Пакет с именем `MyBundleName2` будет включать активы с тегами `MyTag3` и `MyTag4`.  Этот пакет имеет зависимость от `MyBundleName`
+- Существует также `PathSelector`, который следует соглашению о фильтрации `.gitignore`.
 
  
 
@@ -55,59 +55,53 @@ Bundles:
         - folder3/*.xml
 ```
 
-
 > [!Note]
 > 
-> Asset dependencies are automatically placed in the most appropriate bundle.
+> Зависимости активов автоматически помещаются в наиболее подходящий пакет.
 > 
-> Current process works that way:
+> Текущий процесс работает следующим образом:
+>
+> — найти ресурсы, соответствующие определенным селекторам тегов («корни» ресурсов пакета).
+> — Перечислите активы, которые зависят от этих «корневых» активов пакета, и поместите их в тот же пакет, что и их «корневой» актив.
+> - За исключением случаев, когда он уже доступен через одну из зависимостей пакета (например, общий зависимый пакет или пакет по умолчанию).
+> - Поместите все остальное в пакет по умолчанию.
+>
+> Обратите внимание, что:
 > 
-> - Find assets that matches specific Tag Selectors ("roots" of bundle assets).
-> - Enumerate assets that are dependent on those "roots" bundle assets and put them in the same bundle than their "roots" asset.
->   - Except if already accessible through one of package dependencies (i.e. a shared dependent package or default package).
-> - Place everything else in default bundle.
-> 
-> Note that:
-> 
-> - Shared assets might be duplicated if not specifically placed in common or default package, but that is intended (i.e. if user wishes to distribute 2 separate DLC that need common assets but need to be self-contained).
-> - Every bundle implicitly depends on default bundle.
-> 
+> - Общие активы могут быть продублированы, если они специально не помещены в общий пакет или пакет по умолчанию, но это предусмотрено (например, если пользователь хочет распространять 2 отдельных DLC, которым нужны общие активы, но которые должны быть автономными).
+> - Каждый пакет неявно зависит от пакета по умолчанию.
 >      
+>
 
-# Load a bundle at runtime
+# Загрузить пакет во время выполнения
 
-Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{Stride.Core.Storage.ObjectDatabase.LoadBundle})`:
+Загрузка пакета выполняется через `ObjectDatabase.LoadBundle(string bundleName) (ref:{Stride.Core.Storage.ObjectDatabase.LoadBundle})`:
 
 ```cs
 // Load bundle
 Assets.DatabaseFileProvider.ObjectDatabase.LoadBundle("MyBundleName2");
- 
 // Load specified asset
 var texture = Assets.Load<Texture2D>("AssetContainedInMyBundleName2");
 ```
 
+# Селекторы
 
-# Selectors
+ Селекторы помогают решить, какие активы хранятся в конкретном пакете.
 
- Selectors help deciding which assets are stored in a specific bundle.
+## Селектор тегов
 
-## Tag selector
+ Выберите активы на основе списка тегов, прикрепленных к каждому активу.
 
-Select assets based on a list of tag attached on each asset.
+Характеристики:
 
-Properties:
+- Теги: список тегов.  Будет включен любой актив, который содержит хотя бы один из тегов.
 
-- Tags: List of Tags. Any asset that contains at least one of the tag will be included.
+## Селектор пути
 
-## Path selector
+Выберите активы на основе их пути.
 
-Select assets based on their path.
+Поддерживаются стандартные шаблоны .gitignore (кроме ! (negate), # (комментарии) и \[0-9\] (группы)).
 
-Standard .gitignore patterns are supported (except ! (negate), # (comments) and \[0-9\] (groups)).
+Характеристики:
 
-Properties:
-
-- Paths: List of filters. Any asset whose URL matches one of the filter will be included.
-
- 
-
+- Пути: Список фильтров.  Будет включен любой ресурс, URL-адрес которого соответствует одному из фильтров.
