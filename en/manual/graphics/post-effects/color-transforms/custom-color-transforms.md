@@ -14,7 +14,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## 1. Create a shader
 
-1. Make sure you have the [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from XSL ([Stride shading language](../../effects-and-shaders/index.md)) to `.cs` files.
+1. Make sure you have the [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from SDSL ([Stride shading language](../../effects-and-shaders/shading-language/index.md)) to `.cs` files.
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-ide-icon.png) (**Open in IDE**) to open your project in Visual Studio.
 
@@ -30,13 +30,13 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![Create post effect](media/create-post-effect.png)
 
-    The Stride Visual Studio extension automatically generates a `.cs` file from the `.sdsl` file. The Solution Explorer lists it as a child of the `.xskl` file.
+    The Stride Visual Studio extension automatically generates a `.cs` file from the `.sdsl` file. The Solution Explorer lists it as a child of the `.sdsl` file.
 
     ![My post effect](media/my-post-effect.png)
 
 6. Open the `.sdsl` file, remove the existing lines, and write your shader.
 
-    Shaders are written in Stride Shading Language (XSL), which is based on HLSL. For more information, see [Shading language](index.md).
+    Shaders are written in Stride Shading Language (SDSL), which is based on HLSL. For more information, see [Shading language](../../effects-and-shaders/shading-language/index.md).
 
     For example, the shader below multiplies the image color by the `MyColor` parameter:
 
@@ -149,7 +149,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## See also
 
-* [Shading language](../../effects-and-shaders/index.md)
+* [Shading language](../../effects-and-shaders/shading-language/index.md)
 * [Custom shaders](../../effects-and-shaders/custom-shaders.md)
 * [Graphics compositor](../../graphics-compositor/index.md)
 * [Post effects](../index.md)
