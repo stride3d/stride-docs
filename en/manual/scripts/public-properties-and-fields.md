@@ -70,6 +70,36 @@ Game Studio no longer shows the property:
 
 ![Public property been hidden with ```[DataMemberIgnore]```](media/scripts-in-stride-public-property-with-datamemberignore.png)
 
+## Adding property descriptions
+
+When you add a `<userdoc>` comment block above your public property in code, Game Studio will display it in the description field.
+
+```cs
+	///<summary>
+	/// This summary won't show in Game Studio
+	///</summary>
+	///<userdoc>
+	/// This description will show in Game Studio
+	///</userdoc>
+	public float DelayTimeOut { get; set; }
+
+```
+
+Enable documentation file generation:
+```xml
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+```
+
+> [!NOTE]
+> Game Studio will only look in your build output directory for each assembly. Using the above path is recommended.
+
+On next reload, the Game Studio should display the documentation:
+
+![The description now shows in the Property Grid](media/userdoc-example.png)
+
 ## See also
 
 * [Types of script](types-of-script.md)
