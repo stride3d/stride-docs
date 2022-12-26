@@ -6,9 +6,8 @@ To develop projects with Stride, you need:
 
 | Requirement     | Specifications 
 |-----------------|----------------
-|Hard drive space | 5GB
+| Hard drive space | 5GB
 | Operating system | Windows 10, 11 *[see (1)]*
-| IDE for writing code | Visual Studio 2022
 | CPU | x64
 | GPU | Direct3D 10+ compatible GPU
 | RAM | 4GB (minimum), 8GB (recommended) *[see (2)]*
