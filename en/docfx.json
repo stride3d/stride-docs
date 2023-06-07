@@ -67,7 +67,12 @@
           "**/media/**/*.mp4",
           "**/media/**/*.zip",
           "**/media/**/*.svg",
-          "**/media/**/*.cs"
+          "**/media/**/*.cs",
+          "css/**",
+          "fonts/**",
+          "images/**",
+          "scripts/**",
+          "favicon.png"
         ],
         "case": false,
         "noNegate": false,

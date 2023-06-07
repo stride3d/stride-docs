@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 220" enable-background="new 0 0 200 220" xml:space="preserve" width="200" height="220">
+	<defs>
+		<polygon id="download-arrow" fill="#000000" points="64,37 64,0 36,0 36,37 23,37 50,67 77,37"/>
+		<path id="download-hd" fill="#000000" d="M100,80v13c0,3.8-3.2,7-7,7H7c-3.8,0-7-3.2-7-7V80c0-3.8,3.2-7,7-7h86
+			C96.8,73,100,76.2,100,80z M91,88v-3c0-1.7-1.3-3-3-3h-3c-1.7,0-3,1.3-3,3v3c0,1.7,1.3,3,3,3h3C89.7,91,91,89.7,91,88z M77,88v-3
+			c0-1.7-1.3-3-3-3h-3c-1.7,0-3,1.3-3,3v3c0,1.7,1.3,3,3,3h3C75.7,91,77,89.7,77,88z"/>
+	</defs>
+	<use xlink:href="#download-arrow" />
+	<use xlink:href="#download-hd" />
+	<g transform="translate(100,0)">
+		<use xlink:href="#download-arrow" transform="translate(0,120)">
+			<animateTransform attributeType="xml" attributeName="transform" type="translate" from="0,120" to="0,207" dur="0.7s" begin="0" fill="freeze" repeatCount="indefinite" />
+		</use>
+		<use xlink:href="#download-arrow" transform="translate(0,33)">
+			<animateTransform attributeType="xml" attributeName="transform" type="translate" from="0,33" to="0,120" dur="0.7s" begin="0" fill="freeze" repeatCount="indefinite" />
+		</use>
+		<use xlink:href="#download-hd" transform="translate(0,120)" />
+	</g>
+</svg>
