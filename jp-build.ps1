@@ -1,3 +1,8 @@
+# Define constants
+$Settings = [PSCustomObject]@{
+    Version = "4.1"
+}
+
 Start-Transcript -Path build.log
 Write-Host "Start building Japanese documentation."
 
@@ -43,6 +48,17 @@ if ($LastExitCode -ne 0)
 	Write-Host "Failed to build doc"
 	exit $LastExitCode
 }
+
+# Apply absolute path to 404.html based on the version property
+
+$404 = Get-Content _site/jp/404.html -Encoding UTF8
+
+$404 = $404 -replace 'href="css/site.css"', "href=/$($Settings.Version)/jp/css/site.css"
+$404 = $404 -replace 'src="scripts/site.doc.js"', "src=/$($Settings.Version)/jp/scripts/site.doc.js"
+$404 = $404 -replace 'href="favicon.png"', "href=/$($Settings.Version)/jp/favicon.png"
+$404 = $404 -replace 'src="scripts/theme.js"', "src=/$($Settings.Version)/jp/scripts/theme.js"
+
+$404 | Set-Content _site/jp/404.html -Encoding UTF8
 
 Write-Host "Japanese documentation built."
 Stop-Transcript

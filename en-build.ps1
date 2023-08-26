@@ -2,6 +2,11 @@
     [switch]$API
  )
 
+ # Define constants
+$Settings = [PSCustomObject]@{
+    Version = "4.1"
+}
+
 # Remove build.log file
 If(Test-Path build.log)
 {
@@ -52,4 +57,16 @@ if ($LastExitCode -ne 0)
 
 # Copy extra items
 Copy-Item en/ReleaseNotes/ReleaseNotes.md _site/en/ReleaseNotes/
+
+# Apply absolute path to 404.html based on the version property
+
+$404 = Get-Content _site/en/404.html -Encoding UTF8
+
+$404 = $404 -replace 'href="css/site.css"', "href=/$($Settings.Version)/en/css/site.css"
+$404 = $404 -replace 'src="scripts/site.doc.js"', "src=/$($Settings.Version)/en/scripts/site.doc.js"
+$404 = $404 -replace 'href="favicon.png"', "href=/$($Settings.Version)/en/favicon.png"
+$404 = $404 -replace 'src="scripts/theme.js"', "src=/$($Settings.Version)/en/scripts/theme.js"
+
+$404 | Set-Content _site/en/404.html -Encoding UTF8
+
 Stop-Transcript
