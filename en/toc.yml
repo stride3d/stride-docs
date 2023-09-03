@@ -1,0 +1,10 @@
+﻿- name: 📚 Manual
+  href: manual/
+  homepage: manual/index.md
+- name: 🎓 Tutorials
+  href: tutorials/index.md
+- name: 📝 Release Notes
+  href: ReleaseNotes/ReleaseNotes.md
+- name: 🔧 API
+  href: api/
+  homepage: api/index.md
