@@ -57,7 +57,7 @@
       "_appTitle": "Stride Docs",
       "_enableSearch": true,
       "_appLogoPath": "media/stride-logo-red.svg",
-      "_appFooter": "<div class=\"d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small\"><p class=\"\">Supported by the <a class=\"link-danger\" href=\"https://dotnetfoundation.org/\" target=\"_blank\" rel=\"noopener\">.NET Foundation</a></p><p>Made with <a class=\"link-danger\" href=\"https://dotnet.github.io/docfx\">docfx</a></p><p class=\"\">Stride Docs Website v.2.0.0.1</p><p class=\"\">© .NET Foundation and Contributors</p></div>"
+      "_appFooter": "<div class=\"d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small\"><p >Supported by the <a class=\"link-danger\" href=\"https://dotnetfoundation.org/\" target=\"_blank\" rel=\"noopener\">.NET Foundation</a></p><p>Made with <a class=\"link-danger\" href=\"https://dotnet.github.io/docfx\">docfx</a></p><p >Stride Docs Website v.2.0.0.2</p><p>&copy; .NET Foundation and Contributors</p></div>"
     },
     "fileMetadata": {
       "_appTitle": {

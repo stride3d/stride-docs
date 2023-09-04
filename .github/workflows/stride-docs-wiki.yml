@@ -2,14 +2,14 @@ name: Publish to GitHub Wiki
 on:
   push:
     branches:
-      - main
+      - staging
     paths:
       - wiki/**
   workflow_dispatch:
 
 jobs:
   build:
-    # if: github.repository == 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs'
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +20,6 @@ jobs:
          GH_PAT: ${{ secrets.GH_PAT }}
          ACTION_MAIL: github-bot@stride3d.net
          ACTION_NAME: VaclavElias
-         OWNER: VaclavElias
-         REPO_NAME: stride-docs-next
+         OWNER: stride3d
+         REPO_NAME: stride-docs
          MD_FOLDER: wiki

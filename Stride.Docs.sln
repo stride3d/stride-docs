@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stride.Docs", "Stride.Docs.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85103FBF-C9A6-4722-B36B-89A58F55C1DF}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\github-pages.yml = .github\workflows\github-pages.yml
-		.github\workflows\main-folder-check.yml = .github\workflows\main-folder-check.yml
 		.github\workflows\stride-docs-staging-azure.yml = .github\workflows\stride-docs-staging-azure.yml
 		.github\workflows\stride-docs-staging-fast-track-azure.yml = .github\workflows\stride-docs-staging-fast-track-azure.yml
 		.github\workflows\stride-docs-wiki.yml = .github\workflows\stride-docs-wiki.yml

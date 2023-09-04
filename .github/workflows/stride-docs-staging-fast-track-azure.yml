@@ -9,6 +9,7 @@ on:
   #     - main
   #   paths-ignore:
   #     - 'README.md'
+  #     - 'Stride.Docs.sln'
   #     - 'BuildDocs.ps1'
   #     - 'wiki/**'
   #     - .gitignore
@@ -42,8 +43,10 @@ jobs:
         lfs: true
 
     - name: Install DocFX
-      run: dotnet tool update -g docfx
-#      - run: dotnet tool install -g docfx --version 2.65.1
+      # This installs the latest version of DocFX and may introduce breaking changes.
+      # run: dotnet tool update -g docfx
+      # This installs a specific, tested version of DocFX.
+      run: dotnet tool update -g docfx --version 2.70.1
 
     - name: Build documentation
       run: ./build-all.bat

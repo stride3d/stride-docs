@@ -57,6 +57,13 @@ Install a specific version of docfx
 dotnet tool update -g docfx --version 2.67.0
 ```
 
+Uninstall docfx if you need to downgrade
+
+
+```
+dotnet tool uninstall -g docfx
+```
+
 # Running the Development Server
 
 We've created a PowerShell script [BuildDocs.ps1](https://github.com/VaclavElias/stride-docs-next/blob/main/BuildDocs.ps1) with a context menu where you can select the language, include the API build, and run the development server.
