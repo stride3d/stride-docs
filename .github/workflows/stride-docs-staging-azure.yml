@@ -9,6 +9,7 @@ on:
       - staging
     paths-ignore:
       - 'README.md'
+      - 'Stride.Docs.sln'
       - 'BuildDocs.ps1'
       - 'wiki/**'
       - .gitignore
