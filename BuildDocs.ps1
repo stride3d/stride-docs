@@ -311,7 +311,7 @@ function PostProcessing-DocFxDocUrl {
         $relativeHtmlPath = $htmlFile.FullName.Replace((Resolve-Path "$($Settings.SiteDirectory)/$($SelectedLanguage.Code)").Path + '\', '').Replace('.html', '.md')
 
         # Read the content of the HTML file
-        $content = Get-Content $htmlFile
+        $content = Get-Content $htmlFile -Encoding UTF8
 
         # Define a regex pattern to match the meta tag with name="docfx:docurl"
         $pattern = '(<meta name="docfx:docurl" content=".*?)(/' + $SelectedLanguage.Code + $Settings.TempDirectory+ '/)(.*?">)'
