@@ -18,6 +18,7 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'stride3d/stride-docs'
     runs-on: windows-2022
 
     steps:
@@ -60,6 +61,7 @@ jobs:
         path: DocFX-app.zip
 
   deploy:
+    if: github.repository == 'stride3d/stride-docs'
     runs-on: windows-2022
     needs: build
     environment:
