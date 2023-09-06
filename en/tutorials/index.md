@@ -16,7 +16,7 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
 1. 🏆 Best Practices & Optimization - Master the techniques to optimize your Stride games and follow the best practices for efficient development.
 
 <div class="row g-4 my-4">
-    <div class="col-md-6">
+    <div class="col-xxl-4 col-md-6">
         <div class="card h-100">
             <img src="media/gamestudio.jpg" class="card-img-top" alt="Game studio tutorials">
             <div class="card-body">
@@ -27,7 +27,7 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <p class="px-3 mb-4">🚀 Jump to the <a class="stretched-link" href="gamestudio/index.md">Game Studio tutorials</a></p>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-xxl-4 col-md-6">
         <div class="card h-100">
             <img src="media/csharp-beginner.png" class="card-img-top" alt="C# beginner tutorials">
             <div class="card-body">
@@ -38,7 +38,7 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <p class="px-3 mb-4">🚀 Jump to the <a class="stretched-link" href="csharpbeginner/index.md">C# beginner tutorials</a></p>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-xxl-4 col-md-6">
         <div class="card h-100">
             <img src="media/csharp-intermediate.png" class="card-img-top" alt="C# intermediate tutorials">
             <div class="card-body">
