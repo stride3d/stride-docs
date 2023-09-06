@@ -4,11 +4,8 @@
 :root {
     --stride-red: #FC365B;
     --stride-red-web: #da0830;
-}
-
-body {
-    --bs-link-color-rgb: 66, 184, 131 !important;
-    --bs-link-hover-color-rgb: 64, 180, 128 !important;
+    --bs-link-color-rgb: 218, 8, 48 !important;
+    --bs-link-hover-color-rgb: 174, 6, 38 !important;
 }
 
 .navbar-brand #logo {
@@ -28,8 +25,11 @@ body {
 }
 
 /* ToDo: JavaScipt needs to be hooked to theme selector to switch logo */
+
 [data-bs-theme=dark] {
     --logo: url(../media/stride-logo-dark-theme.svg) no-repeat;
+    --bs-link-color-rgb: 245, 122, 122 !important;
+    --bs-link-hover-color-rgb: 247, 149, 149 !important;
 }
 
 footer .link-danger {
