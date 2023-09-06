@@ -18,6 +18,11 @@ Here are the technologies we use to build our website:
 - PowerShell scripts
 - GitHub Actions (CI/CD) - Don't worry, this is already set up, you don't need to worry about it.
 
+ToDo:
+
+Include this somewhere https://www.figma.com/file/LwUrbnxR1hVkO53R3yqpQT/STRIDE3D?type=design&node-id=126-192&mode=design
+
+
 ## Table of Contents
 
 - [Understanding the Stride Documentation Generation Pipeline](Understanding-the-Stride-Documentation-Generation-Pipeline)
