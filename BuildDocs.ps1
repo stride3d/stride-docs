@@ -114,8 +114,10 @@ function Copy-ExtraItems {
     Write-Host -ForegroundColor Green "Updating web.config completed."
     Write-Host ""
 
-    # Do we need this?
-    # Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
+    # This is needed for Stride Launcher, which loads Release Notes
+    Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
+
+    Copy-Item robots.txt "$($Settings.WebDirectory)/"
 }
 
 function Start-LocalWebsite {
