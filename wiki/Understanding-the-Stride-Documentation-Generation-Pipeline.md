@@ -117,13 +117,13 @@ graph TB
     B -->|No| C
     subgraph User Interaction
     C --> E
+    E -->|Yes| E1
+    E -->|No| H
     C --> F --> F1{{docfx serve}}
     C --> G
     end
     F1 --> End
     G --> End
-    E -->|Yes| E1
-    E -->|No| H
     E1 -->|Yes| M
     E1 -->|No| D
     subgraph Documentation Generation
