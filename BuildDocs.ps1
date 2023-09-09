@@ -190,10 +190,10 @@ function Build-NonEnglishDoc {
 
         $langFolder = "$($SelectedLanguage.Code)$($Settings.TempDirectory)"
 
-        if(Test-Path $langFolder){
+        if (Test-Path $langFolder) {
             Remove-Item $langFolder/* -recurse -Verbose
         }
-        else{
+        else {
             $discard = New-Item -Path $langFolder -ItemType Directory -Verbose
         }
 
@@ -416,8 +416,7 @@ if ($BuildAll)
     $API = $true
     $ReuseAPI = $false
 }
-else
-{
+else {
     $userInput = Get-UserInput
 
     [bool]$isEnLanguage = $userInput -ieq "en"
@@ -434,27 +433,30 @@ else
     }
 
     # Ask if the user wants to include API
-    if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage) {
-        $API = Ask-IncludeAPI
-        $ReuseAPI = Ask-UseExistingAPI
-    } elseif ($isCanceled)
+    if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
     {
+        $API = Ask-IncludeAPI
+
+        if ($API) {
+            $ReuseAPI = Ask-UseExistingAPI
+        }
+
+    } elseif ($isCanceled) {
         Write-Host -ForegroundColor Red "Operation canceled by user."
         Stop-Transcript
         Read-Host -Prompt "Press ENTER key to exit..."
         return
-    } elseif ($shouldRunLocalWebsite)
-    {
+    } elseif ($shouldRunLocalWebsite) {
         Start-LocalWebsite
         return
     }
 }
 
 # Generate API doc
-if ($ReuseAPI) {
-    Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
-} elseif ($API)
+if ($ReuseAPI)
 {
+    Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
+} elseif ($API) {
     $exitCode = Generate-APIDoc
     if($exitCode -ne 0)
     {
@@ -463,9 +465,7 @@ if ($ReuseAPI) {
         Read-Host -Prompt "Press any ENTER to exit..."
         return $exitCode
     }
-}
-else
-{
+} else {
     Remove-APIDoc
 }
 
