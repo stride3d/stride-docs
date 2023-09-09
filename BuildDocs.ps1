@@ -126,8 +126,12 @@ function Copy-ExtraItems {
     Write-Host ""
 
     # This is needed for Stride Launcher, which loads Release Notes
+    Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
+    Write-Host ""
     Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
 
+    Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
+    Write-Host ""
     Copy-Item robots.txt "$($Settings.WebDirectory)/"
 }
 
@@ -186,7 +190,10 @@ function Build-NonEnglishDoc {
 
     if ($SelectedLanguage -and $SelectedLanguage.Code -ne 'en') {
 
+        Write-Host "-------------------------------------------------------------------------------"
+        Write-Host ""
         Write-Host -ForegroundColor Yellow "Start building $($SelectedLanguage.Name) documentation."
+        Write-Host ""
 
         $langFolder = "$($SelectedLanguage.Code)$($Settings.TempDirectory)"
 
@@ -354,7 +361,9 @@ function PostProcessing-DocFxDocUrl {
         }
     }
 
+    Write-Host ""
     Write-Host -ForegroundColor Green "Post-processing completed."
+    Write-Host ""
 }
 
 # we need to update all urls to /latest/en
