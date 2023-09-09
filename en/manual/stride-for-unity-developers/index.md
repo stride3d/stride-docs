@@ -227,7 +227,7 @@ For more information about assets, see [Assets](../game-studio/assets.md).
 
 Like Unity®, Stride uses prefabs. Prefabs are "master" versions of objects that you can reuse wherever you need. When you change a prefab, every instance of the prefab changes too.
 
-![Prefabs in Stride](media/stride-vs-unity-prefabs.png)
+![Prefabs in Stride](media/stride-vs-unity-prefabs.webp)
 
 Just like with Unity®, in Stride, you can add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
 

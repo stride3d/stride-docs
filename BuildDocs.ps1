@@ -126,8 +126,12 @@ function Copy-ExtraItems {
     Write-Host ""
 
     # This is needed for Stride Launcher, which loads Release Notes
+    Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
+    Write-Host ""
     Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
 
+    Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
+    Write-Host ""
     Copy-Item robots.txt "$($Settings.WebDirectory)/"
 }
 
@@ -186,14 +190,17 @@ function Build-NonEnglishDoc {
 
     if ($SelectedLanguage -and $SelectedLanguage.Code -ne 'en') {
 
+        Write-Host "-------------------------------------------------------------------------------"
+        Write-Host ""
         Write-Host -ForegroundColor Yellow "Start building $($SelectedLanguage.Name) documentation."
+        Write-Host ""
 
         $langFolder = "$($SelectedLanguage.Code)$($Settings.TempDirectory)"
 
-        if(Test-Path $langFolder){
+        if (Test-Path $langFolder) {
             Remove-Item $langFolder/* -recurse -Verbose
         }
-        else{
+        else {
             $discard = New-Item -Path $langFolder -ItemType Directory -Verbose
         }
 
@@ -354,7 +361,9 @@ function PostProcessing-DocFxDocUrl {
         }
     }
 
+    Write-Host ""
     Write-Host -ForegroundColor Green "Post-processing completed."
+    Write-Host ""
 }
 
 # we need to update all urls to /latest/en
@@ -416,8 +425,7 @@ if ($BuildAll)
     $API = $true
     $ReuseAPI = $false
 }
-else
-{
+else {
     $userInput = Get-UserInput
 
     [bool]$isEnLanguage = $userInput -ieq "en"
@@ -434,27 +442,30 @@ else
     }
 
     # Ask if the user wants to include API
-    if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage) {
-        $API = Ask-IncludeAPI
-        $ReuseAPI = Ask-UseExistingAPI
-    } elseif ($isCanceled)
+    if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
     {
+        $API = Ask-IncludeAPI
+
+        if ($API) {
+            $ReuseAPI = Ask-UseExistingAPI
+        }
+
+    } elseif ($isCanceled) {
         Write-Host -ForegroundColor Red "Operation canceled by user."
         Stop-Transcript
         Read-Host -Prompt "Press ENTER key to exit..."
         return
-    } elseif ($shouldRunLocalWebsite)
-    {
+    } elseif ($shouldRunLocalWebsite) {
         Start-LocalWebsite
         return
     }
 }
 
 # Generate API doc
-if ($ReuseAPI) {
-    Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
-} elseif ($API)
+if ($ReuseAPI)
 {
+    Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
+} elseif ($API) {
     $exitCode = Generate-APIDoc
     if($exitCode -ne 0)
     {
@@ -463,9 +474,7 @@ if ($ReuseAPI) {
         Read-Host -Prompt "Press any ENTER to exit..."
         return $exitCode
     }
-}
-else
-{
+} else {
     Remove-APIDoc
 }
 

@@ -38,7 +38,7 @@ For details, see [Clear coat shading](../manual/graphics/materials/clear-coat-sh
 
 You can now render thin glass materials such as windshields. The diffuse color controls the tint of the glass and how much light is blocked (darker colors block more light).
 
-![Glass materials](media/ReleaseNotes-2.1/glass-materials.png)
+![Glass materials](media/ReleaseNotes-2.1/glass-materials.webp)
 
 You can add a predefined **Glass** material from the **Asset view** under **Add asset > Material**.
 
