@@ -124,8 +124,8 @@ graph TB
     end
     F1 --> End
     G --> End
-    E1 -->|Yes| M
     E1 -->|No| D
+    E1 -->|Yes| M
     subgraph Documentation Generation
     H --> M
     D --> D1{{docfx metadata}} --> M
