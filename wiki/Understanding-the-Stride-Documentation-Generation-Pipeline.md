@@ -95,6 +95,7 @@ graph TB
     C[Get-UserInput]
     D[Generate-APIDoc]
     E{Ask-IncludeAPI}
+    E1{Ask-UseExistingAPI}
     End[End]
     F[Start-LocalWebsite]
     G[Cancel]
@@ -121,8 +122,10 @@ graph TB
     end
     F1 --> End
     G --> End
-    E -->|Yes| D
+    E -->|Yes| E1
     E -->|No| H
+    E1 -->|Yes| M
+    E1 -->|No| D
     subgraph Documentation Generation
     H --> M
     D --> D1{{docfx metadata}} --> M
