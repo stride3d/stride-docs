@@ -90,6 +90,17 @@ function Ask-IncludeAPI {
     return (Read-Host -Prompt "Your choice (Y/N)").ToLower() -eq "y"
 }
 
+function Ask-UseExistingAPI {
+    Write-Host ""
+    Write-Host -ForegroundColor Cyan "Do you want to use already generated API metadata?"
+    Write-Host ""
+    Write-Host -ForegroundColor Yellow "  [Y] Yes"
+    Write-Host -ForegroundColor Yellow "  [N] No"
+    Write-Host ""
+
+    return (Read-Host -Prompt "Your choice (Y/N)").ToLower() -eq "y"
+}
+
 function Copy-ExtraItems {
 
     Write-Host -ForegroundColor Yellow "Copying versions.json into $($Settings.WebDirectory)/"
@@ -403,6 +414,7 @@ if ($BuildAll)
 {
     $isAllLanguages = $true
     $API = $true
+    $ReuseAPI = $false
 }
 else
 {
@@ -424,6 +436,7 @@ else
     # Ask if the user wants to include API
     if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage) {
         $API = Ask-IncludeAPI
+        $ReuseAPI = Ask-UseExistingAPI
     } elseif ($isCanceled)
     {
         Write-Host -ForegroundColor Red "Operation canceled by user."
@@ -438,7 +451,9 @@ else
 }
 
 # Generate API doc
-if ($API)
+if ($ReuseAPI) {
+    Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
+} elseif ($API)
 {
     $exitCode = Generate-APIDoc
     if($exitCode -ne 0)

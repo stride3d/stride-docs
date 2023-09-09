@@ -94,6 +94,13 @@
         ]
       }
     ],
+    "overwrite": [
+      {
+        "files": [
+          "examples/**/*.md"
+        ]
+      }
+    ],
     "resource": [
       {
         "files": [
