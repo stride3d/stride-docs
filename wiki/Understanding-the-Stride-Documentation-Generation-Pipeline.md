@@ -30,54 +30,42 @@ DocFX is then invoked multiple times, once for each language, to create the docu
 
 In this part, we elaborate on the individual steps involved in the documentation build workflow for the Stride Docs project.
 
-## Start
-- Initiates the workflow by reading the `$BuildAll` parameter.
-  - If set to 'Yes', it proceeds to generate all languages and the Stride API automatically, which is particularly useful for CI/CD.
-  - If set to 'No', it will prompt the user to select languages through an interactive command-line UI.
-- Sets the `$Version` parameter based on the `-Version` command-line argument or fetches it from `version.json` if the argument is not provided.
-
-## Read-LanguageConfigurations
-- Reads `languages.json` to identify which languages should be generated.
-
-## BuildAll
-- Pre-configures some variables for non-interactive mode, effectively skipping the `Get-UserInput` step.
-
-## Get-UserInput
-- In interactive mode, this step prompts the user to choose the languages to generate, as well as whether to launch a local web server.
-
-## Ask-IncludeAPI
-- Further queries if the user wants the Stride API included in the documentation build.
-
-## Start-LocalWebsite
-- If selected, launches a local web server to host the generated website.
-
-## Generate-APIDoc
-- Executes `docfx.exe` to generate the metadata needed for the Stride API documentation.
-
-## Remove-APIDoc
-- Removes the generated API metadata.
-
-## Build-EnglishDoc
-- Uses `docfx.exe` to build the English documentation, incorporating the Stride API documentation if metadata is available.
-
-## PostProcessing Steps
-### PostProcessing-FixingSitemap
-- Adjusts the `sitemap.xml` to use '/latest/en' paths, allowing the most current version to maintain a consistent URL.
-
-### PostProcessing-Fixing404AbsolutePath
-- Modifies asset (CSS, JS, ) paths in `404.html` to be absolute, as required by IIS for 404 page.
-
-### Copy-ExtraItems
-- Copies additional items like `versions.json` and `web.config`, while also updating the `%deployment_version%` parameter in the `web.config` file.
-
-## Build-AllLanguagesDocs
-- Iterates over all selected languages and triggers the `Build-NonEnglishDoc` function for each.
-
-## Build-NonEnglishDoc
-- Executes `docfx.exe` to compile non-English documentation, incorporating Stride API documentation if metadata is present.
-
-## PostProcessing-DocFxDocUrl
-- Adjusts HTML tags and GitHub links, removing any `_tmp` suffixes. Also updates GitHub links to English if the translation is unavailable.
+- **Start**
+  - Initiates the workflow by reading the `$BuildAll` parameter.
+    - If set to 'Yes', it proceeds to generate all languages and the Stride API automatically, which is particularly useful for CI/CD.
+    - If set to 'No', it will prompt the user to select languages through an interactive command-line UI.
+  - Sets the `$Version` parameter based on the `-Version` command-line argument or fetches it from `version.json` if the argument is not provided.
+- **Read-LanguageConfigurations**
+  - Reads `languages.json` to identify which languages should be generated.
+- **BuildAll**
+  - Pre-configures some variables for non-interactive mode, effectively skipping the `Get-UserInput` step.
+- **Get-UserInput**
+  - In interactive mode, this step prompts the user to choose the languages to generate, as well as whether to launch a local web server.
+- **Ask-IncludeAPI**
+  - Further queries if the user wants the Stride API included in the documentation build.
+- **Ask-UseExistingAPI**
+  - Queries if the user wants to re-use already generated Stride API yml files.
+- **Start-LocalWebsite**
+  - If selected, launches a local web server to host the generated website.
+- **Generate-APIDoc**
+  - Executes `docfx.exe` to generate the metadata needed for the Stride API documentation.
+- **Remove-APIDoc**
+  - Removes the generated API metadata.
+- **Build-EnglishDoc**
+  - Uses `docfx.exe` to build the English documentation, incorporating the Stride API documentation if metadata is available.
+- **PostProcessing Steps**
+  - PostProcessing-FixingSitemap
+    - Adjusts the `sitemap.xml` to use '/latest/en' paths, allowing the most current version to maintain a consistent URL.
+  - PostProcessing-Fixing404AbsolutePath
+    - Modifies asset (CSS, JS, ) paths in `404.html` to be absolute, as required by IIS for 404 page.
+  - Copy-ExtraItems
+    - Copies additional items like `versions.json`, `web.config`, `ReleaseNotes.md` and `robots.txt`, while also updating the `%deployment_version%` parameter in the `web.config` file.
+- **Build-AllLanguagesDocs**
+  - Iterates over all selected languages and triggers the `Build-NonEnglishDoc` function for each.
+- **Build-NonEnglishDoc**
+  - Executes `docfx.exe` to compile non-English documentation, incorporating Stride API documentation if metadata is present.
+- **PostProcessing-DocFxDocUrl**
+  - Adjusts HTML tags and GitHub links, removing any `_tmp` suffixes. Also updates GitHub links to English if the translation is unavailable.
 
 # Workflow Diagram
 
