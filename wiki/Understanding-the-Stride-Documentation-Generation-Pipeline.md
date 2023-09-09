@@ -6,11 +6,11 @@
 - [Workflow Diagram](#workflow-diagram)
 
 # Introduction
-As of now, **DocFX** does not natively support the generation of multi-language and multi-version documentation. To address this limitation, the Stride team has developed a PowerShell script. Initially, separate scripts were created for each language; however, these have since been consolidated into a single script named `BuildDocs.ps1`. This unified script is capable of generating documentation in all supported languages.
+As of now, **DocFX** does not natively support the generation of multi-language and multi-version documentation. To address this limitation, the Stride team has developed a PowerShell script. Initially, separate scripts were created for each language; however, these have since been consolidated into a single script named [`BuildDocs.ps1`](https://github.com/stride3d/stride-docs/blob/staging/BuildDocs.ps1). This unified script is capable of generating documentation in all supported languages.
 
 The script serves two main purposes:
 
-- It features a non-interactive mode, utilized by the Continuous Integration/Continuous Deployment (CI/CD) pipeline to automatically generate documentation for all languages and the latest version, without requiring user intervention.
+- It features a non-interactive mode, utilized by the Continuous Integration/Continuous Deployment (CI/CD) pipeline to automatically generate documentation for all languages and the most recent version, eliminating the need for user intervention.
 - It also offers an interactive command-line UI, allowing users to select which languages they wish to generate documentation for.
 
 # A Simplified Overview
@@ -19,12 +19,23 @@ Here's a straightforward explanation of how the documentation generation process
 
 The `/en` folder serves as the repository for the primary documentation files. When documentation for another language (e.g., Japanese) is built, the files from `/en` are copied over to a temporary folder, for example, `/jp-tmp`. This ensures that the non-English versions will contain all the files present in the `/en` folder. Files that have been translated (found in folders like `/jp`) will overwrite their English counterparts in the temp folder.
 
-DocFX is then invoked multiple times, once for each language, to create the documentation. These generated docs are stored in the `_site` folder. The folder structure will be organized based on the latest version information obtained from `version.json`, as demonstrated below:
+DocFX is invoked multiple times, once for each language, to create the documentation. The generated documents are stored in the `_site` folder, organized according to the latest version information obtained from `version.json`. For example:
 
 ```
 /_site/4.1/en
 /_site/4.1/jp
 ```
+
+## DocFX Files Processed
+
+This section outlines the file processing carried out by DocFX during the documentation generation:
+
+- **Table of Contents (TOC) Files:** 4 files processed
+- **Assets:** 1607 items (images, videos, etc.) included
+- **Conceptual Files:** 304 files processed, resulting in 304 HTML files
+- **Warnings (No API Metadata):** 44 instances encountered
+- **Warnings (API Metadata):** 200 instances of missing or incorrect references
+- **API Files:** 2821 files processed, resulting in 2133 HTML files
 
 # Docs Build Workflow
 
