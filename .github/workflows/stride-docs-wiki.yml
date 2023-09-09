@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    if: github.repository == 'stride3d/stride-docs'
+    #if: github.repository == 'stride3d/stride-docs'
     runs-on: ubuntu-latest
 
     steps:
