@@ -20,6 +20,6 @@ jobs:
          GH_PAT: ${{ secrets.GH_PAT }}
          ACTION_MAIL: github-bot@stride3d.net
          ACTION_NAME: VaclavElias
-         OWNER: stride3d
-         REPO_NAME: stride-docs
+         OWNER: ${{ github.repository_owner }}
+         REPO_NAME: ${{ github.event.repository.name }}
          MD_FOLDER: wiki
