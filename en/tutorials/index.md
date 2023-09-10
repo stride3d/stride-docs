@@ -4,7 +4,7 @@ These pages contain tutorials to learn more about the Stride game engine 🎮.
 
 New to Stride? Start with these tutorials to get familiar with the basics of the engine and the Game Studio.
 
-1. 🛠️ [Game Studio](gamestudio/index.md) - The Stride engine comes with an editor called Game Studio, which is the central tool for game and application production in Stride.]
+1. 🛠️ [Game Studio](gamestudio/index.md) - The Stride engine comes with an editor called Game Studio, which is the central tool for game and application production in Stride.
 1. 🌱 [C# Beginner](csharpbeginner/index.md) - Covering the beginner principles of using C# when working with the Stride game engine.
 1. 📈 [C# Intermediate](csharpintermediate/index.md) - Diving into intermediate principles of C# programming in Stride, including UI, collisions, and more.
 <!---
