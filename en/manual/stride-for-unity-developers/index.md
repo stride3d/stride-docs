@@ -217,11 +217,10 @@ Like Unity®, Stride supports file formats including:
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
 | Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
 | Fonts | .ttf, .otf |
+|Video | .mp4
 
 For more information about assets, see [Assets](../game-studio/assets.md).
 
-> [!Note]
-> * Stride currently doesn't support movie files.
 
 ## Prefabs
 
