@@ -64,7 +64,8 @@
         "tutorials/**/*.md": "Stride Tutorials",
         "manual/**/*.md": "Stride Manual",
         "ReleaseNotes/**/*.md": "Stride Release Notes",
-        "api/**/*.md": "Stride API"
+        "api/**/*.md": "Stride API",
+        "diagnostics/**/*.md": "Stride Diagnostics"
       }
     },
     "sitemap": {
@@ -82,7 +83,9 @@
           "ReleaseNotes/toc.yml",
           "ReleaseNotes/**/*.md",
           "manual/toc.yml",
-          "manual/**/*.md"
+          "manual/**/*.md",
+          "diagnostics/toc.yml",
+          "diagnostics/**/*.md"
         ]
       },
       {

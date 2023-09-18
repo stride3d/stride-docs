@@ -1,4 +1,4 @@
-﻿- name: 📚 Manual
+- name: 📚 Manual
   href: manual/
   homepage: manual/index.md
 - name: 🎓 Tutorials
@@ -8,3 +8,6 @@
 - name: 🔧 API
   href: api/
   homepage: api/index.md
+- name: 🔍 Diagnostics
+  href: diagnostics/
+  homepage: diagnostics/index.md
