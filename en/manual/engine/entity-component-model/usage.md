@@ -107,3 +107,11 @@ public class MyProcessor : EntityProcessor<MyComponent>
 By explicitly using `EntityProcessor<TComponent, TData>` instead, a different type can be chosen  
 for the actual data. This way, the `EntityComponent` can e.g. have "heavier" startup data and  
 references, while the data object that needs to be processed every frame can be kept small.
+
+This will require overriding a method `GenerateComponentData`, which produces a `TData` instance  
+from a `TComponent` instance.
+
+### Overrides
+`EntityProcessor` also provides several methods which can be overridden in order to react to certain events.  
+They are not overly complicated, so that their usage should be clear from their doc comments. 
+
