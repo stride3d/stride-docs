@@ -100,6 +100,15 @@ public class MyProcessor : EntityProcessor<MyComponent>
 ```
 
 
+### Non-default Processors
+Adding processors for a type of component via the attribute `DefaultEntityComponentProcessor`  
+has been explained above. However, as the name implies, this is for the _default_ processor.  
+Non-default processors can also be added via
+```csharp
+EntityManager.Processors.Add(entityProcessor);
+```
+
+
 ### Separation of EntityComponent and Data
 
 `EntityProcessor<TComponent>` is a shortcut for `EntityProcessor<TComponent, TComponent>`.
