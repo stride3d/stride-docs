@@ -20,14 +20,14 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 
 Unity® and Stride use mostly common terms, with a few differences:
 
-| Unity®  | Stride |
-| ----- | ------- |
-| Hierarchy panel | Entity Tree |
-| Inspector	| Property Grid |
-| Project browser |	Asset View |
-| Scene view | Scene Editor |
-| GameObject | Entity |
-| MonoBehaviour | SyncScript, AsyncScript, StartupScript |
+| Unity®          | Stride                                 |
+|-----------------|----------------------------------------|
+| Hierarchy panel | Entity Tree                            |
+| Inspector       | Property Grid                          |
+| Project browser | Asset View                             |
+| Scene view      | Scene Editor                           |
+| GameObject      | Entity                                 |
+| MonoBehaviour   | SyncScript, AsyncScript, StartupScript |
 
 ## Folders and files
 
@@ -134,23 +134,23 @@ In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are
 #### Local Position/Rotation/Scale
 Stride uses position, rotation, and scale to refer to the local position, rotation, and scale.
 
-| Unity®  | Stride |
-| ----- | ------- |
-| `transform.localPosition` | `Transform.Position` |
-| `transform.localRotation` | `Transform.Rotation` |
-| `transform.localScale` | `Transform.Scale` |
+| Unity®                       | Stride                       |
+|------------------------------|------------------------------|
+| `transform.localPosition`    | `Transform.Position`         |
+| `transform.localRotation`    | `Transform.Rotation`         |
+| `transform.localScale`       | `Transform.Scale`            |
 | `transform.localEulerAngles` | `Transform.RotationEulerXYZ` |
 
 #### World Position/Rotation/Scale
 In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the [WorldMatrix](xref:Stride.Engine.TransformComponent.WorldMatrix).
 
-| Unity®  | Stride |
-| ----- | ------- |
-| `transform.position` | `Transform.WorldMatrix.TranslationVector` |
-| `transform.rotation` | N/A |
-| `transform.scale` | N/A |
-| `transform.eulerAngles` | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)` |
-| `transform.scale` and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)` |
+| Unity®                                                            | Stride                                                                                                 |
+|-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `transform.position`                                              | `Transform.WorldMatrix.TranslationVector`                                                              |
+| `transform.rotation`                                              | N/A                                                                                                    |
+| `transform.scale`                                                 | N/A                                                                                                    |
+| `transform.eulerAngles`                                           | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)`                                             |
+| `transform.scale` and `transform.position`                        | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
 | `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
 >[!Note]
@@ -161,14 +161,14 @@ To ensure you're reading the latest position and rotation, you should force the 
 Unlike Unity, Stride provides a Backward, Left, and Down property.
 Note that those are matrix properties, so setting one of those is not enough to properly rotate the matrix.
 
-| Unity®  | Stride |
-| ----- | ------- |
-| `transform.forward` | `Transform.WorldMatrix.Forward` |
+| Unity®                   | Stride                           |
+|--------------------------|----------------------------------|
+| `transform.forward`      | `Transform.WorldMatrix.Forward`  |
 | `transform.forward * -1` | `Transform.WorldMatrix.Backward` |
-| `transform.right` | `Transform.WorldMatrix.Right` |
-| `transform.right * -1` | `Transform.WorldMatrix.Left` |
-| `transform.up` | `Transform.WorldMatrix.Up` |
-| `transform.up * -1` | `Transform.WorldMatrix.Down` |
+| `transform.right`        | `Transform.WorldMatrix.Right`    |
+| `transform.right * -1`   | `Transform.WorldMatrix.Left`     |
+| `transform.up`           | `Transform.WorldMatrix.Up`       |
+| `transform.up * -1`      | `Transform.WorldMatrix.Down`     |
 
 >[!Note]
 > See note in [World Position/Rotation/Scale](#world-positionrotationscale)
@@ -218,12 +218,12 @@ As soon as you add an asset to your project, you can edit its properties in the 
 
 Like Unity®, Stride supports file formats including:
 
-| Asset type  | Supported formats                                           
-|------|---|
-| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx
-| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
-| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
-| Fonts | .ttf, .otf |
+| Asset type                    | Supported formats                                            |
+|-------------------------------|--------------------------------------------------------------|
+| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
+| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
+| Audio                         | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
+| Fonts                         | .ttf, .otf                                                   |
 
 For more information about assets, see [Assets](../game-studio/assets.md).
 
@@ -321,13 +321,13 @@ public override void Update()
 
 ## Time
 
-| Unity®  | Stride     |
-| ----- |------------|
-| `Time.deltaTime` | `Game.UpdateTime.WarpElapsed.TotalSeconds` |
-| `Time.unscaledDeltaTime` | `Game.UpdateTime.Elapsed.TotalSeconds` |
-| `Time.realtimeSinceStartup` | `Game.UpdateTime.Total.TotalSeconds` |
-| `Time.timeScale` | `Game.UpdateTime.Factor` |
-| `Time.fixedDeltaTime` | `myRigidbodyComponent.Simulation.FixedTimeStep` |
+| Unity®                      | Stride                                          |
+|-----------------------------|-------------------------------------------------|
+| `Time.deltaTime`            | `Game.UpdateTime.WarpElapsed.TotalSeconds`      |
+| `Time.unscaledDeltaTime`    | `Game.UpdateTime.Elapsed.TotalSeconds`          |
+| `Time.realtimeSinceStartup` | `Game.UpdateTime.Total.TotalSeconds`            |
+| `Time.timeScale`            | `Game.UpdateTime.Factor`                        |
+| `Time.fixedDeltaTime`       | `myRigidbodyComponent.Simulation.FixedTimeStep` |
 
 ## Physics
 
