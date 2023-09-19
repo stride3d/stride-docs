@@ -25,7 +25,7 @@ The general idea of an ECS is that an _entity_ - an "object" in your virtual wor
 does not really do anything. It is mostly just a "bag of components".
 
 The selection of components on an entity decides what it does.
-An entity with a collider component can collider, an entity with a sound component can make a noise, etc.
+An entity with a collider component can collide, an entity with a sound component can make a noise, etc.
 
 ## Differing opinions
 
