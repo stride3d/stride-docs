@@ -87,8 +87,8 @@ components are listed in Game Studio can be changed.
 By passing the types of other components to the `EntityProcessor` constructor,  
 it will only include entities _that also have those other components_.
 
-For example, the following `EntityProcessor` will only process entities which  
-have a `MyComponent`, `TransformComponent` and `AnimationComponent` on them.
+For example, the following `EntityProcessor` is for `MyComponent`, but will skip any entity  
+that does not also have both `TransformComponent` and `AnimationComponent` on it.
 
 ```csharp
 public class MyProcessor : EntityProcessor<MyComponent>
