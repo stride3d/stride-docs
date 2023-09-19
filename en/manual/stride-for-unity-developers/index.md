@@ -153,7 +153,8 @@ In comparison to Unity, many of the Transform component's properties related to 
 | `transform.scale` and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)` |
 | `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
-Note: `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
+>[!Note]
+> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
 To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
 
 #### Transform Directions
@@ -169,7 +170,8 @@ Note that those are matrix properties, so setting one of those is not enough to 
 | `transform.up` | `Transform.WorldMatrix.Up` |
 | `transform.up * -1` | `Transform.WorldMatrix.Down` |
 
-Note: See note in [World Position/Rotation/Scale](#world-positionrotationscale)
+>[!Note]
+> See note in [World Position/Rotation/Scale](#world-positionrotationscale)
 
 ## Assets
 
@@ -761,14 +763,41 @@ Game Studio displays in the **Output** tab (at the bottom of Game Studio by defa
 
 ### Print debug messages
 
-To print to the Visual Studio output, use:
+Logging from a ScriptComponent:
+```cs
+public override void Start()
+{
+    // Enables logging. It will also spawn a console window if no debuggers are attached.
+    // The argument dictates the kinds of message that will be filtered out, in this case, anything with less priority than warning won't show up
+    Log.ActivateLog(LogMessageType.Warning);
+    // Log this message to your console or IDE output window
+    Log.Warning("hello");
+}
+```
 
 ```cs
 System.Diagnostics.Debug.WriteLine("hello");
 ```
 
 >[!Note]
->To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
+>To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
+
+
+## Attributes
+
+| Unity®                    | Stride                              |
+|---------------------------|-------------------------------------|
+| `[Serializable]`          | `[DataContract]`                    |
+| `[SerializeField]`        | `[DataMember]`                      |
+| `[HideInInspector]`       | `[DataMemberIgnore]`                |
+| `[Header]`                | `[Display]`                         |
+| `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
+
+>[!Note]
+>You cannot serialize private fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
+```cs 
+public float MyProperty { get; init; }
+```
 
 ---
 
