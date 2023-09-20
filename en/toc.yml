@@ -3,6 +3,13 @@
   homepage: manual/index.md
 - name: 🎓 Tutorials
   href: tutorials/index.md
+  # items:
+  # - name: 🛠️ Game studio
+  #   href: tutorials/gamestudio/index.md
+  # - name: 🌱 C# Beginner
+  #   href: tutorials/csharpbeginner/index.md
+  # - name: 📈 C# Intermediate
+  #   href: tutorials/csharpintermediate/index.md
 - name: 📝 Release Notes
   href: ReleaseNotes/ReleaseNotes.md
 - name: 🔧 API
