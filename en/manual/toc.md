@@ -3,6 +3,7 @@
 # [Requirements](requirements/index.md)
 
 # [Stride for Unity® developers](stride-for-unity-developers/index.md)
+# [Stride for Godot developers](stride-for-godot-developers/index.md)
 
 # [Stride Launcher](stride-launcher/index.md)
 
