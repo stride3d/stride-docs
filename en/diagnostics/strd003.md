@@ -1,6 +1,8 @@
-# Diagnostics Warning STRD001
+# Diagnostics Warning STRD003
 
-An Array must have a public/internal getter for Serialization.
+- A property must have a public/internal getter.
+- A property must be set during instantiation, then no public setter would be valid.
+- Or it must have a public setter else.
 
 ## Example
 
