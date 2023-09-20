@@ -105,7 +105,7 @@ Adding processors for a type of component via the attribute `DefaultEntityCompon
 has been explained above. However, as the name implies, this is for the _default_ processor.  
 Non-default processors can also be added via
 ```csharp
-EntityManager.Processors.Add(entityProcessor);
+SceneSystem.SceneInstance.Processors.Add(entityProcessor);
 ```
 
 
