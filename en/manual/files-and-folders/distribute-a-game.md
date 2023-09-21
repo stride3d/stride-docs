@@ -37,6 +37,16 @@ When you're ready to publish your game, create a release build from Visual Studi
 > [!Tip]
 > You might want to rename the **Release** folder to something more descriptive (such as the title of your game).
 
+## To build using terminal instead of VS
+
+ 1. You would need to install VS to get **Developer Command Propmt for VS (Version)**
+ 2. This is needed to run the msbuild command
+
+ 3. The following command is to build the project to a folder of your choosing
+ 4. ```console
+    C:\User> msbuild PathToSln\NameOfProject.sln /p:Configuration=Release /p:OutputPath=YourPreferredPath
+    ```
+
 ## 2. Delete unnecessary files
 
 In the release folder in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*), you can delete the following unnecessary files:
