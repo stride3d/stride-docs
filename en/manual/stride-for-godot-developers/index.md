@@ -132,24 +132,178 @@ https://www.youtube.com/watch?v=SIy3pfoXfoQ&ab_channel=Stride
 
 Stride has like Godot an Integrated Code Editor, but for C#. This Code Editor is not an high Priority Target in being kept up to date, so it's advised to use dedicated IDEs like Visual Studio Code, Rider and Visual Studio Community
 
+## Scripts
+
+### Different Approaches to Scripting
+
+In Stride, there are three types of scripts, offering a different paradigm compared to Godot. While Godot requires you to inherit from a specific class to create a node of that type, Stride allows you to extend entities by adding scripts and then searching for specific entities to interact with.
+
+### Extending Entities in Stride
+
+For example, instead of inheriting from `CharacterBody3D` in Godot, in Stride you would attach a `CharacterComponent` to an entity. Don't forget to also attach a collision shape to make it interactable. In your scripts, you can then search for these components to manipulate them.
+
+
+#### Stride Example
+
+```csharp
+// Example of searching for a CharacterComponent in Stride
+public class MyScript : SyncScript
+{
+    public override void Update()
+    {
+        var characterComponent = Entity.Get<CharacterComponent>();
+
+        if (characterComponent != null)
+        {
+            // Perform actions on characterComponent
+        }
+    }
+}
+```
+
+### Delegation Over Inheritance
+
+This approach in Stride embodies the principle of "Delegation over Inheritance", providing you with greater flexibility when designing your game's architecture.
+
+### StartupScript
+
+`StartupScript` in Stride has a `Start` method, which is equivalent to Godot's `_Ready` method. A `StartupScript` primarily focuses on initialization tasks and doesn't offer much functionality beyond that.
+
+#### Stride Example
+```csharp
+public class BasicMethods : StartupScript
+{
+    // Public member fields and properties that will be visible in Game Studio
+    public override void Start()
+    {
+        // Initialization code for the script
+    }
+
+    public override void Cancel()
+    {
+        // Cleanup code for the script
+    }     
+}
+```
+
+#### Godot Example
+
+```csharp
+public class BasicMethods : Node
+{
+    // This method is equivalent to Stride's Start in StartupScript
+    public override void _Ready()
+    {
+        // Initialization code for the script
+    }
+
+    // Godot doesn't have a direct equivalent to Stride's Cancel,
+    // but you could use _ExitTree for cleanup
+    public override void _ExitTree()
+    {
+        // Cleanup code for the script
+    }
+}
+```
+
+### SyncScript
+
+Both Stride and Godot offer methods that are repeatedly called for game updates. In Stride, this method is called `Update()` and is part of the `SyncScript` class. In Godot, the equivalent is `_Process(double delta)`.
+
+**Key Differences**
+1. **Delta Time:** Stride's `Update()` does not include a delta time parameter. In contrast, Godot provides the time since the last frame as an argument (delta) in `_Process(double delta)`.
+2. **Access to Delta Time:** In Stride, you can still access the delta time through the Game property, `using Game.UpdateTime.Elapsed.TotalSeconds`.
+
+#### Stride Example
+
+
+```csharp
+public class BasicMethods : SyncScript
+{
+    public override void Start() { }
+    public override void Cancel() { }        
+    public override void Update()
+    {
+        // Access delta time in Stride
+        double deltaTime = Game.UpdateTime.Elapsed.TotalSeconds;
+
+        // Perform actions based on deltaTime
+    }
+}
+```
+
+#### Godot Example
+
+```csharp
+public class BasicMethods : Node
+{
+    public override void _Ready() { }
+    public override void _ExitTree() { }        
+    public override void _Process(double delta)
+    {
+        // Perform actions based on delta
+    }
+}
+
+```
+
+3. AsyncScripts
+To run Code Asynchronous to the Engines Update you can use AsyncScripts which work with async/await
+```cs
+public class BasicMethods : AsyncScript
+{
+    // Declared public member fields and properties that will appear in the game studio
+    public override async Task Execute()
+    {
+        while(Game.IsRunning)
+        {
+            // Do stuff every new frame
+            await Script.NextFrame();
+        }
+    }
+
+    public override void Cancel()
+    {
+        // Cleanup of the script
+    }     
+}
+```
+# Add scripts to entities
+In the Entity Tree (on the left by default), or in the scene, select the entity you want to add the script to.
+
+Select an entity
+![image](https://github.com/stride3d/stride-docs/assets/107197024/839340c9-6cd2-4c6e-a6ed-cbfa647020fb)
+
+In the Property Grid (on the right by default), click Add component and select the script you want to add.
+![image](https://github.com/stride3d/stride-docs/assets/107197024/6d33f6da-4e3f-4d36-b041-02a83501ecd4)
+
+For more information about adding scripts in Stride, see [Use a script](https://doc.stride3d.net/latest/en/manual/scripts/use-a-script.html).
+
+
 ## Instantiate Prefabs
 
-In Stride you can Instantiate like this Entities
+In Stride, you can instantiate entities using prefabs like so:
 
 ```cs
-// Declared public member fields and properties displayed in the Game Studio Property Grid.
+// Public member fields and properties displayed in the Game Studio Property Grid
 public Prefab CarPrefab;
 public Vector3 SpawnPosition;
 public Quaternion SpawnRotation;
 
 public override void Start()
 {
-    // Initialization of the script.
-    List<Entity> car = CarPrefab.Instantiate();
-    SceneSystem.SceneInstance.RootScene.Entities.AddRange(car);
-    car[0].Transform.Position = SpawnPosition;
-    car[0].Transform.Rotation = SpawnRotation;
-    car[0].Name = "MyNewEntity";
+    // Initialization of the script
+    List<Entity> carEntities = CarPrefab.Instantiate();
+    
+    // Add the instantiated entities to the root scene
+    SceneSystem.SceneInstance.RootScene.Entities.AddRange(carEntities);
+    
+    // Set the position and rotation for the first entity in the list
+    carEntities[0].Transform.Position = SpawnPosition;
+    carEntities[0].Transform.Rotation = SpawnRotation;
+    
+    // Optionally, you can set a name for the entity
+    carEntities[0].Name = "MyNewEntity";
 }
 ```
 
@@ -165,10 +319,10 @@ Stride takes a different approach, aiming for closer integration with C#.
 
 #### Data Contract Attribute
 
-To make your class serializable within Game Studio, add the `[Stride.Core.DataContract]` attribute to your class. By default, all public members will be serialized. 
+To make your class serializable within Game Studio, add the `[DataContract]` attribute to your class. By default, all public members will be serialized. 
 
 ```csharp
-[Stride.Core.DataContract]
+[DataContract]
 public class MyClass
 {
     public int MyProperty { get; set; }
@@ -181,7 +335,7 @@ public class MyClass
 If you want to be explicit about what gets serialized, you can use the `[DataMember]` attribute. This is similar to Godot's `[Export]` attribute.
 
 ```csharp
-[Stride.Core.DataContract]
+[DataContract]
 public class MyClass
 {
     [DataMember]
@@ -191,13 +345,13 @@ public class MyClass
 
 #### Excluding Members
 
-To exclude a member from serialization, use the `[Stride.Core.DataMemberIgnore]` attribute.
+To exclude a member from serialization, use the `[DataMemberIgnore]` attribute.
 
 ```csharp
-[Stride.Core.DataContract]
+[DataContract]
 public class MyClass
 {
-    [Stride.Core.DataMemberIgnore]
+    [DataMemberIgnore]
     public int MyProperty { get; set; }
 }
 ```
