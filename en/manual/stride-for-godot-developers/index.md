@@ -132,15 +132,95 @@ https://www.youtube.com/watch?v=SIy3pfoXfoQ&ab_channel=Stride
 
 Stride has like Godot an Integrated Code Editor, but for C#. This Code Editor is not an high Priority Target in being kept up to date, so it's advised to use dedicated IDEs like Visual Studio Code, Rider and Visual Studio Community
 
+## Instantiate Prefabs
+
+In Stride you can Instantiate like this Entities
+
+```cs
+// Declared public member fields and properties displayed in the Game Studio Property Grid.
+public Prefab CarPrefab;
+public Vector3 SpawnPosition;
+public Quaternion SpawnRotation;
+
+public override void Start()
+{
+    // Initialization of the script.
+    List<Entity> car = CarPrefab.Instantiate();
+    SceneSystem.SceneInstance.RootScene.Entities.AddRange(car);
+    car[0].Transform.Position = SpawnPosition;
+    car[0].Transform.Rotation = SpawnRotation;
+    car[0].Name = "MyNewEntity";
+}
+```
+
+## Serialization
+
+### Godot
+
+In Godot, you need to inherit from an engine class for it to be visible in the editor. Additionally, only types known to the Godot engine can be exported.
+
+### Stride
+
+Stride takes a different approach, aiming for closer integration with C#. 
+
+#### Data Contract Attribute
+
+To make your class serializable within Game Studio, add the `[Stride.Core.DataContract]` attribute to your class. By default, all public members will be serialized. 
+
+```csharp
+[Stride.Core.DataContract]
+public class MyClass
+{
+    public int MyProperty { get; set; }
+}
+```
+
+
+#### Data Member Attribute
+
+If you want to be explicit about what gets serialized, you can use the `[DataMember]` attribute. This is similar to Godot's `[Export]` attribute.
+
+```csharp
+[Stride.Core.DataContract]
+public class MyClass
+{
+    [DataMember]
+    public int MyProperty { get; set; }
+}
+```
+
+#### Excluding Members
+
+To exclude a member from serialization, use the `[Stride.Core.DataMemberIgnore]` attribute.
+
+```csharp
+[Stride.Core.DataContract]
+public class MyClass
+{
+    [Stride.Core.DataMemberIgnore]
+    public int MyProperty { get; set; }
+}
+```
+
+#### Collections and Dictionaries
+
+Stride supports `ICollection` and `IDictionary` classes for serialization. Note that only primitives and enums can be used as keys in dictionaries.
+
+In Godot you have to Export Godot Collections to be visible in the Editor.
+
+#### Nested Serialization
+
+You can serialize any class marked with `[DataContract]` into the editor, including abstract classes or interfaces. The **Stride Editor** will search for types that match the interfaces or abstract classes, making them eligible for serialization.
+
 ## Log output
 
-In Godot you can GD.Print your message.
+In Godot you can GD.Print your message. //TODO What does it mean?
 
-To see the output, in the Game Studio toolbar, under **View**, enable **Output**.
+To view the log output, go to the **Game Studio** toolbar and click on **View**, then enable the **Output** option.
 
 ![Enable output](../stride-for-unity-developers/media/enable-output.png)
 
-Game Studio displays in the **Output** tab (at the bottom of Game Studio by default).
+Once enabled, the **Output** tab will appear, typically located at the bottom of the **Game Studio** interface.
 
 ![Output tab](../stride-for-unity-developers/media/output-tab.png) 
 
