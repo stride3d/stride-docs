@@ -185,7 +185,7 @@ public class BasicMethods : StartupScript
     }     
 }
 ```
-
+ 
 #### Godot Example
 
 ```csharp
@@ -247,38 +247,127 @@ public class BasicMethods : Node
 
 ```
 
-3. AsyncScripts
-To run Code Asynchronous to the Engines Update you can use AsyncScripts which work with async/await
-```cs
+### AsyncScripts
+
+Both Stride and Godot provide ways to run code asynchronously, but they use different approaches.
+
+#### Stride Example
+
+Stride offers a specialized `AsyncScript` class that allows you to execute code asynchronously using C#'s `async`/`await` syntax. The `Execute()` method can be awaited, allowing your code to run without blocking the main game loop.
+
+
+```csharp
 public class BasicMethods : AsyncScript
 {
-    // Declared public member fields and properties that will appear in the game studio
+    // Public member fields and properties will be visible in Game Studio
     public override async Task Execute()
     {
-        while(Game.IsRunning)
+        // The initialization code should come here, if necessary
+
+        // Loop until the game ends (optional depending on the script)
+        while (Game.IsRunning)
         {
-            // Do stuff every new frame
+            await MyEvent;
+
+            // Do some stuff
+
+            // Wait for the next frame (optional depending on the script)
             await Script.NextFrame();
         }
     }
 
     public override void Cancel()
     {
-        // Cleanup of the script
+        // Cleanup code for the script
     }     
 }
+
 ```
-# Add scripts to entities
-In the Entity Tree (on the left by default), or in the scene, select the entity you want to add the script to.
 
-Select an entity
-![image](https://github.com/stride3d/stride-docs/assets/107197024/839340c9-6cd2-4c6e-a6ed-cbfa647020fb)
+#### Godot Example
 
-In the Property Grid (on the right by default), click Add component and select the script you want to add.
-![image](https://github.com/stride3d/stride-docs/assets/107197024/6d33f6da-4e3f-4d36-b041-02a83501ecd4)
+Godot doesn't offer a dedicated `AsyncScript` class like Stride. However, you can still write asynchronous code in C# using the standard `async`/`await` syntax.
 
-For more information about adding scripts in Stride, see [Use a script](https://doc.stride3d.net/latest/en/manual/scripts/use-a-script.html).
+```csharp
+public class BasicMethods : Node
+{
+    public async override void _Ready()
+    {
+        await ToSignal(GetTree().CreateTimer(1.0f), "timeout");
+        // Execute code after 1-second timer elapses
+    }
 
+    // Godot doesn't have a direct equivalent to Stride's Cancel method
+    public override void _ExitTree()
+    {
+        // Cleanup code for the script
+    }
+}
+```
+
+In summary, both Stride and Godot offer mechanisms for running code asynchronously, but they achieve this in different ways. Stride provides a built-in `AsyncScript` class, whereas Godot allows for asynchronous code through standard C# mechanisms.
+
+## Script components
+
+In both Stride and Godot, scripts are used to define behavior and logic for game entities. However, the way you attach and manage these scripts differs between the two engines.
+
+### Create a script
+
+#### Stride
+
+To create a script, click **Add asset** button and select **Scripts**.
+
+![Create script in Stride](../stride-for-unity-developers/media/stride-vs-unity-create-script.png)
+
+Stride has a [SyncScript](xref:Stride.Engine.SyncScript) class that comes with methods such as:
+
+* [Start()](xref:Stride.Engine.StartupScript.Start) is called when the script is loaded.
+* [Update()](xref:Stride.Engine.SyncScript.Update) is called every frame.
+
+
+If you need asynchronous or startup-specific logic, you can use:
+
+* [StartupScript](xref:Stride.Engine.StartupScript): this script has a single [Start()](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
+* [AsyncScript](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:Stride.Engine.AsyncScript.Execute) and you can use `async`/`await` inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
+
+#### Godot
+
+In Godot, you can either create a script from the editor or attach an existing script to a node via the Inspector.
+
+In Godot, you use methods like `_Ready()` for initialization and `_Process(delta)` for frame-by-frame updates. Godot also supports the `async`/`await` syntax in C#.
+
+
+### Reload assemblies
+
+#### Stride
+
+After creating or editing a script, you must manually reload the assemblies by clicking **Reload assemblies** in the Game Studio toolbar.
+
+![Reload assemblies](../platforms/media/reload-assemblies.png)
+
+#### Godot
+
+Godot automatically reloads scripts when they are saved, no manual reload is required.
+
+### Add scripts to entities
+
+#### Stride
+
+1. In the **Entity Tree** (on the left by default), or in the scene, select the entity you want to add the script to.
+
+    ![Select an entity](../scripts/media/select-entity.png)
+2. In the **Property Grid** (on the right by default), click **Add component** and select the script you want to add.
+ 
+    ![Add script component](../scripts/media/add-script-component.png)
+
+#### Godot
+
+1. Select the node in the **Scene Tree**.
+1. In the **Inspector**, click the **Attach Script** button or attach an existing script.
+
+In Stride, scripts are listed alphabetically along with other components. In Godot, scripts are attached directly to nodes and appear as sub-resources in the **Inspector**.
+
+For more information about adding scripts in Stride, see [Use a script](../scripts/use-a-script.md).
 
 ## Instantiate Prefabs
 
