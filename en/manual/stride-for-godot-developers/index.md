@@ -114,23 +114,42 @@ public override void Update()
 }
 ```
 
-## Physics 
-In Stride you have 3 Types of Colliders 
+## Physics
 
-- static colliders
-- rigidbodies
-- characters
+Both Stride and Godot offer comprehensive physics engines, but their approach to handling collisions and physics-based interactions differ. Below is a comparison of their features and functionalities.
 
-In Godot you can use Signals to react on a collision.
+### Stride
 
-In Stride you can add methods in the Start() Method to the Delegate that gets executed when triggered.
+In Stride, there are three main types of colliders:
 
-This Tutorial explains how you can handle collisions in Stride
-https://www.youtube.com/watch?v=SIy3pfoXfoQ&ab_channel=Stride
+- **Static Colliders:** Fixed in place and do not move, typically used for environment elements like walls or floors.
+- **Rigidbodies:** Dynamic colliders that are subject to physics simulations, such as gravity or force.
+- **Characters:** Special colliders designed to work with character controllers.
+-
+To handle collisions in Stride, you can add methods to a delegate within the `Start()` method of your script. These methods will be triggered when a collision occurs. For a comprehensive tutorial on collision handling in Stride, you can refer to this [YouTube Stride tutorial - Collision triggers](https://www.youtube.com/watch?v=SIy3pfoXfoQ&ab_channel=Stride).
 
-## GameStudio Editor
+### Godot
 
-Stride has like Godot an Integrated Code Editor, but for C#. This Code Editor is not an high Priority Target in being kept up to date, so it's advised to use dedicated IDEs like Visual Studio Code, Rider and Visual Studio Community
+In Godot, you can use a signal-based system to react to collisions. Signals are emitted when specific events occur, such as two objects colliding, and you can connect these signals to custom methods to execute your own logic.
+
+## Game Studio Editor
+
+Both Stride and Godot offer integrated code editors, but their capabilities and recommended usage differ.
+
+### Stride
+
+Stride comes with an integrated C# code editor within Game Studio. Although functional, this editor is not a high-priority feature and may not receive frequent updates. As such, it is generally recommended to use dedicated IDEs for code editing. Some popular choices include:
+
+- Visual Studio Code: Free, open-source and highly extensible.
+- Rider: Paid, but offers a robust set of features tailored for .NET development.
+- Visual Studio Community: Free for small teams and individual developers.
+- Visual Studio Professional and Enterprise: Paid versions with additional features and services.
+ 
+### Godot
+
+Godot provides a built-in code editor that supports its own scripting language, GDScript, as well as C# and VisualScript. The Godot editor is more tightly integrated with the engine and is generally kept up-to-date with new features.
+
+In summary, while both Stride and Godot offer integrated code editors, Stride's editor is best considered a supplementary tool rather than a complete IDE. It is advised to use specialized IDEs for more complex development tasks in Stride. Godot's editor, on the other hand, is robust enough for full-scale development if you are using GDScript or C#.
 
 ## Scripts
 
