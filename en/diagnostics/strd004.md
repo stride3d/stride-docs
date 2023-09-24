@@ -1,6 +1,6 @@
-# Diagnostics Warning STRD001
+# Diagnostics Warning STRD004
 
-An Array must have a public/internal getter for Serialization.
+For <see cref="System.Collections.Generic.Dictionary{TKey, TValue}"/> the only valid Keys are primitive Types. All complex types like custom structs, objects are not allowed.
 
 ## Example
 

@@ -1,6 +1,6 @@
-# Diagnostics Warning STRD001
+# Diagnostics Warning STRD007
 
-An Array must have a public/internal getter for Serialization.
+It's invalid to DataMember a private property. Also its invalid to DataMember a property which has DataMemberIgnore.
 
 ## Example
 

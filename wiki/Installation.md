@@ -66,7 +66,7 @@ dotnet tool uninstall -g docfx
 
 # Running the Development Server
 
-We've created a PowerShell script [BuildDocs.ps1](https://github.com/VaclavElias/stride-docs-next/blob/main/BuildDocs.ps1) with a context menu where you can select the language, include the API build, and run the development server.
+We've created a PowerShell script [BuildDocs.ps1](https://github.com/stride3d/stride-docs/blob/master/BuildDocs.ps1) with a context menu where you can select the language, include the API build, and run the development server.
 
 1. 🚀 Run `run.bat` in the command line to start the script
 1. 📋 You will see the following self-explanatory menu:

@@ -212,16 +212,14 @@ As soon as you add an asset to your project, you can edit its properties in the 
 Like Unity®, Stride supports file formats including:
 
 | Asset type  | Supported formats                                           
-|------|---|
+|---|---|
 | Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
-| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
-| Fonts | .ttf, .otf |
+| Audio  	                    | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
+| Fonts                         | .ttf, .otf |
+| Video                         | .mp4
 
 For more information about assets, see [Assets](../game-studio/assets.md).
-
-> [!Note]
-> * Stride currently doesn't support movie files.
 
 ## Prefabs
 
@@ -745,7 +743,7 @@ System.Diagnostics.Debug.WriteLine("hello");
 ```
 
 >[!Note]
->To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
+> To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
 
 ---
 
