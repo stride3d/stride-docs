@@ -1,6 +1,6 @@
-# Diagnostics Warning STRD001
+# Diagnostics Warning STRD002
 
-An Array must have a public/internal getter for Serialization.
+A collection must have a public/internal getter for Serialization.
 
 ## Example
 

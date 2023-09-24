@@ -1,4 +1,4 @@
-- [Home](https://github.com/VaclavElias/stride-docs-next/wiki)
+- [Home](https://github.com/stride3d/stride-docs/wiki)
 - [Understanding the Stride Documentation Generation Pipeline](Understanding-the-Stride-Documentation-Generation-Pipeline)
   - [Introduction](Understanding-the-Stride-Documentation-Generation-Pipeline#introduction)
   - [A Simplified Overview](Understanding-the-Stride-Documentation-Generation-Pipeline#a-simplified-overview)

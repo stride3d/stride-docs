@@ -6,9 +6,9 @@
 .NOTES
     The documentation files are expected to be in Markdown format (.md). The script uses the DocFX tool to build the documentation and optionally includes API documentation. The script generates the API documentation from C# source files using DocFX metadata and can run a local website using the DocFX serve command. This script can also be run from GitHub Actions.
 .LINK
-    https://github.com/VaclavElias/stride-website-next
+    https://github.com/stride3d/stride-docs
 .LINK
-    https://github.com/VaclavElias/stride-docs-next/blob/main/en/languages.json
+    https://github.com/stride3d/stride-docs/blob/master/en/languages.json
 .LINK
     https://dotnet.github.io/docfx/index.html
 .PARAMETER BuildAll
