@@ -31,7 +31,7 @@ Stride Docs website is _not_ released under a regular cadence; new updates arriv
 
 The staging website allows us to test new features and significant changes before their official release.
 
-The staging website is available at https://stride-docs-staging.azurewebsites.net/
+The staging website is available at https://stride-doc-staging.azurewebsites.net/
 
 ## 🗺️ Roadmap
 
