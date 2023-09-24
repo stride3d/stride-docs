@@ -15,6 +15,6 @@
 - name: 🔧 API
   href: api/
   homepage: api/index.md
-- name: 🔍 Diagnostics
-  href: diagnostics/
-  homepage: diagnostics/index.md
+# - name: 🔍 Diagnostics
+#   href: diagnostics/
+#   homepage: diagnostics/index.md
