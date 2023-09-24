@@ -1,7 +1,7 @@
 # Animation
 
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 3D models are animated by adding three kinds of asset: 
 

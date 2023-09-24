@@ -1,7 +1,7 @@
 # Procedural animation
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Procedural animation** is an alternative method of animation. Instead of creating animations yourself, you can use engine components to animate 3D models at runtime. 
 
@@ -14,7 +14,7 @@ The animation can animate a wide variety of components besides Skeleton bones, i
 * [RigidBodyComponent](xref:Stride.Physics.RigidbodyComponent)
 * [Custom components](xref:Stride.Engine.EntityComponent)
 
-Stride's animation system works just like Blender or Maya's curve animation editor. Each bone/value is assigned a [curve](xref:Stride.Animations.AnimationCurve) composed of several [points](xref:Stride.Animations.KeyFrameData) that are interpolated either in linear, cubic or constant fashion.
+Stride's animation system works just like Blender or Maya's curve animation editor. Each bone/value is assigned a [curve](xref:Stride.Animations.AnimationCurve) composed of several [points](xref:Stride.Animations.KeyFrameData`1) that are interpolated either in linear, cubic or constant fashion.
 
 ## Code samples
 

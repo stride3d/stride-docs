@@ -1,6 +1,6 @@
 # Solution
 
-<div class="doc-incomplete"/>
+[!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
 
 In Stride Studio, the **Solution Explorer** displays the hierarchy of your game.
 

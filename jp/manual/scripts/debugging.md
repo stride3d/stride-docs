@@ -1,7 +1,7 @@
 # デバッグ
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 実行時にスクリプトで期待される結果が得られない場合は、Visual Studio などの IDE でデバッグできます。
 

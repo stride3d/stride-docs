@@ -1,8 +1,8 @@
 # Manage scenes
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-success">Designer</span>
 
 Scenes and entities are arranged in a hierarchy, with the **root scene** at the top. This hierarchy is displayed in the **Entity Tree** in the Scene Editor on the left.
 

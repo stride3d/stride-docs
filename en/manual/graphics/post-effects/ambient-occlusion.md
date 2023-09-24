@@ -1,7 +1,7 @@
 # Ambient occlusion
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 
 >[!Note]
 >As with other depth-aware post effects, enabling ambient occlusion nullifies MSAA (multisample anti-aliasing).

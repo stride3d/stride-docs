@@ -1,7 +1,7 @@
 # キャラクター
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **キャラクター** コライダーは、プレイヤーおよび NPC などのスクリプトで制御されたキャラクターに使用されます。[キャラクター コンポーネント](xref:Stride.Physics.CharacterComponent)であるエンティティは、[SetVelocity](xref:Stride.Physics.CharacterComponent.SetVelocity\(Stride.Core.Mathematics.Vector3\))、[Jump](xref:Stride.Physics.CharacterComponent.Jump)、[Teleport](xref:Stride.Physics.CharacterComponent.Teleport\(Stride.Core.Mathematics.Vector3\)) によってのみ移動できます。
 

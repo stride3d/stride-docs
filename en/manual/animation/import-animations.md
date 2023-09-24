@@ -1,7 +1,7 @@
-﻿# Import animations
+# Import animations
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 To animate a model, you need to use three kinds of assets together:
 

@@ -1,7 +1,7 @@
 # オーディオ リスナー
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **オーディオ リスナー**は、[空間オーディオ](spatialized-audio.md)を作成するために[オーディオ エミッター](audio-emitters.md)によって生成されるオーディオを聴くエンティティです。シーン内には複数のオーディオ リスナーが存在できます。これはよくあることであり、たとえばマルチプレイヤー ゲームで各プレイヤー カメラがオーディオ リスナーである場合などに発生します。
 

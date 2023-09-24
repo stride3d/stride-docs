@@ -1,7 +1,7 @@
 # キーボード
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **キーボード**は、デスクトップ ゲームで最も一般的な入力デバイスです。Stride にはキーボード入力を処理する 2 つの方法があります。
 

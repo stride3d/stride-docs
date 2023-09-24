@@ -1,6 +1,6 @@
 # Add or remove a platform
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 You can add and remove platforms to and from projects.
 

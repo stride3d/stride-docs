@@ -1,8 +1,8 @@
 # Tutorial: Custom particles
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 
 This walkthrough shows how you can create custom extensions for the particle system, providing functionality not available in the core engine.
 

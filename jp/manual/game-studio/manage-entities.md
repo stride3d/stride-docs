@@ -1,7 +1,7 @@
 # エンティティの管理
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
 
 ゲームのレベルを構築するには、シーンのエンティティを平行移動 (移動)、回転、サイズ変更する必要があります。これらの操作は**変換**と呼ばれます。
 

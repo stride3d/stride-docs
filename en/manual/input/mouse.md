@@ -1,7 +1,7 @@
 # Mouse
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 The **mouse** is a common input device for desktop games.
 

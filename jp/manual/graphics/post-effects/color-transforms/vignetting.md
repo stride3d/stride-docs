@@ -3,13 +3,13 @@
 # Vignetting
 -->
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 **ヴィネッティング（Vignetting; [口径食](https://ja.wikipedia.org/wiki/%E5%8F%A3%E5%BE%84%E9%A3%9F)）** エフェクトは、画像の角度や周辺を暗くする効果です。

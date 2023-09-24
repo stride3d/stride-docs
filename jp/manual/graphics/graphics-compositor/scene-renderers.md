@@ -3,11 +3,11 @@
 # Scene renderers
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">デザイナー</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
 -->
 
 **シーンレンダラー**を使うと、レンダリングの **収集(collect)** と **描画(draw)** のフェーズをカスタマイズすることができます。これらのフェーズの詳細については、[レンダーの機能](../rendering-pipeline/render-features.md)を参照してください。

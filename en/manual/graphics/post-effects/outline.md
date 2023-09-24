@@ -1,7 +1,7 @@
 # Outline
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 
 The **outline** effect applies a cartoon-like outline around 3d models rendered in the scene.
 

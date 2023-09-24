@@ -1,6 +1,6 @@
 # Stride のインストール
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 1. Stride インストーラー (**StrideSetup.exe**) を [Stride の Web サイト](http://stride3d.net/download/)からダウンロードします。
 

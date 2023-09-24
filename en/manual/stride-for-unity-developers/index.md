@@ -224,17 +224,15 @@ Like Unity®, Stride supports file formats including:
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
 | Audio                         | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
 | Fonts                         | .ttf, .otf                                                   |
+| Video                         | .mp4                                                         |
 
 For more information about assets, see [Assets](../game-studio/assets.md).
-
-> [!Note]
-> * Stride currently doesn't support movie files.
 
 ## Prefabs
 
 Like Unity®, Stride uses prefabs. Prefabs are "master" versions of objects that you can reuse wherever you need. When you change a prefab, every instance of the prefab changes too.
 
-![Prefabs in Stride](media/stride-vs-unity-prefabs.png)
+![Prefabs in Stride](media/stride-vs-unity-prefabs.webp)
 
 Just like with Unity®, in Stride, you can add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
 
@@ -782,7 +780,6 @@ System.Diagnostics.Debug.WriteLine("hello");
 >[!Note]
 >To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
 
-
 ## Attributes
 
 | Unity®                    | Stride                              |
@@ -795,6 +792,7 @@ System.Diagnostics.Debug.WriteLine("hello");
 
 >[!Note]
 >You cannot serialize private fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
+
 ```cs 
 public float MyProperty { get; init; }
 ```

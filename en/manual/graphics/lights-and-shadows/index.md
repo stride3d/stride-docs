@@ -1,8 +1,8 @@
 # Lights and shadows
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Artist</span>
 
 Lights in Stride are provided by [light components](xref:Stride.Engine.LightComponent). There are several kinds of light.
 

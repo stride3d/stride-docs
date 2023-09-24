@@ -3,9 +3,9 @@
 # Sprite fonts
 -->
 
-<span class="label label-doc-level">中級</span>
+<span class="badge text-bg-primary">中級</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
+<span class="badge text-bg-primary">Intermediate</span>
 -->
 
 **スプライト フォント**は、入力として TrueType フォント（システムフォントまたはユーザーが割り当てたファイル）を受け取り、ゲームの文字（グリフ）のすべての画像（スプライト）を作成します。

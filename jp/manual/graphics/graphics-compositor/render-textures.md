@@ -3,13 +3,13 @@
 # Render textures
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 **レンダーテクスチャー**を使うと、カメラのビューをテクスチャーに送り、そのテクスチャーをシーン内のオブジェクトに適用することができます。例えば、防犯カメラの映像のように、同じシーン内のテレビ画面にシーンの一部を映すことができます。

@@ -1,8 +1,8 @@
 # ナビゲーション境界ボックス
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **ナビゲーション境界ボックス**は、[ナビゲーション メッシュ](navigation-meshes.md)がカバーする領域を定義します。ナビゲーション境界ボックスを使用すると、シーン全体をカバーするメッシュを使用する代わりに、シーン内に小さいナビゲーション領域を作成できます。
 

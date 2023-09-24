@@ -1,7 +1,7 @@
 # Create a script
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can create scripts using Game Studio or an IDE such as Visual Studio.
 

@@ -1,6 +1,6 @@
 # Custom attributes
 
-<span class="label label-doc-level">Intermediate</span>
+<span class="badge text-bg-primary">Intermediate</span>
 
 You can import custom attributes created in modeling tools such as Maya. 
 

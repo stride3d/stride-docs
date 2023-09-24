@@ -1,7 +1,7 @@
 # シーン
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
 
 **シーン**とはゲーム内のレベルのことです。シーンは、プロジェクト内のオブジェクトである**エンティティ**で構成されます。
 

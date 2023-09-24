@@ -3,9 +3,9 @@
 # Custom attributes
 -->
 
-<span class="label label-doc-level">中級</span>
+<span class="badge text-bg-primary">中級</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
+<span class="badge text-bg-primary">Intermediate</span>
 -->
 
 Maya などのモデリング ツールで作成したカスタム属性をインポートすることができます。

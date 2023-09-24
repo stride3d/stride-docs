@@ -3,11 +3,11 @@
 # Subsurface scattering
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 -->
 
 マテリアルで[**サブサーフェススキャタリング（Subsurface scattering）**](https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%96%E3%82%B5%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9%E3%83%BB%E3%82%B9%E3%82%AD%E3%83%A3%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0)を有効にすると、モデル内部で光が不規則な角度で反射します。これを利用して、肌、ロウソク、葉、大理石、磁器などの半透明なマテリアルをリアルに表現することができます。

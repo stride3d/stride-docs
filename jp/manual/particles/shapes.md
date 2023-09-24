@@ -1,8 +1,8 @@
 # パーティクルの形状
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 パーティクルは基本的に空間内の点でしかないので、定義された形状は持ちません。代わりに、Stride では点の**間**に形状が描画されます。
 

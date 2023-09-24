@@ -1,8 +1,8 @@
 # Dynamic navigation
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 If you enable **dynamic navigation**, entities with navigation components don't need a [navigation mesh](navigation-meshes.md) asset. Instead, the entities generate navigation meshes dynamically.
 

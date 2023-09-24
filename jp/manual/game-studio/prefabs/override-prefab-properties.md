@@ -1,8 +1,8 @@
 # プレハブ プロパティのオーバーライド
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 プレハブのインスタンスでプロパティを変更した場合、そのインスタンスはプレハブからそのプロパティに対する変更を継承しなくなります。これは**オーバーライド**と呼ばれます。
 

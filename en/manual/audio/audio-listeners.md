@@ -1,7 +1,7 @@
 # Audio listeners
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 An **audio listener** is an entity that listens for audio emitted by [audio emitters](audio-emitters.md) to create [spatialized audio](spatialized-audio.md). There can be multiple audio listeners in a scene. This is common, for example, in multiplayer games, where each player camera is an audio listener.
 

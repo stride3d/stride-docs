@@ -1,8 +1,8 @@
 # オーディオのストリーミング
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 既定では、オーディオはメモリから直接再生されます。これは、発砲音や足音のような短いサウンド エフェクトの場合に便利です。
 

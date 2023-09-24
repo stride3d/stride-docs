@@ -1,7 +1,7 @@
 # アニメーションのプレビュー
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 [アニメーションをインポート](import-animations.md)した後、［Asset preview］でアニメーションをプレビューできます。 
 

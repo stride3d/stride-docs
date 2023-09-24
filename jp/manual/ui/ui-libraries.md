@@ -3,13 +3,13 @@
 # UI libraries
 -->
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">デザイナー</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Designer</span>
 -->
 
 **UI ライブラリ**には、グリッド、ボタン、スライダーなどの **UI エレメント**が含まれており、[UI ページ](UI-pages.md)で利用・再利用することができます。

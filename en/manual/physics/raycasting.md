@@ -1,14 +1,14 @@
 # Raycasting
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Raycasting** traces an invisible line through the scene to find intersecting [colliders](colliders.md). This is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
 
 >[!Note]
 >Raycasting uses **colliders** to calculate intersections. It ignores entities that have no collider component. For more information, see [Colliders](colliders.md).
 
-To use a raycast, in the current [Simulation](xref:Stride.Physics.Simulation), use [Simulation.Raycast](xref:Stride.Physics.Simulation.Raycast\(Stride.Core.Mathematics.Vector3,Stride.Core.Mathematics.Vector3\)).
+To use a raycast, in the current [Simulation](xref:Stride.Physics.Simulation), use [Simulation.Raycast](xref:Stride.Physics.Simulation.Raycast(Vector3, Vector3, CollisionFilterGroups, CollisionFilterGroupFlags, bool)).
 
 For an example of raycasting, see the **Physics Sample** project included with Stride.
 

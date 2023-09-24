@@ -1,7 +1,7 @@
 # コライダーの形状
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 [コライダー](colliders.md)が相互作用を行うには、［Property grid］でその形状を設定する必要があります。幾何学的形状を指定するか、コライダー形状アセットを使用することができます。
 

@@ -1,8 +1,8 @@
 # Add a UI to a scene
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Designer</span>
 
 After you create a [UI page](ui-pages.md), add it to the scene as a component on an entity.
 

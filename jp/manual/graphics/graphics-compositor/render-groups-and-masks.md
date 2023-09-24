@@ -3,11 +3,11 @@
 # Render groups and masks
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">デザイナー</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
 -->
 
 **レンダーグループ**と**レンダーマスク**を使って、シーンのどの部分をどの[カメラ](../cameras/index.md) でレンダリングするかを指定することができます。例えば、あるモデルを、カメラAには映るがカメラBには映らないようにすることができます。

@@ -1,8 +1,8 @@
 # Navigation components
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Navigation components** allow entities to use [navigation meshes](navigation-meshes.md) to find paths through the scene. Alternatively, if you enable [dynamic navigation](dynamic-navigation.md) in Game Settings, entities can generate their own navigation meshes.
 

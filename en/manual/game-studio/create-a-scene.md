@@ -1,7 +1,7 @@
 # Create and open a scene
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level Designer</span>
 
 When you create a new project, Game Studio creates an initial scene and populates it with basic entities such as a light, a camera, and a skybox.
 

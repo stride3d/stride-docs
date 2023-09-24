@@ -3,11 +3,11 @@
 # Custom shaders
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 Visual Studio で独自のシェーダーを書いて、[マテリアル属性](../materials/material-attributes.md)で使うことができます。例えば、オブジェクトのワールド位置に基づいてマテリアルにテクスチャーを追加するシェーダーを書いたり、ノイズを生成してマテリアルのプロパティをランダム化することに使ったりすることができます。

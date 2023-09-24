@@ -1,7 +1,7 @@
 # Keyboards
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 The **keyboard** is the most common input device for desktop games. There are two ways to handle keyboard input in Stride:
 

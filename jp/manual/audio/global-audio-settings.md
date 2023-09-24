@@ -1,7 +1,7 @@
 # グローバル オーディオの設定
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 グローバル オーディオ設定は、プロジェクト内のすべてのオーディオに適用されます。
 

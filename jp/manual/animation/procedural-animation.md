@@ -1,7 +1,7 @@
 # プロシージャル アニメーション
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **プロシージャル アニメーション**とは、アニメーションの代替となる方法です。アニメーションを自分で作成する代わりに、エンジン コンポーネントを使用して実行時に 3D モデルをアニメーション化できます。
 

@@ -1,7 +1,7 @@
 # アニメーション
 
-<span class="label label-doc-audience">デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-success">デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 3D モデルは、次の 3 種類のアセットを追加することによってアニメーション化できます。
 

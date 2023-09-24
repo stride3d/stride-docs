@@ -1,8 +1,8 @@
 # Navigation
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can use the **navigation** system to control how characters and other objects navigate scenes.
 

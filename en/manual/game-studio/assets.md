@@ -1,6 +1,6 @@
 # Assets
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 An **asset** is a representation of an element of your game inside Game Studio, such as a texture, animation, or model.
 

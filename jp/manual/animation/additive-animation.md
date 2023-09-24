@@ -1,7 +1,7 @@
 # 加算アニメーション（Additive Animation）
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **加算アニメーション**とは、**差分クリップ** (**加算アニメーション クリップ**とも呼ばれます) を使用してアニメーションを結合するプロセスです。
 

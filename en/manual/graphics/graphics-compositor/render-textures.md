@@ -1,8 +1,8 @@
 # Render textures
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 With **render textures**, you can send a camera's view to a texture and use the texture on objects in your scene. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 

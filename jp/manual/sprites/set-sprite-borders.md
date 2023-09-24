@@ -1,7 +1,7 @@
 # スプライトの境界の設定
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **スプライトの境界**は、スプライトを拡大縮小したときに変形しない領域です。メニュー ボタンなどの UI 要素に使用するスプライトに役に立つことがよくあります。スプライトの境界を設定できるのは、**UI** シートの種類として設定されているスプライトだけです。
 

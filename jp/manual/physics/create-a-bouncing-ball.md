@@ -1,7 +1,7 @@
 # 跳ね返るボールの作成
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 このチュートリアルでは、[静的コライダーと剛体コンポーネント](colliders.md)を使用して、床で跳ね返るボールを作成します。
 

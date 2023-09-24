@@ -1,7 +1,7 @@
 # Scene renderers
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
 
 **Scene renderers** let you customize the **collect** and **draw** phases of the rendering. For more information about these stages, see [Render features](../rendering-pipeline/render-features.md). 
 

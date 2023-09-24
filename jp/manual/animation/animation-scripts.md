@@ -1,7 +1,7 @@
 # アニメーション スクリプト
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 アニメーションは、スクリプトを使用して制御します。
 

@@ -1,8 +1,8 @@
 # Use prefabs
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-success">Designer</span>
 
 To instantiate a prefab, drag and drop it from the **Asset View** to the scene.
 
@@ -24,9 +24,9 @@ If you don't want to create a parent entity with the prefab, hold **Alt** when y
 
 In this case, a parent entity is unnecessary. Instead, you can create several instances of the prefab, then re-arrange their individual crate entities to create the effect you need.
 
-| Relative positions maintained                   | Relative positions ignored
-|-------------------------------------------------|
-| ![Boxes duplicated](media/boxes-duplicated.jpg) | ![Boxes duplicated](media/boxes-random.jpg)
+| Relative positions maintained                   | Relative positions ignored                  |
+|-------------------------------------------------|---------------------------------------------|
+| ![Boxes duplicated](media/boxes-duplicated.jpg) | ![Boxes duplicated](media/boxes-random.jpg) |
 
 ## Break link to prefab
 
@@ -40,8 +40,23 @@ To do this, in the **Scene Editor**, right-click a child entity or entities and 
 
 To use prefabs at runtime, you need to instantiate them and then add them to the scene in code.
 
+```cs
+public class SpawnPrefabOnStart : StartupScript
+{
+    public Prefab MyPrefab { get; init; } // init here prevents other scripts from changing this property
+    
+    public override void Start()
+    {
+        // A prefab may contain multiple entities
+        var entities = MyPrefab.Instantiate();
+        // Adding them to the scene this entity is on
+        Entity.Scene.Entities.AddRange(entities);
+    }
+}
+```
+
 > [!Note]
-> Just calling `Instantiate()` isn't enough to add a prefab instance to the scene. You also need to use `Add()`. For example, if your prefab contains a model, the model is invisible until you add the prefab instance. Likewise, if your prefab contains a script, the script won't work until you add the prefab instance.
+> `Instantiate()` by itself isn't enough to add a prefab instance to the scene. You also need to `Add()` or `AddRange()` them to a scene . For example, if your prefab contains a model, the model is invisible until you add the prefab instance. Likewise, if your prefab contains a script, the script won't work until you add the prefab instance.
 
 If you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate and add it with the following code:
 
@@ -58,7 +73,7 @@ private void InstantiateBulletPrefab()
     // Change the X coordinate
     bullet.Transform.Position.X = 20.0f;
 
-    // Add the bullet to the scene
+    // Adding just the bullet to the root scene
     SceneSystem.SceneInstance.RootScene.Entities.Add(bullet);
 }
 ```

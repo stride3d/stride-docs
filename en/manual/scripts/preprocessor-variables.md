@@ -1,7 +1,7 @@
 # Preprocessor variables
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 If you're developing for multiple platforms, you often need to write custom code for each platform. In most cases, the best way to do this is to use [Platform.Type](xref:Stride.Core.Platform.Type) and [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform). Alternatively, you can use **preprocessor variables**.
 

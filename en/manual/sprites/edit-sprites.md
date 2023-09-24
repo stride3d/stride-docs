@@ -1,7 +1,7 @@
 # Edit sprites
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 After you [import a sprite sheet](import-sprite-sheets.md), you can use the dedicated **Sprite Editor** to select sprites within the sprite sheet.
 

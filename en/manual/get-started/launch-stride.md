@@ -1,6 +1,6 @@
 # Launch Stride
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 With the **Stride launcher**, you can install, manage and run different versions of Stride.
 

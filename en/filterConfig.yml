@@ -1,4 +1,4 @@
 apiRules:
 - exclude:
-      uidRegex: ^System\.Object
-      type: Type
+    uidRegex: ^System.Object
+    type: Type

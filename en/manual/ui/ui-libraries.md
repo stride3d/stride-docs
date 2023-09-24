@@ -1,8 +1,8 @@
 # UI libraries
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Designer</span>
 
 **UI libraries** contain **UI elements** such as grids, buttons, sliders and so on that you can use and re-use in your [UI pages](UI-pages.md). 
 

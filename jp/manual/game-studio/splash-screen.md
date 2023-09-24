@@ -1,6 +1,6 @@
 # スプラッシュ画面
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 **スプラッシュ画面**とは、ゲームの開始時に表示される画像 (通常はロゴ) です。カラーの地の上にフェードインした後、フェードアウトします。
 

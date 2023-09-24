@@ -1,7 +1,7 @@
 # Manage entities
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
 
 To build the levels of your game, you need to translate (move), rotate, and resize entities in your scene. These are known as **transformations**.
 

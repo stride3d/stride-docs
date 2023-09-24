@@ -1,7 +1,7 @@
 # Set an audio device
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can set which audio device Stride uses. For example, you can access the _Oculus Rift_ audio device from your custom game constructor.
 

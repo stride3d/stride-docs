@@ -3,13 +3,13 @@
 # Create particles
 -->
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 [パーティクルシステム](https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%AF%E3%83%AB%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)を作成するには、シーンまたはエンティティツリーを右クリックして、[**Particle system**] の配下の希望のプリセット（**Empty**, **Simple**, **Fountain**, **Ribbon** のいずれか）を選択します。

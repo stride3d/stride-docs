@@ -1,7 +1,7 @@
 # Textures and render textures
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Stride uses the @'Stride.Graphics.Texture' class to interact with texture objects in code.
 

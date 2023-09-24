@@ -1,8 +1,8 @@
 # プレハブの使用
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 プレハブをインスタンス化するには、［Asset view］からシーンにプレハブをドラッグ アンド ドロップします。
 

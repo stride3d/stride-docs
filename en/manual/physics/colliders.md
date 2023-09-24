@@ -1,7 +1,7 @@
 # Colliders
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 To use physics in your project, add a **collider** component to an entity. 
 

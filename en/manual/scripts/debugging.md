@@ -1,7 +1,7 @@
 # Debugging
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 If your script isn't producing the expected result at runtime, you can debug it in an IDE such as Visual Studio.
 

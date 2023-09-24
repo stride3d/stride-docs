@@ -1,7 +1,7 @@
 # シーンの作成
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
 
 新しいプロジェクトを作成すると、初期シーンが作成されて、ライト、カメラ、スカイボックスなどの基本的なエンティティが設定されます。
 

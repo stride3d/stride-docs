@@ -3,11 +3,11 @@
 # Bloom
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 -->
 
 **ブルーム（bloom）** エフェクトは、画像中の最も明るい部分を拡張し、周囲ににじみ出させることで、カメラを圧倒する明るい光をシミュレートします。

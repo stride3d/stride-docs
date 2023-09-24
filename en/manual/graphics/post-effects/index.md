@@ -2,7 +2,7 @@
 
 **Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image — for example, by producing a more natural, realistic look, or creating stylized cinematic effects.
 
-![media/post-effects-reference-1.png](media/post-effects-reference-1.png) 
+![media/post-effects-reference-1.png](media/post-effects-reference-1.webp) 
 
 Post effects are usually applied to an image. This means they have no connection with vertices or meshes. They only work with the color values of each pixel (and sometimes their depth).
 
@@ -23,11 +23,11 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
 1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
-    ![Graphics Compositor asset](..\graphics-compositor\media\graphics-compositor-asset.png)
+    ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
     The graphics compositor editor opens.
 
-    ![Graphics Compositor editor](..\graphics-compositor\media\graphics-compositor-editor.png)
+    ![Graphics Compositor editor](../graphics-compositor/media/graphics-compositor-editor.png)
 
 2. Select the **Post-processing effects** node.
 

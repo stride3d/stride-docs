@@ -1,16 +1,16 @@
 # Tutorial: Create a trail
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 
 This tutorial demonstrates how to use particles to create a [trail effect](../ribbons-and-trails.md) for a sword swing.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-9.jpg">
-   <source src="media/sword-slash-9.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-9.jpg">
+<source src="media/sword-slash-9.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 ## 1. Create a project
 
@@ -46,7 +46,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Select an animation asset](media/select-animation-asset-in-asset-picker.png)
 
-7. To play the animation at runtime, we need to add an [animation script](../animation/animation-scripts.md). We can use the pre-built **AnimationStart** script. In the **Asset View** (bottom pane by default), click **Add asset** and choose **Script > Animation start**.
+7. To play the animation at runtime, we need to add an [animation script](../../animation/animation-scripts.md). We can use the pre-built **AnimationStart** script. In the **Asset View** (bottom pane by default), click **Add asset** and choose **Script > Animation start**.
 
     ![Add animation script](../../animation/media/animations-additive-animations-animation-start.png)
 
@@ -91,11 +91,11 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
 16. Let's see how everything looks so far. Click **Play** to run the game and check it out. Remember you can use the mouse and WASD keys to move the camera and see the animation from different perspectives.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-1.jpg">
-   <source src="media/sword-slash-1.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-1.jpg">
+<source src="media/sword-slash-1.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 We have a swinging sword animation. Next, let's add a trail effect.
 
@@ -153,11 +153,11 @@ First we'll build a basic trail, just to see how it looks.
 
 11. Run the game to see how the particles look with the sword-swinging animation.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-2.jpg">
-   <source src="media/sword-slash-2.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-2.jpg">
+<source src="media/sword-slash-2.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 We have a trail, but it doesn't look too good yet. It's too long, it's a single block of color, its particles interconnect strangely, and it never disappears.
 
@@ -184,11 +184,11 @@ Because the particles are rendered as billboards, the segments of the trail inte
 
 4. Run the game.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-3.jpg">
-   <source src="media/sword-slash-3.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-3.jpg">
+<source src="media/sword-slash-3.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Now the particles move cohesively.
 
@@ -230,11 +230,11 @@ To fix the color, we'll give the particles a "swoosh" texture:
 
 7. Run the game.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-4.jpg">
-   <source src="media/sword-slash-4.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-4.jpg">
+<source src="media/sword-slash-4.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 We're getting closer. But the trail doesn't disappear, so it looks like it's attached to the sword. We need to make the effect appear when the mannequin swings, then disappear at the end of the swing.
 
@@ -322,11 +322,11 @@ In the left pane, select the **mannequinModel** and click **OK**.
 
 12. Run the game.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-5.jpg">
-   <source src="media/sword-slash-5.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-5.jpg">
+<source src="media/sword-slash-5.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Thanks to our script, the particle effect appears at the start of the sword swing animation and disappears at the end.
 
@@ -342,11 +342,11 @@ Thanks to our script, the particle effect appears at the start of the sword swin
 
 4. Run the game to see how it looks.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-6.jpg">
-   <source src="media/sword-slash-6.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-6.jpg">
+<source src="media/sword-slash-6.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 You might notice our trail effect looks a little jagged, creating a "spiderweb" effect. Let's make it more curved.
 
@@ -360,11 +360,11 @@ You might notice our trail effect looks a little jagged, creating a "spiderweb" 
 
 2. Run the game.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-7.jpg">
-   <source src="media/sword-slash-7.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-7.jpg">
+<source src="media/sword-slash-7.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 The inner curve, at the sword hilt, is smoother. But the curve at the sword's edge is still jagged.
 
@@ -380,11 +380,11 @@ We want to smooth the effect at the sword's edge, where it's more noticeable. To
 
 2. Run the game.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-8.jpg">
-   <source src="media/sword-slash-8.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-8.jpg">
+<source src="media/sword-slash-8.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Now we have a new problem. Because we moved the particle effect to the tip of the sword, the particles are flying from the tip. We need to reverse their direction, so they move down along the sword blade to the hilt.
 
@@ -394,11 +394,11 @@ Now we have a new problem. Because we moved the particle effect to the tip of th
 
 7. Run the game.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-9.jpg">
-   <source src="media/sword-slash-9.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-9.jpg">
+<source src="media/sword-slash-9.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Congratulations! You created a trail effect from scratch. How you tweak it now is up to you.
 
@@ -406,11 +406,11 @@ Congratulations! You created a trail effect from scratch. How you tweak it now i
 
 Here's a more elaborate trail that combines multiple particle effects:
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-10.jpg">
-   <source src="media/sword-slash-10.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-10.jpg">
+<source src="media/sword-slash-10.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 If you'd like to see how it works, [download the project file](media/MyTrailEffect.zip) and take a look.
 

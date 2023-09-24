@@ -3,13 +3,13 @@
 # Particle spawners
 -->
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 **パーティクルスポナー（particle spawner）** は、パーティクルをいつ、どれだけ、どんな早さで放出するかをコントロールします。エミッターには少なくとも 1 つのスポナーが必要ですが、異なる設定を持つ複数のスポナーを含めることもできます。

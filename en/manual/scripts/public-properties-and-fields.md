@@ -1,7 +1,7 @@
 # Public properties and fields
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 When you declare a public property or field in a script, the property becomes accessible in Game Studio from the script component properties.
 

@@ -2,9 +2,7 @@
 
 February 1st, 2021
 
-## Highlights
-
-### Xenko is now Stride!
+## Xenko is now Stride!
 
 The Xenko game engine has been renamed to Stride. From now on, all source code, blogs, and tutorials will use the name ‘Stride’ instead of ‘Xenko’.
 
@@ -14,7 +12,7 @@ Here is the new logo:
 
 More details available on the [dedicated blog post](https://stride3d.net/blog/xenko-has-been-renamed-to-stride/)
 
-### Voxel Cone Tracing GI
+## Voxel Cone Tracing GI
 
 Thanks to a substantial contribution from Sean Boettger and sponsored by David Jeske, Stride now supports Voxel Cone Tracing GI!
 
@@ -26,11 +24,11 @@ As you can see, there are many customizations and settings available in the edit
 
 ![Voxel Cone Tracing GI](media/ReleaseNotes-4.0/voxelgi.jpg)
 
-There's a documentation page explaining [how to set up the project with Voxel Cone Tracing GI](../manual/graphics/lights-and-shadows/voxel-cone-tracing-gi.html).
+There's a documentation page explaining [how to set up the project with Voxel Cone Tracing GI](../manual/graphics/lights-and-shadows/voxel-cone-tracing-gi.md).
 
 Here's the original [forum post](https://forums.stride3d.net/t/voxel-gi-implementation/1947) and [pull request](https://github.com/stride3d/stride/pull/583). Thanks again for this great contribution!
 
-### .NET 5
+## .NET 5
 
 Stride editor and toolchain is now running with .NET 5! Runtime has been working with .NET Core for a few versions already.
 
@@ -46,7 +44,7 @@ The framework will also be displayed in the Game Studio toolbar for easier ident
 
 We also expect dropping .NET Framework and supporting only .NET 5 will greatly simplify our installation process since we won't depend on specific workloads or packages of Visual Studio being installed anymore. This was a recurring issue with our users.
 
-### Flexible GPU Instancing
+## Flexible GPU Instancing
 
 Aka geometry instancing. Thanks to another big community contribution sponsored by [vvvv](https://visualprogramming.net/), Stride now supports GPU instancing per model.
 
@@ -75,7 +73,7 @@ There are also two new entity templates for easy setup:
 An example project that shows the new features can be found here: [StrideTransformationInstancing](https://github.com/tebjan/StrideTransformationInstancing)
 
 
-### Graphics API: different selection mechanism + Vulkan improvements
+## Graphics API: different selection mechanism + Vulkan improvements
 
 There's been a big overhaul on Stride build system to make Graphics API selection work in a more future-proof way.
 
@@ -87,20 +85,20 @@ We also took the opportunity to improve the state of Vulkan renderer (thanks to 
 
 It's still a work in progress so expect more in future releases.
 
-### Documentation & Tutorials
+## Documentation & Tutorials
 
 The first 10 C# beginner tutorials are recorded and uploaded to the official Stride Youtube channel. You check out [the playlist here](https://www.youtube.com/playlist?list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi). 
 
 ![Youtube Playlist](media/ReleaseNotes-4.0/doc-playlist.jpg)
 
-These videos are the video equivalent of the existing [online documentation](../tutorials/csharpbeginner/index.html) for the C# beginner template tutorials and the 'new project' template when creating a new project from the Stride launcher.
+These videos are the video equivalent of the existing [online documentation](../tutorials/csharpbeginner/index.md) for the C# beginner template tutorials and the 'new project' template when creating a new project from the Stride launcher.
 
 The C# beginner series should be fully recorded by the end of July 2020. 
 After those videos are done, Jorn will put his focus on the C# Intermediate project template. Here a is work in progress screenshot on the raycasting tutorial:
 
 ![Raycast tutorial](media/ReleaseNotes-4.0/doc-raycast-tutorial.jpg)
 
-### New Developers are Welcome!
+## New Developers are Welcome!
 The Stride GitHub repository has more closed pull requests than open issues. This is a good sign! But in order to move faster and adapt to new technologies, we would be very happy to see more new talents in our friendly and professional developer community.
 
 There are several good reasons to join us:

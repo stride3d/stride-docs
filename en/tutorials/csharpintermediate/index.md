@@ -1,211 +1,142 @@
-# C# Intermediate
-These tutorials cover various intermediate principles of using C# when working with the Stride game engine. It is recommended that you go through all the C# Beginner tutorials first before going through all the intermediate tutorials. You can create the C# intermediate tutorial project by starting the Stride launcher. Create a new project and select the template: Tutorials -> C# intermediate. Every single tutorial has a 'Start' and a 'Completed' scene. You can view the Completed scenes to see what the end result of each tutorial will roughly look like. If you are following along with the videos, you can use the Start scenes as a good starting point. Those scenes only contain the bare minimum setup. 
+# 📈 C# Intermediate
+These tutorials cover various intermediate principles of using C# when working with the Stride game engine.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" 
-title="Stride C# intermediate youtube playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+It is recommended that you complete all the [C# Beginner tutorials](../csharpbeginner/index.md) before moving on to the intermediate tutorials.
 
-# All tutorials 
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>UI Basics</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![UI Basics](media/ui-basics_thumb.png "UI basics") 
-    </div>
-    <div class='tutorial_description'>
+To create the C# intermediate tutorial project:
 
-        <ul>
-            <li>UI editor</li> 
-            <li>Hooking up events</li> 
-            <li>UI by code</li> 
-        </ul>
+1. Start the Stride launcher
+1. Create a new project
+1. Select the template: Tutorials -> C# intermediate
+
+Each tutorial has a 'Start' and a 'Completed' scene.
+
+You can view the Completed scenes to see what the end result of each tutorial will roughly look like. If you are following along with the videos, the Start scenes serve as a good starting point. These scenes contain only the bare minimum setup. 
+
+## Stride C# intermediate YouTube tutorial series
+
+> [!Video https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7]
+
+## All tutorials
+<div class="row g-4 mb-4">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/introduction.webp" class="card-img-top" alt="Introduction">
+            <div class="card-body">
+                <h2 class="card-title h5">Introduction</h2>
+                <p class="card-text">A brief introduction to the C# intermediate tutorials for the Stride game engine.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="introduction.md">Introduction</a> tutorial</p>
+        </div>
     </div>
-    ](ui-basics.md) 
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/ui-basics_thumb.webp" class="card-img-top" alt="UI Basics">
+            <div class="card-body">
+                <h2 class="card-title h5">UI Basics</h2>
+                <p class="card-text">Learn about the UI editor, hooking up events, and creating UI by code.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="ui-basics.md">UI Basics</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/collision-triggers_thumb.webp" class="card-img-top" alt="Collision triggers">
+            <div class="card-body">
+                <h2 class="card-title h5">Collision triggers</h2>
+                <p class="card-text">Explore colliders, trigger events, and colliding entities.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="collision-triggers.md">Collision triggers</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/raycasting_thumb.webp" class="card-img-top" alt="Raycasting">
+            <div class="card-body">
+                <h2 class="card-title h5">Raycasting</h2>
+                <p class="card-text">Understand raycasting, collision groups, and penetrative raycasting.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="raycasting.md">Raycasting</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/project-unproject_thumb.webp" class="card-img-top" alt="Project and Unproject">
+            <div class="card-body">
+                <h2 class="card-title h5">Project and Unproject</h2>
+                <p class="card-text">Dive into projecting, unprojecting, and working with viewports.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="project-and-unproject.md">Project and Unproject</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/async-scripts_thumb.webp" class="card-img-top" alt="Async scripts">
+            <div class="card-body">
+                <h2 class="card-title h5">Async scripts</h2>
+                <p class="card-text">Discover asynchronous scripts, async collision triggers, and async web API usage.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="async-scripts.md">Async scripts</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/scenes_thumb.webp" class="card-img-top" alt="Scenes">
+            <div class="card-body">
+                <h2 class="card-title h5">Scenes</h2>
+                <p class="card-text">Get familiar with child scenes, removing a scene, and (re)loading a scene.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="scenes.md">Scenes</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/animation-basics_thumb.webp" class="card-img-top" alt="Animation basics">
+            <div class="card-body">
+                <h2 class="card-title h5">Animation basics</h2>
+                <p class="card-text">Master animation clips, playing and pausing, and cross-fading animations.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="animation-basics.md">Animation basics</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/audio_thumb.webp" class="card-img-top" alt="Audio">
+            <div class="card-body">
+                <h2 class="card-title h5">Audio</h2>
+                <p class="card-text">Learn about sounds and music, spatialized sound, and streaming music.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="audio.md">Audio</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/first-person-camera_thumb.webp" class="card-img-top" alt="First person camera">
+            <div class="card-body">
+                <h2 class="card-title h5">First person camera</h2>
+                <p class="card-text">Explore mouse movement, applying rotation, and limited camera angles.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="first-person-camera.md">First person camera</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/third-person-camera_thumb.webp" class="card-img-top" alt="Third person camera">
+            <div class="card-body">
+                <h2 class="card-title h5">Third person camera</h2>
+                <p class="card-text">Understand third person offset, wall clamping, and first person fallback.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="third-person-camera.md">Third person camera</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/navigation_thumb.webp" class="card-img-top" alt="Navigation">
+            <div class="card-body">
+                <h2 class="card-title h5">Navigation</h2>
+                <p class="card-text">Dive into navigation meshes, navigation settings, and pathfinding.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="navigation.md">Navigation</a> tutorial</p>
+        </div>
+    </div>
 </div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Collision triggers</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Collision triggers](media/collision-triggers_thumb.png "Collision triggers") 
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Colliders</li> 
-            <li>Trigger events</li> 
-            <li>Colliding entities</li> 
-        </ul>
-    </div>
-    ](collision-triggers.md) 
-</div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Raycasting</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Raycasting](media/raycasting_thumb.png "Raycasting") 
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Raycasting</li> 
-            <li>Collision groups</li> 
-            <li>Pentrative raycasting</li> 
-        </ul>
-    </div>
-    ](raycasting.md) 
-</div>
-
-
-<div class='tutorial'> 
-    [
-    <div class='tutorial_title'>
-       <h2>Project and Unproject</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Project and Unproject](media/project-unproject_thumb.png "Project and Unproject")  
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Projecting</li> 
-            <li>Unprojecting</li> 
-            <li>Viewports</li> 
-        </ul>
-    </div>
-    ](project-and-unproject.md) 
-</div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Async scripts</h2>
-    </div>
-    <div class='stride-documentation-image'>   
-        ![Async scripts](media/async-scripts_thumb.png "Async scripts")
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Asynchronous scripts</li> 
-            <li>Async collision triggers</li> 
-            <li>Async web api</li> 
-        </ul>
-    </div>
-    ](async-scripts.md) 
-</div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Scenes</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Scenes](media/scenes_thumb.png "Scenes")
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Child scenes</li> 
-            <li>Removing a scene</li> 
-            <li>(Re)loading a scene</li> 
-        </ul>
-    </div>
-    ](scenes.md) 
-</div>
-
-
-<div class='tutorial'> 
-    [
-    <div class='tutorial_title'>
-       <h2>Animation basics</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Animation basics](media/animation-basics_thumb.png "Animation basics")
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Animation clips</li> 
-            <li>Play and pause</li> 
-            <li>Cross fade</li> 
-        </ul>
-    </div>
-    ](animation-basics.md) 
-</div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Audio</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Audio](media/audio_thumb.png "Audio")
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Sounds and music</li> 
-            <li>Spatialized sound</li> 
-            <li>Streaming music</li> 
-        </ul>
-    </div>
-    ](audio.md) 
-</div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>First person camera</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![First person camera](media/first-person-camera_thumb.png "First person camera")   
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Mouse movement</li> 
-            <li>Applying rotation</li> 
-            <li>Limited camera angles</li> 
-        </ul>
-    </div>
-    ](first-person-camera.md) 
-</div>
-
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Third person camera</h2>
-    </div>
-    <div class='stride-documentation-image'>
-        ![Third person camera](media/third-person-camera_thumb.png "Third person camera")   
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Third person offset</li> 
-            <li>Wall clamping</li> 
-            <li>First person fallback</li> 
-        </ul>
-    </div>
-    ](third-person-camera.md) 
-</div>
-
-<div class='tutorial'>
-    [
-    <div class='tutorial_title'>
-       <h2>Navigation</h2>
-    </div>
-    <div class='stride-documentation-image'> 
-        ![Navigation](media/navigation_thumb.png "Navigation")
-    </div>
-    <div class='tutorial_description'>
-        <ul>
-            <li>Navigation meshes</li> 
-            <li>Navigation settings</li> 
-            <li>Pathfinding</li> 
-        </ul>
-    </div>
-    ](navigation.md) 
-</div>
-
-
-

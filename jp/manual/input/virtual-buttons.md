@@ -1,7 +1,7 @@
 # 仮想ボタン
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 制御を物理的なキーやボタンにバインドするのではなく、**仮想ボタン**にバインドすることができます。ユーザーは、物理ボタンを仮想ボタンに割り当てて、独自の制御方法を作成できます。
 

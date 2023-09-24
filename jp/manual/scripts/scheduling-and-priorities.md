@@ -1,7 +1,7 @@
 # スケジューリングと優先度
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 Stride では、スクリプトは同時には実行されず、一度に 1 つだけ実行されます。スクリプトが相互に依存している場合は、優先順位を指定することにより、正しい順序で実行されるようにする必要があります。
 

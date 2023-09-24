@@ -1,7 +1,7 @@
 # レイキャスティング
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **レイキャスティング**は、シーン内を通る見えない直線をトレースして、交差している[コライダー](colliders.md)を検出します。これは、たとえば、銃の射線内にあるオブジェクトや、ユーザーがクリックしたときにマウス カーソルの下にあるオブジェクトを調べるのに役立ちます。
 

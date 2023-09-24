@@ -1,7 +1,7 @@
 # 物理特性のシミュレーション
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 Stride の物理特性は、[Simulation](xref:Stride.Physics.Simulation) クラスによって制御されます。
 Stride による [Simulation](xref:Stride.Physics.Simulation) の初期化方法は、**GameSettings** アセットのプロパティでアクセスする [PhysicsSettings](xref:Stride.Physics.PhysicsSettings) のフラグを修正することによって変更できます。

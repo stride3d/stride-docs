@@ -1,7 +1,7 @@
 # アニメーション プロパティ
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 [アニメーションをインポート](import-animations.md)した後は、［Asset view］(既定では下部のペイン) でそのアニメーションを選択し、［Property grid］(既定では右側) でそのプロパティを表示および編集できます。
 

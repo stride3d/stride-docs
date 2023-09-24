@@ -1,8 +1,8 @@
 # チュートリアル: 軌跡の作成
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 このチュートリアルでは、パーティクルを使用して、剣を振ったときの[残影効果](../ribbons-and-trails.md)を作成する方法を説明します。
 
