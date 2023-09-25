@@ -2,14 +2,14 @@ name: Publish to GitHub Wiki
 on:
   push:
     branches:
-      - staging
+      - master
     paths:
       - wiki/**
   workflow_dispatch:
 
 jobs:
   build:
-    #if: github.repository == 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs'
     runs-on: ubuntu-latest
 
     steps:

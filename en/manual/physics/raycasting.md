@@ -47,5 +47,11 @@ public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, Camer
 }
 ```
 
+>[!Note]
+>There are multiple ways to retrieve a reference to this `Simulation` from inside one of your `ScriptComponent`:
+>- The recommended way is through a reference to a physics component, something like `myRigidBody.Simulation` or `myCollision.Simulation` as it is the fastest.
+>- Then through `SceneSystem` by calling `SceneSystem.SceneInstance.GetProcessor<PhysicsProcessor>()?.Simulation`.
+>- Or through `this.GetSimulation()`, note that the `this` is required as it is an extension method.
+
 ## See also
 * [Colliders](colliders.md)
