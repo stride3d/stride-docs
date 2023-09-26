@@ -39,7 +39,7 @@ When you're ready to publish your game, create a release build from Visual Studi
 
 ### To build using terminal instead of Visual Studio
 
- 1. You would need to install Visual Studio to get **Developer Command Propmt for Visual Studio (Version)**
+ 1. You would need to install Visual Studio to get **Developer Command Prompt for Visual Studio (Version)**
  2. In Developer Command Prompt for Visual Studio
  3. ```console
     C:\User> msbuild PathToSln\NameOfProject.sln /p:Configuration=Release /p:OutputPath=YourPreferredPath
