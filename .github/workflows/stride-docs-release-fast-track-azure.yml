@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 # The Fast Track skips creating artifacts and compressing them
-name: Build Stride Docs (Fast Track) for Azure Web App Staging
+name: Build Stride Docs (Fast Track) for Azure Web App Release 🚀
 
 on:
   workflow_dispatch:
@@ -53,6 +53,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
           app-name: 'stride-doc'
-          slot-name: 'staging'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32FCD402B970463A9143B24C9B225749 }}
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4803638D673FA67D0C8650F34C4FA9D1 }}
           package: ./stride-docs/_site
