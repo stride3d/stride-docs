@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    # Run this job only if the repository is 'stride3d/stride-docs'
     if: github.repository == 'stride3d/stride-docs'
     runs-on: ubuntu-latest
 
