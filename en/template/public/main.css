@@ -13,6 +13,10 @@
     height: 37px;
 }
 
+#navbar ul.navbar-nav {
+    margin-top: -3px;
+}
+
 .filter input, .search input {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
