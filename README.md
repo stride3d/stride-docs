@@ -5,6 +5,7 @@ Welcome to the Stride Docs repository. This repository contains all the source f
 * [Getting Started](#-getting-started)
 * [Contributing](#-contributing)
 * [Roadmap](#%EF%B8%8F-roadmap)
+* [Stride Documentation Landscape](#-stride-documentation-landscape)
 * [.NET Foundation](#-net-foundation)
 * [License](#%EF%B8%8Flicense)
 
