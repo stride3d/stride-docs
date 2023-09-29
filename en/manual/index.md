@@ -11,7 +11,7 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 ### Recent updates
 
-- <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](manual/stride-for-unity-developers/index.md) - Content improvements
+- <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
 
 ### Previous updates
 
