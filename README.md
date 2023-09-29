@@ -1,6 +1,6 @@
 # Stride Docs Development
 
-Welcome to the Stride Docs repository. This repository contains all the source files for the Stride documentation http://doc.stride3d.net/.
+Welcome to the Stride Docs repository. This repository contains all the source files for the Stride documentation https://doc.stride3d.net/.
 
 * [Getting Started](#-getting-started)
 * [Contributing](#-contributing)
