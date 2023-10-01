@@ -1,6 +1,6 @@
 # Stride documentation
 
-Welcome to the Stride documentation, specifically designed for game developers, visual creators, and all users of the powerful Stride game engine. This resource is packed with detailed tutorials, in-depth manuals, and comprehensive API references to help you bring your game development visions to life with Stride. Whether you're new to Stride or looking to hone your skills, you'll find everything you need right here. Dive in, and let's create something extraordinary!
+Welcome to the Stride documentation, specifically designed for game developers, visual creators, and all users of the powerful [Stride game engine](https://www.stride3d.net/). This resource is packed with detailed tutorials, in-depth manuals, and comprehensive API references to help you bring your game development visions to life with Stride. Whether you're new to Stride or looking to hone your skills, you'll find everything you need right here. Dive in, and let's create something extraordinary!
 
 > [!TIP]
 > This documentation is primarily for users of the Stride engine. If you are interested in contributing to the Stride engine code base, please follow the [Stride contribution instructions](https://github.com/stride3d/stride).

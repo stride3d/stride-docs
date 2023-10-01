@@ -37,13 +37,11 @@ When you're ready to publish your game, create a release build from Visual Studi
 > [!Tip]
 > You might want to rename the **Release** folder to something more descriptive (such as the title of your game).
 
-## To build using terminal instead of VS
+### To build using terminal instead of Visual Studio
 
- 1. You would need to install VS to get **Developer Command Propmt for VS (Version)**
- 2. This is needed to run the msbuild command
-
- 3. The following command is to build the project to a folder of your choosing
- 4. ```console
+ 1. You would need to install Visual Studio to get **Developer Command Prompt for Visual Studio (Version)**
+ 2. In Developer Command Prompt for Visual Studio
+ 3. ```console
     C:\User> msbuild PathToSln\NameOfProject.sln /p:Configuration=Release /p:OutputPath=YourPreferredPath
     ```
 
