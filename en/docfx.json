@@ -89,6 +89,8 @@
           "ReleaseNotes/**/*.md",
           "manual/toc.yml",
           "manual/**/*.md",
+          "contributors/toc.yml",
+          "contributors/**/*.md",
           "diagnostics/toc.yml",
           "diagnostics/**/*.md"
         ]

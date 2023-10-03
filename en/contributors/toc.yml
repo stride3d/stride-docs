@@ -7,14 +7,8 @@
   href: engine/contribute-engine.md
   items:
   - name: Building source
-    href: building-source.md
+    href: engine/building-source.md
   - name: Build pipeline
-    href: build-pipeline.md
-- name: 🛠️ Stride documentation
-  expanded: false
-  href: contribute-documentation.md
-- name: 🛠️ Stride website
-  expanded: false
-  href: contribute-website.md
+    href: engine/build-pipeline.md
 
 
