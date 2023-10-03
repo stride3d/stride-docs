@@ -14,8 +14,9 @@
   #   href: tutorials/csharpintermediate/index.md
 - name: 📝 Release Notes
   href: ReleaseNotes/ReleaseNotes.md
-- name: 🌟 Contributing
-  href: contributors/ways-to-contribute.md
+- name: 🌟 Contributing  
+  href: contributors/
+  homepage: contributors/ways-to-contribute.md
 - name: 🔧 API
   href: api/
   homepage: api/index.md
