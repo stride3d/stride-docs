@@ -24,9 +24,9 @@ Making Stride more stable greatly improves usability and user satisfaction. So i
 Contributing to Pull Requests (PRs) is excellent as it enables active participation without local builds. Reviewing and offering feedback in this collaborative process enhances code quality and maintains project standards, fostering a sense of community and knowledge sharing.
 
 
-### [Contribute code](contribute-code.md)
+### [Contribute code](engine/contribute-engine.md)
 If you're passionate about C# and want to contribute by building features or fixing bugs in Stride, dive into the source code and get involved!
 Have a look at the Github issues label [Good first issue](https://github.com/stride3d/stride/labels/good%20first%20issue).
 
-### [Contribute to Documentation](contribute-documentation.md)
+### [Contribute to Documentation](documentation/contribute-documentation.md)
 Enhance the official documentation and tutorials by expanding the manual or creating textual/video guides. Your contributions will greatly improve accessibility and understanding for users.
