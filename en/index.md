@@ -36,6 +36,15 @@ Welcome to the Stride documentation, specifically designed for game developers, 
     <div class="col-md-6">
         <div class="card h-100">
             <div class="card-body">
+                <h2 class="card-title h5">🌟 Contributors</h2>
+                <p class="card-text">Learn how you can contribute to Stride's development.</p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link" href="contributors/index.md">Start contributing to Stride</a></p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
                 <h2 class="card-title h5">🔧 API Reference</h2>
                 <p class="card-text">Access Stride's API documentation, which covers methods, properties, and other essential information.</p>
             </div>
