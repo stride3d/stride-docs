@@ -15,7 +15,7 @@
 - name: 📝 Release Notes
   href: ReleaseNotes/ReleaseNotes.md
 - name: 🌟 Contributing
-  href: contributors/index.md
+  href: contributors/ways-to-contribute.md
 - name: 🔧 API
   href: api/
   homepage: api/index.md
