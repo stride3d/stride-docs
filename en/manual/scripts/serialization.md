@@ -9,7 +9,7 @@ The editor and serialization system uses four attributes to determine what is se
 Adding this attribute to your `class` or `struct` notifies the serializer and the editor that it should
 show fields and properties of that type, and serialize the data it contains with the scenes or assets that might include it.
 ```cs
-[DataContract(Inherited = true)]
+[Stride.Core.DataContract(Inherited = true)]
 public class MySerializedClass
 {
     public float MyValue;
@@ -84,7 +84,7 @@ public object obj;
 // Read and set in editor with attribute
 [DataMember] public internal object obj;
 
-// Read only ... readonly are read only.
+// Read only fields cannot be modified to point at another object, but the currently set object may be modified
 public readonly object obj;
 [DataMember] internal readonly object obj;
 
