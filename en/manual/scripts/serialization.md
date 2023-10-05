@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-The editor and serialization system uses three attributes to determine what is serialized and visible in the editor.
+The editor and serialization system uses four attributes to determine what is serialized and visible in the editor.
 
 ### [DataContractAttribute](xref:Stride.Core.DataContractAttribute)
 Adding this attribute to your `class` or `struct` notifies the serializer and the editor that it should
@@ -38,10 +38,6 @@ public class MySerializedClass
 {
     [Stride.Core.DataMember]
     internal float MyValue;
-    
-    
-    [DataMember("Item1")]
-    public string ItemRenamed1 { get; set; }
 }
 ```
 
