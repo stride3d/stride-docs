@@ -10,7 +10,7 @@ When you declare a public property or field in a script, the property becomes ac
 You can attach the same script to multiple entities and set different property values on each entity.
 
 > [!Note] 
-> Public properties or fields must be serializable to be used in Game Studio. 
+> Properties and fields must be [serializable](serialization.md) to be used in Game Studio. 
 
 ## Add a public property or field
 
@@ -100,8 +100,23 @@ On next reload, the Game Studio should display the documentation:
 
 ![The description now shows in the Property Grid](media/userdoc-example.png)
 
+## [MemberRequiredAttribute](xref:Stride.Core.Annotations.MemberRequiredAttribute)
+This attribute is used to specify if a field or property should not be left null in editor.
+If no values are set for this member, a warning or error will be logged when building your game.
+```cs
+[Stride.Core.Annotations.MemberRequired(MemberRequiredReportType.Error)] public CharacterComponent MyCharacter;
+```
+
+#### [DataMemberRangeAttribute](xref:Stride.Core.Annotations.DataMemberRangeAttribute)
+#### [InlinePropertyAttribute](xref:Stride.Core.Annotations.InlinePropertyAttribute)
+#### [ItemCanBeNullAttribute](xref:Stride.Core.Annotations.ItemCanBeNullAttribute)
+#### [ItemNotNullAttribute](xref:Stride.Core.Annotations.ItemNotNullAttribute)
+#### [MemberCollectionAttribute](xref:Stride.Core.Annotations.MemberCollectionAttribute)
+#### [DataStyleAttribute](xref:Stride.Core.DataStyleAttribute)
+
 ## See also
 
+* [Serialization](serialization.md)
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)

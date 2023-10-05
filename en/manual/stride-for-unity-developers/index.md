@@ -787,6 +787,7 @@ System.Diagnostics.Debug.WriteLine("hello");
 | `[Serializable]`          | `[DataContract]`                    |
 | `[SerializeField]`        | `[DataMember]`                      |
 | `[HideInInspector]`       | `[DataMemberIgnore]`                |
+| `[Range]`                 | `[DataMemberRange]`                 |
 | `[Header]`                | `[Display]`                         |
 | `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
 
