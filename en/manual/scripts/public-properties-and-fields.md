@@ -113,6 +113,7 @@ If no values are set for this member, a warning or error will be logged when bui
 #### [ItemNotNullAttribute](xref:Stride.Core.Annotations.ItemNotNullAttribute)
 #### [MemberCollectionAttribute](xref:Stride.Core.Annotations.MemberCollectionAttribute)
 #### [DataStyleAttribute](xref:Stride.Core.DataStyleAttribute)
+#### [DisplayAttribute](xref:Stride.Core.DisplayAttribute)
 
 ## See also
 

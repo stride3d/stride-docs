@@ -47,6 +47,8 @@ Can be used to ensure you do not break previously serialized data whenever you h
 [Stride.Core.DataAlias("PreviousNameOfProp")]
 public string MyRenamedProp { get; set; }
 ```
+> [!Note]
+> Alias remaps values only while in the editor; this feature is specific to the YAML serialization system. Alias will be ignored during builds and at runtime.
 
 ### [DataMemberIgnoreAttribute](xref:Stride.Core.DataMemberIgnoreAttribute)
 This notifies the editor and serializer that the property or field on this [DataContract](#datacontractattribute)'ed
