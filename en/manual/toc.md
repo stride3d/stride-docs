@@ -222,6 +222,7 @@
 ## [Create a script](scripts/create-a-script.md)
 ## [Use a script](scripts/use-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
+## [Serialization](scripts/serialization.md)
 ## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
 ## [Events](scripts/events.md)
 ## [Debugging](scripts/debugging.md)
