@@ -6,23 +6,27 @@
   expanded: false
   href: engine/index.md
   items:
-  - name: Contributing to Stride
-    href: engine/contribute-engine.md
+  - name: Contribute to code
+    href: engine/contribute-code.md
   - name: Building source on Windows
     href: engine/building-source-windows.md
   - name: Building source on Linux
     href: engine/building-source-linux.md
-  - name: Build pipeline
-    href: engine/build-pipeline.md
   - name: Localization
     href: engine/localization.md
-  - name: Build architecture
-    href: engine/build-architecture.md
-  - name: Graphics API
-    href: engine/architecture/graphics-api.md
-  - name: Dependency graph
-    href: engine/architecture/dependency-graph.md
-  - name: Asset introspection
-    href: engine/build-pipeline.md
+  - name: 🧬️ Architecture
+    expanded: false
+    href: engine/architecture/index.md
+    items:
+    - name: Build pipeline
+      href: engine/architecture/build-pipeline.md
+    - name: Build details
+      href: engine/architecture/build-details.md
+    - name: Graphics API
+      href: engine/architecture/graphics-api.md
+    - name: Dependency graph
+      href: engine/architecture/dependency-graph.md
+    - name: Asset introspection
+      href: engine/build-pipeline.md
 
 
