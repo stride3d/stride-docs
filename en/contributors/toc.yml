@@ -6,9 +6,17 @@
   expanded: false
   href: engine/contribute-engine.md
   items:
-  - name: Building source
-    href: engine/building-source.md
+  - name: Building source on Windows
+    href: engine/building-source-windows.md
+  - name: Building source on Linux
+    href: engine/building-source-linux.md
   - name: Build pipeline
+    href: engine/build-pipeline.md
+  - name: Build details
+    href: engine/build-details.md
+  - name: Localization
+    href: engine/localization.md
+  - name: Asset introspection
     href: engine/build-pipeline.md
 
 
