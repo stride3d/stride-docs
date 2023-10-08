@@ -1,12 +1,5 @@
 ﻿# Build details
 
-?? https://github.com/stride3d/stride/edit/master/docs/technical/build-pipeline.md
-WIP: COPIED from link above
-
-﻿# Build
-
-## Overview
-
 This is a technical description what happens in our build and how it is organized. This covers mostly the build architecture of Stride itself.
 
 * [Targets](../Targets) contains the MSBuild target files used by Games

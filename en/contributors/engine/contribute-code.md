@@ -1,5 +1,4 @@
-﻿# Contributing to Stride
-
+﻿# Contribute Code
 
 ## Check our issue tracker
 Please take a look at our [issue tracker](https://github.com/stride3d/stride/issues).
