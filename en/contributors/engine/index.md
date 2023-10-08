@@ -11,15 +11,23 @@ Building and running the Stride engine locally on Windows using [Visual Studio](
 Building the Stride engine locally on Linux
 
 # [Localization](localization.md)
-A graphical overview of Stride's Assemblies, NameSpaces and Core methods 
+Learn how manage translations for the engine.
+
+# [Build pipeline](build-pipeline.md)
+Explanation on the current build pipeline.
+
 
 
 # Architecture
-## [Graphics API](graphics-api.md)
+
+# [Build architecture](architecture/build-architecture.md)
+Details on how the Stride engine is designed.
+
+## [Graphics API](architecture/graphics-api.md)
 Stride support different graphics APIs. Here you can read more about them.
 
-## [Dependency graph](dependency-graph.md)
+## [Dependency graph](architecture/dependency-graph.md)
 A graphical overview of Stride's Assemblies, NameSpaces and Core methods
 
-## [Asset introspection](asset-introspection.md)
+## [Asset introspection](architecture/asset-introspection.md)
 How and why the Stride engine uses asset introspection
