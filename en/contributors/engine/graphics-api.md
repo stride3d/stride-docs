@@ -1,16 +1,25 @@
-﻿# Localization
+﻿# Graphics API
+To run your projects through a different API than the default one, add the following line to the `PropertyGroup` of your executable's `.csproj` file:
 
-?? https://github.com/stride3d/stride/edit/master/docs/localization.md
-WIP: COPIED from link above
+`<StrideGraphicsApi>Vulkan</StrideGraphicsApi>`
 
-## Translation
+![image](https://user-images.githubusercontent.com/5742236/155832596-48165499-51ac-4026-9140-30b35dfa4f0b.png)
 
-Please help us translate by updating existing translations and/or adding new language at https://hosted.weblate.org/projects/stride/
+Supported values are as follows:
+```
+Null
+Direct3D11
+Direct3D12
+OpenGL
+OpenGLES
+Vulkan
+```
 
-Translation are manually merged back from `weblate` branch to `master` branch.
+You *may* also have to add `<PackageReference Include="Stride.Shaders.Compiler" Version="x.x.x.x" />` to your *main* `.csproj`, and don't forget to replace `Version` appropriately.
 
-## Activate new language in Game Studio
+![image](https://github.com/stride3d/stride/assets/5742236/fbe35875-fb07-4f2f-ae8a-e9ea34eed471)
 
-Once a new language has been added on weblate, it needs to be activated in the Game Studio during build & startup.
+## Engine
+If you are using a local build of the engine you should run the build again with the following command:
 
-Please check commit https://github.com/stride3d/stride/commit/c70f07f449 for an example on how to add a new language in Game Studio.
+`msbuild /t:Build /p:StrideGraphicsApiDependentBuildAll=true Stride.sln`

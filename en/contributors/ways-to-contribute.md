@@ -16,7 +16,7 @@ The best way to promote Stride is by creating a cool demo or, even better, a ful
 We utilize Open Collective for fundraising. The funds collected are allocated towards bug bounties and compensating individuals contracted for paid work.
 
 
-### Submit bug reports 🐛
+### [Submit bug reports](https://github.com/stride3d/stride/issues) 🐛
 Making Stride more stable greatly improves usability and user satisfaction. So if you encounter a bug during development, please contribute by reporting it on [Github](https://github.com/stride3d/stride/issues).
 
 

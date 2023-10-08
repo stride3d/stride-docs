@@ -1,16 +1,14 @@
-﻿# Localization
+﻿# Dependency graph
 
-?? https://github.com/stride3d/stride/edit/master/docs/localization.md
-WIP: COPIED from link above
+### Assemblies
+ <img src="../media/assemblies_stride.svg" class="card-img-top" alt="Assemblies of Stride">
 
-## Translation
+### Namespaces
 
-Please help us translate by updating existing translations and/or adding new language at https://hosted.weblate.org/projects/stride/
+ <img src="../media/namespaces_stride.svg" class="card-img-top" alt="Namespace of Stride">
 
-Translation are manually merged back from `weblate` branch to `master` branch.
+### Stride.Core methods
 
-## Activate new language in Game Studio
+ <img src="../media/Stride.Core Methods.svg" class="card-img-top" alt="Stride.Core methods">
 
-Once a new language has been added on weblate, it needs to be activated in the Game Studio during build & startup.
-
-Please check commit https://github.com/stride3d/stride/commit/c70f07f449 for an example on how to add a new language in Game Studio.
+ <img src="../media/Stride.Core Methods2.svg" class="card-img-top" alt="Stride.Core methods 2">
