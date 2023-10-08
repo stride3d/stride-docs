@@ -14,10 +14,14 @@
     href: engine/building-source-linux.md
   - name: Build pipeline
     href: engine/build-pipeline.md
-  - name: Build architecture
-    href: engine/build-architecture.md
   - name: Localization
     href: engine/localization.md
+  - name: Build architecture
+    href: engine/build-architecture.md
+  - name: Graphics API
+    href: engine/architecture/graphics-api.md
+  - name: Dependency graph
+    href: engine/architecture/dependency-graph.md
   - name: Asset introspection
     href: engine/build-pipeline.md
 
