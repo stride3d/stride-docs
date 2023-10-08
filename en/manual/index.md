@@ -11,6 +11,8 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 ### Recent updates
 
+- <span class="badge text-bg-success">New</span> [Serialization](manual/scripts/serialization.md) - Serialization explained
+- <span class="badge text-bg-info">Updated</span> [Public properties and fields](manual/scripts/public-properties-and-fields.md) - Content improvements and additions
 - <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
 
 ### Previous updates
