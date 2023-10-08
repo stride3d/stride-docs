@@ -1,9 +1,8 @@
 ﻿# Building the source to Stride engine
 
 ??
-WIP: make a page that is refernced by the readme.md on Stride: https://github.com/stride3d/stride
-
-
+WIP: make a page that is refernced by the readme.md on Stride:
+https://github.com/stride3d/stride
 
 
 COPIED from readme.mdf.............
