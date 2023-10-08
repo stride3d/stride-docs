@@ -31,25 +31,26 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 >[!Note]
 >As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
 
->For example, the following code will create problems, as it tries to access `Entity.Components`, which is only available at runtime:
+For example, the following code will create problems, as it tries to access `Entity.Components`, which is only available at runtime:
 
->```cs
->public class SampleSyncScript : StartupScript
->{
->	private float delayTimeOut;
->	// This public member will appear in Game Studio
->	public float DelayTimeOut
->	{
->		get { return delayTimeOut; }
->		set
->		{ 
->			delayTimeOut = value;
->			Entity.Components.Add(new SkyboxComponent());
->		}
->	}
->}
->```
->If you want to include code like this in a property or field, hide it so Game Studio doesn't display it (see below). 
+```cs
+public class SampleSyncScript : StartupScript
+{
+	private float delayTimeOut;
+	// This public member will appear in Game Studio
+	public float DelayTimeOut
+	{
+		get { return delayTimeOut; }
+		set
+		{ 
+			delayTimeOut = value;
+			Entity.Components.Add(new SkyboxComponent());
+		}
+	}
+}
+```
+
+If you want to include code like this in a property or field, hide it so Game Studio doesn't display it (see below). 
 
 ## Hide properties or fields in the Property Grid
 
@@ -59,10 +60,9 @@ If you don't want Game Studio to show a property in the Property Grid, you can:
 * use the [DataMemberIgnore](xref:Stride.Core.DataMemberIgnoreAttribute) attribute like this:
 
 ```cs
-
-	// This public property isn't available in Game Studio
-	[DataMemberIgnore]
-	public float DelayTimeOut { get; set; }
+// This public property isn't available in Game Studio
+[DataMemberIgnore]
+public float DelayTimeOut { get; set; }
 	
 ```
 
@@ -75,22 +75,22 @@ Game Studio no longer shows the property:
 When you add a `<userdoc>` comment block above your public property in code, Game Studio will display it in the description field.
 
 ```cs
-	///<summary>
-	/// This summary won't show in Game Studio
-	///</summary>
-	///<userdoc>
-	/// This description will show in Game Studio
-	///</userdoc>
-	public float DelayTimeOut { get; set; }
+///<summary>
+/// This summary won't show in Game Studio
+///</summary>
+///<userdoc>
+/// This description will show in Game Studio
+///</userdoc>
+public float DelayTimeOut { get; set; }
 
 ```
 
 Enable documentation file generation:
 ```xml
-  <PropertyGroup>
-    <TargetFrameworks>net6.0</TargetFrameworks>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-  </PropertyGroup>
+<PropertyGroup>
+  <TargetFrameworks>net6.0</TargetFrameworks>
+  <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+</PropertyGroup>
 ```
 
 > [!NOTE]
@@ -100,20 +100,23 @@ On next reload, the Game Studio should display the documentation:
 
 ![The description now shows in the Property Grid](media/userdoc-example.png)
 
-## [MemberRequiredAttribute](xref:Stride.Core.Annotations.MemberRequiredAttribute)
-This attribute is used to specify if a field or property should not be left null in editor.
-If no values are set for this member, a warning or error will be logged when building your game.
+## MemberRequiredAttribute
+The [`MemberRequiredAttribute`](xref:Stride.Core.Annotations.MemberRequiredAttribute) is used to specify if a field or property should not be left null in the editor. If no values are set for this member, a warning or error will be logged when building your game.
+
+
 ```cs
 [Stride.Core.Annotations.MemberRequired(MemberRequiredReportType.Error)] public CharacterComponent MyCharacter;
 ```
 
-#### [DataMemberRangeAttribute](xref:Stride.Core.Annotations.DataMemberRangeAttribute)
-#### [InlinePropertyAttribute](xref:Stride.Core.Annotations.InlinePropertyAttribute)
-#### [ItemCanBeNullAttribute](xref:Stride.Core.Annotations.ItemCanBeNullAttribute)
-#### [ItemNotNullAttribute](xref:Stride.Core.Annotations.ItemNotNullAttribute)
-#### [MemberCollectionAttribute](xref:Stride.Core.Annotations.MemberCollectionAttribute)
-#### [DataStyleAttribute](xref:Stride.Core.DataStyleAttribute)
-#### [DisplayAttribute](xref:Stride.Core.DisplayAttribute)
+## Additional Serialization Attributes
+
+- [`DataMemberRangeAttribute`](xref:Stride.Core.Annotations.DataMemberRangeAttribute)
+- [`InlinePropertyAttribute`](xref:Stride.Core.Annotations.InlinePropertyAttribute)
+- [`ItemCanBeNullAttribute`](xref:Stride.Core.Annotations.ItemCanBeNullAttribute)
+- [`ItemNotNullAttribute`](xref:Stride.Core.Annotations.ItemNotNullAttribute)
+- [`MemberCollectionAttribute`](xref:Stride.Core.Annotations.MemberCollectionAttribute)
+- [`DataStyleAttribute`](xref:Stride.Core.DataStyleAttribute)
+- [`DisplayAttribute`](xref:Stride.Core.DisplayAttribute)
 
 ## See also
 
