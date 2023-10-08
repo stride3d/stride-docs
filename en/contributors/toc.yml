@@ -2,7 +2,7 @@
   href: ways-to-contribute.md
 - name: 💸 Donate
   href: donate.md
-- name: 🛠️ Stride engine
+- name: 🛠️ Contribute to the engine
   expanded: false
   href: engine/index.md
   items:
@@ -27,6 +27,4 @@
     - name: Dependency graph
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
-      href: engine/build-pipeline.md
-
-
+      href: engine/architecture/build-pipeline.md
