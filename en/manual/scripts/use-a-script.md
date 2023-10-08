@@ -56,16 +56,16 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 >[!Note]
 >You can customize where scripts appear in the dropdown using the `ComponentCategoryAttribute`:
 
->```cs
->[ComponentCategory("My Startup Scripts")]
->public class SampleStartupScript : StartupScript
->{
->    public override void Start()
->    {
->        // Do some stuff during initialization
->    }
->}
->```
+```cs
+[ComponentCategory("My Startup Scripts")]
+public class SampleStartupScript : StartupScript
+{
+    public override void Start()
+    {
+        // Do some stuff during initialization
+    }
+}
+```
 
 ## Add a script from code
 
