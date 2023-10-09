@@ -54,6 +54,7 @@
 ### [Asset bundles](engine/assets/asset-bundles.md)
 ### [Asset control](engine/assets/asset-control.md)
 ## [Entity component model](engine/entity-component-model/index.md)
+### [Usage](engine/entity-component-model/usage.md)
 ### [Manage entities](engine/entity-component-model/managing-entities.md)
 ## [File system](engine/file-system.md)
 
