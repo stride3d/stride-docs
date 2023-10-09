@@ -1,6 +1,7 @@
 # Entity-Component Model
 
-[!INCLUDE [stride-studio-note](../../../includes/under-construction-note.md)]
+>[!Warning]
+>This section is out of date. For now, you should only use it for reference.
 
 # Overview
 
