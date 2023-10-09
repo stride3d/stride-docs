@@ -1,7 +1,7 @@
 # ジェスチャー
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 ジェスチャとは、あらかじめ定義されている[ポインター](pointers.md) パターンです。Stride は、ジェスチャを認識して対応するイベントをトリガーできます。たとえば、戦略ゲームでは、プレイヤーは**ドラッグ** ジェスチャを使用して戦場にユニットをドラッグ アンド ドロップできます。ジェスチャでは 1 本または複数本の指を使用できます。
 

@@ -3,13 +3,13 @@
 # Skyboxes and backgrounds
 -->
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 **スカイボックス（Skybox）** とは、空間や距離を感じさせる背景のことです。典型的なスカイボックスの背景には、空、雲、山、その他の風景があります。スカイボックスは事前にレンダリング済みの画像であるため、GPU や CPU の使用量が少なくて済みます。

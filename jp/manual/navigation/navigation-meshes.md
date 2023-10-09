@@ -1,8 +1,8 @@
 # ナビゲーション メッシュ
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **ナビゲーション メッシュ**は、ナビゲーション コンポーネントを持つエンティティがナビゲートできる領域を形成します。作成された各[ナビゲーション グループ](navigation-groups.md)に対して、ナビゲーション メッシュにレイヤーが作成されます。
 

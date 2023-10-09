@@ -1,7 +1,7 @@
 # Draw vertices
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 When loading a scene, Stride automatically handles the draw calls to display the scene throughout the entity system. This page introduces manual drawing.
 

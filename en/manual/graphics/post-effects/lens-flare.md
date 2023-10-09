@@ -1,7 +1,7 @@
 # Lens flare
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 
 The **lens flare** effect simulates the artifacts produced by the internal reflection or scattering of the light within a real-world lens.
 

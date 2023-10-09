@@ -1,8 +1,8 @@
 # Navigation meshes
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Navigation meshes** form the area that entities with navigation components can navigate. Stride creates a layer in the navigation mesh for each [navigation group](navigation-groups.md) you create.
 

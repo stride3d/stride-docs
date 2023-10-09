@@ -1,7 +1,7 @@
 # Triggers
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 If you set a collider to be a **trigger**, other colliders no longer bump into it. Instead, they pass through.
 

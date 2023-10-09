@@ -1,7 +1,7 @@
 # Virtual buttons
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Rather than bind controls to physical keys and buttons, you can bind them to **virtual buttons**. Players can then assign physical buttons to the virtual buttons, allowing them to create their own control schemes.
 

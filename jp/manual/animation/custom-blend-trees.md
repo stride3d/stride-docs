@@ -1,7 +1,7 @@
 # カスタム ブレンド ツリー
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 [AnimationComponent](xref:Stride.Engine.AnimationComponent) には、[AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) プロパティがあります。再生されるアニメーション、アニメーションのブレンド方法、アニメーションの重みを全面的に制御したい場合は、`IBlendTreeBuilder` から継承するスクリプトを作成し、アニメーション コンポーネントの BlendTreeBuilder に割り当てます。
 

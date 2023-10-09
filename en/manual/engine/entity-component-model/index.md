@@ -1,6 +1,6 @@
 # Entity-Component Model
 
-<div class="doc-incomplete"/>
+[!INCLUDE [stride-studio-note](../../../includes/under-construction-note.md)]
 
 # Overview
 

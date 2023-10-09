@@ -1,6 +1,6 @@
 # Use assets
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 There are four ways to use assets:
 

@@ -4,7 +4,7 @@
 
 You use scripts by adding them to entities in the scene as components. Stride loads a script when the entity it is added to is loaded in the scene.
 
-Stride scripts are written in **C#**. You can edit scripts in Game Studio or another IDE (such as visual Studio). Scripts are debugged in Visual Studio.
+Stride scripts are written in **C#**. You can edit scripts in Game Studio or another IDE (such as Visual Studio). Scripts are debugged in Visual Studio.
 
 ![Scripts](media/scripting_intro.png)
 

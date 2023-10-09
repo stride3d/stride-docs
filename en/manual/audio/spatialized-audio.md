@@ -1,8 +1,8 @@
 # Spatialized audio
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Spatialized audio**, also called **3D audio**, simulates three-dimensional sound.
 This creates more realistic audio than [non-spatialized audio](non-spatialized-audio.md). 

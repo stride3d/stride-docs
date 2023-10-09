@@ -1,6 +1,6 @@
 # Game Studio
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 **Game Studio** は、Stride でゲームとアプリケーションを開発するときの中心的なツールです。Game Studio では、次のことができます。
 

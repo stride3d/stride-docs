@@ -1,7 +1,7 @@
 # Cameras
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 **Cameras** capture your scene and display it to the player. Without cameras, you can't see anything in your game. 
 

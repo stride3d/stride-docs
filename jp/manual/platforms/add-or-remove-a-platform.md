@@ -1,6 +1,6 @@
 # プラットフォームの追加と削除
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 プロジェクトのプラットフォームを追加または削除することができます。
 

@@ -1,7 +1,7 @@
 # Use sprites
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 To add a sprite to a scene, add a **sprite component** to an entity. Afterwards, you can control the sprite with a script.
 
@@ -53,7 +53,7 @@ You can access the sprite component properties in the **Property Grid**.
 | Alpha cutoff | Ignore pixels with low alpha values when rendering the sprite
 | Sampler | The texture sampling method used for the sprite: Point (nearest), Linear, or Anisotropic
 | Swizzle | How the color channels are accessed. <br><p>**Default** leaves the image unchanged (finalRGB = originalRGB) <br><p>**Normal map** uses the color channels as a [normal map](../graphics/textures/normal-maps.md) <br><p>**Grayscale (alpha)** uses only the R channel (finalRGBA = originalRRRR), so the sprite is red <br><p>**Grayscale (opaque)** is the same as **Grayscale (alpha)**, but uses a value of `1` for the alpha channel, so the sprite is opaque
-| Render group | Which render group the sprite belongs to. Cameras can render different groups. For more information, see [Render groups and render masks](../graphics-compositor/render-groups-and-masks.md).
+| Render group | Which render group the sprite belongs to. Cameras can render different groups. For more information, see [Render groups and render masks](../graphics/graphics-compositor/render-groups-and-masks.md).
 
 ## Use sprites in a script
 

@@ -1,7 +1,7 @@
 # オーディオファイルの範囲再生
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 サウンド アセットの特定部分だけを再生することができます。つまり、たとえば、異なる [SoundInstance](xref:Stride.Audio.SoundInstance) オブジェクトで異なる範囲を指定することによって、1 つのサウンド アセットから複数のサンプルを作成できます。
 

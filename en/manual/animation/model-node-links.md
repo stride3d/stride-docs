@@ -1,7 +1,7 @@
 # Model node links
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
 
 >[!Note]
 >In some versions of Stride, **Model node links** are called **Bone links**.

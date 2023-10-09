@@ -1,7 +1,7 @@
 # Animate a camera with a model file
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
 
 Like other entities, you can [animate](../../animation/index.md) cameras using animations imported from 3D model files such as `.3ds`, `.fbx`, and `.obj`.
 

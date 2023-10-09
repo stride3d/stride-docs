@@ -1,7 +1,7 @@
 # スクリプトの使用
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 スクリプトを使用するには、エンティティにコンポーネントとしてスクリプトを追加します。スクリプトの追加は、Game Studio またはコードで行うことができます。アタッチされているエンティティがロードされると、スクリプトが実行されます。
 

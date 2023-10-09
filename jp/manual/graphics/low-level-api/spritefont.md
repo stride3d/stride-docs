@@ -3,11 +3,11 @@
 # SpriteFont
 -->
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 @'Stride.Graphics.SpriteFont' クラスは、テキストを描くのに便利なクラスです。@'Stride.Graphics.SpriteBatch' クラスとあわせて使用します。

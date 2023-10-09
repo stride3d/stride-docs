@@ -1,7 +1,7 @@
 # プロファイリング
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 プロジェクトを**プロファイリング**して、実行時のパフォーマンスをチェックし、問題を発見できます。Stride のプロファイラーや、Visual Studio のパフォーマンス プロファイラーなどの外部プロファイリング ツールを使用できます。
 

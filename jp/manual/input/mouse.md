@@ -1,7 +1,7 @@
 # マウス
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **マウス**は、デスクトップ ゲームでよく使われる入力デバイスです。
 

@@ -6,86 +6,145 @@
           "files": [
             "sources/core/Stride.Core/Stride.Core.csproj",
             "sources/core/Stride.Core.IO/Stride.Core.IO.csproj",
+            "sources/engine/Stride/Stride.csproj",
             "sources/core/Stride.Core.Mathematics/Stride.Core.Mathematics.csproj",
             "sources/core/Stride.Core.MicroThreading/Stride.Core.MicroThreading.csproj",
             "sources/core/Stride.Core.Serialization/Stride.Core.Serialization.csproj",
-            "sources/assets/Stride.Core.Assets/Stride.Core.Assets.csproj",
-            "sources/engine/Stride/Stride.csproj",
             "sources/engine/Stride.Audio/Stride.Audio.csproj",
+            "sources/engine/Stride.Video/Stride.Video.csproj",
             "sources/engine/Stride.Engine/Stride.Engine.csproj",
             "sources/engine/Stride.Games/Stride.Games.csproj",
             "sources/engine/Stride.Graphics/Stride.Graphics.csproj",
             "sources/engine/Stride.Input/Stride.Input.csproj",
             "sources/engine/Stride.Particles/Stride.Particles.csproj",
-            "sources/engine/Stride.Physics/Stride.Physics.csproj",
             "sources/engine/Stride.Rendering/Stride.Rendering.csproj",
             "sources/engine/Stride.Shaders/Stride.Shaders.csproj",
             "sources/engine/Stride.UI/Stride.UI.csproj",
             "sources/engine/Stride.VirtualReality/Stride.VirtualReality.csproj",
             "sources/engine/Stride.Navigation/Stride.Navigation.csproj"
           ],
-          "cwd": "../../stride",
+          "src": "../../stride",
+          "properties": {
+            "TargetFramework": "net6.0",
+            "StrideBuildDoc": "true"
+          }
+        },
+        {
+          "files": [
+            "sources/assets/Stride.Core.Assets/Stride.Core.Assets.csproj",
+            "sources/engine/Stride.Physics/Stride.Physics.csproj"
+          ],
+          "src": "../../stride",
+          "properties": {
+            "TargetFramework": "net6.0-windows7.0",
+            "StrideBuildDoc": "true"
+          }
         }
       ],
       "dest": "api",
       "filter": "filterConfig.yml",
-      "properties": {
-        "StrideBuildDoc": "true"
-      }
+      "includePrivateMembers": false,
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "noRestore": false,
+      "namespaceLayout": "flattened",
+      "memberLayout": "samePage",
+      "allowCompilationErrors": false
     }
   ],
   "build": {
-    "force": false,
+    "globalMetadata": {
+      "_appTitle": "Stride Docs",
+      "_enableSearch": true,
+      "_appLogoPath": "media/stride-logo-red.svg",
+      "_appLogoUrl": "https://www.stride3d.net/",
+      "_appFooter": "<div class=\"d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small\"><p >Supported by the <a href=\"https://dotnetfoundation.org/\" target=\"_blank\" rel=\"noopener\">.NET Foundation</a></p><p>Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></p><p >Stride Docs Website v.2.0.0.6</p><p>&copy; .NET Foundation and Contributors</p></div>",
+      "_gitContribute": {
+        "repo": "https://github.com/stride3d/stride-docs",
+        "branch": "master"
+      }
+    },
+    "fileMetadata": {
+      "_appTitle": {
+        "tutorials/**/*.md": "Stride Tutorials",
+        "manual/**/*.md": "Stride Manual",
+        "ReleaseNotes/**/*.md": "Stride Release Notes",
+        "api/**/*.md": "Stride API",
+        "diagnostics/**/*.md": "Stride Diagnostics"
+      }
+    },
+    "sitemap": {
+      "baseUrl": "https://doc.stride3d.net/",
+      "priority": 0.1,
+      "changefreq": "monthly"
+    },
     "content": [
       {
         "files": [
-          "toc.yml",
-          "*.md",
+          "api/**.yml",
+          "api/index.md",
+          "tutorials/toc.yml",
+          "tutorials/**/*.md",
+          "ReleaseNotes/toc.yml",
+          "ReleaseNotes/**/*.md",
+          "manual/toc.yml",
           "manual/**/*.md",
-          "api/*.md",
-          "api/*.yml",
-          "ReleaseNotes/*.md",
-          "tutorials/**/*.md"
-        ],
-        "case": false,
-        "noNegate": false,
-        "noExpand": false,
-        "noEscape": false,
-        "noGlobStar": false,
-        "dot": false
+          "diagnostics/toc.yml",
+          "diagnostics/**/*.md"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "examples/**/*.md"
+        ]
       }
     ],
     "resource": [
       {
         "files": [
-          "web.config",
-          "download/**",
+          ".nojekyll",
+          "CNAME",
+          "languages.json",
           "studio_getting_started_links.txt",
+          "favicon.ico",
+          "favicon.png",
+          "images/**",
           "**/media/**/*.png",
           "**/media/**/*.jpg",
           "**/media/**/*.gif",
           "**/media/**/*.mp4",
           "**/media/**/*.zip",
           "**/media/**/*.svg",
+          "**/media/**/*.webp",
           "**/media/**/*.cs"
         ],
-        "case": false,
-        "noNegate": false,
-        "noExpand": false,
-        "noEscape": false,
-        "noGlobStar": false,
-        "dot": false
+        "exclude": [ "_site/**", "obj/**" ]
       }
     ],
-    "globalMetadata": {
-      "_appTitle": "Stride",
-      "_enableSearch": true
+    "globalMetadataFiles": [],
+    "markdownEngineProperties": {
+      "toc": {
+        "levels": "1,2,3"
+      }
     },
-    "dest": "../_site/en",
+    "fileMetadataFiles": [],
     "template": [
       "default",
+      "modern",
       "template"
     ],
-    "serve": false
+    "postProcessors": [ "ExtractSearchIndex" ],
+    "keepFileLink": false,
+    "disableGitFeatures": false
   }
 }

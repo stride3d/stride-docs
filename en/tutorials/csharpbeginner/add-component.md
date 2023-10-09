@@ -2,19 +2,26 @@
 You can find this sample in the tutorial project: **Menu** &rarr; **Adding a component** 
 
 ## Explanation
-This C# Beginner tutorial covers how to add and remove components. In the previous tutorial we learned how we can retrieve components that are already attached to an entity through the editor. This tutorial shows that we can accomplish the same thing by code. We can add the same component several times to the same entity. We also learn how to remove all of components of the same type again.
+This C# Beginner tutorial covers how to add and remove components.
 
-![Add a component](media/adding-a-component.png)
+In the previous tutorial we learned how we can retrieve components that are already attached to an entity through the editor. This tutorial shows that we can accomplish the same thing by code.
+
+We can add the same component several times to the same entity. We also learn how to remove all of components of the same type again.
+
+![Add a component](media/adding-a-component.webp)
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KGuBSRyRmVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+> [!Video https://www.youtube.com/embed/KGuBSRyRmVo]
 
 ## Code
 ### AmmoComponent
 This is the AmmoComponent. We will not attach it to the entity in the editor. Instead we will add it ourselves in the AddingAComponent script.
-[!code-csharp[AmmoComponent](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\AmmoComponent.cs)]
+
+[!code-csharp[AmmoComponent](../../../../stride/samples/Tutorials/CSharpBeginner/CSharpBeginner/CSharpBeginner.Game/Code/AmmoComponent.cs)]
 
 ### Adding A Component
 This component script, will add the AmmoComponent script to the entity. We then add another component (of the same type) before we remove all components of that type.
+
 Finally we learn how to automatically create a component, attach it to the entity and get a reference all in 1 line of code. This only works if the entity doesn't have any components of the given attached yet.
-[!code-csharp[AddingAComponent](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\AddingAComponentDemo.cs)]
+
+[!code-csharp[AddingAComponent](../../../../stride/samples/Tutorials/CSharpBeginner/CSharpBeginner/CSharpBeginner.Game/Code/AddingAComponentDemo.cs)]

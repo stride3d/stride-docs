@@ -1,7 +1,7 @@
 # シーン エディターでの移動
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
 
 シーン内を移動し、エディター カメラの視点を変えることができます。左下にある XYZ 軸が、3D 空間内での向きを示します。
 

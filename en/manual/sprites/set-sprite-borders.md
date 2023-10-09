@@ -1,7 +1,7 @@
 # Set sprite borders
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 **Sprite borders** are areas that don't deform when you scale the sprite. These are often useful for sprites used for [UI elements](../ui/ui-libraries.md) such as menu buttons. You can only set sprite borders for sprites set to the **UI** sheet type.
 

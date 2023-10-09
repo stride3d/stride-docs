@@ -1,7 +1,7 @@
 # センサー
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 プロジェクトの入力デバイスとして、ジャイロスコープや加速度計などのさまざまな**センサー**を使用できます。センサーはモバイル ゲームでよく使用されます。
 

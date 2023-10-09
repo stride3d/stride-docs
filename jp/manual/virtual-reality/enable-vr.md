@@ -1,7 +1,7 @@
 # VR の有効化
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 ここでは、Oculus Rift および Vive デバイスのサポートをゲームに追加する方法を説明します。Stride は他の VR デバイスをまだサポートしていません。
 

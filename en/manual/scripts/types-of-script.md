@@ -1,7 +1,7 @@
 # Types of script
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 There are three main types of script in Stride: **startup scripts**, **synchronous scripts**, and **asynchronous scripts**. 
 

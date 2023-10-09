@@ -1,8 +1,8 @@
 # 動的ナビゲーション
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **動的ナビゲーション**を有効にした場合、ナビゲーション コンポーネントを含むエンティティは[ナビゲーション メッシュ](navigation-meshes.md) アセットを必要としません。代わりに、エンティティはナビゲーション メッシュを動的に生成します。
 

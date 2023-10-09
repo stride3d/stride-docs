@@ -12,7 +12,7 @@ The Stride editor is **Game Studio**. This is the equivalent of the Unity® Edit
 
 *Unity® screenshot taken from [Calling a web-service from a Unity3D scene](http://through-the-interface.typepad.com/through_the_interface/2012/04/calling-a-web-service-from-a-unity3d-scene.html) by Kean Walmsley.*
 
-You can customize the Game Studio layout by dragging tabs, similar to Visual Studio. 
+You can customize the Game Studio layout by dragging tabs, similar to Visual Studio.
 
 For more information about Game Studio, see the [Game Studio](../game-studio/index.md) page.
 
@@ -20,42 +20,42 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 
 Unity® and Stride use mostly common terms, with a few differences:
 
-| Unity®  | Stride |
-| ----- | ------- |
-| Hierarchy panel | Entity Tree |
-| Inspector	| Property Grid |
-| Project browser |	Asset View |
-| Scene view | Scene Editor |
-| GameObject | Entity |
-| MonoBehaviour | SyncScript, AsyncScript, StartupScript |
+| Unity®          | Stride                                 |
+|-----------------|----------------------------------------|
+| Hierarchy panel | Entity Tree                            |
+| Inspector       | Property Grid                          |
+| Project browser | Asset View                             |
+| Scene view      | Scene Editor                           |
+| GameObject      | Entity                                 |
+| MonoBehaviour   | SyncScript, AsyncScript, StartupScript |
 
 ## Folders and files
 
 Like Unity®, Stride projects are stored in a directory that contains:
 
-* the project ``.sln`` solution file, which you can open with Game Studio or any IDE such as Visual Studio
+* The project ``.sln`` solution file, which you can open with Game Studio or any IDE such as Visual Studio
 
 * a **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries
 
-    ![Package folder structure](../files-and-folders/media/folder-structure.png)
+  ![Package folder structure](../files-and-folders/media/folder-structure.png)
 
-* **Assets** contains the asset files which represent elements in your game.
+* **Assets** contains asset configuration files.
 
 * **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
 
 * **MyPackage.Game** contains your source code.
 
-*	**MyPackage.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg *MyPackage.Windows*, *MyPackage.Linux*, etc). These folders are usually small, and only contain the entry point of the program.
+*   **MyPackage.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (e.g. *MyPackage.Windows*, *MyPackage.Linux*, etc.). These folders are usually small and only contain the entry point of the program.
 
 * **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
 
-* **Resources** is a suggested location for files such as images and audio files used by your assets.
+* **Resources** is the recommended location for storing source files for your project, such as textures, models, and audio files.
 
 Stride and Unity® differ in the following ways:
 
 * Stride doesn't automatically copy resource files to your project folder when you import them into assets. You have to do this yourself. We recommend you save them in the **Resources** folder.
 
-* Stride doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
+* Stride doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead, we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
 
 For more information about project structure in Stride, including advice about how to organize and share your files, see the [Project structure](../files-and-folders/project-structure.md) page.
 
@@ -67,7 +67,7 @@ You can open the project directory from **Project > Show in explorer** in Game S
 
 ## Game settings
 
-Unity® saves global settings in separate assets (ie Graphics Settings, Quality Settings, Audio Manager, and so on). 
+Unity® saves global settings in separate assets (i.e. Graphics Settings, Quality Settings, Audio Manager, and so on).
 
 Stride saves global settings in a single asset, the **Game Settings** asset. You can configure:
 
@@ -84,11 +84,11 @@ To use the Game Settings asset, in the **Asset View**, select **GameSettings** a
 
 ## Scenes
 
-Like Unity®, in Stride you place all objects in a scene. Game Studio stores scenes as separate ``.sdscene`` assets in your project directory.
+Like Unity®, in Stride, you place all objects in a scene. Game Studio stores scenes as separate ``.sdscene`` assets in your project directory.
 
 ### Set the default scene
 
-You can have multiple scenes in your project. Stride loads the default scene at runtime.
+You can have multiple scenes in your project. The scene that loads up as soon as your game starts is called the *Default Scene*.
 
 To set the default scene:
 
@@ -114,7 +114,7 @@ Like GameObjects, entities are carriers for components such as transform compone
 
 In Stride, you add components to entities just like you add components to GameObjects in Unity®.
 
-To add a component to entity in Game Studio:
+To add a component to an entity in Game Studio:
 
 1. Select the entity you want to add the component to.
 2. In the **Property Grid** (on the right by default), click **Add component** and select the component from the drop-down list.
@@ -127,54 +127,61 @@ Like GameObjects in Unity®, each entity in Stride has a [Transform component](x
 
 ![Transform component](media/stride-vs-unity-entity-transform-component.png)
 
-Even empty entities have a Transform component, because every entity in the scene must have a position.
+All entities are created with a Transform component by default.
 
 In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
-Stride uses position, rotation, and scale to refer to the local position, rotation and scale.
+Stride uses position, rotation, and scale to refer to the local position, rotation, and scale.
 
-| Unity®  | Stride |
-| ----- | ------- |
-| `transform.localPosition` | `Transform.Position` |
-| `transform.localRotation` | `Transform.Rotation` |
-| `transform.localScale` | `Transform.Scale` |
+| Unity®                       | Stride                       |
+|------------------------------|------------------------------|
+| `transform.localPosition`    | `Transform.Position`         |
+| `transform.localRotation`    | `Transform.Rotation`         |
+| `transform.localScale`       | `Transform.Scale`            |
 | `transform.localEulerAngles` | `Transform.RotationEulerXYZ` |
 
 #### World Position/Rotation/Scale
 In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the [WorldMatrix](xref:Stride.Engine.TransformComponent.WorldMatrix).
 
-| Unity®  | Stride |
-| ----- | ------- |
-| `transform.position` | `Transform.WorldMatrix.TranslationVector` |
-| `transform.rotation` | N/A |
-| `transform.scale` | N/A |
-| `transform.eulerAngles` | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)` |
-| `transform.scale` and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)` |
+| Unity®                                                            | Stride                                                                                                 |
+|-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `transform.position`                                              | `Transform.WorldMatrix.TranslationVector`                                                              |
+| `transform.rotation`                                              | N/A                                                                                                    |
+| `transform.scale`                                                 | N/A                                                                                                    |
+| `transform.eulerAngles`                                           | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)`                                             |
+| `transform.scale` and `transform.position`                        | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
 | `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
+
+>[!Note]
+> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
+To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
 
 #### Transform Directions
 Unlike Unity, Stride provides a Backward, Left, and Down property.
 Note that those are matrix properties, so setting one of those is not enough to properly rotate the matrix.
 
-| Unity®  | Stride |
-| ----- | ------- |
-| `transform.forward` | `Transform.WorldMatrix.Forward` |
+| Unity®                   | Stride                           |
+|--------------------------|----------------------------------|
+| `transform.forward`      | `Transform.WorldMatrix.Forward`  |
 | `transform.forward * -1` | `Transform.WorldMatrix.Backward` |
-| `transform.right` | `Transform.WorldMatrix.Right` |
-| `transform.right * -1` | `Transform.WorldMatrix.Left` |
-| `transform.up` | `Transform.WorldMatrix.Up` |
-| `transform.up * -1` | `Transform.WorldMatrix.Down` |
+| `transform.right`        | `Transform.WorldMatrix.Right`    |
+| `transform.right * -1`   | `Transform.WorldMatrix.Left`     |
+| `transform.up`           | `Transform.WorldMatrix.Up`       |
+| `transform.up * -1`      | `Transform.WorldMatrix.Down`     |
+
+>[!Note]
+> See note in [World Position/Rotation/Scale](#world-positionrotationscale)
 
 ## Assets
 
-In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab. 
+In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab.
 
 Stride is similar. You select an asset in the **Asset View** and edit its properties in the **Property Grid**.
 
 ![Asset and properties](media/asset-and-properties.png)
 
-For certain types of asset, Game Studio also has dedicated editors:
+For certain types of assets, Game Studio also has dedicated editors:
 
 * prefabs
 * scenes
@@ -183,7 +190,7 @@ For certain types of asset, Game Studio also has dedicated editors:
 * UI libraries
 * scripts
 
-To open the dedicated editor for these types of asset:
+To open the dedicated editor for these types of assets:
 
 * double-click the asset, or
 * right-click the asset and select Edit asset, or
@@ -198,7 +205,7 @@ The editor opens in a new tab. You can arrange the tabs how you like, or float t
 
 ### Import assets
 
-To import an asset, drag it from Explorer to the **Asset View**. You can also click an **Add asset** button, navigate to the desired file and specify the type of asset you want to import.
+To import an asset, drag it from Explorer to the **Asset View**. You can also click an **Add asset** button, navigate to the desired file, and specify the type of asset you want to import.
 
 As soon as you add an asset to your project, you can edit its properties in the **Property Grid**.
 
@@ -211,33 +218,31 @@ As soon as you add an asset to your project, you can edit its properties in the 
 
 Like Unity®, Stride supports file formats including:
 
-| Asset type  | Supported formats                                           
-|------|---|
-| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx
-| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
-| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
-| Fonts | .ttf, .otf |
+| Asset type                    | Supported formats                                            |
+|-------------------------------|--------------------------------------------------------------|
+| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
+| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
+| Audio                         | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
+| Fonts                         | .ttf, .otf                                                   |
+| Video                         | .mp4                                                         |
 
 For more information about assets, see [Assets](../game-studio/assets.md).
-
-> [!Note]
-> * Stride currently doesn't support movie files.
 
 ## Prefabs
 
 Like Unity®, Stride uses prefabs. Prefabs are "master" versions of objects that you can reuse wherever you need. When you change a prefab, every instance of the prefab changes too.
 
-![Prefabs in Stride](media/stride-vs-unity-prefabs.png)
+![Prefabs in Stride](media/stride-vs-unity-prefabs.webp)
 
 Just like with Unity®, in Stride, you can add prefabs to other prefabs. These are called **nested prefabs**. If you modify a nested prefab, all the dependent prefabs inherit the change automatically.
 
-For example, imagine you create a *Vehicle* prefab with acceleration, braking, steering, and so on. Then you nest the *Vehicle* prefab inside prefabs of different types of vehicles: a taxi, bus,truck, etc. If you adjust a property in the *Vehicle* prefab, the changes are inherited by all other prefabs. For example, if you increase the Acceleration property in the *Vehicle* prefab, the acceleration property in the taxi, bus and truck prefabs also increase.
+For example, imagine you create a *Vehicle* prefab with acceleration, braking, steering, and so on. Then you nest the *Vehicle* prefab inside prefabs of different types of vehicles: a taxi, bus, truck, etc. If you adjust a property in the *Vehicle* prefab, the changes are inherited by all other prefabs. For example, if you increase the Acceleration property in the *Vehicle* prefab, the acceleration property in the taxi, bus, and truck prefabs also increase.
 
 For more information about using prefabs in Stride, see [Prefabs](../game-studio/prefabs/index.md).
 
 ## Archetypes
 
-**Archetypes** are master assets that control the properties of assets you **derive** from them. Derived assets are useful when you want to create a "remixed" version of an asset. This is similar to prefabs. 
+**Archetypes** are master assets that control the properties of assets you **derive** from them. Derived assets are useful when you want to create a "remixed" version of an asset. This is similar to prefabs.
 
 For example, imagine we have three sphere entities that share a material asset named *Metal*. Now imagine we want to change the color of only *one* sphere, but keep its other properties the same. We could duplicate the material asset, change its color, and then apply the new asset to only one sphere. But if we later want to change a different property across *all* the spheres, we have to modify both assets. This is time-consuming and leaves room for mistakes.
 
@@ -254,6 +259,14 @@ Archetype
 ```
 
 For more information about archetypes, see [Archetypes](../game-studio/archetypes.md).
+
+## Object Life Time
+
+Entities and components are not destroyed in Stride, they are removed from the scene they exist in and then freed by the [Garbage Collector](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/).
+
+This seemingly small difference significantly changes how objects are managed within the engine.
+For example, entities can be removed from a scene, kept as a reference in a component, and added back into another scene later on.
+Components can be removed from an entity and added onto another without losing its internal state.
 
 ## Input
 
@@ -304,15 +317,25 @@ public override void Update()
 }
 ```
 
+## Time
+
+| Unity®                      | Stride                                          |
+|-----------------------------|-------------------------------------------------|
+| `Time.deltaTime`            | `Game.UpdateTime.WarpElapsed.TotalSeconds`      |
+| `Time.unscaledDeltaTime`    | `Game.UpdateTime.Elapsed.TotalSeconds`          |
+| `Time.realtimeSinceStartup` | `Game.UpdateTime.Total.TotalSeconds`            |
+| `Time.timeScale`            | `Game.UpdateTime.Factor`                        |
+| `Time.fixedDeltaTime`       | `myRigidbodyComponent.Simulation.FixedTimeStep` |
+
 ## Physics
 
-Just like Unity®, Stride has three types of collider:
+Just like Unity®, Stride has three types of colliders:
 
 * static colliders
 * rigidbodies
 * characters
 
-They're controlled from scripts in slightly different ways.
+They're controlled by scripts in slightly different ways.
 
 ### Kinematic rigidbodies
 
@@ -376,13 +399,13 @@ For more information about rigidbodies in Stride, see [Rigidbodies](../physics/r
 #### Unity®
 
 ```cs
-// When game object collides with the trigger.
+// Occurs when game objects go through this trigger.
 void OnTriggerEnter(Collider Other)
 {
     Other.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
 }
 
-//When game object exits collider space.
+// Occurs when game objects move out of this trigger.
 void OnTriggerExit(Collider Other)
 {
     Other.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -472,13 +495,13 @@ For more information about Raycasting in Stride, see [Raycasting](../physics/ray
 
 ## Scripts
 
-Stride saves scripts in a subfolder in the **MyGame.Game** folder in the project directory. 
+Stride saves scripts in a subfolder in the **MyGame.Game** folder in the project directory.
 
 To open a script in the Game Studio script editor, double-click it in the **Asset View**. The script editor has syntax highlighting, auto-completion, and live diagnostics.
 
 ![Stride script editor](media/stride-vs-unity-script-editor.png)
 
-You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Stride reloads them automatically.
+You can also edit scripts in other IDEs, such as Visual Studio. When you edit a script in an external IDE, Stride reloads it automatically.
 
 If you install the Visual Studio plug-in during the Stride installation, you can open your project in Visual Studio from Game Studio. To do this, in the Game Studio toolbar, click **Open in IDE**.
 
@@ -492,7 +515,7 @@ Alternatively, right-click the script in the **Asset View** and click **Open ass
 
 In Unity®, you work with MonoBehaviours with Start(), Update(), and other methods.
 
-Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
+Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
 
 ### Unity® MonoBehaviour
 
@@ -562,7 +585,7 @@ Like Unity®, in Stride, you attach scripts to entities by adding them as script
 
 ### Create a script
 
-To create a script, click **Add asset** button and select **Scripts**.
+To create a script, click the **Add asset** button and select **Scripts**.
 
 ![Create script in Stride](media/stride-vs-unity-create-script.png)
 
@@ -582,7 +605,7 @@ If you want your script to be a startup or asynchronous, use the corresponding s
 
 ### Reload assemblies
 
-Unlike Unity®, after you create a script, you have to reload the assemblies manually. To do this, click **Reload assemblies** in the Game Studio toolbar.
+After you create a script, you may have to reload the assemblies manually. To do this, click **Reload assemblies** in the Game Studio toolbar.
 
 ![Reload assemblies](../platforms/media/reload-assemblies.png)
 
@@ -590,7 +613,7 @@ Unlike Unity®, after you create a script, you have to reload the assemblies man
 
 1. In the **Entity Tree** (on the left by default), or in the scene, select the entity you want to add the script to.
 
-    ![Select an entity](../scripts/media/select-entity.png)
+   ![Select an entity](../scripts/media/select-entity.png)
 
 2. In the **Property Grid** (on the right by default), click **Add component** and select the script you want to add.
 
@@ -733,19 +756,47 @@ To see the output, in the Game Studio toolbar, under **View**, enable **Output**
 
 Game Studio displays in the **Output** tab (at the bottom of Game Studio by default).
 
-![Output tab](media/output-tab.png) 
+![Output tab](media/output-tab.png)
 
 
 ### Print debug messages
 
-To print to the Visual Studio output, use:
+Logging from a ScriptComponent:
+```cs
+public override void Start()
+{
+    // Enables logging. It will also spawn a console window if no debuggers are attached.
+    // The argument dictates the kinds of message that will be filtered out, in this case, anything with less priority than warning won't show up
+    Log.ActivateLog(LogMessageType.Warning);
+    // Log this message to your console or IDE output window
+    Log.Warning("hello");
+}
+```
 
 ```cs
 System.Diagnostics.Debug.WriteLine("hello");
 ```
 
 >[!Note]
->To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
+>To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
+
+## Attributes
+
+| Unity®                    | Stride                              |
+|---------------------------|-------------------------------------|
+| `[Serializable]`          | `[DataContract]`                    |
+| `[SerializeField]`        | `[DataMember]`                      |
+| `[HideInInspector]`       | `[DataMemberIgnore]`                |
+| `[Range]`                 | `[DataMemberRange]`                 |
+| `[Header]`                | `[Display]`                         |
+| `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
+
+>[!Note]
+>You cannot serialize private fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
+
+```cs 
+public float MyProperty { get; init; }
+```
 
 ---
 

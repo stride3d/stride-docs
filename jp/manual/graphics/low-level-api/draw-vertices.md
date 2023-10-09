@@ -3,11 +3,11 @@
 # Draw vertices
 -->
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 シーンを読み込む際、Stride は、エンティティシステムを介してシーンを表示するための描画呼び出しを自動的に処理します。このページでは、手動で描画する方法について紹介します。

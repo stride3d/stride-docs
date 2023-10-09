@@ -1,6 +1,6 @@
 # アセットの使用
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 アセットを使用するには 3 つの方法があります。
 

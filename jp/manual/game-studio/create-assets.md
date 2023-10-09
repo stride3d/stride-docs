@@ -1,6 +1,6 @@
 # アセットの作成
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 アセットを作成するには 2 つの方法があります。
 

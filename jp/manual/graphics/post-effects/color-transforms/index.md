@@ -3,13 +3,13 @@
 # Color transforms
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 **色変換（color transforms）** は、実行時に連鎖的に組み合わせられるように設計された特別なエフェクトです。画像に適用される一連の色変換を定義することができます。それぞれの変換では、前工程の変換の出力を入力として使用します。実行時には、一連の変換が 1 つのシェーダーにまとめられ、1 回の描画呼び出しでレンダリングされるので、最大のパフォーマンスを得ることができます。

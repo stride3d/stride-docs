@@ -1,7 +1,7 @@
 # スプライトの編集
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 [スプライト シートをインポート](import-sprite-sheets.md)した後は、専用の**スプライト エディター**を使用して、スプライト シート内のスプライトを選択できます。
 

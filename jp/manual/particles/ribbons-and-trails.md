@@ -1,8 +1,8 @@
 # リボンと軌跡
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **リボン**と**残影**を作成するため、Stride は個別のクワッドではなくパーティクルを接続するストリップとしてメッシュ データを作成します。リボンと残影は、剣撃などの視覚効果を作成するためによく使われます。
 

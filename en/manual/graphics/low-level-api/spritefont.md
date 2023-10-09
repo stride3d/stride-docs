@@ -1,7 +1,7 @@
 # SpriteFont
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 The @'Stride.Graphics.SpriteFont' class is a convenient way to draw text. It works with the @'Stride.Graphics.SpriteBatch' class.
 

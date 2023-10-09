@@ -1,7 +1,7 @@
 # Compile shaders
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Stride converts Stride shaders (`sdsl` and `.sdfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
 

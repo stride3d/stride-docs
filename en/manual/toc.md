@@ -1,7 +1,9 @@
+# [Manual](index.md)
 
 # [Requirements](requirements/index.md)
 
 # [Stride for Unity® developers](stride-for-unity-developers/index.md)
+<!--# [Stride for Godot developers](stride-for-godot-developers/index.md)-->
 
 # [Stride Launcher](stride-launcher/index.md)
 
@@ -220,6 +222,7 @@
 ## [Create a script](scripts/create-a-script.md)
 ## [Use a script](scripts/use-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
+## [Serialization](scripts/serialization.md)
 ## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
 ## [Events](scripts/events.md)
 ## [Debugging](scripts/debugging.md)
@@ -242,7 +245,6 @@
 # [Video](video/index.md)
 ## [Set up a video](video/set-up-a-video.md)
 ## [Video properties](video/video-properties.md)
-## [Video scripts](video/video-scripts.md)
 ## [Use a video as a skybox](video/use-a-video-as-a-skybox.md)
 
 # [Virtual reality](virtual-reality/index.md)

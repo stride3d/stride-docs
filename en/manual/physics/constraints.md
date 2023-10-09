@@ -1,9 +1,9 @@
 # Constraints
 
-<div class="doc-incomplete"/>
+[!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Constraints** restrict rigidbodies to certain movement patterns. For example, a realistic knee joint can only move along one axis and can't bend forwards.
 

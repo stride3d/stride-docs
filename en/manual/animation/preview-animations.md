@@ -1,7 +1,7 @@
 # Preview animations
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
 
 After you [import an animation](import-animations.md), you can preview it in the **Asset Preview**.
 

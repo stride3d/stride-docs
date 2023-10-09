@@ -1,7 +1,7 @@
 # Create a prefab
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 In the **Asset View**, click **Add asset** and select **Prefabs** > **Prefab**.
 

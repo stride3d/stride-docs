@@ -1,7 +1,7 @@
 # プレハブの編集
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 プレハブは **プレハブ エディター**で編集できます。
 

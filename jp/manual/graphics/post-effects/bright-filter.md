@@ -3,11 +3,11 @@
 # Bright filter
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 -->
 
 **明度フィルター（Bright filter）** は、画像の中で最も明るい部分を抽出します。明度フィルター自体はポストエフェクトではありませんが、その結果は、[ブルーム](bloom.md)、[ライト ストリーク](light-streaks.md)、[レンズ フレア](lens-flare.md)などのエフェクトで使用されます。

@@ -1,7 +1,7 @@
 # Bright filter
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 
 The **bright filter** extracts the brightest areas of an image. The bright filter itself isn't a post effect, but its result is used later by other effects such as [bloom](bloom.md), [light streaks](light-streaks.md), and [lens flare](lens-flare.md).
 

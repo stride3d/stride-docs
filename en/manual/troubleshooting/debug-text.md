@@ -1,7 +1,7 @@
 # Debug text
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can print debug text at runtime with [DebugText](xref:Stride.Engine.ScriptComponent.DebugText). For example, you can use this to display a message when a problem occurs.
 

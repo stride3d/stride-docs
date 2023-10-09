@@ -1,7 +1,7 @@
 # Physics simulation
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Stride's physics are controlled by the [Simulation](xref:Stride.Physics.Simulation) class.
 You can change how Stride initializes the [simulation](xref:Stride.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:Stride.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.

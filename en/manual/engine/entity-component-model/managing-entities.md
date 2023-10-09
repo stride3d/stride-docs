@@ -1,17 +1,12 @@
 # Manage entities
 
-<div class="doc-incomplete"/>
+[!INCLUDE [stride-studio-note](../../../includes/under-construction-note.md)]
 
 ## Overview
 
 User usually want to manipulate Component contained in a specific entity, while engine wants to access component by types (i.e. all Mesh Component while drawing, all animation components while updating animations, etc...):
 
-
-
-
 ![media/7438984.png](media/7438984.png) 
-
-
 
 
 User will add component-based entities into an entity manager.
@@ -47,7 +42,6 @@ foreach (var entity in engine.EntityManager.Entities)
 	Console.WriteLine(entity.Name);
 }
 ```
-
 
 @'Stride.Engine.EntityManager' can be used to enumerate its `Entities (ref:{Stride.Engine.Entity})`. Note that children of a given entities will also be in this list.
 

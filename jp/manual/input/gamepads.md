@@ -1,7 +1,7 @@
 # ゲームパッド
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **ゲームパッド** (Xbox Elite ワイヤレス コントローラー、PS4 DualShock など) は、コンソールおよびデスクトップ用の一般的な入力デバイスです。
 

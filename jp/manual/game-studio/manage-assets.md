@@ -1,6 +1,6 @@
 # アセットの管理
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 このページでは、アセットを編集および管理する方法について説明します。
 

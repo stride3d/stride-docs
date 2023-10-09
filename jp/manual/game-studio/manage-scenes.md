@@ -1,8 +1,8 @@
 # シーンの管理
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 シーンとエンティティは階層状になっており、先頭に**ルート シーン**があります。この階層は、シーン エディターの左側にある**エンティティ ツリー**に表示されます。
 

@@ -1,6 +1,6 @@
 # Create assets
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 There are two ways to create assets:
 

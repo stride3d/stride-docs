@@ -1,7 +1,7 @@
 # Custom shaders
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can write your own shaders in Visual Studio and use them in [material attributes](../materials/material-attributes.md). For example, you can write a shader to add textures to materials based on the objects' world positions, or generate noise and use it to randomize material properties.
 

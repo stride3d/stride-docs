@@ -1,7 +1,7 @@
 # スクリプトの作成
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 Game Studio または Visual Studio などの IDE を使用して、スクリプトを作成できます。
 

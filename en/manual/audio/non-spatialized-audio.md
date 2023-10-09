@@ -1,7 +1,7 @@
 # Non-spatialized audio
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Non-spatialized audio** sounds the same throughout the scene, regardless of the position of entities (such as the player camera). It's stereo and moves along a single axis (usually the X-axis). Unlike [spatialized audio](spatialized-audio.md), the _volume_, _pitch_ (_frequency_), and other parameters of spatialized audio don't change. This is useful, for example, for background music and menu sound effects.
 

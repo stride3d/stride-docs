@@ -1,7 +1,7 @@
 # Custom blend trees
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 The [AnimationComponent](xref:Stride.Engine.AnimationComponent) has the property [AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
 

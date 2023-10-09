@@ -1,7 +1,7 @@
 # パブリック プロパティとフィールド
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 スクリプトでパブリック プロパティまたはパブリック フィールドを宣言すると、そのプロパティは Game Studio 内でスクリプト コンポーネント プロパティからアクセスできるようになります。
 

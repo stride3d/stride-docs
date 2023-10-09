@@ -3,11 +3,11 @@
 # Automatic shader stage input/output
 -->
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 HLSL シェーダーを書く際には、頂点属性を正確に定義し、最終シェーダーのステージに慎重に渡す必要があります。
