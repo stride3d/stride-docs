@@ -1,7 +1,7 @@
 # Scheduling and priorities
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Stride doesn't run scripts simultaneously; they run one at a time. Where scripts depend on each other, you should make sure they run in the correct order by giving them priorities.
 

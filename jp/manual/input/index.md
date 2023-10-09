@@ -1,7 +1,7 @@
 # 入力
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 ユーザーは、ゲームパッド、マウス、キーボードなどの**入力デバイス**を使用して、ゲームやアプリケーションと対話します。すべての対話型アプリケーションは、少なくとも 1 つの入力デバイスをサポートする必要があります。
 

@@ -1,6 +1,6 @@
 # Create a project
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 This page explains how to:
 

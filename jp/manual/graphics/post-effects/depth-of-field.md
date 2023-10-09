@@ -3,11 +3,11 @@
 # Depth of field
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 -->
 
 レンダリングによって生成された非常にシャープな画像が、人工的に見えることがあります。**被写界深度（DOF; Depth of field）** エフェクトは、実際のカメラレンズが物体に焦点を合わせたときの動作をシミュレートするもので、背景や前景の物体がピンボケになります。

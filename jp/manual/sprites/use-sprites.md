@@ -1,7 +1,7 @@
 # スプライトの使用
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 スプライトをシーンに追加するには、**スプライト コンポーネント**をエンティティに追加します。その後は、スクリプトでスプライトを制御できます。
 

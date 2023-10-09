@@ -2,8 +2,8 @@
 
 <div class="doc-incomplete"/>
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **制約**は、剛体を特定の移動パターンに制限します。たとえば、実際の膝関節は 1 つの軸に沿ってのみ動き、前方には曲がりません。
 

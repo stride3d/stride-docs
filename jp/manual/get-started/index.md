@@ -3,7 +3,7 @@ uid: ../toc.md
 ---
 # Stride の概要
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 この章では、Stride を初めて使用するときに必要なすべてのことについて説明します。
 

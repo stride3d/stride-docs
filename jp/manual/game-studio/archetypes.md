@@ -1,7 +1,7 @@
 # アーキタイプ
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **アーキタイプ**とは、自身から**派生**するアセットのプロパティを制御するマスター アセットです。派生アセットは、アセットの「リミックス」バージョンを作成するときに便利です。
 

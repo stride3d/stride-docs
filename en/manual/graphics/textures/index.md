@@ -1,8 +1,8 @@
 # Textures
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Textures** are images mainly used in [materials](../materials/index.md). Stride maps textures to the surfaces the material covers.
 
@@ -42,7 +42,7 @@ In the **Asset View**, click **Add asset** > **Texture**, then select a template
 
 Alternatively, drag the texture file from Explorer to the Asset View:
 
-![Drap and drop a resource file to the Asset View](../get-started/media/create-assets-drop-resource.png)
+![Drap and drop a resource file to the Asset View](../../get-started/media/create-assets-drop-resource.png)
 
 Then select a texture template (**color**, **grayscale** or **normal map**):
    

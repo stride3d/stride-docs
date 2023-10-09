@@ -1,6 +1,6 @@
 # ゲームの起動
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 このページでは、Game Studio または Visual Studio を使用してゲームを起動する方法を説明します。
 

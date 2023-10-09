@@ -1,8 +1,8 @@
 # Prefabs
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-success">Designer</span>
 
 A **prefab** is a "master" version of an object that you can reuse wherever you need. When you change the prefab, every instance of the prefab changes too.
 

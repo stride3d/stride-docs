@@ -1,7 +1,7 @@
 # SpriteBatch
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 A sprite batch is a collection of sprites (2D textured planes).
 

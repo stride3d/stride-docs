@@ -1,0 +1,94 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build Stride Docs for Azure Web App Staging
+
+on:
+  push:
+    branches:
+      - staging
+    paths-ignore:
+      - 'README.md'
+      - 'Stride.Docs.sln'
+      - 'BuildDocs.ps1'
+      - 'wiki/**'
+      - .gitignore
+      - '.github/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Run this job only if the repository is 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs'
+    runs-on: windows-2022
+
+    steps:
+    # Setup .NET SDK
+    - name: Dotnet Setup
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.x
+
+    # Checkout the Stride Docs repository from the branch that triggered the workflow
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v3
+      with:
+        path: stride-docs
+        lfs: true
+
+    # Checkout the Stride repository from the default branch
+    - name: Checkout Stride (note the LFS)
+      uses: actions/checkout@v3
+      with:
+        repository: stride3d/stride
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: stride
+        lfs: true
+
+    - name: Install DocFX
+      # This installs the latest version of DocFX and may introduce breaking changes.
+      # run: dotnet tool update -g docfx
+      # This installs a specific, tested version of DocFX.
+      run: dotnet tool update -g docfx --version 2.71.0
+
+    - name: Build documentation
+      run: ./build-all.bat
+      working-directory: stride-docs
+
+    - name: Compress artifact
+      run: 7z a -r DocFX-app.zip ./stride-docs/_site/*
+
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v3
+      with:
+        name: DocFX-app
+        path: DocFX-app.zip
+
+  deploy:
+    if: github.repository == 'stride3d/stride-docs'
+    runs-on: windows-2022
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v3
+        with:
+          name: DocFX-app
+
+      # - name: List current directory
+      #   run: ls
+
+      - name: Decompress artifact
+        run: 7z x DocFX-app.zip "-o./stride-docs/_site"
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'stride-doc'
+          slot-name: 'staging'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32FCD402B970463A9143B24C9B225749 }}
+          package: ./stride-docs/_site

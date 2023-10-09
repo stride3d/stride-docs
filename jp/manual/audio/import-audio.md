@@ -1,7 +1,7 @@
 # オーディオのインポート
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 プロジェクトで**サウンド アセット**として使用するオーディオ ファイルをインポートできます。インポートできるファイルの種類は、.wav、.mp3、.ogg、.aac、.aiff、.flac、.m4a、.wma、.mpc です。
 

@@ -1,7 +1,7 @@
 # スプライト シートのインポート
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 他の種類のアセットと同じように、スプライト シート (スプライトを含む画像ファイル) をインポートできます。
 

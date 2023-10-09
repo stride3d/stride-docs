@@ -1,7 +1,0 @@
-{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
-
-<script type="text/javascript" src="{{_rel}}styles/docfx.vendor.js"></script>
-<script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="{{_rel}}styles/main.js"></script>

@@ -3,13 +3,13 @@
 # Tutorial: Custom particles
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 このチュートリアルでは、パーティクルシステムのカスタム拡張を作成し、コアエンジンにはない機能を実装する方法を紹介します。

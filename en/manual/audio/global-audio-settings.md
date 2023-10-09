@@ -1,7 +1,7 @@
 # Global audio settings
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Global audio settings apply to all the audio in your project. 
 

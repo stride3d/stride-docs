@@ -1,7 +1,7 @@
 # Render groups and masks
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
 
 With **render groups** and **render masks**, you can choose which parts of your scene are rendered by different [cameras](../cameras/index.md). For example, you can have a model be visible to Camera A but invisible to Camera B.
 

@@ -1,6 +1,6 @@
 # Sprite fonts
 
-<span class="label label-doc-level">Intermediate</span>
+<span class="badge text-bg-primary">Intermediate</span>
 
 **Sprite fonts** take a TrueType font as an input (either a system font or a file you assign) and then create all the images (sprites) of characters (glyphs) for your game.
 

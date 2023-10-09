@@ -30,4 +30,4 @@ The graphics module provides a set of methods to display the game. Although Stri
 * [Low-level API](low-level-api/index.md)
 * [Rendering pipeline](rendering-pipeline/index.md)
 * [Sprite fonts](sprite-fonts.md)
-* [Voxel Cone Tracing GI](voxel-cone-tracing-gi.md)
+* [Voxel Cone Tracing GI](lights-and-shadows/voxel-cone-tracing-gi.md)

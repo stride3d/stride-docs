@@ -1,7 +1,7 @@
 # Profiling
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can **profile** your project to check its runtime performance and find problems. Use the Stride **Game Profiler** script or an external profiling tool such as the Performance Profiler in Visual Studio.
 

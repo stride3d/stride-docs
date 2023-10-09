@@ -1,7 +1,7 @@
 # Edit prefabs
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 You can edit prefabs in the **Prefab Editor**.
 

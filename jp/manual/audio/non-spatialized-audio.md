@@ -1,7 +1,7 @@
 # 非空間オーディオ
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **非空間オーディオ**は、エンティティ (プレイヤー カメラなど) の位置に関係なく、シーン全体で同じように聴こえます。非空間オーディオはステレオで、1 つの軸 (通常は X 軸) に沿って移動します。[空間オーディオ](spatialized-audio.md)とは異なり、非空間オーディオの_ボリューム_、_ピッチ_ (_周波数_)、その他のパラメーターは変化しません。背景音楽やメニューのサウンド エフェクトなどに便利です。
 

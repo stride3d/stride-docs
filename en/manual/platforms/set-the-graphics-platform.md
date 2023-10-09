@@ -1,6 +1,6 @@
 # Set the graphics platform
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 The **graphics platform** controls the graphics hardware in the device you run your project on. Different devices support different graphics platforms; for example, iOS supports the OpenGL ES graphics platform. You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
 

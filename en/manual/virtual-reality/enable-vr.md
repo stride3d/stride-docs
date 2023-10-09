@@ -1,7 +1,7 @@
 # Enable VR
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 This page explains how to add support for the Oculus Rift and Vive devices to your game. Stride doesn't support other VR devices yet.
 

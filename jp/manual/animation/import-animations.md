@@ -1,7 +1,7 @@
 # アニメーションのインポート
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 モデルをアニメーション化するには、次の 3 種類のアセットを使用する必要があります。
 

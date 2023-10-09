@@ -3,11 +3,11 @@
 # Light streaks
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 -->
 
 **ライトストリーク（Light streaks）** エフェクトは、[ブルームエフェクト](bloom.md)と同様に、[明度フィルター](bright-filter.md)の結果を利用して、明るい部分をある方向に沿ってにじませるものです。光点から星型のビームが発生します。

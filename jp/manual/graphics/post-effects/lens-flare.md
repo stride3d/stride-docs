@@ -3,11 +3,11 @@
 # Lens flare
 -->
 
-<span class="label label-doc-level">中級</span>
-<span class="label label-doc-audience">アーティスト</span>
+<span class="badge text-bg-primary">中級</span>
+<span class="badge text-bg-success">アーティスト</span>
 <!--
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 -->
 
 **レンズフレア（Lens flare）** エフェクトは、現実世界のレンズでの光の内部反射や散乱によって生じるアーティファクトをシミュレートします。

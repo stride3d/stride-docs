@@ -1,8 +1,8 @@
 # Directional lights
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Artist</span>
 
 **Directional lights** come uniformly from one direction. They're often used for simulating large, distant light sources such as the sun, and cast shadows. By default, new scenes you create in Stride contain a directional light.
 

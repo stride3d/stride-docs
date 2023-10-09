@@ -1,8 +1,8 @@
 # Stream audio
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 By default, Stride plays audio directly from memory. This is useful for short sound effects such as gunshots or footsteps.
 

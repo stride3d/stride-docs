@@ -1,7 +1,7 @@
 # Video properties
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 To view the properties of a video asset, select it in the **Asset View** and use the **Property Grid**.
 

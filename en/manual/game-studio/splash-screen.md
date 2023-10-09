@@ -1,6 +1,6 @@
 # Splash screen
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 The **splash screen** is the image (usually a logo) displayed when your game starts. It fades in over the color you specify, then fades out.
 

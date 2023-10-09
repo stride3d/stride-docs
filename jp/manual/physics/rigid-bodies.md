@@ -1,7 +1,7 @@
 # 剛体
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **剛体**は、それに加えられた力 (重力や衝突など) に基づいて動きます。一般的な剛体は、箱、ボール、家具などのように、押されたり、引かれたり、叩かれたりして動き回るオブジェクトであり、衝突することによって他の剛体に影響を与えることもあります。
 

@@ -1,7 +1,7 @@
 # オーディオ デバイスの設定
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 使用するオーディオ デバイスを設定できます。たとえば、_Oculus Rift_ オーディオ デバイスにカスタム ゲームのコンストラクターからアクセスできます。
 

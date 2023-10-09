@@ -1,8 +1,8 @@
 # Layout system
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-success">Designer</span>
 
 The Stride UI layout system is similar to Windows Presentation Foundation (WPF). For more information about the WPF layout system, see the [MSDN documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/layout). Much of the WPF documentation also applies to the Stride layout system.
 

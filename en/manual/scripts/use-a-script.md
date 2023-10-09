@@ -1,7 +1,7 @@
 # Use a script
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 To use a script, add it to an entity as a component. You can do this in Game Studio or in code. Stride runs scripts when the entity they are attached to loads.
 
@@ -56,16 +56,16 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 >[!Note]
 >You can customize where scripts appear in the dropdown using the `ComponentCategoryAttribute`:
 
->```cs
->[ComponentCategory("My Startup Scripts")]
->public class SampleStartupScript : StartupScript
->{
->    public override void Start()
->    {
->        // Do some stuff during initialization
->    }
->}
->```
+```cs
+[ComponentCategory("My Startup Scripts")]
+public class SampleStartupScript : StartupScript
+{
+    public override void Start()
+    {
+        // Do some stuff during initialization
+    }
+}
+```
 
 ## Add a script from code
 

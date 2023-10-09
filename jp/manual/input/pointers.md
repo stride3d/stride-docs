@@ -1,7 +1,7 @@
 # ポインター
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **ポインター**は、**指のタッチ**に対応するデバイス画面上の点です。マルチタッチ機能のあるデバイスでは、同時に複数のポインターがサポートされます。
 

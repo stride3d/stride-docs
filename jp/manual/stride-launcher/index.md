@@ -1,6 +1,6 @@
 # Stride Launcher
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 **Stride Launcher** を使用すると、異なるバージョンの Stride をインストール、管理、実行できます。
 

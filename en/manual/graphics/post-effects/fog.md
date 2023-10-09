@@ -1,7 +1,7 @@
 # Fog
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
 
 The **fog** effect applies an exponential layer of colored fog throughout the scene based on depth.
 

@@ -1,7 +1,7 @@
 # Create a model from code
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 
 You can create models in scripts at runtime. You can do this in several different ways, including:
 

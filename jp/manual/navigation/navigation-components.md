@@ -1,8 +1,8 @@
 # ナビゲーション コンポーネント
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">レベル デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">レベル デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **ナビゲーション コンポーネント**により、エンティティは[Navigation mesh](navigation-meshes.md)を使用してシーン内を通るパスを検索できます。または、Game Settings で[動的ナビゲーション](dynamic-navigation.md)を有効にすると、エンティティは独自のナビゲーション メッシュを生成できます。
 

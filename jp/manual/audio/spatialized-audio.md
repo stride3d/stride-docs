@@ -1,8 +1,8 @@
 # 空間オーディオ
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 **空間オーディオ**は **3D オーディオ**とも呼ばれ、3 次元のサウンドをシミュレートします。
 これにより、[非空間オーディオ](non-spatialized-audio.md)よりはるかに現実的なオーディオが作成されます。

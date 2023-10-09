@@ -1,7 +1,7 @@
 # Events
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
 **Events** facilitate communication between scripts. They work one-way, broadcast from **broadcasters** to **receivers**. Events come in two flavors, a non-generic version for basic event broadcasting, and a generic version for when data needs to be passed to receivers.
 

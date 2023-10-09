@@ -1,7 +1,7 @@
 # カスタム オーディオ データ
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 開発者独自のメカニズムを使用してオーディオを生成できます。そのためには、[DynamicSoundSource](xref:Stride.Audio.DynamicSoundSource) のサブクラスを作成します。
 実装方法の例については、[`CompressedSoundSource` のソース コード](https://github.com/SiliconStudio/stride/blob/master-1.8/sources/engine/Stride.Audio/CompressedSoundSource.cs)を参照してください。

@@ -1,7 +1,7 @@
 # プリプロセッサ変数
 
-<span class="label label-doc-level">上級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">上級</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 複数のプラットフォームを対象とする開発を行っていると、プラットフォームごとにカスタム コードを作成することが必要な場合がよくあります。通常、そのための最善の方法は [Platform.Type](xref:Stride.Core.Platform.Type) および [GraphicsDevice.Platform](xref:Stride.Graphics.GraphicsDevice.Platform) を使用することです。もう 1 つの方法として、**プリプロセッサ変数**を使用することもできます。
 

@@ -1,7 +1,7 @@
 # Scenes
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
 
 **Scenes** are the levels in your game. A scene is composed of **entities**, the objects in your project.
 

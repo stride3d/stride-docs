@@ -3,11 +3,11 @@
 # Debug text
 -->
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">プログラマー</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
 -->
 
 実行時に、[DebugText](xref:Stride.Engine.ScriptComponent.DebugText) クラスを使って、デバッグテキストを描画することができます。例えば、問題が発生した旨のメッセージを表示することに使うことができます。

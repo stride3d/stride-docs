@@ -1,6 +1,6 @@
 # Launch a game
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 This page explains how to launch your game using Game Studio or Visual Studio.
 

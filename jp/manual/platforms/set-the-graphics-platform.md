@@ -3,9 +3,9 @@
 # Set the graphics platform
 -->
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 <!--
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 -->
 **グラフィックス プラットフォーム**は、プロジェクトを実行するデバイスのグラフィックスハードウェアをコントロールします。例えば、iOS は OpenGL ES グラフィックスプラットフォームをサポートしていますが、デバイスによってサポートするグラフィックスプラットフォームは異なります。ゲームが使用するグラフィックプラットフォームを選択したり、異なるプラットフォーム（Windows や Android など）用のオーバーライドを追加することができます。
 <!--

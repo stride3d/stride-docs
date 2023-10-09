@@ -1,8 +1,8 @@
 # Tutorial: Particle materials
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 
 This tutorial demonstrates how to create custom shaders and materials for a particle system, providing functionality not available in the core engine. It focuses on shaders and rendering. For simulation, see the [custom particles tutorial](custom-particles.md).
 

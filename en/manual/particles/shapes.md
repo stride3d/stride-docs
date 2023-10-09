@@ -1,8 +1,8 @@
 # Particle shapes
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Artist</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Artist</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Because particles are essentially only points in space, they have no defined shape. Instead, Stride draws shapes **between** the points. 
 

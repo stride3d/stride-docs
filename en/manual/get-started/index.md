@@ -3,7 +3,7 @@ uid: ../toc.md
 ---
 # Get started with Stride
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 This chapter explains everything you need to start using Stride from scratch. For video tutorials, have a look at the the [Tutorials](https://doc.stride3d.net/latest/en/tutorials/index.html).
 

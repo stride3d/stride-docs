@@ -1,6 +1,6 @@
 # Project
 
-<div class="doc-incomplete"/>
+[!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
 
 In Stride, a project refers to a game project. You can create new games, new packages, and play sample games.
 

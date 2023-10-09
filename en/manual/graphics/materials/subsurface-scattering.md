@@ -1,7 +1,7 @@
 # Subsurface scattering
 
-<span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Artist</span>
 
 When you enable **subsurface scattering** on a material, light is reflected at irregular angles inside the model. You can use this to realistically render translucent materials such as skin, wax, leaves, marble, and porcelain.
 

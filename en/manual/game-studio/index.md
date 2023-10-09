@@ -1,6 +1,6 @@
 # Game Studio
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 **Game Studio** is the central tool for game and application production in Stride. In Game Studio, you can:
 

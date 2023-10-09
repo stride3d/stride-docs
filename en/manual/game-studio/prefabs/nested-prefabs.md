@@ -1,7 +1,7 @@
 # Nested prefabs
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 You can add prefabs to other prefabs. These are called **nested prefabs**.
 

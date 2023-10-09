@@ -1,6 +1,6 @@
 # Visual Studio 拡張機能
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 **Stride Visual Studio 拡張機能**では、構文の強調表示、ライブ コード検証、エラー チェック、およびナビゲーションが追加されます。また、[Visual Studio から直接シェーダーを編集する](../graphics/effects-and-shaders/custom-shaders.md)こともできます。
 

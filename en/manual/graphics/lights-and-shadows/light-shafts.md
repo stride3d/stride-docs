@@ -1,8 +1,8 @@
 # Light shafts
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
-<span class="label label-doc-audience">Artist</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Artist</span>
 
 **Light shafts**, also called **god rays**, are visible rays of light. 
 
@@ -20,7 +20,7 @@ By default, Stride disables light shafts in new projects. To enable them:
 
 1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
-    ![Graphics Compositor asset](..\graphics-compositor\media\graphics-compositor-asset.png)
+    ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
     The graphics compositor editor opens.
 

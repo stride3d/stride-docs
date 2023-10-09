@@ -1,7 +1,7 @@
 # Add entities
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level Designer</span>
 
 After you create a scene, you need to add entities to your scene to build your level.
 

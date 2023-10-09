@@ -1,8 +1,8 @@
 # スカイボックス ライト
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
-<span class="label label-doc-audience">プログラマー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
+<span class="badge text-bg-success">プログラマー</span>
 
 スカイボックス ライトは、[スカイボックス](../textures/skyboxes-and-backgrounds.md)によって放射される[アンビエント ライト](ambient-lights.md)です。Stride は、スカイボックスのキューブマップを分析し、[イメージベースのライティング (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting) を使用してライティングを生成します。
 

@@ -1,7 +1,7 @@
 # 静的コライダー
 
-<span class="label label-doc-level">初級</span>
-<span class="label label-doc-audience">デザイナー</span>
+<span class="badge text-bg-primary">初級</span>
+<span class="badge text-bg-success">デザイナー</span>
 
 **静的コライダー**は、重力や衝突などの力では動きませんが、他の物理オブジェクトがそれに対して衝突することができます。一般的な静的コライダーは、壁、床、大きな岩などの強力な不動オブジェクトです。
 

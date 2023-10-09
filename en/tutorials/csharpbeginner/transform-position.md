@@ -2,13 +2,15 @@
 You can find this sample in the tutorial project: **Menu** &rarr; **Transform Position** 
 
 ## Explanation
-This C# Beginner tutorial covers the Transform component of an entity. The Transform component is such a commonly used component, that you can quick access it via 'Entity.Transform'. The transform contains all kinds of properties and methods for Position, Rotation and Scale. In this example we learn the difference between local and world position.
+This C# Beginner tutorial covers the Transform component of an entity.
 
-![Transform Position](media/transform-position.png)
+The Transform component is such a commonly used component, that you can quick access it via `Entity.Transform`.
 
+The transform contains all kinds of properties and methods for `Position`, `Rotation` and `Scale`. In this example we learn the difference between local and world position.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2N6NhijZuJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![Transform Position](media/transform-position.webp)
 
+> [!Video https://www.youtube.com/embed/2N6NhijZuJk]
 
 ## Code
-[!code-csharp[Entity](..\..\..\..\stride\samples\Tutorials\CSharpBeginner\CSharpBeginner\CSharpBeginner.Game\Code\TransformPositionDemo.cs)]
+[!code-csharp[Entity](../../../../stride/samples/Tutorials/CSharpBeginner/CSharpBeginner/CSharpBeginner.Game/Code/TransformPositionDemo.cs)]

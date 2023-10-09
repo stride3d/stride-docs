@@ -1,7 +1,7 @@
 # Animation properties
 
-<span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
 
 After you [import an animation](import-animations.md), you can select it in the **Asset View** (in the bottom pane by default) and view and edit its properties in the **Property Grid** (on the right by default).
 

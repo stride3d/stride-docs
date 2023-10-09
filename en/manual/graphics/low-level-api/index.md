@@ -1,7 +1,7 @@
 # Low-level API
 
-<span class="label label-doc-level">Advanced</span>
-<span class="label label-doc-audience">Programmer</span>
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
 
 The @'Stride.Graphics.GraphicsDevice' class is the central class for displaying your game. It's used to create resources and present images on the screen. You can access it as a member of the @'Stride.Engine.Game' and @'Stride.Engine.ScriptComponent' classes.
 

@@ -1,6 +1,6 @@
 # アセット
 
-<span class="label label-doc-level">初級</span>
+<span class="badge text-bg-primary">初級</span>
 
 **アセット**は、Game Studio 内でのゲームの要素の表現です。アセットには、テクスチャ、モデル、アニメーションなどが含まれます。
 

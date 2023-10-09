@@ -1,6 +1,6 @@
 # Install Stride
 
-<span class="label label-doc-level">Beginner</span>
+<span class="badge text-bg-primary">Beginner</span>
 
 1. Download the Stride installer (**StrideSetup.exe**) from the [Stride website](http://stride3d.net/download/).
  
