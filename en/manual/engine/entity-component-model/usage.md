@@ -2,12 +2,11 @@
 
 ## Classes
 
-The three parts of "Entity Component System" map to the following classes:
+The three parts of **Entity Component System** map to the following classes:
 
-- Entity - [`Stride.Engine.Entity`](https://doc.stride3d.net/latest/en/api/Stride.Engine.Entity.html)
-- Component - [`Stride.Engine.EntityComponent`](https://doc.stride3d.net/latest/en/api/Stride.Engine.EntityComponent.html)
-- System - [`Stride.Engine.EntityProcessor`](https://doc.stride3d.net/latest/en/api/Stride.Engine.EntityProcessor.html)
-
+- Entity - [`Stride.Engine.Entity`](xref:Stride.Engine.Entity)
+- Component - [`Stride.Engine.EntityComponent`](xref:Stride.Engine.EntityComponent)
+- System - [`Stride.Engine.EntityProcessor`](xref:Stride.Engine.EntityProcessor)
 
 ## Minimal Setup
 
