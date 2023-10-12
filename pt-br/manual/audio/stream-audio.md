@@ -1,4 +1,4 @@
-# Transmitir de áudio (Streaming)
+# Transmitir áudio (Streaming)
 
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Designer</span>

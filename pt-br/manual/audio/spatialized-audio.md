@@ -5,7 +5,7 @@
 <span class="badge text-bg-success">Programação</span>
 
 **Áudio espacial**, também conhecido como **áudio 3D**, simula o som tridimensional, 
-criando um áudio mais realista do que [áudio não espacial](non-spatialized-audio.md).
+criando um áudio mais realista do que o [áudio não espacial](non-spatialized-audio.md).
 
 No dia a dia, nossa experiência de som é afetada por fatores como o volume, o ambiente que nos circunda (como uma caverna ou um pequeno quarto) e a posição e movimento da fonte de som. Geralmente, conseguimos determinar aproximadamente de onde um som está vindo e se ele está se movendo.
 
@@ -18,7 +18,7 @@ Por exemplo, o tom (frequência) do som que vem de um objeto em movimento varia 
 Para simular um áudio 3D realista, o Stride rastreia as posições de duas entidades na cena:
 
 * **[emissores de áudio](audio-emitters.md)**, que emitem áudio
-* **[receptores de áudio](audio-listeners.md)**, que recebem o som emitido pelos emissores de áudio.
+* **[receptores de áudio](audio-listeners.md)**, que recebem o som emitido pelos emissores de áudio
 
 Você deve ter ambos emissores de áudio e receptores de áudio para ouvir som espacializado em uma cena.
 
