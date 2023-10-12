@@ -1,0 +1,16 @@
+---
+uid: Stride.Utilities.Test
+remarks: *content
+---
+
+Utilize a classe FileStream para ler, escrever, abrir e fechar arquivos em um sistema de arquivos, bem como para manipular outros identificadores relacionados a arquivos do sistema operacional, como pipes, entrada padrão e saída padrão. Você pode empregar os métodos Read, Write, CopyTo e Flush para realizar operações síncronas ou os métodos ReadAsync, WriteAsync, CopyToAsync e FlushAsync para executar operações assíncronas. Prefira os métodos assíncronos para operações intensivas em recursos de arquivo, evitando o bloqueio da thread principal. Esta consideração de desempenho é particularmente crucial em aplicativos Windows 8.x Store ou aplicativos desktop, onde uma operação de fluxo demorada pode bloquear a thread de interface do usuário, fazendo com que o aplicativo pareça não estar respondendo. O FileStream realiza buffering de entrada e saída para aprimorar o desempenho.
+
+> [!Note]
+> Este tipo implementa a interface IDisposable. Quando você terminar de usar o tipo, é necessário liberar seus recursos, seja diretamente ou indiretamente. Para liberá-lo diretamente, execute o método Dispose dele dentro de um bloco `try/catch`. Para liberá-lo indiretamente, utilize uma construção de linguagem como o uso do bloco `using` (em C#) ou Using (em Visual Basic). Para obter mais informações, consulte a seção "Utilizando um Objeto que Implementa IDisposable" no tópico da interface IDisposable.
+
+A propriedade IsAsync indica se o identificador de arquivo foi aberto de forma assíncrona. Você deve especificar esse valor ao criar uma instância da classe FileStream usando um construtor que aceita o parâmetro isAsync, useAsync ou options. Quando essa propriedade é definida como verdadeira, o fluxo usa E/S sobreposta para executar operações de arquivo de forma assíncrona. No entanto, a propriedade IsAsync não precisa estar definida como verdadeira para utilizar os métodos ReadAsync, WriteAsync ou CopyToAsync. Quando a propriedade IsAsync está definida como falsa e você realiza operações de leitura e escrita de forma assíncrona, a thread de interface do usuário não é bloqueada, mas a operação de E/S é executada de forma síncrona.
+
+O método Seek oferece suporte ao acesso aleatório a arquivos,  permitindo que a posição de leitura/escrita seja movida para qualquer ponto dentro do arquivo. Isso é feito por meio de parâmetros que indicam o deslocamento em bytes em relação a um ponto de referência de busca. O ponto de referência pode ser o início, a posição atual ou o final do arquivo subjacente, conforme representado pelos três membros da enumeração SeekOrigin.
+
+> [!Caution]
+> Arquivos em disco suportam acesso aleatório. Durante a criação, o valor da propriedade CanSeek é definido como verdadeiro ou falso, dependendo do tipo de arquivo subjacente. Se o tipo de arquivo subjacente for FILE_TYPE_DISK, conforme definido em winbase.h, a propriedade CanSeek será definida como verdadeira. Caso contrário, a propriedade CanSeek será definida como falsa.
