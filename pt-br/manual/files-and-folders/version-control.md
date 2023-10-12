@@ -28,7 +28,7 @@ Por exemplo, imagine que um artista tenha editado 10GB de texturas e comprometid
 
 ** Os arquivos de criação de conteúdo ** são criados com ferramentas de criação de conteúdo externos, como arquivos `.psd` (Photoshop) ou `.max`.> (3D Studio Max).
 
-Não recomendamos que você salve arquivos de criação de conteúdo em sua pasta de projeto. Isso porque os arquivos são muitas vezes grandes e não são usados no projeto diretamente. Em vez disso, recomendamos que você salve os arquivos em um repositório de controle de versão diferente - ou, se o sistema de controle de versão suporta checkouts parciais (como SVN ou Perforce), uma pasta raiz diferente. Isso significa que os membros da equipe só obtêm os arquivos de que precisam.
+Não recomendamos que você salve arquivos de criação de conteúdo em sua pasta de projeto. Isso porque os arquivos são muitas vezes volumosos e não são usados no projeto diretamente. Em vez disso, recomendamos que você salve os arquivos em um repositório de controle de versão diferente - ou, se o sistema de controle de versão suporta checkouts parciais (como SVN ou Perforce), uma pasta raiz diferente. Isso significa que os membros da equipe só obtêm os arquivos de que precisam.
 
 ## Estrutura de diretório sugerida
 

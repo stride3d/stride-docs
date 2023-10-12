@@ -72,7 +72,7 @@ Valores sobre `1.0` podem produzir artefatos de tiling, como na imagem abaixo (n
 
 ### Peças de reposição para máquinas
 
-Os flocos de metal no mapa normal do floco de metal incluídos no pacote de ativos Stride (**StrideClearCoatMetalFlakesNM**) são bastante grandes. Por esta razão, recomendamos:
+Os flocos de metal no mapa normal do floco de metal incluídos no pacote de ativos Stride (**StrideClearCoatMetalFlakesNM**) são bastante volumosos. Por esta razão, recomendamos:
 
 * usar um fator de escala **UV de alta ** que telhas a textura (reduzindo assim os flocos)
 

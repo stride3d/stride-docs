@@ -19,13 +19,13 @@ As capturas de tela abaixo demonstram o uso de dispersão subsuperfície em Stri
 
 As sombras são muito mais suaves na segunda imagem, pois mais luz passa pelas velas.
 
-## Habilitar dispersão de subsuperfície
+## Ativar dispersão de subsuperfície
 
 1. Selecione o material que deseja usar sombreamento subsuperfície.
 
 2. Na Grade de Propriedade, sob **Shading**, ao lado de ** Subsuperfície scattering**, clique em ![ Botão de seta azul](~/manual/game-studio/media/blue-arrow-icon.png) (** Substituir**) e escolha ** Subsuperfície dispersão**.
 
-   ![ Habilitar dispersão subsuperfície ](media/enable-subsurface-scattering.png)
+   ![ Ativar dispersão subsuperfície ](media/enable-subsurface-scattering.png)
 
 ## Propriedades
 
@@ -65,7 +65,7 @@ Existem opções adicionais de dispersão de subsuperfície no editor de composi
 
 | Propriedade | Função |
 |----------------|-----------
-| Siga a superfície | Impedir a dispersão de luz através de grandes diferenças de profundidade. Afeta o desempenho da GPU. |
+| Siga a superfície | Impedir a dispersão de luz através de volumosos diferenças de profundidade. Afeta o desempenho da GPU. |
 | Passes | O número de vezes que o blur é executado. Mais passes produzem resultados mais suaves (menos ruído e bandagem). |
 | Tamanho do kernel do Jitter | Use o ruído para reduzir os artefatos de agrupamento causados por undersampling. Cria um efeito mais suave, mas é tecnicamente menos preciso (às vezes perceptível a distâncias próximas). |
 | Modo de renderização | Alterar o modo de renderização para fins de depuração |

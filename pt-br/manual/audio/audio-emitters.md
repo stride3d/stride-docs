@@ -4,16 +4,16 @@
 <span class="badge text-bg-success">Programação</span>
 <x id="1"/>Design<x id="2"/><span class="badge text-bg-success"></span>
 
-Os componentes de emissão de áudio são responsáveis por criar [áudio espacial](xref:Stride.Audio.AudioEmitter).[](spatialized-audio.md) Você pode adicioná-los a qualquer entidade.
+Os [componentes de emissores de áudio](xref:Stride.Audio.AudioEmitter) têm a função de criar [áudio espacial](spatialized-audio.md)  e podem ser incluídos em qualquer entidade.
 
-O tom e o volume do som mudam à medida que o [receptor de áudio](audio-listeners.md) se aproxima e se afasta do emissor de áudio.
+O tom e o volume do som variam à medida que o [receptor de áudio](audio-listeners.md) se aproxima ou se afasta do emissor de áudio.
 
 > [!Note]
 > Você precisa de pelo menos um [AudioListenerComponent](xref:Stride.Audio.AudioListener) na cena para captar o áudio dos emissores de áudio.
 
-## 1. Configurar um recurso de emissor de áudio
+## 1. Configurar um recurso emissor de áudio
 
-1. No **Visualizador de cenas**, selecione uma entidade que você deseja que seja um emissor de áudio.
+1. No **Visualizador de Cenas**, selecione a entidade que você deseja configurar como emissor de áudio.
 
    ![Selecionar uma entidade](media/audio-add-audiolistener-component-select-entity.png)
 
@@ -47,36 +47,36 @@ O tom e o volume do som mudam à medida que o [receptor de áudio](audio-listene
 
 | Propriedade | Descrição |
 |--------------------|-------------
-| Usar HRTF | Habilite a função de transferência relacionada à cabeça (HRTF). Com essa funcionalidade habilitada, os sons parecem vir de um ponto específico no espaço 3D, sintetizando áudio binaural. Para mais informações, consulte [HRTF](hrtf.md). |
-| Fator direcional | Determina o quão direcional é o áudio, de 0 (mínimo) a 1 (máximo). Se definido como 0, o áudio é emitido de todas as direções. Você pode ajustar o fator direcional usando o controle deslizante ou inserindo um valor numérico. |
-| Ambiente | O tipo de reverberação para o áudio, simulando a reverberação de ambientes reais (pequeno, médio, grande ou ao ar livre). |
+| Usar HRTF | Ative a Função de Transferência Relacionada à Cabeça (HRTF). Quando habilitada, essa funcionalidade cria a sensação de que os sons provêm de pontos específicos no espaço 3D, produzindo áudio binaural. Para mais informações, consulte [HRTF](hrtf.md). |
+| Fator Directional | Define o grau de direcionalidade do áudio, variando de 0 (mínimo) a 1 (máximo). Quando ajustado para 0, o áudio é emitido de todas as direções. O fator direcional pode ser ajustado através do controle deslizante ou inserindo um valor numérico. |
+| Ambiente | Escolha o tipo de reverberação para o áudio, simulando as características de reverberação em ambientes reais (pequeno, médio, grande ou ao ar livre). |
 
 ## 2. Criar um script para reproduzir o áudio
 
 Agora precisamos criar um script para reproduzir e configurar o recurso de áudio.
 
-1. No seu script, instancie um [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) para cada som que você deseja usar.
+1. Dentro do seu script, crie uma instância de um [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) para cada som que você deseja utilizar.
 
-   Por exemplo, digamos que temos dois sons, **MeuSom1** e **MeuSom2**:
+   Por exemplo, digamos que temos dois sons, **MySound1** e **MySound2**:
 
    ```cs
    	AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
-   	AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MeuSom1"];
-   	AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MeuSom2"];
+   	AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
+   	AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
    ```
 
 2. Use as seguintes propriedades e métodos de [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) para reproduzir e configurar o áudio:
 
 | Propriedade / método | Descrição |
 |-------    |-------|
-| [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping) | Repete o áudio. Não tem efeito se [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget) estiver definido como verdadeiro. |
-| [Pitch](xref:Stride.Audio.AudioEmitterSoundController.Pitch) | Obtém ou define o tom do som (frequência). Use com cuidado com áudio espacial. |
+| [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping) | Define se o áudio será reproduzido em repetição.  Isso não tem efeito se [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget) estiver ativado. |
+| [Pitch](xref:Stride.Audio.AudioEmitterSoundController.Pitch) | Obtém ou define o tom do som (frequência). Use com cuidado em áudio espacial. |
 | [PlayState](xref:Stride.Audio.AudioEmitterSoundController.PlayState) | Obtém o estado atual do controlador de som do emissor de áudio. |
-| [Volume](xref:Stride.Audio.AudioEmitterSoundController.Volume) | Volume do áudio. |
-| [Pause()](xref:Stride.Audio.AudioEmitterSoundController.Pause) | Pausa o áudio. |
-| [Play()](xref:Stride.Audio.AudioEmitterSoundController.Play) | Reproduz o áudio. |
-| [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget) | Reproduz o áudio uma vez e, em seguida, limpa a memória. Útil para sons curtos, como tiros. Substitui [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping). |
-| [Stop()](xref:Stride.Audio.AudioEmitterSoundController.Stop) | Para o áudio. |
+| [Volume](xref:Stride.Audio.AudioEmitterSoundController.Volume) | Controla o volume do áudio. |
+| [Pause()](xref:Stride.Audio.AudioEmitterSoundController.Pause) | Pausa a reprodução do áudio. |
+| [Play()](xref:Stride.Audio.AudioEmitterSoundController.Play) | Inicia a reprodução do áudio. |
+| [PlayAndForget()](xref:Stride.Audio.AudioEmitterSoundController.PlayAndForget) | Reproduz o áudio uma vez e, em seguida, libera os recursos da memória.  É útil para sons curtos, como tiros,  substituindo a opção [IsLooping](xref:Stride.Audio.AudioEmitterSoundController.IsLooping). |
+| [Stop()](xref:Stride.Audio.AudioEmitterSoundController.Stop) | Interrompe a reprodução do áudio. |
 
 Por exemplo:
 

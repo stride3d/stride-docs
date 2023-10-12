@@ -5,7 +5,7 @@
 
 As configurações globais de áudio aplicam-se a todos os áudios em seu projeto.
 
-Você pode controlar as configurações de áudio globais acessando as **propriedades** da classe [AudioEngine](xref:Stride.Audio.AudioEngine):
+Você pode controlar as configurações globais de áudio acessando as **propriedades** da classe [AudioEngine](xref:Stride.Audio.AudioEngine):
 
 | Propriedade | Função |
 |--- | --- |
@@ -13,7 +13,7 @@ Você pode controlar as configurações de áudio globais acessando as **proprie
 | [PauseAudio](xref:Stride.Audio.AudioEngine.PauseAudio) | Pausa todos os áudios. |
 | [ResumeAudio](xref:Stride.Audio.AudioEngine.ResumeAudio) | Retoma a reprodução de todos os áudios. |
 
-Você também pode controlar sons individualmente utilizando a API [SoundInstance](xref:Stride.Audio.SoundInstance).
+Você também pode controlar os sons individualmente utilizando a API [SoundInstance](xref:Stride.Audio.SoundInstance).
 
 ## Veja também
 * [Áudio espacial](spatialized-audio.md)

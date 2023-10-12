@@ -16,7 +16,7 @@ Para desenvolver projetos com a Stride, você precisa:
 
 (2) Os requisitos de RAM variam dependendo do seu projeto:
 * Desenvolver aplicações 2D simples não requer muita RAM.
-* Desenvolver jogos 3D com muitos ativos requer grandes quantidades de RAM.
+* Desenvolver jogos 3D com muitos ativos requer volumosos quantidades de RAM.
 
 
 ## Requisitos de desenvolvimento móvel

@@ -1,10 +1,10 @@
-# Função de Transferência Relacionada à Cabeça (áudio HRTF) 
+# Função de transferência relacionada à cabeça (áudio HRTF) 
 
-A **função de transferência relacionada à cabeça, do inglês  *Head-related transfer function* (HRTF)** é um método avançado de renderização de áudio que faz com que os sons pareçam vir de um ponto específico no espaço 3D, sintetizando o áudio binaural,  tornando o áudio mais realista do que o [áudio espacial](spatialized-audio.md). Por exemplo, com a HRTF, o jogador pode ouvir se um personagem está acima ou abaixo deles,  sendo particularmente útil em aplicativos de [realidade virtual (VR)](../virtual-reality/index.md), contribuindo para uma experiência mais imersiva.
+A **Função de transferência relacionada à cabeça, conhecida como Head-Related Transfer Function (HRTF)** em inglês, é um método avançado de renderização de áudio que cria a sensação de que os sons vêm de um ponto específico no espaço 3D. Ela sintetiza o áudio binaural,  resultando em uma experiência sonora mais realista do que o [áudio espacial](spatialized-audio.md) tradicional. Com a HRTF, os jogadores podem perceber a posição vertical dos sons, ou seja, se um personagem está acima ou abaixo deles. Esse efeito é particularmente valioso em aplicações de [realidade virtual (VR)](../virtual-reality/index.md), proporcionando uma imersão sonora mais profunda.
 
-Os jogadores não precisam de um hardware especial para usar a HRTF. No entanto, o efeito funciona muito melhor com fones de ouvido do que com alto-falantes.
+É importante observar que os jogadores não precisam de hardware especial para usufruir da HRTF,  mas o efeito é muito mais eficaz quando se utiliza fones de ouvido em vez de alto-falantes.
 
-Este vídeo demonstra o efeito da HRTF:
+No seguinte vídeo, você pode ver uma demonstração do efeito da HRTF:
 
 <p>
 <video class="embed-responsive-item" poster="media/hrtf-first-frame.jpg" controls>
@@ -15,11 +15,11 @@ Este vídeo demonstra o efeito da HRTF:
 > [!Note]
 > Por enquanto, você só pode usar a HRTF no Windows 10.
 
-## Habilitar a HRTF
+## Ativar a HRTF
 
-Para utilizar a HRTF, primeiro ative-a globalmente no recurso **Configurações de Jogo**. Em seguida, habilite a HRTF nas entidades com as quais você deseja utilizá-la.
+Para utilizar a HRTF, comece ativando-a globalmente nas **Configurações de Jogo**. Depois, ative a HRTF nas entidades com as quais deseja aplicá-la.
 
-### 1. Habilitar a HRTF globalmente
+### 1. Ativar globalmente a HRTF
 
 1. No **Gerenciador de Soluções** (o painel inferior esquerdo por padrão), selecione a pasta **Assets**.
 
@@ -33,24 +33,24 @@ Para utilizar a HRTF, primeiro ative-a globalmente no recurso **Configurações 
 
    ![ Configurações de áudio ](../game-studio/media/audio-settings.png)
 
-Para obter mais informações sobre o ativo Configurações de Jogo, consulte as configurações [Game](../game-studio/game-settings.md).
+Para obter mais informações sobre o recurso Configurações de Jogo, consulte [Configurações de jogo](../game-studio/game-settings.md).
 
 ### 2. Habilitar HRTF nas entidades
 
-1. Selecione a entidade com o [audio emitter](audio-emitters.md) que contém o som que deseja ativar para HRTF.
+1. Selecione a entidade que possui o [emissor de áudio](audio-emitters.md) contendo o som para o qual deseja ativar a HRTF.
 
-2. No **Property Grid** (à direita por padrão), sob **Audio emitter**, selecione **Use HRTF**.
+2. No **Editor de Propriedades** (à direita por padrão), em **Emissor de áudio**, selecione **Usar HRTF**.
 
-   ![Audio emitter properties](media/audio-emitter-properties.png)
+   ![Propriedades do emissor de áudio](media/audio-emitter-properties.png)
 
    Os sons emitidos por esta entidade usarão HRTF.
 
    > [!Note]
-   > A opção HRTF se aplica a cada som emitido a partir deste emissor de áudio.
+   > A opção HRTF se aplica a todos os sons emitidos por este emissor de áudio.
 
-Para mais informações sobre emissoras de áudio, incluindo as propriedades que você pode mudar, consulte [Audio emitters](audio-emitters.md).
+Para mais informações sobre os emissores de áudio, incluindo as propriedades que podem ser modificadas, consulte a seção [Emissores de Áudio](audio-emitters.md).
 
-### Ver também
+### Veja também
 
 * [Função de transferência relacionada com a cabeça (Wikipedia)](https://en.wikipedia.org/wiki/Head-related_transfer_function)
 * [Áudio espacial](spatialized-audio.md)

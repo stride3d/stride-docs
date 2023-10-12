@@ -136,7 +136,7 @@ Para criar uma transformação de cor personalizada, você precisa escrever dois
 
 * Para ativar e desativar o efeito, use a caixa de seleção ao lado do item.
 
-   ![ Habilitar e desativar o efeito pós personalizado](media/enable-disable-custom-post-effect.png)
+   ![ Ativar e desativar o efeito pós personalizado](media/enable-disable-custom-post-effect.png)
 
 * Para editar as propriedades públicas especificadas na classe, expanda o item.
 

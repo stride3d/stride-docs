@@ -13,7 +13,7 @@ Você pode usar as seguintes propriedades, métodos e estruturas:
 |---------|-----------|
 | [TotalLength](xref:Stride.Audio.SoundBase.TotalLength) | O comprimento total do [som](xref:Stride.Audio.Sound). |
 | [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Media.PlayRange)) | Define o intervalo de tempo para reprodução dentro do recurso de áudio. |
-| [PlayRange](xref:Stride.Media.PlayRange) | Informações de tempo, incluindo o ponto de início e a duração do intervalo. |
+| [PlayRange](xref:Stride.Media.PlayRange) | Fornece informações de tempo, incluindo o ponto de início e a duração do intervalo. |
 | [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position) | Obtém o **TimeSpan** da posição atual da reprodução. |
 
 Por exemplo:

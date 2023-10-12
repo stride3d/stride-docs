@@ -9,7 +9,7 @@ Se você ativar a navegação **dinâmica**, as entidades com componentes de nav
 > [!Note]
 > Certifique-se de que as cenas que você deseja que as entidades naveguem dinamicamente têm [navigação delimitando caixas](navigation-bounding-boxes.md).
 
-## Habilitar navegação dinâmica
+## Ativar navegação dinâmica
 
 Você pode ativar e desativar a navegação dinâmica no ativo global [game settings](../game-studio/game-settings.md).
 
@@ -33,17 +33,17 @@ Você pode ativar e desativar a navegação dinâmica no ativo global [game sett
 
 5. Selecione a caixa de seleção **Ativar navegação dinâmica**.
 
-   ![ Habilitar caixa de verificação de navegação dinâmica](media/enable-dynamic-navigation.png)
+   ![ Ativar caixa de verificação de navegação dinâmica](media/enable-dynamic-navigation.png)
 
 ## Propriedades de malha de navegação dinâmica
 
 | Propriedade | Descrição |
 |---------------------------|--------------
-| Activado | Habilitar navegação dinâmica em componentes de navegação que não tenham rede de navegação atribuída |
+| Activado | Ativar navegação dinâmica em componentes de navegação que não tenham rede de navegação atribuída |
 | Grupos de colisão incluídos | Os grupos de colisão usam malhas de navegação geradas dinamicamente. Por padrão, as malhas usam todos os grupos de colisão |
 | Configurar configurações | Configurações avançadas para malhas de navegação geradas dinamicamente |
 
-## Habilitar e desativar a navegação dinâmica de um script
+## Ativar e desativar a navegação dinâmica de um script
 
 Exemplo de código:
 

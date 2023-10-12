@@ -12,7 +12,7 @@ O Stride inclui um modelo VR que você pode usar para verificar a implementaçã
 
 ## Nesta secção
 
-* [Habilitar VR](enable-vr.md)
+* [Ativar VR](enable-vr.md)
 * [Visualizar uma cena em VR](preview-a-scene-in-vr.md)
 * [Sobreposições](overlays.md)
    * [Exibir uma interface de usuário em uma sobreposição](display-a-UI-in-an-overlay.md)

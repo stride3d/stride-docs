@@ -41,7 +41,7 @@ Você pode ajustar as propriedades do corpo rígido no **Property Grid**.
 | CCD Sphere Radius Swept | Define o raio da esfera de ligação que contém a posição entre dois quadros de física durante a detecção contínua de colisão. |
 | É o Trigger | Alterna se o corpo rígido é um [trigger](triggers.md). |
 | É o Kinematic | Alterna se o corpo rígido é [kinematic](kinematic-rigid-bodies.md) e, portanto, movido apenas por sua propriedade Transform. |
-| Missa | Define a massa de colisão. Para grandes diferenças, use um valor de ponto; por exemplo, escreva *0.1* ou *10*, não *1* ou *100000*. |
+| Missa | Define a massa de colisão. Para volumosos diferenças, use um valor de ponto; por exemplo, escreva *0.1* ou *10*, não *1* ou *100000*. |
 | Ampliação linear | A quantidade de amortecimento para forças direcionais. |
 | Ampliação angular | A quantidade de amortecimento para forças rotacionais. |
 | Substituir a gravidade | Substitui a gravidade com o vetor especificado na gravidade. |

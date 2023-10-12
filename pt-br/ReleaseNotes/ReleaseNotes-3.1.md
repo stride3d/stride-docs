@@ -198,7 +198,7 @@ Eideren (55):
 * [Physics] Cleanup RigidbodyComponent [view commit](https://github.com/xenko3d/xenko/commit/4db7f42f34725e3a4471403ff1fe6bf3dce5ef55)
 * [Physics] Comentários da Clarify em StaticMeshColliderShape [view commit](https://github.com/xenko3d/xenko/commit/e547ad6b57c7ce58988050a6ef5c394fdd2c2e1e)
 * <x id="1"/>Physics<x id="2"/> Fix <g id="3">#463</g>view commit</g><g id="4">
-* [Physics] Corrigir malhas muito grandes jogando [view commit](https://github.com/xenko3d/xenko/commit/42f0910775773ca902e2ea393f12dedbe5c3f7af)
+* [Physics] Corrigir malhas muito volumosos jogando [view commit](https://github.com/xenko3d/xenko/commit/42f0910775773ca902e2ea393f12dedbe5c3f7af)
 * [Physics] Expose Capsule somente dados [view commit](https://github.com/xenko3d/xenko/commit/a6c8e901b1b7637eadeaed5f82ea07e40f855c71)
 * [Physics] Fornecer acesso de leitura aos dados da forma de colide [view commit](https://github.com/xenko3d/xenko/commit/0dda0553c3187556a190ac4675806e1c92851886)
 * [Physics] Dividir colisor de malha estática em novo PR [ver commit](https://github.com/xenko3d/xenko/commit/05421ae96fb2232e1e94dbc2c4148ea578dc214b)

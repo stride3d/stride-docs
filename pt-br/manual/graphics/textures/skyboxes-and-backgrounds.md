@@ -132,7 +132,7 @@ Para fazer isso, no **Background** propriedades do componente, selecione **2D ba
 
 ![ Propriedades do componente de fundo](media/is-2d.png)
 
-Se você habilitar isso com um cubemap, Stride usa a primeira face do cubemap como fundo.
+Se você ativar isso com um cubemap, Stride usa a primeira face do cubemap como fundo.
 
 ## Use um vídeo como uma caixa de céu
 

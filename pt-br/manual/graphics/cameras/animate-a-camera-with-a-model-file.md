@@ -30,7 +30,7 @@ Para fazer isso, você precisa dos seguintes ativos em seu projeto:
 
 2. No **Property Grid**, enable **Root motion**.
 
-   ![ Habilitar movimento root](media/enable-root-motion.png)
+   ![ Ativar movimento root](media/enable-root-motion.png)
 
    Quando o movimento raiz é ativado, Stride aplica a animação do nó **root** para o [TransformComponent](xref:Stride.Engine.TransformComponent) da entidade que você adiciona a animação, em vez de aplicá-la ao esqueleto.
 

@@ -406,4 +406,4 @@ Data de lançamento 2017/1/11
 
 * No Linux, ao alternar a plataforma gráfica subjacente, a renderização não ocorrerá ou falhará. Excluir o cache, local e roaming pasta no host Linux e reiniciar o jogo deve corrigir o problema.
 * Problemas de desempenho em dispositivos móveis (ser trabalhado)
-* No iOS se ` Habilitar compilações específicas do dispositivo` é alternado (a partir das propriedades do projeto) não será possível depurar o código do jogo. Selecione manualmente a arquitetura do seu dispositivo a partir da guia Avançada para acelerar o seu desenvolvimento.
+* No iOS se ` Ativar compilações específicas do dispositivo` é alternado (a partir das propriedades do projeto) não será possível depurar o código do jogo. Selecione manualmente a arquitetura do seu dispositivo a partir da guia Avançada para acelerar o seu desenvolvimento.

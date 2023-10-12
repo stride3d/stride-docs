@@ -22,7 +22,7 @@ Para fazer isso:
 
    ![Conexões de nó](media/node-connections.png)
 
-3. Com o nó de renderizador para a frente selecionado, no **Property Grid**, habilitar **VRRendererConfigurações**.
+3. Com o nó de renderizador para a frente selecionado, no **Property Grid**, ativar **VRRendererConfigurações**.
 
    ![Select editor renderer](media/enable-vr.png)
 
@@ -71,9 +71,9 @@ Se o seu editor e os nós do jogo estiverem conectados ao mesmo renderizador par
 
 Stride exibe a visualização da cena em seu dispositivo VR. Para exibir a cena em seu monitor, desative **VRRendererSettings** nas propriedades do novo renderizador para a frente.
 
-![ Habilitar VR](media/vr-renderer-settings.png)
+![ Ativar VR](media/vr-renderer-settings.png)
 
 ## Ver também
 
-* [Habilitar VR](enable-vr.md)
+* [Ativar VR](enable-vr.md)
 * [Compositor gráfico](../graphics/graphics-compositor/index.md)

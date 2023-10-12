@@ -55,9 +55,9 @@ Para usar reflexões locais, permita o efeito no compositor **graphics**.
 
    > ![Connect nós](media/connect-nodes.png)
 
-3. No **Property Grid** (à direita por padrão), habilitar **Reflexões locais**.
+3. No **Property Grid** (à direita por padrão), ativar **Reflexões locais**.
 
-   ![ Habilitar reflexões locais](media/enable-local-reflections.png)
+   ![ Ativar reflexões locais](media/enable-local-reflections.png)
 
 Depois de permitir reflexões locais, a cena se reflete em materiais brilhantes.
 Você pode usar o limiar **gloss** (veja abaixo) para definir como materiais brilhantes devem ser para refletir a cena.

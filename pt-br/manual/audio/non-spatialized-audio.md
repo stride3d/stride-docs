@@ -3,15 +3,15 @@
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Programação</span>
 
-**Áudio não espacial** é estéreo e se desloca ao longo de um único eixo (geralmente o eixo X),  mantendo uma percepção sonora constante ao longo da cena, independentemente da posição das entidades, como por exemplo, a câmera do jogador. Ao contrário do [áudio espacial](spatialized-audio.md), o _volume_, _tom_ (_frequência_), e outros parâmetros de áudio espacial são constantes,  sendo útil, por exemplo, para efeitos de som de música de fundo e menu.
+O <g id="1">áudio não espacial</g> é estéreo e se desloca ao longo de um único eixo, geralmente o eixo X. Isso significa que a percepção sonora permanece constante ao longo da cena, independentemente da posição das entidades, incluindo a câmera do jogador. Ao contrário do <g id="2">áudio espacial</g>, o áudio não espacial mantém o mesmo <g id="3">volume<g id="3">, <g id="4">tom</g> (<g id="5">frequência</g>) e outros parâmetros em toda a cena.</g> Isso é útil, por exemplo, para efeitos sonoros de música de fundo e em menus.
 
 ![Áudio não espacial](media/audio-index-non-spatialized-audio.png)
 
 O áudio não espacial não requer [emissores de áudio](audio-emitters.md) ou [receptores de áudio](audio-listeners.md).
 
-## 1. Importar áudio e incluí-lo na compilação
+## 1. Importar áudio e adicioná-lo à compilação
 
-1. [Importar o áudio como um recurso de áudio](import-audio.md).
+1. [Importe o áudio como um recurso de áudio](import-audio.md).
 
 2. Certifique-se de que o recurso de áudio é um **recurso raiz**. Os recursos raiz são recursos que o Stride inclui na compilação para que possam ser usados em tempo de execução.
 
@@ -25,26 +25,26 @@ O áudio não espacial não requer [emissores de áudio](audio-emitters.md) ou [
 
 Para reproduzir áudio não espacial durante a execução, é necessário criar uma instância e definir seu comportamento no código.
 
-A API [SoundInstance](xref:Stride.Audio.SoundInstance) controla áudio em tempo de execução com as seguintes propriedades:
+A API [SoundInstance](xref:Stride.Audio.SoundInstance) gerencia o áudio em tempo de execução e oferece as seguintes propriedades:
 
 | Propriedade | Função |
 |-------    |-------|
 | [IsLooping](xref:Stride.Audio.SoundInstance.IsLooping) | Obtém ou define a repetição do áudio. |
-| [Pan](xref:Stride.Audio.SoundInstance.Pan) | Define o equilíbrio entre os alto-falantes esquerdo e direito. A configuração padrão para cada alto-falante é de 0.5. |
-| [Tom](xref:Stride.Audio.SoundInstance.Pitch) | Obtém ou define o tom do áudio (frequência). |
+| [Pan](xref:Stride.Audio.SoundInstance.Pan) | Controla o equilíbrio entre os alto-falantes esquerdo e direito. O valor padrão para cada alto-falante é 0,5. |
+| [Pitch](xref:Stride.Audio.SoundInstance.Pitch) | Obtém ou define o tom do áudio (frequência). |
 | [PlayState](xref:Stride.Audio.SoundInstance.PlayState) | Obtém o estado de [SoundInstance](xref:Stride.Audio.SoundInstance). |
-| [Posição](xref:Stride.Audio.SoundInstance.Position) | Obtém a posição de reprodução atual do áudio. |
+| [Position](xref:Stride.Audio.SoundInstance.Position) | Obtém a posição atual de reprodução do áudio. |
 | [Volume](xref:Stride.Audio.SoundInstance.Volume) | Define o volume de áudio. |
 
 Para mais informações, consulte a documentação da [API SoundInstance](xref:Stride.Audio.SoundInstance).
 
 > [!Note]
-> Se o som já estiver reproduzindo, o Stride ignora todas as chamadas adicionais à [SoundInstance.Play](xref:Stride.Audio.SoundInstance.Play).
+> Quando um som já está sendo reproduzido, o Stride ignora todas as chamadas adicionais à [SoundInstance.Play](xref:Stride.Audio.SoundInstance.Play).
 > O mesmo vale para [SoundInstance.Pause](xref:Stride.Audio.SoundInstance.Pause) (quando um som já está pausado) e [SoundInstance.Stop](xref:Stride.Audio.SoundInstance.Stop) (quando um som já está parado).
 
 Por exemplo, o seguinte código:
 
-* Cria uma instância de um áudio não espacial
+* cria uma instância de um áudio não espacial
 * define a reprodução do áudio em repetição
 * define o volume
 * reproduz o áudio

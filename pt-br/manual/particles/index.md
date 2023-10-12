@@ -1,6 +1,6 @@
 # Partes
 
-**Particles** são formas que, usadas em grandes números, criam efeitos pseudo-3D. Você pode usar partículas para criar efeitos como líquido, fogo, explosões, fumaça, relâmpago, trilhas de movimento, efeitos mágicos, e assim por diante.
+**Particles** são formas que, usadas em volumosos números, criam efeitos pseudo-3D. Você pode usar partículas para criar efeitos como líquido, fogo, explosões, fumaça, relâmpago, trilhas de movimento, efeitos mágicos, e assim por diante.
 
 ![Particles](media/particles.png)
 

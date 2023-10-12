@@ -23,7 +23,7 @@ Se os mipmaps (versões de resolução diferente de texturas exibidas a diferent
 
 ![Textura de carga](media/loading-texture.gif)
 
-Na maioria das situações, o processo é muito rápido. Recomendamos que você habilitar mipmaps para streaming, pois significa que versões de baixa resolução de texturas atuam como placeholders até que as versões de maior qualidade possam carregar, reduzindo o pop-in.
+Na maioria das situações, o processo é muito rápido. Recomendamos que você ativar mipmaps para streaming, pois significa que versões de baixa resolução de texturas atuam como placeholders até que as versões de maior qualidade possam carregar, reduzindo o pop-in.
 
 ## Quando **not** usar streaming
 

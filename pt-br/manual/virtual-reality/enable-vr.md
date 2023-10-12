@@ -1,4 +1,4 @@
-# Habilitar VR
+# Ativar VR
 
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Programação</span>
@@ -50,7 +50,7 @@ Esta página explica como adicionar suporte para os dispositivos Oculus Rift e V
    >
    > Isso significa que seu jogo usa a API Oculus se um dispositivo Oculus Rift estiver conectado, e a API OpenVR se outro dispositivo (por exemplo, a Vive) estiver conectado.
 
-8. Habilitar **VRRendererConfigurações**.
+8. Ativar **VRRendererConfigurações**.
 
    ![VR configurações de renderizador](media/vr-renderer-settings.png)
 

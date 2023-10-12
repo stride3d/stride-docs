@@ -105,7 +105,7 @@ Use fontes SDF quando:
 
 - você precisa de vários tamanhos para sua fonte
 
-- você tem tamanhos de fonte muito grandes (SDF consome menos memória do que fontes de runtime-rasterized)
+- você tem tamanhos de fonte muito volumosos (SDF consome menos memória do que fontes de runtime-rasterized)
 
 Faça **not** use fontes SDF quando:
 

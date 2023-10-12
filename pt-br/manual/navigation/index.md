@@ -18,7 +18,7 @@ Você pode usar o sistema **navigation** para controlar como personagens e outro
 
 ## Projeto de amostra
 
-Por exemplo, como implementar a navegação, incluindo habilitar e desabilitar [ navegação dinâmica](dynamic-navigation.md) no tempo de execução, veja o projeto de amostra **top-down RPG** incluído no Stride.
+Por exemplo, como implementar a navegação, incluindo ativar e desabilitar [ navegação dinâmica](dynamic-navigation.md) no tempo de execução, veja o projeto de amostra **top-down RPG** incluído no Stride.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/NoOutlineAE.jpg">

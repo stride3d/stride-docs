@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Designer</span>
 <span class="badge text-bg-success">Artista </span>
 
-** Luzes direcionais** vêm uniformemente de uma direção. Eles são frequentemente usados para simular grandes fontes de luz distantes, como o sol, e sombras de elenco. Por padrão, novas cenas que você cria no Stride contêm uma luz direcional.
+** Luzes direcionais** vêm uniformemente de uma direção. Eles são frequentemente usados para simular volumosos fontes de luz distantes, como o sol, e sombras de elenco. Por padrão, novas cenas que você cria no Stride contêm uma luz direcional.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png)
 

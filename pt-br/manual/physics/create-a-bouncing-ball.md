@@ -16,7 +16,7 @@ A cena padrão vem pré-carregada com cinco entidades: Câmera, luz direcional, 
 
 ## 2. Adicionar um colisor estático
 
-Vamos começar adicionando um componente [static collider](static-colliders.md) à entidade Ground. Um colisão estático é um objeto de física que não se move. Os colisões estáticos típicos são paredes, pisos, grandes rochas, e assim por diante. Neste caso, o colisor estático dará à bola algo para saltar sobre.
+Vamos começar adicionando um componente [static collider](static-colliders.md) à entidade Ground. Um colisão estático é um objeto de física que não se move. Os colisões estáticos típicos são paredes, pisos, volumosos rochas, e assim por diante. Neste caso, o colisor estático dará à bola algo para saltar sobre.
 
 1. Selecione a entidade **Ground**.
 

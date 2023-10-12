@@ -12,7 +12,7 @@ Xenko 2.1 introduz reflexões **local**. Quando você ativa este efeito pós, a 
 
 Você pode ativar e personalizar reflexões locais no compositor gráfico sobre as propriedades **post effects**.
 
-![ Habilitar reflexões locais](media/ReleaseNotes-2.1/enable-local-reflections.png)
+![ Ativar reflexões locais](media/ReleaseNotes-2.1/enable-local-reflections.png)
 
 Para detalhes, veja [Reflexões locais](../manual/graphics/post-effects/local-reflections.md).
 
@@ -181,7 +181,7 @@ A documentação está agora disponível em japonês. Para alternar idiomas, use
 
 * No Linux, ao alternar a plataforma gráfica subjacente, a renderização não ocorre ou falha. Para corrigir o problema, excluir o cache, local e roaming pastas no host Linux e reiniciar o jogo
 * 
-   * No iOS, se ` Habilitar compilações específicas do dispositivo` está ativado (ajustado nas propriedades do projeto), não é possível depurar o código do jogo. Para acelerar o desenvolvimento, selecione manualmente a arquitetura do seu dispositivo no separador Avançado
+   * No iOS, se ` Ativar compilações específicas do dispositivo` está ativado (ajustado nas propriedades do projeto), não é possível depurar o código do jogo. Para acelerar o desenvolvimento, selecione manualmente a arquitetura do seu dispositivo no separador Avançado
 * Problemas de desempenho em dispositivos móveis (ser trabalhado)
 * O scripting ao vivo foi temporariamente desativado
 
@@ -271,7 +271,7 @@ A documentação está agora disponível em japonês. Para alternar idiomas, use
 ##### Game Studio
 
 * A atualização ao vivo da cor gizmo direcional, ponto e ponto luz não estava funcionando
-* Habilitar/desativar componentes de volume de ligação do eixo de luz agora funciona como pretendido
+* Ativar/desativar componentes de volume de ligação do eixo de luz agora funciona como pretendido
 * Adicionado diálogo "Referências de arquivo" ao remover diretórios com ativos
 * Muitos erros em inglês
 * Corrigido muitos problemas com cópia e pasta (e substituir). Notavelmente agora é possível copiar entidades de uma cena e cena infantil ao mesmo tempo.

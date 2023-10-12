@@ -57,7 +57,7 @@ Eles podem fazer uma diferença dramática ao humor e aparência de sua cena.
    <source src="media/ReleaseNotes-2.0/light_probes_640.mp4" type="video/mp4">
 </video>
 
-Sondas de luz podem ser ** colocadas livremente** e são processadas ** por pixel**. Isso significa que você pode usá-los não apenas em pequenos objetos dinâmicos, mas também objetos grandes ou estáticos (até que tenhamos mapas de luz para aqueles!).
+Sondas de luz podem ser ** colocadas livremente** e são processadas ** por pixel**. Isso significa que você pode usá-los não apenas em pequenos objetos dinâmicos, mas também objetos volumosos ou estáticos (até que tenhamos mapas de luz para aqueles!).
 
 Por último, mas não menos importante, agora você pode facilmente capturar um cubemap DDS da posição atual da câmera no editor, para uso como uma luz de caixa de céu difusa ou especular.
 

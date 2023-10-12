@@ -53,7 +53,7 @@ Para abrir o editor dedicado para esses tipos de ativos:
 
 ## Organizar ativos
 
-Recomendamos que você organize seus ativos em subpastas por tipo. Isso torna os projetos muito mais fáceis de gerenciar, especialmente quando eles se tornam grandes.
+Recomendamos que você organize seus ativos em subpastas por tipo. Isso torna os projetos muito mais fáceis de gerenciar, especialmente quando eles se tornam volumosos.
 
 ![ Projeto organizado](media/manage-assets-organized-project.png)
 

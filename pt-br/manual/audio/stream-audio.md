@@ -4,14 +4,14 @@
 <span class="badge text-bg-success">Designer</span>
 <span class="badge text-bg-success">Programação</span>
 
-Por padrão, o Stride reproduz áudio diretamente da memória. Isso é prático para efeitos sonoros curtos, como tiros ou passos.
+Por padrão, o Stride reproduz áudio diretamente da memória,  o que é conveniente para efeitos sonoros curtos, como tiros ou passos.
 
 ![Áudio pré-carregado](media/audio-index-non-streamed-audio.png)
 
-O Stride também tem a capacidade de armazenar áudio em buffer e reproduzi-lo sequencialmente. Assim que a primeira sequência é carregada em buffer, o Stride a reproduz enquanto carrega em buffer as sequências subsequentes em paralelo. Isso economiza muita memória quando aplicado a arquivos de áudio maiores, como músicas de fundo e diálogos de personagens.
+No entanto, o Stride também tem a capacidade de armazenar áudio em buffer e reproduzi-lo sequencialmente. Assim que a primeira sequência é carregada em buffer, o Stride a reproduz enquanto carrega em buffer as sequências subsequentes em paralelo. Isso economiza consideravelmente a memória quando aplicado a arquivos de áudio maiores, como música de fundo e diálogos de personagens.
 
 > [!Note]
-> A transmissão de áudio pode aumentar a latência, a menos que você pré-carregue utilizando a função ReadyToPlay (mais informações abaixo).
+> É importante observar que a transmissão de áudio pode aumentar a latência, a menos que você faça um pré-carregamento utilizando a função ReadyToPlay (mais informações abaixo).
 
 ![Áudio transmitido](media/audio-index-streamed-audio.png)
 

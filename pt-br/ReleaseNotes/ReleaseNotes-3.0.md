@@ -378,7 +378,7 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Pouco refatoring na característica do modelo de cabelo especular.
 * Feito "SpriteBase.xksl" sempre escrever zero para todos os alvos de renderização, a fim de evitar regiões de framebuffer uninitializadas (para evitar ter um índice de material SSS no céu).
 * Feito todos os materiais escrevem para o buffer de índice de material SSS.
-* Tornou possível habilitar/desativar a deduplicação do material SSS. Limpe e comenta o código.
+* Tornou possível ativar/desativar a deduplicação do material SSS. Limpe e comenta o código.
 * Multisampling feito ficar desativado quando OpenGL ES 2 está sendo usado. Registo adicionado para ajustes do nível de multisampling.
 * Fez a geometria do cabelo opaco renderizar usando o RenderStage "Opaque" e removeu o RenderStage "HairOpaque" do ForwardRenderer.
 * Feito a iluminação do cabelo especular atenuada por alfa, assim regiões transparentes não exibem reflexos especulares.

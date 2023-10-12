@@ -38,9 +38,9 @@ Os slots da câmera ligam o compositor gráfico às câmeras em sua cena. Você 
 
 2. Posicione a entidade para que a câmera capture a área da cena que você deseja renderizar para uma textura.
 
-3. Na entidade **Property Grid**, habilitar o componente **Camera** usando a caixa de seleção.
+3. Na entidade **Property Grid**, ativar o componente **Camera** usando a caixa de seleção.
 
-   ![ Habilitar componente da câmera](media/enable-camera-component.png)
+   ![ Ativar componente da câmera](media/enable-camera-component.png)
 
 4. no **Camera** Propriedades do componente, sob **Slot**, selecione o slot que você criou na etapa anterior.
 

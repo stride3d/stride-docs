@@ -18,7 +18,7 @@ Este efeito é uma tira que:
 
 * pode ser renderizado como uma única tira
 
-Como o relâmpago é uma faixa de linha única, podemos renderizá-lo usando o construtor de forma de fita, mas com algumas grandes diferenças. As partículas:
+Como o relâmpago é uma faixa de linha única, podemos renderizá-lo usando o construtor de forma de fita, mas com algumas volumosos diferenças. As partículas:
 
 * spawn ao mesmo tempo, em vez de em sequência
 

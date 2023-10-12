@@ -39,7 +39,7 @@ Data de lançamento 2017/3/9
 
 ##### Geral
 
-* A embalagem de conteúdo em pacotes agora é incremental em Debug e Release. Ele melhora drasticamente o tempo de iteração ao fazer pequenas mudanças, em seguida, reiniciando um jogo com muitos ou grandes ativos. A configuração do AppStore fará uma reconstrução completa
+* A embalagem de conteúdo em pacotes agora é incremental em Debug e Release. Ele melhora drasticamente o tempo de iteração ao fazer pequenas mudanças, em seguida, reiniciando um jogo com muitos ou volumosos ativos. A configuração do AppStore fará uma reconstrução completa
 * A compilação de ativos deve ter melhor tempo de inicialização e ser mais rápido ao gerar subprocessos (usado pelo FBX)
 * A importação de FBX para malhas com muitos triângulos foi extremamente lenta devido ao acesso não otimizado aos dados de borda
 * Compilação de ativos FBX às vezes falharia porque o limite de dados no WCF era muito baixo

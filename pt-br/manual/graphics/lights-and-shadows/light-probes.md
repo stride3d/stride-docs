@@ -40,7 +40,7 @@ O Stride permite sondas de luz por padrão em novos projetos. Para garantir que 
 
 3. No **Property Grid** (à direita por padrão), certifique-se de que a caixa de seleção **Light é selecionada.**
 
-   ![ Habilitar sondas de luz ](media/enable-light-probes.png)
+   ![ Ativar sondas de luz ](media/enable-light-probes.png)
 
 Para obter mais informações sobre o compositor gráfico, consulte a página [Graphics compositor](../graphics-compositor/index.md).
 

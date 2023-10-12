@@ -3,17 +3,17 @@
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Design</span>
 
-Um **receptor de áudio** é uma entidade que recepta o áudio emitido pelos [emissores de áudio](audio-emitters.md) para criar um [áudio espacial](spatialized-audio.md). Em uma cena, pode haver vários receptores de áudio. Isso é comum, por exemplo, em jogos multijogador, onde cada câmera de cada jogador é um receptor de áudio.
+Um **receptor de áudio** é uma entidade que capta o áudio emitido pelos [emissores de áudio](audio-emitters.md) para criar um ambiente de [áudio espacial](spatialized-audio.md).  Em uma cena, é possível ter vários receptores de áudio. Isso é especialmente comum em jogos multijogador, onde cada câmera de jogador atua como um receptor de áudio.
 
-Você não precisa configurar os receptores de áudio. Todas as configurações para efeitos sonoros, incluindo _Volume_ e _Tom_ (_Frequência_), são configuradas no emissor de áudio.
+Não é necessário configurar os receptores de áudio. Todas as configurações relacionadas aos efeitos sonoros, como _volume_ e _tom_ (_frequência_), são definidas nos emissores de áudio.
 
-Se não houver nenhum receptor de áudio na cena, você não ouvirá nenhum áudio dos emissores de áudio.
+Lembre-se de que, na ausência de receptores de áudio na cena, você não conseguirá ouvir o áudio dos emissores de áudio.
 
-## Adicionar um componente de receptor de áudio a uma entidade
+## Adicionar um componente receptor de áudio a uma entidade
 
-Para criar um receptor de áudio, adicione um componente **receptor de áudio** a uma entidade. Você pode adicional este componente a qualquer entidade.
+Para criar um receptor de áudio, adicione um componente **receptor de áudio** a uma entidade. Isso pode ser feito em qualquer entidade.
 
-1. Em **Visualizador de cenas**, selecione a entidade que você deseja que seja o receptor de áudio:
+1. No **Visualizador de Cenas**, selecione a entidade à qual você deseja adicionar o receptor de áudio:
 
    ![Selecione uma entidade](media/audio-add-audiolistener-component-select-entity.png)
 

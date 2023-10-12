@@ -31,7 +31,7 @@ Para usar o script:
 
 5. No **Property Grid** (à direita por padrão), ative o componente **Game Profiler**.
 
-   ![ Habilitar componente](media/enable-profiler-component.png)
+   ![ Ativar componente](media/enable-profiler-component.png)
 
    > [!Tip]
    > Você também pode ativar e desativar o profiler no tempo de execução com **Left Ctrl + Esquerda Shift + P**.
@@ -115,7 +115,7 @@ Você pode alterar as configurações do Game Profiler em tempo de execução us
 
 | Acção | Controlo |
 --------|--------
-| Esquerda Ctrl + Esquerda Shift + P | Habilitar/desativar o profiler |
+| Esquerda Ctrl + Esquerda Shift + P | Ativar/desativar o profiler |
 | F1 | Alternar entre CPU, GPU e resultados somente FPS |
 | F2 | Alternar entre a classificação por chave de perfil e tempo |
 - / + | Abrandar / acelerar o tempo de atualização

@@ -6,11 +6,11 @@ Após selecionar um recurso de áudio no **Visualizador de Recursos**, você pod
 
 | Propriedade | Descrição |
 |----------|----------
-| **Origem** | O arquivo de áudio de origem (observe que o Stride nunca altera os arquivos de origem). |
-| **Taxa de compressão** | Define a taxa de compressão de `1` (sem compressão) a `40` (máxima compressão). Maior compressão otimiza o uso de memória, mas diminui a qualidade do áudio. O Stride comprime arquivos de áudio com o codec de código aberto [Opus/Celt](https://en.wikipedia.org/wiki/CELT). |
-| **Taxa de amostragem** | A taxa na qual o Stride [reamostra](https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate) o arquivo de origem. Quanto maior a taxa de amostragem, melhor a qualidade do áudio. As taxas de amostragem típicas são 44,1 kHz (44.100 Hz), 48 kHz, 88,2 kHz e 96 kHz. Tenha em mente que taxas de amostragem altas não melhoram arquivos de áudio de baixa qualidade. |
-| **Espacializado** | Simula áudio 3D (consulte [áudio espacial](spatialized-audio.md)) |
-| **Transmitir do disco** | O streaming é útil para arquivos grandes de áudio, economizando memória. Para mais informações, consulte [Transmitir áudio](stream-audio.md) |
+| **Origem** | O arquivo de áudio de origem (Lembre-se que o Stride não modifica os arquivos de origem). |
+| **Taxa de compressão** | A taxa de compressão varia de `1` (sem compressão) a `40` (máxima compressão). Quanto maior a compressão, menor o uso de memória, porém a qualidade do áudio é reduzida. O Stride comprime arquivos de áudio usando o codec de código aberto [Opus/Celt](https://en.wikipedia.org/wiki/CELT). |
+| **Taxa de amostragem** | Esta é a taxa na qual o Stride ajusta a [amostragem](https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate) do arquivo de origem. Quanto maior a taxa de amostragem, melhor a qualidade do áudio. As taxas de amostragem comuns são 44,1 kHz (44.100 Hz), 48 kHz, 88,2 kHz e 96 kHz. No entanto, é importante ressaltar que taxas de amostragem mais altas não melhorarão a qualidade do áudio que sejam de baixa qualidade. |
+| **Áudio Espacial** | Simula áudio 3D (consulte [áudio espacial](spatialized-audio.md)) |
+| **Transmitir do disco** | A transmissão (streaming) é útil para arquivos volumosos de áudio, economizando memória. Para mais informações, consulte [Transmitir áudio](stream-audio.md) |
 
 ## Veja também
 

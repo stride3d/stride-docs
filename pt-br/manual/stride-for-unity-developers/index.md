@@ -1,6 +1,6 @@
 # Stride para desenvolvedores Unity®
 
-O Stride e o Unity® usam o C# e compartilham muitos conceitos, com algumas grandes diferenças.
+O Stride e o Unity® usam o C# e compartilham muitos conceitos, com algumas volumosos diferenças.
 
 ![Stride para desenvolvedores Unity®](media/stride-vs-unity-opening-image.png)
 

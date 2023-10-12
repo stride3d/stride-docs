@@ -84,7 +84,7 @@ As configurações **editor** controlam como Game Studio exibe entidades no Edit
 
 | Propriedade | Descrição |
 |---------------------------|--------------
-| Activado | Habilitar navegação dinâmica em componentes de navegação que não tenham rede de navegação atribuída |
+| Activado | Ativar navegação dinâmica em componentes de navegação que não tenham rede de navegação atribuída |
 | Grupos de colisão incluídos | Defina quais grupos de colisão usam malhas de navegação geradas dinamicamente. Por padrão, as malhas usam todos os grupos de colisão |
 | Configurar configurações | Configurações avançadas para malhas de navegação geradas dinamicamente |
 

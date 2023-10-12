@@ -43,7 +43,7 @@ var hasCompass = Input.Compass!= null;
 > [!Note]
 > Se um sensor não é suportado nativamente pelo dispositivo, a Stride tenta emula-lo usando outros sensores do dispositivo.
 
-## Habilitar um sensor
+## Ativar um sensor
 
 Por padrão, a Stride desabilita todos os sensores disponíveis, pois a recuperação e a atualização dos dados do sensor leva um tempo significativo da CPU.
 

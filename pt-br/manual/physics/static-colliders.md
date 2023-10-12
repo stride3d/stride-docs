@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Designer</span>
 
-** Os colistores estatísticos** não são movidos por forças como gravidade e colisões, mas outros objetos de física podem colidir com eles. Os colisões estáticos típicos são objetos imovíveis fortes como paredes, pisos, grandes rochas e assim por diante.
+** Os colistores estatísticos** não são movidos por forças como gravidade e colisões, mas outros objetos de física podem colidir com eles. Os colisões estáticos típicos são objetos imovíveis fortes como paredes, pisos, volumosos rochas e assim por diante.
 
 ![ Coletores de corpos estáticos e rígidos](media/rigid-bodies-static-and-rigid-body-colliders.png)
 

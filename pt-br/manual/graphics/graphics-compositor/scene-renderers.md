@@ -79,7 +79,7 @@ Usa @'Stride.Rendering.Compositing.ForceAspectRatioSceneRenderer' para forçar u
 | ------------- | ----------
 | Criança | Especifique um renderizador para a câmera (por exemplo, um renderizador para a frente ou um renderizador personalizado) |
 | Relação de aspecto fixo | A razão de aspecto para forçar a visão |
-| Razão de aspecto da força | Habilitar a relação de aspecto forçado |
+| Razão de aspecto da força | Ativar a relação de aspecto forçado |
 
 ## Textura do remetente
 

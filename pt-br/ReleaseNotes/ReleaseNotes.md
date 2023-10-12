@@ -120,7 +120,7 @@ Além disso, um enorme agradecimento aos indivíduos e empresas que contribuíra
 
 * [ORE Sistema](https://ore-system.com) com um patrocínio de diamante
 * [xen2](https://opencollective.com/xen2) Contribuidor do núcleo que doou uma grande parte do anterior Patreon de volta através do Open Collect
-* [vvvvv](https://visualprogramming.net) Um ambiente visual de programação ao vivo para fácil prototipagem e desenvolvimento. Ele é projetado para facilitar o manuseio de grandes ambientes de mídia com interfaces físicas, gráficos de movimento em tempo real, áudio e vídeo que podem interagir com muitos usuários simultaneamente. vvvvv usa Stride
+* [vvvvv](https://visualprogramming.net) Um ambiente visual de programação ao vivo para fácil prototipagem e desenvolvimento. Ele é projetado para facilitar o manuseio de volumosos ambientes de mídia com interfaces físicas, gráficos de movimento em tempo real, áudio e vídeo que podem interagir com muitos usuários simultaneamente. vvvvv usa Stride
 * [O quê](https://opencollective.com/vaclav)
 * [Mitchel Alberti](https://opencollective.com/mitchel-albertz)
 * [Bill](https://opencollective.com/bill2)

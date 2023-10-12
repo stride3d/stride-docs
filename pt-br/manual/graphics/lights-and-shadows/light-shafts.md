@@ -34,7 +34,7 @@ Por padrão, o Stride desativa eixos de luz em novos projetos. Para lhes permiti
 
 4. Certifique-se de que a caixa de seleção **light eixos** é selecionada.
 
-   ![ Habilitar eixos de luz](media/enable-light-shafts.png)
+   ![ Ativar eixos de luz](media/enable-light-shafts.png)
 
    Para obter mais informações sobre o compositor gráfico, consulte a página [Graphics compositor](../graphics-compositor/index.md).
 
@@ -44,7 +44,7 @@ Por padrão, o Stride desativa eixos de luz em novos projetos. Para lhes permiti
 
 2. No **Property Grid**, nas propriedades do componente **Light**, certifique-se de que a caixa de seleção **Shadow** é selecionada.
 
-   ![ Habilitar eixos de luz](media/light-shafts-enable-shadows.png)
+   ![ Ativar eixos de luz](media/light-shafts-enable-shadows.png)
 
 3. Clique em **Adicionar componente** e selecione **Light shaft**.
 

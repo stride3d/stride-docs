@@ -85,7 +85,7 @@ Sob as propriedades **Surface**, você pode definir um [Normal maps](../textures
 | ------------ | ---------------
 | Mapa normal | O provedor de cores do mapa normal |
 | Escala e deslocamento | Valores de interpretação da textura como valores positivos variando de `0.0` a `1.0`. O shader aplica uma escala para obter o intervalo `-1.0` a `1.0`. |
-| Reconstruir Z | Se não houver nenhum componente Z na textura, reconstrua-o dos componentes X e Y. Isso assume que X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 e que Z é sempre positivo, então nenhum vetor normal pode apontar para o lado traseiro da superfície. Recomendamos que você habilitar esta opção, como Stride pode remover o componente Z quando você comprimir mapas normais. |
+| Reconstruir Z | Se não houver nenhum componente Z na textura, reconstrua-o dos componentes X e Y. Isso assume que X<sup>2</sup> + Y<sup>2</sup> + Z<sup>2</sup> = 1 e que Z é sempre positivo, então nenhum vetor normal pode apontar para o lado traseiro da superfície. Recomendamos que você ativar esta opção, como Stride pode remover o componente Z quando você comprimir mapas normais. |
 
 Para obter mais informações sobre mapas normais, consulte a página [normal maps](../textures/normal-maps.md).
 
