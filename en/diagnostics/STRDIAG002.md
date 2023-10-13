@@ -6,18 +6,18 @@ Only mutable reference types are supported for 'DataMemberMode.Content' Mode mem
 ## Explanation
 
 The Content Mode mutates the object which is currently in the member.
-As this is not possible with the current Serializers used in yaml, only mutable Types are supported for Content Mode.
+As this is not possible with the current Serializers, only mutable Types are supported for Content Mode.
 Immutable types in this context are primitive types and string.
 
 ## Example
 
-The following example generates STRDIAG003 on each property:
+The following example generates STRDIAG002 on each property:
 
 ```csharp
 // STRDIAG000.cs
 using Stride.Core;
 
-public class STRDIAG000
+public class STRDIAG002
 {
     [DataMember(DataMemberMode.Content)]
     public int Value { get; set;}

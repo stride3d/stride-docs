@@ -1,56 +1,34 @@
-# Diagnostics Warning STRD003
+# Diagnostics Warning STRDIAG003
 
-- A property must have a public/internal getter.
-- A property must be set during instantiation, then no public setter would be valid.
-- Or it must have a public setter else.
+The member '{0}' with \[DataMember] is not accesssible to the serializer. Only public/internal/internal protected visibility is supported, when the \[DataMember] attribute is applied.
+
+## Explanation
+
+The Serialization concept in Stride expects public/internal/internal protected visibility of properties.
+Other Accessibility won't be considered for Serialization.
+To count internal/internal protected as visible to the Editor the \[DataMember] Attribute has to be applied, else it's considered as not visible.
 
 ## Example
 
-The following example generates STRD001:
+The following example generates STRDIAG003 on each property:
 
 ```csharp
-// STRD001.cs
-// compile with: /W:2
-public class Program
+// STRDIAG000.cs
+using Stride.Core;
+
+public class STRDIAG003
 {
-    public static void Main()
-    {
-        goto lab1;
-        {
-            // The following statements cannot be reached:
-            int i = 9;   // STRD001
-            i++;
-        }
-    lab1:
-        {
-        }
-    }
-}
+    [DataMember]
+    private int Value { get; set;}
 
-```
-
-Another common example where this error is generated is as follows:
-
-```csharp
-public static class Class1
-{
-    public static string Method1()
-    {
-        string x = "a";
-        switch (x)
-        {
-            case "a":
-                return "a";
-                break;          // CS0162
-        }
-        return "";
-    }
+    [DataMember]
+    protected string Value;
+    
+    [DataMember]
+    private protected string Value;
 }
 ```
 
-The `break` statement cannot be reached because it occurs after the `return` statement. The `return` statement ends the enclosing `case` branch.
+## Solution
 
-## See also
-
-- [C# Compiler Options](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/)
-- [C# Compiler Errors](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/)
+To resolve the warning, increase the Accessibility to public/internal/internal protected of the member or remove the \[DataMember] Attribute.
