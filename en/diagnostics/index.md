@@ -4,3 +4,4 @@ Some C# compiler errors have corresponding topics that explain why the error is 
 
 > [!WARNING]
 > Note that diagnostic feature is experimental and may not work as expected.
+> Warnings may contain solutions that don't work yet.

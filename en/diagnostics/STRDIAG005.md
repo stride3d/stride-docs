@@ -1,6 +1,6 @@
 # Diagnostics Warning STRD004
 
-For <see cref="System.Collections.Generic.Dictionary{TKey, TValue}"/> the only valid Keys are primitive Types. All complex types like custom structs, objects are not allowed.
+For \<see cref="System.Collections.Generic.Dictionary{TKey, TValue}"/> the only valid Keys are primitive Types. All complex types like custom structs, objects are not allowed.
 
 ## Example
 
