@@ -7,7 +7,7 @@ Only mutable reference types are supported for 'DataMemberMode.Content' Mode mem
 
 The Content Mode mutates the object which is currently in the member.
 As this is not possible with the current Serializers, only mutable Types are supported for Content Mode.
-Immutable types in this context are primitive types and string.
+Immutable types in this context are none reference types and string.
 
 ## Example
 

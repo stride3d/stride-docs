@@ -1,14 +1,12 @@
 # Diagnostics Warning STRDIAG005
 
-1. The property '{0}' with \[DataMember] does not have a getter which is required for serialization.
-2. The property '{0}' with \[DataMember] does not have an accessible getter which is required for serialization. A public/internal/internal protected getter is expected.
+The \[DataMember] Attribute is applied to a read-only member '{0}' with a non supported type. Only mutable reference types are supported for read-only members.
 
 ## Explanation
 
-All Serializers need a getter on a property to be able to get the content of the property.
-This is required for all Serializers in Stride.
-Non existent getters will result in error message 1.
-Non visible getters will result in error message 2.
+Having no set possibility automatically lets the serializers automatically use the DataMemberMode.Content.
+For immutable types the DataMemberMode.Content is never valid.
+Immutable types in this context are none reference types and string.
 
 ## Example
 
@@ -19,47 +17,14 @@ using Stride.Core;
 
 public class STRDIAG005
 {
-    // throws Diagnostics message 1
     [DataMember]
-    public int Value { set;}
-
-    // throws Diagnostics message 2
+    public readonly int Value;
     [DataMember]
-    public string Value { private get; set; }
-
-    // throws Diagnostics message 2 
-    [DataMember]
-    public string Value { protected get; set; }
-}
-```
-
-There is an edge case with internal/internal protected, it will count as non visible when the [DataMember] Attribute isn't applied.
-But when the Attribute is applied then the getter counts as visible and therfore is correct.
-
-```csharp
-// STRDIAG000.cs
-using Stride.Core;
-
-public class STRDIAG004
-{
-    // will throw STRDIAG004
-    public int Value { internal get; set;}
-
-    // will throw STRDIAG004
-    public int Value { internal protected get; set;}
-
-    // won't throw STRDIAG004
-    [DataMember]
-    public string Value { internal get; set; }
-    
-    // won't throw STRDIAG004
-    [DataMember]
-    public string Value { internal protected get; set; }
+    public string Value { get; }
 }
 ```
 
 ## Solution
 
-To resolve the warning 1, add a getter to the property with a public/internal/internal protected Accessibility or remove the \[DataMember] Attribute.
-
-To resolve the warning 2, increase the Accessibility of the property getter to public/internal/internal protected Accessibility or remove the \[DataMember] Attribute.
+To resolve the warning for fields, remove the \[DataMember] Attribute or remove the readonly modifier.
+To resolve the warning for properties, alter the type of the property to a supported type or remove the \[DataMember] Attribute.
