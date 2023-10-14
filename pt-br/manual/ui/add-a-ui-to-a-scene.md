@@ -83,7 +83,7 @@ anula pública InicializeUI()
 | Esticação da resolução | Como o valor de resolução virtual deve ser usado (`FixedWithFixedHeight`, `FixedWithAdaptableHeight`, ou `FixedHeightAdaptableWidth`) |
 | Billboard | Se selecionado, a interface do usuário sempre enfrenta a câmera. **Nota:** Desativar o modo de outdoor causa erros de texto UI na versão atual de Stride |
 | Texto instantâneo | Se selecionado, o texto da interface do usuário é snapped para o pixel mais próximo |
-| Tamanho fixo | Obtém ou define o valor indicando se a interface do usuário deve sempre ser um tamanho fixo na tela (por exemplo, um componente com uma altura de 1 usará 0.1 da tela). **Nota:** Esse recurso não funciona na versão atual do Stride |
+| Tamanho fixo | Obtém ou define o valor indicando se a interface do usuário deve sempre ser um tamanho fixo na tela (por exemplo, um componente com uma altura de 1 usará 0.1 da tela). **Nota:** Esse asset não funciona na versão atual do Stride |
 | Grupo de renderização | O grupo [render](../graphics/graphics-compositor/render-groups-and-masks.md) o UI usa |
 
 ## Scripts UI

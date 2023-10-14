@@ -16,13 +16,13 @@ Não recomendamos que você adicione as pastas **Bin** ou **obj** ao controle de
 
 O Visual Studio também coloca pastas **.obj** dentro de cada pasta de código. Pelas mesmas razões, não recomendamos que você adicione estes ao controle de versão.
 
-### Arquivos de recurso
+### Arquivos de asset
 
 **Resource files** são arquivos importados para Game Studio e usados por ativos. Eles incluem arquivos de imagem (por exemplo `.png`, `.jpg`), arquivos de áudio (por exemplo `.mp3`, `.wav`), e modelos (por exemplo `.fbx`). Recomendamos que você salve esses arquivos na pasta **Resources** em sua pasta de projeto.
 
-Não recomendamos que você salve arquivos de recursos na pasta Ativos. Você pode ser usado para organizar arquivos desta forma se você usar Unity®, pois Unity® requer arquivos de recursos e arquivos de ativos para estar na mesma pasta. O Stride não precisa disto, e fazê-lo tem desvantagens.
+Não recomendamos que você salve arquivos de assets na pasta Ativos. Você pode ser usado para organizar arquivos desta forma se você usar Unity®, pois Unity® requer arquivos de assets e arquivos de ativos para estar na mesma pasta. O Stride não precisa disto, e fazê-lo tem desvantagens.
 
-Por exemplo, imagine que um artista tenha editado 10GB de texturas e comprometido com o controle de fonte. Ao mesmo tempo, um designer precisa editar um ativo rapidamente. Para fazer isso, o designer recebe a versão mais recente do ativo do controle de origem. No entanto, porque os ativos e arquivos de recursos estão na mesma pasta, o designer é forçado a obter o 10gb de arquivos ao mesmo tempo. Se os arquivos estão em uma pasta separada, no entanto, o designer só tem que obter a pasta que eles precisam. Além disso, como arquivos de ativos são muito menores do que arquivos de recursos, é muito mais rápido navegar no histórico de ativos em uma pasta de ativos dedicada.
+Por exemplo, imagine que um artista tenha editado 10GB de texturas e comprometido com o controle de fonte. Ao mesmo tempo, um designer precisa editar um ativo rapidamente. Para fazer isso, o designer recebe a versão mais recente do ativo do controle de origem. No entanto, porque os ativos e arquivos de assets estão na mesma pasta, o designer é forçado a obter o 10gb de arquivos ao mesmo tempo. Se os arquivos estão em uma pasta separada, no entanto, o designer só tem que obter a pasta que eles precisam. Além disso, como arquivos de ativos são muito menores do que arquivos de assets, é muito mais rápido navegar no histórico de ativos em uma pasta de ativos dedicada.
 
 ### Arquivos de criação de conteúdo
 
@@ -42,7 +42,7 @@ Seguindo essas sugestões, uma estrutura de pasta de exemplo pode parecer assim:
     - MyGame. Jogo
     - MyGame
     - obj
-    - Recursos
+    - Assets
         - textura. png
 - Ficheiros de Criação de Conteúdo
     - textura.psd
@@ -59,7 +59,7 @@ Você pode até criar pastas separadas para diferentes tipos de arquivo de cria�
     - MyGame. Jogo
     - MyGame
     - obj
-    - Recursos
+    - Assets
         - textura. png
         - modelo.fbx
 - Projetos do Photoshop
@@ -72,7 +72,7 @@ Você pode até criar pastas separadas para diferentes tipos de arquivo de cria�
 
 Imagine uma equipe com dois programadores, dois artistas 2D e dois artistas 3D.
 
-* Os programadores verificam a pasta de projeto *MyGame* contendo código, ativos e recursos.
+* Os programadores verificam a pasta de projeto *MyGame* contendo código, assets e recursos.
 * Os artistas 2D verificam o projeto do jogo e a pasta *PhotoshopProjects* contendo arquivos `.psd`.
 * Os artistas 3D verificam o projeto do jogo e a pasta *MayaProjects* contendo arquivos `.mb` (projeto de maio).
 

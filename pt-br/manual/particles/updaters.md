@@ -16,7 +16,7 @@ Várias propriedades são comuns em muitos atualizadores.
 
 | Property | Descrição
 |-----------------
-| Debug draw | Desenha uma forma de wireframe de depuração para mostrar os limites para o atualizador. Este recurso só funciona para o editor e é ignorado quando você executar o seu jogo.
+| Debug draw | Desenha uma forma de wireframe de depuração para mostrar os limites para o atualizador. Este asset só funciona para o editor e é ignorado quando você executar o seu jogo.
 | Posição herança | Herdar a posição do componente do sistema de partículas, conforme definido no campo Transform |
 | Posição offset | Tradução adicional do módulo. Se herda a posição do pai, isso é aplicado em cima do herdado. |
 | Rotação herança | Herda a rotação do componente do sistema de partículas, conforme definido no campo Transform |

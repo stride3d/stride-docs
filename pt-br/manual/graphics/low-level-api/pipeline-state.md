@@ -157,7 +157,7 @@ e @'Stride.Graphics.PipelineStateDescription.RootSignature' propriedades do @'St
 
 Um @'Stride.Shaders.EffectBytecode' contém os programas de shader reais. Para mais informações, consulte [Efeitos e Shaders](../effects-and-shaders/index.md).
 
-A @'Stride.Graphics.RootSignature' descreve o número e tipo de recursos esperados pelo efeito. O capítulo seguinte abrange como [ recursos combinados](resources.md) para o pipeline.
+A @'Stride.Graphics.RootSignature' descreve o número e tipo de assets esperados pelo efeito. O capítulo seguinte abrange como [ recursos combinados](resources.md) para o pipeline.
 
 **Código:** Encerrar um efeito
 

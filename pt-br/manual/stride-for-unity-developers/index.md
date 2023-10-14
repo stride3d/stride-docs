@@ -49,13 +49,13 @@ Como Unity®, os projetos Stride são armazenados em um diretório que contém:
 
 * **obj** contém arquivos em cache. Game Studio cria esta pasta quando você construir seu projeto. Para forçar um ativo completo e reconstruir código, excluir esta pasta e construir o projeto novamente.
 
-* **Recursos** é o local recomendado para armazenar arquivos de origem para o seu projeto, como texturas, modelos e arquivos de áudio.
+* **Assets** é o local recomendado para armazenar arquivos de origem para o seu projeto, como texturas, modelos e arquivos de áudio.
 
 Stride e Unity® diferem das seguintes formas:
 
-* O Stride não copia automaticamente arquivos de recursos para sua pasta de projeto quando você os importa em ativos. Tens de fazer isto sozinho. Recomendamos que você os salve na pasta **Resources**.
+* O Stride não copia automaticamente arquivos de assets para sua pasta de projeto quando você os importa em ativos. Tens de fazer isto sozinho. Recomendamos que você os salve na pasta **Resources**.
 
-* O Stride não requer arquivos de recursos e arquivos de ativos para estar na mesma pasta. Você pode salvar arquivos de recursos na pasta Ativos se quiser, mas em vez disso, recomendamos salvá-los na pasta **Resources**. Isso facilita o compartilhamento de seu projeto via controle de versão.
+* O Stride não requer arquivos de assets e arquivos de ativos para estar na mesma pasta. Você pode salvar arquivos de assets na pasta Ativos se quiser, mas em vez disso, recomendamos salvá-los na pasta **Resources**. Isso facilita o compartilhamento de seu projeto via controle de versão.
 
 Para obter mais informações sobre a estrutura do projeto em Stride, incluindo conselhos sobre como organizar e compartilhar seus arquivos, consulte a página [Projeto estrutura](../files-and-folders/project-structure.md).
 
@@ -159,7 +159,7 @@ Em comparação com a Unity, muitas das propriedades do componente Transform rel
 
 #### Transformar direções
 Ao contrário da Unity, Stride fornece uma propriedade Backward, Left e Down.
-Note que essas são propriedades de matriz, então definir uma dessas não é suficiente para girar adequadamente a matriz.
+No entanto, é importante ressaltar que essas são propriedades de matriz, então definir uma dessas não é suficiente para girar adequadamente a matriz.
 
 | Unity® | Stride |
 |--------------------------|----------------------------------|
@@ -201,7 +201,7 @@ O editor abre em uma nova aba. Você pode organizar as guias como você gosta, o
 ![Dedicated Stride editores](media/stride-vs-unity-different-editors.png)
 
 > [!Note]
-> Quando você modifica arquivos de recursos fora do Game Studio, os ativos correspondentes atualizam automaticamente no Game Studio.
+> Quando você modifica arquivos de assets fora do Game Studio, os ativos correspondentes atualizam automaticamente no Game Studio.
 
 ### Activos de importação
 
@@ -212,13 +212,13 @@ Assim que você adicionar um ativo ao seu projeto, você pode editar suas propri
 ![ Adicionar asset](media/stride-vs-unity-add-asset.png)
 
 > [!Note]
-> Ao contrário do Unity®, a Stride não copia automaticamente arquivos de recursos para o diretório do projeto quando você os importa para projetos.
+> Ao contrário do Unity®, a Stride não copia automaticamente arquivos de assets para o diretório do projeto quando você os importa para projetos.
 
 ### Formatos de arquivo suportados
 
 Como Unity®, o Stride suporta formatos de arquivo, incluindo:
 
-| Tipo de recurso | Formatos suportados |
+| Tipo de asset | Formatos suportados |
 |-------------------------------|--------------------------------------------------------------|
 | Modelos, animações, esqueletos | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx |
 | Sprites, texturas, caixas de céu | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |

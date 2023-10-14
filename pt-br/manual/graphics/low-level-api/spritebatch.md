@@ -30,7 +30,7 @@ Você também pode definir estados como os discutidos na página [Pipeline state
 
 ## Desenhe um lote de sprite
 
-A classe @'Stride.Graphics.SpriteBatch' tem vários métodos de sorteio para definir vários parâmetros. Para obter uma lista de recursos, consulte a documentação da API @'Stride.Graphics.SpriteBatch'.
+A classe @'Stride.Graphics.SpriteBatch' tem vários métodos de sorteio para definir vários parâmetros. Para obter uma lista de assets, consulte a documentação da API @'Stride.Graphics.SpriteBatch'.
 
 ** Código:** Desenho de um lote de sprite
 

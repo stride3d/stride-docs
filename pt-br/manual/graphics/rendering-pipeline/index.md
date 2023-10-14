@@ -2,7 +2,7 @@
 
 ## Render características
 
-A lógica de renderização é dividida em @'Stride. Renderização. RenderFeature's. Cada recurso de renderização processa um tipo de @'Stride. Renderização. RenderObject' (por exemplo, malhas, sprites, partículas, etc).
+A lógica de renderização é dividida em @'Stride. Renderização. RenderFeature's. Cada asset de renderização processa um tipo de @'Stride. Renderização. RenderObject' (por exemplo, malhas, sprites, partículas, etc).
 
 Stride executa recursos em fases: **collect**, **extract**, **prepare** e **draw**. Isso significa que cada passo do pipeline pode ser isolado, paralelo e otimizado separadamente.
 

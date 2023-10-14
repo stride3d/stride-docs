@@ -26,7 +26,7 @@ Podemos usar o clipe de variação para combinar as animações de origem e de r
 
 ### Criar um clipe de variação
 
-1. No **Visualizador de Recursos** (por padrão, na parte inferior), clique em **Adicionar recurso** e selecione **Animações > Animação**. Uma janela de seleção de arquivos é exibida.
+1. No **Visualizador de Assets** (por padrão, na parte inferior), clique em **Adicionar asset** e selecione **Animações > Animação**. Uma janela de seleção de arquivos é exibida.
 
 2. Como não precisamos de um arquivo de origem para esta animação, clique em **Cancelar**.
 
@@ -34,18 +34,18 @@ Podemos usar o clipe de variação para combinar as animações de origem e de r
 
    ![Criar uma animação sem um arquivo de origem](media/create-animation-without-source-file.png)
 
-3. Clique em **Sim**. O Game Studio adicionará um novo recurso de animação vazio ao Visualizador de Recursos.
+3. Clique em **Sim**. O Game Studio adicionará um novo asset de animação vazio ao Visualizador de Assets.
 
-4. Dê um nome ao recurso que o torne fácil de identificar. Por exemplo, se você deseja criar uma animação de recarregar que possa ser usada com outras animações, você pode nomear o recurso como *RecarregarAditivo*.
+4. Dê um nome ao asset que o torne fácil de identificar. Por exemplo, se você deseja criar uma animação de recarregar que possa ser usada com outras animações, você pode nomear o asset como *RecarregarAditivo*.
 
-5. No **Visualizador de Recursos** (painel inferior por padrão), selecione o recurso de animação que você criou.
+5. No **Visualizador de Assets** (painel inferior por padrão), selecione o asset de animação que você criou.
 
 6. No **Editor de Propriedades** (à direita por padrão), adicione o clipe de animação de **origem**. Esta é a animação que você deseja aplicar a outras animações.
 
    ![Escolha o arquivo de origem](media/animations-additive-animations-1.png)
 
    > [!Note]
-   > Certifique-se de adicionar o arquivo que contém a animação (por exemplo, um arquivo de modelo como um .fbx), e **não** o recurso de animação que a referencia. Arquivos de animação geralmente são salvos na pasta **Resources**
+   > Certifique-se de adicionar o arquivo que contém a animação (por exemplo, um arquivo de modelo como um .fbx), e **não** o asset de animação que a referencia. Arquivos de animação geralmente são salvos na pasta **Resources**
 
 7. Em **Tipo**, escolha **Clipe de variação**.
 
@@ -64,19 +64,19 @@ Podemos usar o clipe de variação para combinar as animações de origem e de r
 
    Este esqueleto deve ser compatível com todas as animações que você deseja combinar com o clipe de variação. Na maioria dos casos, é aconselhável utilizar o mesmo esqueleto que foi usado nas animações de origem e de referência.
 
-11. Se desejar [visualizar a animação](preview-animations.md) na Visualização de Recursos,
+11. Se desejar [visualizar a animação](preview-animations.md) na Visualização de Assets,
    certifique-se de especificar um **modelo de visualização** adequado para a animação.
 
    ![Escolha o modo de reprodução](media/animations-additive-animations-4.png)
 
    > [!Note]
-   > A Visualização de Recursos mostra apenas a animação de origem que você especifica no clipe de variação.
+   > A Visualização de Assets mostra apenas a animação de origem que você especifica no clipe de variação.
 
 ## Usando uma animação aditiva
 
 Você pode usar animações aditivas com animações que usam o mesmo esqueleto e malha articulada.
 
-1. No **Visualizador de Recursos** (na parte inferior, por padrão), clique em **Adicionar recurso**.
+1. No **Visualizador de Assets** (na parte inferior, por padrão), clique em **Adicionar asset**.
 
 2. Selecione **Scripts > Animation start**.
 

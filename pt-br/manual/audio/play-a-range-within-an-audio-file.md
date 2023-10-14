@@ -1,9 +1,9 @@
-# Reproduzir um intervalo dentro de um recurso de áudio
+# Reproduzir um intervalo dentro de um asset de áudio
 
 <span class="badge text-bg-primary">Intermediário</span>
 <span class="badge text-bg-success">Programação</span>
 
-Você pode fazer o Stride reproduzir apenas partes específicas de um recurso de áudio. Isso significa, por exemplo, que você pode criar várias amostras de um único recurso de áudio especificando diferentes intervalos em diferentes objetos [SoundInstance](xref:Stride.Audio.SoundInstance).
+Você pode fazer o Stride reproduzir apenas partes específicas de um asset de áudio. Isso significa, por exemplo, que você pode criar várias amostras de um único asset de áudio especificando diferentes intervalos em diferentes objetos [SoundInstance](xref:Stride.Audio.SoundInstance).
 
 ![Pontos de repetição](media/audio-advanced-features-loop-points.png)
 
@@ -12,7 +12,7 @@ Você pode usar as seguintes propriedades, métodos e estruturas:
 | Propriedade, método ou estrutura | Função |
 |---------|-----------|
 | [TotalLength](xref:Stride.Audio.SoundBase.TotalLength) | O comprimento total do [som](xref:Stride.Audio.Sound). |
-| [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Media.PlayRange)) | Define o intervalo de tempo para reprodução dentro do recurso de áudio. |
+| [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Media.PlayRange)) | Define o intervalo de tempo para reprodução dentro do asset de áudio. |
 | [PlayRange](xref:Stride.Media.PlayRange) | Fornece informações de tempo, incluindo o ponto de início e a duração do intervalo. |
 | [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position) | Obtém o **TimeSpan** da posição atual da reprodução. |
 

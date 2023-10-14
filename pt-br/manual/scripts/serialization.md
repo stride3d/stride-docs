@@ -48,7 +48,7 @@ Pode ser usado para garantir que você não quebrar dados serializados anteriorm
 public string MyRenamedProp { get; set; }
 ```
 > [!Note]
-> Alias remaps valores apenas enquanto no editor; este recurso é específico para o sistema de serialização YAML. Alias será ignorado durante construções e em tempo de execução.
+> Alias remaps valores apenas enquanto no editor; este asset é específico para o sistema de serialização YAML. Alias será ignorado durante construções e em tempo de execução.
 
 ### [Data de publicação](xref:Stride.Core.DataMemberIgnoreAttribute)
 Isso notifica o editor e serializador que a propriedade ou campo neste [DataContract](#datacontractattribute)'ed

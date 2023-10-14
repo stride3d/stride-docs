@@ -1,4 +1,4 @@
-# Ligação de recursos
+# Ligação de assets
 
 <span class="badge text-bg-primary">Avançado</span>
 <span class="badge text-bg-success">Programação</span>
@@ -9,7 +9,7 @@ Quando vértices [drawing](draw-vertices.md) usando um efeito [](../effects-and-
 - amostradores
 - buffers constantes
 
-## Ligação automática de recursos
+## Ligação automática de assets
 
 A classe @'Stride.Rendering.EffectInstance lida com os detalhes de enumerar esses recursos de um efeito carregado, bem como encadeá-los.
 
@@ -28,6 +28,6 @@ pipelineStateDescription.RootSignature = efeitoInstance.RootSignature;
 efeitoInstance.Apply (context.GraphicsContext);
 ```
 
-## Ligação de recursos manual
+## Ligação de assets manual
 
-Quando o código mais otimizado é necessário (por exemplo, no pipeline de renderização [), atualizações de buffer constantes e vinculação de recursos podem ser feitas manualmente.](../rendering-pipeline/index.md)
+Quando o código mais otimizado é necessário (por exemplo, no pipeline de renderização [), atualizações de buffer constantes e vinculação de assets podem ser feitas manualmente.](../rendering-pipeline/index.md)

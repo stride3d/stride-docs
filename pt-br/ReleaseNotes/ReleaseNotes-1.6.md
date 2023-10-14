@@ -119,13 +119,13 @@ Data de lançamento: 2016/2009
 - OpenGL: Mesmo que usemos SDL, o carregamento de imagem agora usa o mesmo código que WinForms/WPF (desde que o código de carregamento SDL_image ainda não seja implementado)
 
 #### Activos
-- A AssetCompiler era um conjunto de cache para que eles pudessem ser modificados durante a execução. Esse recurso é útil apenas no desenvolvimento e estava fazendo algo mais lento e causando problemas de caminho muito longos, portanto, foi desativado para a instalação do usuário final ([#410](https://github.com/SiliconStudio/xenko/issues/410))
+- A AssetCompiler era um conjunto de cache para que eles pudessem ser modificados durante a execução. Esse asset é útil apenas no desenvolvimento e estava fazendo algo mais lento e causando problemas de caminho muito longos, portanto, foi desativado para a instalação do usuário final ([#410](https://github.com/SiliconStudio/xenko/issues/410))
 
 #### Motor
-- Adicionado falta XenkoDefault O recurso raiz da fonte no pacote padrão, isso faz o sistema profiler funcionar novamente fora da caixa.
+- Adicionado falta XenkoDefault O asset raiz da fonte no pacote padrão, isso faz o sistema profiler funcionar novamente fora da caixa.
 
 #### Game Studio
-- Corrigir um acidente que pode ocorrer ao carregar um projeto que contenha caminhos quebrados para arquivos de recursos
+- Corrigir um acidente que pode ocorrer ao carregar um projeto que contenha caminhos quebrados para arquivos de assets
 - Impedir que o processo Game Studio continue funcionando quando um problema fatal ocorre durante o carregamento
 
 #### Partes
@@ -151,7 +151,7 @@ Data de lançamento: 2016/05/27
 #### Motor
 
 - Alterado como OpenGL ES esperado vs versão real é tratada; isso deve corrigir vários problemas relacionados com a criação de contexto no Android e também código direcionando OpenGL mais antigo deve ser mais consistente em todos os dispositivos.
-- Houve alguns problemas para a eliminação de recursos da GPU que podem ter levado a estado incorreto (pode corrigir alguns problemas ao fechar cenas no editor).
+- Houve alguns problemas para a eliminação de assets da GPU que podem ter levado a estado incorreto (pode corrigir alguns problemas ao fechar cenas no editor).
 - Sombra Mapas em vários RenderViews não estavam funcionando corretamente (mesmo sombra mapa textura pode ser reutilizado, mas na verdade não foi).
 - Melhorou o comportamento do motor quando os aplicativos móveis precisam lidar com várias orientações.
 
@@ -242,7 +242,7 @@ Data de lançamento: 2016/04/27
 - Tornado vários tipos públicos em vez de internos, para que o usuário possa facilmente estender o pipeline de renderização por si mesmo
 - EffectValidator estava falhando em efeitos sem quaisquer valores de permutação ([#378](https://github.com/SiliconStudio/xenko/issues/378))
 - Adicionado um proxy de depurador para o novo ParameterCollection
-- Os parâmetros MSAA agora são devidamente encaminhados para a cadeia de swap principal. Note que ainda não pode ser usado no Render Quadro até que os alvos MSAA sejam devidamente resolvidos.
+- Os parâmetros MSAA agora são devidamente encaminhados para a cadeia de swap principal. No entanto, é importante ressaltar que ainda não pode ser usado no Render Quadro até que os alvos MSAA sejam devidamente resolvidos.
 
 #### Partes
 
@@ -255,7 +255,7 @@ Data de lançamento: 2016/04/27
 
 #### iOS
 
-- Corrigido um problema de dependência de biblioteca nativa que impediu Xamarin Incremental construir para funcionar corretamente (Há ainda um possivelmente Xamarin lado bug impedindo que este recurso para funcionar corretamente)
+- Corrigido um problema de dependência de biblioteca nativa que impediu Xamarin Incremental construir para funcionar corretamente (Há ainda um possivelmente Xamarin lado bug impedindo que este asset para funcionar corretamente)
 - O código IL personalizado do motor de animação não estava funcionando com o mais recente Xamarin AOT, agora está fixo
 
 #### Scripts incorporados
@@ -296,7 +296,7 @@ Data de lançamento: 2016/03/30
 - Para facilitar a edição de uma curva de computação vetorial no editor de curvas, outros componentes também são exibidos.
 - Caixas de texto em grade de propriedade exibem seu conteúdo na ponta da ferramenta.
 - Permitir ver a propriedade de um ativo enquanto ele está aberto em seu editor
-- As amostras e novos jogos agora têm arquivos de recursos em uma pasta "Recursos" em vez de "RawAssets"
+- As amostras e novos jogos agora têm arquivos de assets em uma pasta "Assets" em vez de "RawAssets"
 
 #### Física
 

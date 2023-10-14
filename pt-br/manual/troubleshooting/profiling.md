@@ -85,7 +85,7 @@ Se você selecionar **GPU** como o modo de exibição, o profiler exibe:
 
 * `Device`: o dispositivo gráfico (descrição do fabricante)
 * `Platform`: o backend usado atualmente (por exemplo, DirectX, OpenGL, Vulkan, etc)
-* `Profile`: o nível de recurso para o seu jogo, definido em **Configurações de jogo > Renderização** (ver [Configurações de jogo](../game-studio/game-settings.md))
+* `Profile`: o nível de asset para o seu jogo, definido em **Configurações de jogo > Renderização** (ver [Configurações de jogo](../game-studio/game-settings.md))
 * `Resolução`: a resolução do jogo
 * `Drawn triângulos`: o número de triângulos desenhados por quadro
 * `Draw chama`: o número de chamadas por quadro

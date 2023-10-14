@@ -37,7 +37,7 @@ A fase **prepare** prepara recursos de GPU e executa computação pesada. Isso g
 Exemplo de tarefas:
 
 * dados de iluminação de computação e estruturas
-* enchendo buffers constantes e tabelas de recursos
+* enchendo buffers constantes e tabelas de assets
 
 ### Desenho
 

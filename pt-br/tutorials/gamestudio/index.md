@@ -16,7 +16,7 @@ O motor Stride vem com um editor chamado **Game Studio**. Os vídeos abaixo cobr
 4. [Gestão de cenas](4-scene-management.md)
 5. [Entidades transformadoras](5-transforming-entities.md)
 6. [Pipeline de ativos](6-asset-pipeline.md)
-7. [Recursos de importação](7-importing-resources.md)
+7. [Assets de importação](7-importing-resources.md)
 8. [Texturas](8-textures.md)
 9. [Materiais](9-materials.md)
 10. [Modelos](10-models.md)

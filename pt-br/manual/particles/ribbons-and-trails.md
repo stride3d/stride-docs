@@ -89,7 +89,7 @@ Você pode adicionar segmentos extras entre partículas adjacentes para alisar a
 
    ![Diagrama: alisamento de partículas](media/diagram-smoothing-best.png)
 
-Este vídeo mostra a diferença entre os três métodos de alisamento. Note que a trilha mais correta (usando o método **Best**) é ligeiramente mais circular, mais próxima do caminho real do balanço da espada.
+Este vídeo mostra a diferença entre os três métodos de alisamento. No entanto, é importante ressaltar que a trilha mais correta (usando o método **Best**) é ligeiramente mais circular, mais próxima do caminho real do balanço da espada.
 
 ![media/particles-tutorials-ribbons-6.gif](media/smoothing-comparison.gif)
 

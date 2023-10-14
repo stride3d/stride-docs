@@ -63,7 +63,7 @@ Se você tiver um pré-fabricado chamado *MyBulletPrefab* na pasta raiz do seu p
 ```cs
 privado void InstantiateBulletPrefab()
 (
-    // Note que "MyBulletPrefab" refere-se ao nome e localização do seu ativo pré-fabricado
+    // No entanto, é importante ressaltar que "MyBulletPrefab" refere-se ao nome e localização do seu ativo pré-fabricado
     var myBulletPrefab = Content.Load<Prefab>("MyBulletPrefab");
 
     // Instantiate a prefab

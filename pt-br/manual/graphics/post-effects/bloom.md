@@ -15,7 +15,7 @@ Ele usa o resultado do efeito [bright filter](bright-filter.md) como entrada.
 
 | Propriedade | Descrição |
 | -------------- | ---- 
-| Radius | Raio da flor. Note que valores elevados podem afetar o desempenho. |
+| Radius | Raio da flor. No entanto, é importante ressaltar que valores elevados podem afetar o desempenho. |
 | Montante | Montante/força da flor. |
 | Rato de Sigma | Isso afeta a queda da flor. É o desvio padrão [](http://en.wikipedia.org/wiki/Standard_deviation) (sigma) usado na fórmula [Gaussian blur](http://en.wikipedia.org/wiki/Gaussian_blur) ao calcular o kernel da flor. |
 | Distorção | Estica a imagem horizontal ou verticalmente. |

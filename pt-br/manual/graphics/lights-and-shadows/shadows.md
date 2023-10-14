@@ -29,7 +29,7 @@ Por exemplo, estes são mapas de sombra da amostra de tiro em primeira pessoa in
 ![FPS cena sombra map](media/shadow-atlas-2x.png)
 
 > [!Note]
-> Note que a luz direcional no exemplo acima cria quatro mapas de sombra, um para cada cascata. Para obter mais informações, consulte a página [ Luzes direcionais](directional-lights.md).
+> No entanto, é importante ressaltar que a luz direcional no exemplo acima cria quatro mapas de sombra, um para cada cascata. Para obter mais informações, consulte a página [ Luzes direcionais](directional-lights.md).
 
 ### A sombra atlas
 

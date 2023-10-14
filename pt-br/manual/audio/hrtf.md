@@ -23,17 +23,17 @@ Para utilizar a HRTF, comece ativando-a globalmente nas **Configurações de Jog
 
 1. No **Gerenciador de Soluções** (o painel inferior esquerdo por padrão), selecione a pasta **Assets**.
 
-   ![Selecionar Recurso para a pasta asset](../game-studio/media/select-asset-folder.png)
+   ![Selecionar Asset para a pasta asset](../game-studio/media/select-asset-folder.png)
 
-2. No **Visualizador de Recursos** (o painel inferior por padrão), selecione o recurso **GameSettings**.
+2. No **Visualizador de Assets** (o painel inferior por padrão), selecione o asset **GameSettings**.
 
-   ![Selecionar recurso GameSettings](../game-studio/media/select-game-settings-asset.png)
+   ![Selecionar asset GameSettings](../game-studio/media/select-game-settings-asset.png)
 
 3. No **Editor de Propriedades** (o painel direito por padrão), abaixo de **Configurações de áudio**, selecione **HRTF**.
 
    ![ Configurações de áudio ](../game-studio/media/audio-settings.png)
 
-Para obter mais informações sobre o recurso Configurações de Jogo, consulte [Configurações de jogo](../game-studio/game-settings.md).
+Para obter mais informações sobre o asset Configurações de Jogo, consulte [Configurações de jogo](../game-studio/game-settings.md).
 
 ### 2. Habilitar HRTF nas entidades
 

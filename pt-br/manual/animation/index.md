@@ -3,7 +3,7 @@
 <span class="badge text-bg-success">Design</span>
 <span class="badge text-bg-success">Programação</span>
 
-Modelos 3D são animados adicionando-se três tipos de recurso:
+Modelos 3D são animados adicionando-se três tipos de asset:
 
 * um esqueleto
 * um modelo articulado
@@ -28,7 +28,7 @@ Esqueletos não precisam se assemelhar aos esqueletos de seres humanos ou animai
 **Malhas articuladas** são modelos que foram esqueletizados para corresponder a um esqueleto. A **articulação da malha** descreve como os vértices dela se transformam quando os ossos se movem.
 
 > [!Note]
-> No Game Studio, só é possível criar modelos 3D simples, como esferas e cubos. Para mais informações sobre como fazer isso, consulte [Criar recursos](../game-studio/create-assets.md). Para criar modelos mais complexos, utilize software dedicado como 3DS Max, Maya ou Blender e, em seguida, [importe o modelo para o Game Studio](import-animations.md).
+> No Game Studio, só é possível criar modelos 3D simples, como esferas e cubos. Para mais informações sobre como fazer isso, consulte [Criar assets](../game-studio/create-assets.md). Para criar modelos mais complexos, utilize software dedicado como 3DS Max, Maya ou Blender e, em seguida, [importe o modelo para o Game Studio](import-animations.md).
 
 ## Clipes de animação
 

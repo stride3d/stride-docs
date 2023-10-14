@@ -11,15 +11,15 @@ O áudio não espacial não requer [emissores de áudio](audio-emitters.md) ou [
 
 ## 1. Importar áudio e adicioná-lo à compilação
 
-1. [Importe o áudio como um recurso de áudio](import-audio.md).
+1. [Importe o áudio como um asset de áudio](import-audio.md).
 
-2. Certifique-se de que o recurso de áudio é um **recurso raiz**. Os recursos raiz são recursos que o Stride inclui na compilação para que possam ser usados em tempo de execução.
+2. Certifique-se de que o asset de áudio é um **asset raiz**. Os assets raiz são assets que o Stride inclui na compilação para que possam ser usados em tempo de execução.
 
-   No **Visualizador de Recursos**, clique com o botão direito do mouse no recurso e selecione **Incluir na compilação como recurso raiz**:
+   No **Visualizador de Assets**, clique com o botão direito do mouse no asset e selecione **Incluir na compilação como asset raiz**:
 
-   ![Incluir na compilação como recurso](media/audio-include-in-build-as-root-asset.png)
+   ![Incluir na compilação como asset](media/audio-include-in-build-as-root-asset.png)
 
-   Se a opção de menu mostrar **Não incluir na compilação como recurso raiz**, a opção já está selecionada e você não precisa alterá-la.
+   Se a opção de menu mostrar **Não incluir na compilação como asset raiz**, a opção já está selecionada e você não precisa alterá-la.
 
 ## 2. Criar um script para reproduzir áudio
 
@@ -71,7 +71,7 @@ public override async Task Execute()
 
 ### Alternativa: crie um script com variáveis públicas
 
-Crie uma variável pública para cada recurso de áudio que você deseja usar. Você pode usar as mesmas propriedades listadas acima.
+Crie uma variável pública para cada asset de áudio que você deseja usar. Você pode usar as mesmas propriedades listadas acima.
 
 Por exemplo:
 
@@ -116,19 +116,19 @@ public class MySoundScript : SyncScript
 
    O script é adicionado à entidade.
 
-3. Se você adicionou variáveis **públicas** ao script, é preciso vinculá-las aos recursos de áudio.
+3. Se você adicionou variáveis **públicas** ao script, é preciso vinculá-las aos assets de áudio.
 
-   Arraste e solte um recurso do **Visualizador de Recursos** para cada variável:
+   Arraste e solte um asset do **Visualizador de Assets** para cada variável:
 
-   ![Arraste e solte um recurso de áudio](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
+   ![Arraste e solte um asset de áudio](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 
-   Você também pode clicar no ![Ícone de mão](~/manual/game-studio/media/hand-icon.png) (**Selecionar um recurso**):
+   Você também pode clicar no ![Ícone de mão](~/manual/game-studio/media/hand-icon.png) (**Selecionar um asset**):
 
-   ![Selecionar um recurso](media/audio-play-script-component-pick-an-asset.png)
+   ![Selecionar um asset](media/audio-play-script-component-pick-an-asset.png)
 
-   Em seguida, escolha o recurso de áudio que você deseja usar:
+   Em seguida, escolha o asset de áudio que você deseja usar:
 
-   ![Selecionar um recurso de áudio](media/audio-play-audioemitter-component-add-select-audio-asset.png)
+   ![Selecionar um asset de áudio](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
 ## Veja também
 

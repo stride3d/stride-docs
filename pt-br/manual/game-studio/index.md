@@ -21,7 +21,7 @@ O **Property Grid** (B) exibe as propriedades do ativo ou entidade que você sel
 
 O **Solution Explorer** (C) exibe a hierarquia dos elementos do seu projeto, como ativos, arquivos de código, pacotes e dependências. Você pode criar pastas e objetos, renomeá-los e movê-los.
 
-O ** Aset View** (D) exibe os ativos do projeto. Você pode criar novos ativos usando o botão **New Asset** ou arrastando e soltando arquivos de recursos para o Asset View. Você também pode arrastar e soltar ativos do Asset View para os diferentes editores ou o Property Grid para Criar uma instância do ativo ou adicionar uma referência a ele. Por padrão, o Asset View está no centro inferior.
+O ** Aset View** (D) exibe os ativos do projeto. Você pode criar novos ativos usando o botão **New Asset** ou arrastando e soltando arquivos de assets para o Asset View. Você também pode arrastar e soltar ativos do Asset View para os diferentes editores ou o Property Grid para Criar uma instância do ativo ou adicionar uma referência a ele. Por padrão, o Asset View está no centro inferior.
 
 A aba **Asset Preview** (E) exibe uma visualização do ativo selecionado. A visualização muda com base no tipo do ativo que você selecionou. Por exemplo, você pode reproduzir animações e sons. Esta é uma maneira rápida de verificar as mudanças em um ativo ao editá-lo na Grade de Propriedade. Por padrão, o Asset Preview está na parte inferior direita.
 

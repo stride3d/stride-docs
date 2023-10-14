@@ -36,7 +36,7 @@ Para começar, use o script integrado do Game Profiler, anexá-lo a uma entidade
 #### Formas de depuração física no tempo de execução
 Agora é possível permitir a renderização de formas de colisão de física durante o tempo de execução.
 As formas de depuração são entidades normais e devem ser habilitadas para cada forma física que o requer.
-A melhor maneira de começar com esse recurso é usar o script embutido do Physics Shapes Render e anexar o script a qualquer entidade que tenha um Componente de Física e quando o jogo estiver executando a imprensa LCtrl-LShift-P.
+A melhor maneira de começar com esse asset é usar o script embutido do Physics Shapes Render e anexar o script a qualquer entidade que tenha um Componente de Física e quando o jogo estiver executando a imprensa LCtrl-LShift-P.
 
 <img src="media/ReleaseNotes-1.5/phys-debug.png" align="center" />
 
@@ -60,7 +60,7 @@ Com a nova barra de filtro de ativos, você pode filtrar seus ativos por nome, t
 Para adicionar um filtro, digite na barra de filtro e os filtros de correspondência serão exibidos. Clique no que deseja adicioná-lo à lista de filtros ativos.
 <img src="media/ReleaseNotes-1.5/AddingAssetFilter.png" align="center" />
 
-Apenas os ativos correspondentes aos filtros ativos serão exibidos na visualização de ativos. Note que os filtros de tipo são inclusivos, enquanto os filtros de nome e etiqueta são exclusivos.
+Apenas os ativos correspondentes aos filtros ativos serão exibidos na visualização de ativos. No entanto, é importante ressaltar que os filtros de tipo são inclusivos, enquanto os filtros de nome e etiqueta são exclusivos.
 
 ###### Suporte de pasta na visualização de ativos
 Se as opções "Ativos e pasta na pasta selecionada" forem selecionadas, o primeiro nível de subpasta será exibido na visualização de ativos. Você pode arrastar e soltar ativos dentro deles. Você também pode copiar / colar a estrutura completa da pasta.
@@ -74,7 +74,7 @@ Por exemplo, se você copiar / colar um modelo com suas dependências, você rec
 #### Suporte de fronteira e centro no editor de folhas de sprite
 Para sprites ‘Sprite2D’, você pode mover a posição do centro selecionando o <img src="media/ReleaseNotes-1.5/SpriteCenterIcon.png" style="display: inline"/> ícone na barra de ferramentas do editor de sprite. Pegue e mova a cruz para a posição desejada.
 
-Para sprites ‘UI’, você pode mudar as fronteiras selecionando o <img src="media/ReleaseNotes-1.5/SpriteBorderIcon.png" style="display: inline" /> ícone na barra de ferramentas do editor de sprite. Você pode então redimensionar cada borda (esquerda, superior, direita e inferior) separadamente da mesma forma que a região da textura, agarrando e movendo um deles. Note que o <img src="media/ReleaseNotes-1.5/SpriteBorderLockIcon.png" style="display: inline" /> ícone permite que você ‘bloquear’ ou ‘desbloquear’ as bordas de sprite enquanto redimensiona a região de textura.
+Para sprites ‘UI’, você pode mudar as fronteiras selecionando o <img src="media/ReleaseNotes-1.5/SpriteBorderIcon.png" style="display: inline" /> ícone na barra de ferramentas do editor de sprite. Você pode então redimensionar cada borda (esquerda, superior, direita e inferior) separadamente da mesma forma que a região da textura, agarrando e movendo um deles. No entanto, é importante ressaltar que o <img src="media/ReleaseNotes-1.5/SpriteBorderLockIcon.png" style="display: inline" /> ícone permite que você ‘bloquear’ ou ‘desbloquear’ as bordas de sprite enquanto redimensiona a região de textura.
 
 #### Novos scripts embutidos
 Adicionamos mais alguns scripts integrados com esta versão, como um script de câmera FPS e o script de controlador de primeiro jogador. Para usá-los, basta clicar em “New Asset”, “Script source code”, selecionar o script desejado e anexá-lo a uma entidade adequada.

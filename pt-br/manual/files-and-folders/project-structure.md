@@ -20,7 +20,7 @@ Um projeto pode conter um pacote ou vários. Você pode compartilhar pacotes ent
 
 * **obj** contém arquivos em cache. Game Studio cria esta pasta quando você construir seu projeto.
 
-* **Recursos** é um local sugerido para arquivos como imagens e arquivos de áudio usados por seus ativos.
+* **Assets** é um local sugerido para arquivos como imagens e arquivos de áudio usados por seus ativos.
 
 ## Estrutura de projeto recomendada
 

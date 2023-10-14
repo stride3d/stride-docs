@@ -202,7 +202,7 @@ Esta versão traz muitas melhorias para o motor de partículas.
 
 ##### Game Studio
 
-- O recurso de histórico de seleção foi reescrito. Agora é compartilhado por todos os editores e a vista dos ativos. Os botões para navegar no histórico de seleção foram movidos para a grade da propriedade
+- O asset de histórico de seleção foi reescrito. Agora é compartilhado por todos os editores e a vista dos ativos. Os botões para navegar no histórico de seleção foram movidos para a grade da propriedade
 - A operação de re-import foi substituída por um "Update asset from source" que aplica diretamente as mudanças da fonte para o ativo sem exibir a interface de usuário de importação. (Para esqueleto, modelo, ativos de estúdio sprite...)
 - Deixar cair um grande número de arquivos para importar é agora muito mais rápido
 - A notificação quando as fontes de alguns ativos mudaram é agora uma mensagem de diálogo em vez de um pop-up de notificação no canto da tela

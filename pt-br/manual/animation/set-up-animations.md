@@ -4,9 +4,9 @@
 <span class="badge text-bg-success">Design</span>
 <x id="3"/>Programação<x id="4"/><span class="badge text-bg-success"></span>
 
-Depois de [importar recursos de animação](import-animations.md), você precisa adicioná-los a uma entidade e reproduzi-los com um script.
+Depois de [importar assets de animação](import-animations.md), você precisa adicioná-los a uma entidade e reproduzi-los com um script.
 
-## 1. Adicionar recursos de animação a uma entidade
+## 1. Adicionar assets de animação a uma entidade
 
 1. No **Editor de cenas**, selecione a entidade que você deseja animar.
 
@@ -28,21 +28,21 @@ Depois de [importar recursos de animação](import-animations.md), você precisa
    ![Adicionar animação](media/add-animation.png)
 
    > [!Tip]
-   > Posteriormente, ao reproduzir animações usando scripts, você utilizará esse nome, **não** o nome do recurso de animação. Para facilitar a identificação, recomendamos que você dê à sua animação o mesmo nome do recurso de animação.
+   > Posteriormente, ao reproduzir animações usando scripts, você utilizará esse nome, **não** o nome do asset de animação. Para facilitar a identificação, recomendamos que você dê à sua animação o mesmo nome do asset de animação.
 
-5. Clique no ![Ícone de mão](~/manual/game-studio/media/hand-icon.png) (**Selecionar um recurso**).
+5. Clique no ![Ícone de mão](~/manual/game-studio/media/hand-icon.png) (**Selecionar um asset**).
 
-   ![Selecione o recurso](media/pick-asset-up.png)
+   ![Selecione o asset](media/pick-asset-up.png)
 
-   A janela **Selecionar um recurso** é exibida.
+   A janela **Selecionar um asset** é exibida.
 
-6. Navegue até o recurso de animação que você deseja adicionar e clique em **OK**.
+6. Navegue até o asset de animação que você deseja adicionar e clique em **OK**.
 
-   ![Selecionar recurso](media/asset-picker.png)
+   ![Selecionar asset](media/asset-picker.png)
 
-   O Game Studio adicionará o recurso de animação à entidade.
+   O Game Studio adicionará o asset de animação à entidade.
 
-   ![Recurso de animação adicionado](media/animation-asset-added.png)
+   ![Asset de animação adicionado](media/animation-asset-added.png)
 
 Você pode adicionar quantas animações forem necessárias ao componente de animação. O Editor de Propriedades lista as animações em ordem alfabética.
 

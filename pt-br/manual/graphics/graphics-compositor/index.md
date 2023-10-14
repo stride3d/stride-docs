@@ -42,7 +42,7 @@ Você também pode alterar o compositor gráfico em tempo de execução em um sc
 Você personaliza o compositor gráfico no editor de compositores **graphics**.
 
 > [!Note]
-> O editor de compositores gráficos é um recurso experimental.
+> O editor de compositores gráficos é um asset experimental.
 
 No **Asset View** (no painel inferior por padrão), clique duas vezes no **Graphics Compositor** ativo.
 

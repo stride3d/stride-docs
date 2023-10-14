@@ -5,7 +5,7 @@
 
 A classe @'Stride.Graphics.GraphicsDevice é a classe central para exibir seu jogo. É usado para criar recursos e apresentar imagens na tela. Você pode acessá-lo como um membro do @'Stride. Engine.Game' e @'Stride.Engine.ScriptComponent' classes.
 
-Ações como desenho, definição de estados gráficos e utilização de recursos são gravadas usando objetos @'Stride.Graphics.CommandList para posterior execução pelo dispositivo.
+Ações como desenho, definição de estados gráficos e utilização de assets são gravadas usando objetos @'Stride.Graphics.CommandList para posterior execução pelo dispositivo.
 
 Muitas listas de comando podem ser preenchidas ao mesmo tempo (por exemplo, uma por linha). Uma lista de comandos padrão está disponível como membro do @'Stride.Games.GameBase.GraphicsContext' do seu @'Stride. Motor. Jogo.
 
@@ -22,7 +22,7 @@ Executar qualquer desenho requer vários passos, incluindo:
 
 * [Desenho vértices](draw-vertices.md)
 * [Estado da tubulação](pipeline-state.md)
-* [Recursos](resources.md)
+* [Assets](resources.md)
 * [SpriteBatch](spritebatch.md)
 * [SpriteFonte](spritefont.md)
 * [Texturas e texturas de renderização](textures-and-render-textures.md)

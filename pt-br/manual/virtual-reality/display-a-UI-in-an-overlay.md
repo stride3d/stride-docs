@@ -49,11 +49,11 @@ Nas etapas seguintes, vamos renderizar a interface do usuário para esta textura
 
 6. Selecione a textura **render** você criou e clique em **OK**.
 
-## 3. Configurar o recurso de renderização UI
+## 3. Configurar o asset de renderização UI
 
 1. No editor de compositores gráficos, à esquerda, sob **Render Features**, selecione o **UIRenderFeature**.
 
-   ![Select UI renderizar recurso](media/select-UI-render-feature.png)
+   ![Select UI renderizar asset](media/select-UI-render-feature.png)
 
 2. Na Grade de Propriedade, certifique-se de **SimpleGroupToRenderStageSelector** é selecionado.
 

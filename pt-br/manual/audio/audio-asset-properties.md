@@ -1,8 +1,8 @@
-# Propriedades de recurso de áudio
+# Propriedades de asset de áudio
 
-Após selecionar um recurso de áudio no **Visualizador de Recursos**, você pode configurar suas propriedades no **Editor de Propriedades**.
+Após selecionar um asset de áudio no **Visualizador de Assets**, você pode configurar suas propriedades no **Editor de Propriedades**.
 
-![Propriedades de recursos de áudio](media/audio-asset-properties.png)
+![Propriedades de assets de áudio](media/audio-asset-properties.png)
 
 | Propriedade | Descrição |
 |----------|----------

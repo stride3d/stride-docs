@@ -42,7 +42,7 @@ No **Asset View**, clique em **Add asset** > **Texture**, em seguida, selecione 
 
 Alternativamente, arraste o arquivo de textura do Explorer para o Asset View:
 
-![Drap e solte um arquivo de recursos para o Asset View](../../get-started/media/create-assets-drop-resource.png)
+![Drap e solte um arquivo de assets para o Asset View](../../get-started/media/create-assets-drop-resource.png)
 
 Em seguida, selecione um modelo de textura (**color**, **grayscale** ou **normal map**):
 

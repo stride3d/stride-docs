@@ -54,7 +54,7 @@ A propriedade **Effect compiler** especifica como compilar o shader.
 
 * **LocalOrRemote**: Converta o shader na máquina do desenvolvedor; se isso falhar, tente convertê-lo no dispositivo. Como a configuração **Remote**, isso não tem uso para versões de lançamento do seu jogo.
 
-* **Nenhum **: Não convertas shaders. Note que o aplicativo vai falhar se precisar de um shader que não está no banco de dados. Atualmente, usar este recurso não salva nenhum espaço seu aplicativo, então não há nenhuma vantagem em usá-lo. No entanto, pode ser útil para ter certeza de que você tem cada shader no banco de dados; se o jogo falhar, você sabe que o banco de dados está faltando pelo menos um shader.
+* **Nenhum **: Não convertas shaders. No entanto, é importante ressaltar que o aplicativo vai falhar se precisar de um shader que não está no banco de dados. Atualmente, usar este asset não salva nenhum espaço seu aplicativo, então não há nenhuma vantagem em usá-lo. No entanto, pode ser útil para ter certeza de que você tem cada shader no banco de dados; se o jogo falhar, você sabe que o banco de dados está faltando pelo menos um shader.
 
 Se você ativar os efeitos usados **Record**, Game Studio adiciona novos shaders ao Registro de Efeito assim que forem necessários. Recomendamos que você desative isso para versões de lançamento do seu jogo, pois não pode se conectar à máquina desenvolvedora.
 

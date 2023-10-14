@@ -58,7 +58,7 @@ Para mais informações, consulte o compositor [Graphics](../graphics/graphics-c
 
 | Propriedade | Descrição |
 |--------------|--------------
-| Suporte HRTF | Ativar áudio HRTF. Note que apenas emissores de áudio com HRTF habilitado produzirá áudio HRTF. Para mais detalhes, consulte [HRTF](../audio/hrtf.md). |
+| Suporte HRTF | Ativar áudio HRTF. No entanto, é importante ressaltar que apenas emissores de áudio com HRTF habilitado produzirá áudio HRTF. Para mais detalhes, consulte [HRTF](../audio/hrtf.md). |
 
 Para mais detalhes sobre áudio, veja [Audio](../audio/index.md).
 
@@ -121,7 +121,7 @@ Para mais detalhes, veja [Navigation](../navigation/index.md).
 | Largura do amortecedor traseiro padrão | Isso pode ser substituído dependendo da relação e/ou resolução do dispositivo. No Windows, este é o tamanho da janela. No Android/iOS, esta é a resolução de alvo fora da tela. |
 | Altura do amortecedor traseiro padrão | Isso pode ser substituído dependendo da relação e/ou resolução do dispositivo. No Windows, este é o tamanho da janela. No Android/iOS, esta é a resolução de alvo fora da tela. |
 | Adapte o buffer de volta para a tela | Adapte a relação do buffer traseiro para ajustar a relação de tela |
-| Perfil gráfico padrão | O nível de recursos gráficos exigido pelo projeto |
+| Perfil gráfico padrão | O nível de assets gráficos exigido pelo projeto |
 | Espaço de cor | O espaço de cor (gama ou linear) usado para renderização. Isso afeta o jogo em tempo de execução e como os elementos são exibidos no Game Studio. |
 | Orientação de exibição | A orientação de exibição do jogo (padrão, retrato, paisagem esquerda ou paisagem direita). |
 | Plataforma gráfica de destino | A plataforma de destino Stride constrói o projeto para. Se você definir isso para **Default**, Stride escolhe a plataforma mais apropriada. Para obter mais informações, consulte [Defina a plataforma gráfica](../platforms/set-the-graphics-platform.md). |
@@ -137,8 +137,8 @@ Para mais detalhes, veja [Navigation](../navigation/index.md).
 |----------------------|------------
 | Streaming | Activar streaming |
 | Intervalo de atualização | Com que frequência Stride atualiza o streaming. Intervalos menores significam que o sistema de streaming reage mais rápido, mas use mais CPU e cause mais flutuações de memória. |
-| Recursos máximos por atualização | O número máximo de texturas carregadas ou descarregadas por atualização de streaming. Números mais elevados reduzem o pop-in, mas podem retardar o framerate. |
-| Tempo de recurso (ms) | Quanto tempo os recursos permanecem carregados após não serem mais utilizados (quando o orçamento de memória **** é excedido) |
+| Assets máximos por atualização | O número máximo de texturas carregadas ou descarregadas por atualização de streaming. Números mais elevados reduzem o pop-in, mas podem retardar o framerate. |
+| Tempo de asset (ms) | Quanto tempo os assets permanecem carregados após não serem mais utilizados (quando o orçamento de memória **** é excedido) |
 | Orçamento de memória (em MB) | Quando a memória usada por streaming excede este orçamento, Stride descarrega texturas não utilizadas. Você pode aumentar isso para manter mais texturas carregadas quando você tem memória para poupar, e vice-versa. |
 
 > [!Note]

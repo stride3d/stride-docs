@@ -58,11 +58,11 @@ Os usuários agora podem ler e iterar sobre todas as colisões através da Simul
 
 ## Melhoria do editor gizmos
 
-Os gizmos antigos não eram muito agradáveis de olhar, então este recurso os faz olhar melhor e mais user-friendly. Ele também muda como a rotação gizmo funciona e adiciona planos de escala ao gizmo de escala.
+Os gizmos antigos não eram muito agradáveis de olhar, então este asset os faz olhar melhor e mais user-friendly. Ele também muda como a rotação gizmo funciona e adiciona planos de escala ao gizmo de escala.
 
 ![ Novos gizmos](https://i.imgur.com/8siM2Lc.png)
 
-Este recurso também atualiza o texto no CameraOrientationGizmo para ser XYZ em vez da direita/esquerda. Ainda prefere o texto antigo em vez da coordenada XYZ? Não se preocupe, há uma configuração sob as configurações do viewport que a troca de volta para o texto antigo.
+Este asset também atualiza o texto no CameraOrientationGizmo para ser XYZ em vez da direita/esquerda. Ainda prefere o texto antigo em vez da coordenada XYZ? Não se preocupe, há uma configuração sob as configurações do viewport que a troca de volta para o texto antigo.
 
 ![Rotation](https://i.imgur.com/W4zIf7J.png =400x160)
 

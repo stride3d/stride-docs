@@ -34,7 +34,7 @@ Mais para baixo da estrada, o plano é dividir Xenko mais em pacotes separados, 
 
 Agora é possível adicionar vídeo aos seus jogos.
 
-Note que este recurso não é completamente testado e suportado em todas as plataformas, mas decidimos incluí-lo de qualquer forma e sintonizá-lo mais tarde para não atrasar o lançamento do MIT mais.
+No entanto, é importante ressaltar que este asset não é completamente testado e suportado em todas as plataformas, mas decidimos incluí-lo de qualquer forma e sintonizá-lo mais tarde para não atrasar o lançamento do MIT mais.
 
 ### Renderização de pele e cabelo
 
@@ -42,7 +42,7 @@ A renderização de pele e cabelo agora é possível com Xenko.
 
 A renderização da pele é baseada na dispersão subsuperfície, e a renderização do cabelo é baseada nos modelos Kajiya-Kay e Scheuermann.
 
-O mesmo que o vídeo, este recurso ainda pode precisar de algumas melhorias e ajuste, mas decidimos não atrasar o lançamento do MIT mais.
+O mesmo que o vídeo, este asset ainda pode precisar de algumas melhorias e ajuste, mas decidimos não atrasar o lançamento do MIT mais.
 
 ## Alterações de ruptura
 
@@ -152,7 +152,7 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Teste de unidade fixa e compilações de pacotes
 * Se SiliconStudioCompilerTargetsEnable estiver definido como false, substitua LanguageTargets a um vazio
 * Inclua *.cs arquivos que não estão no diretório do projeto
-* Listar pastas de recursos explicitamente em .xkpkg
+* Listar pastas de assets explicitamente em .xkpkg
 * Faça Xenko Native .cpp/.h arquivo que se globbing mais rápido ignorando pastas obj/bin
 * Mais limpeza
 * Fontes movidas de fontes/subdiretório comum a fontes para que tudo esteja ao mesmo nível
@@ -196,7 +196,7 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Use o MSBuild 15.5 do MyGet
 * Use o Windows SDK v10.0 em vez de v8.1 para d3dcompiler_47.dll
 * Várias melhorias / correções para o novo sistema de projeto
-* Solução para https://github.com/xamarin/xamarin-android/issues/1235 (Recursos Android não sendo devidamente mesclados em compilação incremental)
+* Solução para https://github.com/xamarin/xamarin-android/issues/1235 (Assets Android não sendo devidamente mesclados em compilação incremental)
 * Solução para dependências de soluções com quadros incompatíveis: https://github.com/Microsoft/msbuild/issues/2661#issuecomment-338808156
 
 ### Construa o motor
@@ -384,7 +384,7 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Feito a iluminação do cabelo especular atenuada por alfa, assim regiões transparentes não exibem reflexos especulares.
 * Feito o pós-processo SSS ser ignorado se nenhum material de dispersão é visível.
 * Fez o trabalho pós-processo SSSS exatamente para viewports não-quadrados também. Refactored o código. Desativado o código do shader de depuração. Corrigido as coordenadas de espaço de clip invertido.
-* Feito o recurso de material de transparência é ignorado se o corte de cabelo está ligado para evitar problemas.
+* Feito o asset de material de transparência é ignorado se o corte de cabelo está ligado para evitar problemas.
 * Refactoring menor no código do cabelo.
 * Misturas SSS deslocadas para uma subpasta.
 * Moveu a estrutura "MaterialHairSurfaceData" para o shader de cabelo especular porque só é necessário lá agora. Renomeado "MaterialHairSurfaceData.xksl" para "MaterialHairShared.xksl".
@@ -408,8 +408,8 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Refatoração e limpeza. Removido código duplicado e redundante.
 * Refactoring. Livrei-me do código duplicado. Ligeiramente mudou a iluminação ambiental. Implementou a opção para o modelo de sombreamento usando um enum.
 * Reimplementado o cabelo "tag" como um parâmetro Chave para que as malhas de cabelo podem ser filtradas corretamente. Atualizado o RenderStageSelectors.
-* Reimplementado a renderização do cabelo usando o novo recurso multipass. Corrigido alguns problemas de corte de cabelo. Reforçada a iluminação ambiental especular usando IMaterialSpecularMicrofacetEnvironmentFunction.
-* Reimplementou o SSS como um recurso de material separado. Parâmetros de material obsoleto removidos.
+* Reimplementado a renderização do cabelo usando o novo asset multipass. Corrigido alguns problemas de corte de cabelo. Reforçada a iluminação ambiental especular usando IMaterialSpecularMicrofacetEnvironmentFunction.
+* Reimplementou o SSS como um asset de material separado. Parâmetros de material obsoleto removidos.
 * Remover unused built-in shader bytecode
 * Removido uma linha comentada de código de depuração.
 * Removido um projeto incluem.
@@ -533,7 +533,7 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Adicione a possibilidade de selecionar o modo de mistura sprite do Game Studio.
 * Corrigir problema de renderização de tela preta quando os efeitos pós são usados sem espelho de textura VR.
 * Melhore a robustez FastTextRenderer. Realloque buffer quando o número máximo de caracteres é excedido.
-* Gamas de recursos foram misturados com dados quando a computação satrt compensa
+* Gamas de assets foram misturados com dados quando a computação satrt compensa
 * Pele: remover a declaração de SV_Target* quando não usado, e usar outro mecanismo para detectar se o índice de material MRT é necessário
 * Temporal AA (Velocity Buffer cortesia de Guus)
 
@@ -617,12 +617,12 @@ Isso deve acontecer automaticamente, mas você pode precisar de alguns ajustes d
 * Montagem de vídeo adicionada para testes de unidade
 * Certifique-se de que o formato de arquivo de vídeo é mp4 no Windows.
 * Corrigir instruções de pré-processamento #ifdef em arquivos ffmpeg e tornar a API gráfica de montagem dependente.
-* Mantenha-se em sincronia com o ramo de recursos
+* Mantenha-se em sincronia com o ramo de assets
 * Tire as informações do STEREO3D side_data quando presente durante a compilação de vídeo na janela.
 
 ### Vídeo/Audio
 
-* Mantenha-se em sincronia com o ramo de recursos
+* Mantenha-se em sincronia com o ramo de assets
 
 ### Visualize
 

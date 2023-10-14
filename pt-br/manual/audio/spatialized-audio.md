@@ -29,11 +29,11 @@ O áudio espacial é amplamente utilizado em efeitos sonoros para jogos em plata
 
 ## Ativar áudio espacial
 
-Quando você [importar seu áudio](import-audio.md), selecione *Espacial* como o tipo do recurso.
+Quando você [importar seu áudio](import-audio.md), selecione *Espacial* como o tipo do asset.
 
-Você também pode configurar o áudio como espacial no **Editor de Propriedades** do recurso:
+Você também pode configurar o áudio como espacial no **Editor de Propriedades** do asset:
 
-1. No **Visualizador de Recursos**, selecione _Recurso de áudio_.
+1. No **Visualizador de Assets**, selecione _Asset de áudio_.
 
 2. No **Editor de Propriedades**, selecione a caixa de seleção **Espacial**:
 

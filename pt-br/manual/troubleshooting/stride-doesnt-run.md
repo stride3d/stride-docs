@@ -12,7 +12,7 @@ Alternativamente, desinstale Stride, reinicie o instalador Stride e instale os p
 
 ### .NET Framework 4.7.2
 
-Para verificar se isso é instalado, consulte **Control Panel > Programas > Programas e Recursos** e procure uma entrada contendo **. NET 4.7.2**.
+Para verificar se isso é instalado, consulte **Control Panel > Programas > Programas e Assets** e procure uma entrada contendo **. NET 4.7.2**.
 
 ![Programas e características](media/programs-and-features.png)
 
@@ -23,7 +23,7 @@ Se não estiver instalado, você pode baixá-lo do [Microsoft Download Center](h
 
 ### Visual C++ Redistributável 2019
 
-Para verificar se isso é instalado, consulte **Control Panel > Programas > Programas e Recursos** e procure **2015-2019 Redistributável**.
+Para verificar se isso é instalado, consulte **Control Panel > Programas > Programas e Assets** e procure **2015-2019 Redistributável**.
 
 ![Programas e características](media/programs-and-features-redistributable.png)
 

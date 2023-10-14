@@ -15,15 +15,15 @@ No entanto, o Stride também tem a capacidade de armazenar áudio em buffer e re
 
 ![Áudio transmitido](media/audio-index-streamed-audio.png)
 
-Para transmitir um recurso de áudio:
+Para transmitir um asset de áudio:
 
-1. No **Visualizador de Recursos**, selecione o recursos de audio.
+1. No **Visualizador de Assets**, selecione o assets de audio.
 
 2. No **Editor de Propriedades**, selecione **Transmitir a partir do disco**:
 
-   ![Propriedades de recurso de áudio](media/audio-asset-properties-property-grid.png)
+   ![Propriedades de asset de áudio](media/audio-asset-properties-property-grid.png)
 
-No script do recurso, você pode configurar um arquivo de áudio para começar a reproduzir assim que o motor de áudio carregar amostras de áudio suficientes. Para isso, use esta tarefa:
+No script do asset, você pode configurar um arquivo de áudio para começar a reproduzir assim que o motor de áudio carregar amostras de áudio suficientes. Para isso, use esta tarefa:
 
 ```cs
 SoundInstance music = musicSound.CreateInstance();
@@ -33,6 +33,6 @@ music.Play();
 
 ## Veja também
 * [Configurações globais de áudio](global-audio-settings.md)
-* [Propriedades de recurso de áudio](audio-asset-properties.md)
+* [Propriedades de asset de áudio](audio-asset-properties.md)
 * [Áudio espacial](spatialized-audio.md)
 * [Áudio não espacial](non-spatialized-audio.md)

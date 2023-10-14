@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Designer</span>
 
-Para [colliders](colliders.md) interagir, você precisa definir sua forma no **Property Grid**. Você pode especificar uma forma geométrica ou usar um recurso de forma de colisão.
+Para [colliders](colliders.md) interagir, você precisa definir sua forma no **Property Grid**. Você pode especificar uma forma geométrica ou usar um asset de forma de colisão.
 
 ![Selecione uma forma de colisão](media/select-collider-shape.png)
 
@@ -94,9 +94,9 @@ Atribui uma forma de colisão de um ativo de forma de colisão (veja ** Activos 
 
 ## Activos de forma de colarinho
 
-Você também pode criar ativos de forma **collider** e usá-los como sua forma de colisão. Isso significa que você pode editar o recurso de forma de colisão e atualizá-lo automaticamente em cada entidade que o usa.
+Você também pode criar ativos de forma **collider** e usá-los como sua forma de colisão. Isso significa que você pode editar o asset de forma de colisão e atualizá-lo automaticamente em cada entidade que o usa.
 
-## Criar um recurso de forma de colide
+## Criar um asset de forma de colide
 
 1. No **Asset View** (bottom by default), clique em **Add asset**.
 
@@ -104,11 +104,11 @@ Você também pode criar ativos de forma **collider** e usá-los como sua forma 
 
    ![Criar a forma de colisor ](media/create-collider-shape-asset.png)
 
-Game Studio cria o novo recurso de forma de colisão na pasta **CollisionMeshes**.
+Game Studio cria o novo asset de forma de colisão na pasta **CollisionMeshes**.
 
 ![ Ajuste de forma de filtro no Asset View](media/collider-shape-in-asset-view.png)
 
-### Criar um recurso de forma de colide de um modelo
+### Criar um asset de forma de colide de um modelo
 
 Isso é útil para criar rapidamente uma forma de colisão que combina com um modelo.
 
@@ -122,9 +122,9 @@ Isso é útil para criar rapidamente uma forma de colisão que combina com um mo
 
 3. Navegue para o ativo do modelo que você deseja criar um ativo de forma de colide e clique em **OK**.
 
-Game Studio cria um recurso de forma de colisão do modelo.
+Game Studio cria um asset de forma de colisão do modelo.
 
-## Use um recurso de forma de colide
+## Use um asset de forma de colide
 
 1. Sob as propriedades **static collider** ou **rigidbody**, sob **Collider Shapes**, selecione **Asset**.
 

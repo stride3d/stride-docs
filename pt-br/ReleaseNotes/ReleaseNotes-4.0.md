@@ -54,7 +54,7 @@ A coisa boa sobre ele é, que ele joga junto com o sistema de entidade-component
 
 * _EntityTransform_, usa a transformação de outras entidades com um componente de instância. Isso permite que você adicione componentes como física, áudio, etc para cada instância.
 * _UserArray_, para fornecer um array de matrizes via script
-* _UserBuffer_, para fornecer um buffer estruturado (recurso GPU) de matrizes via script
+* _UserBuffer_, para fornecer um buffer estruturado (asset GPU) de matrizes via script
 
 ![Instanciando tipos](media/ReleaseNotes-4.0/instancing-types.png)
 

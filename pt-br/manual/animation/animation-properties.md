@@ -3,15 +3,15 @@
 <span class="badge text-bg-primary">Introdução</span>
 <span class="badge text-bg-success">Design</span>
 
-Após [importar uma animação](import-animations.md), você pode selecioná-la no **Visualizador de Recursos** (na parte inferior, por padrão) e visualizar e editar suas propriedades no **Editor de Propriedades** (à direita, por padrão).
+Após [importar uma animação](import-animations.md), você pode selecioná-la no **Visualizador de Assets** (na parte inferior, por padrão) e visualizar e editar suas propriedades no **Editor de Propriedades** (à direita, por padrão).
 
-![Recursos no Visualizador de Recursos](media/assets-in-asset-view1.png)
+![Assets no Visualizador de Assets](media/assets-in-asset-view1.png)
 
 ![Propriedades](media/animations-properties.png)
 
 ## Origem
 
-O arquivo de origem usado pelo recurso de animação. Se você alterá-lo, o Game Studio reimportará a animação.
+O arquivo de origem usado pelo asset de animação. Se você alterá-lo, o Game Studio reimportará a animação.
 
 ## Duração do Clipe
 
@@ -21,7 +21,7 @@ No entanto, em alguns casos, uma única faixa de animação pode conter várias 
 
 É importante ressaltar que os quadros de início e fim ainda devem estar dentro dos quadros-chave exportados no arquivo. Por exemplo, se originalmente você exportou os quadros de 20 a 40 usando a ferramenta de animação, o quadro de início não pode ser menor que 20 e o quadro de fim não pode ser maior que 40.
 
-Por padrão, o Game Studio assume uma taxa 30 de quadros. Você pode alterar essa configuração nas propriedades do recurso **Configurações do jogo** em **Configurações do editor > Taxa de quadros da animação**.
+Por padrão, o Game Studio assume uma taxa 30 de quadros. Você pode alterar essa configuração nas propriedades do asset **Configurações do jogo** em **Configurações do editor > Taxa de quadros da animação**.
 
 ## Posição de pivô
 
@@ -33,7 +33,7 @@ A escala de importação deve ser definida como `1`. O Stride detecta automatica
 
 ## Modo de repetição
 
-Você pode escolher entre **Reproduzir Uma Vez**, **Loop Infinito** ou **Reproduzir Uma Vez e Manter**. Isso é apenas uma *dica* para o motor. Quando você vincula um recurso de animação ao modelo, você pode especificar de diferentes maneiras. Se você não especificar o modo posteriormente, o Stride usará o atributo que você definiu aqui como padrão.
+Você pode escolher entre **Reproduzir Uma Vez**, **Loop Infinito** ou **Reproduzir Uma Vez e Manter**. Isso é apenas uma *dica* para o motor. Quando você vincula um asset de animação ao modelo, você pode especificar de diferentes maneiras. Se você não especificar o modo posteriormente, o Stride usará o atributo que você definiu aqui como padrão.
 
 ## Tipo
 

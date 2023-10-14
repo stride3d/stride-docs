@@ -26,7 +26,7 @@
    - E qualquer outro Subprojeto. Stride irá analisar os Subprojetos também como o projeto principal para obter classes e recursos DataContract no Editor/Game (não importa se o seu em um subprojeto ou não
 - **Bin:** contém os binários e dados compilados. Stride cria a pasta quando você constrói o projeto, com um subdiretório para cada plataforma.
 - **obj:** contém arquivos em cache. Game Studio cria esta pasta quando você construir seu projeto. Para forçar um ativo completo e reconstruir código, excluir esta pasta e construir o projeto novamente.
-- **Recursos:** é um local sugerido para arquivos como imagens e arquivos de áudio usados por seus ativos, não confundi-los com recursos Godot, estes não existem no Stride. Stride tem no Scene Folders (estes podem ser usados de qualquer forma) onde você pode colocar classes que normalmente seriam Godot Recursos
+- **Assets:** é um local sugerido para arquivos como imagens e arquivos de áudio usados por seus ativos, não confundi-los com recursos Godot, estes não existem no Stride. Stride tem no Scene Folders (estes podem ser usados de qualquer forma) onde você pode colocar classes que normalmente seriam Godot Assets
 
 ### Abra o diretório do projeto do Game Studio
 
@@ -63,15 +63,15 @@ Para definir a cena padrão:
 
 ## Activos
 
-## Recursos
+## Assets
 
-O Stride não tem recursos como o Godot. Em Stride você pode adicionar pastas à sua cena e adicionar lá Entidades com seus dados. Outra abordagem seria salvar seus antigos Recursos em um Prefab separado e carregá-lo nas cenas que precisam dos Dados.
+O Stride não tem recursos como o Godot. Em Stride você pode adicionar pastas à sua cena e adicionar lá Entidades com seus dados. Outra abordagem seria salvar seus antigos Assets em um Prefab separado e carregá-lo nas cenas que precisam dos Dados.
 
 ## Formatos de arquivo suportados
 
 Como Godot, Stride suporta formatos de arquivo, incluindo:
 
-| Tipo de recurso | Formatos suportados |
+| Tipo de asset | Formatos suportados |
 |---|---|
 | Modelos, animações, esqueletos | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx |
 | Sprites, texturas, caixas de céu | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
@@ -138,10 +138,10 @@ Tanto Stride quanto Godot oferecem editores de código integrados, mas suas capa
 
 ### Stride
 
-Stride vem com um editor de código C# integrado no Game Studio. Embora funcional, este editor não é um recurso de alta prioridade e pode não receber atualizações frequentes. Como tal, é geralmente recomendado usar IDEs dedicados para edição de código. Algumas escolhas populares incluem:
+Stride vem com um editor de código C# integrado no Game Studio. Embora funcional, este editor não é um asset de alta prioridade e pode não receber atualizações frequentes. Como tal, é geralmente recomendado usar IDEs dedicados para edição de código. Algumas escolhas populares incluem:
 
 - Visual Studio Código: Livre, open-source e altamente extensível.
-- Rider: Pago, mas oferece um conjunto robusto de recursos adaptados para . Desenvolvimento de NET.
+- Rider: Pago, mas oferece um conjunto robusto de assets adaptados para . Desenvolvimento de NET.
 - Comunidade Visual Studio: Livre para equipes pequenas e desenvolvedores individuais.
 - Visual Studio Professional e Enterprise: Versões pagas com recursos e serviços adicionais.
 
@@ -466,7 +466,7 @@ classe pública MyClass
 
 #### Coleções e dicionários
 
-Stride suporta classes `ICollection` e `IDictionary` para serialização. Note que apenas primitivos e enums podem ser usados como chaves em dicionários.
+Stride suporta classes `ICollection` e `IDictionary` para serialização. No entanto, é importante ressaltar que apenas primitivos e enums podem ser usados como chaves em dicionários.
 
 Em Godot você tem que exportar coleções Godot para ser visível no Editor.
 

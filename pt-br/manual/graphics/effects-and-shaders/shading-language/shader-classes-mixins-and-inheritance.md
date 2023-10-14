@@ -146,7 +146,7 @@ shader MixBA : BaseInterface, BaseShader, ShaderA, ShaderB
 
 Você também pode usar uma variável ou chamar um método de um shader sem ter que herdar dele. Para fazer isso, use `<shader_name>.<variable or method_name>`. Ele se comporta da mesma maneira que uma chamada estática.
 
-Note que se você chamar estaticamente um método que usa variáveis de classe shader, o shader não compilará. Esta é uma maneira conveniente de usar apenas uma parte de um shader, mas isso não é uma otimização. O compilador de shader já remove automaticamente quaisquer variáveis desnecessárias.
+No entanto, é importante ressaltar que se você chamar estaticamente um método que usa variáveis de classe shader, o shader não compilará. Esta é uma maneira conveniente de usar apenas uma parte de um shader, mas isso não é uma otimização. O compilador de shader já remove automaticamente quaisquer variáveis desnecessárias.
 
 ### Exemplo de código: chamadas estáticas
 

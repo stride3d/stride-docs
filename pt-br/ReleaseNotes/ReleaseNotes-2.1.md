@@ -236,8 +236,8 @@ A documentação está agora disponível em japonês. Para alternar idiomas, use
 ##### Direct3D 12
 
 * Implementações da Lista de Comandos para Despacho, ClearReadWrite, Copiar, CopyMultisample, CopyCount
-* Correções de transição de estado de recurso
-* Recurso barreiras loteamento
+* Correções de transição de estado de asset
+* Asset barreiras loteamento
 * Adicionado configuração de ClearValue adequada para render alvos e profundidade buffers stencil
 * Adicionado DX12 Filtro Debug Layer para avisos irrelevantes
 * Adicionado suporte para:

@@ -6,7 +6,7 @@ Xenko 1.9 A Beta apresenta vários novos recursos importantes, juntamente com v�
 
 Estamos animados para oferecer três novos modelos de jogo para acelerar o seu tempo de design de jogo, um novo editor de script, bem como funcionalidade de cópia-paste expandida.
 
-O último grande novo recurso é o nosso novo sistema de malha de navegação.
+O último grande novo asset é o nosso novo sistema de malha de navegação.
 
 ### Modelos de jogo
 

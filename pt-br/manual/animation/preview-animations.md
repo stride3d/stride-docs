@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Intermediário</span>
 <span class="badge text-bg-success">Design</span>
 
-Depois de [importar uma animação](import-animations.md), você pode visualizá-la na **Visualização de Recursos**.
+Depois de [importar uma animação](import-animations.md), você pode visualizá-la na **Visualização de Assets**.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media\animations-import-animations-animation-preview.jpg">
@@ -11,24 +11,24 @@ Depois de [importar uma animação](import-animations.md), você pode visualizá
 </video>
 </p>
 
-Por padrão, a Visualização de Recursos está na parte inferior direita, abaixo da guia **Visualização de Recursos**.
+Por padrão, a Visualização de Assets está na parte inferior direita, abaixo da guia **Visualização de Assets**.
 
-![Guia Visualização de Recursos](media/animations-import-animations-asset-preview-tab.png)
+![Guia Visualização de Assets](media/animations-import-animations-asset-preview-tab.png)
 
 > [!Tip]
 > Para rotacionar a animação, clique e arraste o mouse.
 
-A pré-visualização da animação utiliza o modelo selecionado em **modelo de pré-visualização** nas **propriedades do recurso de animação**.
+A pré-visualização da animação utiliza o modelo selecionado em **modelo de pré-visualização** nas **propriedades do asset de animação**.
 
 ## Definir o modelo de pré-visualização
 
-1. No **Visualizador de Recursos** (na parte inferior por padrão), selecione o recurso de animação.
+1. No **Visualizador de Assets** (na parte inferior por padrão), selecione o asset de animação.
 
-   ![Selecionar recurso](media/select-asset.png)
+   ![Selecionar asset](media/select-asset.png)
 
-2. No **Editor de Propriedades** (à direita por padrão), abaixo de **Visualizador de modelo**, clique no ![Ícone de mão](~/manual/game-studio/media/hand-icon.png) (**Selecionar um recurso**).
+2. No **Editor de Propriedades** (à direita por padrão), abaixo de **Visualizador de modelo**, clique no ![Ícone de mão](~/manual/game-studio/media/hand-icon.png) (**Selecionar um asset**).
 
-   ![Selecionar recurso](media/pick-an-asset-up.png)
+   ![Selecionar asset](media/pick-an-asset-up.png)
 
    A janela **Selecionar uma entidade** é exibida.
 

@@ -12,15 +12,15 @@ Atualmente, você só pode importar atributos **animados**  personalizados. Atri
 
 1. Importe a animação. Para mais informações, consulte [Importar animações](import-animations.md)
 
-2. No **Visualizador de Recursos**, selecione o recurso de animação.
+2. No **Visualizador de Assets**, selecione o asset de animação.
 
-   ![Recursos no Visualizador de Recursos](media/assets-in-asset-view1.png)
+   ![Assets no Visualizador de Assets](media/assets-in-asset-view1.png)
 
 2. No **Editor de Propriedades**, selecione **Importar atributos personalizados**.
 
    Atributos personalizados![](media/import-custom-attributes.png)
 
-   Quando os recursos são criados, o Stride importa os atributos personalizados do arquivo FBX.
+   Quando os assets são criados, o Stride importa os atributos personalizados do arquivo FBX.
 
 ## 2. Controlar atributos personalizados através de um script.
 

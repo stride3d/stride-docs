@@ -45,7 +45,7 @@ O Modelo Prefab é um novo tipo de Ativo Modelo que gera um modelo único assado
 
 Ele mescla malhas juntas por material e layout de vértice. Você pode facilmente ir de milhares de chamadas de empate para uma ou duas chamadas de empate.
 
-Para usá-lo, basta criar um novo recurso Modelo Prefab do Game Studio e atribuir uma pré-fabricada para ele.
+Para usá-lo, basta criar um novo asset Modelo Prefab do Game Studio e atribuir uma pré-fabricada para ele.
 Certifique-se de que o prefab base está apenas contendo entidades estáticas como apenas `ModelComponent` tipos são mesclados.
 
 ### Renderização

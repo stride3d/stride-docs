@@ -4,7 +4,7 @@
 
 Um **asset** é uma representação de um elemento do seu jogo dentro do Game Studio, como uma textura, animação ou modelo.
 
-Alguns ativos requerem **recurso de arquivos**. Por exemplo, os ativos de textura precisam de arquivos de imagem e ativos de áudio precisam de arquivos de áudio. Outros tipos de ativos (como cenas, colisões de física e configurações de jogo) não usam arquivos de recursos e podem ser criados inteiramente no Game Studio.
+Alguns ativos requerem **asset de arquivos**. Por exemplo, os ativos de textura precisam de arquivos de imagem e ativos de áudio precisam de arquivos de áudio. Outros tipos de ativos (como cenas, colisões de física e configurações de jogo) não usam arquivos de assets e podem ser criados inteiramente no Game Studio.
 
 Você pode compilar e otimizar ativos com um compilador especial fornecido pela Stride. Os ativos compilados são embalados juntos como pacotes reutilizáveis.
 

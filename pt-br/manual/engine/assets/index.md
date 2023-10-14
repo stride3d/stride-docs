@@ -1,78 +1,78 @@
-# Gerenciador de ativos
+# Gerenciador de assets
 
 > [!Warning]
-> Esta seção está fora de data. Por enquanto, você só deve usá-lo para referência.
+> Esta seção está desatualizada. Por hora, você deve usá-la apenas como referência.
 
-# Activos
+# Assets
 
-Depois de criar seus ativos no Game Studio, @'Stride.Core.Serialization.Assets.AssetManager' é a classe responsável por carregar, descarregar e salvar ativos.
+Depois de criar seus assets no Game Studio, @'Stride.Core.Serialization.Assets.AssetManager' é a classe responsável por carregar, descarregar e salvar assets.
 
-## Criando
+## Criação
 
-Você geralmente cria ativos diretamente no Game Studio.
+Normalmente, você cria assets diretamente no Game Studio.
 
-Sua URL corresponderá ao nome (incluindo pasta) no Game Studio.
+Sua URL corresponderá ao nome (incluindo a pasta) no Game Studio.
 
 Exemplos de URLs:
 
-- cavaleiro (usuário importa cavaleiro. fbx diretamente na pasta de ativos principal)
-- level1/room1 (o usuário cria nível1 e sala de importação1.fbx dentro)
+- **cavaleiro** (o usuário importa cavaleiro.fbx diretamente na pasta de assets principal)
+- **nivel/sala** (o usuário cria a pasta **nivel** e importa o arquivo **sala.fbx** dentro dela)
 
-Para mais informações, consulte [Ativos](../../game-studio/assets.md) para mais detalhes.
+Para mais informações, consulte <g id="1">Assets</g></g>.
 
-## A carregar
+## Carregamento
 
-Carregar um ativo deve ser feito com a ajuda de @'Stride. Core.Serialization.Assets.AssetManager' classe:
+O carregamento de um asset deve ser feito utilizando a classe @'Stride.Core.Serialization.Assets.AssetManager':
 
 ```cs
-// Carregar um ativo diretamente de um arquivo:
-var texture = Content.Load<Texture>("texture1");
+// Carregar um asset diretamente de um arquivo:
+var texture = Content.Load<Texture>("textura1");
 
-// Carregar um recurso de cena
-var scene = Content.Load<Scene>("scenes/scene1");
+// Carregar um asset de cena
+var scene = Content.Load<Scene>("cenas/cena1");
  
-// Carregar um ativo de Entidade
-var entity = Content.Load<Entity>("entity1");
+// Carregar um asset de entidade
+var entity = Content.Load<Entity>("entidade1");
 ```
 
-Note que carregar um ativo que já foi carregado apenas incrementar o contador de referência e não recarregar o ativo.
+Tenha em mente que ao carregar um asset que já tenha sido carregado apenas incrementa o contador de referência e não recarrega o asset.
 
 ## Descarregamento
 
-Descarregamento também é feito usando a classe AssetManager:
+O descarregamento também é feito utilizando a classe AssetManager:
 
 ```cs
- Asset.Unload (asset);
+ Asset.Unload(asset);
 ```
 
 
-## Tempo de vida dos ativos
+## Vida útil do asset
 
-Carga de ativos e descarga estão trabalhando em pares. Para cada chamada para "carga", espera-se uma chamada correspondente para "descarga".
+O carregamento e o descarregamento de um asset funcionam em pares. Para cada execução de **carregar**, uma execução correspondente de **descarregar** é esperada.
 
-Um ativo é realmente carregado apenas durante a primeira chamada para "carga". Todas as chamadas subsequentes só resultam em um incremento de referência de ativos.
+Um asset é realmente carregado apenas durante a primeira execução de "carregar". Todas as execuções subsequentes resultam apenas no incremento da referência ao asset.
 
-Um ativo é realmente descarregar somente quando o número de chamada para descarregar corresponde ao número de chamada da carga.
+Um asset é realmente descarregado apenas quando o número de execuções de **descarregar** corresponde ao número de execuções de **carregar**.
 
-O @'Stride.Core.Serialization.Assets.AssetManager. O método Get' retorna a referência a um ativo carregado, mas não incrementa o contador de referência de ativos.
+O método @'Stride.Core.Serialization.Assets.AssetManager.Get' retorna a referência a um asset carregado, mas não incrementa o contador da referência ao asset.
 
 ```cs
- var firstReference = Content.Load<Texture>("MyTexture"); // carregar o ativo e aumentar o contador de referência (contagem de ref = 1)
+ var primeiraReferencia = Content.Load<Texture>("MinhaTextura"); // carrega o asset e incrementa o contador da referência (contagem da referência = 1)
  
 // a textura pode ser usada aqui
  
-var secondReference = Content.Load<Texture>("MyTexture"); // só aumentar o contador de referência (contagem de ref = 2)
+var segundaReferencia = Content.Load<Texture>("MinhaTextura"); // apenas incrementa o contador da referência (contagem da referência = 2)
  
 // a textura ainda pode ser usada aqui
  
-Asset.Unload(firstReference); // diminuem o contador de referência (ref count = 1)
+Asset.Unload(primeiraReferencia); // decrementa o contador da referência (contagem da referência = 1)
  
 // a textura ainda pode ser usada aqui
  
-Asset.Get<Texture>("MyTexture"); // retornar o ativo carregado sem aumentar o contador de referência (contagem de ref = 1)
+Asset.Get<Texture>("MinhaTextura"); // retorna o asset carregado sem incrementar o contador da referência (contagem da referência = 1)
  
 // a textura ainda pode ser usada aqui
-Asset.Unload(secondReference); // diminuem o contador de referência e descarreguem o ativo (contagem de retorno = 0)
+Asset.Unload(segundaReferencia); // decrementa o contador da referência e descarrega o ativo (contagem de referência = 0)
  
 // A textura foi descarregada, não pode ser usada aqui mais.
 ```

@@ -29,9 +29,9 @@ O Stride inclui um script **AnimationStart** pré-definido.
 
 Para usar o script **AnimationStart**:
 
-1. No **Visualizador de Recursos** (na parte inferior, por padrão), clique em **Adicionar recurso**.
+1. No **Visualizador de Assets** (na parte inferior, por padrão), clique em **Adicionar asset**.
 
-2. Escolha **Adicionar recurso > Scripts > Animation start**.
+2. Escolha **Adicionar asset > Scripts > Animation start**.
 
    ![Adicionar script de animação](media/animations-additive-animations-animation-start.png)
 
