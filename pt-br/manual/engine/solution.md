@@ -8,13 +8,13 @@ O conteúdo de cada pacote é agrupado em duas categorias: Pacotes locais e paco
 
 Cada pacote contém os seguintes três elementos base:
 
-* Assets: O elemento assets inclui todos os recursos contidos em um pacote. Você pode expandir o elemento Assets para visualizar a mesma hierarquia dos assets que está no sistema de arquivos. Quando você seleciona a pasta **Assets**, o **Visualizador de Assets** exibe os items contidos nesta pasta.
+* Assets: O elemento **Assets** inclui todos os recursos contidos num pacote. Você pode expandir o elemento **Assets** para visualizar a mesma hierarquia dos assets que estão no sistema de arquivos. Quando você seleciona a pasta **Assets**, o **Visualizador de Assets** exibe os items contidos nesta pasta.
 
-* Código: O elemento de código contém as bibliotecas de código e executáveis no pacote. Cada um deles corresponde a um único arquivo ```.csproj```. Ao clicar com o botão direito em um executável, você pode defini-lo como projeto atual. Essa ação permite que você compile os recursos para a plataforma relacionada e inicie o jogo.
+* Code: O elemento de **Code** contém as bibliotecas de código e executáveis no pacote. Cada um deles corresponde a um único arquivo ```.csproj```. Ao clicar com o botão direito em um executável, você pode defini-lo como projeto atual. Essa ação permite que você compile os recursos para a plataforma relacionada e inicie o jogo.
 
-* Dependências: O elemento de dependências lista todos os outros pacotes que são referenciados por um pacote. Os pacotes na lista **Dependencies** têm seus assets acessíveis a este pacote.
+* Dependencies: O elemento de **Dependencies** lista todos os outros pacotes que são referenciados por um pacote. Os pacotes na lista **Dependencies** têm seus assets acessíveis a este pacote.
 
 > [!Note]
 > Você pode alterar a hierarquia no **Gerenciador de Soluções** criando pastas e renomeando ou excluindo objetos.
 
-O Stride utiliza arquivos de solução do Visual Studio para listar todos os pacotes e projetos de código relacionados a um jogo. Assim, você pode integrar facilmente o Stride Studio e o Visual Studio em seu projeto, porque eles utilizam o mesmo arquivo raiz. Por padrão, o Stride Studio cria um novo arquivo de solução quando você cria um novo projeto e gerencia as referências a projetos em C# e pacotes.
+O Stride utiliza arquivos de solução do Visual Studio para listar todos os pacotes e projetos de código relacionados a um jogo. Assim, você pode integrar facilmente com o Stride Studio e o Visual Studio em seu projeto, pois eles utilizam o mesmo arquivo raiz. Por padrão, o Stride Studio cria um novo arquivo de solução quando você cria um novo projeto e gerencia as referências aos projetos em C# e aos pacotes.
