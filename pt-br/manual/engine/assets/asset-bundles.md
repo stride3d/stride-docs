@@ -9,24 +9,24 @@ Isso possibilita a criação de **Conteúdo para Download (DLC)**.
 
 Regras básicas:
 
-- Um projeto pode gerar vários pacotes.
+- Um projeto pode gerar vários conjuntos.
 - Um conjunto é criado a partir de diversos **seletores de assets** (atualmente, apenas `PathSelector` e `TagSelector` são suportados).
-- Um conjunto pode ter dependências de outros conjuntos
-- Cada conjunto faz referência implicitamente ao conjunto padrão, onde cada asset que não deve ser incluído num conjunto específico será empacotado.``
-- Uma vez que um conjunto é adicionado no jogo, todos os assets desse conjunto e todas as suas dependências se tornam acessíveis
+- Um conjunto pode ter dependências à outros conjuntos.
+- Cada conjunto faz referência implicitamente ao conjunto `padrão`, onde cada asset que não deve ser incluído num conjunto específico será empacotado.
+- Uma vez que um conjunto é adicionado no jogo, todos os assets desse conjunto e todas as suas dependências se tornam acessíveis.
 - A resolução de conjuntos é realizada por meio de uma funções de retorno de chamada assíncrona que permite o download do conjunto e será executada uma vez por dependência (similar ao evento AssemblyResolve).
 
-# Criar um pacote
+# Criar um conjunto
 
 > [!Note]
-> A criação atualmente requer alguns passos manuais (ou seja, editar `sdpkg` manualmente).
+> A criação atualmente requer alguns passos manuais (ou seja, editar o `sdpkg` manualmente).
 
 Abra o arquivo `sdprj` do executável do jogo e adicione a seguinte configuração:
 
 Exemplo:
 
 - Um conjunto chamado `MeuConjunto1` incorporará assets com as tags `MinhaTag1` e `MinhaTag2`.
-- Um conjunto chamado `MeuConjunto2` incorporará assets com as tags`MinhaTag3` e `MinhaTag4`. Este conjunto tem uma dependência com `MeuConjunto1`
+- Um conjunto chamado `MeuConjunto2` incorporará assets com as tags`MinhaTag3` e `MinhaTag4`. Este conjunto tem uma dependência com `MeuConjunto1`.
 - Há também um `PathSelector` que segue a convenção de filtragem `.gitignore`.
 
 
@@ -58,25 +58,25 @@ Bundles:
 
 > [!Note]
 >
-> As dependências de assets são automaticamente colocadas no pacote mais apropriado
+> As dependências de assets são automaticamente colocadas no conjunto mais apropriado
 >
 > O processo atual funciona da seguinte maneira:
 >
-> - Encontre assets que correspondam aos Seletores de Tag específicos (as "raízes" dos assets do conjunto).
-> - Enumere os assets que dependem dessas raízes e coloque-os no mesmo conjunto que elas.
+> - Encontra os assets que correspondam aos Seletores de Tag específicos (as "raízes" dos assets do conjunto).
+> - Enumera os assets que dependem dessas raízes e os inclui no mesmo conjunto que elas.
 >    - A menos que já sejam acessíveis por meio de uma das dependências do pacote (como um pacote dependente compartilhado ou o pacote padrão).
-> - Coloque todo o resto no conjunto padrão.
+> - Coloca todo o resto no conjunto padrão.
 >
 > No entanto, é importante ressaltar que:
 >
-> - Os assets compartilhados podem ser duplicados se não forem especificamente colocados no conjunto compartilhado ou no conjunto padrão, mas isso é intencional (por exemplo, se o usuário desejar distribuir dois DLCs separados que necessitam de assets comuns, mas também precisam ser independentes).
+> - Os assets compartilhados podem ser duplicados se não forem especificamente colocados no conjunto compartilhado ou no conjunto padrão, e isso é intencional. Por exemplo, se o usuário desejar distribuir dois DLCs separadamente que necessitam de ativos comuns, e também devam ser independentes.
 > - Cada conjunto depende implicitamente do conjunto padrão.
 >
 >
 
 # Carregar um conjunto em tempo de execução
 
-O carregamento de conjuntos é feito através de `ObjectDatabase.LoadBundle(string bundleName) (ref:{Stride.Core.Storage.ObjectDatabase.LoadBundle})`:
+O carregamento dos conjuntos é feito através de `ObjectDatabase.LoadBundle(string bundleName) (ref:{Stride.Core.Storage.ObjectDatabase.LoadBundle})`:
 
 ```cs
 // Carregar o conjunto
@@ -103,7 +103,7 @@ Propriedades:
 
 Selecione assets com base em seu caminho.
 
-Padrões convencionais do .gitignore são suportados (exceto ! (negar), # (comentários) e \[0-9\] (grupos)).
+Padrões convencionais do `.gitignore` são suportados (exceto `!` (negar), `#` (comentários) e `[0-9]` (grupos)).
 
 Propriedades:
 
