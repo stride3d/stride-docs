@@ -1,7 +1,7 @@
 # Controle de assets
 
 > [!Warning]
-> Esta seção está desatualizada. Por hora, você deve usá-la apenas como referência.
+> Esta seção está desatualizada. Recomendamos utilizá-la apenas como referência.
 
 Todos os assets de um pacote de jogo e suas dependências eram compilados como parte do seu jogo.
 

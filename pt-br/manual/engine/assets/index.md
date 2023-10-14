@@ -1,7 +1,7 @@
 # Gerenciador de assets
 
 > [!Warning]
-> Esta seção está desatualizada. Por hora, você deve usá-la apenas como referência.
+> Esta seção está desatualizada. Recomendamos utilizá-la apenas como referência.
 
 # Assets
 
@@ -35,7 +35,7 @@ var scene = Content.Load<Scene>("cenas/cena1");
 var entity = Content.Load<Entity>("entidade1");
 ```
 
-Tenha em mente que ao carregar um asset que já tenha sido carregado apenas incrementa o contador de referência e não recarrega o asset.
+No entanto, é importante ressaltar que ao carregar um asset que já tenha sido carregado apenas incrementa o contador de referência e não recarrega o asset.
 
 ## Descarregamento
 
@@ -46,7 +46,7 @@ O descarregamento também é feito utilizando a classe AssetManager:
 ```
 
 
-## Vida útil do asset
+## Tempo de vida do asset
 
 O carregamento e o descarregamento de um asset funcionam em pares. Para cada execução de **carregar**, uma execução correspondente de **descarregar** é esperada.
 
@@ -72,9 +72,9 @@ Asset.Unload(primeiraReferencia); // decrementa o contador da referência (conta
 Asset.Get<Texture>("MinhaTextura"); // retorna o asset carregado sem incrementar o contador da referência (contagem da referência = 1)
  
 // a textura ainda pode ser usada aqui
-Asset.Unload(segundaReferencia); // decrementa o contador da referência e descarrega o ativo (contagem de referência = 0)
+Asset.Unload(segundaReferencia); // decrementa o contador da referência e descarrega o asset (contagem da referência = 0)
  
-// A textura foi descarregada, não pode ser usada aqui mais.
+// A textura foi descarregada e não pode ser mais usada.
 ```
 
 

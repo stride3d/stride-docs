@@ -1,7 +1,7 @@
 # Motor
 
 > [!Warning]
-> Esta seção está desatualizada. Por hora, você deve usá-la apenas como referência.
+> Esta seção está desatualizada. Recomendamos utilizá-la apenas como referência.
 
 - [Asset](assets/index.md)
 - [Modelo de entidade-componente](entity-component-model/index.md)

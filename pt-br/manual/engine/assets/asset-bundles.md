@@ -1,7 +1,7 @@
 # Conjunto de asset (Bundles)
 
 > [!Warning]
-> Esta seção está desatualizada. Por hora, você deve usá-la apenas como referência.
+> Esta seção está desatualizada. Recomendamos utilizá-la apenas como referência.
 
 Um conjunto de assets permite empacotar assets num único arquivo que pode ser baixado no jogo num momento específico.
 
