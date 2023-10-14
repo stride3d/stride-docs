@@ -18,7 +18,7 @@ Até algo básico como pontos de vida não são universais, pois alguns inimigos
 
 
 > O sistema de entidades e componentes (ECS) é um padrão arquitetônico de software usado principalmente no desenvolvimento de jogos eletrônicos para a representação de objetos no mundo do jogo. Um ECS reúne entidades compostas de componentes de dados, com sistemas que operam nos componentes das entidades.  
-> _-[Wikipedia](https://pt.wikipedia.org/wiki/Entity_component_system)_
+> _-[Wikipedia](https://pt.wikipedia.org/wiki/Entity-component-system)_
 
 
 A ideia geral de um ECS é que uma _entidade_ — um "objeto" em seu mundo virtual —
