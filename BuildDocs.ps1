@@ -101,8 +101,8 @@ function Ask-UseExistingAPI {
     Write-Host ""
 
     $input = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
-    
-    return (Read-Host -Prompt "Your choice (Y/N)").ToLower() -eq "y"
+
+    return ($input -eq "Y" -or $input -eq "y" -or $input -eq "")
 }
 
 function Copy-ExtraItems {
