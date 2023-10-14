@@ -83,22 +83,26 @@ function Ask-IncludeAPI {
     Write-Host ""
     Write-Host -ForegroundColor Cyan "Do you want to include API?"
     Write-Host ""
-    Write-Host -ForegroundColor Yellow "  [Y] Yes"
+    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
     Write-Host -ForegroundColor Yellow "  [N] No"
     Write-Host ""
 
-    return (Read-Host -Prompt "Your choice (Y/N)").ToLower() -eq "y"
+    $input = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+
+    return ($input -eq "Y" -or $input -eq "y" -or $input -eq "")
 }
 
 function Ask-UseExistingAPI {
     Write-Host ""
     Write-Host -ForegroundColor Cyan "Do you want to use already generated API metadata?"
     Write-Host ""
-    Write-Host -ForegroundColor Yellow "  [Y] Yes"
+    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
     Write-Host -ForegroundColor Yellow "  [N] No"
     Write-Host ""
 
-    return (Read-Host -Prompt "Your choice (Y/N)").ToLower() -eq "y"
+    $input = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+
+    return ($input -eq "Y" -or $input -eq "y" -or $input -eq "")
 }
 
 function Copy-ExtraItems {
@@ -446,8 +450,15 @@ else {
     {
         $API = Ask-IncludeAPI
 
-        if ($API) {
-            $ReuseAPI = Ask-UseExistingAPI
+        if ($API)
+        {
+            # Check for .yml files
+            $ymlFiles = Get-ChildItem -Path "en/api/" -Filter "*.yml"
+
+            if ($ymlFiles.Count -gt 0)
+            {
+                $ReuseAPI = Ask-UseExistingAPI
+            }
         }
 
     } elseif ($isCanceled) {

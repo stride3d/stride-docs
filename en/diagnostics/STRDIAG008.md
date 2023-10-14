@@ -1,11 +1,10 @@
 # Diagnostics Warning STRDIAG008
 
-> Struct members with the 'fixed' Modifier are not supported as a Serialization target on member '{0}'..
+> Struct members with the 'fixed' Modifier are not supported as a Serialization target on member '{0}'.
 
 ## Explanation
 
-The Stride Serializers can't handle fixed members in structs.
-The @Stride.Core.DataMemberAttribute is always invalid on such a member.
+The Stride serializers can't handle `fixed` members in structs. The @Stride.Core.DataMemberAttribute is always invalid on such a member.
 
 ## Example: Invalid Cases
 
@@ -23,7 +22,7 @@ public unsafe struct STRDIAG008
 
 ## Solution
 
-To resolve the warning, remove the @Stride.Core.DataMemberAttribute .
+To resolve the warning, remove the @Stride.Core.DataMemberAttribute.
 
 ## References
 
