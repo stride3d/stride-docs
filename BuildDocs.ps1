@@ -89,7 +89,7 @@ function Ask-IncludeAPI {
 
     $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
 
-    return ($answer -ieq "Y" -or $answer -eq "")
+    return ($answer -ieq "y" -or $answer -eq "")
 }
 
 function Ask-UseExistingAPI {
