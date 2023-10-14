@@ -6,7 +6,7 @@
 ## Explanation
 
 Adding @Stride.Core.DataMemberAttribute and @Stride.Core.DataMemberIgnoreAttribute to the same member is not supported. This would be a contradiction.
-It would mean the Serializer should serialize the member and ignore it at the same time. The @Stride.Updater.DataMemberUpdatableAttribute  makes the combination valid again as it negates the @Stride.Core.DataMemberIgnoreAttribute for the binary Serializer.
+It would mean the serializer should serialize the member and ignore it at the same time. The @Stride.Updater.DataMemberUpdatableAttribute  makes the combination valid again as it negates the @Stride.Core.DataMemberIgnoreAttribute for the binary serializer.
 
 ## Example: Invalid cases
 
@@ -49,7 +49,7 @@ public class STRDIAG000
 ## Solution
 
 > To resolve the warning, pick either the @Stride.Core.DataMemberAttribute or the @Stride.Core.DataMemberIgnoreAttribute.
-If the `YamlSerializer` and the Editor should ignore the member but the binary Serializer not, then add the @Stride.Core.DataMemberIgnoreAttribute.
+If the `YamlSerializer` and the Editor should ignore the member but the binary serializer not, then add the @Stride.Core.DataMemberIgnoreAttribute.
 
 ## References
 
