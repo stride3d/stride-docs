@@ -101,6 +101,7 @@ function Ask-UseExistingAPI {
     Write-Host ""
 
     $input = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+    
     return (Read-Host -Prompt "Your choice (Y/N)").ToLower() -eq "y"
 }
 
@@ -459,6 +460,7 @@ else {
                 $ReuseAPI = Ask-UseExistingAPI
             }
         }
+
     } elseif ($isCanceled) {
         Write-Host -ForegroundColor Red "Operation canceled by user."
         Stop-Transcript
