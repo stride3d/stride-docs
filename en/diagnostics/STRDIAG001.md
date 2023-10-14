@@ -4,14 +4,13 @@
 
 ## Explanation
 
-The `[DataContract]` attribute can only be applied to public/internal type. Any Access that is lower than that will cause STRDIAG001 on the target type.
+The @Stride.Core.DataContractAttribute can only be applied to public/internal type. Any lower Access  will cause STRDIAG001 on the target type.
 
 ## Example: private inner class
 
 The following example generates STRDIAG001:
 
 ```csharp
-// STRDIAG000.cs
 using Stride.Core;
 
 public class STRDIAG001
@@ -25,6 +24,7 @@ public class STRDIAG001
 
 ```csharp
 using Stride.Core;
+
 [DataContract]
 file class STRDIAG001
 {
@@ -33,7 +33,7 @@ file class STRDIAG001
 
 ## Solution
 
-To resolve the warning, increase the accessibility of the type to pulic/internal or remove the DataContractAttribute.
+To resolve the warning, increase the accessibility of the type to pulic/internal or remove the @Stride.CoreDataContractAttribute .
 
 ## References
 

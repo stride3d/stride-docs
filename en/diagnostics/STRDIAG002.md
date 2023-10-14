@@ -1,7 +1,7 @@
 # Diagnostics Warning STRDIAG002
 
-The 'DataMemberMode.Content' is not valid for the member '{0}'.
-Only mutable reference types are supported for 'DataMemberMode.Content' Mode members.
+> The 'DataMemberMode.Content' is not valid for the member '{0}'.
+> Only mutable reference types are supported for 'DataMemberMode.Content' Mode members.
 
 ## Explanation
 
@@ -14,7 +14,6 @@ Immutable types in this context are none reference types and string.
 The following example generates STRDIAG002 on each property:
 
 ```csharp
-// STRDIAG000.cs
 using Stride.Core;
 
 public class STRDIAG002
@@ -29,4 +28,4 @@ public class STRDIAG002
 
 ## Solution
 
-To resolve the warning, pick either a reference type for the member or use DataMemberMode.Assign for ImmutableTypes.
+To resolve the warning, pick either a reference type for the member or use `DataMemberMode.Assign` for Immutable types.

@@ -1,7 +1,7 @@
 # Diagnostics Warning STRDIAG004
 
-1. The property '{0}' with \[DataMember] does not have a getter which is required for serialization.
-2. The property '{0}' with \[DataMember] does not have an accessible getter which is required for serialization. A public/internal/internal protected getter is expected.
+> 1. The property '{0}' with `[DataMember]` does not have a getter which is required for serialization.
+> 2. The property '{0}' with `[DataMember]` does not have an accessible getter which is required for serialization. A public/internal/internal protected getter is expected.
 
 ## Explanation
 
@@ -15,7 +15,6 @@ Non visible getters will result in error message 2.
 The following example generates STRDIAG004 on each property:
 
 ```csharp
-// STRDIAG000.cs
 using Stride.Core;
 
 public class STRDIAG004
@@ -34,8 +33,9 @@ public class STRDIAG004
 }
 ```
 
-There is an edge case with internal/internal protected, it will count as non visible when the [DataMember] Attribute isn't applied.
-But when the Attribute is applied then the getter counts as visible and therfore is correct.
+> [!WARNING]
+> There is an edge case with internal/internal protected, it will count as non visible when the @Stride.Core.DataMemberAttribute isn't applied.
+> But when the Attribute is applied then the getter counts as visible and therfore is correct.
 
 ```csharp
 // STRDIAG000.cs
@@ -61,6 +61,6 @@ public class STRDIAG004
 
 ## Solution
 
-To resolve the warning 1, add a getter to the property with a public/internal/internal protected Accessibility or remove the \[DataMember] Attribute.
+To resolve the warning 1, add a getter to the property with a public/internal/internal protected Accessibility or remove the @Stride.Core.DataMemberAttribute .
 
-To resolve the warning 2, increase the Accessibility of the property getter to public/internal/internal protected Accessibility or remove the \[DataMember] Attribute.
+To resolve the warning 2, increase the Accessibility of the property getter to public/internal/internal protected Accessibility or remove the @Stride.Core.DataMemberAttribute .
