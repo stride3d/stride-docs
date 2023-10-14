@@ -10,7 +10,7 @@ Você pode querer limpar o cache se:
 
 ## Limpar o cache do Visual Studio
 
-1. Para limpar o cache de código, em **Criar**, selecione **Limpar Solução**.
+1. Para limpar o cache de código, selecine o item de menu **Criar**, e então selecione **Limpar Solução**.
 
    ![Limpar Solução](media/clean-solution.png)
 
