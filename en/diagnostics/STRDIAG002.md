@@ -1,13 +1,12 @@
 # Diagnostics Warning STRDIAG002
 
-> The 'DataMemberMode.Content' is not valid for the member '{0}'.
-> Only mutable reference types are supported for 'DataMemberMode.Content' Mode members.
+> The `DataMemberMode.Content` is not valid for the member '{0}'.
+> Only mutable reference types are supported for `DataMemberMode.Content` Mode members.
 
 ## Explanation
 
-The Content Mode mutates the object which is currently in the member.
-As this is not possible with the current Serializers, only mutable Types are supported for Content Mode.
-Immutable types in this context are none reference types and string.
+The [DataMemberMode.Content](xref:Stride.Core.DataMemberMode) mutates the object which is currently in the member.
+As this is not possible with the current serializers, only mutable types are supported for `DataMemberMode.Content`. Immutable types in this context are none reference types and string.
 
 ## Example
 
@@ -19,7 +18,7 @@ using Stride.Core;
 public class STRDIAG002
 {
     [DataMember(DataMemberMode.Content)]
-    public int Value { get; set;}
+    public int Value { get; set; }
 
     [DataMember(DataMemberMode.Content)]
     public string Value;

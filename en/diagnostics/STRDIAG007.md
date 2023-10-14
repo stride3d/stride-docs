@@ -4,8 +4,7 @@
 
 ## Explanation
 
-Delegates can't be serialized by the Serializers in Stride.
-So the @Stride.Core.DataMemberAttribute is always invalid on a delegate member in a type.
+Delegates can't be serialized by the serializers in Stride. Therefore, the @Stride.Core.DataMemberAttribute is always invalid when applied to a delegate member in a type.
 
 ## Example: Invalid Cases
 
@@ -26,7 +25,7 @@ public class STRDIAG007
 
 ## Solution
 
-To resolve the warning, remove the @Stride.Core.DataMemberAttribute .
+To resolve the warning, remove the @Stride.Core.DataMemberAttribute.
 
 ## References
 

@@ -5,10 +5,10 @@
 
 ## Explanation
 
-All Serializers need a getter on a property to be able to get the content of the property.
-This is required for all Serializers in Stride.
-Non existent getters will result in error message 1.
-Non visible getters will result in error message 2.
+All serializers need a getter on a property to be able to get the content of the property.
+This is required for all serializers in Stride.
+- Non existent getters will result in error message 1.
+- Non visible getters will result in error message 2.
 
 ## Example
 
@@ -34,8 +34,8 @@ public class STRDIAG004
 ```
 
 > [!WARNING]
-> There is an edge case with internal/internal protected, it will count as non visible when the @Stride.Core.DataMemberAttribute isn't applied.
-> But when the Attribute is applied then the getter counts as visible and therfore is correct.
+> There is an edge case with `internal`/`internal protected`, it will count as non visible when the @Stride.Core.DataMemberAttribute isn't applied.
+> But when the attribute is applied then the getter counts as visible and therefore is correct.
 
 ```csharp
 // STRDIAG000.cs
@@ -44,10 +44,10 @@ using Stride.Core;
 public class STRDIAG004
 {
     // will throw STRDIAG004
-    public int Value { internal get; set;}
+    public int Value { internal get; set; }
 
     // will throw STRDIAG004
-    public int Value { internal protected get; set;}
+    public int Value { internal protected get; set; }
 
     // won't throw STRDIAG004
     [DataMember]
@@ -61,6 +61,6 @@ public class STRDIAG004
 
 ## Solution
 
-To resolve the warning 1, add a getter to the property with a public/internal/internal protected Accessibility or remove the @Stride.Core.DataMemberAttribute .
+To resolve the warning 1, add a getter to the property with a `public`/`internal`/`internal protected` accessibility or remove the @Stride.Core.DataMemberAttribute .
 
-To resolve the warning 2, increase the Accessibility of the property getter to public/internal/internal protected Accessibility or remove the @Stride.Core.DataMemberAttribute .
+To resolve the warning 2, increase the accessibility of the property getter to `public`/`internal`/`internal protected` accessibility or remove the @Stride.Core.DataMemberAttribute .
