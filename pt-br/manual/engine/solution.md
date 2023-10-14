@@ -10,9 +10,9 @@ Cada pacote contém os seguintes três elementos base:
 
 * Assets: O elemento **Assets** inclui todos os recursos contidos num pacote. Você pode expandir o elemento **Assets** para visualizar a mesma hierarquia dos assets que estão no sistema de arquivos. Quando você seleciona a pasta **Assets**, o **Visualizador de Assets** exibe os items contidos nesta pasta.
 
-* Code: O elemento de **Code** contém as bibliotecas de código e executáveis no pacote. Cada um deles corresponde a um único arquivo ```.csproj```. Ao clicar com o botão direito em um executável, você pode defini-lo como projeto atual. Essa ação permite que você compile os recursos para a plataforma relacionada e inicie o jogo.
+* Code: O elemento **Code** contém as bibliotecas de código e executáveis no pacote. Cada um deles corresponde a um único arquivo ```.csproj```. Ao clicar com o botão direito em um executável, você pode defini-lo como projeto atual. Essa ação permite que você compile os recursos para a plataforma relacionada e inicie o jogo.
 
-* Dependencies: O elemento de **Dependencies** lista todos os outros pacotes que são referenciados por um pacote. Os pacotes na lista **Dependencies** têm seus assets acessíveis a este pacote.
+* Dependencies: O elemento **Dependencies** lista todos os outros pacotes que são referenciados por um pacote. Os pacotes na lista **Dependencies** têm seus assets acessíveis a este pacote.
 
 > [!Note]
 > Você pode alterar a hierarquia no **Gerenciador de Soluções** criando pastas e renomeando ou excluindo objetos.
