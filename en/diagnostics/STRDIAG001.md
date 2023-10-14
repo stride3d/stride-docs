@@ -4,7 +4,7 @@
 
 ## Explanation
 
-The @Stride.Core.DataContractAttribute can only be applied to public/internal type. Any lower Access  will cause STRDIAG001 on the target type.
+The @Stride.Core.DataContractAttribute can only be applied to `public`/`internal` type. Any lower access will cause STRDIAG001 on the target type.
 
 ## Example: private inner class
 
@@ -33,7 +33,7 @@ file class STRDIAG001
 
 ## Solution
 
-To resolve the warning, increase the accessibility of the type to pulic/internal or remove the @Stride.CoreDataContractAttribute .
+To resolve the warning, increase the accessibility of the type to `public`/`internal` or remove the @Stride.Core.DataContractAttribute.
 
 ## References
 

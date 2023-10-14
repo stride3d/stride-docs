@@ -4,7 +4,7 @@
 
 ## Explanation
 
-Having no set possibility automatically lets the serializers automatically use the `DataMemberMode.Content.`
+Having no set possibility automatically lets the serializers automatically use the [DataMemberMode.Content](xref:Stride.Core.DataMemberMode).
 For immutable types the `DataMemberMode.Content` is never valid.
 Immutable types in this context are none reference types and string.
 
@@ -26,5 +26,6 @@ public class STRDIAG005
 
 ## Solution
 
-To resolve the warning for fields, remove the \[DataMember] Attribute or remove the readonly modifier.
-To resolve the warning for properties, alter the type of the property to a supported type or remove the \[DataMember] Attribute.
+To resolve the warning for fields, remove the `[DataMember]` attribute or remove the `readonly` modifier.
+
+To resolve the warning for properties, alter the type of the property to a supported type or remove the `[DataMember]` attribute.
