@@ -33,7 +33,6 @@ If you're developing for multiple platforms, you often need to write custom code
 ## Example
 
 ```cs
-
 #if STRIDE_PLATFORM_WINDOWS
     // Windows-specific code goes here...
 

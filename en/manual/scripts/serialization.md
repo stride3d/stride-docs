@@ -1,13 +1,13 @@
-﻿# Serialization
+# Serialization
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Programmer</span>
 
 The editor and serialization system uses four attributes to determine what is serialized and visible in the editor.
 
-### [DataContractAttribute](xref:Stride.Core.DataContractAttribute)
-Adding this attribute to your `class` or `struct` notifies the serializer and the editor that it should
-show fields and properties of that type, and serialize the data it contains with the scenes or assets that might include it.
+### DataContractAttribute
+Adding the [`DataContractAttribute`](xref:Stride.Core.DataContractAttribute) to your `class` or `struct` notifies the serializer that it should serialize the data it contains, and the editor that it should display fields and properties of that type, along with the scenes or assets that might include it.
+
 ```cs
 [Stride.Core.DataContract(Inherited = true)]
 public class MySerializedClass
@@ -27,11 +27,9 @@ public class MyDerivedSerializedClass : MySerializedClass
 > They are not interchangeable.
 > Make sure that your `DataContract` comes from `Stride.Core`, specifying the namespace explicitly like shown above if necessary.
 
-### [DataMemberAttribute](xref:Stride.Core.DataMemberAttribute)
-This notifies the editor and serializer that the property or field on this [DataContract](#datacontractattribute)'ed
-`class` or `struct` should be serialized.
-Note that you can omit this attribute for most public fields and properties, they will be included by default,
-see [Fields](#fields) and [Properties](#properties) for specifics.
+### DataMemberAttribute
+The [`DataMemberAttribute`](xref:Stride.Core.DataMemberAttribute) notifies the editor and serializer that the property or field on this [`DataContract`](#datacontractattribute)'ed `class` or `struct` should be serialized. Note that you can omit this attribute for most public fields and properties, as they will be included by default. See [Fields](#fields) and [Properties](#properties) for specifics.
+
 ```cs
 [Stride.Core.DataContract]
 public class MySerializedClass
@@ -41,18 +39,22 @@ public class MySerializedClass
 }
 ```
 
-### [DataAliasAttribute](xref:Stride.Core.DataAliasAttribute)
-Can be used to ensure you do not break previously serialized data whenever you have to change how that member is named in your source.
+### DataAliasAttribute
+The [`DataAliasAttribute`](xref:Stride.Core.DataAliasAttribute) can be used to ensure you do not break previously serialized data whenever you have to change how that member is named in your source.
+
 ```cs
 [Stride.Core.DataAlias("PreviousNameOfProp")]
 public string MyRenamedProp { get; set; }
 ```
+
 > [!Note]
 > Alias remaps values only while in the editor; this feature is specific to the YAML serialization system. Alias will be ignored during builds and at runtime.
 
-### [DataMemberIgnoreAttribute](xref:Stride.Core.DataMemberIgnoreAttribute)
-This notifies the editor and serializer that the property or field on this [DataContract](#datacontractattribute)'ed
-`class` or `struct` should ***NOT*** be serialized.
+### DataMemberIgnoreAttribute
+
+The [`DataMemberIgnoreAttribute`](xref:Stride.Core.DataMemberIgnoreAttribute) notifies the editor and serializer that the property or field on this [`DataContract`](#datacontractattribute)'ed `class` or `struct` should ***NOT*** be serialized.
+
+
 ```cs
 [Stride.Core.DataContract]
 public class MySerializedClass
@@ -67,7 +69,7 @@ public class MySerializedClass
 - [DataMemberUpdatableAttribute](xref:Stride.Updater.DataMemberUpdatableAttribute)
 
 ## Rule of Thumb
-Serialization and the editor's access and view of your properties mirrors how access modifiers work in C#;
+Serialization and the editor's access and view of your properties mirrors how access modifiers work in C#.
 
 Think of the serializer/editor as being a class external to your codebase, if you want the serializer to
 read and write your properties you have to ensure that the access modifiers for its getter and setter
