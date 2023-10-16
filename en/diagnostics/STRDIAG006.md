@@ -17,7 +17,6 @@ public class STRDIAG006
 {
     // non existent setters count as non visible
     [DataMember(DataMemberMode.Assign)]
-    [DataMember(DataMemberMode.Assign)]
     public int Property1 { get; }
 
     [DataMember(DataMemberMode.Assign)]
