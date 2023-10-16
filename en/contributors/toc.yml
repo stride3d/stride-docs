@@ -8,10 +8,12 @@
   items:
   - name: Contribute to code
     href: engine/contribute-code.md
+  - name: Bug bounties
+    href: engine/bug-bounties.md
   - name: Building source on Windows
     href: engine/building-source-windows.md
-  - name: Building source on Linux
-    href: engine/building-source-linux.md
+#  - name: Building source on Linux
+#    href: engine/building-source-linux.md
   - name: Localization
     href: engine/localization.md
   - name: Hot reloading editor shaders

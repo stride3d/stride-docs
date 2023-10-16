@@ -1,11 +1,6 @@
 ﻿# Localization
 
-?? https://github.com/stride3d/stride/edit/master/docs/localization.md
-WIP: COPIED from link above
-
-## Translation
-
-Please help us translate by updating existing translations and/or adding new language at https://hosted.weblate.org/projects/stride/
+You can help us translate Stride, by updating existing translations and/or adding new language at https://hosted.weblate.org/projects/stride/
 
 Translation are manually merged back from `weblate` branch to `master` branch.
 
