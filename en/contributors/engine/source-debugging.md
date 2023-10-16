@@ -1,4 +1,4 @@
-﻿#Setting Up Source Debugging in VS
+﻿# Setting Up Source Debugging in VS
 First, make sure source debugging external dependencies is enabled:
 
 * Make sure ["Debug Just My Code" is disabled](https://docs.microsoft.com/en-us/visualstudio/debugger/just-my-code?view=vs-2019), in Tools -> Options -> Debugging.
