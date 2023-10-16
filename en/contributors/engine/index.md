@@ -4,11 +4,15 @@ Here you can find various pages describing building the source locally for diffe
 ### [Contribute code](contribute-engine.md)
 Want to help out fixing bugs or making new features? Check out how you can do so.
 
+### [Bug bounties](contribute-engine.md)
+Here you can learn about the process on our bug bounty process.
+
 ### [Building on Windows](building-source-windows.md)
 Building and running the Stride engine locally on Windows using [Visual Studio](building-source-windows.md) or other [IDEs](building-source-windows-other-ide.md)
 
-### [Building on Linux](building-source-linux.md)
-Building the Stride engine locally on Linux
+[//]: # (### [Building on Linux]&#40;building-source-linux.md&#41;)
+
+[//]: # (Building the Stride engine locally on Linux)
 
 ### [Localization](localization.md)
 Learn how manage translations for the engine.
