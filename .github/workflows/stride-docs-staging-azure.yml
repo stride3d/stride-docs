@@ -49,7 +49,7 @@ jobs:
       # This installs the latest version of DocFX and may introduce breaking changes.
       # run: dotnet tool update -g docfx
       # This installs a specific, tested version of DocFX.
-      run: dotnet tool update -g docfx --version 2.70.4
+      run: dotnet tool update -g docfx --version 2.71.0
 
     - name: Build documentation
       run: ./build-all.bat

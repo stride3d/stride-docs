@@ -117,6 +117,7 @@
           ".nojekyll",
           "CNAME",
           "languages.json",
+          "studio_getting_started_links.txt",
           "favicon.ico",
           "favicon.png",
           "images/**",

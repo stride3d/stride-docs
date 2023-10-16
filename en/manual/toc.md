@@ -54,6 +54,7 @@
 ### [Asset bundles](engine/assets/asset-bundles.md)
 ### [Asset control](engine/assets/asset-control.md)
 ## [Entity component model](engine/entity-component-model/index.md)
+### [Usage](engine/entity-component-model/usage.md)
 ### [Manage entities](engine/entity-component-model/managing-entities.md)
 ## [File system](engine/file-system.md)
 
@@ -222,6 +223,7 @@
 ## [Create a script](scripts/create-a-script.md)
 ## [Use a script](scripts/use-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
+## [Serialization](scripts/serialization.md)
 ## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
 ## [Events](scripts/events.md)
 ## [Debugging](scripts/debugging.md)
