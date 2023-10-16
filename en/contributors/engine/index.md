@@ -14,6 +14,14 @@ Building the Stride engine locally on Linux
 Learn how manage translations for the engine.
 
 
+### [Hot reloading shaders](hot-reloading-shaders.md)
+Learn about hot reloading shaders
+
+### [Source debugging](source-debugging.md)
+Learn how to do source debugging
+
+### [Visual studio plugin](visual-studio-plugin.md)
+Learn about the Visual studio plugin for shader development
 
 # Architecture 🧬
 ### [Build pipeline](architecture/build-pipeline.md)
