@@ -36,15 +36,15 @@
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
       href: engine/architecture/build-pipeline.md
-- name: ℹ Contribute to the documentation
-  expanded: false
-  href: documentation/index.md
-  items:
-  - name: Adding a new manual page
-    href: documentation/adding-manual-page.md
-- name: 🌐️ Contribute to the website
-  expanded: false
-  href: website/index.md
-  items:
-    - name: Adding a new blogpost
-      href: website/adding-blogpost.md
+#- name: ℹ Contribute to the documentation
+#  expanded: false
+#  href: documentation/index.md
+#  items:
+#  - name: Adding a new manual page
+#    href: documentation/adding-manual-page.md
+#- name: 🌐️ Contribute to the website
+#  expanded: false
+#  href: website/index.md
+#  items:
+#    - name: Adding a new blogpost
+#      href: website/adding-blogpost.md
