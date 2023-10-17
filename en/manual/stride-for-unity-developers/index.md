@@ -8,9 +8,9 @@ Stride and Unity® both use C# and share many concepts, with a few major differe
 
 The Stride editor is **Game Studio**. This is the equivalent of the Unity® Editor.
 
-![Stride and Unity®  interface comparison](media/stride-vs-unity-interface-comparison.png)
+![Unity® Editor layout](media/stride-vs-unity-unitylayout.png)
 
-*Unity® screenshot taken from [Calling a web-service from a Unity3D scene](http://through-the-interface.typepad.com/through_the_interface/2012/04/calling-a-web-service-from-a-unity3d-scene.html) by Kean Walmsley.*
+![Stride Game Studio layout](media/stride-vs-unity-stridelayout.png)
 
 You can customize the Game Studio layout by dragging tabs, similar to Visual Studio.
 
