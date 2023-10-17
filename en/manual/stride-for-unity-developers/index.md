@@ -8,9 +8,9 @@ Stride and Unity® both use C# and share many concepts, with a few major differe
 
 The Stride editor is **Game Studio**. This is the equivalent of the Unity® Editor.
 
-![Stride and Unity®  interface comparison](media/stride-vs-unity-interface-comparison.png)
+![Unity® Editor layout](media/stride-vs-unity-unitylayout.webp)
 
-*Unity® screenshot taken from [Calling a web-service from a Unity3D scene](http://through-the-interface.typepad.com/through_the_interface/2012/04/calling-a-web-service-from-a-unity3d-scene.html) by Kean Walmsley.*
+![Stride Game Studio layout](media/stride-vs-unity-stridelayout.webp)
 
 You can customize the Game Studio layout by dragging tabs, similar to Visual Studio.
 
@@ -20,22 +20,22 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 
 Unity® and Stride use mostly common terms, with a few differences:
 
-| Unity®          | Stride                                 |
-|-----------------|----------------------------------------|
-| Hierarchy panel | Entity Tree                            |
-| Inspector       | Property Grid                          |
-| Project browser | Asset View                             |
-| Scene view      | Scene Editor                           |
-| GameObject      | Entity                                 |
-| MonoBehaviour   | SyncScript, AsyncScript, StartupScript |
+| Unity®           | Stride                                       |
+|------------------|----------------------------------------------|
+| Hierarchy Window | Entity Tree                                  |
+| Inspector Window | Property Grid                                |
+| Project Window   | Asset View                                   |
+| Scene View       | Scene Editor                                 |
+| [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | [`Entity`](xref:Stride.Engine.Entity) |
+| [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) | [`SyncScript`](xref:Stride.Engine.SyncScript), [`AsyncScript`](xref:Stride.Engine.AsyncScript), [`StartupScript`](xref:Stride.Engine.StartupScript) |
 
 ## Folders and files
 
 Like Unity®, Stride projects are stored in a directory that contains:
 
-* The project ``.sln`` solution file, which you can open with Game Studio or any IDE such as Visual Studio
+* The project `.sln` solution file, which you can open with Game Studio or any IDE such as Visual Studio
 
-* a **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries
+* A **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries
 
   ![Package folder structure](../files-and-folders/media/folder-structure.png)
 
@@ -45,7 +45,7 @@ Like Unity®, Stride projects are stored in a directory that contains:
 
 * **MyPackage.Game** contains your source code.
 
-*   **MyPackage.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (e.g. *MyPackage.Windows*, *MyPackage.Linux*, etc.). These folders are usually small and only contain the entry point of the program.
+  * **MyPackage.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (e.g. *MyPackage.Windows*, *MyPackage.Linux*, etc.). These folders are usually small and only contain the entry point of the program.
 
 * **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
 
@@ -93,7 +93,7 @@ You can have multiple scenes in your project. The scene that loads up as soon as
 To set the default scene:
 
 1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
-    
+
     ![Set default scene](media/stride-vs-unity-game-settings-default-scene.png)
 
     The **Select an asset** window opens.
@@ -132,6 +132,7 @@ All entities are created with a Transform component by default.
 In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
+
 Stride uses position, rotation, and scale to refer to the local position, rotation, and scale.
 
 | Unity®                       | Stride                       |
@@ -142,6 +143,7 @@ Stride uses position, rotation, and scale to refer to the local position, rotati
 | `transform.localEulerAngles` | `Transform.RotationEulerXYZ` |
 
 #### World Position/Rotation/Scale
+
 In comparison to Unity, many of the Transform component's properties related to its location in the world have been moved to the [WorldMatrix](xref:Stride.Engine.TransformComponent.WorldMatrix).
 
 | Unity®                                                            | Stride                                                                                                 |
@@ -158,6 +160,7 @@ In comparison to Unity, many of the Transform component's properties related to 
 To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
 
 #### Transform Directions
+
 Unlike Unity, Stride provides a Backward, Left, and Down property.
 Note that those are matrix properties, so setting one of those is not enough to properly rotate the matrix.
 
@@ -218,13 +221,13 @@ As soon as you add an asset to your project, you can edit its properties in the 
 
 Like Unity®, Stride supports file formats including:
 
-| Asset type                    | Supported formats                                            |
-|-------------------------------|--------------------------------------------------------------|
-| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
-| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
-| Audio                         | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
-| Fonts                         | .ttf, .otf                                                   |
-| Video                         | .mp4                                                         |
+| Asset type                    | Supported formats                                                                |
+|-------------------------------|----------------------------------------------------------------------------------|
+| Models, animations, skeletons | `.fbx`, `.dae`, `.3ds`, `.obj`, `.blend`, `.x`, `.md2`, `.md3`, `.dxf`           |
+| Sprites, textures, skyboxes   | `.dds`, `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tga`, `.psd`, `.tif`, `.tiff` |
+| Audio                         | `.wav`, `.mp3`, `.ogg`, `.aac`, `.aiff`, `.flac`, `.m4a`, `.wma`, `.mpc`         |
+| Fonts                         | `.ttf`, `.otf`                                                                   |
+| Video                         | `.mp4`                                                                           |
 
 For more information about assets, see [Assets](../game-studio/assets.md).
 
@@ -275,11 +278,12 @@ Stride supports a variety of inputs. The code samples below demonstrate the diff
 For more information about Input in Stride, see [Input](../input/index.md).
 
 #### Unity®
+
 ```cs
 void Update()
 {
     // true for one frame in which the space bar was pressed
-    if(Input.GetKeyDown(KeyCode.Space))
+    if (Input.GetKeyDown(KeyCode.Space))
     {
         // Do something.
     }
@@ -290,17 +294,19 @@ void Update()
         // Do something.
     }
 
-    float Horiz = Input.GetAxis("Horizontal");
-    float Vert = Input.GetAxis("Vertical");
-    //Do something else.
+    float horiz = Input.GetAxis("Horizontal");
+    float vert = Input.GetAxis("Vertical");
+    // Do something else.
 }
 ```
+
 #### Stride
+
 ```cs
 public override void Update()
 {
     // true for one frame in which the space bar was pressed
-    if(Input.IsKeyDown(Keys.Space))
+    if (Input.IsKeyDown(Keys.Space))
     {
         // Do something.
     }
@@ -311,9 +317,9 @@ public override void Update()
         // Do something.
     }
 
-    float Horiz = (Input.IsKeyDown(Keys.Left) ? -1f : 0) + (Input.IsKeyDown(Keys.Right) ? 1f : 0);
-    float Vert = (Input.IsKeyDown(Keys.Down) ? -1f : 0) + (Input.IsKeyDown(Keys.Up) ? 1f : 0);
-    //Do something else.
+    float horiz = (Input.IsKeyDown(Keys.Left) ? -1f : 0) + (Input.IsKeyDown(Keys.Right) ? 1f : 0);
+    float vert = (Input.IsKeyDown(Keys.Down) ? -1f : 0) + (Input.IsKeyDown(Keys.Up) ? 1f : 0);
+    // Do something else.
 }
 ```
 
@@ -342,22 +348,27 @@ They're controlled by scripts in slightly different ways.
 #### Unity®
 
 ```cs
-public Rigidbody rigidBody;
-void Start()
+public class KinematicX : MonoBehaviour
 {
-    rigidBody = GetComponent<Rigidbody>();
-}
+    public Rigidbody rigidBody;
 
-void EnableRagdoll()
-{
-    rigidBody.isKinematic = false;
-    rigidBody.detectCollisions = true;
-}
+    void Start()
+    {
+        // Initialization of the component.
+        rigidBody = GetComponent<Rigidbody>();
+    }
 
-void DisableRagdoll()
-{
-    rigidBody.isKinematic = true;
-    rigidBody.detectCollisions = false;
+    void EnableRagdoll()
+    {
+        rigidBody.isKinematic = false;
+        rigidBody.detectCollisions = true;
+    }
+
+    void DisableRagdoll()
+    {
+        rigidBody.isKinematic = true;
+        rigidBody.detectCollisions = false;
+    }
 }
 ```
 
@@ -366,28 +377,29 @@ void DisableRagdoll()
 ```cs
 public class KinematicX : SyncScript
 {
-    public RigidbodyComponent component;
+    public RigidbodyComponent rigidBody;
 
     public override void Start()
     {
-        // Initialization of the script.
-        component = Entity.Get<RigidbodyComponent>();
+        // Initialization of the component.
+        rigidBody = Entity.Get<RigidbodyComponent>();
     }
 
     public override void Update()
     {
+        // Perform an update every frame.
     }
 
-    public void EnableRagdoll()
+    void EnableRagdoll()
     {
-        component.IsKinematic = false;
-        component.ProcessCollisions = true;
+        rigidBody.IsKinematic = false;
+        rigidBody.ProcessCollisions = true;
     }
 
-    public void DisableRagdoll()
+    void DisableRagdoll()
     {
-        component.IsKinematic = true;
-        component.ProcessCollisions = false;
+        rigidBody.IsKinematic = true;
+        rigidBody.ProcessCollisions = false;
     }
 }
 ```
@@ -449,7 +461,7 @@ For more information about triggers in Stride, see [Triggers](../physics/trigger
 #### Unity®
 
 ```cs
-Collider FindGOCameraIsLookingAt()
+public static Collider FindGOCameraIsLookingAt()
 {
     int distance = 50;
 
@@ -491,6 +503,7 @@ public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, Camer
     return result.Succeeded;
 }
 ```
+
 For more information about Raycasting in Stride, see [Raycasting](../physics/raycasting.md).
 
 ## Scripts
@@ -547,7 +560,7 @@ public class BasicMethods : AsyncScript
     // Declared public member fields and properties that will appear in the game studio
     public override async Task Execute()
     {
-        while(Game.IsRunning)
+        while (Game.IsRunning)
         {
             // Do stuff every new frame
             await Script.NextFrame();
@@ -589,19 +602,19 @@ To create a script, click the **Add asset** button and select **Scripts**.
 
 ![Create script in Stride](media/stride-vs-unity-create-script.png)
 
-In Unity®, when you create a `MonoBehaviour` script, it has two base functions: `Start()` and `Update()`. Stride has a [SyncScript](xref:Stride.Engine.SyncScript) that works similarly. Like `MonoBehaviour`, [SyncScript](xref:Stride.Engine.SyncScript) has two methods:
+In Unity®, when you create a [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) script, it has two base functions: [`MonoBehaviour.Start()`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html) and [`MonoBehaviour.Update()`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html). Stride has a [`SyncScript`](xref:Stride.Engine.SyncScript) that works similarly. Like [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), [`SyncScript`](xref:Stride.Engine.SyncScript) has two methods:
 
-* [Start()](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
+* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
 
-* [Update()](xref:Stride.Engine.SyncScript.Update) is called every update.
+* [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) is called every update.
 
-Unlike `MonoBehaviour`, you have to use [Update()](xref:Stride.Engine.SyncScript.Update) method in every [SyncScript](xref:Stride.Engine.SyncScript), or your code won't work properly.
+Unlike [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), implementating the [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) method is not optional, and as such, must be implemented in every [`SyncScript`](xref:Stride.Engine.SyncScript).
 
 If you want your script to be a startup or asynchronous, use the corresponding script types:
 
-* [StartupScript](xref:Stride.Engine.StartupScript): this script has a single [Start()](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
+* [`StartupScript`](xref:Stride.Engine.StartupScript): this script has a single [`StartupScript.Start()`](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
 
-* [AsyncScript](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:Stride.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
+* [`AsyncScript`](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [`AsyncScript.Execute()`](xref:Stride.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
 
 ### Reload assemblies
 
@@ -640,8 +653,8 @@ public Quaternion SpawnRotation;
 
 void Start()
 {
-    GameObject NewGO = (GameObject)Instantiate(CarPrefab, SpawnPosition, SpawnRotation);
-    NewGO.name = "NewGameObject1";
+    GameObject newGameObject = (GameObject)Instantiate(CarPrefab, SpawnPosition, SpawnRotation);
+    newGameObject.name = "NewGameObject1";
 }
 ```
 
@@ -674,15 +687,15 @@ Each class in Unity® has certain default values. If you don't override these pr
 
 ```cs
 public int NewProp = 30;
-public Light MyLightComp = null;
+public Light MyLightComponent = null;
 
 void Start()
 {
     // Create the light component if we don't already have one.
-    if (MyLightComp == null)
+    if (MyLightComponent == null)
     {
-        MyLightComp = gameObject.AddComponent<Light>();
-        MyLightComp.intensity = 3;
+        MyLightComponent = gameObject.AddComponent<Light>();
+        MyLightComponent.intensity = 3;
     }
 }
 ```
@@ -739,13 +752,13 @@ LightComponent lightComponent = Entity.Get<LightComponent>();
 #### Unity®
 
 ```cs
-GameObject ParentGO = lightComponent.gameObject;
+GameObject componentGameObject = lightComponent.gameObject;
 ```
 
 #### Stride
 
 ```cs
-Entity ParentEntity = lightComponent.Entity;
+Entity componentEntity = lightComponent.Entity;
 ```
 
 ## Log output
@@ -758,10 +771,10 @@ Game Studio displays in the **Output** tab (at the bottom of Game Studio by defa
 
 ![Output tab](media/output-tab.png)
 
-
 ### Print debug messages
 
 Logging from a ScriptComponent:
+
 ```cs
 public override void Start()
 {
@@ -792,9 +805,9 @@ System.Diagnostics.Debug.WriteLine("hello");
 | `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
 
 >[!Note]
->You cannot serialize private fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
+>You cannot serialize `private` fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
 
-```cs 
+```cs
 public float MyProperty { get; init; }
 ```
 

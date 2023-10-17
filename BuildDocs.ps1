@@ -87,9 +87,9 @@ function Ask-IncludeAPI {
     Write-Host -ForegroundColor Yellow "  [N] No"
     Write-Host ""
 
-    $input = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
 
-    return ($input -eq "Y" -or $input -eq "y" -or $input -eq "")
+    return ($answer -ieq "y" -or $answer -eq "")
 }
 
 function Ask-UseExistingAPI {
@@ -100,9 +100,9 @@ function Ask-UseExistingAPI {
     Write-Host -ForegroundColor Yellow "  [N] No"
     Write-Host ""
 
-    $input = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
 
-    return ($input -eq "Y" -or $input -eq "y" -or $input -eq "")
+    return ($answer -ieq "y" -or $answer -eq "")
 }
 
 function Copy-ExtraItems {

@@ -50,7 +50,7 @@ public Button CreateButton()
     if (button != null)
     {        
         // attach a delegate to the Click event
-        someButton.Click += delegate
+        button.Click += delegate
         {
             // do something here...
         };
