@@ -100,7 +100,7 @@ public Button CreateButton()
     {        
         // Click イベントにデリゲートを登録します。
         // attach a delegate to the Click event
-        someButton.Click += delegate
+        button.Click += delegate
         {
             // ここで何かの作業をします。
             // do something here...
