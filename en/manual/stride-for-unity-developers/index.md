@@ -280,7 +280,7 @@ For more information about Input in Stride, see [Input](../input/index.md).
 #### Unity®
 
 ```cs
-private void Update()
+void Update()
 {
     // true for one frame in which the space bar was pressed
     if (Input.GetKeyDown(KeyCode.Space))
@@ -352,19 +352,19 @@ public class KinematicX : MonoBehaviour
 {
     public Rigidbody rigidBody;
 
-    private void Start()
+    void Start()
     {
         // Initialization of the component.
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void EnableRagdoll()
+    void EnableRagdoll()
     {
         rigidBody.isKinematic = false;
         rigidBody.detectCollisions = true;
     }
 
-    private void DisableRagdoll()
+    void DisableRagdoll()
     {
         rigidBody.isKinematic = true;
         rigidBody.detectCollisions = false;
@@ -390,13 +390,13 @@ public class KinematicX : SyncScript
         // Perform an update every frame.
     }
 
-    private void EnableRagdoll()
+    void EnableRagdoll()
     {
         rigidBody.IsKinematic = false;
         rigidBody.ProcessCollisions = true;
     }
 
-    private void DisableRagdoll()
+    void DisableRagdoll()
     {
         rigidBody.IsKinematic = true;
         rigidBody.ProcessCollisions = false;
@@ -412,13 +412,13 @@ For more information about rigidbodies in Stride, see [Rigidbodies](../physics/r
 
 ```cs
 // Occurs when game objects go through this trigger.
-private void OnTriggerEnter(Collider Other)
+void OnTriggerEnter(Collider Other)
 {
     Other.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
 }
 
 // Occurs when game objects move out of this trigger.
-private void OnTriggerExit(Collider Other)
+void OnTriggerExit(Collider Other)
 {
     Other.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 }
@@ -535,9 +535,9 @@ Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncS
 ```cs
 public class BasicMethods : MonoBehaviour
 {
-    private void Start() { }
-    private void OnDestroy() { }
-    private void Update() { }
+    void Start() { }
+    void OnDestroy() { }
+    void Update() { }
 }
 ```
 
@@ -651,7 +651,7 @@ public GameObject CarPrefab;
 public Vector3 SpawnPosition;
 public Quaternion SpawnRotation;
 
-private void Start()
+void Start()
 {
     GameObject newGameObject = (GameObject)Instantiate(CarPrefab, SpawnPosition, SpawnRotation);
     newGameObject.name = "NewGameObject1";
@@ -689,7 +689,7 @@ Each class in Unity® has certain default values. If you don't override these pr
 public int NewProp = 30;
 public Light MyLightComponent = null;
 
-private void Start()
+void Start()
 {
     // Create the light component if we don't already have one.
     if (MyLightComponent == null)
