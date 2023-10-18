@@ -1,4 +1,5 @@
-﻿The Stride Visual Studio Plugin adds:
+﻿# Visual Studio Plugin
+The Stride Visual Studio Plugin adds:
 * syntax highlighting for Stride `.sdsl` shaders  (formerly `.xlsl`)
 * generates shader key files (`.sdsl.cs`) which create type definitions and ParameterKey values for the shader parameters
 * generates shader effect files (`.sdfx.cs`)
