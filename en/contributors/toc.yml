@@ -1,5 +1,6 @@
 - name: 🌟 Ways to Contribute
   href: ways-to-contribute.md
+  expanded: true
 - name: 💸 Donate
   href: donate.md
 - name: 🛠️ Contribute to the engine
