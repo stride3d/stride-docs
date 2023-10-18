@@ -1,4 +1,4 @@
-# Table of Contents
+# Documentation Contents
 
 - [Content Updates](#content-updates)
   - [Small Updates](#small-updates)
@@ -8,22 +8,13 @@
   - [Creating New Page](#creating-new-manual-page)
 - [Tutorial](#tutorial)
   - [Creating New Tutorial](#creating-new-tutorial-page)
-- [Creating New Post](#creating-new-post)
-  - [Post Naming Convention](#post-naming-convention)
-  - [Post Front Matter](#post-front-matter)
-  - [Post Content](#post-content)
-  - [Excerpt](#excerpt)
-- [Creating New Page](#creating-new-page)
-  - [Page Front Matter](#page-front-matter)
 - [Shortcodes and Includes](#shortcodes-and-includes)
   - [Alert](#alert)
-  - [Alert Banner](#alert-banner)
-  - [Image](#image)
   - [Video](#video)
 - [Web Assets](#web-assets)
 - [Styling](#styling)
   - [Bootstrap Customization](#bootstrap-customization)
-  - [CSS Guidelines](#css-guidlines)
+  - [CSS Guidelines](#css-guidelines)
 - [Submitting your Changes](#submitting-your-changes)
 
 # Content Updates
@@ -45,7 +36,7 @@ Creating an issue is not required for small updates, but it is recommended to le
 We can define small updates as changes to the content of the website:
 
 - Update the content of an existing page (manual, tutorial or release note)
-- Add a [new manual](#creating-new-manual) or [tutorial](#creating-new-tutorial)
+- Add a [new manual](#creating-new-manual-page) or [tutorial](#creating-new-tutorial-page)
 - Fix a typo
 
 ### Steps
