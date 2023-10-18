@@ -12,7 +12,7 @@ To make Stride3d better, just use it and tell others about it in your blogs, vid
 The best way to promote Stride is by creating a cool demo or, even better, a full game. Having people see and play an actual game made with Stride is the most effective form of advertisement.
 
 
-### [Donate](open-collective.md) 💸
+### [Donate](donate.md) 💸
 We utilize Open Collective for fundraising. The funds collected are allocated towards bug bounties and compensating individuals contracted for paid work.
 
 
@@ -24,7 +24,7 @@ Making Stride more stable greatly improves usability and user satisfaction. So i
 Contributing to Pull Requests (PRs) is excellent as it enables active participation without local builds. Reviewing and offering feedback in this collaborative process enhances code quality and maintains project standards, fostering a sense of community and knowledge sharing.
 
 
-### [Contribute code](engine/contribute-engine.md) 
+### [Contribute code](engine/index.md) 
 If you're passionate about C# and want to contribute by building features or fixing bugs in Stride, dive into the source code and get involved!
 Have a look at the Github issues label [Good first issue](https://github.com/stride3d/stride/labels/good%20first%20issue) or funded [Open Collective projects](https://opencollective.com/stride3d/projects)
 
