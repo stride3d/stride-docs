@@ -51,7 +51,7 @@ Technologies we use to build our website:
     - [Web Assets](content.md#web-assets)
     - [Styling](content.md#styling)
         - [Bootstrap Customization](content.md#bootstrap-customization)
-        - [CSS Guidelines](content.md#css-guidlines)
+        - [CSS Guidelines](content.md#css-guidelines)
     - [Submitting your Changes](content.md#submitting-your-changes)
 - [Roadmap](roadmap.md)
 - [Eleventy](eleventy.md)

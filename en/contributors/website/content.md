@@ -19,7 +19,7 @@
 - [Web Assets](#web-assets)
 - [Styling](#styling)
   - [Bootstrap Customization](#bootstrap-customization)
-  - [CSS Guidelines](#css-guidlines)
+  - [CSS Guidelines](#css-guidelines)
 - [Submitting your Changes](#submitting-your-changes)
 
 # Content Updates

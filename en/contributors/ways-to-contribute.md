@@ -28,5 +28,8 @@ Contributing to Pull Requests (PRs) is excellent as it enables active participat
 If you're passionate about C# and want to contribute by building features or fixing bugs in Stride, dive into the source code and get involved!
 Have a look at the Github issues label [Good first issue](https://github.com/stride3d/stride/labels/good%20first%20issue) or funded [Open Collective projects](https://opencollective.com/stride3d/projects)
 
-### [Contribute to Documentation](documentation/contribute-documentation.md) 🪶
+### [Contribute to Documentation](documentation/index.md) 🪶
 Enhance the official documentation and tutorials by expanding the manual or creating textual/video guides. Your contributions will greatly improve accessibility and understanding for users.
+
+### [Contribute to Website](website/index.md) 🪶
+Enhance the official Stride website. Is design more your thing, or do you have an interesting blog post? It will all help us spread the word of Stride.
