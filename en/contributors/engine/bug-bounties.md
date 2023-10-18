@@ -1,4 +1,4 @@
-﻿#bug bounties
+﻿# Bug bounties
 If you are a developer with solid experience in C#, rendering techniques, or game development, we want to hire you! We have allocated funds from supporters on [OpenCollective](https://opencollective.com/stride3d) and will pay you for your work on certain issues.
 
 You can find [issues with bounties here](https://github.com/stride3d/stride/labels/bounty). If you see a different bug that you would like to tackle and you want to know if it is eligible for a bug bounty, you are also more than welcome to reach out to the core contributors on [Discord](https://discord.gg/f6aerfE) and [Github Discussion](https://github.com/stride3d/stride/discussions).

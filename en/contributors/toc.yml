@@ -36,15 +36,38 @@
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
       href: engine/architecture/build-pipeline.md
-#- name: ℹ Contribute to the documentation
-#  expanded: false
-#  href: documentation/index.md
-#  items:
-#  - name: Adding a new manual page
-#    href: documentation/adding-manual-page.md
-#- name: 🌐️ Contribute to the website
-#  expanded: false
-#  href: website/index.md
-#  items:
-#    - name: Adding a new blogpost
-#      href: website/adding-blogpost.md
+- name: ℹ Contribute to the documentation
+  expanded: false
+  href: documentation/index.md
+  items:
+  - name: Documentation generation pipeline
+    href: Documentation/documentation-generation-pipeline.md
+  - name: Installation
+    href: Documentation/installation.md
+  - name: Content
+    href: Documentation/content.md
+  - name: New language
+    href: Documentation/new-language.md
+  - name: Roadmap
+    href: Documentation/roadmap.md  
+  - name: DocFX
+    href: Documentation/docfx.md
+  - name: Deployment
+    href: Documentation/deployment-azure.md
+  - name: Troubleshooting and FAQ
+    href: Documentation/troubleshooting-and-faq.md
+- name: 🌐️ Contribute to the website
+  expanded: false
+  href: website/index.md
+    - name: Installation
+      href: website/installation.md
+    - name: Website Content
+      href: website/content.md
+    - name: Roadmap
+      href: website/roadmap.md
+    - name: Eleventy
+      href: website/eleventy.md
+    - name: Deployment
+      href: website/deployment-azure.md
+    - name: Troubleshooting and FAQ
+      href: website/troubleshooting-and-faq.md
