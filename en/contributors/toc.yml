@@ -50,7 +50,7 @@
   - name: New language
     href: Documentation/new-language.md
   - name: Roadmap
-    href: Documentation/roadmap.md  
+    href: Documentation/roadmap.md
   - name: DocFX
     href: Documentation/docfx.md
   - name: Deployment
