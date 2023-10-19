@@ -60,6 +60,7 @@
 - name: 🌐️ Contribute to the website
   expanded: false
   href: website/index.md
+  items:
     - name: Installation
       href: website/installation.md
     - name: Website Content
