@@ -1,4 +1,5 @@
-﻿This documentation serves as a comprehensive guide to help you navigate and contribute to the **Stride Docs** website.
+﻿# Contributing to documentation
+This documentation serves as a comprehensive guide to help you navigate and contribute to the **Stride Docs** website.
 
 If you're looking to make minor changes, such as adding or updating a manual, tutorial or page, or fixing a typo, feel free to jump straight to the [Content Updates](content#content-updates) section.
 
@@ -11,7 +12,6 @@ Here are the technologies we use to build our website:
 - [Mustache](https://mustache.github.io/) template engine (docfx dropped Liquid template engine support)
 - Bootstrap
 - Emojis (because why not? 😎)
-- GitHub Wiki
 - HTML, JavaScript, CSS, JSON
 - PowerShell scripts
 - GitHub Actions (CI/CD) - Don't worry, this is already set up, you don't need to worry about it.
@@ -30,7 +30,6 @@ Here are the technologies we use to build our website:
 - [Content Updates](content.md#content-updates)
     - [Small Updates](content.md#small-updates)
     - [Major Updates](content.md#major-updates)
-    - [Updating Wiki](content.md#updating-wiki)
     - [Manual](content.md#manual)
       - [Creating New Page](content.md#creating-new-manual-page)
     - [Tutorial](content.md#tutorial)
@@ -58,7 +57,6 @@ Here are the technologies we use to build our website:
 - [Deployment](deployment.md)
     - [GitHub Pages](deployment.md#github-pages)
     - [Azure Web Apps](deployment.md#azure-web-apps)
-    - [Deployment To Wiki](deployment.md#deployment-to-wiki)
 - [Troubleshooting and FAQ](troubleshooting-and-faq.md)
     - [Known Issues](troubleshooting-and-faq.md#known-issues)
     - [Common Issues and Solutions](troubleshooting-and-faq.md#common-issues-and-solutions)

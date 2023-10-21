@@ -1,5 +1,4 @@
-# Table of Contents
-
+# Troubleshooting and FAQ
 - [Known Issues](#known-issues)
 - [Common Issues and Solutions](#common-issues-and-solutions)
 - [Frequently Asked Questions](#frequently-asked-questions)

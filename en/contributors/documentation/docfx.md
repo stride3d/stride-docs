@@ -1,3 +1,4 @@
+# DocFX
 [docfx](https://www.11ty.dev/) is a static site generator that uses JavaScript as its templating language. It is a very powerful tool that allows us to create a website with a lot of flexibility and customization. It is also very easy to use and learn. This section will cover the basics of Eleventy configuration on the Stride website. Creating and updating the content is described in our [Content](Content) section.
 
 We used to use **Jekyll** as our static site generator, but we decided to switch to Eleventy because of its flexibility and ease of use. We also wanted to use a tool that is more widely used and supported, which is why we decided to switch to Eleventy.
@@ -80,7 +81,6 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `/posts` - Blog posts
 - `/posts/2014-2021` - Old blog posts which are merged to the same output folder as `/posts`
   - this folder is only for convenience to easily access new posts
-- `/wiki` - Excluded from build process, used only for wiki deployment
 
 **Files**
 

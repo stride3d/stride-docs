@@ -1,11 +1,9 @@
-# Table of Contents
-
+# Deployment
 We tested five different deployment methods and chose Azure Web Apps IIS ASP.NET 4.8.
 
 - [GitHub Pages](#github-pages)
 - [Azure Web Apps](#azure-web-apps)
   - [Deploying with .NET Framework](#deploying-with-net-framework)
-- [Deployment To Wiki](#deployment-to-wiki)
 
 # GitHub Pages
 
@@ -50,26 +48,7 @@ The GitHub action `stride-website-staging-azure` builds the website and deploys 
 
 [Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](Deployment-Azure).
 
-# Deployment To Wiki
-
-While the GitHub wiki offers a convenient way to document a project, it has some drawbacks, such as not being part of the repository by default and restricting edits to collaborators. To address these issues and allow community editing, we have implemented an alternative approach.
-
-We created a `wiki` folder within the repository, which contains all wiki pages. The GitHub action `stride-web-wiki.yml` deploys the `wiki` folder to the GitHub wiki.
-
-The GitHub action `stride-web-wiki.yml` is triggered when:
-
-1. A push is made to the `master` branch of the `stride-website` repository
-1. The action is manually triggered
-
-You can manually trigger the action by navigating to the **Actions** tab and clicking the **Run workflow** button.
-
-This GitHub action only monitors changes to the `wiki` folder. Any modifications made to the `wiki` folder will be deployed to the GitHub wiki. Note that changes to the `wiki` folder will not trigger other GitHub actions.
-
-We use the [Wiki Page Creator GitHub Action](https://github.com/marketplace/actions/wiki-page-creator-action) to deploy the `wiki` folder to the GitHub wiki.
-
-**Note**: ⚠️ A GitHub personal access token (GH_PAT) is required for authentication. This token is stored as a secret in the repository settings.⚠️
-
 **Recommendation**
 
 1. **ASP.NET 4.8 with IIS** for Staging
-1. **ASP.NET 4.8 with IIS** for Release
+2. **ASP.NET 4.8 with IIS** for Release

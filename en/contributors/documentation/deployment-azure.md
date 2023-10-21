@@ -1,5 +1,4 @@
-# Table of Contents
-
+# Deployment in Azure
 - [Step-by-Step Guide to Deploying Azure Web Apps (Windows) with IIS](#step-by-step-guide-to-deploying-azure-web-apps-windows-with-iis)
   - [Setting up a new Azure Web App (Windows) with IIS](#setting-up-a-new-azure-web-app-windows-with-iis)
   - [Adjusting the Web App Configuration](#adjusting-the-web-app-configuration)

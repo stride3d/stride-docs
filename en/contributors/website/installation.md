@@ -1,4 +1,4 @@
-# Installation
+# Local installation
 This guide will walk you through the steps to install the Stride website on your local machine for development purposes. Although we use the Windows operating system for development, the steps should be similar for other operating systems.
 
 [Minor updates](Content#small-updates) can be made directly on GitHub. However, for [more significant updates](Content#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the **Eleventy** static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.

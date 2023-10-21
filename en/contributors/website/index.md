@@ -1,6 +1,5 @@
-﻿# Welcome to the Stride Website Wiki.
-
-This wiki serves as a comprehensive guide to help you navigate and contribute to the **Stride website**.
+﻿# Contributing to the Stride website
+This documentation serves as a comprehensive guide to help you navigate and contribute to the **Stride website**.
 
 If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](content#content-updates) section.
 
@@ -13,7 +12,6 @@ Technologies we use to build our website:
 - Mainly [Liquid](https://shopify.github.io/liquid/) and a bit Nunjucks (template engines)
 - Bootstrap
 - Font Awesome
-- GitHub Wiki
 - HTML, JavaScript, CSS, SCSS, and JSON
 - GitHub Actions (CI/CD) - Don't worry, this is already set up, you don't need to worry about it.
 

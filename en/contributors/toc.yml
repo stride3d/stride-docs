@@ -47,8 +47,8 @@
     href: Documentation/installation.md
   - name: Content
     href: Documentation/content.md
-  - name: New language
-    href: Documentation/new-language.md
+#  - name: New language
+#    href: Documentation/new-language.md
   - name: Roadmap
     href: Documentation/roadmap.md  
   - name: DocFX

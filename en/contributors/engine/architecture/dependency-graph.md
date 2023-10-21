@@ -1,6 +1,5 @@
 ﻿# Dependency graph
 
-
 ### Assemblies
 <img src="../../media/assemblies_stride.svg" class="card-img-top" alt="Assemblies of Stride">
 <br><br>

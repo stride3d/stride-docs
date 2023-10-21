@@ -1,5 +1,4 @@
 ﻿# Build details
-
 This is a technical description what happens in our build and how it is organized. This covers mostly the build architecture of Stride itself.
 
 * [Targets](../Targets) contains the MSBuild target files used by Games

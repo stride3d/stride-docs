@@ -34,7 +34,7 @@ Here are the steps to build Stride with Visual Studio. If you do not have or wan
 Do note that test solutions might fail but it should not prevent you from building `Stride.GameStudio`.
 
 ## Other IDEs
-You are not  required to use Visual Studio to build the Stride engine with Visual Studio. You can also build entirely from command line or other IDE's such as [Rideror Visual Studio Code](building-source-windows-other-ide.md) 
+You are not required to use Visual Studio to build the Stride engine with Visual Studio. You can also build entirely from command line or other IDE's such as [Rider or Visual Studio Code](building-source-windows-other-ide.md) 
 
 
 

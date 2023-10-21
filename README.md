@@ -11,7 +11,7 @@ Welcome to the Stride Docs repository. This repository contains all the source f
 
 ## 🚀 Getting Started
 
-All the information you need to get started with Stride Docs development can be found in the 📚 [Stride Docs Wiki](https://github.com/stride3d/stride-docs/wiki).
+All the information you need to get started with Stride Docs development can be found in the 📚 [Stride Docs](https://doc.stride3d.net/latest/en/contributors/documentation/index.html).
 
 ## 🤝 Contributing
 

@@ -1,5 +1,4 @@
-# Table of Contents
-
+# Website deployment
 We tested five different deployment methods (GitHub Pages, Azure Web App Windows/Linux IIS/Kestrel, Azure Static Web Apps) and chose to continue with the existing Azure Web Apps IIS ASP.NET 4.8 infrastructure.
 
 - [Azure Web Apps](#azure-web-apps)
