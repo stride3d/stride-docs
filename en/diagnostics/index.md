@@ -3,7 +3,7 @@
 Stride.Core.CompilerServices contains Roslyn code analyzers.
 
 > [!IMPORTANT]
-> These analyzers do not perform any kind of telemetry. The same analyzers get used by your IDE when you get a CSXXXX diagnostic.
+> Analyzers are offline tools used by the compiler to assist programmers. They are not used to collect telemetry on how Stride is being used. These same analyzers are also utilized by your IDE to generate CSXXXX diagnostics.
 
 They analyze the code for possible issues in your project with the Stride.Core design.
 To avoid unexpected runtime/compile time/editor time behaviour these analyzers try to warn as soon as possible for issues that may occur.
