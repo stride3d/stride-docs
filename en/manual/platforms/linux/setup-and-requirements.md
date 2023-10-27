@@ -11,11 +11,8 @@ You will also need a Windows PC to build your projects for Linux using Game Stud
 You need the following packages:
 
 * [FreeType](#freetype)
-
 * [OpenAL](#openal)
-
 * [SDL2](#sdl2)
-
 * either Mono or .NET Core (it's OK to install both)
 
 ## FreeType
@@ -34,8 +31,6 @@ sudo apt-get install libfreetype6-dev
 sudo dnf install freetype-devel
 ```
 
----
-
 ## OpenAL
 
 To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. It can be installed via:
@@ -51,8 +46,6 @@ sudo apt-get install libopenal-dev
 ```bash
 sudo dnf install openal-soft-devel
 ```
-
----
 
 ## SDL2
 
@@ -70,8 +63,6 @@ sudo apt-get install libsdl2-dev
 sudo dnf install SDL2-devel
 ```
 
----
-
 ## .NET Core
 
 For information about how to install .NET Core, see the [.NET Core instructions for Linux](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites).
@@ -84,4 +75,4 @@ dotnet --info
 
 ## See also
 
-* * [Create a Linux game](create-a-linux-game.md)
+* [Create a Linux game](create-a-linux-game.md)
