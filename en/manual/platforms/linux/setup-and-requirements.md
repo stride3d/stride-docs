@@ -72,9 +72,9 @@ sudo dnf install SDL2-devel
 
 ---
 
-### .NET Core
+## .NET Core
 
-For information about how to install .NET Core, see the [.NET Core instructions for Debian/Ubuntu](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
+For information about how to install .NET Core, see the [.NET Core instructions for Linux](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites).
 
 Make sure version 2.1.300+ and runtime 2.1+ is installed. To check which version you have installed, type:
 
