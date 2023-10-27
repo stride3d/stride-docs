@@ -22,13 +22,13 @@ You need the following packages:
 
 To render fonts, we use the [FreeType](https://www.freetype.org/) library. The minimum required version is 2.6 and can be installed via:
 
-# [Ubuntu](#tab/freetype-ubuntu)
+### [Ubuntu](#tab/freetype-ubuntu)
 
 ```bash
 sudo apt-get install libfreetype6-dev
 ```
 
-# [Fedora](#tab/freetype-fedora)
+### [Fedora](#tab/freetype-fedora)
 
 ```bash
 sudo dnf install freetype-devel
@@ -40,13 +40,13 @@ sudo dnf install freetype-devel
 
 To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. It can be installed via:
 
-# [Ubuntu](#tab/openal-ubuntu)
+### [Ubuntu](#tab/openal-ubuntu)
 
 ```bash
 sudo apt-get install libopenal-dev
 ```
 
-# [Fedora](#tab/openal-fedora)
+### [Fedora](#tab/openal-fedora)
 
 ```bash
 sudo dnf install openal-soft-devel
@@ -58,13 +58,13 @@ sudo dnf install openal-soft-devel
 
 To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which provides the ability to create windows, handle mouse, keyboard and joystick events. The minimum required version is 2.0.4 and can be installed via:
 
-# [Ubuntu](#tab/sdl2-ubuntu)
+### [Ubuntu](#tab/sdl2-ubuntu)
 
 ```bash
 sudo apt-get install libsdl2-dev
 ```
 
-# [Fedora](#tab/sdl2-fedora)
+### [Fedora](#tab/sdl2-fedora)
 
 ```bash
 sudo dnf install SDL2-devel
