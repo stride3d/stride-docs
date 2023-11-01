@@ -1,7 +1,7 @@
 ﻿# Contributing to documentation
 This documentation serves as a comprehensive guide to help you navigate and contribute to the **Stride Docs** website.
 
-If you're looking to make minor changes, such as adding or updating a manual, tutorial or page, or fixing a typo, feel free to jump straight to the [Content Updates](content#content-updates) section.
+If you're looking to make minor changes, such as adding or updating a manual, tutorial or page, or fixing a typo, feel free to jump straight to the [Content Updates](content.md#content-updates) section.
 
 For more extensive updates 🤯🤦‍♂️ or for a deeper understanding of the docs website project, we recommend exploring all the sections provided. Happy browsing and contributing!
 
@@ -46,14 +46,14 @@ Here are the technologies we use to build our website:
     - [Adding a New Language](new-language.md#adding-a-new-language)
 - [Roadmap](roadmap.md)
 - [DocFX](docfx.md)
-    - [Packages and Dependencies](eleventy.md#packages-and-dependencies)
-    - [Configuration](eleventy.md#configuration)
-    - [Global Data](eleventy.md#global-data)
-    - [Folder Structure](eleventy.md#folder-structure)
-    - [Layouts](eleventy.md#layouts)
-    - [Includes](eleventy.md#includes)
-    - [Advanced Topics](eleventy.md#advanced-topics)
-        - [Creating Custom Shortcodes and Includes](eleventy.md#creating-custom-shortcodes-and-includes)
+    - [Packages and Dependencies](docfx.md#packages-and-dependencies)
+    - [Configuration](docfx.md#configuration)
+    - [Global Data](docfx.md#global-data)
+    - [Folder Structure](docfx.md#folder-structure)
+    - [Layouts](docfx.md#layouts)
+    - [Includes](docfx.md#includes)
+    - [Advanced Topics](docfx.md#advanced-topics)
+        - [Creating Custom Shortcodes and Includes](docfx.md#creating-custom-shortcodes-and-includes)
 - [Deployment](deployment.md)
     - [GitHub Pages](deployment.md#github-pages)
     - [Azure Web Apps](deployment.md#azure-web-apps)

@@ -13,8 +13,6 @@
     href: engine/bug-bounties.md
   - name: Building source on Windows
     href: engine/building-source-windows.md
-#  - name: Building source on Linux
-#    href: engine/building-source-linux.md
   - name: Localization
     href: engine/localization.md
   - name: Hot reloading editor shaders
@@ -60,6 +58,7 @@
 - name: 🌐️ Contribute to the website
   expanded: false
   href: website/index.md
+  items:
     - name: Installation
       href: website/installation.md
     - name: Website Content

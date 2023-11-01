@@ -46,7 +46,7 @@ The `web.config` file is used to configure IIS, including:
 
 The GitHub action `stride-website-staging-azure` builds the website and deploys it to Azure Web Apps.
 
-[Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](Deployment-Azure).
+[Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](deployment-azure.md).
 
 **Recommendation**
 

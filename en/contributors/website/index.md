@@ -1,7 +1,7 @@
 ﻿# Contributing to the Stride website
 This documentation serves as a comprehensive guide to help you navigate and contribute to the **Stride website**.
 
-If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](content#content-updates) section.
+If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](content.md#content-updates) section.
 
 For more extensive updates 🤯🤦‍♂️ and a deeper understanding of the website project, we recommend exploring all the sections provided. Happy browsing and contributing!
 
@@ -33,7 +33,6 @@ Technologies we use to build our website:
     - [Content Updates](content.md#content-updates)
         - [Small Updates](content.md#small-updates)
         - [Major Updates](content.md#major-updates)
-        - [Updating Wiki](content.md#updating-wiki)
     - [Creating New Post](content.md#creating-new-post)
         - [Post Naming Convention](content.md#post-naming-convention)
         - [Post Front Matter](content.md#post-front-matter)

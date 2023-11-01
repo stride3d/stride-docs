@@ -24,7 +24,7 @@ The [web.config](https://github.com/stride3d/stride-website/blob/master/web.conf
 
 The GitHub action [stride-website-release-azure.yml](https://github.com/stride3d/stride-website/blob/master/.github/workflows/stride-website-release-azure.yml) builds the website and deploys it to Azure Web Apps.
 
-[Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](Deployment-Azure).
+[Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](deployment-azure.md).
 
 # Deployment To Wiki
 

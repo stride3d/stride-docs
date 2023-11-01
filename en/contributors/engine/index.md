@@ -1,10 +1,10 @@
 ﻿# Contribute to Stride engine
 Here you can find various pages describing building the source locally for different systems. You can also find information about stride's architecture.
 
-### [Contribute code](contribute-engine.md)
+### [Contribute code](contribute-code.md)
 Want to help out fixing bugs or making new features? Check out how you can do so.
 
-### [Bug bounties](contribute-engine.md)
+### [Bug bounties](bug-bounties.md)
 Here you can learn about the process on our bug bounty process.
 
 ### [Building on Windows](building-source-windows.md)

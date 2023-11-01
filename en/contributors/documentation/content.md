@@ -19,7 +19,7 @@
 
 If you want to contribute and update the website, please follow the instructions below.
 
-Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](Installation) section.
+Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](installation.md) section.
 
 You can use any text editor to make changes. If you are using **Visual Studio**, you can open `Stride.Docs.sln` solution file in the root of the repository and start making your updates directly from this IDE.
 
@@ -60,7 +60,7 @@ We can define bigger updates as changes to the design of the website, where you 
 - Update docfx version
 - Update layouts
 
-You would start with the local development environment, which is described in the [Installation](Installation) section.
+You would start with the local development environment, which is described in the [Installation](installation.md) section.
 
 Then you would make your changes and test them locally. Once you are happy with the result, you can create a pull request to merge your changes into the `master` branch.
 
