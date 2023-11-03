@@ -21,7 +21,7 @@
     href: engine/source-debugging.md
   - name: Visual Studio plugin
     href: engine/visual-studio-plugin.md
-  - name: 🧬️ Architecture
+  - name: 🏗️️ Architecture
     expanded: false
     href: engine/architecture/index.md
     items:
@@ -35,7 +35,7 @@
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
       href: engine/architecture/build-pipeline.md
-- name: ℹ Contribute to the documentation
+- name: 🎓 Contribute to the documentation
   expanded: false
   href: documentation/index.md
   items:
