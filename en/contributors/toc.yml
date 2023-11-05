@@ -13,8 +13,6 @@
     href: engine/bug-bounties.md
   - name: Building source on Windows
     href: engine/building-source-windows.md
-#  - name: Building source on Linux
-#    href: engine/building-source-linux.md
   - name: Localization
     href: engine/localization.md
   - name: Hot reloading editor shaders
@@ -23,7 +21,7 @@
     href: engine/source-debugging.md
   - name: Visual Studio plugin
     href: engine/visual-studio-plugin.md
-  - name: 🧬️ Architecture
+  - name: 🏗️️ Architecture
     expanded: false
     href: engine/architecture/index.md
     items:
@@ -37,7 +35,7 @@
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
       href: engine/architecture/build-pipeline.md
-- name: ℹ Contribute to the documentation
+- name: 🎓 Contribute to the documentation
   expanded: false
   href: documentation/index.md
   items:
@@ -47,8 +45,8 @@
     href: Documentation/installation.md
   - name: Content
     href: Documentation/content.md
-  - name: New language
-    href: Documentation/new-language.md
+#  - name: New language
+#    href: Documentation/new-language.md
   - name: Roadmap
     href: Documentation/roadmap.md
   - name: DocFX

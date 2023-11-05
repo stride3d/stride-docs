@@ -1,5 +1,4 @@
-# Table of Contents
-
+# Website deployment
 We tested five different deployment methods (GitHub Pages, Azure Web App Windows/Linux IIS/Kestrel, Azure Static Web Apps) and chose to continue with the existing Azure Web Apps IIS ASP.NET 4.8 infrastructure.
 
 - [Azure Web Apps](#azure-web-apps)
@@ -25,7 +24,7 @@ The [web.config](https://github.com/stride3d/stride-website/blob/master/web.conf
 
 The GitHub action [stride-website-release-azure.yml](https://github.com/stride3d/stride-website/blob/master/.github/workflows/stride-website-release-azure.yml) builds the website and deploys it to Azure Web Apps.
 
-[Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](Deployment-Azure).
+[Step-by-Step Deployment Guide for Azure Web Apps (Windows) with IIS and Stride Website](deployment-azure.md).
 
 # Deployment To Wiki
 

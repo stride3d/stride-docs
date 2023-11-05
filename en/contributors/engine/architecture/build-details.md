@@ -1,5 +1,4 @@
 ﻿# Build details
-
 This is a technical description what happens in our build and how it is organized. This covers mostly the build architecture of Stride itself.
 
 * [Targets](../Targets) contains the MSBuild target files used by Games
@@ -20,7 +19,7 @@ Also, we use `RuntimeIdentifiers` to select graphics platform. [MSBuild.Sdk.Extr
 
 Since we want to package tools (i.e. GameStudio, ConnectionRouter, CompilerApp) with a package that contains only the executable with proper dependencies to other NuGet runtime packages, we use NuGet API to resolve assemblies at runtime.
 
-The code responsible for this is located in [Stride.NuGetResolver](../sources/shared/Stride.NuGetResolver).
+The code responsible for this is located in [Stride.NuGetResolver](../../../sources/shared/Stride.NuGetResolver).
 
 Later, we might want to take advantage of .NET Core dependency resolving to do that natively. Also, we might want to use actual project information/dependencies to resolve to different runtime assemblies and better support plugins.
 
@@ -39,12 +38,12 @@ For example, assuming version `4.1.3.135+gfa0f5cc4`:
 Assembly processor is run by both Game and Stride targets.
 
 It performs various transforms to the compiled assemblies:
-* Generate [DataSerializer](../sources/common/core/Stride.Core/Serialization/DataSerializer.cs) serialization code (and merge it back in assembly using IL-Repack)
-* Generate [UpdateEngine](../sources/engine/Stride.Engine/Updater/UpdateEngine.cs) code
+* Generate [DataSerializer](../../../../../stride/sources/core/Stride.Core/Serialization/DataSerializer.cs) serialization code (and merge it back in assembly using IL-Repack)
+* Generate [UpdateEngine](../../../../../stride/sources/engine/Stride.Engine/Updater/UpdateEngine.cs) code
 * Scan for types or attributes with `[ScanAssembly]` to quickly enumerate them without needing `Assembly.GetTypes()`
-* Optimize calls to [Stride.Core.Utilities](../sources/common/core/Stride.Core/Utilities.cs)
-* Automatically call methods tagged with [ModuleInitializer](../sources/common/core/Stride.Core/ModuleInitializerAttribute.cs)
-* Cache lambdas and various other code generation related to [Dispatcher](../sources/common/core/Stride.Core/Threading/Dispatcher.cs)
+* Optimize calls to [Stride.Core.Utilities](../../../../../stride/sources/core/Stride.Core/Utilities.cs)
+* Automatically call methods tagged with [ModuleInitializer](../../../../../stride/sources/core/Stride.Core/ModuleInitializerAttribute.cs)
+* Cache lambdas and various other code generation related to [Dispatcher](../../../../../stride/sources/core/Stride.Core/Threading/Dispatcher.cs)
 * A few other internal tasks
 
 For performance reasons, it is run as a MSBuild Task (avoid reload/JIT-ing). If you wish to make it run the executable directly, set `StrideAssemblyProcessorDev` to `true`.
@@ -67,7 +66,7 @@ By adding a reference to `Stride.Native.targets`, it is easy to build some C/C++
 
 ### Limitations
 
-It seems that using those optimization don't work well with shadow copying and [probing privatePath](https://msdn.microsoft.com/en-us/library/823z9h8w(v=vs.110).aspx). This forces us to copy the `Direct3D11` specific assemblies to the top level `Windows` folder at startup of some tools. This is little bit unfortunate as it seems to disturb the MSBuild assembly searching (happens before `$(AssemblySearchPaths)`). As a result, inside Stride solution it is necessary to explicitely add `<ProjectReference>` to the graphics specific assemblies otherwise wrong ones might be picked up.
+It seems that using those optimization don't work well with shadow copying and [probing privatePath](https://msdn.microsoft.com/en-us/library/823z9h8w(v=vs.110).aspx). This forces us to copy the `Direct3D11` specific assemblies to the top level `Windows` folder at startup of some tools. This is little bit unfortunate as it seems to disturb the MSBuild assembly searching (happens before `$(AssemblySearchPaths)`). As a result, inside Stride solution it is necessary to explicitly add `<ProjectReference>` to the graphics specific assemblies otherwise wrong ones might be picked up.
 
 This will require further investigation to avoid this copying at all.
 

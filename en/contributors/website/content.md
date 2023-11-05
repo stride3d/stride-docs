@@ -1,9 +1,7 @@
 # Website Content
-
 - [Content Updates](#content-updates)
   - [Small Updates](#small-updates)
   - [Major Updates](#major-updates)
-  - [Updating Wiki](#updating-wiki)
 - [Creating New Post](#creating-new-post)
   - [Post Naming Convention](#post-naming-convention)
   - [Post Front Matter](#post-front-matter)
@@ -26,7 +24,7 @@
 
 If you want to contribute and update the website, please follow the instructions below.
 
-Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](Installation) section.
+Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](installation.md) section.
 
 You can use any text editor to make changes. If you are using **Visual Studio**, you can open `Stride.Web.sln` solution file in the root of the repository and start making your updates directly from this IDE.
 
@@ -71,19 +69,9 @@ We can define bigger updates as changes to the design of the website, where you 
 - Update Bootstrap library or other libraries
 - Update layouts
 
-You would start with the local development environment, which is described in the [Installation](Installation) section.
+You would start with the local development environment, which is described in the [Installation](installation.md) section.
 
 Then you would make your changes and test them locally. Once you are happy with the result, you can create a pull request to merge your changes into the `master` branch.
-
-## Updating Wiki
-
-While wiki pages can be updated directly in the GitHub web interface, this feature is restricted only to contributors who can edit the wiki directly. We have decided to move our wiki pages to a regular folder in this repository called [wiki](https://github.com/stride3d/stride-website/tree/master/wiki), allowing us to use the same process as we do for the website content. If any changes are made directly on the wiki pages, they will be overwritten by the next wiki deployment.
-
-Wiki pages are deployed through a separate GitHub action, `stride-web-wiki.yml`, which is triggered by updates in the `wiki` folder or can be triggered manually. The `wiki` folder is ignored by the Eleventy build process, ensuring that the wiki pages are not deployed to the website. Additionally, any pushes to the `wiki` folder will not trigger the website deployment.
-
-You can update the wiki pages as any other content pages, by following the steps in the [Small Updates](#small-updates) section.
-
-⚠️**Important:** If you are updating any headers in the wiki pages, please make sure to update the *Table of Contents* at the top of the page, [Home](https://github.com/stride3d/stride-website/blob/master/wiki/Home.md) page and [_Sidebar.md](https://github.com/stride3d/stride-website/blob/master/wiki/_Sidebar.md). Also, you might need to search for all the links to the updated header and update them as well.
 
 # Creating New Post
 

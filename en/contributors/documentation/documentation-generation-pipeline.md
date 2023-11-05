@@ -1,5 +1,4 @@
-# Table of Contents
-
+# Documentation generation pipeline
 - [Introduction](#introduction)
 - [A Simplified Overview](#a-simplified-overview)
 - [Docs Build Workflow](#docs-build-workflow)

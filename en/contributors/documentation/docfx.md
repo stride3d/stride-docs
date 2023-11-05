@@ -1,4 +1,5 @@
-[docfx](https://www.11ty.dev/) is a static site generator that uses JavaScript as its templating language. It is a very powerful tool that allows us to create a website with a lot of flexibility and customization. It is also very easy to use and learn. This section will cover the basics of Eleventy configuration on the Stride website. Creating and updating the content is described in our [Content](Content) section.
+# DocFX
+[docfx](https://www.11ty.dev/) is a static site generator that uses JavaScript as its templating language. It is a very powerful tool that allows us to create a website with a lot of flexibility and customization. It is also very easy to use and learn. This section will cover the basics of Eleventy configuration on the Stride website. Creating and updating the content is described in our [Content](content.md) section.
 
 We used to use **Jekyll** as our static site generator, but we decided to switch to Eleventy because of its flexibility and ease of use. We also wanted to use a tool that is more widely used and supported, which is why we decided to switch to Eleventy.
 
@@ -13,7 +14,7 @@ We used to use **Jekyll** as our static site generator, but we decided to switch
   - [Creating Custom Shortcodes and Includes](#creating-custom-shortcodes-and-includes)
   
 # Packages and Dependencies
-Eleventy is a **Node.js** application. Please follow our [Installation](Installation) guide to install Node.js and all the required dependencies.
+Eleventy is a **Node.js** application. Please follow our [installation](installation.md) guide to install Node.js and all the required dependencies.
 
 Packages we currently use:
 
@@ -39,7 +40,7 @@ The Eleventy configuration is located in the `.eleventy.js` file at the root of 
 - pass through files - Files that are copied to the output folder without any processing
 - custom collections - Custom collections used in the templates like `tagList` and `yearList`
 - filters - Custom filters used in the templates
-- custom shortcodes - Custom [shortcodes](Content#shortcodes-and-includes) used in the templates, pages or blog posts.
+- custom shortcodes - Custom [shortcodes](content.md#shortcodes-and-includes) used in the templates, pages or blog posts.
 
 The file is well-commented and should be self-explanatory. If you need to add a new configuration, please follow the existing structure and include a comment to explain the new configuration.
 
@@ -80,7 +81,6 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `/posts` - Blog posts
 - `/posts/2014-2021` - Old blog posts which are merged to the same output folder as `/posts`
   - this folder is only for convenience to easily access new posts
-- `/wiki` - Excluded from build process, used only for wiki deployment
 
 **Files**
 
@@ -107,7 +107,7 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `web.Release.config` - Configuration file for Windows ASP.NET Core deployment
 
 
-**Note:** This project includes ASP.NET Core solution and files, as they can be used seamlessly with Eleventy. Read more about this in our [Installation](Installation#asp-net-core) section.
+**Note:** This project includes ASP.NET Core solution and files, as they can be used seamlessly with Eleventy. Read more about this in our [Installation](installation.md#asp-net-core.md) section.
 
 
 # Layouts
@@ -129,7 +129,7 @@ Some includes are used solely by the layouts, while others are used by the conte
 
 ## Creating Custom Shortcodes and Includes
 
-If you need to create a custom shortcode or include, please follow the existing structure and [include a comment](Content#shortcodes-and-includes) to explain the new shortcode or include.
+If you need to create a custom shortcode or include, please follow the existing structure and [include a comment](content.md#shortcodes-and-includes) to explain the new shortcode or include.
 
 The shortcodes are defined in the `.eleventy.js` file, while the includes are located in the `/_includes` folder.
 

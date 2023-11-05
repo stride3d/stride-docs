@@ -1,6 +1,7 @@
+# Local installation
 This guide will walk you through the steps to install the Stride Docs website on your local machine for development purposes. Although we use the Windows operating system for development, the steps should be similar for other operating systems.
 
-[Minor updates](Content#small-updates) can be made directly on GitHub. However, for [more significant updates](Content#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the **docfx** static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.
+[Minor updates](content.md#small-updates) can be made directly on GitHub. However, for [more significant updates](content.md#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the **docfx** static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.
 
 This guide assumes you have a basic understanding of the technologies used in the Stride docs website.
 
@@ -89,4 +90,4 @@ We've created a PowerShell script [BuildDocs.ps1](https://github.com/stride3d/st
 1. 🔄 After saving the updated file, you will need to rebuild the documentation by running the script again
 1. 😃 Happy coding!
 
-Let's [update the content](Content) now!
+Let's [update the content](content.md) now!

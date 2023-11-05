@@ -1,5 +1,4 @@
 ﻿# Build pipeline
-
 This document describes the Build pipeline in Stride, its current implementation (and legacy), and the work that should be done to improve it.
 
 ## Terminology
