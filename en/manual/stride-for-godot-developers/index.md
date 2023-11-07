@@ -2,6 +2,17 @@
 
 ## Editor
 
+The Stride editor is **Game Studio**.
+
+![Godot layout](media/stride-vs-godot-godotlayout.webp)
+
+![Stride Game Studio layout](media/stride-vs-godot-stridelayout.webp)
+
+You can customize the Game Studio layout by dragging tabs, similar to Visual Studio.
+
+For more information about Game Studio, see the [Game Studio](../game-studio/index.md) page.
+
+
 ## Terminology
 
 | Godot | Stride |
@@ -9,7 +20,7 @@
 | Scene | Entity Tree |
 | Inspector | Property Grid |
 | FileSystem | Solution/Asset View |
-|Scene view | Scene Editor |
+| Scene view | Scene Editor |
 | Node | Entity |
 | Node Script | SyncScript, AsyncScript, StartupScript |
 | Export | Serialize/DataMember |
