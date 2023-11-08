@@ -38,12 +38,12 @@ For example, assuming version `4.1.3.135+gfa0f5cc4`:
 Assembly processor is run by both Game and Stride targets.
 
 It performs various transforms to the compiled assemblies:
-* Generate [DataSerializer](../../../../../stride/sources/core/Stride.Core/Serialization/DataSerializer.cs) serialization code (and merge it back in assembly using IL-Repack)
-* Generate [UpdateEngine](../../../../../stride/sources/engine/Stride.Engine/Updater/UpdateEngine.cs) code
+* Generate [DataSerializer](https://github.com/stride3d/stride/blob/master/sources/core/Stride.Core/Serialization/DataSerializer.cs) serialization code (and merge it back in assembly using IL-Repack)
+* Generate [UpdateEngine](https://github.com/stride3d/stride/blob/master/sources/engine/Stride.Engine/Updater/UpdateEngine.cs) code
 * Scan for types or attributes with `[ScanAssembly]` to quickly enumerate them without needing `Assembly.GetTypes()`
-* Optimize calls to [Stride.Core.Utilities](../../../../../stride/sources/core/Stride.Core/Utilities.cs)
-* Automatically call methods tagged with [ModuleInitializer](../../../../../stride/sources/core/Stride.Core/ModuleInitializerAttribute.cs)
-* Cache lambdas and various other code generation related to [Dispatcher](../../../../../stride/sources/core/Stride.Core/Threading/Dispatcher.cs)
+* Optimize calls to [Stride.Core.Utilities](https://github.com/stride3d/stride/blob/master/sources/core/Stride.Core/Utilities.cs)
+* Automatically call methods tagged with [ModuleInitializer](https://github.com/stride3d/stride/blob/master/sources/core/Stride.Core/ModuleInitializerAttribute.cs)
+* Cache lambdas and various other code generation related to [Dispatcher](https://github.com/stride3d/stride/blob/master/sources/core/Stride.Core/Threading/Dispatcher.cs)
 * A few other internal tasks
 
 For performance reasons, it is run as a MSBuild Task (avoid reload/JIT-ing). If you wish to make it run the executable directly, set `StrideAssemblyProcessorDev` to `true`.
