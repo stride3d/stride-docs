@@ -19,4 +19,4 @@ Please use and follow Stride's `.editorconfig` when making changes to files.
 ## Submitting Changes
 * Push your changes to a specific branch in your fork.
 * Use that branch to create and fill out a pull request to the official repository.
-* After creating that pull request and if it's your first time contributing a [CLA assistant](https://cla-assistant.io/) will ask you to sign the [.NET Founddation Contribution License Agreement](https://dotnetfoundation.org/docs/default-source/default-document-library/contribution-license-agreement.pdf?sfvrsn=40626e42_3).
+* After creating that pull request and if it's your first time contributing a [CLA assistant](https://cla-assistant.io/) will ask you to sign the [.NET Foundation Contribution License Agreement](https://dotnetfoundation.org/docs/default-source/default-document-library/contribution-license-agreement.pdf?sfvrsn=40626e42_3).
