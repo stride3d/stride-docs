@@ -15,7 +15,7 @@ We used to use **Jekyll** as our static site generator, but we decided to switch
   
 # Packages and Dependencies
 
-Eleventy is a **Node.js** application. Please follow our [Installation](Installation) guide to install Node.js and all the required dependencies.
+Eleventy is a **Node.js** application. Please follow our [Installation](installation.md) guide to install Node.js and all the required dependencies.
 
 Packages we currently use:
 

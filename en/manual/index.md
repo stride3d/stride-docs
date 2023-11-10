@@ -10,9 +10,11 @@ These pages contain information about how to use Stride, an open-source C# game 
 ## Latest documentation
 
 ### Recent updates
-
-- <span class="badge text-bg-success">New</span> [Serialization](scripts/serialization.md) - Serialization explained
-- <span class="badge text-bg-info">Updated</span> [Public properties and fields](scripts/public-properties-and-fields.md) - Content improvements and additions
+- <span class="badge text-bg-info">Updated</span> [Linux - Setup and requirements](platforms/linux/setup-and-requirements.md) - Fedora OS option added
+- <span class="badge text-bg-success">New</span> [Scripts - Serialization](scripts/serialization.md) - Serialization explained
+- <span class="badge text-bg-info">Updated</span> [Scripts - Public properties and fields](scripts/public-properties-and-fields.md) - Content improvements and additions
+- <span class="badge text-bg-success">New</span> [Engine - Entity Component model - Usage](engine/entity-component-model/usage.md) - ECS usage explained
+- <span class="badge text-bg-info">Updated</span> [Engine - Entity Component model](engine/entity-component-model/index.md) - Content improvements
 - <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
 
 ### Previous updates

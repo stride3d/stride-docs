@@ -143,10 +143,15 @@ function Start-LocalWebsite {
     Write-Host -ForegroundColor Green "Running local website..."
     Write-Host -ForegroundColor Green "Navigate manually to non English website, if you didn't build English documentation."
     Stop-Transcript
+
     New-Item -ItemType Directory -Verbose -Force -Path $Settings.WebDirectory | Out-Null
+
     Set-Location $Settings.WebDirectory
+
     Start-Process -FilePath $Settings.LocalTestHostUrl
+
     docfx serve
+
     Set-Location ..
 }
 
@@ -476,8 +481,10 @@ else {
 if ($ReuseAPI)
 {
     Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
-} elseif ($API) {
+} elseif ($API)
+{
     $exitCode = Generate-APIDoc
+
     if($exitCode -ne 0)
     {
         Write-Error "Failed to generate API metadata. ExitCode: $exitCode"

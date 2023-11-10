@@ -2,9 +2,6 @@
 
 Welcome to the Stride documentation, specifically designed for game developers, visual creators, and all users of the powerful [Stride game engine](https://www.stride3d.net/). This resource is packed with detailed tutorials, in-depth manuals, and comprehensive API references to help you bring your game development visions to life with Stride. Whether you're new to Stride or looking to hone your skills, you'll find everything you need right here. Dive in, and let's create something extraordinary!
 
-> [!TIP]
-> This documentation is primarily for users of the Stride engine. If you are interested in contributing to the Stride engine code base, please follow the [Stride contribution instructions](https://github.com/stride3d/stride).
-
 <div class="row g-4 mb-4">
     <div class="col-md-6">
         <div class="card h-100">
@@ -31,6 +28,15 @@ Welcome to the Stride documentation, specifically designed for game developers, 
                 <p class="card-text">Learn about the latest features and improvements in Stride, as well as previous versions.</p>
             </div>
             <p class="px-3 mb-4"><a class="stretched-link" href="ReleaseNotes/index.md">Find Stride Release Notes</a></p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title h5">🌟 Contributors</h2>
+                <p class="card-text">Learn how you can contribute to Stride's development.</p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link" href="contributors/ways-to-contribute.md">Start contributing to Stride</a></p>
         </div>
     </div>
     <div class="col-md-6">

@@ -1,0 +1,73 @@
+- name: 🌟 Ways to Contribute
+  href: ways-to-contribute.md
+  expanded: true
+- name: 💸 Donate
+  href: donate.md
+- name: 🛠️ Contribute to the engine
+  expanded: false
+  href: engine/index.md
+  items:
+  - name: Contribute to code
+    href: engine/contribute-code.md
+  - name: Bug bounties
+    href: engine/bug-bounties.md
+  - name: Building source on Windows
+    href: engine/building-source-windows.md
+  - name: Localization
+    href: engine/localization.md
+  - name: Hot reloading editor shaders
+    href: engine/hot-reloading-shaders.md
+  - name: Source debugging
+    href: engine/source-debugging.md
+  - name: Visual Studio plugin
+    href: engine/visual-studio-plugin.md
+  - name: 🏗️️ Architecture
+    expanded: false
+    href: engine/architecture/index.md
+    items:
+    - name: Build pipeline
+      href: engine/architecture/build-pipeline.md
+    - name: Build details
+      href: engine/architecture/build-details.md
+    - name: Graphics API
+      href: engine/architecture/graphics-api.md
+    - name: Dependency graph
+      href: engine/architecture/dependency-graph.md
+    - name: Asset introspection
+      href: engine/architecture/build-pipeline.md
+- name: 🎓 Contribute to the documentation
+  expanded: false
+  href: documentation/index.md
+  items:
+  - name: Documentation generation pipeline
+    href: Documentation/documentation-generation-pipeline.md
+  - name: Installation
+    href: Documentation/installation.md
+  - name: Content
+    href: Documentation/content.md
+#  - name: New language
+#    href: Documentation/new-language.md
+  - name: Roadmap
+    href: Documentation/roadmap.md
+  - name: DocFX
+    href: Documentation/docfx.md
+  - name: Deployment
+    href: Documentation/deployment-azure.md
+  - name: Troubleshooting and FAQ
+    href: Documentation/troubleshooting-and-faq.md
+- name: 🌐️ Contribute to the website
+  expanded: false
+  href: website/index.md
+  items:
+    - name: Installation
+      href: website/installation.md
+    - name: Website Content
+      href: website/content.md
+    - name: Roadmap
+      href: website/roadmap.md
+    - name: Eleventy
+      href: website/eleventy.md
+    - name: Deployment
+      href: website/deployment-azure.md
+    - name: Troubleshooting and FAQ
+      href: website/troubleshooting-and-faq.md

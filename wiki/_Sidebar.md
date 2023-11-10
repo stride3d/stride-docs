@@ -4,7 +4,7 @@
   - [A Simplified Overview](Understanding-the-Stride-Documentation-Generation-Pipeline#a-simplified-overview)
   - [Docs Build Workflow](Understanding-the-Stride-Documentation-Generation-Pipeline#docs-build-workflow)
   - [Workflow Diagram](Understanding-the-Stride-Documentation-Generation-Pipeline#workflow-diagram)
-- [Installation](Installation)
+- [Installation](installation.md)
   - [Prerequisites](Installation#prerequisites)
   - [Installation Steps](Installation#installation-steps)
   - [Running the Development Server](Installation#running-the-development-server)
