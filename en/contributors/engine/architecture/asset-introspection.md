@@ -1,11 +1,5 @@
 ﻿# Asset, introspection and prefab
 
-https://github.com/stride3d/stride/edit/master/docs/technical/asset-introspection.md
-WIP: COPIED from link above
-
-
-## Assets
-
 *NOTE: Please read the Terminology section of the [Build Pipeline](build-pipeline.md) documentation first*
 
 ### Design notes
