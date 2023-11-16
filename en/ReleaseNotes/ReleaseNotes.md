@@ -1,79 +1,117 @@
 # Stride 4.2 Release Notes
 
-November 15th, 2023
+November 17th, 2023
 
-Stride contributors are proud to announce a new release now running on **.NET 8** supporting the latest **C# 12**. That means you can now head to the download page and start developing your games using the latest .NET technologies.
+Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
-## Improvements Summary
+A massive thank you to the open-source Stride community for your dedicated contributions. This release saw X contributions from over Y amazing contributors, each playing a crucial role in making Stride 4.2 a reality.
 
-Here's a non-exhaustive list of new improvements:
+## What's new in Stride 4.2
+Stride 4.2 includes numerous enhancements and improvements.
 
-- Full compatibility with .NET 8, taking advantage of [improved runtime performance](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-- Support for the latest [C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/), enhancing coding efficiency and reducing boilerplate code
-- [Changed Assimp binding to Silk.Net.Assimp #1158](https://github.com/stride3d/stride/pull/1158)
-- [Can not create "C# Beginner" project. #1650](https://github.com/stride3d/stride/issues/1650)
-- [C# Beginner Tutorial Build Errors #1652](https://github.com/stride3d/stride/issues/1652)
-- [Game Studio doesnt reload sub projects after changes #1703](https://github.com/stride3d/stride/issues/1703)
-  - [fix #1703 Changing the comparison project related and not UPath related #1704](https://github.com/stride3d/stride/pull/1704)
-- [Translations fix #1717](https://github.com/stride3d/stride/pull/1717)
-- [Change Assimp to Silk.NET.Assimp implementation #1719](https://github.com/stride3d/stride/pull/1719)
-- [Runtime rasterized fonts are completely broken #1750](https://github.com/stride3d/stride/issues/1750)
+- **[.NET 8 Integration](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/)**: Experience the power and efficiency of the latest .NET version in your game development. 
+  - Full compatibility with .NET 8, taking advantage of [improved runtime performance](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
+  - **[C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)**: Utilize cutting-edge language features to write more concise and maintainable code , enhancing coding efficiency and reducing boilerplate code
+- **[Changed Assimp binding to Silk.Net.Assimp](https://github.com/stride3d/stride/pull/1158)**
+  - This change allows us to remove much of the C++/CLR code used by the asset compiler and brings us one step closer to running the asset compiler on non windows systems.
 - [Migration NET6+ and more gettextnet#2](https://github.com/stride3d/gettextnet/pull/2)
-- [Added the ability to copy imported assets automatically to the Resources dir #1827](https://github.com/stride3d/stride/pull/1827)
-- [Feature: Add Support for F# and VB Project Types #1821](https://github.com/stride3d/stride/pull/1821), currently only for code-only projects
-  - [F# examples](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples-fs.html)
-  - [Visual Basic examples](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples-vb.html)
-- [[Editor] Add dynamic snapping for selected objects #1801](https://github.com/stride3d/stride/pull/1801)
+  - Updated all of gettext.NET to the latest stable version of NET
+- [Enable multiple profiler consumers and add a timeline/tracing profiler #1788](https://github.com/stride3d/stride/pull/1788)
+  - This feature adds a profiler outputting data in chrome://tracing format and changes Profiler to make that possible.
+- [Feature: Add Support for F# and VB Project Types #1821](https://github.com/stride3d/stride/pull/1821)
+  - Currently only for code-only projects
+    - [F# examples](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples-fs.html)
+    - [Visual Basic examples](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples-vb.html)
 - [Stride Diagnostics Analyzer #1864](https://github.com/stride3d/stride/pull/1864)
-- [Let the user pick which animation stack to import in an fbx #1977](https://github.com/stride3d/stride/pull/1977)
-- [[OpenVR] Handle custom resolution specified by the user through VR settings #2000](https://github.com/stride3d/stride/pull/2000)
+  - Adds code Analyzers to the Stride CompilerServices and analyzers for DataSerializer Source generator and Yaml Serializer.
+  - It solves the issue that you get surprised when you open Game Studio and you don't see anything exported
+- [OpenVR Handle custom resolution specified by the user through VR settings #2000](https://github.com/stride3d/stride/pull/2000)
+- [Editor - Add dynamic snapping for selected objects #1801](https://github.com/stride3d/stride/pull/1801)
+  - Implements a dynamic snapping used while holding down a key (default: Left Shift) on manipulating (rotating/moving/scaling) an object/entity. 
+  - Adds a new Hotkey Setting for dynamic snapping
+  - Adds a Method to handle dynamic snapping
+- [Editor - Let the user pick which animation stack to import in an fbx #1977](https://github.com/stride3d/stride/pull/1977)
+  - If multiple animation stacks are present in an fbx, let the user choose the index to import.
+- [Editor - Added the ability to copy imported assets automatically to the Resources dir #1827](https://github.com/stride3d/stride/pull/1827)
+  - A prompt has been added to the interface that asks users to copy imported assets to the Resources directory directly from the editor.
 
-<!--- [Direct3D with Silk.NET #1123](https://github.com/stride3d/stride/pull/1123)-->
-<!--- [Silk.NET D3D Discussion #1176](https://github.com/stride3d/stride/issues/1176)-->
+## Stride 4.2 Feature Overview
 
-## A little help
+### F# and Visual Basic Integration
 
-We, contributors, believe that Stride can help .NET game developers make the games they want with ease using their favorite languages. We want to make sure Stride offers the most comfortable environment for developing games, and this takes time and effort.
+A pivotal PR has enabled **F#** and **Visual Basic** support for game development in Stride. This feature is currently limited to a code-only approach. Detailed insights and tutorials will be provided in upcoming blog posts.
 
-Since the free and open-source release of Stride, the community has been growing slowly, so we have decided to open a fund to reward developers for any contribution they make to Stride. We set up an [Open Collective page](https://opencollective.com/stride3d) to manage our funds and allocate money for features that the community would like to see implemented.
+We will use the [Stride Community Toolkit [WIP]](https://stride3d.github.io/stride-community-toolkit/), with further details to be covered in a separate post.
 
-We have various bounties for [bug fixes and features](https://opencollective.com/stride3d/projects) (Vulkan support, decals, morph targets, and many others). If you have or know someone with the skills to tackle those bounties, please reach out to us through the [respective GitHub tickets](https://github.com/stride3d/stride/labels/bounty). You can also contact us through our discord server or on GitHub to propose new bounties.
+Below is a simple example of rendering a capsule using F#:
 
-## Contributors
+```fsharp
+open Stride.CommunityToolkit.Engine;
+open Stride.CommunityToolkit.ProceduralModels;
+open Stride.Core.Mathematics;
+open Stride.Engine;
 
-Many thanks to [all the contributors](https://github.com/stride3d/stride/graphs/contributors?from=2022-06-10&to=2023-11-14&type=c) who have donated their time and skill by adding features, fixing bugs, managing the build pipelines, adding documentation, and reviewing PRs.
+let game = new Game()
 
-### Financial contributors
+let Start rootScene =
+    game.SetupBase3DScene()
+    game.AddProfiler() |> ignore
 
-Also, a huge thanks to the individuals and companies who contributed financially to our [Open Collective](https://opencollective.com/stride3d)! 
+    let firstBox = game.CreatePrimitive(PrimitiveModelType.Capsule);
+    firstBox.Transform.Position <- new Vector3(0f, 2.5f, 0f)
+    firstBox.Scene <- rootScene
 
-* [ORE System](https://ore-system.com) with a diamond sponsorship
-* [xen2](https://opencollective.com/xen2) Core contributor that donated a large portion of the previous Patreon back through Open collective
-* [vvvv](https://visualprogramming.net) A visual live-programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously. vvvv uses Stride
-* [Vašo](https://opencollective.com/vaclav)
-* [Mitchel Albertz](https://opencollective.com/mitchel-albertz)
-* [Bill](https://opencollective.com/bill2)
-* [Ideonella](https://opencollective.com/ideonella)
-* [Soul Rider](https://opencollective.com/soul-rider)
-* [najak3d](https://opencollective.com/guest-ce7ccb03)
-* [Eideren](https://opencollective.com/eideren)
-* [Jorn Aggror](https://opencollective.com/jorn-theunissen)
-* [Marian Dziubiak](https://marian.dziubiak.pl)
-* [Youness KAFIA](https://opencollective.com/guest-7253cc41)
-* [David Thunderclown](https://www.disruptionworks.co.uk)
-* [Christian Clavet](https://opencollective.com/christian-clavet)
-* [Marko Viitanen](https://opencollective.com/fador)
-* [Aaron Disibio](https://opencollective.com/guest-2f41a631)
-* [z16](https://opencollective.com/z16)
-* [Incognito](https://opencollective.com/guest-5635aca5)
-* [Walter Hulsebos](https://opencollective.com/guest-2170ad46)
-* [TheKeyblader](https://opencollective.com/thekeyblader)
-* [James Rinker](https://opencollective.com/james-rinker)
-* [ztl](https://opencollective.com/guest-6653841d)
-* [Bruno Garcia](https://brunogarcia.com)
-* [BanditRevolver](https://opencollective.com/banditrevolver)
-* [EmmX](https://opencollective.com/emmx)
-* [SeleDreams](https://opencollective.com/seledreams)
-* [Vignette](https://vignetteapp.org)
-* [Longplay Games](https://opencollective.com/guest-a5fa78c8)
-* [Redberd36](https://opencollective.com/guest-3fc8bf91)
+[<EntryPoint>]
+let main argv =
+    game.Run(start = Start)
+    0
+```
+
+![Example basic 3d scene with a capsule](media/ReleaseNotes-4.2/stride-game-engine-example01-basic-3d-scene.webp)
+
+The equivalent Visual Basic example:
+
+```vb
+Imports Stride.CommunityToolkit.Engine
+Imports Stride.CommunityToolkit.ProceduralModels
+Imports Stride.Core.Mathematics
+Imports Stride.Engine
+
+Module Program
+    Private game As New Game()
+
+    Sub Main()
+        GameExtensions.Run(game, Nothing, AddressOf StartGame)
+    End Sub
+
+    Private Sub StartGame(rootScene As Scene)
+        game.SetupBase3DScene()
+        game.AddProfiler()
+
+        Dim entity = game.CreatePrimitive(PrimitiveModelType.Capsule)
+        entity.Transform.Position = New Vector3(0, 8, 0)
+        entity.Scene = rootScene
+    End Sub
+End Module
+
+```
+
+These examples showcase how F# and Visual Basic can be utilized in Stride. The Stride Community Toolkit provides a set of helpers and extensions designed to enhance your experience with the Stride Game Engine.
+
+## Fixes
+Although there have been [many fixes](**https://github.com/stride3d/stride/pulls?page=2&q=is%3Apr+merged%3A%3E2023-10-10**), we like to point out some of them out
+- [Runtime rasterized fonts are broken #1750](https://github.com/stride3d/stride/issues/1750)
+- [Game Studio doesnt reload sub projects after changes #1703](https://github.com/stride3d/stride/issues/1703)
+- [Changing the comparison project related and not UPath related #1704](https://github.com/stride3d/stride/pull/1704)
+- [Translations fix #1717](https://github.com/stride3d/stride/pull/1717)
+- [C# Beginner Tutorial Build Errors #1652](https://github.com/stride3d/stride/issues/1652)
+- [Can not create "C# Beginner" project #1650](https://github.com/stride3d/stride/issues/1650)
+
+## Also good to know
+Although not directly tied to Release 4.2, we have made some other big changes. For instance to our website and documentation. We also had another community meeting to address all those new members.
+- [Website and documentation revamped and build process updated](https://www.stride3d.net/blog/announcing-website-update/)
+- [Contributor section moved to docs](https://doc.stride3d.net/latest/en/contributors/ways-to-contribute.html)
+- [Community meeting October 2023](https://www.stride3d.net/blog/community-meeting-october-2023/)
+
+## Acknowledgements
+We extend our heartfelt gratitude for all the hard work and donations that have been made. Your generous contributions significantly aid in the continuous development and enhancement of the Stride community and projects. Thank you for your support and belief in our collective efforts.
