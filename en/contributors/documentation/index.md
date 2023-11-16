@@ -32,6 +32,8 @@ Assuming the transition is from version `4.1` to `4.2`, and that the Stride sour
    - Change `TargetFramework` to the current framework version being used. Ensure to test this step locally
 1. Edit `versions.json`
    - Under `versions`, add the new version `4.2`
+1. For GitHub Actions deployment update `*.yml` files in the `.github\workflows\` folder
+   - `dotnet-version:` Update to the related .NET version
 
 The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while maintaining accessibility to previous versions.
 
