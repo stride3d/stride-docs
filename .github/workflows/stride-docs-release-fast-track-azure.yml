@@ -20,7 +20,7 @@ jobs:
     - name: Dotnet Setup
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.x
+        dotnet-version: 8.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs

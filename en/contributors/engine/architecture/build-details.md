@@ -11,9 +11,8 @@ We use `TargetFrameworks` to properly compile the different platforms using a si
 Also, we use `RuntimeIdentifiers` to select graphics platform. [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) is used to properly build NuGet packages with multiple `RuntimeIdentifiers` (not supported out of the box).
 
 ### Limitations
-
 * Dependencies are per `TargetFramework` and can't be done per `RuntimeIdentifier` (tracked in [NuGet#1660](https://github.com/NuGet/Home/issues/1660)).
-* FastUpToDate check doesn't work with multiple `TargetFrameworks` (tracked in [project-system#2487](https://github.com/dotnet/project-system/issues/2487)).
+
 
 ## NuGet resolver
 

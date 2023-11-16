@@ -1,4 +1,4 @@
-﻿# Contributing to the Stride website
+# Contributing to the Stride website
 This documentation serves as a comprehensive guide to help you navigate and contribute to the **Stride website**.
 
 If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](content.md#content-updates) section.
@@ -21,6 +21,15 @@ Technologies we use to build our website:
     - This links is used in the Stride Installer
 - https://www.stride3d.net/feed.xml
     - This feed is loaded in the Stride Launcher
+
+## Major Version Release Instructions
+
+1. Create a release blog post
+1. Update `_data\site.json` with these settings, which are used in multiple places on the website:
+   - `version`: Increase the version number
+   - `download-version`: Update the version number for downloads
+   - `csharp-version`: Update to the current C# version being used
+   - `dotnet-version`: Update to the current .NET version being used
 
 ## Table of Contents
 
