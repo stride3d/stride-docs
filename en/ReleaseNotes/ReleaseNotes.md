@@ -11,9 +11,9 @@ Stride 4.2 includes numerous enhancements and improvements.
 
 - **[.NET 8 Integration](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/)**: Experience the power and efficiency of the latest .NET version in your game development. 
   - Full compatibility with .NET 8, taking advantage of [improved runtime performance](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-  - **[C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)**: Utilize cutting-edge language features to write more concise and maintainable code , enhancing coding efficiency and reducing boilerplate code
+  - **[C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)**: Utilize cutting-edge language features to write more concise and maintainable code, enhancing coding efficiency and reducing boilerplate code
 - **[Changed Assimp binding to Silk.Net.Assimp](https://github.com/stride3d/stride/pull/1158)**
-  - This change allows us to remove much of the C++/CLR code used by the asset compiler and brings us one step closer to running the asset compiler on non windows systems.
+  - This change allows us to remove much of the C++/CLR code used by the asset compiler and brings us one step closer to running the asset compiler on non-windows systems.
 - [Migration NET6+ and more gettextnet#2](https://github.com/stride3d/gettextnet/pull/2)
   - Updated all of gettext.NET to the latest stable version of NET
 - [Enable multiple profiler consumers and add a timeline/tracing profiler #1788](https://github.com/stride3d/stride/pull/1788)
@@ -23,17 +23,17 @@ Stride 4.2 includes numerous enhancements and improvements.
     - [F# examples](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples-fs.html)
     - [Visual Basic examples](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples-vb.html)
 - [Stride Diagnostics Analyzer #1864](https://github.com/stride3d/stride/pull/1864)
-  - Adds code Analyzers to the Stride CompilerServices and analyzers for DataSerializer Source generator and Yaml Serializer.
-  - It solves the issue that you get surprised when you open Game Studio and you don't see anything exported
+  - Implements a code analyzer to show helpful warnings in your IDE and at compilation when any of your members or structures are incompatible with the serialization system.
 - [OpenVR Handle custom resolution specified by the user through VR settings #2000](https://github.com/stride3d/stride/pull/2000)
 - [Editor - Add dynamic snapping for selected objects #1801](https://github.com/stride3d/stride/pull/1801)
   - Implements a dynamic snapping used while holding down a key (default: Left Shift) on manipulating (rotating/moving/scaling) an object/entity. 
   - Adds a new Hotkey Setting for dynamic snapping
   - Adds a Method to handle dynamic snapping
 - [Editor - Let the user pick which animation stack to import in an fbx #1977](https://github.com/stride3d/stride/pull/1977)
-  - If multiple animation stacks are present in an fbx, let the user choose the index to import.
+  - This change introduces a field that users can edit to control which animation the engine should import from the source FBX.
 - [Editor - Added the ability to copy imported assets automatically to the Resources dir #1827](https://github.com/stride3d/stride/pull/1827)
-  - A prompt has been added to the interface that asks users to copy imported assets to the Resources directory directly from the editor.
+  - We recommend storing assets within your project's resource directory to avoid issues that may arise when sharing the project or moving files around.
+  - Whenever users import assets that are located outside of the resource directory, they will now be presented with a dialog box asking them whether the file should be copied to that directory.
 
 ## Stride 4.2 Feature Overview
 
