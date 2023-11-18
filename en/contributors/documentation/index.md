@@ -24,6 +24,7 @@ Assuming the transition is from version `4.1` to `4.2`, and that the Stride sour
 1. Update `ReleaseNotes.md`:
    - Change the content title to `4.2`
    - Replace the content with the new release notes for version `4.2`
+   - [GitHub Release](https://github.com/stride3d/stride/releases) can be used to generate a list **What's Changed**, once the new tag was added
 1. Modify `ReleaseNotes\toc.yml`
    - `name: 4.2 release notes` with `href: ReleaseNotes.md`
    - `name: 4.1 release notes` with `href: ReleaseNotes-4.1.md`
