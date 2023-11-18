@@ -1,6 +1,6 @@
 # Stride 4.2 Release Notes
 
-November 17th, 2023
+November 20th, 2023
 
 Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
@@ -34,6 +34,80 @@ Stride 4.2 includes numerous enhancements and improvements.
 - [Editor - Added the ability to copy imported assets automatically to the Resources dir #1827](https://github.com/stride3d/stride/pull/1827)
   - We recommend storing assets within your project's resource directory to avoid issues that may arise when sharing the project or moving files around.
   - Whenever users import assets that are located outside of the resource directory, they will now be presented with a dialog box asking them whether the file should be copied to that directory.
+
+## What's Changed in Details
+
+* Fixed Exception Caused By Privacy Policy URL in Crash Reporter by @MeharDT in https://github.com/stride3d/stride/pull/1878
+* docs: add acastrodev as a contributor for code by @allcontributors in https://github.com/stride3d/stride/pull/1886
+* docs: add SVNMLR as a contributor for design by @allcontributors in https://github.com/stride3d/stride/pull/1887
+* docs: add JeromyWalsh as a contributor for code by @allcontributors in https://github.com/stride3d/stride/pull/1888
+* docs: add parhamgholami as a contributor for design by @allcontributors in https://github.com/stride3d/stride/pull/1889
+* Fix missing OpenGLES texture formats. by @Basewq in https://github.com/stride3d/stride/pull/1898
+* field typo by @IXLLEGACYIXL in https://github.com/stride3d/stride/pull/1900
+* [Editor] Improve Cameracontrol in Editor by @SVNMLR in https://github.com/stride3d/stride/pull/1879
+* [XML Comment] Minor updates on EFlags in CollisionFilterGroups.cs by @VaclavElias in https://github.com/stride3d/stride/pull/1910
+* Fixes the issue where projects were disappearing from the launcher by @acastrodev in https://github.com/stride3d/stride/pull/1880
+* Fix typo in translations generation by @Ethereal77 in https://github.com/stride3d/stride/pull/1916
+* Handle importing meshes with duplicate material names by @adrsch in https://github.com/stride3d/stride/pull/1920
+* [Native] - Implement some existing C++ methods in C# by @Jklawreszuk in https://github.com/stride3d/stride/pull/1896
+* [Launcher] Prevent launcher automatically closing when offline by @Eideren in https://github.com/stride3d/stride/pull/1912
+* Small refactoring changes in Stride.GameStudio by @Jklawreszuk in https://github.com/stride3d/stride/pull/1741
+* Remove MSBuild.Extras from project by @Jklawreszuk in https://github.com/stride3d/stride/pull/1895
+* [Editor] Allow drag and drop of EntityComponent by @Eideren in https://github.com/stride3d/stride/pull/1921
+* Add editor settings for the camera speed increase/decrease hotkeys by @adrsch in https://github.com/stride3d/stride/pull/1927
+* docs: add adrsch as a contributor for code by @allcontributors in https://github.com/stride3d/stride/pull/1930
+* Let the user set the default Bullet gravity vector in PhysicsSettings by @adrsch in https://github.com/stride3d/stride/pull/1928
+* Migrate Irony.GrammarExplorer to net 6.0 by @Jklawreszuk in https://github.com/stride3d/stride/pull/1932
+* [Core] Enable multiple profiler consumers and add a timeline/tracing profiler by @froce in https://github.com/stride3d/stride/pull/1788
+* [Build] Fixed an errors in the build pipeline associated with having a space in the user name by @Fydar in https://github.com/stride3d/stride/pull/1941
+* fix(graphics): Stop FastTextRenderer VB clobbering by @froce in https://github.com/stride3d/stride/pull/1954
+* Update SSH.NET to 2023.0.0 by @WojciechNagorski in https://github.com/stride3d/stride/pull/1951
+* [Build] Fix Android build error by @froce in https://github.com/stride3d/stride/pull/1949
+* [Docs] Use XML documentation lists by @Fydar in https://github.com/stride3d/stride/pull/1948
+* [Editor] Remove some windows dependencies in editor libraries by @Kryptos-FR in https://github.com/stride3d/stride/pull/1908
+* parse numbers in NumericTextBox using CurrentCulture by @Schossi in https://github.com/stride3d/stride/pull/1811
+* Xml comments fixing 1 by @VaclavElias in https://github.com/stride3d/stride/pull/1918
+* [Presentation] Reduce allocations when parsing number in NumericTextBox by @Kryptos-FR in https://github.com/stride3d/stride/pull/1955
+* [Sample] Replace deprecated GetServiceAs calls by @Eideren in https://github.com/stride3d/stride/pull/1943
+* Fix compiling assets in Android build by @Basewq in https://github.com/stride3d/stride/pull/1905
+* Removed all references to $(SolutionDir) from build artifacts by @JeromyWalsh in https://github.com/stride3d/stride/pull/1894
+* [Serialization] Fix diverging rules for editor and runtime serialization of fields and properties by @Eideren in https://github.com/stride3d/stride/pull/1875
+* feat(extension): Rename launcher buttons for clarity by @acastrodev in https://github.com/stride3d/stride/pull/1872
+* Stride Diagnostics Analyzer by @IXLLEGACYIXL in https://github.com/stride3d/stride/pull/1864
+* Fix Building by @MaximilianEmel in https://github.com/stride3d/stride/pull/1956
+* [Math] Add a couple of helpers for Vectors by @ch3mbot in https://github.com/stride3d/stride/pull/1769
+* Fix #1769 and introduce an optional argument to specify a different r… by @Kryptos-FR in https://github.com/stride3d/stride/pull/1964
+* [Github] Update pull request template to ensure users tried out their changes by @Eideren in https://github.com/stride3d/stride/pull/1965
+* Fixed small xml docs mistake by @Doprez in https://github.com/stride3d/stride/pull/1976
+* Revert "[Editor] Remove some windows dependencies in editor libraries (#1908)" by @Eideren in https://github.com/stride3d/stride/pull/1980
+* [AssemblyProcessor] Fixed packing path. by @Basewq in https://github.com/stride3d/stride/pull/1987
+* [Core] Make object id more performant by @IXLLEGACYIXL in https://github.com/stride3d/stride/pull/1957
+* [Docs] Move bounty paragraph to a more prominent spot by @Eideren in https://github.com/stride3d/stride/pull/1984
+* [Readme] Some additional info for building Stride from source by @tebjan in https://github.com/stride3d/stride/pull/1988
+* [Docs] Update PropertiesDemo.cs by @Eideren in https://github.com/stride3d/stride/pull/1991
+* Fix failing to load data/db/index file on non-Win desktop platforms by @Jklawreszuk in https://github.com/stride3d/stride/pull/1995
+* [Shaders] Fixes `EffectValueDescription.DefaultValue` for negative values by @azeno in https://github.com/stride3d/stride/pull/1990
+* [Editor] Re-introduce workaround for missing input while navigating by @Eideren in https://github.com/stride3d/stride/pull/1897
+* [Build] Fix native library loading picking up invalid files by @Basewq in https://github.com/stride3d/stride/pull/1999
+* Fixes OpenXR by @MaximilianEmel in https://github.com/stride3d/stride/pull/1911
+* [Breaking] Scoping generic extension methods by @Fydar in https://github.com/stride3d/stride/pull/1959
+* Add information about Irony.GrammarExplorer project by @Jklawreszuk in https://github.com/stride3d/stride/pull/2007
+* [VR] Remove framecap from VR sample by @Eideren in https://github.com/stride3d/stride/pull/2002
+* Bump Newtonsoft.Json from 12.0.3 to 13.0.1 in /sources/metrics/Stride.Metrics by @dependabot in https://github.com/stride3d/stride/pull/1539
+* [OpenVR] Handle custom resolution specified by the user through VR settings by @Eideren in https://github.com/stride3d/stride/pull/2000
+* Update NuGet libraries to 6.4.2 by @manio143 in https://github.com/stride3d/stride/pull/2017
+* Let the user pick which animation stack to import in an fbx by @adrsch in https://github.com/stride3d/stride/pull/1977
+* Fixes OpenGL by @MaximilianEmel in https://github.com/stride3d/stride/pull/2023
+* Update dotnet 8 by @Doprez in https://github.com/stride3d/stride/pull/1616
+
+## New Contributors
+* @adrsch made their first contribution in https://github.com/stride3d/stride/pull/1920
+* @froce made their first contribution in https://github.com/stride3d/stride/pull/1788
+* @Fydar made their first contribution in https://github.com/stride3d/stride/pull/1941
+* @WojciechNagorski made their first contribution in https://github.com/stride3d/stride/pull/1951
+* @Schossi made their first contribution in https://github.com/stride3d/stride/pull/1811
+* @MaximilianEmel made their first contribution in https://github.com/stride3d/stride/pull/1956
+* @ch3mbot made their first contribution in https://github.com/stride3d/stride/pull/1769
 
 ## Stride 4.2 Feature Overview
 
