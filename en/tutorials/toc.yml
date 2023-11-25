@@ -1,3 +1,6 @@
+pdf: true
+pdfFileName: stride-tutorials.pdf
+items:
 - name: 🎓 Tutorials
   href: index.md
 - name: 🛠️ Game studio
