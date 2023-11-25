@@ -36,6 +36,11 @@
     --bs-link-hover-color-rgb: 247, 149, 149 !important;
 }
 
+.link-secondary {
+    padding-left: 10px;
+    display: block;
+}
+
 footer .link-danger {
     color: var(--stride-red-web);
 }
