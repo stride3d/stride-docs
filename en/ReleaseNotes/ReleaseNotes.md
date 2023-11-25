@@ -184,7 +184,7 @@ Although there have been [many fixes](**https://github.com/stride3d/stride/pulls
 ## Also good to know
 Although not directly tied to Release 4.2, we have made some other big changes. For instance to our website and documentation. We also had another community meeting to address all those new members.
 - [Website and documentation revamped and build process updated](https://www.stride3d.net/blog/announcing-website-update/)
-- [Contributor section moved to docs](https://doc.stride3d.net/latest/en/contributors/ways-to-contribute.html)
+- [Contributor section moved to docs](https://doc.stride3d.net/latest/en/contributors/index.html)
 - [Community meeting October 2023](https://www.stride3d.net/blog/community-meeting-october-2023/)
 
 ## Acknowledgements
