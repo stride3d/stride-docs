@@ -7,5 +7,3 @@ This is a proposal for our website roadmap and ongoing website development plan.
   - Host videos on YouTube
   - Host images in Azure Blob Storage or another location
 - Optimize the website for possible deployment on Azure Static Web Apps
-  
-
