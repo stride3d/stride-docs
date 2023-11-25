@@ -1,3 +1,6 @@
+pdf: true
+pdfFileName: contributing-in-stride.pdf
+items:
 - name: 🌟 Ways to Contribute
   href: ways-to-contribute.md
   expanded: true

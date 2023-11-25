@@ -189,6 +189,9 @@ function Build-EnglishDoc {
     # Output to both build.log and console
     docfx build en/docfx.json -o $outputDirectory | Write-Host
 
+    # Build pdf files
+    docfx pdf en/docfx.json -o $outputDirectory | Write-Host
+
     return $LastExitCode
 }
 

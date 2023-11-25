@@ -237,15 +237,12 @@ const app = {
     },
     start: function () {
 
-        // Call the function to start waiting for the navbar element
         this.waitForNavbarAndAddLanguageNavigation();
-
         this.addVersionNavigation();
         this.loadVersions();
     }
 };
 
-export default app;
+app.start = app.start.bind(app);
 
-// Start the app when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", () => app.start());
+export default app;
