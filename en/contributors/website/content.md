@@ -53,7 +53,7 @@ Major updates can be defined as significant changes to the website's design, whe
 
 Start by setting up your local development environment, as described in the [Installation](installation.md) section. After making and testing your changes locally, you should create a pull request to merge your changes into the `master` branch.
 
-Depending on the scope of your changes, it's advisable to include screenshots in your pull request or a link to your local deployment. This helps showcase your proposed changes to maintainers and facilitates the review process.
+When submitting a pull request, especially for substantial changes, it's recommended to include **screenshots** or a link to your local deployment. This approach helps maintainers visualize and assess your proposed changes more effectively. If you prefer to use GitHub infrastructure for your demonstrations, refer to our [Deployment to GitHub Pages guide](deployment-azure.md#deployment-to-github-pages) for instructions on deploying via GitHub Actions.
 
 ## Creating New Post
 

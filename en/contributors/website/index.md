@@ -15,8 +15,8 @@ Technologies we use to build our website:
 - Font Awesome
 - HTML, JavaScript, CSS, SCSS, and JSON
 - GitHub Actions (CI/CD)
-  - Our [GitHub Actions](https://github.com/stride3d/stride-docs/tree/master/.github/workflows) are already configured for deploying to staging and release environments
-  - For personal testing or demonstration purposes, you might need to set up your own GitHub Actions. This can be particularly useful if you want to showcase proposed changes to maintainers for approval.
+  - Our [GitHub Actions](https://github.com/stride3d/stride-website/tree/master/.github/workflows) are already configured for deploying to both staging and release environments.
+  - For personal testing or demonstration purposes, you may need to set up your own GitHub Actions. This is especially useful for showcasing proposed changes to maintainers for their approval. For guidance on this, refer to our [Deployment to GitHub Pages guide](deployment-azure.md#deployment-to-github-pages).
 
 ## Dependencies
 
