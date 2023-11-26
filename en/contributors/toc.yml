@@ -66,6 +66,11 @@ items:
       href: website/installation.md
     - name: Website Content
       href: website/content.md
+      items:
+      - name: Shortcodes and Includes
+        href: website/content-shortcodes-and-includes.md
+    - name: Figma Designs
+      href: website/figma.md
     - name: Roadmap
       href: website/roadmap.md
     - name: Eleventy
