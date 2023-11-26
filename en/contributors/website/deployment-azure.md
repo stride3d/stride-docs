@@ -2,16 +2,11 @@
 
 We have tested [different deployment](deployment.md) options and decided for the following one.
 
-- [Step-by-Step Guide to Deploying Azure Web Apps (Windows) with IIS](#step-by-step-guide-to-deploying-azure-web-apps-windows-with-iis)
-  - [Setting up a new Azure Web App (Windows) with IIS](#setting-up-a-new-azure-web-app-windows-with-iis)
-  - [Adjusting the Web App Configuration](#adjusting-the-web-app-configuration)
-  - [Modifying the GitHub Action](#modifying-the-github-action)
-
-# Step-by-Step Guide to Deploying Azure Web Apps (Windows) with IIS
+## Step-by-Step Guide to Deploying Azure Web Apps (Windows) with IIS
 
 This guide assumes you already have permission to access the Azure subscription.
 
-## Setting up a new Azure Web App (Windows) with IIS
+### Setting up a new Azure Web App (Windows) with IIS
 
 These instructions pertain to the staging environment. For the production environment, follow the same steps, but with a different web app name.
 
@@ -30,7 +25,7 @@ These instructions pertain to the staging environment. For the production enviro
       - Click **Next**
 1. In the Deployment Tab - This step can be completed later if preferred.
    - Enable Continuous deployment
-   - Select account, organisation `Stride`, repository `stride-website` and branch `staging-next`
+   - Select account, organisation `Stride`, repository `stride-website` and branch `staging`
    - Click **Next**
 1. In the Monitoring Tab
    - Leave all settings as default
@@ -46,15 +41,20 @@ These instructions pertain to the staging environment. For the production enviro
    - Click **Create**
    - The GitHub Action will be added to the repository and run automatically. It will fail at this stage, but this will be resolved in the subsequent steps.
 
-## Adjusting the Web App Configuration
+> [!CAUTION]
+> If you have completed the Deployment Tab process, ensure that the deployment profile includes the **DeleteExistingFiles** property. This property may need to be set to `False` or `True` depending on the specific requirements of your deployment. For instance, Stride Docs deployment retains files from previous deployments, allowing multiple versions like `4.2`, `4.1`, etc., to be maintained. Adjust this setting based on your deployment needs.
+
+### Adjusting the Web App Configuration
 
 1. Proceed to the newly created Web App
 1. Click on **Configuration**
 1. Select **General Settings**
-1. Change the Http Version to **2.0**
+1. Change the `Http version` to **2.0**
+1. Change `Ftp state` to **FTPS only**
+1. Change `HTTPS Only` to **On**
 1. Click **Save** to apply the changes
 
-## Modifying the GitHub Action
+### Modifying the GitHub Action
 
 The previous step will have added a GitHub Action to the repository, which will fail at this point. You need to modify the GitHub Action to correct the issue.
 
@@ -67,9 +67,9 @@ The previous step will have added a GitHub Action to the repository, which will 
     on:
     #  push:
     #    branches:
-    #      - staging-next
+    #      - staging
         workflow_dispatch:
     ```
 1. Open the `stride-website-staging-azure.yml` workflow and update it with the properties from the previous step. Save your changes.
 1. This workflow may also need to be added to the production branch master if it is not already there.
-1. Execute the workflow stride-website-staging-azure.yml. Ensure you select the correct branch staging-next and click **Run workflow**. This action will deploy the website to the Azure Web App.
+1. Execute the workflow `stride-website-staging-azure.yml`. Ensure you select the correct branch `staging` and click **Run workflow**. This action will deploy the website to the Azure Web App.

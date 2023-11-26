@@ -21,9 +21,15 @@ To add an alert, use the following `include`, where:
 {% include _alert.html type:'success' icon:'fa-face-smile' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
 ```
 
+### Examples
+
+See the examples [here](https://www.stride3d.net/blog/examples/#alert).
+
+![Alert examples in the Stride website](media/alert-examples.jpg)
+
 ## Alert Banner
 
-A global alert banner can be used for promotional purposes. The banner can be activated in `site.json`.
+A global alert banner can be used for promotional purposes. The banner can be activated in `site.json`. It will show up on every single page.
 
 ```json
 "alert-banner": true
@@ -31,9 +37,13 @@ A global alert banner can be used for promotional purposes. The banner can be ac
 
 The HTML can be updated in the `/_includes/alert-banner.html` file.
 
+![Alert Banner examples in the Stride website](media/alert-banner-example.jpg)
+
 ## Image
 
 Add responsive images using shortcodes. Be sure to include a descriptive title, as it will improve your post's search engine visibility. Also, if possible, use the **webp** format for images, which can also be used for transparent images. This will improve the performance of your site.
+
+### img
 
 To add a responsive image, use the following shortcode:
 
@@ -44,6 +54,8 @@ Replace `title` with a descriptive title for the image and `url` with the image 
 ```html
 <img alt="title" src="url" class="img-fluid mb-2" loading="lazy" data-src="url">
 ```
+
+### img-click
 
 To add a responsive image with a clickable link that opens the image in full size, use the following shortcode:
 
@@ -67,7 +79,9 @@ Replace `title` with a descriptive title for the image, `url` with the image URL
 
 ## Video
 
-We should consider hosting our videos on YouTube whenever possible. 
+We should consider hosting our videos on YouTube whenever possible.
+
+### youtube
 
 To embed a **YouTube video**, use the following shortcode:
 
@@ -78,6 +92,8 @@ Replace `id` with the YouTube video ID. This shortcode renders as:
 ```html
 <div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/id" title="YouTube video" allowfullscreen></iframe></div>
 ```
+
+### youtube-playlist
 
 To embed a **YouTube playlist**, use the following shortcode:
 
