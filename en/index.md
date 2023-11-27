@@ -48,6 +48,15 @@ Welcome to the Stride documentation, specifically designed for game developers, 
             <p class="px-3 mb-4"><a class="stretched-link" href="api/index.md">View Stride API Reference</a></p>
         </div>
     </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title h5">🔍 Diagnostics</h2>
+                <p class="card-text">In the world of game development, unexpected behavior is a common challenge. Stride's diagnostic tools are designed to help you quickly and effectively diagnose and resolve these issues.</p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link" href="diagnostics/index.md">Explore Diagnostics</a></p>
+        </div>
+    </div>
 </div>
 
 ## 📥 Download PDF Versions
