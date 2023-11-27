@@ -37,7 +37,7 @@ items:
     - name: Dependency graph
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
-      href: engine/architecture/asset-introspection.html
+      href: engine/architecture/asset-introspection.md
 - name: 🎓 Contribute to the documentation
   expanded: false
   href: documentation/index.md
