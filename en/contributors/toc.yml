@@ -24,8 +24,8 @@ items:
     href: engine/source-debugging.md
   - name: Visual Studio plugin
     href: engine/visual-studio-plugin.md
-  - name: 🏗️️ Architecture
-    expanded: false
+  - name: 🏗️ Architecture
+    expanded: true
     href: engine/architecture/index.md
     items:
     - name: Build pipeline
@@ -37,27 +37,29 @@ items:
     - name: Dependency graph
       href: engine/architecture/dependency-graph.md
     - name: Asset introspection
-      href: engine/architecture/asset-introspection.html
-- name: 🎓 Contribute to the documentation
+      href: engine/architecture/asset-introspection.md
+- name: 📖 Contribute to the documentation
   expanded: false
   href: documentation/index.md
   items:
-  - name: Documentation generation pipeline
-    href: Documentation/documentation-generation-pipeline.md
+  - name: Generation Pipeline
+    href: documentation/documentation-generation-pipeline.md
   - name: Installation
-    href: Documentation/installation.md
+    href: documentation/installation.md
   - name: Content
-    href: Documentation/content.md
+    href: documentation/content.md
 #  - name: New language
-#    href: Documentation/new-language.md
+#    href: documentation/new-language.md
   - name: Roadmap
-    href: Documentation/roadmap.md
+    href: documentation/roadmap.md
   - name: DocFX
-    href: Documentation/docfx.md
+    href: documentation/docfx.md
   - name: Deployment
-    href: Documentation/deployment-azure.md
+    href: documentation/deployment-azure.md
+  - name: Major Release Workflow
+    href: documentation/major-release-workflow.md
   - name: Troubleshooting and FAQ
-    href: Documentation/troubleshooting-and-faq.md
+    href: documentation/troubleshooting-and-faq.md
 - name: 🌐️ Contribute to the website
   expanded: false
   href: website/index.md

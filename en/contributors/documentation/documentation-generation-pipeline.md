@@ -1,10 +1,7 @@
-# Documentation generation pipeline
-- [Introduction](#introduction)
-- [A Simplified Overview](#a-simplified-overview)
-- [Docs Build Workflow](#docs-build-workflow)
-- [Workflow Diagram](#workflow-diagram)
+# Generation Pipeline
 
-# Introduction
+## Introduction
+
 As of now, **DocFX** does not natively support the generation of multi-language and multi-version documentation. To address this limitation, the Stride team has developed a PowerShell script. Initially, separate scripts were created for each language; however, these have since been consolidated into a single script named [`BuildDocs.ps1`](https://github.com/stride3d/stride-docs/blob/staging/BuildDocs.ps1). This unified script is capable of generating documentation in all supported languages.
 
 The script serves two main purposes:
@@ -12,11 +9,11 @@ The script serves two main purposes:
 - It features a non-interactive mode, utilized by the Continuous Integration/Continuous Deployment (CI/CD) pipeline to automatically generate documentation for all languages and the most recent version, eliminating the need for user intervention.
 - It also offers an interactive command-line UI, allowing users to select which languages they wish to generate documentation for.
 
-# A Simplified Overview
+## A Simplified Overview
 
 Here's a straightforward explanation of how the documentation generation process works.
 
-The `/en` folder serves as the repository for the primary documentation files. When documentation for another language (e.g., Japanese) is built, the files from `/en` are copied over to a temporary folder, for example, `/jp-tmp`. This ensures that the non-English versions will contain all the files present in the `/en` folder. Files that have been translated (found in folders like `/jp`) will overwrite their English counterparts in the temp folder.
+The `/en` folder serves as the repository for the primary documentation files. When documentation for another language (e.g., Japanese) is built, the files from `/en` are copied over to a temporary folder, for example, `/jp-tmp`. This ensures that the non-English versions will contain all the files present in the `/en` folder. Files that have been translated (found in folders like `/jp`) will overwrite their English counterparts in the temp folder `/jp-tmp`.
 
 DocFX is invoked multiple times, once for each language, to create the documentation. The generated documents are stored in the `_site` folder, organized according to the latest version information obtained from `version.json`. For example:
 
@@ -25,18 +22,18 @@ DocFX is invoked multiple times, once for each language, to create the documenta
 /_site/4.1/jp
 ```
 
-## DocFX Files Processed
+### DocFX Files Processed
 
 This section outlines the file processing carried out by DocFX during the documentation generation:
 
-- **Table of Contents (TOC) Files:** 4 files processed
-- **Assets:** 1607 items (images, videos, etc.) included
-- **Conceptual Files:** 304 files processed, resulting in 304 HTML files
+- **Table of Contents (TOC) Files:** 7 files processed
+- **Assets:** 1620 items (images, videos, etc.) included
+- **Conceptual Files:** 358 files processed, resulting in 304 HTML files
 - **Warnings (No API Metadata):** 44 instances encountered
 - **Warnings (API Metadata):** 200 instances of missing or incorrect references
-- **API Files:** 2821 files processed, resulting in 2133 HTML files
+- **API Files:** 2825 files processed, resulting in 2133 HTML files
 
-# Docs Build Workflow
+## Docs Build Workflow
 
 In this part, we elaborate on the individual steps involved in the documentation build workflow for the Stride Docs project.
 
@@ -77,7 +74,7 @@ In this part, we elaborate on the individual steps involved in the documentation
 - **PostProcessing-DocFxDocUrl**
   - Adjusts HTML tags and GitHub links, removing any `_tmp` suffixes. Also updates GitHub links to English if the translation is unavailable.
 
-# Workflow Diagram
+## Workflow Diagram
 
 
 ``` mermaid
@@ -135,7 +132,8 @@ graph TB
     R -->|No| T
     S --> T
     T --> X{{docfx build}}
-    X --> Y
+    X --> X1{{docfx pdf}}
+    X1 --> Y
     Y --> Z
     end
 ```
