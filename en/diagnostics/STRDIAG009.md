@@ -28,7 +28,7 @@ public class STRDIAG009
 
 ## Solution
 
-To resolve the warning, remove the @Stride.Core.DataMemberAttribute. Or change the key of the `IDictionary` to a supported type. Add a pragma Suppression in the IDE if it is a valid type.
+To resolve the warning, remove the @Stride.Core.DataMemberAttribute or add @Stride.Core.DataMemberIgnoreAttribute. Or change the key of the `IDictionary` to a supported type. Add a pragma Suppression in the IDE if it is a valid type.
 
 ## References
 

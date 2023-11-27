@@ -1,26 +1,6 @@
 # Website Content
-- [Content Updates](#content-updates)
-  - [Small Updates](#small-updates)
-  - [Major Updates](#major-updates)
-- [Creating New Post](#creating-new-post)
-  - [Post Naming Convention](#post-naming-convention)
-  - [Post Front Matter](#post-front-matter)
-  - [Post Content](#post-content)
-  - [Excerpt](#excerpt)
-- [Creating New Page](#creating-new-page)
-  - [Page Front Matter](#page-front-matter)
-- [Shortcodes and Includes](#shortcodes-and-includes)
-  - [Alert](#alert)
-  - [Alert Banner](#alert-banner)
-  - [Image](#image)
-  - [Video](#video)
-- [Web Assets](#web-assets)
-- [Styling](#styling)
-  - [Bootstrap Customization](#bootstrap-customization)
-  - [CSS Guidelines](#css-guidelines)
-- [Submitting your Changes](#submitting-your-changes)
 
-# Content Updates
+## Content Updates
 
 If you want to contribute and update the website, please follow the instructions below.
 
@@ -30,11 +10,11 @@ You can use any text editor to make changes. If you are using **Visual Studio**,
 
 You are always welcome to create an issue to discuss your changes before you start working on them. 
 
-## Small Updates
+### Small Updates
 
 Creating an issue is not required for small updates, but it is recommended to let others know what you are working on. If you are not sure whether your update is small or not, please create an issue first.
 
-### What is a small update?
+#### What is a small update?
 
 We can define small updates as changes to the content of the website:
 
@@ -45,9 +25,10 @@ We can define small updates as changes to the content of the website:
 - Minor navigation or footer update
     - This will update all pages containing the navigation or footer
 
-### Steps
+#### Steps
 
-**Note:** This guide assumes you are already familiar with updating files in GitHub.
+> [!NOTE]
+> This guide assumes you are already familiar with updating files in GitHub.
 
 1. Go to the [Stride Website GitHub](https://github.com/stride3d/stride-website) repository
 1. Locate the file you wish to edit
@@ -59,21 +40,22 @@ We can define small updates as changes to the content of the website:
 1. Provide a title and description for your pull request, and click on `Create pull request` again
 1. Wait for the review and merge
 
-## Major Updates
+### Major Updates
 
 [Creating an issue](https://github.com/stride3d/stride-website/issues) is **required** for major updates, so that others can comment on your changes and provide feedback.
 
-We can define bigger updates as changes to the design of the website, where you would like to see the impact of your changes beforehand to assess the desired result:
+Major updates can be defined as significant changes to the website's design, where it's beneficial to preview the impact of your changes to ensure they achieve the desired result. This may include:
 
-- Add new Eleventy shortcodes and Liquid includes
-- Update Bootstrap library or other libraries
-- Update layouts
+- Adding new Eleventy shortcodes and Liquid includes
+- Updating the Bootstrap library or other libraries
+- Modifying layouts
+- Revamping design elements
 
-You would start with the local development environment, which is described in the [Installation](installation.md) section.
+Start by setting up your local development environment, as described in the [Installation](installation.md) section. After making and testing your changes locally, you should create a pull request to merge your changes into the `master` branch.
 
-Then you would make your changes and test them locally. Once you are happy with the result, you can create a pull request to merge your changes into the `master` branch.
+When submitting a pull request, especially for substantial changes, it's recommended to include **screenshots** or a link to your local deployment. This approach helps maintainers visualize and assess your proposed changes more effectively. If you prefer to use GitHub infrastructure for your demonstrations, refer to our [Deployment to GitHub Pages guide](deployment-azure.md#deployment-to-github-pages) for instructions on deploying via GitHub Actions.
 
-# Creating New Post
+## Creating New Post
 
 To create a new blog post, you can follow one of these methods:
 
@@ -82,15 +64,16 @@ To create a new blog post, you can follow one of these methods:
 
 Either method will allow you to create a new blog post, so choose the one that best suits your needs.
 
-## Post Naming Convention
+### Post Naming Convention
 
 `YYYY-MM-DD-post-title.md`
 
 Replace `YYYY-MM-DD` with the date of the post and `post-title` with the title of the post.
 
-⚠️**Important SEO Note:** Ensure the file title includes essential keywords related to your post's content. This is crucial as the file title dictates the URL of the post, which plays a significant role in search engine optimization (SEO).
+> [!IMPORTANT]
+> **SEO Note:** Ensure the file title includes essential keywords related to your post's content. This is crucial as the file title dictates the URL of the post, which plays a significant role in search engine optimization (SEO).
 
-## Post Front Matter
+### Post Front Matter
 
 The file should start with the following front matter:
 
@@ -140,16 +123,16 @@ Default front matter, which is used for all posts, can be found in the `posts/po
 }
 ```
 
-### Image
+#### Image
 
 The image specified in the front matter serves dual purposes: It appears in the blog listing at [Stride Blog](https://www.stride3d.net/blog/) and is used as the **og:image** meta tag for social sharing. Here are three ways to specify this image:
 
 - Not including an image in the front matter will use the default image
 - Including an image in the front matter will override the default image. The size of the image should be minimum **1200 x 600px** e.g. `image: /images/blog/2023-04/new-home-page.webp`
 - External image URL e.g. `image: https://i.imgur.com/7GVEiSR.jpg`
-- If you are looking for Stride specific logo's or icons, have a look at the [Figma](figma.md) options.
+- If you are looking for Stride specific logo's or icons, have a look at the [Figma](figma.md) options
 
-## Post Content
+### Post Content
 
 Check the previous posts for an example of the post content. Ideally you should use the same format as the previous posts to preserve the consistency of the blog.
 
@@ -157,9 +140,10 @@ You can use shortcodes and includes which are described in the [Shortcodes and I
 
 You can also use majority of the Bootstrap classes in your content if you combine HTML and Markdown.
 
-💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not published. Once you are ready to publish your post, you can move it to the `posts` folder.
+> [!TIP]
+> We have a folder called `_drafts` where you can store your drafts. These files are not published. Once you are ready to publish your post, you can move it to the `posts` folder.
 
-## Excerpt
+### Excerpt
 
 The excerpt is the first paragraph of the post. Separated from the rest of the content by three dashes `---`. The excerpt is used in the blog post list, meta description and in the RSS feed.
 
@@ -180,11 +164,11 @@ Additional content goes here...
 
 ```
 
-# Creating New Page
+## Creating New Page
 
-To create a new page, create a new file in the root folder or create a new folder and add an `index.md` file to it. You can use any templating language supported by Eleventy. We use Markup, html, nunjacks.
+To create a new page, create a new file in the root folder or create a new folder and add an `index.md` file to it. You can use any templating language supported by Eleventy. We use Markup, HTML, Nunjucks.
 
-## Page Front Matter
+### Page Front Matter
 
 The page front matter works the same way as the post front matter. The only difference is that the `layout` property is required.
 
@@ -200,133 +184,11 @@ permalink: /my-features/ # otherwise it would be /features/
 ---
 ```
 
-# Shortcodes and Includes
+## Shortcodes and Includes
 
-You can see examples here https://www.stride3d.net/blog/examples/.
+To enhance the quality and functionality of the content, both pages and posts can incorporate [shortcodes and includes](content-shortcodes-and-includes.md). These tools offer a versatile way to enrich the presentation and interactivity of the content on the Stride website.
 
-## Alert
-
-To add an alert, use the following include, where:
-
-- `type` is one of the following: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`. Using these types will automatically include a relevant icon
-- `icon` is a Font Awesome icon, which is optional. You can use any free icon, e.g., fa-check.
-- `title` is the title of the alert
-
-```liquid
-# This will render as a green box without the icon
-{% include _alert.html type:'success' icon:'' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
-
-# This will render as a green box with a check icon
-{% include _alert.html type:'success' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
-
-# This will render as a green box with a custom icon
-{% include _alert.html type:'success' icon:'fa-face-smile' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
-```
-
-## Alert Banner
-
-A global alert banner can be used for promotional purposes. The banner can be activated in `site.json`.
-
-```json
-"alert-banner": true
-```
-
-The HTML can be updated in the `/_includes/alert-banner.html` file.
-
-## Image
-
-Add responsive images using shortcodes. Be sure to include a descriptive title, as it will improve your post's search engine visibility. Also, if possible, use the **webp** format for images, which can also be used for transparent images. This will improve the performance of your site.
-
-To add a responsive image, use the following shortcode:
-
-`{% img 'title' 'url' %}`
-
-Replace `title` with a descriptive title for the image and `url` with the image URL. This shortcode renders as:
-
-```html
-<img alt="title" src="url" class="img-fluid mb-2" loading="lazy" data-src="url">
-```
-
-To add a responsive image with a clickable link that opens the image in full size, use the following shortcode:
-
-`{% img-click 'title' 'url' %}`
-
-Replace `title` with a descriptive title for the image and `url` with the image URL. This shortcode renders as:
-
-```html
-<a href="url" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
-```
-
-To add a responsive image with a clickable link that directs users to a custom destination, use the following shortcode:
-
-`{% img-click 'title' 'url' 'destinationUrl' %}`
-
-Replace `title` with a descriptive title for the image, `url` with the image URL, and `destinationUrl` with the target URL when the image is clicked. This shortcode renders as:
-
-```html
-<a href="destinationUrl" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
-```
-
-## Video
-
-We should consider hosting our videos on YouTube whenever possible. 
-
-To embed a **YouTube video**, use the following shortcode:
-
-`{% youtube 'id' %}`
-
-Replace `id` with the YouTube video ID. This shortcode renders as:
-
-```html
-<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/id" title="YouTube video" allowfullscreen></iframe></div>
-```
-
-To embed a **YouTube playlist**, use the following shortcode:
-
-`{% youtube-playlist 'id' %}`
-
-Replace `id` with the YouTube playlist ID. This shortcode renders as:
-
-```html
-<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=id" title="YouTube video" allowfullscreen></iframe></div>
-```
-
-To embed a video hosted elsewhere, use the following shortcode:
-
-### Hosting our own videos
-
-`{% video 'url' %}`
-
-Replace `url` with the video URL (e.g., .mp4 file). Make sure you have a matching .jpg file with the same name as the .mp4 file for the poster attribute. This shortcode renders as:
-
-```html
-<!-- jpgUrl = url.replace(".mp4", ".jpg") // make sure you have a pair .mp4 and .jpg -->
-<div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
-```
-
-### How to encode videos
-
-Videos can be generated by many software in various formats & size, so they might end up being incompatible with web browsers or mobile, or simply be way too large.
-It is better to stick to a format with low requirements such as H264 baseline profile (works almost everywhere).
-
-To do so, process the file using [fmpeg](https://ffmpeg.org/download.html):
-
-```
-ffmpeg -i myvideo_original.mp4 -profile:v baseline -level 3.0 -an myvideo.mp4
-```
-
-Also, generate a static thumbnail so that people can preview it before downloading the video (very important on mobile):
-
-ToDo: Check if webp can be generated from ffmpeg
-
-```
-ffmpeg -i myvideo.mp4 -vframes 1 -f image2 -y myvideo.jpg
-```
-
-ToDo: Maybe we could provide a simple tool to do that without using command line.
-
-
-# Web Assets
+## Web Assets
 
 Our main web assets are:
 
@@ -342,21 +204,22 @@ Our main web assets are:
 - `search.liquid` - Renders as `search.json` contains search meta
 
 
-# Styling
+## Styling
 
-## Bootstrap Customization
+### Bootstrap Customization
 
 Our website uses the [Bootstrap](https://getbootstrap.com/) framework, version **5.3**.
 
-⚠️**Important:** Prioritize the use of Bootstrap's inherent styling before integrating any custom styles. You should be familiar with [Bootstrap Utilities](https://getbootstrap.com/docs/5.3/utilities/api/) which help you to achieve most of the styling requirements.
+> [!IMPORTANT]
+> Prioritize the use of Bootstrap's inherent styling before integrating any custom styles. You should be familiar with [Bootstrap Utilities](https://getbootstrap.com/docs/5.3/utilities/api/) which help you to achieve most of the styling requirements.
 
-## CSS Guidelines
+### CSS Guidelines
 
 Our goal is to write as little CSS as possible to ensure the website remains lightweight. We maximize the utilization of the Bootstrap framework to achieve this. 
 
 Further, we are using also [FontAwesome](https://fontawesome.com/) free icons. The icons are loaded in the `src/_includes/css/main.css` file.
 
-# Submitting your Changes
+## Submitting your Changes
 
 Assuming you have made all necessary changes and tested them on the development server, you can submit a pull request to the `master` branch. The pull request will be reviewed and merged by the website maintainers.
 
