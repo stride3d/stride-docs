@@ -34,9 +34,9 @@ Welcome to the Stride documentation, specifically designed for game developers, 
         <div class="card h-100">
             <div class="card-body">
                 <h2 class="card-title h5">🌟 Contributors</h2>
-                <p class="card-text">Learn how you can contribute to Stride's development.</p>
+                <p class="card-text">Join our vibrant community of creators and contribute to Stride's growth. Whether you're enhancing the <a href="contributors/engine/index.md">engine</a>, <a href="contributors/documentation/index.md">documentation</a>, or the <a href="contributors/website/index.md">website</a>, your contributions shape the future of Stride.</p>
             </div>
-            <p class="px-3 mb-4"><a class="stretched-link" href="contributors/ways-to-contribute.md">Start contributing to Stride</a></p>
+            <p class="px-3 mb-4"><a class="" href="contributors/index.md">Start contributing to Stride</a></p>
         </div>
     </div>
     <div class="col-md-6">
