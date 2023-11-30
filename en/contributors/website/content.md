@@ -8,7 +8,7 @@ Small updates can be done directly in the GitHub web interface, for bigger updat
 
 You can use any text editor to make changes. If you are using **Visual Studio**, you can open `Stride.Web.sln` solution file in the root of the repository and start making your updates directly from this IDE.
 
-You are always welcome to create an issue to discuss your changes before you start working on them. 
+You are always welcome to [create an issue](https://github.com/stride3d/stride-website) to discuss your changes before you start working on them. 
 
 ### Small Updates
 
@@ -28,17 +28,11 @@ We can define small updates as changes to the content of the website:
 #### Steps
 
 > [!NOTE]
-> This guide assumes you are already familiar with updating files in GitHub.
+> This guide assumes that you are already familiar with updating files on GitHub.
 
-1. Go to the [Stride Website GitHub](https://github.com/stride3d/stride-website) repository
-1. Locate the file you wish to edit
-1. Click the `Edit this file` (pencil) icon in the top right corner
-1. If prompted, fork the repository by clicking `Fork this repository`
-1. Make your changes to the file, then write a brief commit message describing the changes
-1. Click on the `Propose changes` button
-1. On the next screen, click the `Create pull request` button
-1. Provide a title and description for your pull request, and click on `Create pull request` again
-1. Wait for the review and merge
+For the following instructions, use the [Stride Website GitHub repository](https://github.com/stride3d/stride-website):
+
+[!INCLUDE [small-updates](../../includes/small-update-instructions.md)]
 
 ### Major Updates
 
@@ -221,16 +215,4 @@ Further, we are using also [FontAwesome](https://fontawesome.com/) free icons. T
 
 ## Submitting your Changes
 
-Assuming you have made all necessary changes and tested them on the development server, you can submit a pull request to the `master` branch. The pull request will be reviewed and merged by the website maintainers.
-
-Steps to contribute your updates:
-
-1. Commit your changes to your forked repository:
-   - Commit the changes with a meaningful message
-   - Push the changes to your forked repository
-1. Create a pull request to the main repository:
-   - You can create a pull request from your forked repository by navigating to Pull requests page and click **New pull request** button
-   - Select the **master** branch as the base branch and your branch as the compare branch
-   - Click **Create pull request** button
-
-Once your pull request has been reviewed and approved, your changes will be merged into the main repository and deployed to the website.
+[!INCLUDE [submitting-changes](../../includes/submitting-changes.md)]
