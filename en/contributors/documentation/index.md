@@ -9,6 +9,7 @@ For more extensive updates 🤯🤦‍♂️ or for a deeper understanding of th
 Here are the technologies we use to build our website:
 
 - [docfx](https://dotnet.github.io/docfx/index.html) (static site generator)
+  - A specific version of docfx is utilized in GitHub Actions, one that has been thoroughly tested. Should you wish to upgrade this version, please ensure it is properly tested before implementation.
 - Markdown
 - [Mustache](https://mustache.github.io/) template engine (docfx dropped Liquid template engine support)
 - Bootstrap

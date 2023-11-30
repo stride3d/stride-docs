@@ -1,0 +1,5 @@
+1. Familiarity with the command line
+1. **.NET SDK 8.0 or higher:** You can download the installer from the [.NET SDK website](https://dotnet.microsoft.com/en-us/download)
+   - If .NET SDK is already installed, ensure you have version 8.0 or higher. You can check your version by running `dotnet --info` in a terminal.
+1. **Git installed:** You will need Git for version control. If you don't have Git installed, you can download it from the [Git website](https://git-scm.com/downloads)
+1. **Development IDE of choice:** Choose an Integrated Development Environment (IDE) that you're comfortable with for development. Although there are various popular choices, such as Visual Studio, Visual Studio Code, and others, this guide will focus on using **Visual Studio**, as it is the primary IDE for the Stride project, and as of writing, we use **Visual Studio 2022**. You can download the free Community edition from the [Visual Studio website](https://visualstudio.microsoft.com/downloads/)

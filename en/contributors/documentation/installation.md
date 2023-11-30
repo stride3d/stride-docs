@@ -1,27 +1,17 @@
 # Local installation
 This guide will walk you through the steps to install the Stride Docs website on your local machine for development purposes. Although we use the Windows operating system for development, the steps should be similar for other operating systems.
 
-[Minor updates](content.md#small-updates) can be made directly on GitHub. However, for [more significant updates](content.md#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the **docfx** static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.
+[Minor updates](content.md#small-updates) can be made directly on GitHub. However, for [more significant updates](content.md#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the [docfx](https://dotnet.github.io/docfx/index.html) static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.
 
 This guide assumes you have a basic understanding of the technologies used in the Stride docs website.
 
-# Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Installation Steps](#installation-steps)
-- [Running the Development Server](#running-the-development-server)
-
-# Prerequisites
+## Prerequisites
 
 Before updating the Stride Docs, ensure you are familiar with the following prerequisites:
 
-1. Familiarity with the command line
-1. **.NET SDK 6.0 or higher:** You can download the installer from the [.NET SDK website](https://dotnet.microsoft.com/en-us/download)
-   - If .NET SDK is already installed, ensure you have version 6.0 or higher. You can check your version by running `dotnet --info` in a terminal.
-1. **Git installed:** You will need Git for version control. If you don't have Git installed, you can download it from the [Git website](https://git-scm.com/downloads)
-1. **Development IDE of choice:** Choose an Integrated Development Environment (IDE) that you're comfortable with for development. Although there are various popular choices, such as Visual Studio, Visual Studio Code, and others, this guide will focus on using **Visual Studio**, as it is the primary IDE for the Stride project, and as of writing, we use **Visual Studio 2022**. You can download the free Community edition from the [Visual Studio website](https://visualstudio.microsoft.com/downloads/)
+[!INCLUDE [docs-prerequisites](../../includes/docs-prerequisites.md)]
 
-# Installation Steps
+## Installation Steps
 
 1. ❓You might want to create an issue so we can track your contribution and avoid duplicate work. If you're unsure whether your contribution is needed, feel free to create an issue and ask
 1. 🍴 Fork the repository by navigating to the [Stride Docs repository](https://github.com/stride3d/stride-docs) and clicking the **Fork** button in the top-right corner
@@ -65,7 +55,7 @@ Uninstall docfx if you need to downgrade
 dotnet tool uninstall -g docfx
 ```
 
-# Running the Development Server
+## Running the Development Server
 
 We've created a PowerShell script [BuildDocs.ps1](https://github.com/stride3d/stride-docs/blob/master/BuildDocs.ps1) with a context menu where you can select the language, include the API build, and run the development server.
 
