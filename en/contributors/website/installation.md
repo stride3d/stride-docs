@@ -10,10 +10,7 @@ This guide assumes you have a basic understanding of the technologies used in th
 
 Before updating the Stride website, ensure you are familiar with the following prerequisites:
 
-1. **Node.js 16+ (including npm) installed:** You can download the installer from the [Node.js website](https://nodejs.org/en/download)
-   - If Node.js is already installed, ensure you have version 16 or higher. You can check your version by running `node -v` in a terminal. Note that `npm`, the package manager for Node.js, is included with the installation
-1. **Git installed:** You will need Git for version control. If you don't have Git installed, you can download it from the [Git website](https://git-scm.com/downloads)
-1. **Development IDE of choice:** Choose an Integrated Development Environment (IDE) that you're comfortable with for development. Although there are various popular choices, such as Visual Studio, Visual Studio Code, and others, this guide will focus on using **Visual Studio**, as it is the primary IDE for the Stride project, and as of writing, we use **Visual Studio 2022**. You can download the free Community edition from the [Visual Studio website](https://visualstudio.microsoft.com/downloads/)
+[!INCLUDE [docs-prerequisites](../../includes/docs-prerequisites.md)]
 
 ## Installation Steps
 

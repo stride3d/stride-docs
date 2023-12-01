@@ -52,7 +52,7 @@ items:
 #    href: documentation/new-language.md
   - name: Roadmap
     href: documentation/roadmap.md
-  - name: DocFX
+  - name: Docfx
     href: documentation/docfx.md
   - name: Deployment
     href: documentation/deployment-azure.md

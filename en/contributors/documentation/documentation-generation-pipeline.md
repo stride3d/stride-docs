@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As of now, **DocFX** does not natively support the generation of multi-language and multi-version documentation. To address this limitation, the Stride team has developed a PowerShell script. Initially, separate scripts were created for each language; however, these have since been consolidated into a single script named [`BuildDocs.ps1`](https://github.com/stride3d/stride-docs/blob/staging/BuildDocs.ps1). This unified script is capable of generating documentation in all supported languages.
+As of now, **Docfx** does not natively support the generation of multi-language and multi-version documentation. To address this limitation, the Stride team has developed a PowerShell script. Initially, separate scripts were created for each language; however, these have since been consolidated into a single script named [`BuildDocs.ps1`](https://github.com/stride3d/stride-docs/blob/staging/BuildDocs.ps1). This unified script is capable of generating documentation in all supported languages.
 
 The script serves two main purposes:
 
@@ -15,16 +15,16 @@ Here's a straightforward explanation of how the documentation generation process
 
 The `/en` folder serves as the repository for the primary documentation files. When documentation for another language (e.g., Japanese) is built, the files from `/en` are copied over to a temporary folder, for example, `/jp-tmp`. This ensures that the non-English versions will contain all the files present in the `/en` folder. Files that have been translated (found in folders like `/jp`) will overwrite their English counterparts in the temp folder `/jp-tmp`.
 
-DocFX is invoked multiple times, once for each language, to create the documentation. The generated documents are stored in the `_site` folder, organized according to the latest version information obtained from `version.json`. For example:
+Docfx is invoked multiple times, once for each language, to create the documentation. The generated documents are stored in the `_site` folder, organized according to the latest version information obtained from `version.json`. For example:
 
 ```
 /_site/4.1/en
 /_site/4.1/jp
 ```
 
-### DocFX Files Processed
+### Docfx Files Processed
 
-This section outlines the file processing carried out by DocFX during the documentation generation:
+This section outlines the file processing carried out by Docfx during the documentation generation:
 
 - **Table of Contents (TOC) Files:** 7 files processed
 - **Assets:** 1620 items (images, videos, etc.) included
