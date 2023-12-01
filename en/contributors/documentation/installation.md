@@ -1,7 +1,7 @@
 # Local installation
 This guide will walk you through the steps to install the Stride Docs website on your local machine for development purposes. Although we use the Windows operating system for development, the steps should be similar for other operating systems.
 
-[Minor updates](content.md#small-updates) can be made directly on GitHub. However, for [more significant updates](content.md#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the [docfx](https://dotnet.github.io/docfx/index.html) static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.
+[Minor updates](content.md#small-updates) can be made directly on GitHub. However, for [more significant updates](content.md#major-updates) that affect multiple pages, we recommend using a local development environment so you can see the impact of your changes beforehand. This is because we use the [Docfx](https://dotnet.github.io/docfx/index.html) static site generator, and in some cases, all pages need to be regenerated. This approach helps you assess your changes before submitting a pull request.
 
 This guide assumes you have a basic understanding of the technologies used in the Stride docs website.
 
@@ -20,7 +20,7 @@ Before updating the Stride Docs, ensure you are familiar with the following prer
 1. Make sure you have also Stride repo cloned on **the same level** as stride-docs, read more about it [here](https://github.com/stride3d/stride)
    - This repo is needed for API documentation generation
 1. 📁 Go to the project folder `cd stride-docs`
-1. 🚀 Let's start with the **docfx**
+1. 🚀 Let's start with the **Docfx**
 
 Enter the following command to install the latest docfx
 
@@ -36,19 +36,19 @@ docfx --version
 
 **Other options**
 
-Update to the latest docfx
+Update to the latest Docfx
 
 ```
 dotnet tool update -g docfx
 ```
 
-Install a specific version of docfx
+Install a specific version of Docfx
 
 ```
 dotnet tool update -g docfx --version 2.67.0
 ```
 
-Uninstall docfx if you need to downgrade
+Uninstall Docfx if you need to downgrade
 
 
 ```

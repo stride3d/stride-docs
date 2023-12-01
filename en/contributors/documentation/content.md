@@ -37,7 +37,7 @@ For the following instructions, use the [Stride Docs GitHub repository](https://
 
 Major updates can be defined as significant changes to the website's design, where it's beneficial to preview the impact of your changes to ensure they achieve the desired result. This may include:
 
-- Update docfx version
+- Update Docfx version
 - Modifying layouts
 - Revamping design elements
 
@@ -92,9 +92,9 @@ In addition to the Manual and Tutorial sections mentioned above, the same princi
 
 ## Shortcodes and Includes
 
-Docfx supports additional markdown syntax to enrich content. These syntaxes are specific to docfx and **may not render** correctly on other platforms, like GitHub.
+Docfx supports additional markdown syntax to enrich content. These syntaxes are specific to Docfx and **may not render** correctly on other platforms, like GitHub.
 
-For more information, read the docfx documentation on [shortcodes and includes](https://dotnet.github.io/docfx/docs/markdown.html?tabs=linux%2Cdotnet). Some commonly used features include:
+For more information, read the Docfx documentation on [shortcodes and includes](https://dotnet.github.io/docfx/docs/markdown.html?tabs=linux%2Cdotnet). Some commonly used features include:
 
 - **Alert**: These are block quotes that render with distinct colors and icons, highlighting the importance or nature of the content
 - **Video**: Embed video content directly into your documentation
@@ -122,7 +122,7 @@ Our main web assets include:
 
 ### Bootstrap Customization
 
-We utilize the `modern` template provided by docfx, which employs the [Bootstrap](https://getbootstrap.com/) framework, version **5.3**. This includes the dark theme, enabled by docfx.
+We utilize the `modern` template provided by Docfx, which employs the [Bootstrap](https://getbootstrap.com/) framework, version **5.3**. This includes the dark theme, enabled by Docfx.
 
 > [!IMPORTANT]
 > Prioritize the use of Bootstrap's inherent styling before integrating any custom styles. You should be familiar with [Bootstrap Utilities](https://getbootstrap.com/docs/5.3/utilities/api/) which help you to achieve most of the styling requirements.
