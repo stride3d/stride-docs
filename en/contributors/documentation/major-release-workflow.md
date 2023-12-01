@@ -23,3 +23,5 @@ The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while 
 ## Other locations to update
 
 1. Update [README.md](https://github.com/stride3d/stride/blob/master/README.md) in the Stride repo, Building from source - Prerequisites section, bump .NET version
+1. Modify `contributors\documentation\installation.md`
+   - Update SDK version

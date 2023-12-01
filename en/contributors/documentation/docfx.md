@@ -1,28 +1,16 @@
-# DocFX
-[docfx](https://www.11ty.dev/) is a static site generator that uses JavaScript as its templating language. It is a very powerful tool that allows us to create a website with a lot of flexibility and customization. It is also very easy to use and learn. This section will cover the basics of Eleventy configuration on the Stride website. Creating and updating the content is described in our [Content](content.md) section.
+# Docfx
 
-We used to use **Jekyll** as our static site generator, but we decided to switch to Eleventy because of its flexibility and ease of use. We also wanted to use a tool that is more widely used and supported, which is why we decided to switch to Eleventy.
+[Docfx](https://dotnet.github.io/docfx/index.html) is a static site generator that uses C# as its templating language. It is an exceptionally powerful tool, offering immense flexibility and customization options for creating a documentation website. Moreover, Docfx is user-friendly and easy to learn. This section covers the basics of Docfx configuration for the Stride Docs website, while the creation and updating of content are detailed in our [Content](content.md) section.
+
+After reviewing various static site generator options, we decided to continue using Docfx, particularly in light of the release of the new `modern` Docfx template. This template leverages Bootstrap 5.3 and has recently introduced a dark theme feature.
 
 ## Packages and Dependencies
-Eleventy is a **Node.js** application. Please follow our [installation](installation.md) guide to install Node.js and all the required dependencies.
 
-Packages we currently use:
-
-- Dev Dependencies
-  - `@11ty/eleventy` v2.0 - Main package for the static site generator
-  - `@11ty/eleventy-plugin-rss` - RSS feed plugin
-  - `@11ty/eleventy-plugin-syntaxhighlight` - Syntax highlighting plugin (dark and light theme in `/css/syntax-highlighting.scss`)
-- Dependencies
-  - `@11ty/eleventy-fetch` - Fetch plugin
-  - `@fortawesome/fontawesome-free` - Font Awesome with a variety of awesome icons 😃🤩
-  - `bootstrap` - Bootstrap 5.3
-  - `lunr` - Lunr search plugin that consumes local `search.json (/search.liquid)` and remote `index.json` from the docs website; the script is in `/assets/scripts/search.liquid`
-  - `markdown-it-anchor` - Anchor plugin for markdown-it
-  - `markdown-it-table-of-contents` - Table of contents plugin for markdown-it, used mainly in blog posts as `[[TOC]]`
-  - `sass` - Sass compiler for our `/css/*.scss` files
+Currently, we are not utilizing any additional packages.
 
 ## Configuration
-The Eleventy configuration is located in the `.eleventy.js` file at the root of the project. This file contains all the configuration settings for the Eleventy build process. As it is a JavaScript file, you can utilize all JavaScript features and syntax within it.
+
+The configuration for Docfx is located in the `en\docfx.json` file. This file contains all the settings necessary for the Docfx build process.
 
 **What do you find in this file?**
 
