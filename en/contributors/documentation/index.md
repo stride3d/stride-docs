@@ -30,3 +30,5 @@ Various Stride systems rely on content fetched and processed from either the Str
    - The **Stride Launcher** utilizes this file when you click a release notes button.
 1. https://doc.stride3d.net/latest/en/diagnostics/index.html
    - Diagnostic warnings in the Stride IDE reference pages in the Stride Docs - Diagnostics section. This ensures that users can quickly find detailed explanations and potential solutions for any issues encountered.
+1. https://doc.stride3d.net/latest/en/studio_getting_started_links.txt
+   - The **Stride Launcher** is using this file in `Urls.Designer.cs`.
