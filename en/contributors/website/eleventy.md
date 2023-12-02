@@ -73,7 +73,7 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `posts` - Blog posts
 - `posts/2014-2021` - Old blog posts which are merged to the same output folder as `/posts`
   - this folder is only for convenience to easily access new posts
-- `wiki` - Excluded from build process, used only for wiki deployment
+- `wiki` - GitHub wiki content - Excluded from build process, used only for wiki deployment. This will be decommissioned because the content was moved to Stride Docs
 
 ### Files
 
