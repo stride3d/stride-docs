@@ -94,7 +94,7 @@ In addition to the Manual and Tutorial sections mentioned above, the same princi
 
 Docfx supports additional markdown syntax to enrich content. These syntaxes are specific to Docfx and **may not render** correctly on other platforms, like GitHub.
 
-For more information, read the Docfx documentation on [shortcodes and includes](https://dotnet.github.io/docfx/docs/markdown.html?tabs=linux%2Cdotnet). Some commonly used features include:
+For more information, read the Docfx documentation on [markdown, shortcodes and includes](https://dotnet.github.io/docfx/docs/markdown.html?tabs=linux%2Cdotnet). Some commonly used features include:
 
 - **Alert**: These are block quotes that render with distinct colors and icons, highlighting the importance or nature of the content
 - **Video**: Embed video content directly into your documentation
