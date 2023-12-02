@@ -28,7 +28,7 @@ Enter the following command to install the latest docfx
 dotnet tool install -g docfx
 ```
 
-Or check the inslalled version is at least `2.67.0`
+Or check the installed version is at least `2.74.1`
 
 ```
 docfx --version
@@ -45,11 +45,10 @@ dotnet tool update -g docfx
 Install a specific version of Docfx
 
 ```
-dotnet tool update -g docfx --version 2.67.0
+dotnet tool update -g docfx --version 2.74.1
 ```
 
 Uninstall Docfx if you need to downgrade
-
 
 ```
 dotnet tool uninstall -g docfx

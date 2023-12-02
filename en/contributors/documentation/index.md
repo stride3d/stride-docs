@@ -28,3 +28,5 @@ Various Stride systems rely on content fetched and processed from either the Str
    - This JSON file is crucial for integrating the Stride Docs search functionality with the Stride Website. It ensures that search results are comprehensive, including relevant information from both the Stride website and Stride Docs.
 1. https://doc.stride3d.net/latest/en/ReleaseNotes/ReleaseNotes.md
    - The **Stride Launcher** utilizes this file when you click a release notes button.
+1. https://doc.stride3d.net/latest/en/diagnostics/index.html
+   - Diagnostic warnings in the Stride IDE reference pages in the Stride Docs - Diagnostics section. This ensures that users can quickly find detailed explanations and potential solutions for any issues encountered.
