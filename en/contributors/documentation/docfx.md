@@ -10,82 +10,71 @@ Currently, we are not utilizing any additional packages.
 
 ## Configuration
 
-The configuration for Docfx is located in the `en\docfx.json` file. This file contains all the settings necessary for the Docfx build process.
+The configuration for Docfx is located in the `en\docfx.json` file. This file contains all the necessary settings for the Docfx build process.
 
-**What do you find in this file?**
+Contents of the Configuration File:
 
-- plugins configuration - All the plugins we use
-- pass through files - Files that are copied to the output folder without any processing
-- custom collections - Custom collections used in the templates like `tagList` and `yearList`
-- filters - Custom filters used in the templates
-- custom shortcodes - Custom [shortcodes](content.md#shortcodes-and-includes) used in the templates, pages or blog posts.
+- **API Sources**: Specifies the Stride path and selected projects for API documentation generation
+- **Global Metadata**: Contains global configuration settings for the documentation build
+- **File Metadata**: Defines folder sections to be processed for documentation generation, such as Manuals, Tutorials, etc.
+- **Resource - Pass Through Files**: Lists files that are copied directly to the output folder without processing
+- **Other Configuration**: Explore the file for additional configuration options
 
-The file is well-commented and should be self-explanatory. If you need to add a new configuration, please follow the existing structure and include a comment to explain the new configuration.
+For more details on configuration options, visit the [Docfx Configuration Documentation](https://dotnet.github.io/docfx/docs/config.html).
 
 ## Global Data
 
-Global data is located in the `/_data` folder. It contains all the global data that is accessible in all the templates. Currently, we have these JSON files:
-
-- `site.json` - Contains all the global data for the website, used in the templates and shortcodes.
-- `features.json` - Contains all the data for the features page and its features sections.
-- `sponsors.json` - Contains sponsor information used in multiple places on the website.
-
-Our `site.json` file contains these main properties, with only some listed below:
-
-- `dark-mode` - Dark mode toggle `true|false`
-- `alert-banner` - Global banner below navigation `true|false`
-- `docs-search` - Includes docs website content in the search `true|false`
-- `links` - Contains all the main links used across the website (social media, docs, GitHub, etc.)
-- `authors` - Contains all the authors used in the blog posts
-- repeated data - like `csharp-version`, `dotnet-version`, `download-version` which are used in multiple places on the website and are updated with every release
+Docfx currently does not support global data like 11ty. At present, *Mustache* can only be used in templates.
 
 ## Folder Structure
 
-The folder structure is crucial for Eleventy, as it determines the output of the build process. The folder structure is organized as follows:
+The folder structure plays a vital role in the documentation generation process, as it determines the output of the build. The structure is organized as follows:
 
-**Folders**
+### Folders
 
-- `/_data` - Global data
-- `/_drafts` - Draft blog posts (excluded from the build process)
-- `/_includes` - Reusable code snippets that can be included in multiple pages
-- `/_layouts` -  Main layout pages (`container`, `page`, `post`) using the primary layout page `default`
-- `/_site` - Output build folder (excluded in `.gitignore` and used for deployment) 
-- `/assets` - Additional assets, such as scripts
-- `/blog` - Blog content page
-- `/css` - Website stylesheets
-- `/files` - Stride installer files
-- `/images` - Images and MP4 files used on the website
-- `/legal` - Content page
-- `/posts` - Blog posts
-- `/posts/2014-2021` - Old blog posts which are merged to the same output folder as `/posts`
-  - this folder is only for convenience to easily access new posts
+- `.github`: Contains GitHub Action workflows
+- `_site`: The output build folder (excluded in `.gitignore` and used for deployment)
+- `en`: Contains the English language documentation
+- `en\api`: Automatically generated folder from the Stride API
+- `en\contributors`: Documentation for contributors
+- `en\diagnostics`: Diagnostic pages referenced by Stride solution warnings in the IDE
+- `en\examples`: Additional content for C# XML comments, which are merged into API documentation and linked by **uids**
+- `en\includes`: Markdown files whose content can be included in multiple `.md` files across the documentation.
+- `en\manual`: Documentation for the manual
+- `en\media`: Main media assets
+- `en\ReleaseNotes`: Documentation for release notes
+- `en\template`: Docfx assets for minor template customization, including CSS and JS files
+- `en\tutorials`: Documentation for tutorials
+- `jp`: Japanese language documentation, translated from the English version (currently not updated)
+- `wiki`: GitHub wiki content - Excluded from the build process and used only for wiki deployment. This section will be decommissioned as the content has been moved to Stride Docs.
 
 ### Files
 
-- `/posts/posts.json` - Blog post defaults so they don't have to be repeated in the front matter
-- `*.html` - HTML content pages
-- `*.liquid` - Liquid content pages
-- `*.md` - Markdown content pages
-- `*.njk` - Nunjucks content pages
-- `.eleventy.js` - Eleventy configuration file
-- `.eleventyignore` - Lists files and folders not to be processed by Eleventy
-- `package.json` - Eleventy project metadata used by `npm`
+- `en\*.md` - Markdown content pages
+- `en\*.yml` - Table of content files
+- `en\.nojekyll` - GitHub Action flag
+- `en\docfx.json` - Docfx configuration file
+- `en\filterConfig.yml` - API exclusion rules
+- `en\languages.json` - Languages configuration
 
-### Non Eleventy files
+### Non Docfx files
 
-- `.nojekyll` - Special file for GitHub Pages
-- `CNAME` - Custom domain for GitHub Pages
 - `appsettings.json` - ASP.NET Core configuration file
 - `appsettings.Development.json` - ASP.NET Core configuration file
+- `build-all.bat` - 
+- `BuildDocs.ps1` - 
+- `OldDocsFix.ps1` - 
 - `Program.cs` - ASP.NET Core startup file
-- `Stride.Web.csproj` - ASP.NET Core project file
-- `Stride.Web.sln` - ASP.NET Core solution file
-- `Stride.Web.csproj.user` - ASP.NET Core project file
+- `run.bat` - 
+- `run-fix.bat` - 
+- `Stride.Docs.csproj` - ASP.NET Core project file
+- `Stride.Docs.sln` - ASP.NET Core solution file
+- `Stride.Docs.csproj.user` - ASP.NET Core project file
+- `versions.json` - 
 - `web.config` - Configuration file for IIS deployment
-- `web.Release.config` - Configuration file for Windows ASP.NET Core deployment
 
 > [!NOTE]
-> This project includes Visual Studio solution and files so you can edit the files from the Visual Studio project.
+> This project includes Visual Studio solution so you can edit the files from the Visual Studio IDE.
 
 ## Layouts
 
