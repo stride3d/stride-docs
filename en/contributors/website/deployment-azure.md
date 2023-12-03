@@ -9,7 +9,7 @@ This guide is crafted for individuals who already have access to the Azure subsc
 Deployments to Azure Web Apps are automated through GitHub Actions, forming an integral part of our Continuous Integration/Continuous Deployment (CI/CD) process. The CI/CD pipeline is configured to automatically trigger deployments upon merging changes into either the `staging` or `release` branches.
 
 > [!NOTE]
-> The deployment process outlined here is already established and running, hosted on Azure and sponsored by the .NET Foundation. This guide serves primarily as a reference for maintainers in the event that a new deployment setup is required. 
+> The deployment process outlined here is already established and running, hosted on Azure and sponsored by the .NET Foundation. This guide serves primarily as a reference for maintainers in the event that a new deployment setup is required.
 
 ### Setting up a new Azure Web App
 

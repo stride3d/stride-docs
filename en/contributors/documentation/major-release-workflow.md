@@ -12,7 +12,7 @@ Assuming the transition is from version `4.1` to `4.2`, and that the Stride sour
    - `name: 4.1 release notes` with `href: ReleaseNotes-4.1.md`
 1. In `en\docfx.json`
    - `_appFooter`: Increase the version number
-   - Change `TargetFramework` to the current framework version being used. Ensure to test this step locally
+   - Change `TargetFramework`in two locations to the current framework version being used. Ensure to test this step locally
 1. Edit `versions.json`
    - Under `versions`, add the new version `4.2`
 1. For GitHub Actions deployment update `*.yml` files in the `.github\workflows\` folder
