@@ -6,8 +6,10 @@ Our team has explored various deployment options, ultimately selecting the metho
 
 This guide is crafted for individuals who already have access to the Azure subscription. It provides step-by-step instructions for setting up a new Azure Web App, specifically tailored for staging environments. Note that the process for setting up a production environment is similar, but requires a distinct web app name.
 
+Deployments to Azure Web Apps are automated through GitHub Actions, forming an integral part of our Continuous Integration/Continuous Deployment (CI/CD) process. The CI/CD pipeline is configured to automatically trigger deployments upon merging changes into either the `staging` or `release` branches.
+
 > [!NOTE]
-> The deployment process outlined here is already established and running, hosted on Azure and sponsored by the .NET Foundation. This guide serves primarily as a reference for maintainers in the event that a new deployment setup is required.
+> The deployment process outlined here is already established and running, hosted on Azure and sponsored by the .NET Foundation. This guide serves primarily as a reference for maintainers in the event that a new deployment setup is required. 
 
 ### Setting up a new Azure Web App
 
@@ -76,6 +78,13 @@ The previous step will have added a GitHub Action to your repository, which migh
 1. Open the `stride-website-staging-azure.yml` workflow and update it with the values obtained in the previous step. Save your changes.
 1. This workflow might also need to be added to the `master` branch if it is not already present.
 1. Execute the workflow `stride-website-staging-azure.yml`. Ensure you select the correct branch `staging` and click **Run workflow**. This action will deploy the website to the Azure Web App.
+
+### GitHub Actions
+
+- `stride-website-github.yml`: Facilitates manual deployment to GitHub Pages in the forked repository, primarily used for showcasing updates
+- `stride-website-release-azure.yml`: Automates deployment to production upon merging changes into `release` branch, with a manual trigger option also available
+- `stride-website-staging-azure.yml`: Enables automatic deployment to [staging](https://stride-website-staging.azurewebsites.net/) upon merging changes into `staging` branch, along with an option for manual triggering
+- `stride-website-wiki.yml`: Automatically deploys to the GitHub Wiki when changes are pushed to the `wiki` folder in the `master` branch, also includes a manual trigger feature
 
 ## Deployment to GitHub Pages
 
