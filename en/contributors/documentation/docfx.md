@@ -50,57 +50,36 @@ The folder structure plays a vital role in the documentation generation process,
 
 ### Files
 
-- `en\*.md` - Markdown content pages
-- `en\*.yml` - Table of content files
-- `en\.nojekyll` - GitHub Action flag
-- `en\docfx.json` - Docfx configuration file
-- `en\filterConfig.yml` - API exclusion rules
-- `en\languages.json` - Languages configuration
+- `en\*.md`: Markdown content pages
+- `en\*.yml`: Table of content files
+- `en\.nojekyll`: A flag file for GitHub Actions
+- `en\docfx.json`: Docfx configuration file
+- `en\filterConfig.yml`: Rules for API exclusion
+- `en\languages.json`: Configuration file for languages
 
-### Non Docfx files
+### Non Docfx Files
 
-- `appsettings.json` - ASP.NET Core configuration file
-- `appsettings.Development.json` - ASP.NET Core configuration file
-- `build-all.bat` - 
-- `BuildDocs.ps1` - 
-- `OldDocsFix.ps1` - 
-- `Program.cs` - ASP.NET Core startup file
-- `run.bat` - 
-- `run-fix.bat` - 
-- `Stride.Docs.csproj` - ASP.NET Core project file
-- `Stride.Docs.sln` - ASP.NET Core solution file
-- `Stride.Docs.csproj.user` - ASP.NET Core project file
-- `versions.json` - 
-- `web.config` - Configuration file for IIS deployment
+- `appsettings.json`: Configuration file for ASP.NET Core.
+- `appsettings.Development.json`: Development-specific configuration file for ASP.NET Core.
+- `build-all.bat`: Batch file used in GitHub Actions CI/CD to build all documentation using `BuildDocs.ps1`.
+- `BuildDocs.ps1`: PowerShell script responsible for building documentation. Refer to [pipeline](documentation-generation-pipeline.md) for details.
+- `OldDocsFix.ps1`: Temporary PowerShell script for fixing old documentation.
+- `Program.cs`: Startup file for ASP.NET Core.
+- `run.bat`: Batch file to run `BuildDocs.ps1` in interactive mode.
+- `run-fix.bat`: Temporary batch file to run `OldDocsFix.ps1`.
+- `Stride.Docs.csproj`: ASP.NET Core project file.
+- `Stride.Docs.sln`: ASP.NET Core solution file.
+- `Stride.Docs.csproj.user`: User-specific ASP.NET Core project file.
+- `versions.json`: Configuration file managing versions of Stride documentation.
+- `web.config`: Configuration file for IIS deployment.
 
 > [!NOTE]
-> This project includes Visual Studio solution so you can edit the files from the Visual Studio IDE.
+> This project includes the Visual Studio solution `Stride.Docs.sln`, allowing you to edit the files using the Visual Studio IDE.
 
 ## Layouts
 
-All the layouts are located in the `/_layouts` folder. The `default` layout is the main layout page and is used by all the other layouts. 
-
-- `default` - Main layout page
-- `container` - Used by some pages
-- `page` - Used by most of the pages
-- `post` - Used by blog posts
+We utilize the default layout provided by the `modern` template, as specified in `docfx.json`.
 
 ## Includes
 
-All the includes are located in the `/_includes` folder. The includes are reusable code snippets that can be included in multiple pages.
-
-Some includes are used solely by the layouts, while others are used by the content pages.
-
-## Advanced Topics
-
-### Creating Custom Shortcodes and Includes
-
-If you need to create a custom shortcode or include, please follow the existing structure and [include a comment](content.md#shortcodes-and-includes) to explain the new shortcode or include.
-
-The shortcodes are defined in the `.eleventy.js` file, while the includes are located in the `/_includes` folder.
-
-You can explore the existing shortcodes and includes to get a better understanding of how they work and how to create new ones.
-
-### Performance Optimization
-
-ToDo: Remove this section if not needed
+All includes are located in the `/_includes` folder. These are reusable markdown snippets that can be incorporated into multiple pages.

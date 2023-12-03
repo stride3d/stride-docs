@@ -1,0 +1,44 @@
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build Stride Docs for GitHub Staging
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish-docs:
+    runs-on: windows-2022
+
+    steps:
+      - name: Dotnet Setup
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.x
+
+      - name: Checkout Stride Docs
+        uses: actions/checkout@v3
+        with:
+          path: stride-docs
+          lfs: true
+
+      - name: Checkout Stride (note the LFS)
+        uses: actions/checkout@v3
+        with:
+          repository: stride3d/stride
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: stride
+          lfs: true
+
+      - name: Install DocFX
+        run: dotnet tool update -g docfx --version 2.74.0
+
+      - name: Build documentation
+        run: ./build-all.bat
+        working-directory: stride-docs
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.9.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: stride-docs/_site
+          publish_branch: gh-pages
