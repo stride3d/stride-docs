@@ -6,6 +6,8 @@ Our team has explored various deployment options, ultimately selecting the metho
 
 This guide is crafted for individuals who already have access to the Azure subscription. It provides step-by-step instructions for setting up a new Azure Web App, specifically tailored for staging environments. Note that the process for setting up a production environment is similar, but requires a distinct web app name.
 
+Deployments to Azure Web Apps are automated through GitHub Actions, forming an integral part of our Continuous Integration/Continuous Deployment (CI/CD) process. The CI/CD pipeline is configured to automatically trigger deployments upon merging changes into either the `staging` or `release` branches.
+
 > [!NOTE]
 > The deployment process outlined here is already established and running, hosted on Azure and sponsored by the .NET Foundation. This guide serves primarily as a reference for maintainers in the event that a new deployment setup is required.
 
@@ -77,6 +79,15 @@ The previous step will have added a GitHub Action to your repository, which migh
 1. This workflow might also need to be added to the `master` branch if it is not already present.
 1. Execute the workflow `stride-docs-staging-azure.yml`. Ensure you select the correct branch `staging` and click **Run workflow**. This action will deploy the website to the Azure Web App.
 
+### GitHub Actions
+
+- `stride-website-github.yml`: Enables manual deployment to GitHub Pages in a forked repository, primarily for showcasing updates.
+- `stride-docs-release-azure.yml`: Automates deployment to production upon merging changes into the `release` branch, with a manual trigger option also available.
+- `stride-docs-release-fast-track-azure.yml`: Provides manual deployment to production, bypassing the creation of artifacts.
+- `stride-docs-staging-azure.yml`: Facilitates automatic deployment to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) when changes are merged into the `staging` branch, and includes a manual trigger option.
+- `stride-docs-staging-fast-track-azure.yml`: Allows for manual deployment to staging, skipping the creation of artifacts.
+- `stride-website-wiki.yml`: Automatically deploys to the GitHub Wiki when changes are pushed to the `wiki` folder in the `master` branch, also includes a manual trigger feature
+
 ## Deployment to GitHub Pages
 
 To showcase your updates, especially helpful for design changes pending review, you can deploy the docs website either to your infrastructure or to GitHub Pages, a free hosting service. Once deployed, share the link with us for review.
@@ -90,11 +101,21 @@ In your `stride-docs` repository:
 
 ### Run GitHub Action
 
-1. Go to **Actions**, select **Build Stride Web for GitHub Staging**
+1. Go to **Actions**, select **Build Stride Docs for GitHub Staging**
    - Click **Run workflow**; you may optionally select a branch
 2. Monitor the build logs while the action is in progress
 3. Upon successful build, a `gh-pages` branch will be created
-4. Navigate to **Settings** → **Pages**
+4. Navigate to **Settings** → **Pages** → **Branch** section
    - Choose the `gh-pages` branch with the root option and click **Save**
 5. After saving, an internal GitHub Action **pages build and deployment** is automatically created and triggered, deploying the content to the GitHub Pages website
-6. The website will be accessible at `https://[your-username].github.io/stride-docs`
+6. The website will be accessible at `https://[your-username].github.io/stride-docs/4.2/en`
+   - Change the version in the URL accordingly. You might see some JS errors, related to file expected in the root level.
+
+### Add Custom Domain
+
+Optionally, you can add also a custom domain. This should resolve JS url related errors.
+
+1. Go to **Settings** → **Pages** → **Custom domain**
+   - Enter your custom domain and follow the instructions for verification
+1. Upon saving, the **pages build and deployment** action is triggered again, adding a `CNAME` file containing your custom domain name to the `gh-pages` branch
+1. Your website should now be fully operational on your custom domain, for example, `https://stride-docs.vaclavelias.com/4.2/en/` is hosted on GitHub Pages

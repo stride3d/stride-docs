@@ -6,6 +6,8 @@ items:
   expanded: true
 - name: 💸 Donate
   href: donate.md
+- name: 🤝 Contribution Workflow
+  href: contribution-workflow.md
 - name: 🛠️ Contribute to the engine
   expanded: false
   href: engine/index.md
