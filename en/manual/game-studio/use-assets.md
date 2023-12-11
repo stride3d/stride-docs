@@ -85,7 +85,7 @@ SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
 
 When loading content from code, you should unload content when you don't need them any more. If you don't, content stays in memory, wasting GPU.
 
-To do unload an asset, use ``Content.Unload(myAsset)``.
+To unload an asset, use ``Content.Unload(myAsset)``.
 
 ## Load assets from code using UrlReference
 

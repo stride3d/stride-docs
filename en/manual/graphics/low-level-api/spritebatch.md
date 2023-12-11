@@ -10,7 +10,7 @@ A sprite batch is a collection of sprites (2D textured planes).
 
 ## Create a sprite batch
 
-Stride offers a easy way to deal will batches of sprites through the @'Stride.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
+Stride offers a easy way to deal with batches of sprites through the @'Stride.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
 
 **Code:** Creating a sprite batch
 
@@ -36,7 +36,7 @@ The @'Stride.Graphics.SpriteBatch' class has multiple draw methods to set variou
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin(GraphicsContext, SpriteSortMode.Immediate);
+spriteBatch.Begin(Game.GraphicsContext, SpriteSortMode.Immediate);
  
 // draw the sprite immediately
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
@@ -48,7 +48,7 @@ spriteBatch.End();
 There are five modes to draw a sprite batch. They are enumerated in the @'Stride.Graphics.SpriteSortMode' enum:
 
 - Deferred (default mode): the sprites are drawn at the same time at the end to reduce the drawcall overhead
-- Immediate: the sprites are draw after each each @'Stride.Graphics.SpriteBatch.Draw' call
+- Immediate: the sprites are drawn after each @'Stride.Graphics.SpriteBatch.Draw' call
 - Texture: Deferred mode but sprites are sorted based on their texture to reduce effect parameters update
 - BackToFront: Deferred mode with a sort based on the z-order of the sprites
 - FrontToBack: Deferred mode with a sort based on the z-order of the sprites
@@ -59,7 +59,7 @@ To set the mode, specify it in the @'Stride.Graphics.SpriteBatch.Begin' method.
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin(GraphicsContext); // same as spriteBatch.Begin(GraphicsContext, SpriteSortMode.Deferred);
+spriteBatch.Begin(Game.GraphicsContext); // same as spriteBatch.Begin(GraphicsContext, SpriteSortMode.Deferred);
 
 // store the modification of the sprite
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
