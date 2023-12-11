@@ -36,7 +36,7 @@ The @'Stride.Graphics.SpriteBatch' class has multiple draw methods to set variou
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin(GraphicsContext, SpriteSortMode.Immediate);
+spriteBatch.Begin(Game.GraphicsContext, SpriteSortMode.Immediate);
  
 // draw the sprite immediately
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
@@ -59,7 +59,7 @@ To set the mode, specify it in the @'Stride.Graphics.SpriteBatch.Begin' method.
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin(GraphicsContext); // same as spriteBatch.Begin(GraphicsContext, SpriteSortMode.Deferred);
+spriteBatch.Begin(Game.GraphicsContext); // same as spriteBatch.Begin(GraphicsContext, SpriteSortMode.Deferred);
 
 // store the modification of the sprite
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
