@@ -10,7 +10,7 @@ A sprite batch is a collection of sprites (2D textured planes).
 
 ## Create a sprite batch
 
-Stride offers a easy way to deal will batches of sprites through the @'Stride.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
+Stride offers a easy way to deal with batches of sprites through the @'Stride.Graphics.SpriteBatch' class. You can use this class to regroup, update, and display sprites efficiently.
 
 **Code:** Creating a sprite batch
 
