@@ -48,7 +48,7 @@ spriteBatch.End();
 There are five modes to draw a sprite batch. They are enumerated in the @'Stride.Graphics.SpriteSortMode' enum:
 
 - Deferred (default mode): the sprites are drawn at the same time at the end to reduce the drawcall overhead
-- Immediate: the sprites are draw after each each @'Stride.Graphics.SpriteBatch.Draw' call
+- Immediate: the sprites are drawn after each @'Stride.Graphics.SpriteBatch.Draw' call
 - Texture: Deferred mode but sprites are sorted based on their texture to reduce effect parameters update
 - BackToFront: Deferred mode with a sort based on the z-order of the sprites
 - FrontToBack: Deferred mode with a sort based on the z-order of the sprites
