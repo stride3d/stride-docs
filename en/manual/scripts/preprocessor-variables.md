@@ -14,8 +14,6 @@ If you're developing for multiple platforms, you often need to write custom code
 | -------------------------------------- | ------------------------------ |
 | STRIDE_PLATFORM_WINDOWS         | Windows (standard and RT)      |
 | STRIDE_PLATFORM_WINDOWS_DESKTOP | Windows (non-RT)               |
-| STRIDE_PLATFORM_WINDOWS_RT      | Windows RT                     |
-| STRIDE_PLATFORM_WINDOWS_PHONE   | Windows Phone                  |
 | STRIDE_PLATFORM_MONO_MOBILE     | Xamarin.iOS or Xamarin.Android |
 | STRIDE_PLATFORM_ANDROID         | Xamarin.Android                |
 | STRIDE_PLATFORM_IOS             | Xamarin.iOS                    |
