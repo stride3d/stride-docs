@@ -21,7 +21,7 @@ To use HRTF, first enable it globally in the **Game Settings** asset, then enabl
 
 ### 1. Enable HRTF globally
 
-1. In the **Solution Explorer** (the bottom-left pane by default), select the **Assets folder**.
+1. In **Solution explorer** (the bottom-left pane by default), select the **Assets folder**.
 
     ![Select Assets folder asset](../game-studio/media/select-asset-folder.png)
 
