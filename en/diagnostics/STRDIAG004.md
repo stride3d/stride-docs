@@ -34,11 +34,10 @@ public class STRDIAG004
 ```
 
 > [!WARNING]
-> There is an edge case with `internal`/`internal protected`, it will count as non visible when the @Stride.Core.DataMemberAttribute isn't applied.
+> There is an edge case with `internal`/`internal protected`, it will count as non visible when the @Stride.Core.DataMemberAttribute isn't applied. 
 > But when the attribute is applied then the getter counts as visible and therefore is correct.
 
 ```csharp
-// STRDIAG000.cs
 using Stride.Core;
 
 public class STRDIAG004
