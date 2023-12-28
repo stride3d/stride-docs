@@ -9,17 +9,17 @@ You can have Stride play only certain portions of an audio asset. This means, fo
 
 You can use the following properties, methods, and structures:
 
-| Property, method, or structure | Function |
-|---------|-----------|
-| [TotalLength](xref:Stride.Audio.SoundBase.TotalLength) | The total length of the [sound](xref:Stride.Audio.Sound). |
-| [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Media.PlayRange)) | Sets the time range to play within the audio asset. |
-| [PlayRange](xref:Stride.Media.PlayRange) | Time information, including the range's starting point and length. |
-| [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position) | Gets the current play position as **TimeSpan**. |
+| Property, method, or structure                                                                        | Function                                                           |
+|-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| [TotalLength](xref:Stride.Audio.SoundBase.TotalLength)                                                | The total length of the [sound](xref:Stride.Audio.Sound).          |
+| [SoundInstance.SetRange(PlayRange)](xref:Stride.Audio.SoundInstance.SetRange(Stride.Media.PlayRange)) | Sets the time range to play within the audio asset.                |
+| [PlayRange](xref:Stride.Media.PlayRange)                                                              | Time information, including the range's starting point and length. |
+| [SoundInstance.Position](xref:Stride.Audio.SoundInstance.Position)                                    | Gets the current play position as **TimeSpan**.                    |
 
 For example:
 
 ```cs
-//Assume sample length is 5 seconds.
+//Assume sample length is 4 seconds.
 var length = mySound.TotalLength;
 var begin = TimeSpan.FromSeconds(2);
 var duration = TimeSpan.FromSeconds(2);
