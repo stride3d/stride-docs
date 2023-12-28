@@ -110,12 +110,12 @@ items:
           - name: Asset control
             href: engine/assets/asset-control.md
       - name: ECS (Entity Component System)
-        href: engine/entity-component-model/index.md
+        href: engine/entity-component-system/index.md
         items:
           - name: Usage
-            href: engine/entity-component-model/usage.md
+            href: engine/entity-component-system/usage.md
           - name: Manage entities
-            href: engine/entity-component-model/managing-entities.md
+            href: engine/entity-component-system/managing-entities.md
       - name: File system
         href: engine/file-system.md
 
