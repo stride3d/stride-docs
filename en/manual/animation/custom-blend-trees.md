@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
 
-The [AnimationComponent](xref:Stride.Engine.AnimationComponent) has the property [AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
+The [AnimationComponent](xref:Stride.Engine.AnimationComponent) has the property [AnimationComponent.BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which implements from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
 
 When the animation component is updated, it calls `void BuildBlendTree(FastList<AnimationOperation> animationList)` on your script instead of updating the animations itself. This allows you to choose any combination of animation clips, speeds and blends, but is also more difficult, as all the heavy lifting is now on the script side.
 

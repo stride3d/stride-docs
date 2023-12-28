@@ -9,7 +9,7 @@ To animate a model, you need to use three kinds of assets together:
 * skeletons
 * animations
 
-You can import these assets from 3D model files. Stride supports the following model file types: ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
+Stride supports the following model file types: `.3ds`, `.blend`, `.dae`,`dxf`, `.fbx`, `.glb`, `.gltf`, `.md2`, `.md3`, `.obj`, `.ply`, `.stl`,`.stp`, `.x`.
 
 ## Import a model, skeleton, or animation from a model file
 
