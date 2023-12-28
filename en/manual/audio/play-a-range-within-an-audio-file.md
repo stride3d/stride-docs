@@ -19,7 +19,7 @@ You can use the following properties, methods, and structures:
 For example:
 
 ```cs
-//Assume sample length is 5 seconds.
+//Assume sample length is 4 seconds.
 var length = mySound.TotalLength;
 var begin = TimeSpan.FromSeconds(2);
 var duration = TimeSpan.FromSeconds(2);
