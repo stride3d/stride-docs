@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /1.*/
-Disallow: /2.*/
-Disallow: /3.*/
