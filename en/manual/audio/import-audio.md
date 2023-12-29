@@ -21,7 +21,7 @@ You can import audio files to use as **audio assets** in your project. You can i
 
     * **Sound effect**: Recommended for smaller files that you want to play directly from memory.
 
-    * **Spatialized sound**: Process the audio asset as [spatialized audio](spatialized-audio.md). Note that Stride processes audio files as mono (single-channel) audio. The source file is unaffected.
+    * **Spatialized audio*: Process the audio asset as [spatialized audio](spatialized-audio.md). Note that Stride processes audio files as mono (single-channel) audio. The source file is unaffected.
     
     * **Music**: Recommended for larger files that you want to stream from disk to save memory.
 
@@ -31,7 +31,7 @@ After you import an audio file, you can select it as an asset in the **Asset Vie
 
 You can also import a [video](../video/index.md) file and choose to import only the audio tracks from it.
 
-1. In the **Asset View**, click **Add assett** and select **Media > Video**.
+1. In the **Asset View**, click **Add asset** and select **Media > Video**.
 
     ![Add video asset](../video/media/add-video-asset.png)
 

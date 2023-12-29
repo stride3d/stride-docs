@@ -7,7 +7,7 @@
 
 ![Additive animations](media/animations-additive-sample.gif)
 
-In the example above, the leftmost animation is the *Walk* animation. The rightmost animation is the *Idle* animation. The two animations in the center are the *Walk* and *Idle* animations respectively, but have the *Reload* animation added to them. 
+In the example above, the leftmost animation is the *Walk* animation. The rightmost animation is the *Idle* animation. The two animations in the center are the *Walk* and *Idle* animations respectively, but have the *Reload* animation added to them.
 
 This means we only had to create three animations: *Walk*, *Idle*, and *Reload*. Additionally, we can add the *Reload* animation to other suitable animations (eg *Crouch*, *Strafe* or *Run*). This helps keep the memory budget and number of animations low.
 
@@ -22,7 +22,7 @@ Stride calculates the difference between the source and reference clips to creat
 We can use use the difference clip to blend the source and reference animations. We can also use the same difference clip to blend the source animation with **other** animations. If the animation you add it to is sufficiently similar to the original reference clip, then the animations blend effectively. For example, you could use it to add the reload animation to any animation that doesn't use the arms, such as crouching.
 
 >[!Note]
->Additive animations should use the same skinned mesh and skeleton. 
+>Additive animations should use the same skinned mesh and skeleton.
 
 ### Create a difference clip
 
@@ -30,7 +30,7 @@ We can use use the difference clip to blend the source and reference animations.
 
 2. As we don't need a source for this animation, click **Cancel**.
 
-    Game Studio asks if you want to create an animation without a source file. 
+    Game Studio asks if you want to create an animation without a source file.
 
     ![Create animation without source file](media/create-animation-without-source-file.png)
 

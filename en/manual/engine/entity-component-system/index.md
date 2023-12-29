@@ -2,7 +2,7 @@
 
 # Problem
 
-> `Dog` is a subclasses of `Animal`.
+> `Dog` is a subclass of `Animal`.
 
 This example is often used as an example of inheritance
 in introductions to programming. However, when things get more complex,
