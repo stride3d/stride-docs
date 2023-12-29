@@ -19,7 +19,7 @@ To create an audio listener, attach an **audio listener component** to an entity
 
 2. In the **Property Grid**, click _Add Component_ and select [Audio listener component](xref:Stride.Audio.AudioListener):
 
-    ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
+    ![Add AudioListener component](media/audio-add-audiolistener-component.png)
 
     The entity is now an audio listener.
 
