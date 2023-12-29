@@ -1,0 +1,96 @@
+pdf: true
+pdfFileName: stride-tutorials.pdf
+items:
+- name: 🎓 Tutorials
+  href: index.md
+- name: 🛠️ Game studio
+  expanded: false
+  href: gamestudio/index.md
+  items:
+  - name: Stride launcher
+    href: gamestudio/1-launcher.md
+  - name: Main interface
+    href: gamestudio/2-main-interface.md
+  - name: Navigating the scene
+    href: gamestudio/3-navigating-scene.md
+  - name: Scene management
+    href: gamestudio/4-scene-management.md
+  - name: Transforming entities
+    href: gamestudio/5-transforming-entities.md
+  - name: Asset pipeline
+    href: gamestudio/6-asset-pipeline.md
+  - name: Importing resources
+    href: gamestudio/7-importing-resources.md
+  - name: Textures
+    href: gamestudio/8-textures.md
+  - name: Materials
+    href: gamestudio/9-materials.md
+  - name: Models
+    href: gamestudio/10-models.md
+  - name: Physics intro
+    href: gamestudio/11-physics-intro.md
+  - name: Static colliders
+    href: gamestudio/12-static-colliders.md
+- name: 🌱 C# Beginner
+  expanded: false
+  href: csharpbeginner/index.md
+  items:
+  - name: Introduction
+    href: csharpbeginner/introduction.md
+  - name: Getting the entity
+    href: csharpbeginner/entity.md
+  - name: Child entities
+    href: csharpbeginner/child-entities.md
+  - name: Transform position
+    href: csharpbeginner/transform-position.md
+  - name: Editor properties
+    href: csharpbeginner/editor-properties.md
+  - name: Getting a component
+    href: csharpbeginner/get-component.md
+  - name: Adding a component
+    href: csharpbeginner/add-component.md
+  - name: DeltaTime
+    href: csharpbeginner/delta-time.md
+  - name: Cloning an entity
+    href: csharpbeginner/cloning-entities.md
+  - name: Removing an entity
+    href: csharpbeginner/removing-entities.md
+  - name: Keyboard input
+    href: csharpbeginner/keyboard-input.md
+  - name: Mouse input
+    href: csharpbeginner/mouse-input.md
+  - name: Virtual buttons
+    href: csharpbeginner/virtual-buttons.md
+  - name: Linear Interpolation
+    href: csharpbeginner/linear-interpolation.md
+  - name: Loading content
+    href: csharpbeginner/loading-content.md
+  - name: Instantiating prefabs
+    href: csharpbeginner/instantiating-prefabs.md
+- name: 📈 C# Intermediate ⭐New
+  href: csharpintermediate/index.md
+  items:
+  - name: Introduction
+    href: csharpintermediate/introduction.md
+  - name: UI basics
+    href: csharpintermediate/ui-basics.md
+  - name: Collision triggers
+    href: csharpintermediate/collision-triggers.md
+  - name: Racyasting
+    href: csharpintermediate/raycasting.md
+  - name: Project and Unproject
+    href: csharpintermediate/project-and-unproject.md
+  - name: Async scripts
+    href: csharpintermediate/async-scripts.md
+  - name: Scenes
+    href: csharpintermediate/scenes.md
+  - name: Animation
+    href: csharpintermediate/animation-basics.md
+  - name: Audio
+    href: csharpintermediate/audio.md
+  - name: First person camera
+    href: csharpintermediate/first-person-camera.md
+  - name: Third person camera
+    href: csharpintermediate/third-person-camera.md
+  - name: Navigation
+    href: csharpintermediate/navigation.md

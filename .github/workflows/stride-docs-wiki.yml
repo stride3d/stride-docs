@@ -1,0 +1,26 @@
+name: Publish to GitHub Wiki
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - wiki/**
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Run this job only if the repository is 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs'
+    runs-on: ubuntu-latest
+
+    steps:
+     - uses: actions/checkout@v3
+     - name: Upload Wiki pages
+       uses: docker://decathlon/wiki-page-creator-action:2.0.1
+       env:
+         GH_PAT: ${{ secrets.GH_PAT }}
+         ACTION_MAIL: github-bot@stride3d.net
+         ACTION_NAME: VaclavElias
+         OWNER: ${{ github.repository_owner }}
+         REPO_NAME: ${{ github.event.repository.name }}
+         MD_FOLDER: wiki

@@ -1,0 +1,568 @@
+pdf: true
+pdfFileName: stride-manual.pdf
+items:
+  - name: Manual
+    href: index.md
+  - name: Requirements
+    href: requirements/index.md
+  - name: Stride for Unity® developers
+    href: stride-for-unity-developers/index.md
+  # - name: Stride for Godot developers
+  #   href: stride-for-godot-developers/index.md
+  - name: Stride Launcher
+    href: stride-launcher/index.md
+
+  - name: Get started
+    href: get-started/index.md
+    items:
+      - name: Install Stride
+        href: get-started/install-stride.md
+      - name: Visual Studio extension
+        href: get-started/visual-studio-extension.md
+      - name: Launch Stride
+        href: get-started/launch-stride.md
+      - name: Create a project
+        href: get-started/create-a-project.md
+      - name: Game Studio
+        href: game-studio/index.md
+      - name: Assets
+        href: game-studio/assets.md
+        items:
+          - name: Create assets
+            href: game-studio/create-assets.md
+          - name: Use assets
+            href: game-studio/use-assets.md
+      - name: Scenes
+        href: game-studio/scenes.md
+        items:
+          - name: Create a scene
+            href: game-studio/create-a-scene.md
+          - name: Add entities
+            href: game-studio/add-entities.md
+          - name: Manage entities
+            href: game-studio/manage-entities.md
+          - name: Navigate in the Scene Editor
+            href: game-studio/navigate-in-the-scene-editor.md
+      - name: Launch a game
+        href: get-started/launch-a-game.md
+
+  - name: Animation
+    href: animation/index.md
+    items:
+      - name: Import animations
+        href: animation/import-animations.md
+      - name: Animation properties
+        href: animation/animation-properties.md
+      - name: Set up animations
+        href: animation/set-up-animations.md
+      - name: Preview animations
+        href: animation/preview-animations.md
+      - name: Animation scripts
+        href: animation/animation-scripts.md
+      - name: Additive animation
+        href: animation/additive-animation.md
+      - name: Procedural animation
+        href: animation/procedural-animation.md
+      - name: Custom blend trees
+        href: animation/custom-blend-trees.md
+      - name: Model node links
+        href: animation/model-node-links.md
+      - name: Custom attributes
+        href: animation/custom-attributes.md
+
+  - name: Audio
+    href: audio/index.md
+    items:
+      - name: Import audio
+        href: audio/import-audio.md
+      - name: Audio asset properties
+        href: audio/audio-asset-properties.md
+      - name: Non-spatialized audio
+        href: audio/non-spatialized-audio.md
+      - name: Spatialized audio
+        href: audio/spatialized-audio.md
+        items:
+          - name: Audio emitters
+            href: audio/audio-emitters.md
+          - name: Audio listeners
+            href: audio/audio-listeners.md
+          - name: HRTF
+            href: audio/hrtf.md
+      - name: Stream audio
+        href: audio/stream-audio.md
+      - name: Global audio settings
+        href: audio/global-audio-settings.md
+      - name: Play a range within an audio file
+        href: audio/play-a-range-within-an-audio-file.md
+      - name: Custom audio data
+        href: audio/custom-audio-data.md
+      - name: Set an audio device
+        href: audio/set-an-audio-device.md
+
+  - name: Engine
+    href: engine/index.md
+    items:
+      - name: Assets
+        href: engine/assets/index.md
+        items:
+          - name: Asset bundles
+            href: engine/assets/asset-bundles.md
+          - name: Asset control
+            href: engine/assets/asset-control.md
+      - name: ECS (Entity Component System)
+        href: engine/entity-component-system/index.md
+        items:
+          - name: Usage
+            href: engine/entity-component-system/usage.md
+          - name: Manage entities
+            href: engine/entity-component-system/managing-entities.md
+      - name: File system
+        href: engine/file-system.md
+
+  - name: Files and folders
+    href: files-and-folders/index.md
+    items:
+      - name: Project structure
+        href: files-and-folders/project-structure.md
+      - name: Cached files
+        href: files-and-folders/cached-files.md
+      - name: Version control
+        href: files-and-folders/version-control.md
+      - name: Distribute a game
+        href: files-and-folders/distribute-a-game.md
+
+  - name: Game Studio
+    href: game-studio/index.md
+    items:
+      - name: Scenes
+        href: game-studio/scenes.md
+        items:
+          - name: Create and open a scene
+            href: game-studio/create-a-scene.md
+          - name: Navigate in the Scene Editor
+            href: game-studio/navigate-in-the-scene-editor.md
+          - name: Manage scenes
+            href: game-studio/manage-scenes.md
+          - name: Load scenes
+            href: game-studio/load-scenes.md
+          - name: Add entities
+            href: game-studio/add-entities.md
+          - name: Manage entities
+            href: game-studio/manage-entities.md
+      - name: Assets
+        href: game-studio/assets.md
+        items:
+          - name: Create assets
+            href: game-studio/create-assets.md
+          - name: Manage assets
+            href: game-studio/manage-assets.md
+          - name: Use assets
+            href: game-studio/use-assets.md
+          - name: Archetypes
+            href: game-studio/archetypes.md
+      - name: Prefabs
+        href: game-studio/prefabs/index.md
+        items:
+          - name: Create a prefab
+            href: game-studio/prefabs/create-a-prefab.md
+          - name: Use prefabs
+            href: game-studio/prefabs/use-prefabs.md
+          - name: Edit prefabs
+            href: game-studio/prefabs/edit-prefabs.md
+          - name: Nested prefabs
+            href: game-studio/prefabs/nested-prefabs.md
+          - name: Override prefab properties
+            href: game-studio/prefabs/override-prefab-properties.md
+          - name: Prefab models
+            href: game-studio/prefabs/prefab-models.md
+      - name: Game settings
+        href: game-studio/game-settings.md
+        items:
+          - name: Splash screen
+            href: game-studio/splash-screen.md
+      - name: World units
+        href: game-studio/world-units.md
+
+  - name: Graphics
+    href: graphics/index.md
+    items:
+      - name: Cameras
+        href: graphics/cameras/index.md
+        items:
+          - name: Camera slots
+            href: graphics/cameras/camera-slots.md
+          - name: Animate a camera with a model file
+            href: graphics/cameras/animate-a-camera-with-a-model-file.md
+      - name: Materials
+        href: graphics/materials/index.md
+        items:
+          - name: Material maps
+            href: graphics/materials/material-maps.md
+          - name: Attributes
+            href: graphics/materials/material-attributes.md
+            items:
+              - name: Geometry attributes
+                href: graphics/materials/geometry-attributes.md
+              - name: Shading attributes
+                href: graphics/materials/shading-attributes.md
+              - name: Misc attributes
+                href: graphics/materials/misc-attributes.md
+              - name: Clear-coat shading
+                href: graphics/materials/clear-coat-shading.md
+          - name: Layers
+            href: graphics/materials/material-layers.md
+          - name: Slots
+            href: graphics/materials/material-slots.md
+          - name: Materials for developers
+            href: graphics/materials/materials-for-developers.md
+      - name: Textures
+        href: graphics/textures/index.md
+        items:
+          - name: Normal maps
+            href: graphics/textures/normal-maps.md
+          - name: Compression
+            href: graphics/textures/compression.md
+          - name: Streaming
+            href: graphics/textures/streaming.md
+          - name: Skyboxes and backgrounds
+            href: graphics/textures/skyboxes-and-backgrounds.md
+      - name: Lights and shadows
+        href: graphics/lights-and-shadows/index.md
+        items:
+          - name: Add a light
+            href: graphics/lights-and-shadows/add-a-light.md
+          - name: Point lights
+            href: graphics/lights-and-shadows/point-lights.md
+          - name: Ambient lights
+            href: graphics/lights-and-shadows/ambient-lights.md
+          - name: Directional lights
+            href: graphics/lights-and-shadows/directional-lights.md
+          - name: Skybox lights
+            href: graphics/lights-and-shadows/skybox-lights.md
+          - name: Spot lights
+            href: graphics/lights-and-shadows/spot-lights.md
+          - name: Light probes
+            href: graphics/lights-and-shadows/light-probes.md
+          - name: Light shafts
+            href: graphics/lights-and-shadows/light-shafts.md
+          - name: Shadows
+            href: graphics/lights-and-shadows/shadows.md
+          - name: Voxel Cone Tracing GI
+            href: graphics/lights-and-shadows/voxel-cone-tracing-gi.md
+      - name: Post effects
+        href: graphics/post-effects/index.md
+        items:
+          - name: Anti-aliasing
+            href: graphics/post-effects/anti-aliasing.md
+          - name: Ambient occlusion
+            href: graphics/post-effects/ambient-occlusion.md
+          - name: Bloom
+            href: graphics/post-effects/bloom.md
+          - name: Bright filter
+            href: graphics/post-effects/bright-filter.md
+          - name: Color transforms
+            href: graphics/post-effects/color-transforms/index.md
+            items:
+              - name: Film grain
+                href: graphics/post-effects/color-transforms/film-grain.md
+              - name: Gamma correction
+                href: graphics/post-effects/color-transforms/gamma-correction.md
+              - name: ToneMap
+                href: graphics/post-effects/color-transforms/tonemap.md
+              - name: Vignetting
+                href: graphics/post-effects/color-transforms/vignetting.md
+              - name: Custom color transforms
+                href: graphics/post-effects/color-transforms/custom-color-transforms.md
+          - name: Depth of field
+            href: graphics/post-effects/depth-of-field.md
+          - name: Lens flare
+            href: graphics/post-effects/lens-flare.md
+          - name: Light streaks
+            href: graphics/post-effects/light-streaks.md
+          - name: Local reflections
+            href: graphics/post-effects/local-reflections.md
+      - name: Graphics compositor
+        href: graphics/graphics-compositor/index.md
+        items:
+          - name: Scene renderers
+            href: graphics/graphics-compositor/scene-renderers.md
+            items:
+              - name: Custom scene renderers
+                href: graphics/graphics-compositor/custom-scene-renderers.md
+          - name: Debug renderers
+            href: graphics/graphics-compositor/debug-renderers.md
+          - name: Render textures
+            href: graphics/graphics-compositor/render-textures.md
+          - name: Render group and masks
+            href: graphics/graphics-compositor/render-groups-and-masks.md
+      - name: Effects and shaders
+        href: graphics/effects-and-shaders/index.md
+        items:
+          - name: Effect language
+            href: graphics/effects-and-shaders/effect-language.md
+          - name: Shading language
+            href: graphics/effects-and-shaders/shading-language/index.md
+            items:
+              - name: Classes, mixins and inheritance
+                href: graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.md
+              - name: Composition
+                href: graphics/effects-and-shaders/shading-language/composition.md
+              - name: Templates
+                href: graphics/effects-and-shaders/shading-language/templates.md
+              - name: Automatic shader stage input/output
+                href: graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md
+              - name: Shader stages
+                href: graphics/effects-and-shaders/shading-language/shader-stages.md
+          - name: Custom shaders
+            href: graphics/effects-and-shaders/custom-shaders.md
+          - name: Compile shaders
+            href: graphics/effects-and-shaders/compile-shaders.md
+      - name: Low-level API
+        href: graphics/low-level-api/index.md
+        items:
+          - name: Textures and render textures
+            href: graphics/low-level-api/textures-and-render-textures.md
+          - name: Pipeline state
+            href: graphics/low-level-api/pipeline-state.md
+          - name: Resource binding
+            href: graphics/low-level-api/resources.md
+          - name: Draw vertices
+            href: graphics/low-level-api/draw-vertices.md
+          - name: SpriteBatch
+            href: graphics/low-level-api/spritebatch.md
+          - name: SpriteFont
+            href: graphics/low-level-api/spritefont.md
+      - name: Rendering pipeline
+        href: graphics/rendering-pipeline/index.md
+        items:
+          - name: Render features
+            href: graphics/rendering-pipeline/render-features.md
+          - name: Render stages
+            href: graphics/rendering-pipeline/render-stages.md
+      - name: Sprite fonts
+        href: graphics/sprite-fonts.md
+
+  - name: Input
+    href: input/index.md
+    items:
+      - name: Gamepads
+        href: input/gamepads.md
+      - name: Gestures
+        href: input/gestures.md
+      - name: Keyboards
+        href: input/keyboards.md
+      - name: Mouse
+        href: input/mouse.md
+      - name: Pointers
+        href: input/pointers.md
+      - name: Sensors
+        href: input/sensors.md
+      - name: Virtual buttons
+        href: input/virtual-buttons.md
+
+  - name: Navigation
+    href: navigation/index.md
+    items:
+      - name: Navigation groups
+        href: navigation/navigation-groups.md
+      - name: Navigation meshes
+        href: navigation/navigation-meshes.md
+      - name: Navigation bounding boxes
+        href: navigation/navigation-bounding-boxes.md
+      - name: Navigation components
+        href: navigation/navigation-components.md
+      - name: Dynamic navigation
+        href: navigation/dynamic-navigation.md
+
+  - name: Particles
+    href: particles/index.md
+    items:
+      - name: Create particles
+        href: particles/create-particles.md
+      - name: Emitters
+        href: particles/emitters.md
+        items:
+          - name: Shapes
+            href: particles/shapes.md
+            items:
+              - name: Ribbons and trails
+                href: particles/ribbons-and-trails.md
+          - name: Materials
+            href: particles/materials.md
+          - name: Spawners
+            href: particles/spawners.md
+          - name: Initializers
+            href: particles/initializers.md
+          - name: Updaters
+            href: particles/updaters.md
+      - name: Tutorials
+        href: particles/tutorials/index.md
+        items:
+          - name: Particle materials
+            href: particles/tutorials/particle-materials.md
+          - name: Inheritance
+            href: particles/tutorials/inheritance.md
+          - name: Lasers and lightning
+            href: particles/tutorials/lasers-and-lightning.md
+          - name: Create a trail
+            href: particles/tutorials/create-a-trail.md
+          - name: Custom particles
+            href: particles/tutorials/custom-particles.md
+
+  - name: Physics
+    href: physics/index.md
+    items:
+      - name: Colliders
+        href: physics/colliders.md
+        items:
+          - name: Static colliders
+            href: physics/static-colliders.md
+          - name: Rigidbodies
+            href: physics/rigid-bodies.md
+          - name: Kinematic rigidbodies
+            href: physics/kinematic-rigid-bodies.md
+          - name: Characters
+            href: physics/characters.md
+          - name: Collider shapes
+            href: physics/collider-shapes.md
+          - name: Triggers
+            href: physics/triggers.md
+          - name: Constraints
+            href: physics/constraints.md
+      - name: Raycasting
+        href: physics/raycasting.md
+      - name: Simulation
+        href: physics/simulation.md
+      - name: Tutorials
+        href: physics/tutorials.md
+        items:
+          - name: Create a bouncing ball
+            href: physics/create-a-bouncing-ball.md
+          - name: Script a trigger
+            href: physics/script-a-trigger.md
+
+  - name: Platforms
+    href: platforms/index.md
+    items:
+      - name: Linux
+        href: platforms/linux/index.md
+        items:
+          - name: Setup and requirements
+            href: platforms/linux/setup-and-requirements.md
+          - name: Create a Linux game
+            href: platforms/linux/create-a-linux-game.md
+      - name: UWP
+        href: platforms/uwp/index.md
+        items:
+          - name: Xbox Live
+            href: platforms/uwp/xbox-live.md
+      - name: iOS
+        href: platforms/ios.md
+      - name: Add or remove a platform
+        href: platforms/add-or-remove-a-platform.md
+      - name: Set the graphics platform
+        href: platforms/set-the-graphics-platform.md
+
+  - name: Scripts
+    href: scripts/index.md
+    items:
+      - name: Types of script
+        href: scripts/types-of-script.md
+      - name: Create a script
+        href: scripts/create-a-script.md
+      - name: Use a script
+        href: scripts/use-a-script.md
+      - name: Public properties and fields
+        href: scripts/public-properties-and-fields.md
+      - name: Serialization
+        href: scripts/serialization.md
+      - name: Scheduling and priorities
+        href: scripts/scheduling-and-priorities.md
+      - name: Events
+        href: scripts/events.md
+      - name: Debugging
+        href: scripts/debugging.md
+      - name: Preprocessor variables
+        href: scripts/preprocessor-variables.md
+      - name: Create a model from code
+        href: scripts/create-a-model-from-code.md
+
+  - name: Sprites
+    href: sprites/index.md
+    items:
+      - name: Import sprite sheets
+        href: sprites/import-sprite-sheets.md
+      - name: Edit sprites
+        href: sprites/edit-sprites.md
+        items:
+          - name: Set sprite borders
+            href: sprites/set-sprite-borders.md
+      - name: Use sprites
+        href: sprites/use-sprites.md
+
+  - name: UI
+    href: ui/index.md
+    items:
+      - name: Pages
+        href: ui/ui-pages.md
+      - name: Libraries
+        href: ui/ui-libraries.md
+      - name: Editor
+        href: ui/ui-editor.md
+      - name: Add a UI to a scene
+        href: ui/add-a-ui-to-a-scene.md
+      - name: Layout system
+        href: ui/layout-system.md
+
+  - name: Video
+    href: video/index.md
+    items:
+      - name: Set up a video
+        href: video/set-up-a-video.md
+      - name: Video properties
+        href: video/video-properties.md
+      - name: Use a video as a skybox
+        href: video/use-a-video-as-a-skybox.md
+
+  - name: Virtual reality
+    href: virtual-reality/index.md
+    items:
+      - name: Enable VR
+        href: virtual-reality/enable-vr.md
+      - name: Preview a scene in VR
+        href: virtual-reality/preview-a-scene-in-vr.md
+      - name: Overlays
+        href: virtual-reality/overlays.md
+        items:
+          - name: Display a UI in an overlay
+            href: virtual-reality/display-a-UI-in-an-overlay.md
+      - name: VR sickness
+        href: virtual-reality/vr-sickness.md
+
+  - name: NuGet
+    href: nuget/index.md
+    items:
+      - name: Consume Packages
+        href: nuget/consume-packages.md
+      - name: Create Packages
+        href: nuget/create-packages.md
+
+  - name: Troubleshooting
+    href: troubleshooting/index.md
+    items:
+      - name: Logging
+        href: troubleshooting/logging.md
+      - name: Debug text
+        href: troubleshooting/debug-text.md
+      - name: Profiling
+        href: troubleshooting/profiling.md
+      - name: Stride doesn't run
+        href: troubleshooting/stride-doesnt-run.md
+      - name: Default value changes ignored at runtime
+        href: troubleshooting/default-value-changes-ignored-at-runtime.md
+      - name: Lights don't cast shadows
+        href: troubleshooting/lights-dont-cast-shadows.md
+      - name: Full call stack not available
+        href: troubleshooting/full-call-stack-not-available.md
+      - name: "Error: A SceneCameraRenderer in use has no camera assigned to its [Slot]. Make sure a camera is enabled and assigned to the [Slot]"
+        href: troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md
