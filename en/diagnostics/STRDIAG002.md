@@ -6,7 +6,7 @@
 ## Explanation
 
 The [DataMemberMode.Content](xref:Stride.Core.DataMemberMode) mutates the object which is currently in the member.
-As this is not possible with the current serializers, only mutable types are supported for `DataMemberMode.Content`. Immutable types in this context are none reference types and string.
+As this is not possible with the current serializers, only mutable types are supported for `DataMemberMode.Content`. Immutable types in this context are not reference types and strings.
 
 ## Example
 

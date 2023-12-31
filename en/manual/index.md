@@ -5,7 +5,7 @@
 These pages contain information about how to use Stride, an open-source C# game engine.
 
 > [!Note]
-> The Stride manual is under construction and updated regularly with new content. Follow [Stride on Twitter](https://twitter.com/stridedotnet?lang=en) for documentation updates.
+> The Stride manual is under construction and updated regularly with new content. Follow [Stride on X](https://x.com/stridedotnet?s=20) for documentation updates.
 
 ## Latest documentation
 
@@ -13,8 +13,8 @@ These pages contain information about how to use Stride, an open-source C# game 
 - <span class="badge text-bg-info">Updated</span> [Linux - Setup and requirements](platforms/linux/setup-and-requirements.md) - Fedora OS option added
 - <span class="badge text-bg-success">New</span> [Scripts - Serialization](scripts/serialization.md) - Serialization explained
 - <span class="badge text-bg-info">Updated</span> [Scripts - Public properties and fields](scripts/public-properties-and-fields.md) - Content improvements and additions
-- <span class="badge text-bg-success">New</span> [Engine - Entity Component model - Usage](engine/entity-component-model/usage.md) - ECS usage explained
-- <span class="badge text-bg-info">Updated</span> [Engine - Entity Component model](engine/entity-component-model/index.md) - Content improvements
+- <span class="badge text-bg-success">New</span> [Engine - Entity Component model - Usage](engine/entity-component-system/usage.md) - ECS usage explained
+- <span class="badge text-bg-info">Updated</span> [Engine - Entity Component model](engine/entity-component-system/index.md) - Content improvements
 - <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
 
 ### Previous updates

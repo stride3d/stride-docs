@@ -1,10 +1,13 @@
 # Voxel Cone Tracing Global Illumination
 
-## Howto: setup existing project with Voxel Cone Tracing GI
+## How to set up an existing project with Voxel Cone Tracing GI
 
-### Reference Stride.Voxels
 
-Since Stride is modular based, we need to add a reference to `Stride.Voxels` plugin:
+
+### Prerequesites:
+VoxelGI requires Graphics Profile Level 11 or Higher (Direct3D 11.0 / OpenGL ES 3.1). This can be set in the Game Settings asset under the Rendering category.
+
+Since Stride is modular, we need to add a reference to the `Stride.Voxels` plugin:
 
 1. In the **Solution Explorer**, right-click on the user project
 
@@ -14,7 +17,7 @@ Since Stride is modular based, we need to add a reference to `Stride.Voxels` plu
 
 3. Select `Stride.Voxels` in the list and press `OK`
 
-4. You might be asked if you want to reload project, choose whichever option, both are OK.
+4. Close and re-open the project.
 
 ### Graphics Compositor
 

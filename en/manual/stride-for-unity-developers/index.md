@@ -801,7 +801,7 @@ System.Diagnostics.Debug.WriteLine("hello");
 | `[SerializeField]`        | `[DataMember]`                      |
 | `[HideInInspector]`       | `[DataMemberIgnore]`                |
 | `[Range]`                 | `[DataMemberRange]`                 |
-| `[Header]`                | `[Display]`                         |
+| `[Header("My Header")]`   | `[Display(category: "My Header")]`  |
 | `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
 
 >[!Note]
