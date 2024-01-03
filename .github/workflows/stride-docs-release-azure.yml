@@ -33,6 +33,7 @@ jobs:
     - name: Checkout Stride Docs
       uses: actions/checkout@v3
       with:
+        ref: 97c5b1f643311fcd72e94b09027098e0cff75243
         path: stride-docs
         lfs: true
 
