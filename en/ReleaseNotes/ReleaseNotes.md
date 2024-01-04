@@ -9,10 +9,10 @@ A massive thank you to the open-source Stride community for your dedicated contr
 ## What's new in Stride 4.2
 Stride 4.2 includes numerous enhancements and improvements.
 
-- **[.NET 8 Integration](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/)**: Experience the power and efficiency of the latest .NET version in your game development. 
+- [.NET 8 Integration](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/): Experience the power and efficiency of the latest .NET version in your game development. 
   - Full compatibility with .NET 8, taking advantage of [improved runtime performance](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-  - **[C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)**: Utilize cutting-edge language features to write more concise and maintainable code, enhancing coding efficiency and reducing boilerplate code
-- **[Changed Assimp binding to Silk.Net.Assimp](https://github.com/stride3d/stride/pull/1158)**
+  - [C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/): Utilize cutting-edge language features to write more concise and maintainable code, enhancing coding efficiency and reducing boilerplate code
+- [Changed Assimp binding to Silk.Net.Assimp](https://github.com/stride3d/stride/pull/1158)
   - This change allows us to remove much of the C++/CLR code used by the asset compiler and brings us one step closer to running the asset compiler on non-windows systems.
 - [Migration NET6+ and more gettextnet#2](https://github.com/stride3d/gettextnet/pull/2)
   - Updated all of gettext.NET to the latest stable version of NET
