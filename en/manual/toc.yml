@@ -19,6 +19,8 @@ items:
         href: get-started/install-stride.md
       - name: Visual Studio extension
         href: get-started/visual-studio-extension.md
+      - name: Update Stride
+        href: get-started/update-stride.md
       - name: Launch Stride
         href: get-started/launch-stride.md
       - name: Create a project

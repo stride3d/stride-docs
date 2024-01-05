@@ -16,7 +16,7 @@
 
     > [!Note]
     > Alternatively, you can [download the .NET Framework from the Microsoft Download Center](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net472-web-installer) and restart the Stride installer.
-	
+    
 4. The **Stride Setup Wizard** opens.
 
      ![Stride Setup Wizard](media/install-stride-setup-wizard.png)
@@ -28,11 +28,11 @@
     ![Stride license agreement window](media/install-stride-license-agreement.png)
 
     Click **Accept**.
-	
+    
 5. The **Stride installation type** window opens.
 
     ![Stride installation type window](media/install-stride-installation-type.png)
-	
+    
     Select an installation type and click **Next**. 
 
 6.  The **Select installation folder** window opens.
@@ -40,13 +40,13 @@
     ![Select installation folder window](media/install-stride-select-installation-folder.png)
 
     Select a folder to install Stride to and click **Next**.
-	
+    
 7. The **Create application shortcuts** window opens.
     
     ![Create application shortcuts window](media/install-stride-create-application-shortcuts.png)
 
     Choose which shortcuts you want Stride to create, and click **Next**.
-	
+    
 8. The **Ready to Install** window opens.
     
     ![Ready to install window](media/install-stride-ready-to-install.png)
