@@ -6,6 +6,8 @@
 - [Asset](assets/index.md)
 - [Entity-component system](entity-component-system/index.md)
 - [File system](file-system.md)
+- [Build pipeline](build-pipeline.md)
+- [Asset introspection](asset-introspection.md)
 
 # See also
 
