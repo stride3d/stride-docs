@@ -1,4 +1,4 @@
-﻿# Ways to contribute
+# Ways to contribute
 
 Stride is a non-profit, community-driven, free and open source project.
 There are no full-time developers dedicated solely to Stride's advancement; instead, the engine progresses through the voluntary contributions of both the core team and the broader community.
