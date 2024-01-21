@@ -19,6 +19,8 @@ items:
         href: get-started/install-stride.md
       - name: Visual Studio extension
         href: get-started/visual-studio-extension.md
+      - name: Update Stride
+        href: get-started/update-stride.md
       - name: Launch Stride
         href: get-started/launch-stride.md
       - name: Create a project
@@ -118,6 +120,10 @@ items:
             href: engine/entity-component-system/managing-entities.md
       - name: File system
         href: engine/file-system.md
+      - name: Build pipeline
+        href: engine/build-pipeline.md
+      - name: Asset introspection
+        href: engine/asset-introspection.md
 
   - name: Files and folders
     href: files-and-folders/index.md
@@ -341,6 +347,8 @@ items:
             href: graphics/rendering-pipeline/render-stages.md
       - name: Sprite fonts
         href: graphics/sprite-fonts.md
+      - name: Graphics API
+        href: graphics/graphics-api.md
 
   - name: Input
     href: input/index.md

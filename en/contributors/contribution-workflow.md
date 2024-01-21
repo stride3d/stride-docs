@@ -22,8 +22,8 @@ graph TB
     F[Sync/Merge Forked Main Branch to Branch 'X']
     G[Test your updates]
     H["Create a Pull Request (PR)"]
-    I[Wait for the PR to be Merged]
-    J[Address PR Feedback]
+    I[Address PR Feedback]
+    J[Wait for the PR to be Merged]
     K[Sync/Merge Upstream to Your Forked Main Branch]
     L{Do You Want to Make More Updates?}
     Z[End]

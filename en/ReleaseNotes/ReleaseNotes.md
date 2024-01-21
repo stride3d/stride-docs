@@ -1,18 +1,18 @@
 # Stride 4.2 Release Notes
 
-January 5th, 2024
+January 10th, 2024
 
 Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
-A massive thank you to the open-source Stride community for your dedicated contributions. This release saw X contributions from over Y amazing contributors, each playing a crucial role in making Stride 4.2 a reality.
+A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.2 a reality.
 
 ## What's new in Stride 4.2
 Stride 4.2 includes numerous enhancements and improvements.
 
-- **[.NET 8 Integration](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/)**: Experience the power and efficiency of the latest .NET version in your game development. 
+- [.NET 8 Integration](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/): Experience the power and efficiency of the latest .NET version in your game development. 
   - Full compatibility with .NET 8, taking advantage of [improved runtime performance](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-  - **[C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)**: Utilize cutting-edge language features to write more concise and maintainable code, enhancing coding efficiency and reducing boilerplate code
-- **[Changed Assimp binding to Silk.Net.Assimp](https://github.com/stride3d/stride/pull/1158)**
+  - [C# 12 features](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/): Utilize cutting-edge language features to write more concise and maintainable code, enhancing coding efficiency and reducing boilerplate code
+- [Changed Assimp binding to Silk.Net.Assimp](https://github.com/stride3d/stride/pull/1158)
   - This change allows us to remove much of the C++/CLR code used by the asset compiler and brings us one step closer to running the asset compiler on non-windows systems.
 - [Migration NET6+ and more gettextnet#2](https://github.com/stride3d/gettextnet/pull/2)
   - Updated all of gettext.NET to the latest stable version of NET
@@ -99,8 +99,54 @@ Stride 4.2 includes numerous enhancements and improvements.
 * Let the user pick which animation stack to import in an fbx by @adrsch in https://github.com/stride3d/stride/pull/1977
 * Fixes OpenGL by @MaximilianEmel in https://github.com/stride3d/stride/pull/2023
 * Update dotnet 8 by @Doprez in https://github.com/stride3d/stride/pull/1616
+* [Native] - Implement IsXInputDevice method in C# by @Jklawreszuk in https://github.com/stride3d/stride/pull/1926
+* Rollback changes to Stride.Native.targets and add StrideNative.cpp by @Kryptos-FR in https://github.com/stride3d/stride/pull/2047
+* Use central package management by @Kryptos-FR in https://github.com/stride3d/stride/pull/2045
+* [Build] Use central package management  - missed a couple of projects by @Kryptos-FR in https://github.com/stride3d/stride/pull/2052
+* [Profiling] Fix performance regression in FastTextRenderer by @Eideren in https://github.com/stride3d/stride/pull/2058
+* [Project] GitIgnore Rider cache/user config by @Eideren in https://github.com/stride3d/stride/pull/2062
+* [Build] Fix build following changes from #2045 by @Eideren in https://github.com/stride3d/stride/pull/2061
+* Replace net 6 leftovers by @Jklawreszuk in https://github.com/stride3d/stride/pull/2038
+* updated missed dotnet 6 reference in readme by @Doprez in https://github.com/stride3d/stride/pull/2051
+* [Math] Relax constraints on arguments passed as ref across math types by @Eideren in https://github.com/stride3d/stride/pull/2044
+* fix(fbx import): Prevent zero-length tangents/normals (partial fix for #325) by @froce in https://github.com/stride3d/stride/pull/2066
+* [Editor] Fix NuGet.Frameworks failing to load causing RoslynPad to break by @Eideren in https://github.com/stride3d/stride/pull/2075
+* [Native] Undo lightprobe-related code removal by @Jklawreszuk in https://github.com/stride3d/stride/pull/2077
+* Fix extension by @Doprez in https://github.com/stride3d/stride/pull/2064
+* [Build] Move Directory.Packages.props by @Kryptos-FR in https://github.com/stride3d/stride/pull/2055
+* Fix Typos in XML docs by @Doprez in https://github.com/stride3d/stride/pull/2091
+
+## Contributors
+
+A heartfelt thank you to all the contributors who have played a significant role in this release:
+
+- [@MeharDT](https://github.com/MeharDT)
+- [@Basewq](https://github.com/Basewq)
+- [@Doprez](https://github.com/Doprez)
+- [@IXLLEGACYIXL](https://github.com/IXLLEGACYIXL)
+- [@SVNMLR](https://github.com/SVNMLR)
+- [@VaclavElias](https://github.com/VaclavElias)
+- [@acastrodev](https://github.com/acastrodev)
+- [@Ethereal77](https://github.com/Ethereal77)
+- [@adrsch](https://github.com/adrsch)
+- [@Jklawreszuk](https://github.com/Jklawreszuk)
+- [@Eideren](https://github.com/Eideren)
+- [@Fydar](https://github.com/Fydar)
+- [@froce](https://github.com/froce)
+- [@Kryptos-FR](https://github.com/Kryptos-FR)
+- [@Schossi](https://github.com/Schossi)
+- [@MaximilianEmel](https://github.com/MaximilianEmel)
+- [@ch3mbot](https://github.com/ch3mbot)
+- [@tebjan](https://github.com/tebjan)
+- [@JeromyWalsh](https://github.com/JeromyWalsh)
+- [@azeno](https://github.com/azeno)
+- [@WojciechNagorski](https://github.com/WojciechNagorski)
+- [@manio143](https://github.com/manio143)
 
 ## New Contributors
+
+We are especially excited to welcome the following new contributors to Stride with the 4.2 release. Your contributions are greatly appreciated!
+
 * @adrsch made their first contribution in https://github.com/stride3d/stride/pull/1920
 * @froce made their first contribution in https://github.com/stride3d/stride/pull/1788
 * @Fydar made their first contribution in https://github.com/stride3d/stride/pull/1941
