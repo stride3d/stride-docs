@@ -30,16 +30,12 @@ items:
     expanded: true
     href: engine/architecture/index.md
     items:
-    - name: Build pipeline
-      href: engine/architecture/build-pipeline.md
     - name: Build details
       href: engine/architecture/build-details.md
-    - name: Graphics API
-      href: engine/architecture/graphics-api.md
     - name: Dependency graph
       href: engine/architecture/dependency-graph.md
-    - name: Asset introspection
-      href: engine/architecture/asset-introspection.md
+    - name: Copy and paste
+      href: engine/architecture/copy-paste.md
 - name: 📖 Contribute to the documentation
   expanded: false
   href: documentation/index.md
