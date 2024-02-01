@@ -34,6 +34,8 @@ items:
       href: engine/architecture/build-details.md
     - name: Dependency graph
       href: engine/architecture/dependency-graph.md
+    - name: Copy and paste
+      href: engine/architecture/copy-paste.md
 - name: 📖 Contribute to the documentation
   expanded: false
   href: documentation/index.md
