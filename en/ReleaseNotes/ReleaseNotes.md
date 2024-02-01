@@ -4,7 +4,7 @@ January 10th, 2024
 
 Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
-Read the full blog post here: [stride3d.net/blog/announcing-stride-4-2-in-dotnet-8](https://www.stride3d.net/blog/announcing-stride-4-2-in-dotnet-8/)
+Read the full blog post here: [Announcing Stride 4.2](https://www.stride3d.net/blog/announcing-stride-4-2-in-dotnet-8/)
 
 A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.2 a reality.
 
