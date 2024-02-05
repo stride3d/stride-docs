@@ -1,6 +1,6 @@
 # Stride 4.2 Release Notes
 
-January 10th, 2024
+February 6th, 2024
 
 Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
@@ -12,16 +12,27 @@ A massive thank you to the open-source Stride community for your dedicated contr
 Stride 4.2 includes numerous enhancements and improvements. Here’s what to expect:
 
 - **.NET 8 Integration**: Stride 4.2 is now fully aligned with .NET 8, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-  - **C# 12 Features**: With C# 12, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 12](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)
+
+- **C# 12 Features**: With C# 12, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 12](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)
+
 - **Changed Assimp Binding to Silk.Net.Assimp**: This update transitions the asset compiler's binding from C++/CLR to Silk.Net.Assimp, a move that not only simplifies the codebase but also paves the way for asset compilation on non-Windows systems, broadening Stride's accessibility. [See the pull request](https://github.com/stride3d/stride/pull/1158)
+
 - **Migration NET6+ and More gettextnet#2**: Stride's commitment to staying current with .NET versions continues, ensuring compatibility and leveraging the stability and features of the latest .NET environment across all aspects of the engine. [Check out the update](https://github.com/stride3d/gettextnet/pull/2)
+
 - **Enable Multiple Profiler Consumers and Add a Timeline/Tracing Profiler**: This enhancement introduces a profiler with chrome://tracing output format, significantly improving the debugging and performance tuning process by allowing for a more granular analysis of game performance. [Explore the feature](https://github.com/stride3d/stride/pull/1788)
+
 - **Feature: Add Support for F# and VB Project Types**: Stride now welcomes developers using F# and Visual Basic, offering support for code-only projects in these languages. This opens up Stride to a broader audience. [Learn about F# and VB support](https://github.com/stride3d/stride/pull/1821)
+
 - **Stride Diagnostics Analyzer**: This new tool provides immediate feedback within your IDE, identifying potential compatibility issues with Stride's serialization system. It's about making your development process smoother and helping you catch and resolve issues faster. [Discover how it works](https://www.stride3d.net/blog/new-diagnostic-analyzers-feature/), [the docs page](https://doc.stride3d.net/latest/en/diagnostics/index.html) and [here is the pull request](https://github.com/stride3d/stride/pull/1864).
+
 - **OpenVR Handle Custom Resolution Specified by the User Through VR Settings**: Enhancing VR development, this update allows developers to specify custom resolutions for VR projects, optimizing performance and visual quality for various VR devices. [See the details](https://github.com/stride3d/stride/pull/2000)
+
 - **Editor Enhancements**:
+
   - **Dynamic Snapping for Selected Objects**: This feature introduces dynamic snapping while transforming objects, improving precision and workflow efficiency within the Stride Editor. [Dynamic snapping PR](https://github.com/stride3d/stride/pull/1801)
+
   - **Animation Stack Selection for FBX Imports**: Stride now allows you to select specific animations from a stack when importing FBX files, giving you more control over the assets you bring into your projects. [Learn more](https://github.com/stride3d/stride/pull/1977)
+
   - **Automatic Asset Copying to Resources Directory**: To streamline asset management, the editor can now automatically copy imported assets to the project's Resources directory, ensuring your assets are always where they need to be. [See how it works](https://github.com/stride3d/stride/pull/1827)
 
 ## What's Changed in Details
