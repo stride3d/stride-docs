@@ -1,6 +1,6 @@
 # Stride 4.2 Release Notes
 
-January 10th, 2024
+February 6th, 2024
 
 Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
