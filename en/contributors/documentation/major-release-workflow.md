@@ -29,4 +29,6 @@ The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while 
 ## Other locations to update
 
 1. Modify `contributors\documentation\installation.md`
-   - Update SDK version reference
+   - Update SDK version references
+1. Modify `contributors\engine\building-source-windows.md`
+   - Update SDK version references

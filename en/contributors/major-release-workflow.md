@@ -1,12 +1,12 @@
-# Major Release Workflow
+# [WIP] Major Release Workflow
 
 ## Engine
 
-## Admin
+## Admin Tasks
 
-1. Update Stride repo README.md
-   - Update SDK version references
-1. Update Discord #welcome channel
-   - Update SDK version references, if you can't edit, copy the content, delete the message and create a new one
-1. Go through the steps in [Docs major release workflow](documentation/major-release-workflow.md)
-1. Go through the steps in [Website major release workflow](website/major-release-workflow.md)
+1. Update the Stride repository [README.md](https://github.com/stride3d/stride/blob/master/README.md)
+   - In the "Building from Source - Prerequisites" section, update the .NET SDK version references
+1. Update the Discord #welcome channel
+   - Refresh the SDK version references. If you're unable to edit the message directly, copy its content, delete the original message, and then create a new one with the updated information
+1. Follow the steps outlined in the [Docs Major Release Workflow](documentation/major-release-workflow.md)
+1. Proceed with the steps in the [Website Major Release Workflow](website/major-release-workflow.md)
