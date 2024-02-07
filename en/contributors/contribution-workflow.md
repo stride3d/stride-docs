@@ -1,10 +1,10 @@
 # Contribution Workflow for Stride Projects
 
-This guide outlines the fundamental workflow for contributing to various Stride projects, including the Stride Engine, Stride website, and Stride documentation. Whether you're a seasoned contributor or new to the project, this workflow ensures your contributions are effectively integrated.
+This guide outlines the fundamental workflow for contributing to various Stride projects, including the Stride engine, Stride website, and Stride documentation. Whether you're a seasoned contributor or new to the project, this workflow ensures your contributions are effectively integrated.
 
 ## Overview
 
-The contribution process involves several key steps, from forking the repository to having your changes merged into the main project. This workflow is applicable to contributions to the Stride Engine, Stride website, and Stride documentation.
+The contribution process involves several key steps, from forking the repository to having your changes merged into the main project. This workflow is applicable to contributions to the Stride engine, Stride website, and Stride documentation.
 
 ``` mermaid
 %% Define styles

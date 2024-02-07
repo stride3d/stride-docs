@@ -1,9 +1,9 @@
-﻿# Building the source to Stride engine
+# Building the source to Stride engine
 
 ## Prerequisites
 
 1. **Latest** [Git](https://git-scm.com/downloads) **with Large File Support** selected in the setup on the components dialog.
-2. [DotNet SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+2. [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
    - Run `dotnet --info` in a console or powershell window to see which versions you have installed
 3. [Visual Studio 2022](https://www.visualstudio.com/downloads/) with the following workloads:
    - `.NET desktop development` with `.NET Framework 4.7.2 targeting pack`

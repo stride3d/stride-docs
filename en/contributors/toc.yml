@@ -8,6 +8,8 @@ items:
   href: donate.md
 - name: 🤝 Contribution Workflow
   href: contribution-workflow.md
+- name: ⚙️ Major Release Workflow
+  href: major-release-workflow.md
 - name: 🛠️ Contribute to the engine
   expanded: false
   href: engine/index.md
