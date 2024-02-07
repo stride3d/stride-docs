@@ -34,7 +34,7 @@ To develop for mobile platforms, you also need:
 
 To run games made with Stride, you need:
 
-- .NET 6 if your application is not [self-contained](https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained)
+- .NET 8 if your application is not [self-contained](https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained)
 - DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan depending on the platform, and the graphics API override set in your `.csproj`
 - Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
 
