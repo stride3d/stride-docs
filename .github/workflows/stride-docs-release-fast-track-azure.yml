@@ -18,20 +18,20 @@ jobs:
     steps:
     # Setup .NET SDK
     - name: Dotnet Setup
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: stride-docs
         lfs: true
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: stride3d/stride
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,7 +42,7 @@ jobs:
       # This installs the latest version of DocFX and may introduce breaking changes
       # run: dotnet tool update -g docfx
       # This installs a specific, tested version of DocFX.
-      run: dotnet tool update -g docfx --version 2.74.0
+      run: dotnet tool update -g docfx --version 2.75.2
 
     - name: Build documentation
       run: ./build-all.bat
