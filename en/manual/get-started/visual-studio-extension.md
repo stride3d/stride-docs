@@ -10,7 +10,7 @@ You don't need to install the extension to use Stride, but we recommend it, espe
 
 When you [install Stride](install-stride.md), Stride asks if you want to install the Visual Studio extension.
 
-![Install extension](media/install-VS-plug-in-prompt.png)
+![Install extension](media/install-VS-plug-in-prompt.webp)
 
 Alternatively, you can install or reinstall the extension at any time in the Stride Launcher under **Plug-in**.
 
