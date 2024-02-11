@@ -1,8 +1,8 @@
 - name: 📖 Stride Docs
   href: index.md
 - name: 📚 Manual
-  href: manual/
-  homepage: manual/index.md
+  href: 
+  homepage: index.md
 - name: 🎓 Tutorials
   href: tutorials/index.md
   # items:
@@ -23,3 +23,6 @@
 # - name: 🔍 Diagnostics
 #   href: diagnostics/
 #   homepage: diagnostics/index.md
+- name: 🏋🏽 Community Resources
+  href: community-resources/
+  homepage: community-resources/index.md

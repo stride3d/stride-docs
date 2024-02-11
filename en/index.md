@@ -57,6 +57,15 @@ Welcome to the Stride documentation, specifically designed for game developers, 
             <p class="px-3 mb-4"><a class="stretched-link" href="diagnostics/index.md">Explore Diagnostics</a></p>
         </div>
     </div>
+<div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title h5">🏋🏽 Community resources</h2>
+                <p class="card-text">Check out al this awesome stuff that was made by others. From demo's to example projects, from shaders all the way to nifty code that you can reuse.</p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link" href="community-resources/index.md">Explore community resources</a></p>
+        </div>
+    </div>
 </div>
 
 ## 📥 Download PDF Versions
