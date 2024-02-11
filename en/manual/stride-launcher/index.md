@@ -10,7 +10,7 @@ With the **Stride launcher**, you can install, manage and run different versions
 
 If you don't have Stride installed, the Stride Launcher prompts you to install the latest version.
 
-![No version installed](../get-started/media/stride-launcher-install-last-version.png)
+![No version installed](../get-started/media/stride-launcher-install-latest-version-prompt.webp)
 
 You can install other versions of Stride in the **Switch/update version** section (**B**). To do this, click the **install** icon next to the version in the list.
 
@@ -18,7 +18,7 @@ You can install other versions of Stride in the **Switch/update version** sectio
 
 If you choose to install the latest version of Stride, the Stride Launcher asks if you want to install the Visual Studio extension.
 
-![Install Visual Studio integration](../get-started/media/install-VS-plug-in-prompt.png)
+![Install Visual Studio integration](../get-started/media/install-VS-plug-in-prompt.webp)
 
 The Visual Studio extension lets you edit shaders directly from Visual Studio, and provides syntax highlighting, live code analysis with validation, error checking, and navigation (jump to definition). Installing the extension isn't mandatory, but we recommend it.
 
