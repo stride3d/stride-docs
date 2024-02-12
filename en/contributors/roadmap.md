@@ -1,4 +1,4 @@
-# Documentation roadmap
+# Roadmap
 The Stride game engine (MIT) is a collaborative endeavor managed by a small group of core volunteer developers, each with expertise in different areas of development. There are no full-time developers dedicated solely to Stride's advancement; instead, the engine progresses through the voluntary contributions of both the core team and the broader community. These individuals dedicate their spare time to enhance and expand the engine, motivated by personal interest, passion for the project, or their areas of expertise.
 
 ## Contributors
