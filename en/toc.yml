@@ -1,8 +1,8 @@
 - name: 📖 Stride Docs
   href: index.md
 - name: 📚 Manual
-  href: 
-  homepage: index.md
+  href: manual/
+  homepage: manual/index.md
 - name: 🎓 Tutorials
   href: tutorials/index.md
   # items:
