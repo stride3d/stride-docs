@@ -11,10 +11,8 @@
 - [GalaxyCore: Network Solution for Unity, Stride, Xenko, Unigine](https://github.com/defraswiew/GalaxyCore)
 - [Regulus.Remote: A simple C# network library.](https://github.com/jiowchern/Regulus.Remote)
 - [Lite Entity System](https://github.com/RevenantX/LiteEntitySystem)
-- [Stride.Networking.Simple: A simple async event based lib for Stride](https://github.com/manio143/Stride.Networking.Simple)
 - [MUD framework for Stride](https://github.com/JoseJohnen/MUD_SKELETON/tree/main)
 - [Running Stride headless client/server](https://github.com/Ethereal77/Stride.ClientServerSample)
-
 
 ## Entiy Component System
 - [Entity Processor Example](https://github.com/Basewq/XenkoProofOfConcepts/tree/master/EntityProcessorExample) - Custom Entity Component + Processor
@@ -34,19 +32,6 @@
     - [Arch ECS integrated into Stride](https://github.com/Doprez/stride-arch-ecs#add-arch-components-in-strides-editor)
 
 
-## Code blobs
-- [Stride C# gists search](https://gist.github.com/search?l=c%23&q=stride)
-- [Async shader compilation](https://gist.github.com/Eideren/ef6be9508d8d3b0e460d8a6d15f0937b)
-- [Animation Trigger script](https://gist.github.com/Doprez/3ff7463fc48bd8e69178fde388dd1df4)
-- [Basic Stride LOD system](https://gist.github.com/Doprez/5327fbd7d8c371938088db81d82d153b)
 
-- [Create button dynamically](https://gist.github.com/Doprez/169993217a202f0e6e8c2ab93709d85c)
-- [Export/save a scene or a group of entities within a running stride game](https://gist.github.com/Eideren/0aa59644eb7c5b029d04b7fa5a285e62)
-- [Look at script](https://gist.github.com/ykafia/9579569c26e2724f1a35afab0449b72a)
 
-- [Stride 3D rendered into Avalonia](https://gist.github.com/westonsoftware/a3fa982397fe1817ece4a27d3cbc5a89)
-- [Smooth follow](https://gist.github.com/Doprez/e146f8d30b7e9cea05de138d4e3a30f0)
-- [Smooth Rotation](https://gist.github.com/Doprez/5bd571341b075c5cf257d7265c374807)
-- [Xenko/Stride 3rd person controller](https://pastebin.com/4nFbabkZ)
-- [Get Vertices and Indices from a mesh](https://gist.github.com/Doprez/3974122afee1cbddae289e16057026f3)
       

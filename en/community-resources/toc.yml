@@ -6,8 +6,10 @@ items:
   href: example-projects.md
 - name: 🎓 Tutorials
   href: tutorials-and-articles.md
-- name: ⛰️ Terrain and Water
+- name: ⨺ Models and Animations
   href: terrain-and-water.md
+- name: ⛰️ Terrain and Water
+  href: models-and-animations.md
 - name: 🍎  Physics
   href: physics.md
 - name: 🌈 Shaders

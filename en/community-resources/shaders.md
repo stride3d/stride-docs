@@ -12,4 +12,4 @@
 - [Image processing shaders from VVVV community](https://github.com/bj-rn/VL.Addons/tree/main/vl/shaders)
 - [VVVV core shaders](https://github.com/vvvv/VL.StandardLibs/tree/main/VL.Stride.Runtime/src/Effects)
 - [SDSL Overview from Tebjan](https://hackmd.io/@vN9HDo5XQAGVCM_epmoJBA/S1LxeorWT)
-
+- [Async shader compilation](https://gist.github.com/Eideren/ef6be9508d8d3b0e460d8a6d15f0937b)

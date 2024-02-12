@@ -9,4 +9,3 @@
 - VVVV integration
   	- [3D rendering documentation](https://thegraybook.vvvv.org/reference/libraries/graphics-3d.html)
   	- [Stride integration source code on GitHub](https://github.com/vvvv/VL.StandardLibs)
-	 
