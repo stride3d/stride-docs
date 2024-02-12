@@ -47,7 +47,7 @@
 These are projects that definitely will not work with Stride 4.x without massive rewrites but were made with the old versions of Stride FKA Xenko or Paradox game engine.
 
 * [A Minecraft*style game](https://github.com/NckHmml/ParadoxCraft)
-* [Xenko Voxel Scape](https://bitbucket.org/LyingDwarf/xenko*voxelscape/src/master/) * ~[new repo](https://github.com/Doprez/stride*voxelscape/tree/main)~
+* [Xenko Voxel Scape](https://github.com/Doprez/stride-voxelscape)
 * [Stride Voxel Scape](https://github.com/Jarb2104/StrideVoxelScape_v0.1)
     * [Video demo](https://www.youtube.com/watch?v=whJOtux2DrQ)
 * [Xenko Live Editor](https://github.com/treplogle/XenkoLiveEditor)
