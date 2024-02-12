@@ -15,7 +15,7 @@ Alternatively, uninstall Stride, restart the Stride installer, and install the p
 
 .NET SDK 8.0 should have been installed by Stride prerequisite installer, if Visual Studio 2022 didn't do it previously.
 
-If for some reason you need to install it manually, you can use [this link](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.101-windows-x64-installer).
+If for some reason you need to install it manually, you can use [this link](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and select the latest .NET 8 SDK for Windows.
 
 ### Visual C++ Redistributable 2019 (or later)
 
