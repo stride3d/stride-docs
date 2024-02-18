@@ -23,3 +23,6 @@
 # - name: 🔍 Diagnostics
 #   href: diagnostics/
 #   homepage: diagnostics/index.md
+- name: 🏋🏽 Community Resources
+  href: community-resources/
+  homepage: community-resources/index.md
