@@ -10,7 +10,7 @@
 - [XenkoSpaceShooter](https://github.com/jayrulez/XenkoSpaceShooter)
 - [XenkoAsteroids](https://github.com/LanceJZ/Xenko_Asteroids)
 - [TurnBasedBattleSim](https://github.com/jayrulez/TurnBasedBattleSim)
-- [Harrowing Flight](https://forums.xenko.com/t/harrowing-flight-student-game-project/1823) - Student Game Project
+- [Harrowing Flight](https://forums.stride3d.net/t/harrowing-flight-student-game-project/1823) - Student Game Project
 - [Glasses](https://globalgamejam.org/2019/games/glasses) - Global Game Jam Entry
 - [vvvv Showcase](https://visualprogramming.net/#Showcase) - Many large-scale interactive media projects made with vvvv
 - [Astroids](https://github.com/LanceJZ/Stride-Asteroids)
