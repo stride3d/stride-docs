@@ -1,4 +1,4 @@
-﻿#Coding
+#Coding
 
 ## Code Only
 - [CodeOnlySample](https://github.com/xen2/Xenko.CodeOnlySample) - Sample project with code only
@@ -14,7 +14,7 @@
 - [MUD framework for Stride](https://github.com/JoseJohnen/MUD_SKELETON/tree/main)
 - [Running Stride headless client/server](https://github.com/Ethereal77/Stride.ClientServerSample)
 
-## Entiy Component System
+## Entity Component System
 - [Entity Processor Example](https://github.com/Basewq/XenkoProofOfConcepts/tree/master/EntityProcessorExample) - Custom Entity Component + Processor
 - Libraries
     - [Doprez.Stride.AI: FSM and GOAP library for Stride](https://github.com/Doprez/Doprez.Stride.AI)
