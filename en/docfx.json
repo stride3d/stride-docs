@@ -92,7 +92,9 @@
           "contributors/toc.yml",
           "contributors/**/*.md",
           "diagnostics/toc.yml",
-          "diagnostics/**/*.md"
+          "diagnostics/**/*.md",
+          "community-resources/toc.yml",
+          "community-resources/**/*.md"
         ]
       },
       {

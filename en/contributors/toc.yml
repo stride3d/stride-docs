@@ -4,6 +4,8 @@ items:
 - name: 🌟 Ways to Contribute
   href: index.md
   expanded: true
+- name: 🛣️ Roadmap
+  href: roadmap.md  
 - name: 💸 Donate
   href: donate.md
 - name: 🤝 Contribution Workflow
