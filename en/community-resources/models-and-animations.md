@@ -10,7 +10,7 @@
 * [Stride IK implementation](https://github.com/flipdp/Stride.IK/tree/master)
 * [Stride Instancing Example](https://github.com/tebjan/StrideTransformationInstancing)
 * [Super Character Controller](https://github.com/corthax/SuperCharacterController)
-* [Multi*Mesh Shader](https://github.com/profan/XenkoByteSized/blob/master/XenkoByteSized/ProceduralMesh/CombinedMeshes.cs)
+* [Multi-Mesh Shader](https://github.com/profan/XenkoByteSized/blob/master/XenkoByteSized/ProceduralMesh/CombinedMeshes.cs)
 
 ## Animation
 * [Animation Trigger script](https://gist.github.com/Doprez/3ff7463fc48bd8e69178fde388dd1df4)

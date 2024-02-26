@@ -1,9 +1,9 @@
 # Example projects
 
 ## Input
-* [Control * Input Manager](https://github.com/rsptim1/Ctrl)
+* [Control - Input Manager](https://github.com/rsptim1/Ctrl)
 * [Easier input binding configuration](https://github.com/lparkermg/LPSoft.Stride.InputExtensions)
-* [Demos with a focus on Code*Only approach](https://github.com/najak3d/Stride3D_Demos)
+* [Demos with a focus on Code-Only approach](https://github.com/najak3d/Stride3D_Demos)
 
 ## Editor
 * [Custom Editor Gizmos](https://github.com/gearsin/Stride.Demo.Gizmo/tree/master)
@@ -38,15 +38,15 @@
 * [StrideVoxelScape](https://github.com/Jarb2104/StrideVoxelScape_v0.1)
 * [Stride3D examples in .NET 5 using C# 9.0 or .NET 6 using C# 10](https://github.com/VaclavElias/Stride3DTutorials)
 * [Tweening library](https://github.com/JoshFlash/ZenTween)
-* [Tessellation](https://github.com/johang88/Stride*Tessellation)
+* [Tessellation](https://github.com/johang88/Stride-Tessellation)
 * [Workshop creating a game with Stride](https://github.com/manio143/StrideIntroWorkshopNode20/tree/main)
-* [Xenko/Stride byte*sized project examples](https://github.com/profan/XenkoByteSized)
+* [Xenko/Stride byte-sized project examples](https://github.com/profan/XenkoByteSized)
 
 
 ### Old projects
 These are projects that definitely will not work with Stride 4.x without massive rewrites but were made with the old versions of Stride FKA Xenko or Paradox game engine.
 
-* [A Minecraft*style game](https://github.com/NckHmml/ParadoxCraft)
+* [A Minecraft-style game](https://github.com/NckHmml/ParadoxCraft)
 * [Xenko Voxel Scape](https://github.com/Doprez/stride-voxelscape)
 * [Stride Voxel Scape](https://github.com/Jarb2104/StrideVoxelScape_v0.1)
     * [Video demo](https://www.youtube.com/watch?v=whJOtux2DrQ)

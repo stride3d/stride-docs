@@ -7,9 +7,9 @@ items:
 - name: 🎓 Tutorials
   href: tutorials-and-articles.md
 - name: ⨺ Models and Animations
-  href: terrain-and-water.md
-- name: ⛰️ Terrain and Water
   href: models-and-animations.md
+- name: ⛰️ Terrain and Water
+  href: terrain-and-water.md
 - name: 🍎  Physics
   href: physics.md
 - name: 🌈 Shaders
