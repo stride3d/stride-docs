@@ -220,6 +220,7 @@ These examples showcase how F# and Visual Basic can be utilized in Stride. The S
 
 ## Fixes
 Although there have been [many fixes](https://github.com/stride3d/stride/pulls?page=2&q=is%3Apr+merged%3A%3E2023-10-10), we'd like to point some of them out:
+
 - [Runtime rasterized fonts are broken #1750](https://github.com/stride3d/stride/issues/1750)
 - [Game Studio doesn't reload sub projects after changes #1703](https://github.com/stride3d/stride/issues/1703)
 - [Changing the comparison project related and not UPath related #1704](https://github.com/stride3d/stride/pull/1704)
@@ -231,6 +232,7 @@ Although there have been [many fixes](https://github.com/stride3d/stride/pulls?p
 Although not directly tied to Release 4.2, we have some more big things going on.
 
 For instance to our website and documentation. We also had another community meeting to address all those new members.
+
 - [Website and documentation revamped and build process updated](https://www.stride3d.net/blog/announcing-website-update/)
 - [Contributor section moved to docs](https://doc.stride3d.net/latest/en/contributors/index.html)
 - [Community meeting October 2023](https://www.stride3d.net/blog/community-meeting-october-2023/)
