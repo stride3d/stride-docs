@@ -18,3 +18,52 @@ The template is structured to cover:
 
 This systematic approach helps streamline the review process, making it easier for the Stride team to understand, review, and merge your contributions efficiently.
 
+## Merging Pull Requests
+
+### Title Prefixing
+
+When merging a pull request, the title should be prefixed based on the label:
+
+- For generic labels, use square brackets to state the Stride category the PR belongs to, e.g., `[Assets]`, `[OpenXR]`, `[Tests]`, `[Graphics]`, `[Physics]`, `[UI]`, `[Audio]`, `[Input]`, `[Launcher]`, `[GameStudio]`, `[Build]`, `[Doc]`, `[Samples]`, `[Shaders]`, `[Performance]`, `[Engineering]`, or any category the maintainer sees fit.
+- For Stride-specific labels, the prefix should follow the commit convention, e.g., `feat:`, `fix:`, `perf:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`, or any designation the maintainer sees fit.
+
+### Labelling
+
+Once the PR is merged, the Stride team will apply a label **(only one per PR)** to categorize the PR based on the type of changes it introduces. These labels are utilized by GitHub Releases automation to sort changes in the changelog.
+
+The categorization is set in the [release.yml](https://github.com/stride3d/stride/blob/master/.github/release.yml).
+
+The community has agreed to use a hybrid categorization based on generic categories and Stride-specific categories.
+
+Labels should be applied based on the following rules and order of priority:
+
+**Generic categories:**
+
+- `breaking-change` label: If the PR introduces a breaking change, it should be labeled as such.
+- `enhancement` label: If the PR introduces a new feature or improvement, it should be labeled accordingly.
+- `bug-fix` label: If the PR fixes a bug, it should be labeled as such.
+
+**Stride-specific categories:**
+
+- `performance`
+- `engineering`
+- `area-Asset`
+- `area-Audio`
+- `area-Build`
+- `area-Doc`
+- `area-GameStudio`
+- `area-Graphics`
+- `area-Input`
+- `area-Launcher`
+- `area-Physics`
+- `area-Samples`
+- `area-Shaders`
+- `area-UI`
+- `area-Rendering`
+
+PRs with other labels or those that are unlabelled will automatically fall under the **Other Changes** category.
+
+### Squashing
+
+When merging a pull request, the Stride team will squash the commits into a single commit. This is to keep the git history clean and to make it easier to understand the changes that were made in the future.
+
