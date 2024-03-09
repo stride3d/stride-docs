@@ -128,7 +128,8 @@
           "**/media/**/*.zip",
           "**/media/**/*.svg",
           "**/media/**/*.webp",
-          "**/media/**/*.cs"
+          "**/media/**/*.cs",
+          "contributors/NDependOut/**"
         ],
         "exclude": [ "_site/**", "obj/**" ]
       }

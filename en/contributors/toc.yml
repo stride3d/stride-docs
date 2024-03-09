@@ -14,6 +14,8 @@ items:
   items:
     - name: GitHub Pull Request Guidelines
       href: contribution-workflow/github-pull-request-guidelines.md
+    - name: XML Comments and Docs
+      href: contribution-workflow/xml-comments-and-docs.md
 - name: ⚙️ Major Release Workflow
   href: major-release-workflow.md
 - name: 🛠️ Contribute to the engine

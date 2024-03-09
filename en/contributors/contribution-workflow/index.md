@@ -50,13 +50,13 @@ graph TB
 1. **Sync/Merge Upstream with Forked Main Branch**: If the upstream has changed, update your forked repository's main branch to reflect the latest changes from the original project.
 1. **Sync/Merge Forked Main Branch with Branch 'X'**: Ensure your working branch 'X' is also updated with any new changes from the main branch of your fork.
 1. **Test Your Updates**: Thoroughly test your updates to confirm they work as expected and do not introduce new issues.
-1. **Create a Pull Request (PR)**: Once satisfied with your changes and testing, submit a pull request to the original repository for review.
+1. **Create a Pull Request (PR)**: Once satisfied with your changes and testing, [submit a pull request](github-pull-request-guidelines.md) to the original repository for review.
 1. **Maintainers Review**: The project maintainers will review your PR. This process ensures that contributions are beneficial and fit the project's goals.
 1. **Address PR Feedback**: If maintainers or other contributors have feedback, make the necessary adjustments to your PR. This collaborative effort enhances the project's quality.
 1. **Revise and Update PR as Necessary**: Continue to refine and update your PR based on ongoing feedback until it meets the project's standards for merging.
 1. **Wait for PR to be Merged by Maintainers**: After approval, maintainers will merge your PR into the project. This step integrates your contribution with the main codebase.
 1. **Sync/Merge Upstream with Your Forked Main Branch**: Post-merge, ensure your forked repository's main branch is updated to include your newly merged changes.
-1. **Update or Add Relevant Documentation**: Contribute to the project's documentation to reflect your changes, helping future users and contributors understand the new functionalities or fixes.
+1. **Update or Add Relevant Documentation**: [Contribute to the project's documentation](xml-comments-and-docs.md) to reflect your changes, helping future users and contributors understand the new functionalities or fixes.
 1. **Additional Contributions?**: Consider whether you want to make further contributions. If so, start the process again by creating a new branch.
 1. **End**: Conclude your current contribution cycle. Whether you decide to contribute more or take a break, your efforts have now been integrated into the project.
 
