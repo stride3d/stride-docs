@@ -94,6 +94,6 @@ Example of a generated PR titles. Note the different prefixes for generic and St
 - fix: Fixes inconsistent box2D collision, see #1707 and #2019
 - feat: Add ray test flags
 
-### Squashing
+## Squashing
 
 When merging a pull request, the Stride team might squash the commits into a single commit. This is to keep the git history clean and to make it easier to understand the changes that were made in the future.
