@@ -9,6 +9,7 @@ items:
 - name: 💸 Donate
   href: donate.md
 - name: 🤝 Contribution Workflow
+  expanded: false
   href: contribution-workflow/index.md
   items:
     - name: GitHub Pull Request Guidelines

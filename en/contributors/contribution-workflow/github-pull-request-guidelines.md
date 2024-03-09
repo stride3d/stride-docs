@@ -39,9 +39,9 @@ Labels should be applied based on the following rules and order of priority:
 
 **Generic categories:**
 
-- `breaking-change` label: If the PR introduces a breaking change, it should be labeled as such.
-- `enhancement` label: If the PR introduces a new feature or improvement, it should be labeled accordingly.
-- `bug-fix` label: If the PR fixes a bug, it should be labeled as such.
+- `breaking-change` label: If the PR introduces a breaking change, it should be labelled as such.
+- `enhancement` label: If the PR introduces a new feature or improvement, it should be labelled accordingly.
+- `bug-fix` label: If the PR fixes a bug, it should be labelled as such.
 
 **Stride-specific categories:**
 
@@ -62,6 +62,37 @@ Labels should be applied based on the following rules and order of priority:
 - `area-Rendering`
 
 PRs with other labels or those that are unlabelled will automatically fall under the **Other Changes** category.
+
+> [!NOTE]
+> If multiple labels are applied, the release automation will prioritize the generic category first, followed by the Stride-specific category. This means that only one label will be automatically applied to the release notes.
+
+## Examples
+
+Example of a generated PR titles. Note the different prefixes for generic and Stride-specific categories:
+
+### 💥 Breaking Changes
+- [Physics] Bepu codebase refactoring and clean-up
+
+### 🎉 New Features
+- [Input] Add haptic support to OpenVR and Oculus runtimes
+
+### 🐞 Bug Fixes
+
+- [Audio] fix: Audio emitter multiple references to same asset bugfix
+
+### 🔧 Engineering
+
+- feat: Add editor settings for the camera speed increase/decrease hotkeys
+
+### ⌨️ Input
+
+- fix: Fixes mouse release for Winforms
+- fix: Fixes detecting WinForms right shift key (fixes #754, fixes #929)
+
+### ⚙️ Physics
+
+- fix: Fixes inconsistent box2D collision, see #1707 and #2019
+- feat: Add ray test flags
 
 ### Squashing
 
