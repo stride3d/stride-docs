@@ -31,6 +31,12 @@ sudo apt-get install libfreetype6-dev
 sudo dnf install freetype-devel
 ```
 
+### [Arch](#tab/freetype-arch)
+
+```bash
+sudo pacman -S freetype2
+```
+
 ---
 
 ## OpenAL
@@ -49,6 +55,12 @@ sudo apt-get install libopenal-dev
 sudo dnf install openal-soft-devel
 ```
 
+### [Arch](#tab/openal-arch)
+
+```bash
+sudo pacman -S openal
+```
+
 ---
 
 ## SDL2
@@ -65,6 +77,12 @@ sudo apt-get install libsdl2-dev
 
 ```bash
 sudo dnf install SDL2-devel
+```
+
+### [Arch](#tab/sdl2-arch)
+
+```bash
+sudo pacman -S sdl2
 ```
 
 ---
