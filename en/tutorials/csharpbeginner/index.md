@@ -121,22 +121,22 @@ All tutorials are accompanied by a YouTube video. You can watch the entire C# Be
     </div>
     <div class="col-md-6">
         <div class="card h-100">
-            <img src="media/keyboard-input_thumb.webp" class="card-img-top" alt="Keyboard input">
-            <div class="card-body">
-                <h2 class="card-title h5">Keyboard input</h2>
-                <p class="card-text">Discover how to handle holding down a key, clicking a key, and releasing a key.</p>
-            </div>
-            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="keyboard-input.md">Keyboard input</a> tutorial</p>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="card h-100">
             <img src="media/mouse-input_thumb.webp" class="card-img-top" alt="Mouse input">
             <div class="card-body">
                 <h2 class="card-title h5">Mouse input</h2>
                 <p class="card-text">Understand how to manage holding down a mouse button, clicking or releasing a mouse button, and using the mouse wheel.</p>
             </div>
             <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="mouse-input.md">Mouse input</a> tutorial</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <img src="media/keyboard-input_thumb.webp" class="card-img-top" alt="Keyboard input">
+            <div class="card-body">
+                <h2 class="card-title h5">Keyboard input</h2>
+                <p class="card-text">Discover how to handle holding down a key, clicking a key, and releasing a key.</p>
+            </div>
+            <p class="px-3 mb-4">📺 Watch the <a class="stretched-link" href="keyboard-input.md">Keyboard input</a> tutorial</p>
         </div>
     </div>
     <div class="col-md-6">

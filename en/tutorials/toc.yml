@@ -55,10 +55,10 @@ items:
     href: csharpbeginner/cloning-entities.md
   - name: Removing an entity
     href: csharpbeginner/removing-entities.md
-  - name: Keyboard input
-    href: csharpbeginner/keyboard-input.md
   - name: Mouse input
     href: csharpbeginner/mouse-input.md
+  - name: Keyboard input
+    href: csharpbeginner/keyboard-input.md
   - name: Virtual buttons
     href: csharpbeginner/virtual-buttons.md
   - name: Linear Interpolation
