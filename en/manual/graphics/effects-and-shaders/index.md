@@ -30,8 +30,8 @@ Stride shaders are converted automatically to the target graphics platform — e
 
 For mobile platforms, shaders are optimized by a GLSL optimizer to improve performance.
 
->[!NOTE]
->converting to OpenGL Compute shaders are not supported in SDSL yet.
+> [!NOTE]
+> Converting to OpenGL Compute shaders are not supported in SDSL yet.
 
 ## In this section
 
