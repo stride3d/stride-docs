@@ -1,4 +1,4 @@
-# Stride 4.1 Release Notes
+# Stride 4.1 Release notes
 
 July 16th, 2022
 

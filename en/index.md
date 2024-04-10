@@ -9,7 +9,7 @@ Welcome to the Stride documentation, specifically designed for game developers, 
                 <h2 class="card-title h5">📚 Manual</h2>
                 <p class="card-text">Discover how to build projects and complete tasks in Stride with our manual-related step-by-step tutorials.</p>
             </div>
-            <p class="px-3 mb-4"><a class="stretched-link" href="manual/index.md">Access our Stride Manual</a></p>
+            <p class="px-3 mb-4"><a class="stretched-link" href="manual/index.md">Access our Stride manual</a></p>
         </div>
     </div>
     <div class="col-md-6">
@@ -18,16 +18,16 @@ Welcome to the Stride documentation, specifically designed for game developers, 
                 <h2 class="card-title h5">🎓 Tutorials</h2>
                 <p class="card-text">Explore a range of tutorials for the Stride game engine. Our current tutorials include: <a href="tutorials/gamestudio/index.md">Game Studio</a>, <a href="tutorials/csharpbeginner/index.md">C# Beginner</a> and <a href="tutorials/csharpintermediate/index.md">C# Intermediate</a>.</p>
             </div>
-            <p class="px-3 mb-4"><a class="" href="tutorials/index.md">Browse Stride Tutorials</a></p>
+            <p class="px-3 mb-4"><a class="" href="tutorials/index.md">Browse Stride tutorials</a></p>
         </div>
     </div>
     <div class="col-md-6">
         <div class="card h-100">
             <div class="card-body">
-                <h2 class="card-title h5">📝 Release Notes</h2>
+                <h2 class="card-title h5">📝 Release notes</h2>
                 <p class="card-text">Learn about the latest features and improvements in Stride, as well as previous versions.</p>
             </div>
-            <p class="px-3 mb-4"><a class="stretched-link" href="ReleaseNotes/index.md">Find Stride Release Notes</a></p>
+            <p class="px-3 mb-4"><a class="stretched-link" href="ReleaseNotes/index.md">Find Stride Release notes</a></p>
         </div>
     </div>
     <div class="col-md-6">
@@ -54,7 +54,7 @@ Welcome to the Stride documentation, specifically designed for game developers, 
                 <h2 class="card-title h5">🔍 Diagnostics</h2>
                 <p class="card-text">In the world of game development, unexpected behavior is a common challenge. Stride's diagnostic tools are designed to help you quickly and effectively diagnose and resolve these issues.</p>
             </div>
-            <p class="px-3 mb-4"><a class="stretched-link" href="diagnostics/index.md">Explore Diagnostics</a></p>
+            <p class="px-3 mb-4"><a class="stretched-link" href="diagnostics/index.md">Explore diagnostics</a></p>
         </div>
     </div>
 <div class="col-md-6">
