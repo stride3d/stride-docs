@@ -1,4 +1,4 @@
-# Stride 4.0 Release Notes
+# Stride 4.0 Release notes
 
 February 1st, 2021
 

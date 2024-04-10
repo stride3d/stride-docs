@@ -1,4 +1,4 @@
-# Stride 4.2 Release Notes
+# Stride 4.2 Release notes
 
 February 6th, 2024
 

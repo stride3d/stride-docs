@@ -1,4 +1,4 @@
-# Stride Release Notes
+# Stride Release notes
 
 February 6th, 2024
 
