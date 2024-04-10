@@ -68,9 +68,14 @@
       "_appTitle": {
         "tutorials/**/*.md": "Stride Tutorials",
         "manual/**/*.md": "Stride Manual",
-        "ReleaseNotes/**/*.md": "Stride Release Notes",
+        "ReleaseNotes/**/*.md": "Stride Release notes",
         "api/**/*.md": "Stride API",
-        "diagnostics/**/*.md": "Stride Diagnostics"
+        "diagnostics/**/*.md": "Stride Diagnostics",
+        "contributors/**/*.md": "Stride Contributors",
+        "community-resources/**/*.md": "Stride Community resources"
+      },
+      "_disableToc": {
+        "index.md": false
       }
     },
     "sitemap": {
