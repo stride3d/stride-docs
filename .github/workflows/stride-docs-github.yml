@@ -30,7 +30,7 @@ jobs:
           lfs: true
 
       - name: Install DocFX
-        run: dotnet tool update -g docfx --version 2.75.2
+        run: dotnet tool update -g docfx --version 2.76.0
 
       - name: Build documentation
         run: ./build-all.bat
