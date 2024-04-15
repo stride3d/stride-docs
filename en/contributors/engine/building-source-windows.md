@@ -14,14 +14,13 @@
    - Optional (to target iOS/Android): `Mobile development with .NET` and `Android SDK setup (API level 27)` individual component, then in Visual Studio go to `Tools > Android > Android SDK Manager` and install `NDK` (version 19+) from `Tools` tab.
 4. **[FBX SDK 2019.0 VS2015](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2019-0)**
 
-## Build Stride with Visual studio 2022
+## Build Stride with Visual Studio 2022
 Here are the steps to build Stride with Visual Studio. If you do not have or want to use Visual Studio, see [building with other IDEs](building-source-windows-other-ide.md)
 
 1. Open a command prompt, point it to a directory and clone Stride to it: `git clone https://github.com/stride3d/stride.git`
    - Note that when you use GitHub -> Code -> Download ZIP, this doesn't support Large File Support ```lfs```, make sure you use the command above or that your git client does it for you
 2. Open `<StrideDir>\build\Stride.sln` with Visual Studio 2022 and build `Stride.GameStudio` in the 60-Editor solution folder (it should be the default startup project) or run it from VS's toolbar.
    - Optionally, open and build `Stride.Android.sln`, `Stride.iOS.sln`, etc.
-
 
 ### If building failed
 * If you skipped one of the `Prerequisites` thinking that you already have the latest version, update to the latest anyway just to be sure.
@@ -34,7 +33,7 @@ Here are the steps to build Stride with Visual Studio. If you do not have or wan
 Do note that test solutions might fail but it should not prevent you from building `Stride.GameStudio`.
 
 ## Other IDEs
-You are not required to use Visual Studio to build the Stride engine with Visual Studio. You can also build entirely from command line or other IDE's such as [Rider or Visual Studio Code](building-source-windows-other-ide.md) 
+You are not required to use Visual Studio to build the Stride engine with Visual Studio. You can also build entirely from command line or other IDE's such as [Rider or Visual Studio Code](building-source-windows-other-ide.md). 
 
 
 

@@ -73,9 +73,6 @@
         "diagnostics/**/*.md": "Stride Diagnostics",
         "contributors/**/*.md": "Stride Contributors",
         "community-resources/**/*.md": "Stride Community resources"
-      },
-      "_disableToc": {
-        "index.md": false
       }
     },
     "sitemap": {
@@ -134,7 +131,7 @@
           "**/media/**/*.svg",
           "**/media/**/*.webp",
           "**/media/**/*.cs",
-          "contributors/NDependOut/**"
+          "contributors/engine/ndepend/**"
         ],
         "exclude": [ "_site/**", "obj/**" ]
       }

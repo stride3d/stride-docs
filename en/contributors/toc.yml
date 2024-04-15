@@ -36,6 +36,8 @@ items:
     href: engine/source-debugging.md
   - name: Visual Studio plugin
     href: engine/visual-studio-plugin.md
+  - name: Static analysis
+    href: engine/ndepend.md
   - name: 🏗️ Architecture
     expanded: true
     href: engine/architecture/index.md
