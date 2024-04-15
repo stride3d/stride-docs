@@ -1,71 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <InfoWarnings>
-  <Info>Begin full analysis with NDepend v2023.2.3 on 09 Mar 2024 22:42:38</Info>
-  <Info>Visual Studio solution file resolved to absolute file path: from    {.\Stride.sln}    to    {D:\Projects\GitHub\stride\build\Stride.sln}</Info>
-  <Info>Output directory resolved to absolute directory path: D:\Projects\GitHub\stride\build\NDependOut</Info>
-  <Info>Compare with analysis result obtained on 09 Mar 2024 21:59:49  (which is the analysis result with date closest to 30 days ago)</Info>
+  <Info>Begin full analysis with NDepend v2024.1.0 on 15 Apr 2024 23:28:53</Info>
+  <Info>Visual Studio solution file resolved to absolute file path: from    {..\stride\build\Stride.sln}    to    {D:\Projects\GitHub\stride\build\Stride.sln}</Info>
+  <Info>Output directory resolved to absolute directory path: D:\Projects\GitHub\stride-ndepend\NDependOut1</Info>
+  <Info>Compare with analysis result obtained on 15 Apr 2024 23:27:28  (which is the analysis result with date closest to 30 days ago)</Info>
   <Info>.NET Assemblies resolved from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 0 , 19 ]
-   D:\Projects\GitHub\stride\sources\editor\Stride.GameStudio\bin\Debug\net8.0-windows7.0\Stride.GameStudio.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Engine\bin\Debug\net8.0\Stride.Engine.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Graphics\bin\Debug\net8.0\Direct3D11\Stride.Graphics.dll
-   D:\Projects\GitHub\stride\sources\shaders\Stride.Core.Shaders\bin\Debug\net8.0\Stride.Core.Shaders.dll
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Wpf\bin\Debug\net8.0-windows7.0\Stride.Core.Presentation.Wpf.dll
-   D:\Projects\GitHub\stride\sources\shaders\Irony\bin\Debug\net8.0\Stride.Irony.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Games\bin\Debug\net8.0\Direct3D11\Stride.Games.dll
-   D:\Projects\GitHub\stride\sources\tools\Stride.TextureConverter\bin\Debug\net8.0\Stride.TextureConverter.dll
-   D:\Projects\GitHub\stride\sources\buildengine\Stride.Core.BuildEngine.Common\bin\Debug\net8.0\Stride.Core.BuildEngine.Common.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core\bin\Debug\net8.0\Stride.Core.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Mathematics\bin\Debug\net8.0\Stride.Core.Mathematics.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Serialization\bin\Debug\net8.0\Stride.Core.Serialization.dll
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Quantum\bin\Debug\net8.0\Stride.Core.Quantum.dll
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Quantum\bin\Debug\net8.0\Stride.Core.Presentation.Quantum.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.MicroThreading\bin\Debug\net8.0\Stride.Core.MicroThreading.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.IO\bin\Debug\net8.0\Stride.Core.IO.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Shaders.Parser\bin\Debug\net8.0\Stride.Shaders.Parser.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Shaders\bin\Debug\net8.0\Stride.Shaders.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Audio\bin\Debug\net8.0\Stride.Audio.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride\bin\Debug\net8.0\Stride.dll</Info>
+   D:\Projects\GitHub\stride\sources\editor\Stride.GameStudio\bin\Release\net8.0-windows7.0\Stride.GameStudio.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Engine\bin\Release\net8.0\Stride.Engine.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Graphics\bin\Release\net8.0\Direct3D11\Stride.Graphics.dll
+   D:\Projects\GitHub\stride\sources\shaders\Stride.Core.Shaders\bin\Release\net8.0\Stride.Core.Shaders.dll
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Wpf\bin\Release\net8.0-windows7.0\Stride.Core.Presentation.Wpf.dll
+   D:\Projects\GitHub\stride\sources\shaders\Irony\bin\Release\net8.0\Stride.Irony.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Games\bin\Release\net8.0\Direct3D11\Stride.Games.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.TextureConverter\bin\Release\net8.0\Stride.TextureConverter.dll
+   D:\Projects\GitHub\stride\sources\buildengine\Stride.Core.BuildEngine.Common\bin\Release\net8.0\Stride.Core.BuildEngine.Common.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core\bin\Release\net8.0\Stride.Core.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Mathematics\bin\Release\net8.0\Stride.Core.Mathematics.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Serialization\bin\Release\net8.0\Stride.Core.Serialization.dll
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Quantum\bin\Release\net8.0\Stride.Core.Quantum.dll
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Quantum\bin\Release\net8.0\Stride.Core.Presentation.Quantum.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.MicroThreading\bin\Release\net8.0\Stride.Core.MicroThreading.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.IO\bin\Release\net8.0\Stride.Core.IO.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Shaders.Parser\bin\Release\net8.0\Stride.Shaders.Parser.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Shaders\bin\Release\net8.0\Stride.Shaders.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Audio\bin\Release\net8.0\Stride.Audio.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride\bin\Release\net8.0\Stride.dll</Info>
   <Info>.NET Assemblies resolved from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 20 , 39 ]
-   D:\Projects\GitHub\stride\sources\engine\Stride.Shaders.Compiler\bin\Debug\net8.0\Stride.Shaders.Compiler.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Input\bin\Debug\net8.0\Direct3D11\Stride.Input.dll
-   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Assets\bin\Debug\net8.0\Stride.Core.Assets.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Assets\bin\Debug\net8.0\Stride.Assets.dll
-   D:\Projects\GitHub\stride\sources\editor\Stride.Core.Assets.Editor\bin\Debug\net8.0-windows7.0\Stride.Core.Assets.Editor.dll
-   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Assets.CompilerApp\bin\Debug\net8.0\Stride.Core.Assets.CompilerApp.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Assets.Models\bin\Debug\net8.0\Stride.Assets.Models.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.UI\bin\Debug\net8.0\Stride.UI.dll
-   D:\Projects\GitHub\stride\sources\editor\Stride.Editor\bin\Debug\net8.0-windows7.0\Stride.Editor.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Design\bin\Debug\net8.0\Stride.Core.Design.dll
-   D:\Projects\GitHub\stride\sources\tools\Stride.Core.ProjectTemplating\bin\Debug\net8.0\Stride.Core.ProjectTemplating.dll
-   D:\Projects\GitHub\stride\sources\editor\Stride.Assets.Presentation\bin\Debug\net8.0-windows7.0\Stride.Assets.Presentation.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Physics\bin\Debug\net8.0\Stride.Physics.dll
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Dialogs\bin\Debug\net8.0-windows7.0\Stride.Core.Presentation.Dialogs.dll
-   D:\Projects\GitHub\stride\sources\tools\Stride.Graphics.RenderDocPlugin\bin\Debug\net8.0\Direct3D11\Stride.Graphics.RenderDocPlugin.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Debugger\bin\Debug\net8.0-windows7.0\Stride.Debugger.dll
-   D:\Projects\GitHub\stride\sources\tools\Stride.ConnectionRouter\bin\Debug\net8.0-windows7.0\Stride.ConnectionRouter.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Particles\bin\Debug\net8.0\Stride.Particles.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Native\bin\Debug\net8.0\Stride.Native.dll
-   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Packages\bin\Debug\net8.0\Stride.Core.Packages.dll</Info>
-  <Info>.NET Assemblies resolved from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 40 , 58 ]
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Graph\bin\Debug\net8.0-windows7.0\Stride.Core.Presentation.Graph.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Yaml\bin\Debug\net8.0\Stride.Core.Yaml.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Reflection\bin\Debug\net8.0\Stride.Core.Reflection.dll
-   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Assets.Quantum\bin\Debug\net8.0\Stride.Core.Assets.Quantum.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.VirtualReality\bin\Debug\net8.0\Direct3D11\Stride.VirtualReality.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Navigation\bin\Debug\net8.0\Stride.Navigation.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Tasks\bin\Debug\net8.0\Stride.Core.Tasks.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.Translation\bin\Debug\net8.0\Stride.Core.Translation.dll
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Translation.Presentation\bin\Debug\net8.0-windows7.0\Stride.Core.Translation.Presentation.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Video\bin\Debug\net8.0\Direct3D11\Stride.Video.dll
-   D:\Projects\GitHub\stride\sources\editor\Stride.Samples.Templates\bin\Debug\net8.0-windows7.0\Stride.Samples.Templates.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Rendering\bin\Debug\net8.0\Stride.Rendering.dll
-   D:\Projects\GitHub\stride\sources\engine\Stride.Voxels\bin\Debug\net8.0\Stride.Voxels.dll
-   D:\Projects\GitHub\stride\sources\tools\Stride.Importer.Assimp\bin\Debug\net8.0\Stride.Importer.Assimp.dll
-   D:\Projects\GitHub\stride\sources\tools\Stride.Importer.Common\bin\Debug\net8.0\Stride.Importer.Common.dll
-   D:\Projects\GitHub\stride\sources\core\Stride.Core.CompilerServices\bin\Debug\netstandard2.0\Stride.Core.CompilerServices.dll
-   D:\Projects\GitHub\stride\sources\shared\Stride.NuGetResolver.UI\bin\Debug\net8.0-windows\Stride.NuGetResolver.UI.dll
-   D:\Projects\GitHub\stride\sources\shared\Stride.NuGetResolver\bin\Debug\net8.0\Stride.NuGetResolver.dll
-   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation\bin\Debug\net8.0\Stride.Core.Presentation.dll</Info>
+   D:\Projects\GitHub\stride\sources\engine\Stride.Shaders.Compiler\bin\Release\net8.0\Stride.Shaders.Compiler.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Input\bin\Release\net8.0\Direct3D11\Stride.Input.dll
+   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Assets\bin\Release\net8.0\Stride.Core.Assets.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Assets\bin\Release\net8.0\Stride.Assets.dll
+   D:\Projects\GitHub\stride\sources\editor\Stride.Core.Assets.Editor\bin\Release\net8.0-windows7.0\Stride.Core.Assets.Editor.dll
+   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Assets.CompilerApp\bin\Release\net8.0\Stride.Core.Assets.CompilerApp.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Assets.Models\bin\Release\net8.0\Stride.Assets.Models.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.UI\bin\Release\net8.0\Stride.UI.dll
+   D:\Projects\GitHub\stride\sources\editor\Stride.Editor\bin\Release\net8.0-windows7.0\Stride.Editor.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Design\bin\Release\net8.0\Stride.Core.Design.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.Core.ProjectTemplating\bin\Release\net8.0\Stride.Core.ProjectTemplating.dll
+   D:\Projects\GitHub\stride\sources\editor\Stride.Assets.Presentation\bin\Release\net8.0-windows7.0\Stride.Assets.Presentation.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Physics\bin\Release\net8.0\Stride.Physics.dll
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Dialogs\bin\Release\net8.0-windows7.0\Stride.Core.Presentation.Dialogs.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.Graphics.RenderDocPlugin\bin\Release\net8.0\Direct3D11\Stride.Graphics.RenderDocPlugin.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Debugger\bin\Release\net8.0-windows7.0\Stride.Debugger.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.ConnectionRouter\bin\Release\net8.0-windows7.0\Stride.ConnectionRouter.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.SpriteStudio.Offline\bin\Release\net8.0\Stride.SpriteStudio.Offline.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.SpriteStudio.Runtime\bin\Release\net8.0\Stride.SpriteStudio.Runtime.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Particles\bin\Release\net8.0\Stride.Particles.dll</Info>
+  <Info>.NET Assemblies resolved from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 40 , 59 ]
+   D:\Projects\GitHub\stride\sources\engine\Stride.Native\bin\Release\net8.0\Stride.Native.dll
+   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Packages\bin\Release\net8.0\Stride.Core.Packages.dll
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation.Graph\bin\Release\net8.0-windows7.0\Stride.Core.Presentation.Graph.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Yaml\bin\Release\net8.0\Stride.Core.Yaml.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Reflection\bin\Release\net8.0\Stride.Core.Reflection.dll
+   D:\Projects\GitHub\stride\sources\assets\Stride.Core.Assets.Quantum\bin\Release\net8.0\Stride.Core.Assets.Quantum.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.VirtualReality\bin\Release\net8.0\Direct3D11\Stride.VirtualReality.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Navigation\bin\Release\net8.0\Stride.Navigation.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.PackageInstall\bin\Release\packageinstall.exe
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Tasks\bin\Release\net8.0\Stride.Core.Tasks.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.Translation\bin\Release\net8.0\Stride.Core.Translation.dll
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Translation.Presentation\bin\Release\net8.0-windows7.0\Stride.Core.Translation.Presentation.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Video\bin\Release\net8.0\Direct3D11\Stride.Video.dll
+   D:\Projects\GitHub\stride\sources\editor\Stride.Samples.Templates\bin\Release\net8.0-windows7.0\Stride.Samples.Templates.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Rendering\bin\Release\net8.0\Stride.Rendering.dll
+   D:\Projects\GitHub\stride\sources\engine\Stride.Voxels\bin\Release\net8.0\Stride.Voxels.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.Importer.Common\bin\Release\net8.0\Stride.Importer.Common.dll
+   D:\Projects\GitHub\stride\sources\core\Stride.Core.CompilerServices\bin\Release\netstandard2.0\Stride.Core.CompilerServices.dll
+   D:\Projects\GitHub\stride\sources\shared\Stride.NuGetResolver.UI\bin\Release\net8.0-windows\Stride.NuGetResolver.UI.dll
+   D:\Projects\GitHub\stride\sources\shared\Stride.NuGetResolver\bin\Release\net8.0\Stride.NuGetResolver.dll</Info>
+  <Info>.NET Assemblies resolved from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 60 , 61 ]
+   D:\Projects\GitHub\stride\sources\presentation\Stride.Core.Presentation\bin\Release\net8.0\Stride.Core.Presentation.dll
+   D:\Projects\GitHub\stride\sources\tools\Stride.Importer.3D\bin\Release\net8.0\Stride.Importer.3D.dll</Info>
   <Info>.NET Assemblies filtered out from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 0 , 19 ]
    Stride.Engine.Tests.Windows
    Stride.Input.Tests.Windows
@@ -102,28 +106,28 @@
    Stride.Core.ProjectTemplating.Tests
    Stride.TestRunner
    Stride.EffectCompilerServer
-   Stride.SpriteStudio.Offline
-   Stride.SpriteStudio.Runtime
    Stride.SamplesTestServer
-   Stride.Games.Testing
    Stride.Code.Tests
-   Stride.Core.Mathematics.Tests</Info>
-  <Info>.NET Assemblies filtered out from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 40 , 45 ]
-   packageinstall
+   Stride.Core.Mathematics.Tests
    Stride.Core.Translation.Extractor
    Stride.Samples.Tests
-   xunit.runner.stride
-   Stride.VisualStudio.Commands.Interfaces
+   Stride.VisualStudio.Commands.Interfaces</Info>
+  <Info>.NET Assemblies filtered out from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln} [ 40 , 40 ]
    Stride.VisualStudio.Commands</Info>
+  <Warning>Can't load the assembly {Stride.Games.Testing}:
+The file {D:\Projects\GitHub\stride\sources\engine\Stride.Games.Testing\bin\Debug\Stride.Games.Testing.dll} doesn't exist.
+Failed attempt to resolve this assembly from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln}.</Warning>
+  <Warning>Can't load the assembly {xunit.runner.stride}:
+The file {D:\Projects\GitHub\stride\sources\tests\xunit.runner.stride\bin\Debug\xunit.runner.stride.dll} doesn't exist.
+Failed attempt to resolve this assembly from the Visual Studio solution file {D:\Projects\GitHub\stride\build\Stride.sln}.</Warning>
   <Info>Concurrent mode</Info>
-  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.2}  [ 0 , 19 ]
+  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.4}  [ 0 , 19 ]
    System.Runtime.dll   v8.0.0.0
    System.Collections.dll   v8.0.0.0
    System.Diagnostics.Process.dll   v8.0.0.0
    System.Collections.Concurrent.dll   v8.0.0.0
    System.Threading.Thread.dll   v8.0.0.0
    System.ComponentModel.dll   v8.0.0.0
-   System.Runtime.InteropServices.dll   v8.0.0.0
    System.ObjectModel.dll   v8.0.0.0
    System.Net.NetworkInformation.dll   v8.0.0.0
    System.Diagnostics.TraceSource.dll   v8.0.0.0
@@ -135,9 +139,10 @@
    System.Threading.dll   v8.0.0.0
    System.Linq.dll   v8.0.0.0
    System.Net.Primitives.dll   v8.0.0.0
+   System.Runtime.InteropServices.dll   v8.0.0.0
    System.Text.RegularExpressions.dll   v8.0.0.0
    System.Net.Sockets.dll   v8.0.0.0</Info>
-  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.2}  [ 20 , 39 ]
+  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.4}  [ 20 , 39 ]
    System.Net.Security.dll   v8.0.0.0
    System.Security.Cryptography.dll   v8.0.0.0
    System.Threading.Channels.dll   v8.0.0.0
@@ -152,14 +157,13 @@
    System.Xml.XDocument.dll   v8.0.0.0
    System.Text.Json.dll   v8.0.0.0
    System.Diagnostics.DiagnosticSource.dll   v8.0.0.0
-   System.IO.Compression.dll   v8.0.0.0
    System.IO.FileSystem.Watcher.dll   v8.0.0.0
    System.Threading.Overlapped.dll   v8.0.0.0
    System.Reflection.Emit.dll   v8.0.0.0
    System.Reflection.Emit.ILGeneration.dll   v8.0.0.0
-   System.Runtime.Loader.dll   v8.0.0.0</Info>
-  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.2}  [ 40 , 47 ]
-   System.Reflection.Primitives.dll   v8.0.0.0
+   System.Runtime.Loader.dll   v8.0.0.0
+   System.Reflection.Primitives.dll   v8.0.0.0</Info>
+  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.4}  [ 40 , 46 ]
    System.Linq.Queryable.dll   v8.0.0.0
    System.Collections.NonGeneric.dll   v8.0.0.0
    System.Diagnostics.FileVersionInfo.dll   v8.0.0.0
@@ -167,7 +171,7 @@
    System.Web.HttpUtility.dll   v8.0.0.0
    netstandard.dll   v2.1.0.0
    System.Reflection.Emit.Lightweight.dll   v8.0.0.0</Info>
-  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.2} 
+  <Info>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.4} 
    PresentationFramework.dll   v8.0.0.0
    PresentationCore.dll   v8.0.0.0
    WindowsBase.dll   v8.0.0.0
@@ -179,14 +183,17 @@
    .\Microsoft.Build.Utilities.Core\15.1.548\lib\net46\Microsoft.Build.Utilities.Core.dll   v15.1.0.0</Info>
   <Info>.NET Assemblies loaded from {C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319} 
    Microsoft.Build.dll   v4.0.0.0
-   Microsoft.Build.Framework.dll   v4.0.0.0</Info>
-  <Info>4215 source files parsed ; 1 source file not found ; all source files in-sync with PDB</Info>
+   Microsoft.Build.Framework.dll   v4.0.0.0
+   mscorlib.dll   v4.0.0.0
+   System.dll   v4.0.0.0</Info>
+  <Info>4234 source files parsed ; 1 source file not found ; all source files in-sync with PDB</Info>
   <Info>0 code rule has been extracted from code.</Info>
+  <Info>No issue have been imported. No directory that contains issue files have been resolved from the project Stride</Info>
   <Info>No dependency cycle detected in assemblies referencement graph.</Info>
   <Info>Do merge code generated by compiler into application code.</Info>
   <Info>Analyze dependencies of your application.</Info>
   <Info>No SuppressMessageAttribute found in the analyzed code base. Since NDepend v2018.2 SuppressMessageAttribute can be used to suppress NDepend issues. Don't forget to set in your projects the compilation symbol CODE_ANALYSIS to use this attribute to suppress NDepend issues.</Info>
-  <Info>Persisting code model snapshot in {D:\Projects\GitHub\stride\build\NDependOut\NDependAnalysisResult_Stride_2024Mar09_22h42m37.ndar}</Info>
+  <Info>Persisting code model snapshot in {D:\Projects\GitHub\stride-ndepend\NDependOut1\NDependAnalysisResult_Stride_2024Apr15_23h28m53.ndar}</Info>
   <Warning>The source directory {C:\DEV\stride\sources\assets\Stride.Core.Packages} referenced by the PDB file of the assembly {Stride.Core.Packages} can't be found.</Warning>
   <Info>Execute queries and rules</Info>
   <Warning>Rule {From now, all types added should be 100% covered by tests} relies on code coverage data that is not available in the baseline code base snapshot. The rule hasen't been executed on both baseline and newer code base snapshots.</Warning>
@@ -220,12 +227,13 @@
   <Warning>Quality Gate {Percentage Coverage on Refactored Code} relies on code coverage data that is not available in the baseline code base snapshot.</Warning>
   <Warning>Quality Gate {Percentage Coverage on Refactored Code} relies on code coverage data that is not available in the newer code base snapshot.</Warning>
   <Info>Output report source files</Info>
-  <Info>The report lists 15 sources files (0 new and 0 changed since the baseline) on a total of 3 117 source files for the application analyzed.
+  <Info>The report lists 15 sources files (0 new and 0 modified since the baseline) on a total of 3 130 source files for the application analyzed.
 See 'Project Properties &gt; Report' to adjust the set of source files listed in the report.</Info>
+  <Info>Output report projects</Info>
   <Error>3 quality gates fail:
-  - 'Critical Issues' value 24 issues greater than fail threshold 10 issues
+  - 'Critical Issues' value 25 issues greater than fail threshold 10 issues
   - 'Critical Rules Violated' value 10 rules greater than fail threshold 0 rules
-  - 'Debt Rating per Namespace' value 105 namespaces greater than fail threshold 0 namespaces</Error>
+  - 'Debt Rating per Namespace' value 107 namespaces greater than fail threshold 0 namespaces</Error>
   <Info>Building the report (standard).</Info>
-  <Info>NDepend analysis done. Duration: 00:13.284</Info>
+  <Info>NDepend analysis done. Duration: 00:11.813</Info>
 </InfoWarnings>
