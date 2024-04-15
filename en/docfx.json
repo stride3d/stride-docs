@@ -131,7 +131,7 @@
           "**/media/**/*.svg",
           "**/media/**/*.webp",
           "**/media/**/*.cs",
-          "contributors/NDependOut/**"
+          "contributors/engine/ndepend/**"
         ],
         "exclude": [ "_site/**", "obj/**" ]
       }
