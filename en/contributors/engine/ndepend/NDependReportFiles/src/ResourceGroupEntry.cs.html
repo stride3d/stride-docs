@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ResourceGroupEntry.cs","relativePath":"../../../../stride/sources/engine/Stride.Rendering/Rendering/ResourceGroupEntry.cs","absolutePath":"D:/Projects/GitHub/stride/sources/engine/Stride.Rendering/Rendering/ResourceGroupEntry.cs","projectName":"Stride.Rendering","line":"23","statement":"1","debt":"39min","cov":"N/A","issues":[{"line":"8","ruleId":"ND1313","debt":"16min","severity":"2","expl":"The <i>structure ResourceGroupEntry</i> should override the <i>Equals()</i> and <i>GetHashCode()</i> methods. Additionally, consider implementing the <i>==</i> and <i>!=</i> operators if you anticipate users comparing or sorting instances or using them as keys in hash tables. Alternatively transform it into a <i>record struct</i>."},{"line":"10","ruleId":"ND1805","debt":"1min  0s","severity":"1","expl":"The <i>field LastFrameUsed</i> is used outside its parent type by the <i>no element</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose read-write accesses can be better controlled at debug-time."},{"line":"8","ruleId":"ND1903","debt":"7min","severity":"2","expl":"The <i>structure ResourceGroupEntry</i> should be declared as <i>readonly</i> because its instances are values, not objects. Mutable values are unexpected by the users. Making it <i>readonly</i> ensures predictable behavior, thread safety and efficient copying."},{"line":"11","ruleId":"ND1905","debt":"15min","severity":"2","expl":"The <i>field Resources</i> is assigned outside its parent type by the <i>3 methods CreateFrameResourceGroupLayout(…), CreateViewResourceGroupLayout(…) and Prepare(…)</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose accesses can be better controlled at debug-time."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="86"  style="display:none">H4sIAAAAAAAEAHVTTW+cMBC9I/EfJpcKpMgccmu2kaotiVZKcgjbH+DFAzgBG41t0VXV/94BZ7+aBiFhz7x5M2+eKApY23FPuu08ZHUO4rncwr0NRkmvrQFpFCOMJ70L3pKDrPN+dF+LQllv0DdHqLDUFvAFDnnHNQpvlGBUvvBUutc1c1Y+KG2ZlkZx4pumSbiIcAtA1Fa8jnmaFAX80C6OgAq4IRL4DuFpswUuQONQQIW4BB836/K5KsWgoNE9gjZLeCT7irUHstZDYwkGS3OSj0OcP02C06aFau88DmLbEUrFgdtjYlEkHkiOna4dx9PEyAHdKGs8ZF9wHo/hafI7TYCfMex4SGABgfu/oLOBanwgG8aSF7uPqHfwWYE2Hh6l8/fEPX46VLcfIBdkx1uc7AAteH0rF4ZB0v7uMvwk6Q3ovQrahUQ6CNwLVJhF8Oq0g2aeQPxDWfyfc0XoAxl3t6XA+21Yt/QIdSdNy7SZ3S02TNzHsBPDPMKnPdlrr3sGTvk1WLaRJu0QGtmz46vi0OrDXnbW9ou6725eXBZNicay4NMlP5WeGTA/kRs2xiP1tn5DJcpfUUVG2Fw6c31BKpb4mv8Mrs3h6tvn2TNL/8Qjf/j9C9Nr7O6YAw==$34$</span>
+  </body>
+</html>

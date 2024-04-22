@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ObjectNode.cs","relativePath":"../../../../stride/sources/engine/Stride.Rendering/Rendering/Nodes/ObjectNode.cs","absolutePath":"D:/Projects/GitHub/stride/sources/engine/Stride.Rendering/Rendering/Nodes/ObjectNode.cs","projectName":"Stride.Rendering","line":"21","statement":"1","debt":"22min","cov":"N/A","issues":[{"line":"8","ruleId":"ND1313","debt":"14min","severity":"2","expl":"The <i>structure ObjectNode</i> should override the <i>Equals()</i> and <i>GetHashCode()</i> methods. Additionally, consider implementing the <i>==</i> and <i>!=</i> operators if you anticipate users comparing or sorting instances or using them as keys in hash tables. Alternatively transform it into a <i>record struct</i>."},{"line":"13","ruleId":"ND1805","debt":"3min  20s","severity":"1","expl":"The <i>field RenderObject</i> is used outside its parent type by the <i>7 methods Extract(), Extract(), Extract(), PrepareEffectPermutations(…), PrepareEffectPermutations(…), Extract() and Extract()</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose read-write accesses can be better controlled at debug-time."},{"line":"8","ruleId":"ND1903","debt":"5min","severity":"2","expl":"The <i>structure ObjectNode</i> should be declared as <i>readonly</i> because its instances are values, not objects. Mutable values are unexpected by the users. Making it <i>readonly</i> ensures predictable behavior, thread safety and efficient copying."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="58"  style="display:none">H4sIAAAAAAAEAHWQwWrjMBCG7wa/w9BDSS7SobfttlCyWQh0U2j6Aoo0TlRsSYzGDaHsu+/Ybtd2Q4XB0sw//3wzWsMqpjP5w5FhYZegtusX+B3b4Az7GMAEJ4rA5PctR8qwODKn/ENrFzkgV/+lKtJBwzV85rPUOLxxSlTL3mfna2/Fc8et81FsKanR73Q6qTwoci9QNqrXtCwLreGXzwMCOpCGSMBHhD+bF5ACDBkV7BD74ONmtd7u1qpxUPkawYc+nCi+omWgGBmqSNBE6pJybQb+sgimwZyMRUHs4NUzdr18OJTFe1mAHC0wP3PbNIbO92PoGRNhxsAZjOQFxRJWd1eDwdO+a32l7/s1mLqOpwwcwTAbe+zQEhJ7zIBvSGeoSEDUpKGed0ztXsYGWUkrEw3u2+hwyH6QfkP7GX6wFnMellmfZUSYsqovHvrS5ANiWjV73JbFhXhEXczqaPJYjlWTSbozK7mbFd2Oyr/DVX7y/QMxY/aC4AI=$132$</span>
+  </body>
+</html>
