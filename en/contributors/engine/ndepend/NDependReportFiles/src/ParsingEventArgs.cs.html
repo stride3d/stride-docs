@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ParsingEventArgs.cs","relativePath":"../../../../stride/sources/shaders/Irony/Parsing/Parser/ParsingEventArgs.cs","absolutePath":"D:/Projects/GitHub/stride/sources/shaders/Irony/Parsing/Parser/ParsingEventArgs.cs","projectName":"Irony","line":"14","statement":"2","debt":"16min","cov":"N/A","issues":[{"line":"8","ruleId":"ND1907","debt":"3min  0s","severity":"0","expl":"The <i>public readonly field Context</i> is typed with the <i>class ParsingContext</i> that is mutable: its states can be modified at runtime. This situation can be misleading: the keyword <i>readonly</i> mistakenly suggests that the object remains constant, while in fact, the field reference remains fixed but the referenced object\'s state can still change. Replace the field type with an immutable class or declare the field as <i>private</i>."},{"line":"8","ruleId":"ND2000","debt":"3min  0s","severity":"1","expl":"The <i>instance field Context</i> name does not adhere to usual .NET field naming conventions. It does not start with a lowercase letter, an underscore character followed by a lowercase letter or an <i>m_</i> expression followed by an uppercase letter."},{"line":"7","ruleId":"ND2013","debt":"10min","severity":"1","expl":"The <i>class ParsingEventArgs\'s name</i> starts with the parent namespace name <i>Parsing</i>. This results in redundant naming without any improvement in readability."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="5"  style="display:none">H4sIAAAAAAAEAF1NSwrCMBDdF3KHWeomB7C4kCIiuBD0AjEOJZBOaiYRi3h3Y238BIZ583mfyIZaOAwcsKtFFX9W2ThrUQfjiOUGCb3RJWVn6FLejngL6SYqUh1yrzTC1jsa5F75kXcXFUAfT9Zo0FYxw/RZX5HCyrcMC/jOI/0j8KjOjuyQNY2jkAJhwvqPXPrOCpF+4zxnQLaBZf5Nho8XpJbqCXwYRXkzAQ==$84$</span>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"SerializerContext.cs","relativePath":"../../../../stride/sources/core/Stride.Core/Serialization/SerializerContext.cs","absolutePath":"D:/Projects/GitHub/stride/sources/core/Stride.Core/Serialization/SerializerContext.cs","projectName":"Stride.Core","line":"38","statement":"7","debt":"1h  24min","cov":"N/A","issues":[{"line":"10","ruleId":"ND1905","debt":"1h  5min","severity":"2","expl":"The <i>field Tags</i> is assigned outside its parent type by the <i>10 methods Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), constructor of CloneContext and Serialize(…) and 3 other methods</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose accesses can be better controlled at debug-time."},{"line":"10","ruleId":"ND1906","debt":"9min","severity":"2","expl":"The <i>instance field Tags</i> is assigned from the <i>10 methods Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…), Serialize(…) and Serialize(…) and 2 other methods</i>. Do reduce the number of methods that assign it. By now there is no clear and predictable pattern for how this state changes at runtime."},{"line":"7","ruleId":"ND2012","debt":"10min","severity":"2","expl":"A type with the same name as the <i>class SerializerContext</i> is defined in the <i>namespace Stride.Core.Yaml.Serialization</i>. This leads to confusion and also naming collision."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="66"  style="display:none">H4sIAAAAAAAEAIVT22rbQBB9F+gfBgpFhrJqaJ9qJxASp4S2bkF6K3lYS2N5U2lX7M7adU3/vbOS47sbIZCYPXNuttIU7ky7sqqaEyTFAMRknMOD8bqUpIwGqUtGaLJq6slYB8mcqHWf0rQ0pJFmW6gwtkrhLbycO94p8UMpGDXoeDJVq4I5M/KlMkxrW7HjWy6XwvUI1wFEYcRzO4ijNIV75XoLWAILogWaI3x7zIEXUDsUkCF2w6+Pd+NJNhZNCTNVIyjdjVtrnrEgsMYQzIyFxthwyK9N7z+OvFO6YnvBuGB7KG61NtQdu2EcxZGWDbpWFniAytAqWas/HTCO1nEEfLV+yuagqKVz8AJBG9rE39RjGPqmtbJqJCyl1UG+VE5O2Xd2e/Xx/RVw+AeFdemg8Y5gGpKohSTsCfaEfljToqVVEJBKc0e5rILtYwWLjkL41xVONE5iJIMdZr17DdcOm2HN1XPn12eG4h5n0tc0PNwO3hmvcXkaLKG5coO9hb/7VlMONHK+aaRd3RyOPyM5YB8uPMO/wm3tiCOC9DzDaCFrj0fD/P9MxysnXW77OTNaQ4U0DI6HhzE3LHkINcpvkp8TQxNf10/bvr7gig/gF64u/0gWyVvdtS2YKAngS8VuFBdG8bf8uug79tZFv6zeyTLV92n4NpNuqV859LB58P0PKjeCjLEE$510$</span>
+  </body>
+</html>

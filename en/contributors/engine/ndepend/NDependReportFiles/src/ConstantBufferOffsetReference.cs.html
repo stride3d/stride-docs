@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ConstantBufferOffsetReference.cs","relativePath":"../../../../stride/sources/engine/Stride.Rendering/Rendering/ConstantBufferOffsetReference.cs","absolutePath":"D:/Projects/GitHub/stride/sources/engine/Stride.Rendering/Rendering/ConstantBufferOffsetReference.cs","projectName":"Stride.Rendering","line":"20","statement":"2","debt":"31min","cov":"N/A","issues":[{"line":"8","ruleId":"ND1313","debt":"14min","severity":"2","expl":"The <i>structure ConstantBufferOffsetReference</i> should override the <i>Equals()</i> and <i>GetHashCode()</i> methods. Additionally, consider implementing the <i>==</i> and <i>!=</i> operators if you anticipate users comparing or sorting instances or using them as keys in hash tables. Alternatively transform it into a <i>record struct</i>."},{"line":"12","ruleId":"ND1805","debt":"2min  40s","severity":"1","expl":"The <i>field Index</i> is used outside its parent type by the <i>5 methods GetConstantBufferOffset(…), CreateFrameCBufferOffsetSlot(…), CreateViewCBufferOffsetSlot(…), RemoveViewCBufferOffsetSlot(…) and CreateDrawCBufferOffsetSlot(…)</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose read-write accesses can be better controlled at debug-time."},{"line":"10","ruleId":"ND1902","debt":"10min","severity":"1","expl":"The <i>static field Invalid</i> is typed with the <i>structure ConstantBufferOffsetReference</i> that is mutable: its states can be modified at runtime. This can lead to runtime confusion and hinder code testability. In <i>Object-Oriented Programming</i>, <i>instance fields</i> are the preferred choice for holding modifiable states."},{"line":"8","ruleId":"ND1903","debt":"5min","severity":"2","expl":"The <i>structure ConstantBufferOffsetReference</i> should be declared as <i>readonly</i> because its instances are values, not objects. Mutable values are unexpected by the users. Making it <i>readonly</i> ensures predictable behavior, thread safety and efficient copying."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="14"  style="display:none">H4sIAAAAAAAEAH1QX2vbMBB/N/g7HH3YYugkxt7WtQ/Nsi7QdRD3CyjS2VaxJU86xTNj331nO11aKBECHaffvzspYe37Mdi6IVjpAsTD5hG++eSMIusdKGcY4SjYfSIfIqwaoj5+ltJ4ckjVf6jwoZbwDp7/I3MMfjKCUcWsU9rWatYsKRnrWTb04qQ3DIOICyLOAKG9eOqLPJMSvtq4READbIgBqEH4sX0EJqCLKKBEnJv32/XmodyIzkBlWwTr5nYf/BNqguA9QeUDdD5Mn1x2S/48c6rD2CuNHHEKL3Y4eVlX59mfPAM+ksN8ianrVBhvTq3vPB97pcj5yMOvhGGEoVH0Ps7uSlNSLfiqikj8gILaHtDBQQWr9ktMBfPsyhHsU1VhuGRu8Klu2JKn0wGr64slUzlGwm6H0aeg8Y5R/b0afSJxh7Q+ytzOKj9n0wt5I16MIF/P0Kc9LxJ4yYl39BZ/h1yi07gQjut4xeU1agiojHfteF4Etu6gWmvgGhwO57GrDx+Lqzw7GVpHGByvkwsWMvj77e/zqhPZTuTiRH0x1XRmbY5ojx7P/b9LyQ/ffy3V4hNDAw==$70$</span>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ItemIdSerializerBase.cs","relativePath":"../../../../stride/sources/assets/Stride.Core.Assets/Yaml/ItemIdSerializerBase.cs","absolutePath":"D:/Projects/GitHub/stride/sources/assets/Stride.Core.Assets/Yaml/ItemIdSerializerBase.cs","projectName":"Stride.Core.Assets","line":"33","statement":"6","debt":"16min","cov":"N/A","issues":[{"line":"11","ruleId":"ND1201","debt":"3min  0s","severity":"2","expl":"The <i>base class ItemIdSerializerBase</i> should not rely on its derivative, specifically the <i>class ItemIdSerializer</i>, because it should remain <i>open</i> for the creation of new derived classes without requiring modifications."},{"line":"16","ruleId":"ND1805","debt":"1min  20s","severity":"1","expl":"The <i>field OverrideInfoKey</i> is used outside its parent type by the <i>method WriteDictionaryKey(…)</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose read-write accesses can be better controlled at debug-time."},{"line":"16","ruleId":"ND1901","debt":"2min  0s","severity":"2","expl":"The <i>static field OverrideInfoKey</i> should be declared as <i>readonly</i> because changing it can lead to runtime confusion and hinder code testability. In <i>Object-Oriented Programming</i>, <i>instance fields</i> are the preferred choice for holding modifiable states."},{"line":"16","ruleId":"ND1902","debt":"10min","severity":"1","expl":"The <i>static field OverrideInfoKey</i> is typed with the <i>class PropertyKey&lt;T&gt;</i> that is mutable: its states can be modified at runtime. This can lead to runtime confusion and hinder code testability. In <i>Object-Oriented Programming</i>, <i>instance fields</i> are the preferred choice for holding modifiable states."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="20"  style="display:none">H4sIAAAAAAAEAJVTTW+bQBC9W/J/GPlQgRoth97S2FLqppXVNomCVanHNQz2prCLdoe4tMp/zyxgG8iH1BUHmHn75s2bIYpgacraqu2OIEhCENdXa/hiKp1KUkaD1CkjNFm1qchYB8GOqHTnUZQa0kjZESqM3UbwDg55x3dS/JAKRoUNT6xylTBnTFWqDNPaUpz49vu9cC3CNQCRGHFfhtNJFMFn5VoJmAIXRAu0Q/ixWgNfQO1QQIzYBL+vllfX8ZUoUshUjqB0Ey6tuceEwBpDkBkLhbE+ya9Fq386qZzSW5bnhQuWh+IOs5xvcfrjS+lfsshFjFbJXP2VHWw60bJAV8oEn4Gnk3/TCfCJuKkLVxWFtPXiFLqEjXQISS6dAzLgOm5kMPeXWMzmsxVhsUpn0UL0uKIhWVlt2BmQG/ZNctstY3vzIBjtJ1/sHC6dQ4oTmUs7zLVcneRXZJ+k/8YaKscTYsvZ7hItKXRgsmMb7U7xhAn/UNOgNqSyGvY75CFZXhMwD2i9aZDlcgtuZ6o8hQ2CLEvUTM5QfST0A/HTtZhLvxtvuPSaUz23HLHABG5b7fU3rC/82untAm46VSteGI7DHDTuX0IGsz50dgZUl2iyYGx9GDarMlCmNHugKDVJ9Fzc0Ze2kP8rOUJrE3C7cLPx271snQXT/wpPVL1J+vMgLTvnqpy4n6CTGA4uixX/jVInGIq1iZvKgVfep+kEmV7fI4TKIBjSnow4RG6PGyPWtv6K9FPmFQYj48/AVDQoFYbDWqMe/el6fD9/S6M//6HxDgsmG8sbW/M4/LRIldWdnh708bAK/MLPE+dVssuWBQ==$616$</span>
+  </body>
+</html>
