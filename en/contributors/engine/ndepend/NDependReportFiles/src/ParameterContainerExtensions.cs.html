@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ParameterContainerExtensions.cs","relativePath":"../../../../stride/sources/engine/Stride.Engine/Engine/Design/ParameterContainerExtensions.cs","absolutePath":"D:/Projects/GitHub/stride/sources/engine/Stride.Engine/Engine/Design/ParameterContainerExtensions.cs","projectName":"Stride.Engine","line":"18","statement":"1","debt":"17min","cov":"N/A","issues":[{"line":"8","ruleId":"ND1206","debt":"2min  0s","severity":"0","expl":"The <i>class ParameterContainerExtensions</i> doesn\'t contain any instance field. Since it solely performs processing without managing any state, should it be refactored into a <i>static class</i>?"},{"line":"8","ruleId":"ND1207","debt":"2min  0s","severity":"1","expl":"The <i>class ParameterContainerExtensions</i> is not instantiated in the context of the analyzed code. Should it be declared as a <i>static class</i> or is it a potential candidate for removal?"},{"line":"10","ruleId":"ND1805","debt":"1min  20s","severity":"1","expl":"The <i>field DefaultSceneSerializerSelector</i> is used outside its parent type by the <i>method Initialize()</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose read-write accesses can be better controlled at debug-time."},{"line":"10","ruleId":"ND1901","debt":"2min  0s","severity":"2","expl":"The <i>static field DefaultSceneSerializerSelector</i> should be declared as <i>readonly</i> because changing it can lead to runtime confusion and hinder code testability. In <i>Object-Oriented Programming</i>, <i>instance fields</i> are the preferred choice for holding modifiable states."},{"line":"10","ruleId":"ND1902","debt":"10min","severity":"1","expl":"The <i>static field DefaultSceneSerializerSelector</i> is typed with the <i>class SerializerSelector</i> that is mutable: its states can be modified at runtime. This can lead to runtime confusion and hinder code testability. In <i>Object-Oriented Programming</i>, <i>instance fields</i> are the preferred choice for holding modifiable states."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="140"  style="display:none">H4sIAAAAAAAEAH2Q3WqDMBTH7wXf4eDFUBjxYncru2odFLYysC+QJkebookkR9wHe/cdta6FjYaAIef/8Yt5DmvXfXhTHwlSlYHYFXt4dr3VkoyzIK1mhSVvDj05HyA9EnXhMc+1I4tU/UqF83UOd7DMA3s0PmjBqmzKKU1jFGeW1GvjONZ34pI3DIMIsyJMAqGcOHVZHOU5bEyYEVADF6IHOiK8bvfABrQBBZSI0+XLdl3sykK0GirTIBg7XXfenVAReOcIKuehdX4c8rGd+eMojvpgbM2AI7pgQBQleiMb8zlpVqPGyhZDJxUuusLWxqLYYDC1jaOvOAJeXX9gNlCNDAHepGcXoR//pWS1L96JuTkzzPKz68oZiDsVLADoS2z4BYy+wUr2DZX8cvw7niCXrHPIrf40u8ivKMZ1uwiewOLwD2CanI3JPSRjI1pKstUl+3s+8of3D3or+h6EAg==$160$</span>
+  </body>
+</html>

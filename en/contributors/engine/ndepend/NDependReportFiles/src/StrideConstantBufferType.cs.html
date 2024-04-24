@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"StrideConstantBufferType.cs","relativePath":"../../../../stride/sources/shaders/Stride.Core.Shaders/Ast/Stride/StrideConstantBufferType.cs","absolutePath":"D:/Projects/GitHub/stride/sources/shaders/Stride.Core.Shaders/Ast/Stride/StrideConstantBufferType.cs","projectName":"Stride.Core.Shaders","line":"50","statement":"3","debt":"40min","cov":"N/A","issues":[{"line":"7","ruleId":"ND1400","debt":"20min","severity":"1","expl":"The <i>class StrideConstantBufferType</i> should not use the <i>2 types ShaderVisitor and ShaderVisitor`1</i> because its parent <i>namespace Stride.Core.Shaders.Ast.Stride</i> is at lower level than the <i>namespace Stride.Core.Shaders.Visitor</i> that contains the elements used. This situation prevents <b>clean layered architecture</b> because both namespaces use each other."},{"line":"12","ruleId":"ND1902","debt":"10min","severity":"1","expl":"The <i>static field ResourceGroup</i> is typed with the <i>class StrideConstantBufferType</i> that is mutable: its states can be modified at runtime. This can lead to runtime confusion and hinder code testability. In <i>Object-Oriented Programming</i>, <i>instance fields</i> are the preferred choice for holding modifiable states."},{"line":"7","ruleId":"ND2013","debt":"10min","severity":"1","expl":"The <i>class StrideConstantBufferType\'s name</i> starts with the parent namespace name <i>Stride</i>. This results in redundant naming without any improvement in readability."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="146"  style="display:none">H4sIAAAAAAAEAM1TTY/TMBC9V8p/GOWAkotz4NbdrrRbClTACkj/gJtMWi+JHfyhqiD+O2On2TbNVhROWJXijmfevHkzk2UwV+1ei83WQlKkwB4XK3irnCy5FUoClyV5SKvF2lmlDSRba1szzbJSWYm2enZlSm8yeAX9u6GYEl+XjLzSgJOLWhSEmVtXCkWwumVHvN1ux0znYYIDKxR7atNokmXwRpiOApZACVGD3SJ8Wq6AAlAaZJAjBuPH5XzxmC9YU0IlagQhg7nV6gkLC1opC5XS0CjtH+nadPyjiTNCboieJ86IHrJ8yymZYffGsve1qW+iSTSRvEHT8gIvunb2aPIzmgCd1q2JJrRcW8FrKGpuzCF27qvl0j64qkK92rcIUxgbO5wDnD8ZiXJrXNNwvb8bmgG+olFOE7+NVq6Fb7jfKV1CosP/lJ3BZGOcA2NiYemjkZdK1vvLnPuM70LCGUjcXXRO4o5HnAY1r6hoKYUXTvxAAzxgiwBKFaoqdPfWUPcLjdUs7tLmNKx8g18chVUCdZzddbpfX/xF/unR9aQjv47X/7GoYKcJ5A34+Z3FNBXx2fuKkpJ5hBbC/kIgv6u0SAR1IpU/U1hzg8nwYajhVdp95tqQbF4k02LhxSgBpetq+xc1fPAj3c4l8ba+H97nj9oEq0brtDRn5nv43nfuHGUcMNxAPx4vrF3QoZe7L+Flaf0RFSS9F8xmcIhMB9vLPoza5k/HcLjog/09cRozZR3TZ4o3o72hD/1+A7ybkJuQBg==$571$</span>
+  </body>
+</html>

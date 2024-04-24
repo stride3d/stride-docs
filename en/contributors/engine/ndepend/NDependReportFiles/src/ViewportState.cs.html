@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"ViewportState.cs","relativePath":"../../../../stride/sources/engine/Stride.Rendering/Rendering/ViewportState.cs","absolutePath":"D:/Projects/GitHub/stride/sources/engine/Stride.Rendering/Rendering/ViewportState.cs","projectName":"Stride.Rendering","line":"38","statement":"6","debt":"48min","cov":"N/A","issues":[{"line":"9","ruleId":"ND1313","debt":"14min","severity":"2","expl":"The <i>structure ViewportState</i> should override the <i>Equals()</i> and <i>GetHashCode()</i> methods. Additionally, consider implementing the <i>==</i> and <i>!=</i> operators if you anticipate users comparing or sorting instances or using them as keys in hash tables. Alternatively transform it into a <i>record struct</i>."},{"line":"9","ruleId":"ND1903","debt":"5min","severity":"2","expl":"The <i>structure ViewportState</i> should be declared as <i>readonly</i> because its instances are values, not objects. Mutable values are unexpected by the users. Making it <i>readonly</i> ensures predictable behavior, thread safety and efficient copying."},{"line":"11","ruleId":"ND1905","debt":"20min","severity":"2","expl":"The <i>field Viewport0</i> is assigned outside its parent type by the <i>4 methods CollectCore(…), CollectCore(…), CollectCore(…) and CollectCore(…)</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose accesses can be better controlled at debug-time."},{"line":"11","ruleId":"ND1906","debt":"9min","severity":"2","expl":"The <i>instance field Viewport0</i> is assigned from the <i>4 methods CollectCore(…), CollectCore(…), CollectCore(…) and CollectCore(…)</i>. Do reduce the number of methods that assign it. By now there is no clear and predictable pattern for how this state changes at runtime."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="116"  style="display:none">H4sIAAAAAAAEAI2T32vbMBDH3w35H448FLsFKV3XDeokL2k2Cl0Lc9jL2INqy4lKLAn9SBbG/vddlPhHmg4cApbuPve9O+lEKcyU3hmxXDmI8wTI03wBX5SXBXNCSWCyQEI6I168U8ZCvHJO2ztKC+Ukd2WDEmWWFC6g9luMKfhNQZBKgk4m1iJHzcz5QiiUNZq0etvtltgDYQNAckVedTKIKIV7YQ8l8AIwITfgVhy+PSwAA7i0nEDGeTA+PszmT9mcVAWUYs1ByGDWRr3y3IFRykGpDFTK7J24rA71D6JB5K2QS8h21vEqbbahE/LVML0SuU33oGQVt5rlvPZ+5/uyEB9EfwYR4E/7FywOsHCPeX8IvtXKuMwxxw/AkeuwNdQsRmnLUPo/6roX9aEXddOL+tiLuu1FfepFfQ7H3nIUxtZXFTO76al5xrTzeLV2f9BQGlUhibORG15OhjOFMbJ4xHkitbQd0il5o03fFx9rZlgF+9ufDPNWazhd4IwdDTiT1oFTkJ+VQsY0KEzPrt5Ly0oOGyWKuoUwKnGnYuhkTFqFzhwd6oTF8/3zHWRehyOs/NoJjU9hUzd8GrBhpnXBpJulPaP0NKYUv/EpxrX7shEYocBFM77JadSbSoMQPsVYSAcCA0cpfsZwncLVlUjO4XfiQwN1up/iF6o0veA2PY/4e2rqbI9L/OD/H/0vl00bBQ==$520$</span>
+  </body>
+</html>

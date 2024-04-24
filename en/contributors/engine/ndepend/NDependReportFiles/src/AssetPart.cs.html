@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"AssetPart.cs","relativePath":"../../../../stride/sources/assets/Stride.Core.Assets/AssetPart.cs","absolutePath":"D:/Projects/GitHub/stride/sources/assets/Stride.Core.Assets/AssetPart.cs","projectName":"Stride.Core.Assets","line":"82","statement":"18","debt":"8min","cov":"N/A","issues":[{"line":"13","ruleId":"ND1914","debt":"2min  0s","severity":"1","expl":"The <i>structure AssetPart</i> should be declared as <i>readonly</i>. This way not only the intent is clearly expressed and some optimizations can be performed by the compiler and the runtime."},{"line":"32","ruleId":"ND1907","debt":"3min  0s","severity":"0","expl":"The <i>public readonly field Base</i> is typed with the <i>class BasePart</i> that is mutable: its states can be modified at runtime. This situation can be misleading: the keyword <i>readonly</i> mistakenly suggests that the object remains constant, while in fact, the field reference remains fixed but the referenced object\'s state can still change. Replace the field type with an immutable class or declare the field as <i>private</i>."},{"line":"27","ruleId":"ND2000","debt":"3min  0s","severity":"1","expl":"The <i>instance field PartId</i> name does not adhere to usual .NET field naming conventions. It does not start with a lowercase letter, an underscore character followed by a lowercase letter or an <i>m_</i> expression followed by an uppercase letter."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="54"  style="display:none">H4sIAAAAAAAEAK1WS2/jNhC+G/B/mPhgSIuAOuyh6DpJm2bdrYE2XdTZU9ECtDSKuJVIlaTiGov89w4pSpaf2SIVDJiame+bJ0klCdypeqPFY2EhSmNg9/MH+FE1MuNWKAlcZmQhrRarxiptICqsrc27JMmUlWjz3pQp/ZjAFDq9IUyGbzNGVrHnWYpSpMS5tE0mFNHqmm351us1M62F8QYsVexzHY9HSQLvhWlDwAzIIWqwBcIviwcgAEqDDJaIXvjz4m5+v5yzKoNclAhCenGt1WdMLWilLORKQ6W0U9KyauMfjxoj5CMsN8ZiNetffR6MokWSjUeSV2hqnuJQw26NQWvGoy/jEdCTUMxXpqkqrjc3W9Et1Fxb4M4YKFHLhaSMVhuqT5DaglsQhtCUT6oxv54sPPmdqmplhMVJcsMGXpJdN7+/55b7jvHURhMP/UhOJ/EfweDXlVElWowmDwU5osI2VJfKj8AKQWOlnigoo5TsQXWzokJ3tj0pvIPF/O+GPK5KvOrFIZRQiwG+t4g+NCLzxVhkl/ADN+jpVmFxCbep68lVp7nxqk81jRrqeMs7cOEekUM0MITra5BNWcZUVa3WIHENt/qxqVDae5LP/0mxdn4i11SVD7FxPDvkbgN2tC5+Nq9quzlGviX+fhJ6TrCUS6l8jdEB2eQSgt+W98Dlx+AuFGpP62pDuq5me1pLvWU7tRiWcGD87Ia6ezkyt/3s+vGkgZdW5AI120Mlh7DQdY08U7Lc+KKFpGZf6dUnyV/vuh8xt9hxXmvxRCXZmp4bvV1k6+NJUVat3mGi3hVNhFufHtcBcdQZn+2MkAVqYTOVJoe5rpQqwe3G0kTbHaro8DuzYzTaRsvQFBbQHsNaWQzT6S4kPMHWBf0d63L2fpnb0y3Hce1/4zzF9rU8C7pPuExxn2crf0XR6ajU7hbYqb5a+auG/s4fVb9hjhophIBzZ9Wlh8VdY3KS4+xoz8jOXRTbVk+nXQDb/seO7X9IT0gLH9D+xE1xpzKMTifWyLTA9C/MdsVfDhv1xDUUgZCOpzCDO15mhyhXOH8qXITD/dDkiC/3DHxF3frN22+/ieFPfyy86Pr5UBR60dHtgZ5PFL6/TunLI2xcVaPm9IVFl8tg95aYu8uwf/cfai/uZofq9nKLODUB5wK5eH0gFy9FEv7o9y9LM60Digo=$884$</span>
+  </body>
+</html>

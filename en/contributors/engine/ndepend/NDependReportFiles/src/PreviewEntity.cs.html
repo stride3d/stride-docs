@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="src.css"/>
+	 <script src="src.js"></script>
+    <script src="CommonIssuesData.js"></script>
+    <script>
+var issues='{"fileName":"PreviewEntity.cs","relativePath":"../../../../stride/sources/editor/Stride.Editor/Preview/PreviewEntity.cs","absolutePath":"D:/Projects/GitHub/stride/sources/editor/Stride.Editor/Preview/PreviewEntity.cs","projectName":"Stride.Editor","line":"26","statement":"2","debt":"1h  7min","cov":"N/A","issues":[{"line":"13","ruleId":"ND1805","debt":"3min  0s","severity":"1","expl":"The <i>field Entity</i> is used outside its parent type by the <i>6 methods PrepareLoadedEntity(), LoadContent(), UnloadContent(), PrepareLoadedEntity(), CreatePreviewEntity() and ResetCamera()</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose read-write accesses can be better controlled at debug-time."},{"line":"18","ruleId":"ND1905","debt":"45min","severity":"2","expl":"The <i>field Disposed</i> is assigned outside its parent type by the <i>9 methods CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity() and CreatePreviewEntity()</i>. A field should be an encapsulated <i>implementation detail</i>. Consider making it <i>private</i> or refactor it as a property whose accesses can be better controlled at debug-time."},{"line":"18","ruleId":"ND1906","debt":"9min","severity":"2","expl":"The <i>instance field Disposed</i> is assigned from the <i>9 methods CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity(), CreatePreviewEntity() and CreatePreviewEntity()</i>. Do reduce the number of methods that assign it. By now there is no clear and predictable pattern for how this state changes at runtime."},{"line":"8","ruleId":"ND2013","debt":"10min","severity":"1","expl":"The <i>class PreviewEntity\'s name</i> starts with the parent namespace name <i>Preview</i>. This results in redundant naming without any improvement in readability."}]}';
+ </script>
+</head>
+<body>
+    <span id="source" fid="27"  style="display:none">H4sIAAAAAAAEAI1RwWrDMAy9B/IPOo32Yh92W7fB6DIobGWQ/oAbq4m7xg62shDG/n2Kk7brdqkI2JGe9J6epYSla3pvyopgVsxBrLMNvLjWakXGWVBWM8KSN9uWnA8wq4iacCeldmSRdieocL6UcAPHeuAejbdaMGoe5+TmYAqemVOrjeOxvhHneV3XiTAiQgSIwol9M08TKeHZhFECamBC9EAVwttqA9yANqCAHDEmX1fLbJ1notawMwcEY2O68W6PBYF3jmDnPNTOD0W+1qP+NGmDsSXkfSCsF6ffuIfIbGkscjZNrKoxNKrAU00b9ka8e/w02KXJV5oAR9NuWR0UBxUCTMXMkqF+rE+wISTveB/aula+f7xMb1g8xi4gx2vEMeJPq/zfO7GPhNMR5V/JqYrBlTCQRsdJfSB0FR7tjDqOykwAy762gd9H2X7w9nqJT5FpeOPG8YALkRPkwr3ZtNPIPT+Dfxk6xAR7mICLc/V7vPLB3w96dS4gBAM=$129$</span>
+  </body>
+</html>
