@@ -10,35 +10,41 @@ jobs:
     runs-on: windows-2022
 
     steps:
-      - name: Dotnet Setup
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.x
+    # Setup .NET SDK
+    - name: Dotnet Setup
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.x
 
-      - name: Checkout Stride Docs
-        uses: actions/checkout@v4
-        with:
-          path: stride-docs
-          lfs: true
+    # Checkout the Stride Docs repository from the branch that triggered the workflow
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v4
+      with:
+        path: stride-docs
+        lfs: true
 
-      - name: Checkout Stride (note the LFS)
-        uses: actions/checkout@v4
-        with:
-          repository: stride3d/stride
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: stride
-          lfs: true
+    # Checkout the Stride repository from the default branch
+    - name: Checkout Stride (note the LFS)
+      uses: actions/checkout@v4
+      with:
+        repository: stride3d/stride
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: stride
+        lfs: true
 
-      - name: Install DocFX
-        run: dotnet tool update -g docfx --version 2.76.0
+    - name: Install DocFX
+      # This installs the latest version of DocFX and may introduce breaking changes
+      # run: dotnet tool update -g docfx
+      # This installs a specific, tested version of DocFX.
+      run: dotnet tool update -g docfx --version 2.76.0
 
-      - name: Build documentation
-        run: ./build-all.bat
-        working-directory: stride-docs
+    - name: Build documentation
+      run: ./build-all.bat
+      working-directory: stride-docs
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.9.2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: stride-docs/_site
-          publish_branch: gh-pages
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3.9.2
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: stride-docs/_site
+        publish_branch: gh-pages
