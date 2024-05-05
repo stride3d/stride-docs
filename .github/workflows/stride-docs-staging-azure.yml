@@ -18,7 +18,7 @@ on:
 
 jobs:
   setup:
-    uses: ./.github/workflows/common-setup.yml@main
+    uses: ./.github/workflows/common-setup.yml
 
   build:
     # Run this job only if the repository is 'stride3d/stride-docs'
