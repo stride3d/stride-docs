@@ -32,7 +32,7 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 The Stride documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/stride3d/stride-docs).
 
-To edit any page of this manual, click the **Edit this page** link at the bottom. Please make sure to follow the [writing guidelines](../contributors/documentation/index.md)
+To edit any page of this manual, click the **Edit this page** link at the bottom. Please make sure to follow the [writing guidelines](../contributors/documentation/index.md).
 
 ## Stride community toolkit
 
