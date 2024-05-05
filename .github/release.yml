@@ -1,0 +1,40 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - dependabot
+  categories:
+    - title: 💥 Breaking Changes
+      labels:
+        - 'breaking-change'
+    - title: 🎉 New Features
+      labels:
+        - 'new-feature'
+    - title: 🐞 Bug Fixes
+      labels:
+        - 'bug-fix'
+    - title: 🏋🏽 Community Resources
+      labels:
+        - 'community-resources'
+    - title: 🌟 Contributing
+      labels:
+        - 'contributing'
+    - title: 🔧 API
+      labels:
+        - API
+    - title: 📝 Release Notes
+      labels:
+        - 'release-notes'
+    - title: 📚 Manual
+      labels:
+        - manual
+    - title: 🎓 Tutorials
+      labels:
+        - 'tutorial'
+    - title: 🔁 Build & Deploy
+      labels:
+        - 'ci-cd'
+    - title: 💪 Other Changes
+      labels:
+        - "*"
