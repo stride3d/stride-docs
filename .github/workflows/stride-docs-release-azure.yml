@@ -67,28 +67,29 @@ jobs:
   deploy:
     if: github.repository == 'stride3d/stride-docs'
     runs-on: windows-2022
+
     needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: DocFX-app
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v4
+      with:
+        name: DocFX-app
 
-      # - name: List current directory
-      #   run: ls
+    # - name: List current directory
+    #   run: ls
 
-      - name: Decompress artifact
-        run: 7z x DocFX-app.zip "-o./stride-docs/_site"
+    - name: Decompress artifact
+      run: 7z x DocFX-app.zip "-o./stride-docs/_site"
 
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'stride-doc'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4803638D673FA67D0C8650F34C4FA9D1 }}
-          package: ./stride-docs/_site
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'stride-doc'
+        slot-name: 'Production'
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4803638D673FA67D0C8650F34C4FA9D1 }}
+        package: ./stride-docs/_site

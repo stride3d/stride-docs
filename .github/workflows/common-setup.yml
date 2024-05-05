@@ -1,13 +1,16 @@
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build Stride Docs for GitHub Staging
+name: Common Setup for Stride Documentation
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
-  publish-docs:
+  setup:
     runs-on: windows-2022
+
+    outputs:
+      dotnet-version: '8.x'
+      stride-docs-path: 'stride-docs'
+      stride-path: 'stride'
 
     steps:
     # Setup .NET SDK
@@ -37,14 +40,3 @@ jobs:
       # run: dotnet tool update -g docfx
       # This installs a specific, tested version of DocFX.
       run: dotnet tool update -g docfx --version 2.76.0
-
-    - name: Build documentation
-      run: ./build-all.bat
-      working-directory: stride-docs
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.9.2
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: stride-docs/_site
-        publish_branch: gh-pages
