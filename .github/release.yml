@@ -20,7 +20,6 @@ changelog:
     - title: 🌟 Contributing
       labels:
         - 'contributing'
-        - 'refactoring'
     - title: 🔧 API
       labels:
         - API
