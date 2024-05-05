@@ -21,13 +21,15 @@ jobs:
     uses: ./.github/workflows/common-setup.yml
 
   build:
+    needs: setup  
+    runs-on: windows-2022
     # Run this job only if the repository is 'stride3d/stride-docs'
     if: github.repository == 'stride3d/stride-docs'
-    runs-on: windows-2022
-
-    needs: setup
-
     steps:
+    - name: List Contents of Stride Docs Path
+      run: dir
+      working-directory: ${{ needs.setup.outputs.stride_docs_path }}
+        
     - name: Build documentation
       run: ./build-all.bat
       working-directory: ${{ needs.setup.outputs.stride_docs_path }}
