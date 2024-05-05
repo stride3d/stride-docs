@@ -2,13 +2,19 @@ name: Common Setup for Stride Documentation
 
 on:
   workflow_call:
+    outputs:
+      stride_docs_path:
+        description: "The checkout path of the Stride Docs repository"
+        value: ${{ jobs.setup.outputs.stride_docs_path }}
+      stride_path:
+        description: "The checkout path of the Stride repository"
+        value: ${{ jobs.setup.outputs.stride_path }}  
 
 jobs:
   setup:
     runs-on: windows-2022
 
     outputs:
-      dotnet-version: '8.x'
       stride-docs-path: 'stride-docs'
       stride-path: 'stride'
 
