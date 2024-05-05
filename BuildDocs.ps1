@@ -219,12 +219,12 @@ function Build-NonEnglishDoc {
         # Copy all files from en folder to the selected language folder, this way we can keep en files that are not translated
         Copy-Item en/* -Recurse $langFolder -Force
 
-        # Get all translated files from the selected language folder
+        # Get all previously copied en files from the selected language folder
         $files = Get-ChildItem "$langFolder/$($Settings.ManualFolderName)/*.md" -Recurse -Force
 
         Write-Host "Start write files:"
 
-        # Mark files as not translated if they are not in the toc.md file
+        # Mark files as not translated if they are not a toc.md file
         foreach ($file in $files)
         {
             if($file.ToString().Contains("toc.md")) {
