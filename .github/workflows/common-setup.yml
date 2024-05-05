@@ -1,5 +1,6 @@
 name: Common Setup for Stride Documentation
 
+# This is not used currently. The job runs in a separate instants so can't be used
 on:
   workflow_call:
     outputs:
@@ -8,7 +9,7 @@ on:
         value: ${{ jobs.setup.outputs.stride_docs_path }}
       stride_path:
         description: "The checkout path of the Stride repository"
-        value: ${{ jobs.setup.outputs.stride_path }}  
+        value: ${{ jobs.setup.outputs.stride_path }}
 
 jobs:
   setup:
