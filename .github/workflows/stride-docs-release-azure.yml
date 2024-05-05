@@ -80,6 +80,7 @@ jobs:
         gh release create ${{ env.VERSION }} --title "v${{ env.VERSION }}" --notes "Release notes for ${{ env.VERSION }}" --draft
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      working-directory: ${{ env.DOCS_PATH }}
 
   deploy:
     if: github.repository == 'stride3d/stride-docs'
