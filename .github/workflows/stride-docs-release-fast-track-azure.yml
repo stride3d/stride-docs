@@ -12,6 +12,7 @@ jobs:
     # Run this job only if the repository is 'stride3d/stride-docs'
     if: github.repository == 'stride3d/stride-docs'
     runs-on: windows-2022
+
     environment:
       name: 'Production'
 
@@ -52,7 +53,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-          app-name: 'stride-doc'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4803638D673FA67D0C8650F34C4FA9D1 }}
-          package: ./stride-docs/_site
+        app-name: 'stride-doc'
+        slot-name: 'Production'
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4803638D673FA67D0C8650F34C4FA9D1 }}
+        package: ./stride-docs/_site
