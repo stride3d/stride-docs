@@ -30,10 +30,10 @@ jobs:
     steps:
     - name: Build documentation
       run: ./build-all.bat
-      working-directory: stride-docs
+      working-directory: ${{ needs.setup.outputs.stride_docs_path }}
 
     - name: Compress artifact
-      run: 7z a -r DocFX-app.zip ./stride-docs/_site/*
+      run: 7z a -r DocFX-app.zip ./${{ needs.setup.outputs.stride_docs_path }}/_site/*
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v4
