@@ -47,13 +47,13 @@ jobs:
         Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
       shell: pwsh
 
-    - name: Display Updated docfx.json
-      run: cat "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}"
-      shell: pwsh
+    # - name: Display Updated docfx.json
+    #   run: cat "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}"
+    #   shell: pwsh
 
-    - name: Fail the Workflow
-      run: exit 1
-      shell: pwsh
+    # - name: Fail the Workflow
+    #   run: exit 1
+    #   shell: pwsh
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
