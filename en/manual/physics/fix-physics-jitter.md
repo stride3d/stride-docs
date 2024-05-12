@@ -8,7 +8,7 @@ In Stride, there is no default smoothing applied to entities that are attached t
 In this tutorial, we will explore how to add smoothing to an entity using a SyncScript.
 
 > [!Note]
-> You can also decrease the `Fixed Time Step` in the physics settings configuration to achieve more accurate physics simulations. For example, changing it from `0.016667` to `0.008` will increase accuracy but at the cost of higher CPU usage.
+> You can also decrease the `FixedTimeStep` in the physics settings configuration to achieve more accurate physics simulations. For example, changing it from `0.016667` to `0.008` will increase accuracy but at the cost of higher CPU usage.
 
 ## Code to handle smoothing between two entities
 The following code is all that's needed to smoothly attach two entities. Ensure that you unparent the entity you are trying to smooth, otherwise the transform processor will override this script.
@@ -42,7 +42,7 @@ public class SmoothFollowAndRotate : SyncScript
 
 ## Example Usage
 
-This example demonstrates modifications to the **First Person Shooter** Template to integrate smooth camera movement.
+This example demonstrates modifications to the **First Person Shooter** template to integrate smooth camera movement.
 
 1. Detach the camera from the physics entity.
 2. Remove the FPS camera script from the camera.
@@ -84,29 +84,32 @@ var inverseView = Matrix.Invert(camera.ViewMatrix);
 ```
 
 to
-`var inverseView = camera.Transform.WorldMatrix;`
+
+```cs
+var inverseView = camera.Transform.WorldMatrix;
+```
 
 ### FpsCamera.cs
 
 Remove
 
 ```cs
-        /// <summary>
-        /// Gets the camera component used to visualized the scene.
-        /// </summary>
-        private Entity Component;
+/// <summary>
+/// Gets the camera component used to visualized the scene.
+/// </summary>
+private Entity Component;
 ```
 and change
 
 ```cs
-        private void UpdateViewMatrix()
-        {
-            var camera = Component;
-            if (camera == null) return;
-            var rotation = Quaternion.RotationYawPitchRoll(Yaw, Pitch, 0);
+private void UpdateViewMatrix()
+{
+    var camera = Component;
+    if (camera == null) return;
+    var rotation = Quaternion.RotationYawPitchRoll(Yaw, Pitch0);
 
-            Entity.Transform.Rotation = rotation;
-        }
+    Entity.Transform.Rotation = rotation;
+}
 ```
 to
 
