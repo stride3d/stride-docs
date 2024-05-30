@@ -1,13 +1,10 @@
 # Diagnostics Warning STRDIAG010
 
-> The Type '{0}' doesn't have a public parameterless constructor, which is needed for Serialization
+> The Type '{0}' doesn't have a public parameterless constructor, which is needed for Serialization.
 
 ## Explanation
 
-By default, Stride serializers only support types that have a parameterless constructor.
-If no constructor is defined then the default constructor counts as parameterless constructor.
-Primary Constructors with parameters count as non parameterless constructor.
-Structs have per default a parameterless constructor so this warning will never appear on a struct. 
+By default, Stride serializers only support types that have a parameterless constructor. If no constructor is defined then the default constructor counts as parameterless constructor. Primary Constructors with parameters count as non parameterless constructor. Structs have per default a parameterless constructor so this warning will never appear on a struct.
 
 ## Example
 
