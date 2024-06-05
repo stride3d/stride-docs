@@ -34,16 +34,13 @@ To check if this is installed, follow the instructions on [this page](https://le
 
 If it's not installed, you can download it from the [Microsoft Download Center](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
 
-> [!Note]
-> If you have .NET 4.8 installed, you don't need to install .NET 4.7.2. Each 4.x version is cumulative.
-
 ### Visual Studio 2022 (optional)
 
 If you have Visual Studio 2022 (or later) installed, you need to have the following workloads and/or components installed:
 * **.NET desktop development** with **Development tools for .NET** optional component enabled.
 
 > [!Note]
-> Earlier versions might work with older version of Stride. However, for Stride 4.2 and later you need to have .NET 8 support.
+> Earlier versions might work with older version of Stride. However, for Stride 4.2 and later you only need to have .NET 8 SDK installed.
 
 ### Build Tools for Visual Studio 2022 (optional)
 

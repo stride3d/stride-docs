@@ -36,6 +36,6 @@ Stride がサポートするプラットフォームについては、「[プラ
 
 Stride で作成したゲームを実行するには、次のものが必要です。
 
-- .NET 4.6.1
+- .NET 8 SDK
 - DirectX11 (Windows 10 以降に含まれます)、OpenGL、または Vulkan
 - Visual C++ 2015 ランタイム (Visual Studio でのプロジェクトのプロパティの設定に応じて、x86 および x64 のどちらか一方または両方)

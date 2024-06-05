@@ -57,7 +57,7 @@
 
 Stride で作成されたゲームを Windows で実行するには、次のものが必要です。
 
-* .NET 4.6.1
+* .NET 8 SDK
 
 * DirectX11 (Windows 10 以降に含まれます)、OpenGL、または Vulkan
 
