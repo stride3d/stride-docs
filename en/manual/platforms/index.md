@@ -6,9 +6,9 @@ Stride is cross-platform game engine. This means you can create your game once, 
 
 ## Supported platforms
 
-* Windows Desktop 7, 8, 10
-* Windows Universal (UWP)
-* [Linux (Ubuntu)](linux/index.md)
+* Windows 7, 8, 10
+* Windows Universal Platform (UWP)
+* [Linux](linux/index.md)
 * Android 2.3 and later
 * [iOS 8.0 and later](ios.md)
 

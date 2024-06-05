@@ -19,11 +19,11 @@ var gamesave2 = VirtualFileSystem.ApplicationRoaming.OpenStream("gamesave001.dat
 
 ## Default mount points
 
-| Mount point | Description  | Writable | Cloud | Notes  | PC   | Android  | iOS   | Windows Phone 8.1   
-| ----------- | -------------| -------- | ----- | -------| ---- | -------- | ------- | --
-| data        | Application data, deployed by package    | ✗    | ✗     |           | Output directory/data    | APK itself  | Deployed package directory | InstalledLocation.Path
-| binary   | Application binaries, deployed by package | ✗  | ✗   | Usually the same as *app_data* (except on Android)  | Assembly directory | Assembly directory  | Assembly directory  | Assembly directory
-| roaming   | User specific data (roaming) | ✓    |  ✓    | Backup   | Output directory/roaming, *%APPDATA%* | *$(Context.getFilesDir)/roaming* | Library/roaming  | Roaming 
-| local  | User application data | ✓     |  ✓    | Backup   | Output directory/local | $(Context.getFilesDir)local    | Library/local  | Local 
-| cache   | Application cache   | ✓   | ✗    | DLC, etc. Might be deleted manually by user (restore, clear data, etc...)   | Output directory/cache, with do-not-back-up flags   | *$(Context.getFilesDir)/cache*   | Library/caches  | LocalCache  
-| tmp    | Application temporary data    | ✓        | ✗     | Might be deleted without notice by OS   | Output directory/temp, *%TEMP%/%APPNAME%*   | *$(Context.getCacheDir)*  | tmp | Temporary
+| Mount point | Description                               | Writable | Cloud | Notes                                                                     | PC                                                | Android                          | iOS                        |
+|-------------|-------------------------------------------|----------|-------|---------------------------------------------------------------------------|---------------------------------------------------|----------------------------------|----------------------------|
+| data        | Application data, deployed by package     | ✗        | ✗     |                                                                           | Output directory/data                             | APK itself                       | Deployed package directory |
+| binary      | Application binaries, deployed by package | ✗        | ✗     | Usually the same as *app_data* (except on Android)                        | Assembly directory                                | Assembly directory               | Assembly directory         |
+| roaming     | User specific data (roaming)              | ✓        | ✓     | Backup                                                                    | Output directory/roaming, *%APPDATA%*             | *$(Context.getFilesDir)/roaming* | Library/roaming            |
+| local       | User application data                     | ✓        | ✓     | Backup                                                                    | Output directory/local                            | $(Context.getFilesDir)local      | Library/local              |
+| cache       | Application cache                         | ✓        | ✗     | DLC, etc. Might be deleted manually by user (restore, clear data, etc...) | Output directory/cache, with do-not-back-up flags | *$(Context.getFilesDir)/cache*   | Library/caches             |
+| tmp         | Application temporary data                | ✓        | ✗     | Might be deleted without notice by OS                                     | Output directory/temp, *%TEMP%/%APPNAME%*         | *$(Context.getCacheDir)*         | tmp                        |

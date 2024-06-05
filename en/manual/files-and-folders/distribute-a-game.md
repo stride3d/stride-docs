@@ -65,7 +65,7 @@ After you create a release build, how you distribute it is up to you.
 
 To run games made with Stride on Windows, users need:
 
-* .NET 4.6.1
+* .NET 8 SDK
 
 * DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan
 
