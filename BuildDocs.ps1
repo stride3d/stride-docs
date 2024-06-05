@@ -15,12 +15,16 @@
     Switch parameter. If provided, the script will build documentation in all available languages and include API documentation.
 .PARAMETER Version
     The Version to build the Docs, the default is the latest version
+.PARAMETER SkipPdfBuilding
+    Switch parameter. If provided, It skips Pdf generation step.
 .EXAMPLE
     .\BuildDocs.ps1 -BuildAll
     In this example, the script will build the documentation in all available languages and include API documentation. Use this in GitHub Actions.
 .EXAMPLE
     .\BuildDocs.ps1
     In this example, the script will prompt the user to select an operation and an optional language. If the user chooses to build the documentation, the script will also ask if they want to include API documentation.
+.EXAMPLE
+    .\BuildDocs.ps1 -SkipPdfBuilding
 #>
 
 param (
@@ -30,6 +34,7 @@ param (
         param([string] $CommandName,[string] $ParameterName,[string] $WordToComplete,[System.Management.Automation.Language.CommandAst] $CommandAst,[System.Collections.IDictionary] $FakeBoundParameters)
         return (Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions
     })]
+    [switch]$SkipPdfBuilding,
     $Version = $((Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions | Sort-Object -Descending | Select-Object -First 1)
 )
 
@@ -189,10 +194,21 @@ function Build-EnglishDoc {
     # Output to both build.log and console
     docfx build en/docfx.json -o $outputDirectory | Write-Host
 
-    # Build pdf files
-    docfx pdf en/docfx.json -o $outputDirectory | Write-Host
+    Build-EnglishPdf -SkipBuilding $SkipPdfBuilding
 
     return $LastExitCode
+}
+
+function Build-EnglishPdf
+{
+    param (
+        $SkipBuilding
+    )
+    if(!$SkipBuilding)
+    {
+        # Build pdf files
+        docfx pdf en/docfx.json -o $outputDirectory | Write-Host
+    }
 }
 
 function Build-NonEnglishDoc {
