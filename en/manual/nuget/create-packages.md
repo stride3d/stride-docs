@@ -5,9 +5,6 @@
 
 ## Open your project in Visual Studio
 
-> [!Note]
-> Game Studio will later support creating NuGet packages directly.
-
 First of all, after saving all your changes, open your project with Visual Studio. You can easily do this by clicking the appropriate button on the toolbar:
 
 ![Open project in Visual Studio](../game-studio/media/open-project-in-visual-studio.png)

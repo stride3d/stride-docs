@@ -2,6 +2,11 @@
 
 name: Build Stride Docs for GitHub Staging
 
+env:
+  COMMON_SETTINGS_PATH: en/docfx.json
+  VERSION: "2.0.0.${{ github.run_number }}"
+  DOCS_PATH: stride-docs
+
 on:
   workflow_dispatch:
 
@@ -10,8 +15,7 @@ jobs:
     runs-on: windows-2022
 
     steps:
-    # Setup .NET SDK
-    - name: Dotnet Setup
+    - name: .NET SDK Setup
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.x
@@ -20,8 +24,15 @@ jobs:
     - name: Checkout Stride Docs
       uses: actions/checkout@v4
       with:
-        path: stride-docs
+        path: ${{ env.DOCS_PATH }}
         lfs: true
+
+    - name: Set Version in docfx.json
+      run: |
+        $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
+        $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
+        Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
+      shell: pwsh
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
@@ -40,11 +51,11 @@ jobs:
 
     - name: Build documentation
       run: ./build-all.bat
-      working-directory: stride-docs
+      working-directory: ${{ env.DOCS_PATH }}
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.9.2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: stride-docs/_site
+        publish_dir: ${{ env.DOCS_PATH }}/_site
         publish_branch: gh-pages

@@ -11,12 +11,14 @@ To develop projects with Stride, you need:
 | CPU | x64
 | GPU | Direct3D 10+ compatible GPU
 | RAM | 4GB (minimum), 8GB (recommended) <small class="text-secondary">[see (2)]</small>
+| .NET SDK | 8+ <small class="text-secondary">[see (3)]</small> |
 
 (1) Earlier versions of Windows _may_ work but are untested.
 
 (2) RAM requirements vary depending on your project:
 * Developing simple 2D applications doesn't require much RAM.
 * Developing 3D games with lots of assets requires larger amounts of RAM.
+(3) .NET SDK is being downloaded with the Stride installer
 
 
 ## Mobile development requirements 
@@ -25,10 +27,10 @@ To develop for mobile platforms, you also need:
 
 | Platform | Requirements
 |----------|-------
-| Android  | Xamarin <small class="text-secondary">[see (3)]</small>
-| iOS      | Mac computer, Xamarin <small class="text-secondary">[see (3)]</small>
+| Android  | Xamarin <small class="text-secondary">[see (4)]</small>
+| iOS      | Mac computer, Xamarin <small class="text-secondary">[see (4)]</small>
 
-(3) Xamarin is included with Visual Studio installations. For instructions about how to install Xamarin with Visual Studio, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
+(4) Xamarin is included with Visual Studio installations. For instructions about how to install Xamarin with Visual Studio, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
 
 ## Running Stride Games
 

@@ -16,7 +16,7 @@ If you choose to install the latest version, the Stride Launcher asks if you wan
 
 ![Install Visual Studio integration](media/install-VS-plug-in-prompt.webp)
 
-The Stride Visual Studio extension adds syntax highlighting, live code validation, error checking, and navigation. It also lets you you [edit shaders directly from Visual Studio](../graphics/effects-and-shaders/custom-shaders.md). You don't need to install the extension to use Stride, but we recommend it, especially for programmers.
+The Stride Visual Studio extension lets you you [edit shaders directly from Visual Studio](../graphics/effects-and-shaders/custom-shaders.md). You don't need to install the extension to use Stride, but we recommend it, especially for programmers.
 
 ## Manage different versions of Stride
 

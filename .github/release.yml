@@ -2,6 +2,7 @@ changelog:
   exclude:
     labels:
       - ignore-for-release
+      - deployment
     authors:
       - dependabot
   categories:

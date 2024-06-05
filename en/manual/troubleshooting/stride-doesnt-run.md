@@ -43,7 +43,7 @@ If you have Visual Studio 2022 (or later) installed, you need to have the follow
 * **.NET desktop development** with **Development tools for .NET** optional component enabled.
 
 > [!Note]
-> Earlier versions might work with older version of Stride. However, for Stride 4.2 and later you need to have .NET 8 support.
+> Earlier versions might work with older version of Stride. However, for Stride 4.2 and later you only need to have .NET 8 SDK installed.
 
 ### Build Tools for Visual Studio 2022 (optional)
 
