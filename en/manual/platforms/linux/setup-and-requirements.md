@@ -85,17 +85,29 @@ sudo dnf install SDL2-devel
 sudo pacman -S sdl2
 ```
 
----
+## FreeImage
 
-## .NET
+FreeImage is battle-tested library for loading and saving popular image file formats like BMP, PNG, JPEG etc. The minimum required version is 3.18 and can be installed via:
 
-For information about how to install .NET, see the [.NET instructions for Linux](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites).
 
-We recommend to install .NET 8. To check which version you have installed, type:
+### [Debian / Ubuntu](#tab/freeimage-ubuntu)
 
+```bash
+sudo apt install libfreeimage-dev
 ```
-dotnet --info
+
+### [Fedora](#tab/freeimage-fedora)
+
+```bash
+sudo dnf install freeimage-devel
 ```
+
+### [Arch](#tab/freeimage-arch)
+
+```bash
+sudo pacman -S freeimage
+```
+
 
 ## See also
 
