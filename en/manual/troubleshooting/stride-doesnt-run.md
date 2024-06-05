@@ -34,6 +34,9 @@ To check if this is installed, follow the instructions on [this page](https://le
 
 If it's not installed, you can download it from the [Microsoft Download Center](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
 
+> [!Note]
+> If you have .NET 4.8 installed, you don't need to install .NET 4.7.2. Each 4.x version is cumulative.
+
 ### Visual Studio 2022 (optional)
 
 If you have Visual Studio 2022 (or later) installed, you need to have the following workloads and/or components installed:
