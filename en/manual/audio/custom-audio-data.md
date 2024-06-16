@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Programmer</span>
 
 You can generate audio using your own mechanism. To do this, create a subclass of [DynamicSoundSource](xref:Stride.Audio.DynamicSoundSource).
-For an example of how to implement this, see the [CompressedSoundSource` source code](https://github.com/SiliconStudio/stride/blob/master-1.8/sources/engine/Stride.Audio/CompressedSoundSource.cs).
+For an example of how to implement this, see the [CompressedSoundSource` source code](https://github.com/Stride3d/stride/blob/master/sources/engine/Stride.Audio/CompressedSoundSource.cs).
 
 ## Example code
 
