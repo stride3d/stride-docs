@@ -13,7 +13,7 @@ You need the following packages:
 * [FreeType](#freetype)
 * [OpenAL](#openal)
 * [SDL2](#sdl2)
-* [Latest .NET](https://dotnet.microsoft.com/en-us/download)
+* [FreeImage](#freeimage)
 
 ## FreeType
 
@@ -85,9 +85,11 @@ sudo dnf install SDL2-devel
 sudo pacman -S sdl2
 ```
 
+---
+
 ## FreeImage
 
-FreeImage is battle-tested library for loading and saving popular image file formats like BMP, PNG, JPEG etc. The minimum required version is 3.18 and can be installed via:
+[FreeImage](https://freeimage.sourceforge.io/) is battle-tested library for loading and saving popular image file formats like BMP, PNG, JPEG etc. The minimum required version is 3.18 and can be installed via:
 
 
 ### [Debian / Ubuntu](#tab/freeimage-ubuntu)
@@ -108,6 +110,7 @@ sudo dnf install freeimage-devel
 sudo pacman -S freeimage
 ```
 
+---
 
 ## See also
 

@@ -118,6 +118,8 @@ items:
             href: engine/entity-component-system/usage.md
           - name: Manage entities
             href: engine/entity-component-system/managing-entities.md
+          - name: Flexible processing
+            href: engine/entity-component-system/flexible-processing.md
       - name: File system
         href: engine/file-system.md
       - name: Build pipeline
