@@ -37,7 +37,7 @@ The main difference compared to [`EntityProcessor`](xref:Stride.Engine.EntityPro
 is that [`IComponent`](xref:Stride.Engine.FlexibleProcessing.IComponent`2) is not limited to concrete types, your processor may operate on interfaces as well;
 ```cs
 // Here, declaring the interface, which will be the type received by the processor
-public interface IInteractable : IComponent<IInteractable.ShapeProcessor, IInteractable>
+public interface IInteractable : IComponent<IInteractable.InteractableProcessor, IInteractable>
 {
     void Interact();
     public class InteractableProcessor : IProcessor
@@ -47,7 +47,7 @@ public interface IInteractable : IComponent<IInteractable.ShapeProcessor, IInter
     }
 }
 
-// Now any component implementing IInteractable will be processed by the ShapeProcessor
+// Now any component implementing IInteractable will be processed by the InteractableProcessor
 public class Button : StartupScript, IInteractable
 {
     public void Interact(){}
