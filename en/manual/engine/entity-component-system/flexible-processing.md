@@ -5,7 +5,7 @@ This document expects the reader to be familiar with ECS, please take a look at 
 Handling components through [`EntityProcessor`](xref:Stride.Engine.EntityProcessor) may be too rigid in some cases, when the components 
 you're trying to process cannot share the same base implementation for example.
 
-[`Stride.Engine.FlexibleProcessing.IComponent<TProcessor, TThis>`](xref:Stride.Engine.FlexibleProcessing.IComponent) 
+[`Stride.Engine.FlexibleProcessing.IComponent<TProcessor, TThis>`](xref:Stride.Engine.FlexibleProcessing.IComponent`2) 
 provides similar features to [`EntityProcessor`](xref:Stride.Engine.EntityProcessor) while being more flexible on the component type, 
 this document covers some of the usage of this particular interface.
 
@@ -34,7 +34,7 @@ public class MyComponent : StartupScript, IComponent<MyComponent.MyProcessor, My
 ```
 
 The main difference compared to [`EntityProcessor`](xref:Stride.Engine.EntityProcessor) 
-is that [`IComponent`](xref:Stride.Engine.FlexibleProcessing.IComponent) is not limited to concrete types, your processor may operate on interfaces as well;
+is that [`IComponent`](xref:Stride.Engine.FlexibleProcessing.IComponent`2) is not limited to concrete types, your processor may operate on interfaces as well;
 ```cs
 // Here, declaring the interface, which will be the type received by the processor
 public interface IInteractable : IComponent<IInteractable.ShapeProcessor, IInteractable>
@@ -60,7 +60,7 @@ public class Character : SyncScript, IInteractable
 ```
 
 ## Updating Processors
-[`Processors`](xref:Stride.Engine.FlexibleProcessing.IComponent) do not receive any updates by default, you have to implement the [`IUpdateProcessor`](xref:Stride.Engine.FlexibleProcessing.IUpdateProcessor) or [`IDrawProcessor`](xref:Stride.Engine.FlexibleProcessing.IDrawProcessor) 
+[`Processors`](xref:Stride.Engine.FlexibleProcessing.IComponent`2) do not receive any updates by default, you have to implement the [`IUpdateProcessor`](xref:Stride.Engine.FlexibleProcessing.IUpdateProcessor) or [`IDrawProcessor`](xref:Stride.Engine.FlexibleProcessing.IDrawProcessor) 
 interface to receive them:
 ```cs
 public interface ISpecialTick : IComponent<ISpecialTick.Processor, ISpecialTick>
