@@ -15,7 +15,7 @@ Game Studio is also integrated with your Visual Studio projects, so you can seam
 
 ![Game Studio](../get-started/media/game-studio-main-interface.png)
 
-The **asset editor** (A) is used to edit assets and scenes. Some asset types, such as scenes [scenes](create-a-scene.md), have dedicated editors where you can make complex changes to the asset. To open a dedicated editor (when available), double-click the asset or right-click it and select **Edit asset**.
+The **asset editor** (A) is used to edit assets and scenes. Some asset types, such as [scenes](create-a-scene.md), have dedicated editors where you can make complex changes to the asset. To open a dedicated editor (when available), double-click the asset or right-click it and select **Edit asset**.
 
 The **Property Grid** (B) displays the properties of the asset or entity you select. You can edit the properties here.
 
