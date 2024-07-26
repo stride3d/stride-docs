@@ -76,7 +76,7 @@ items:
     href: csharpintermediate/ui-basics.md
   - name: Collision triggers
     href: csharpintermediate/collision-triggers.md
-  - name: Racyasting
+  - name: Raycasting
     href: csharpintermediate/raycasting.md
   - name: Project and Unproject
     href: csharpintermediate/project-and-unproject.md
