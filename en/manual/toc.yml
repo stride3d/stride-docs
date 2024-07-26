@@ -498,6 +498,8 @@ items:
         href: scripts/preprocessor-variables.md
       - name: Create a model from code
         href: scripts/create-a-model-from-code.md
+      - name: Create Gizmos for you components
+        href: scripts/gizmos.md
 
   - name: Sprites
     href: sprites/index.md
