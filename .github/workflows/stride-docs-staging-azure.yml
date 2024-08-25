@@ -63,6 +63,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         path: stride
         lfs: true
+        ref: master
 
     - name: Install DocFX
       # This installs the latest version of DocFX and may introduce breaking changes
