@@ -1,8 +1,7 @@
 # Build details
 This is a technical description what happens in our build and how it is organized. This covers mostly the build architecture of Stride itself.
 
-* [Targets](../Targets) contains the MSBuild target files used by Games
-* [sources/common/targets](../sources/common/targets) (generic) and [sources/targets](https://github.com/stride3d/stride/tree/master/sources/targets) (Stride-specific) contains the MSBuild target files used to build Stride itself.
+* [sources/targets](https://github.com/stride3d/stride/tree/master/sources/targets) (Stride-specific) contains the MSBuild target files used to build Stride itself.
 
 Since 3.1, we switched from our custom build system to the new csproj system with one nuget package per assembly.
 
