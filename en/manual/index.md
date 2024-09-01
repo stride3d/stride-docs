@@ -10,8 +10,10 @@ These pages contain information about how to use Stride, an open-source C# game 
 ## Latest documentation
 
 ### Recent updates
-- <span class="badge text-bg-info">New</span> [Scripts - Gizmos](scripts/gizmos.md) - Description and example of the Flexible Processing system
-- <span class="badge text-bg-info">New</span> [ECS - Flexible Processing](engine/entity-component-system/flexible-processing.md) - Description and example of the Flexible Processing system
+
+- <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script.md) - Asynchronous script example improved
+- <span class="badge text-bg-success">New</span> [Scripts - Gizmos](scripts/gizmos.md) - Description and example of the Flexible Processing system
+- <span class="badge text-bg-success">New</span> [ECS - Flexible Processing](engine/entity-component-system/flexible-processing.md) - Description and example of the Flexible Processing system
 - <span class="badge text-bg-info">Updated</span> [Linux - Setup and requirements](platforms/linux/setup-and-requirements.md) - Fedora OS option added
 - <span class="badge text-bg-success">New</span> [Scripts - Serialization](scripts/serialization.md) - Explanation of serialization
 - <span class="badge text-bg-info">Updated</span> [Scripts - Public properties and fields](scripts/public-properties-and-fields.md) - Content improvements and additions
