@@ -20,7 +20,6 @@ The **diffuse** is the basic color of the material. A pure diffuse material is c
 The final diffuse contribution is calculated like this:
 
 - the **diffuse** defines the color used by the diffuse model
-
 - the **diffuse model** defines which shading model is used for rendering the diffuse component (see below)
 
 Currently, the diffuse attribute supports only a **diffuse map**.
@@ -42,7 +41,7 @@ Under the Lambert model, light is reflected equally in all directions with an in
 
 | Property      | Description  
 | ------------- | ----------- 
-| Diffuse map   | The diffuse map color provider                                          
+| Diffuse map   | The diffuse map color provider
 | Diffuse model | The shading model for diffuse lighting
 
 ## Specular
@@ -62,10 +61,8 @@ By taking into into account the fact that almost all materials always have some 
 The final specular color is calculated by mixing a fixed low-reflection color and the diffuse color.
 
 - With the metalness color at `0.0`, the effective specular color is equal to `0.02`, while the diffuse color is unchanged. The material is not metal but exhibits some reflectance and is sensitive to the Fresnel effect.
-
 - With the metalness color at `1.0`, the effective specular color is equal to the diffuse color, and the diffuse color is set to `0`. The material is considered a pure metal.
-
-    ![media/material-attributes-26.png](media/material-attributes-26.png) 
+  ![media/material-attributes-26.png](media/material-attributes-26.png) 
 
  The screenshots below show the result of the metalness factor on a material with the following attributes:
 
@@ -100,9 +97,9 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 
 | Property            | Description                                                    
 | ------------------- | ------- 
-| Fresnel             | Defines the amount of light that is reflected and transmitted. The models supported are: <br><p>**Schlick**: An approximation of the Fresnel effect (default)</br> <br><p>**Thin glass**: A simulation of light passing through glass</br>  <br><p>**None**: The material as-is with no Fresnel effect</br> 
-| Visibility          | Defines the visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. Stride simplifies the formula to use the visibility term instead: <br><p>![media/material-attributes-35.png](media/material-attributes-35.png)</br>      <br><p>and <br><p>![media/material-attributes-36.png](media/material-attributes-36.png)</br>        <br><p>**Schlick GGX** (default)</br> <br><p> **Implicit**: The microsurface is always visible and generates no shadowing or masking</br> <br><p>**Cook-Torrance**</br>  <br><p>**Kelemen**</br> <br><p>**Neumann**</br> <br><p>**Smith-Beckmann**</br> <br><p>**Smith-GGX correlated**</br>  <br><p>**Schlick-Beckmann**</br> 
-| Normal Distribution | <br><p>Defines how the normal is distributed. The gloss attribute is used by this part of the function to modify the distribution of the normal.</br> <br><p>**GGX** (default) </br> <br><p>**Beckmann**</br>  <br><p>**Blinn-Phong**</br> 
+| Fresnel             | Defines the amount of light that is reflected and transmitted. The models supported are: <br>**Schlick**: An approximation of the Fresnel effect (default)<br>**Thin glass**: A simulation of light passing through glass<br>**None**: The material as-is with no Fresnel effect
+| Visibility          | Defines the visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. Stride simplifies the formula to use the visibility term instead: <br>![media/material-attributes-35.png](media/material-attributes-35.png)<br>and<br>![media/material-attributes-36.png](media/material-attributes-36.png)<br>**Schlick GGX** (default)<br>**Implicit**: The microsurface is always visible and generates no shadowing or masking<br>**Cook-Torrance**<br>**Kelemen**<br>**Neumann**<br>**Smith-Beckmann**<br>**Smith-GGX correlated**<br>**Schlick-Beckmann** 
+| Normal Distribution | Defines how the normal is distributed. The gloss attribute is used by this part of the function to modify the distribution of the normal.<br>**GGX** (default)<br>**Beckmann**<br>**Blinn-Phong**
 
 ## Emissive
 
