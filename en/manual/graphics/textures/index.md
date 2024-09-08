@@ -63,8 +63,6 @@ The following properties are common to all textures.
 | Width            | The width of the texture in-game
 | Height           | The height of the texture in-game
 | Use percentages    | Use percentages for width and height instead of actual pixel size
-| Width            | The width of the texture in-game
-| Height           | The height of the texture in-game
 | Type             | Use **Color** for textures you want to display as images, **Normal map** for normal maps, and **Grayscale** to provide values for other things (eg specular maps, metalness maps, roughness maps). Color textures and normal maps have additional properties (see below).
 | Generate mipmaps | Generate different versions of the texture at different resolutions to be displayed at different distances. Improves performance, removes visual artifacts, and reduces pop-in when using **streaming**, but uses more memory. Unnecessary for textures always at the same distance from the camera (such as UIs).
 | Compress         | Compress the final texture to a format based on the target platform and usage. The final texture is a multiple of 4. For more information, see [Texture compression](compression.md).
