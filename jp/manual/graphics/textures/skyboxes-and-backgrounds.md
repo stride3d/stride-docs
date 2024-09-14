@@ -124,6 +124,7 @@ Instead of using a cubemap, you can use a **360° panoramic texture** as a 3D ba
 | 360° パノラマ   | ゲームでの見た目
 |----------------|-------------
 | ![Panorama texture](media/MyPanorama.jpg)  | ![Panorama in game](media/panorama-in-game.jpg)
+
 *画像提供： [Texturify](http://texturify.com)*
 
 <!--
