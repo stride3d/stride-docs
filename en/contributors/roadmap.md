@@ -30,7 +30,7 @@ Given the voluntary nature of contributions, the pace of progress hinges largely
   - Github: https://github.com/stride3d/stride/pull/
   - Open collective Project https://opencollective.com/stride3d/projects/stride3d-silknet
 
-Other areas were contributors have been active 
+Other areas where contributors have been active 
 - Plugins: https://github.com/stride3d/stride/issues/1120
 - Improving Docs
 - Improving Website
