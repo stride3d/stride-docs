@@ -1,8 +1,8 @@
 # Core Team
 
-The core team consists of a small group of volunteer developers, each with expertise in different areas of development. There are no full-time developers dedicated solely to Stride's advancement; instead, the engine progresses through the voluntary contributions of both the core team and the broader community. These individuals dedicate their spare time to enhance and expand the engine, motivated by personal interest, passion for the project, or their areas of expertise.
+The core team is a small group of volunteer developers, each with expertise in different areas of development. There are no full-time developers solely dedicated to Stride's advancement; instead, the engine progresses through voluntary contributions from both the core team and the wider community. These individuals dedicate their spare time to enhancing and expanding the engine, driven by personal interest, passion for the project, and their specialized knowledge.
 
-The core team is created by members with very frequent contributions to the project, be it code, documentation, or community management.
+The core team is composed of members who make frequent contributions to the project, whether in code, documentation, or community management.
 
 <table class="table table-striped table-sm">
   <thead>
@@ -15,8 +15,9 @@ The core team is created by members with very frequent contributions to the proj
   </thead>
   <tbody>
     <tr>
-      <td><strong>xen2</strong>
-        <br>Lead developer of Stride
+      <td>
+        <strong>xen2</strong>
+        <br><i>Lead developer of Stride</i>
       </td>
       <td><a href="https://github.com/xen2">xen2</a></td>
       <td>Japan</td>
@@ -69,7 +70,7 @@ The core team is created by members with very frequent contributions to the proj
           <ul>
               <li>Asset system</li>
               <li>Porting Editor to Avalonia</li>
-              <li>Plugin System</li>
+              <li>Plugin system</li>
           </ul>
       </td>
     </tr>
@@ -105,7 +106,56 @@ The core team is created by members with very frequent contributions to the proj
           <ul>
               <li>Yaml Serializer Source Generator</li>
               <li>Stride Diagnostics Analyzer</li>
-              <li>Overall Source Generators</li>
+              <li>Overall source generators</li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Youness</strong></td>
+      <td><a href="https://github.com/ykafia">Youness KAFIA</a></td>
+      <td>France</td>
+      <td>
+          <ul>
+              <li>Shader system</li>
+              <li>ECS</li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Aggror</strong></td>
+      <td><a href="https://github.com/Aggror">Aggror</a></td>
+      <td>Netherlands</td>
+      <td>
+          <ul>
+              <li>Official video tutorials</li>
+              <li>Community meetings</li>
+              <li>Documentation</li>
+              <li>C#</li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Jkao</strong></td>
+      <td><a href="https://github.com/jklawreszuk">jklawreszuk</a></td>
+      <td>Poland</td>
+      <td>
+          <ul>
+              <li>Asset compiler</li>
+              <li>Metrics</li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>kryptosfr</strong>
+        <br><i>Original developer of Stride</i>
+      </td>
+      <td><a href="https://github.com/Kryptos-FR">Kryptos-FR</a></td>
+      <td>France</td>
+      <td>
+          <ul>
+              <li>Game Studio</li>
+              <li>C#</li>
           </ul>
       </td>
     </tr>
