@@ -18,11 +18,11 @@ Given the voluntary nature of contributions, the pace of progress hinges largely
 - Improving asset pipeline <span class="badge text-bg-success">Done</span>
   - Open collective project: https://opencollective.com/stride3d/projects/fbx-import-cpp-to-c-sharp
   - Open collective project: https://opencollective.com/stride3d/projects/multiple-animations-per-model
-- Morph targets <span class="badge text-bg-warning">In Progress</span>
+- Morph targets <span class="badge text-bg-info">On Hold</span>
   - GitHub: https://github.com/stride3d/stride/issues/339
   - Open collective project: https://opencollective.com/stride3d/projects/morph-targets
 - Decals https://opencollective.com/stride3d/projects/decals
-- Open XR support <span class="badge text-bg-warning">In Progress</span>
+- Open XR support <span class="badge text-bg-info">On Hold</span>
   - GitHub: https://github.com/stride3d/stride/discussions/1848
   - Open collective project: https://opencollective.com/stride3d/projects/openxr-support
 - Embed into UI frameworks
