@@ -18,6 +18,8 @@ items:
       href: contribution-workflow/xml-comments-and-docs.md
 - name: ⚙️ Major Release Workflow
   href: major-release-workflow.md
+- name: 🧑‍💻 Core Team
+  href: core-team.md
 - name: 🛠️ Contribute to the engine
   expanded: false
   href: engine/index.md
