@@ -1,6 +1,6 @@
 # Core Team
 
-The core team is a small group of volunteer developers, each with expertise in different areas of development. There are no full-time developers solely dedicated to Stride's advancement; instead, the engine progresses through voluntary contributions from both the core team and the wider community. These individuals dedicate their spare time to enhancing and expanding the engine, driven by personal interest, passion for the project, and their specialized knowledge.
+The core team is a small group of volunteer developers, each with expertise in different areas of development. There are no full-time developers solely dedicated to Stride's advancement; instead, the engine progresses through voluntary contributions from both the core team and the [wider community](https://github.com/stride3d/stride?tab=readme-ov-file#contributors-). These individuals dedicate their spare time to enhancing and expanding the engine, driven by personal interest, passion for the project, and their specialized knowledge.
 
 The core team is composed of members who make frequent contributions to the project, whether in code, documentation, or community management.
 
@@ -18,6 +18,7 @@ The core team is composed of members who make frequent contributions to the proj
       <td>
         <strong>xen2</strong>
         <br><i>Lead developer of Stride</i>
+        <br><i class="small">(Original & Current)</i>
       </td>
       <td><a href="https://github.com/xen2">xen2</a></td>
       <td>Japan</td>
