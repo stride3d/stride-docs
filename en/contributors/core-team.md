@@ -141,6 +141,8 @@ The core team is composed of members who make frequent contributions to the proj
       <td>Poland</td>
       <td>
           <ul>
+              <li>C#>
+              <li>Linux related stuff</li>
               <li>Asset compiler</li>
               <li>Metrics</li>
           </ul>
