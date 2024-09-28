@@ -2,12 +2,12 @@
 
 Welcome to the Stride Docs repository. This repository contains all the source files for the Stride documentation [Stride Docs](https://doc.stride3d.net/).
 
-* [🚀 Getting Started](#-getting-started)
-* [🤝 Contributing](#-contributing)
-* [🗺️ Roadmap](#%EF%B8%8F-roadmap)
-* [📖 Stride Documentation Landscape](#-stride-documentation-landscape)
-* [🌐 .NET Foundation](#-net-foundation)
-* [🛡️ License](#%EF%B8%8Flicense)
+* 🚀 [Getting Started](#-getting-started)
+* 🤝 [Contributing](#-contributing)
+* 🗺️ [Roadmap](#%EF%B8%8F-roadmap)
+* 📖 [Stride Documentation Landscape](#-stride-documentation-landscape)
+* 🌐 [.NET Foundation](#-net-foundation)
+* 🛡️ [License](#%EF%B8%8Flicense)
 
 ## 🚀 Getting Started
 
