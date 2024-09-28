@@ -26,7 +26,7 @@ perhaps for something that you can reuse for your project.
     <div class="card h-100">
         <div class="card-body">
             <h2 class="card-title h5">🎓 Tutorials and Articles</h2>
-            <p class="card-text">Tutorials and articles</p>
+            <p class="card-text">Tutorials and articles.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="tutorials-and-articles.md">Explore tutorials and articles</a></p>
     </div>
@@ -35,9 +35,27 @@ perhaps for something that you can reuse for your project.
     <div class="card h-100">
         <div class="card-body">
             <h2 class="card-title h5">⨺ Models and Animations</h2>
-            <p class="card-text">From procedural mesh to animation controllers</p>
+            <p class="card-text">From procedural mesh to animation controllers.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="models-and-animations.md">Have a look</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">⛰️ Terrain and Water</h2>
+            <p class="card-text">Groundbreaking stuff and H2O related topics.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="terrain-and-water.md">Get your feet wet</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">🍎 Physics</h2>
+            <p class="card-text">Physics, colliders, triggers.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="physics.md">Bump in to some useful code</a></p>
     </div>
 </div>
 <div class="col-md-6">
@@ -49,21 +67,11 @@ perhaps for something that you can reuse for your project.
         <p class="px-3 mb-4"><a class="stretched-link" href="shaders.md">No shady stuff here, we promise</a></p>
     </div>
 </div>
-
-<div class="col-md-6">
-    <div class="card h-100">
-        <div class="card-body">
-            <h2 class="card-title h5">⛰️ Terrain and Water</h2>
-            <p class="card-text">Groundbreaking stuff and H2O related topics</p>
-        </div>
-        <p class="px-3 mb-4"><a class="stretched-link" href="terrain-and-water.md">Get your feet wet</a></p>
-    </div>
-</div>
 <div class="col-md-6">
     <div class="card h-100">
         <div class="card-body">
             <h2 class="card-title h5">🎥 Rendering and camera</h2>
-            <p class="card-text">Rendering, Camera's, render groups and more</p>
+            <p class="card-text">Rendering, Camera's, render groups and more.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="rendering-and-camera.md">Lights, camera, Action!</a></p>
     </div>
@@ -71,39 +79,46 @@ perhaps for something that you can reuse for your project.
 <div class="col-md-6">
     <div class="card h-100">
         <div class="card-body">
-            <h2 class="card-title h5">🍎 Physics</h2>
-            <p class="card-text">Physics, colliders, triggers</p>
-        </div>
-        <p class="px-3 mb-4"><a class="stretched-link" href="physics.md">Bump in to some useful code</a></p>
-    </div>
-</div>
-<div class="col-md-6">
-    <div class="card h-100">
-        <div class="card-body">
             <h2 class="card-title h5">🪟 UI</h2>
-            <p class="card-text">Interfaces, interactions and 3rd party tools</p>
+            <p class="card-text">Interfaces, interactions and 3rd party tools.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="ui.md">We will tell you why</a></p>
     </div>
 </div>
-
 <div class="col-md-6">
     <div class="card h-100">
         <div class="card-body">
-            <h2 class="card-title h5">🎓 Visual programming</h2>
-            <p class="card-text">Visual programming, VVVV</p>
+            <h2 class="card-title h5">🗠 Visual programming</h2>
+            <p class="card-text">Visual programming, VVVV.</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="visual-programming.md">Start connecting the dots</a></p>
     </div>
 </div>
-
 <div class="col-md-6">
     <div class="card h-100">
         <div class="card-body">
-            <h2 class="card-title h5">🎓 Tools and importers</h2>
+            <h2 class="card-title h5">🛠️ Tools and importers</h2>
             <p class="card-text">General tools, Asset handling and importer tools</p>
         </div>
         <p class="px-3 mb-4"><a class="stretched-link" href="tools-and-importers.md">Import some knowledge</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">👨‍💻 Programming and Scripting</h2>
+            <p class="card-text">Get your hands dirty with code, scripts, and more.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="coding.md">Unleash your inner coder</a></p>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title h5">🔌 Embedding and Integration</h2>
+            <p class="card-text">Plug Stride into other apps and make magic happen.</p>
+        </div>
+        <p class="px-3 mb-4"><a class="stretched-link" href="embedded-stride.md">Plug in and play</a></p>
     </div>
 </div>
 

@@ -14,7 +14,7 @@ To make Stride better, just use it and tell others about it in your blogs, video
 
 The best way to promote Stride is by creating a cool demo or, even better, a full game. Having people see and play an actual game made with Stride is the most effective form of advertisement.
 
-You can showcase your projects on our [Community Projects](https://github.com/stride3d/stride/wiki/Community-Projects) page.
+You can showcase your projects on our [Community resources](../community-resources/index.md) page.
 
 ## 💸 Donate
 
