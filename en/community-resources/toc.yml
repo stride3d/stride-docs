@@ -22,3 +22,7 @@ items:
   href: visual-programming.md
 - name: 🛠️ Tools and Importers
   href: tools-and-importers.md
+- name: 👨‍💻 Programming and Scripting
+  href: coding.md
+- name: 🔌 Embedding and Integration
+  href: embedded-stride.md
