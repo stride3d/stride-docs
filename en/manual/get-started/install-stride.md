@@ -98,6 +98,9 @@ The **Stride Launcher** will download and install the latest version of Stride.
     ![Stride ready to use](media/stride-launcher-ready.webp)
 
 > [!Note]
+>  **Stride Launcher:** If you click **Start** and see an error message such as `Could not find a compatible version of MSBuild.` or `Path to dotnet executable is not set.`, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.
+ 
+> [!Note]
 > If you don't install the prerequisites, Stride won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Stride doesn't run](../troubleshooting/stride-doesnt-run.md).
 >
 > Alternatively, uninstall Stride, restart the Stride installer, and install the prerequisites when prompted.
