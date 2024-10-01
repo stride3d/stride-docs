@@ -90,7 +90,7 @@ The parameters behave like any variable. You can read and write their value, com
 You can create your own set of parameters using a structure definition syntax. 
 
 >[!Note]
->Even if they're defined in the XKFX file, don't forget the `using` statement when you want to use them.
+>Even if they're defined in the SDFX file, don't forget the `using` statement when you want to use them.
 
 ```cs
 params MyParameters
