@@ -180,7 +180,7 @@ For more information about the Visual Studio profiler, see the [MSDN documentati
 
 ### Use RenderDoc
 
-RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick and easy single-frame capture and detailed introspection of any application using Vulkan, D3D11, OpenGL & OpenGL ES or D3D12 across Windows 7 - 10, Linux, Android, or Nintendo Switch™.
+RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick and easy single-frame capture and detailed introspection of any application using Vulkan, D3D11, OpenGL & OpenGL ES or D3D12 across Windows, Linux, Android, or Nintendo Switch™.
 
 1. Download [RenderDoc](https://renderdoc.org/builds).
 
@@ -206,7 +206,7 @@ RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick
    
    ```cs
    var renderDocManager = new RenderDocManager();
-   renderDocManager.StartCapture(GraphicsDevice, IntPtr.Zero);
+   renderDocManager.StartFrameCapture(GraphicsDevice, IntPtr.Zero);
    // Some rendering code...
    renderDocManager.EndFrameCapture(GraphicsDevice, IntPtr.Zero);
    ```
