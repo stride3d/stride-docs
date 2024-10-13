@@ -55,7 +55,7 @@ You can also use custom shaders to create custom post effects. For more informat
 
     >[!Note]
     >To be accessible from the Game Studio Property Grid, the shader must inherit from `ComputeColor`.
-    >As '`ComputeColor` always returns a float4 value, properties that take float values (eg metalness and gloss maps) use the first component (the red component) of the value returned by `ComputeColor`. 
+    >As `ComputeColor` always returns a float4 value, properties that take float values (eg metalness and gloss maps) use the first component (the red component) of the value returned by `ComputeColor`. 
 
 7. Save all the files in the solution (**File > Save All**).
 
@@ -127,11 +127,11 @@ For example, the code below defines and uses the dynamic parameter `Frequency`:
 ```cs
 shader ComputeColorWave: ComputeColor, Texturing
 {
-	cbuffer PerMaterial
-	{
-		stage float Frequency = 1.0f;
-	}
-	
+    cbuffer PerMaterial
+    {
+        stage float Frequency = 1.0f;
+    }
+
     override float4 Compute()
     {
         return sin(( Global.Time ) * 2 * 3.14 * Frequency);
