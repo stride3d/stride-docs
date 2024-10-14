@@ -4,7 +4,7 @@
 
 With the **Stride launcher**, you can install, manage and run different versions of Stride.
 
-![Stride launcher](media/stride-launcher-interface.png)
+![Stride launcher](media/stride-launcher-interface.webp)
 
 ## Install the latest version of Stride
 
@@ -22,7 +22,7 @@ The Stride Visual Studio extension lets you you [edit shaders directly from Visu
 
 You can install multiple versions of Stride and launch them from the Stride Launcher.
 
-![Manage versions of Stride](media/stride-launcher-various-versions.png)
+![Manage versions of Stride](media/stride-launcher-various-versions.webp)
 
 You might need to use an older version of Stride to work with old projects. Newer versions of Stride might contain changes that require old projects to be upgraded.
 
