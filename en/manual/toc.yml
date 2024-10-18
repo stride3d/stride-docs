@@ -570,6 +570,8 @@ items:
         href: troubleshooting/debug-text.md
       - name: Profiling
         href: troubleshooting/profiling.md
+      - name: Unit Tests
+        href: troubleshooting/unit-tests.md
       - name: Stride doesn't run
         href: troubleshooting/stride-doesnt-run.md
       - name: Default value changes ignored at runtime

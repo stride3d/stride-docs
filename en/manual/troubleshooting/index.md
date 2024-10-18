@@ -7,6 +7,7 @@ These pages describe how to fix problems with Stride.
 * [Logging](logging.md)
 * [Debug text](debug-text.md)
 * [Profiling](profiling.md)
+* [Unit Tests](unit-tests.md)
 * [Stride doesn't run](stride-doesnt-run.md)
 * [Default value changes ignored at runtime](default-value-changes-ignored-at-runtime.md)
 * [Lights don't cast shadows](lights-dont-cast-shadows.md)
