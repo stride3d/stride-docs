@@ -28,9 +28,9 @@ The @'Stride.Graphics.SpriteFont' class is a convenient way to draw text. It wor
 ## Load a spriteFont
 -->
 
-フォントアセットをコンパイルした後は、@'Stride.Core.Serialization.Assets.ContentManager' を使って、@'Stride.Graphics.SpriteFont' インスタンスとして読み込むことができます。これは、テキストを表示するためのすべてのオプション（ビットマップ、[カーニング](https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0)、行間など）を含んでいます。
+フォントアセットをコンパイルした後は、@'Stride.Core.Serialization.Contents.ContentManager' を使って、@'Stride.Graphics.SpriteFont' インスタンスとして読み込むことができます。これは、テキストを表示するためのすべてのオプション（ビットマップ、[カーニング](https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0)、行間など）を含んでいます。
 <!--
-After a font asset is compiled it can be loaded as a @'Stride.Graphics.SpriteFont' instance using the @'Stride.Core.Serialization.Assets.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc).
+After a font asset is compiled it can be loaded as a @'Stride.Graphics.SpriteFont' instance using the @'Stride.Core.Serialization.Contents.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc).
 -->
 
 **Code:** スプライトフォントを読み込む
@@ -47,9 +47,9 @@ var myFont = Content.Load<SpriteFont>("MyFont");
 ## Write text on screen
 -->
 
-フォントを読み込んだら、@'Stride.Graphics.SpriteBatch' で任意のテキストを表示することができます。描画を行うのは、@'Stride.Graphics.SpriteBatch.DrawString' メソッドです。スプライトバッチの詳細については、[スプライト バッチ](spritebatch.md)を参照してください。
+フォントを読み込んだら、@'Stride.Graphics.SpriteBatch' で任意のテキストを表示することができます。描画を行うのは、@'Stride.Graphics.SpriteBatch.DrawString*' メソッドです。スプライトバッチの詳細については、[スプライト バッチ](spritebatch.md)を参照してください。
 <!--
-Once the font is loaded, you can display any text with a @'Stride.Graphics.SpriteBatch'. The @'Stride.Graphics.SpriteBatch.DrawString' method performs the draw. For more information about the SpriteBatch, see the [SpriteBatch](spritebatch.md) page.
+Once the font is loaded, you can display any text with a @'Stride.Graphics.SpriteBatch'. The @'Stride.Graphics.SpriteBatch.DrawString*' method performs the draw. For more information about the SpriteBatch, see the [SpriteBatch](spritebatch.md) page.
 -->
 
 **コード：** テキストを書く

@@ -62,7 +62,7 @@ var mutablePipelineState = new MutablePipelineState();
 
 // 値を設定して再構築
 // Setting values and rebuilding
-mutablePipelineState.State.BlendState = BlendStates.AlphaBlend
+mutablePipelineState.State.BlendState = BlendStates.AlphaBlend;
 mutablePipelineState.Update
  
 // ステートをパイプラインに適用
@@ -317,7 +317,7 @@ The [Draw vertices](draw-vertices.md) page describes how to create custom vertex
 -->
 
 ```cs
-VertexDeclaration vertexDeclaration = ...
+VertexDeclaration vertexDeclaration = new VertexDeclaration();
 pipelineStateDescription.InputElements = vertexDeclaration.CreateInputElements();
 pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 ```

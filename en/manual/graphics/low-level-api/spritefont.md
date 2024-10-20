@@ -10,7 +10,7 @@ The @'Stride.Graphics.SpriteFont' class is a convenient way to draw text. It wor
 
 ## Load a spriteFont
 
-After a font asset is compiled it can be loaded as a @'Stride.Graphics.SpriteFont' instance using the @'Stride.Core.Serialization.Assets.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc).
+After a font asset is compiled it can be loaded as a @'Stride.Graphics.SpriteFont' instance using the @'Stride.Core.Serialization.Contents.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc).
 
 **Code:** Load a SpriteFont
 
@@ -20,7 +20,7 @@ var myFont = Content.Load<SpriteFont>("MyFont");
 
 ## Write text on screen
 
-Once the font is loaded, you can display any text with a @'Stride.Graphics.SpriteBatch'. The @'Stride.Graphics.SpriteBatch.DrawString' method performs the draw. For more information about the SpriteBatch, see the [SpriteBatch](spritebatch.md) page.
+Once the font is loaded, you can display any text with a @'Stride.Graphics.SpriteBatch'. The @'Stride.Graphics.SpriteBatch.DrawString*' method performs the draw. For more information about the SpriteBatch, see the [SpriteBatch](spritebatch.md) page.
 
 **Code:** Write text
 

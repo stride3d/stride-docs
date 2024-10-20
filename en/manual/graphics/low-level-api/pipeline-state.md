@@ -31,8 +31,8 @@ The @'Stride.Graphics.MutablePipelineState' class let you set states independent
 var mutablePipelineState = new MutablePipelineState();
 
 // Setting values and rebuilding
-mutablePipelineState.State.BlendState = BlendStates.AlphaBlend
-mutablePipelineState.Update
+mutablePipelineState.State.BlendState = BlendStates.AlphaBlend;
+mutablePipelineState.Update();
  
 // Applying the state to the pipeline
 CommandList.SetPipelineState(mutablePipelineState.CurrentState);
@@ -176,7 +176,7 @@ The [Draw vertices](draw-vertices.md) page describes how to create custom vertex
 **Code:** Set an input layout
 
 ```cs
-VertexDeclaration vertexDeclaration = ...
+VertexDeclaration vertexDeclaration = new VertexDeclaration();
 pipelineStateDescription.InputElements = vertexDeclaration.CreateInputElements();
 pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 ```
