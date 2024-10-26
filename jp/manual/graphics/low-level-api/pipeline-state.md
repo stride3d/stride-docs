@@ -63,7 +63,7 @@ var mutablePipelineState = new MutablePipelineState();
 // 値を設定して再構築
 // Setting values and rebuilding
 mutablePipelineState.State.BlendState = BlendStates.AlphaBlend;
-mutablePipelineState.Update
+mutablePipelineState.Update();
  
 // ステートをパイプラインに適用
 // Applying the state to the pipeline
