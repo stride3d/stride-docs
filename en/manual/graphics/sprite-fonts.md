@@ -122,7 +122,7 @@ Do **not** use SDF fonts when:
 | Property                    | Description  
 |-----------------------------|--------------
 | Font Source                 | System (installed on this machine) or from file. The system fonts can also choose **Bold** and *Italic* options.
-| Font Type                   | Offline Rasterized    
+| Font Type                   | Signed Distance Field
 | Size (in pixels)            | The font will be baked with this size. All font sizes can still be displayed. Bigger size usually results in better quality, and generally you want to keep this at 20 or more to avoid visual glitches. 
 | Character set               | (Optional) A text file containing all characters which need to be baked.   
 | Character regions           | Code for regions of characters which need to be baked. For example (32 - 127) is a region sufficient for ASCII character sets. 
