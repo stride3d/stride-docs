@@ -44,7 +44,7 @@ Now you've installed Stride, it's time to start Game Studio and build a project.
 
    The version number is updated on the **Start** button.
 
-   ![Start button](media/stride-launcher-start-button.png)
+   ![Start button](../stride-launcher/media/stride-launcher-start-button.webp)
 
 2. Click **Start** to launch Game Studio. 
 

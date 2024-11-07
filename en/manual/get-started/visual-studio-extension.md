@@ -14,7 +14,7 @@ When you [install Stride](install-stride.md), Stride asks if you want to install
 
 Alternatively, you can install or reinstall the extension at any time in the Stride Launcher under **Plug-in**.
 
-![Reinstall extension](media/reinstall-extension.png)
+![Reinstall extension](../stride-launcher/media/stride-launcher-reinstall-extension.webp)
 
 ## See also
 

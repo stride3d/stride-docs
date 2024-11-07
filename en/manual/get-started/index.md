@@ -13,7 +13,7 @@ For video tutorials, have a look at the [Tutorials](../../tutorials/index.md).
 
 If you're interested in building the Stride engine from source or contributing to its development, please refer to the instructions on our [GitHub repository](https://github.com/stride3d/stride).
 
-![Game Studio](media/get-started.jpg)
+![Game Studio](media/get-started.webp)
 
 ## In this section
 

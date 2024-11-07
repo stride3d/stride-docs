@@ -21,7 +21,7 @@ To create an empty project:
 
     The **New/open project** dialog opens.
     
-    ![New Project dialog](media/create-project-new-open-project-window.png)
+    ![New Project dialog](media/create-project-new-open-project-window.webp)
 
     You can also open a new project in Game Studio from **File > New**. 
     
@@ -33,16 +33,15 @@ To create an empty project:
 
     The **Create a new game** dialog opens.
 
-    ![Create a new game dialog](media/create-project-create-new-game.png)
+    ![Create a new game dialog](media/create-project-create-new-game.webp)
 
 5. In the **Namespace** field, specify the namespace you want to use. If you don't know what your namespace should be, leave it as default.
 
 6. Under **Platforms**, select the platforms you want your game to support.  
 
-    > [!Note]
-    >  To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio).
-
-    If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
+    >[!Note]
+    >To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio).
+    >If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
 
 7. Under **Asset Packs**, you can select additional assets to include in your project. These include assets such as animations and materials. The asset packs are fun to play with when you're learning how to use Stride, but they're not necessary.
 
@@ -73,13 +72,13 @@ To create a project from a sample or template:
  
  3. **Select the sample** you want to create a project from.
     
-   ![New Project window — samples](media/create-project-new-open-project-samples.png)
+   ![New Project window — samples](media/create-project-new-open-project-samples.webp)
 
  4. Click **Select**.
 
     The **Select Platforms** window opens.
 
-    ![Select Platforms window](media/create-project-select-platform.png)
+    ![Select Platforms window](media/create-project-select-platform.webp)
     	
  5. Select the platforms you want your game to support and click **OK**.
 

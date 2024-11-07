@@ -44,10 +44,10 @@ Major updates add significant changes, and you might need to update your project
 
 * To see the release notes for a particular version, click the **note icon** next to the version name (**1**).
 
-* To install a particular minor version, click the **List** icon (**4**).
-
 * To install a particular version, click the **Download and install** icon next to the 
-version name (**5**).
+version name (**4**).
+
+* To install a particular minor version, click the **List** icon (**5**).
 
 ## Start Game Studio
 
