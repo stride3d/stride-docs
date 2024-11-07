@@ -95,22 +95,22 @@ There are five modes to draw a sprite batch. They are enumerated in the @'Stride
 -->
 
 - Deferred（既定）: スプライトは最後にまとめて描画されます。描画呼び出しのオーバーヘッドが削減されます。
-- Immediate: @'Stride.Graphics.SpriteBatch.Draw' を呼び出すたびに、すぐにスプライトが描画されます。
+- Immediate: @'Stride.Graphics.SpriteBatch.Draw*' を呼び出すたびに、すぐにスプライトが描画されます。
 - Texture: Deffered モードですが、エフェクトパラメータの更新を減らすために、スプライトはテクスチャーに基づいてソートされます。
 - BackToFront: スプライトの Z オーダーに基づいてソートを行う Deferred モードです。
 - FrontToBack: スプライトの Z オーダーに基づいてソートを行う Deferred モードです。
 
 <!--
 - Deferred (default mode): the sprites are drawn at the same time at the end to reduce the drawcall overhead
-- Immediate: the sprites are draw after each each @'Stride.Graphics.SpriteBatch.Draw' call
+- Immediate: the sprites are draw after each each @'Stride.Graphics.SpriteBatch.Draw*' call
 - Texture: Deferred mode but sprites are sorted based on their texture to reduce effect parameters update
 - BackToFront: Deferred mode with a sort based on the z-order of the sprites
 - FrontToBack: Deferred mode with a sort based on the z-order of the sprites
 -->
 
-モードは、@'Stride.Graphics.SpriteBatch.Begin' メソッドで指定します。
+モードは、@'Stride.Graphics.SpriteBatch.Begin*' メソッドで指定します。
 <!--
-To set the mode, specify it in the @'Stride.Graphics.SpriteBatch.Begin' method.
+To set the mode, specify it in the @'Stride.Graphics.SpriteBatch.Begin*' method.
 -->
 
 **コード：** スプライトバッチの遅延描画

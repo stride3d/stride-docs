@@ -51,7 +51,7 @@ var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D
 
 ### Use a render target
 
-Once these buffers are created, you can can easily set them as current render textures.
+Once these buffers are created, you can easily set them as current render textures.
 
 ### Code: Use a render target
 
