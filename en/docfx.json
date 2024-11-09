@@ -66,12 +66,13 @@
     },
     "fileMetadata": {
       "_appTitle": {
-        "tutorials/**/*.md": "Stride Tutorials",
-        "manual/**/*.md": "Stride Manual",
-        "ReleaseNotes/**/*.md": "Stride Release notes",
+        "tutorials/**/*.md": "Stride tutorials",
+        "manual/**/*.md": "Stride manual",
+        "ReleaseNotes/**/*.md": "Stride release notes",
         "api/**/*.md": "Stride API",
-        "diagnostics/**/*.md": "Stride Diagnostics",
-        "contributors/**/*.md": "Stride Contributors",
+        "api/**/*.yml": "Stride API",
+        "diagnostics/**/*.md": "Stride diagnostics",
+        "contributors/**/*.md": "Stride contributors",
         "community-resources/**/*.md": "Stride Community resources"
       }
     },
