@@ -4,7 +4,7 @@
 
 With the **Stride launcher**, you can install, manage and run different versions of Stride.
 
-![Stride launcher](media/stride-launcher-interface.png)
+![Stride launcher](media/stride-launcher-interface.webp)
 
 ## Install the latest version of Stride
 
@@ -22,7 +22,7 @@ The Stride Visual Studio extension lets you you [edit shaders directly from Visu
 
 You can install multiple versions of Stride and launch them from the Stride Launcher.
 
-![Manage versions of Stride](media/stride-launcher-various-versions.png)
+![Manage versions of Stride](media/stride-launcher-various-versions.webp)
 
 You might need to use an older version of Stride to work with old projects. Newer versions of Stride might contain changes that require old projects to be upgraded.
 
@@ -44,7 +44,7 @@ Now you've installed Stride, it's time to start Game Studio and build a project.
 
    The version number is updated on the **Start** button.
 
-   ![Start button](media/stride-launcher-start-button.png)
+   ![Start button](../stride-launcher/media/stride-launcher-start-button.webp)
 
 2. Click **Start** to launch Game Studio. 
 

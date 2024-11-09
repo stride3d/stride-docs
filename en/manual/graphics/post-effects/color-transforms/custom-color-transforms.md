@@ -16,7 +16,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 1. Make sure you have the [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from SDSL ([Stride shading language](../../effects-and-shaders/shading-language/index.md)) to `.cs` files.
 
-2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-ide-icon.png) (**Open in IDE**) to open your project in Visual Studio.
+2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-ide-icon.webp) (**Open in IDE**) to open your project in Visual Studio.
 
 3. In the Visual Studio **Solution Explorer**, right-click the project (eg *MyGame.Game*) and select **New item**.
 
