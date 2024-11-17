@@ -284,7 +284,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
 2. In Visual Studio, right-click the game project and select **Add > New item**. In the **Name** field, give your script the name *SpawnTrail*, and click **Add**.
 
-3. Replace the script content with the code in this script: [SpawnTrail.cs](https://github.com/SiliconStudio/stride-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs)
+3. Replace the script content with the code in this script: [SpawnTrail.cs](https://github.com/stride3d/stride-docs/blob/master/en/manual/particles/tutorials/media/SpawnTrail.cs)
 
     This is a modified version of the Prefab Instance script included in Stride. Instead of listening to events or key presses, it listens to animation changes — such as our sword swing animation.
 
@@ -316,7 +316,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 
 11. In the SpawnTrail component, in the **Animation** field, click the hand icon (**Select an asset**).     The **Select an asset** window opens.
 
-In the left pane, select the **mannequinModel** and click **OK**.
+    In the left pane, select the **mannequinModel** and click **OK**.
 
     ![Pick mannequin model in Entity Picker](media/pick-mannequin-model.png)
 
