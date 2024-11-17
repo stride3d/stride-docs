@@ -314,9 +314,9 @@ class ParticleCustomShader : ParticleBase
 };
 ```
 
-ここでは 2 つの compose シェーダー `baseColor` と `abseIntensity` を定義しており、ここに RGB と A 用に生成されたシェーダーをそれぞれ挿入しています。すでに `VSMain`, `PSMain` ならびにテクスチャリング（textureing）を定義している `ParticleBase` を継承しており、非常にシンプルな `Shading()` メソッドを使用しています。
+ここでは 2 つの compose シェーダー `baseColor` と `baseIntensity` を定義しており、ここに RGB と A 用に生成されたシェーダーをそれぞれ挿入しています。すでに `VSMain`, `PSMain` ならびにテクスチャリング（textureing）を定義している `ParticleBase` を継承しており、非常にシンプルな `Shading()` メソッドを使用しています。
 <!--
-It defines two composed shaders, `baseColor` and `abseIntensity`, where we'll plug our generated shaders for RGB and A respectively. It inherits `ParticleBase` which already defines `VSMain`, `PSMain` and texturing, and uses very simple `Shading()` method.
+It defines two composed shaders, `baseColor` and `baseIntensity`, where we'll plug our generated shaders for RGB and A respectively. It inherits `ParticleBase` which already defines `VSMain`, `PSMain` and texturing, and uses very simple `Shading()` method.
 -->
 
 `Shading()` メソッドをオーバーライドすることで、カスタム動作を定義することができます。使用するコンポジット シェーダーは `ComputeColor` から派生したものなので、`Compute()` を使って簡単に評価することができ、色と強度の計算ツリーのルートを得ることができます。
