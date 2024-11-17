@@ -6,11 +6,11 @@
 
 このチュートリアルでは、パーティクルを使用して、剣を振ったときの[残影効果](../ribbons-and-trails.md)を作成する方法を説明します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-9.jpg">
-   <source src="media/sword-slash-9.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-9.jpg">
+<source src="media/sword-slash-9.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 ## 1. プロジェクトを作成する
 
@@ -60,11 +60,11 @@
 
 10. ここまでの結果を見てみます。［Play］をクリックしてゲームを実行し、結果を確認します。マウスと WASD キーを使用してカメラを移動し、異なる視点からアニメーションを見ることができることを思い出してください。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-1.jpg">
-   <source src="media/sword-slash-1.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-1.jpg">
+<source src="media/sword-slash-1.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 剣を振るアニメーションができました。次に、残影効果を追加します。
 
@@ -122,11 +122,11 @@
 
 11. ゲームを実行し、剣撃アニメーションでパーティクルがどのように見えるかを確認します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-2.jpg">
-   <source src="media/sword-slash-2.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-2.jpg">
+<source src="media/sword-slash-2.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 残影はできましたが、まだあまりよくありません。長過ぎ、色が同じであり、パーティクルの相互接続がおかしく、消えません。
 
@@ -153,11 +153,11 @@
 
 4. ゲームを実行します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-3.jpg">
-   <source src="media/sword-slash-3.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-3.jpg">
+<source src="media/sword-slash-3.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 パーティクルがまとまって動くようになりました。
 
@@ -199,11 +199,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 7. ゲームを実行します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-4.jpg">
-   <source src="media/sword-slash-4.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-4.jpg">
+<source src="media/sword-slash-4.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 完成に近づいています。しかし、まだ残影が消えないので、剣の一部であるように見えます。マネキンが剣を振ったら効果が表示されて、振り終わったら表示されなくなるようにする必要があります。
 
@@ -253,7 +253,7 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 2. Visual Studio でゲーム プロジェクトを右クリックし、［追加］>［新しいアイテム］を選択します。[名前］フィールドにスクリプトの名前として「*SpawnTrail*」と入力し、［追加］をクリックします。
 
-3. スクリプトの内容を、スクリプト [SpawnTrail.cs](https://github.com/SiliconStudio/stride-docs/blob/master-1.9/manual/particles/tutorials/media/SpawnTrail.cs) のコードに置き換えます。
+3. スクリプトの内容を、スクリプト [SpawnTrail.cs](https://github.com/stride3d/stride-docs/blob/master/en/manual/particles/tutorials/media/SpawnTrail.cs) のコードに置き換えます。
 
     これは、Stride に含まれるプレハブ インスタンス スクリプトを変更したものです。イベントまたはキーの押下をリッスンするのではなく、剣撃アニメーションのようなアニメーションの変化をリッスンします。
 
@@ -285,17 +285,17 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 11. SpawnTrail コンポーネントの［Animation］フィールドで、手のアイコン (［Pick an asset up］) をクリックします。    ［Select an asset］ウィンドウが開きます。
 
-左側のペインで **mannequinModel** を選択して［OK］をクリックします。
+    左側のペインで **mannequinModel** を選択して［OK］をクリックします。
 
     ![Pick mannequin model in Entity Picker](media/pick-mannequin-model.png)
 
 12. ゲームを実行します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-5.jpg">
-   <source src="media/sword-slash-5.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-5.jpg">
+<source src="media/sword-slash-5.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 スクリプトにより、剣撃アニメーションが開始するとパーティクル効果が表示され、終了すると表示されなくなります。
 
@@ -311,11 +311,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 4. ゲームを実行して結果を確認します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-6.jpg">
-   <source src="media/sword-slash-6.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-6.jpg">
+<source src="media/sword-slash-6.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 残影効果が若干滑らかではなく、「クモの巣」効果が発生していることに気付くかもしれません。さらに曲げてみましょう。
 
@@ -329,11 +329,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 2. ゲームを実行します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-7.jpg">
-   <source src="media/sword-slash-7.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-7.jpg">
+<source src="media/sword-slash-7.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 剣の柄がある内側の曲線は前より滑らかになりました。しかし、剣の先端の曲線はまだ滑らかではありません。
 
@@ -349,11 +349,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 2. ゲームを実行します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-8.jpg">
-   <source src="media/sword-slash-8.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-8.jpg">
+<source src="media/sword-slash-8.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 新しい問題が発生しています。パーティクル効果を剣の先端に移動したため、パーティクルが先端から飛び散っています。パーティクルの向きを逆にして、剣の刃に沿って柄の方に動くようにする必要があります。
 
@@ -363,11 +363,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 7. ゲームを実行します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-9.jpg">
-   <source src="media/sword-slash-9.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-9.jpg">
+<source src="media/sword-slash-9.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 以上で終了です。残影効果を一から作成しました。後は自分でいろいろ試してください。
 
@@ -375,11 +375,11 @@ SwordModel のプロパティの［Particle System］>［Source］>［Emitters�
 
 複数のパーティクル効果が組み合わせた、さらに精巧な残影の例を次に示します。
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-10.jpg">
-   <source src="media/sword-slash-10.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-3">
+<video autoplay controls loop preload="none" poster="media/sword-slash-10.jpg">
+<source src="media/sword-slash-10.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 動作を確認する場合は、[プロジェクト ファイルをダウンロード](media/MyTrailEffect.zip)して実行してみてください。
 
