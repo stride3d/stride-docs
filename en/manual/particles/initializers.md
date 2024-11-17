@@ -7,7 +7,7 @@
 **Initializers** control the states of particles such as position, velocity, size, and so on when the particles are first spawned. They have no effect on particles spawned on previous frames.
 
 > [!Note] 
-Some [updaters](updaters.md) act change the particle's value at the *end* of the frame. They effectively overwrite any initial values set by a similar initializer. Such is the case with all animations. They operate on the particle's lifetime and a color animation updater will overwrite any initial values from a color initializer.
+> Some [updaters](updaters.md) act change the particle's value at the *end* of the frame. They effectively overwrite any initial values set by a similar initializer. Such is the case with all animations. They operate on the particle's lifetime and a color animation updater will overwrite any initial values from a color initializer.
 
 Similarly, initializers which operate on the same field are exclusive and only the bottom one will have any effect, since they are executed in order. For example if you assign two color initializer, only the second one will have any effect.]
 
@@ -39,7 +39,7 @@ Particles are spawned in an axis-aligned bounding box, defined by its left lower
 
 | Property                    | Description
 |-----------------------------|-------------
-| Seed offset                 | Used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have three properties (X, Y, Z), eg velocity. Make them different to force the position to be unique and independent from other fields
+| Seed offset                 | Used for random numbers. Set it to the same value to force the position to be coupled with other particle fields which have three properties (X, Y, Z), eg velocity. Make them different to force the position to be unique and independent from other fields
 | Position min                | Left lower back corner for the box
 | Position max                | Right upper front corner for the box
 
@@ -55,7 +55,7 @@ Particles spawn with initial velocity which ranges between the defined values. T
 
 | Property                    | Description
 |-----------------------------|-------------
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other particle fields which have 3 properties (X, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.
 | Velocity min                | Left lower back corner for the box
 | Velocity max                | Right upper front corner for the box
 
@@ -111,7 +111,7 @@ This initializer creates the **Direction** field in the particle properties and 
 
 | Property                    | Description
 |-----------------------------|-------------
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the direction to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the direction to be coupled with other particle fields which have 3 properties (X, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.
 | Direction min               | Left lower back corner for the box
 | Direction max               | Right upper front corner for the box
 
@@ -127,7 +127,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description
 |-----------------------------|------------
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.
 | Position min                | Left lower back corner for the box
 | Position max                | Right upper front corner for the box
 | Target                      | Allows you to pick up an Entity for the end of the arc. If no Entity is set, Fallback Target will be used, which is an offset from the emitter's location.
@@ -135,7 +135,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 | Arc Height                  | The height of the arc at its highest point (middle of the distance between the two points). By default it's the Y-up vector, but can be rotated with rotation offset and rotation inheritance
 | Ordered                     | If checked, new particles will appear in order from the emitter towards the target. If unchecked, new particles will appear randomly on the arc anywhere between the emitter and the target. If you plan to visualize the particles as a ribbon or a trail you should set this box to checked.
 | Fixed count                 | By default particles will appear on the arc at distances enough for the maximum number of particles to fit exactly on the line. If you want to control spawn rate and distance, you can set how many fixed "positions" are there on the arc. For example, with a fixed count of 10 and Ordered spawning, the first 10 particles will appear in order, then the 11th particle will appear from the beginning, at the same position as the first, and so on.
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.
 | Position min                | Left lower back corner for the box. This is an offset in addition to the arc position.
 | Position max                | Right upper front corner for the box. This is an offset in addition to the arc position.
 
@@ -143,7 +143,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description
 |-----------------------------|-------------
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.
 | Position min                | Left lower back corner for the box
 | Position max                | Right upper front corner for the box
 | Parent emitter              | You have to type the name of the parent emitter. Child particles' positions will match the parent emitter's particles' positions.
@@ -154,7 +154,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description
 |-----------------------------|-------------
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other particle fields which have 3 properties (X, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.
 | Velocity min                | Left lower back corner for the box
 | Velocity max                | Right upper front corner for the box
 | Parent emitter              | You have to type the name of the parent emitter. Child particles' positions will match the parent emitter's particles' positions.
