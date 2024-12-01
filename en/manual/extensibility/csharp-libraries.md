@@ -3,25 +3,36 @@
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
 
-If you want to share code between multiple projects, or create reusable components, you can create a C# library and reference it in your Stride project.
+If you want to share code between multiple projects or create reusable components, you can create a C# library and reference it in your Stride project.
 
-If your library is utilising @Stride.Core.DataContractAttribute, you need to follow additional steps to make it work with Stride.
+If your library uses the @Stride.Core.DataContractAttribute and you want to reference it through a **NuGet** package, there are additional steps required to make it compatible with Stride.
 
-1. Add a Module initializer to your library. This will register your library with Stride's serialization system. Example `Module.cs`:
+## Adding a Module Initializer
 
-    ```csharp
-    using Stride.Core.Reflection;
-    using System.Reflection;
+First, add a module initializer to your library. This ensures your library is properly registered with Stride's serialization system.
 
-    namespace MyProjectName;
+Example `Module.cs`:
 
-    internal class Module
+```csharp
+using Stride.Core.Reflection;
+using System.Reflection;
+
+namespace MyProjectName;
+
+internal class Module
+{
+    [ModuleInitializer]
+    public static void Initialize()
     {
-        [ModuleInitializer]
-        public static void Initialize()
-        {
-            AssemblyRegistry.Register(typeof(Module).GetTypeInfo().Assembly, AssemblyCommonCategories.Assets);
-        }
+        AssemblyRegistry.Register(typeof(Module).GetTypeInfo().Assembly, AssemblyCommonCategories.Assets);
     }
-    ```
-1. If you are creating also NuGet packages for your library, these NuGet packages have to be re-compiled with latest version of Stride NuGet packages. 
+}
+```
+
+## Updating to the Latest Stride NuGet Packages
+
+If your library references any Stride NuGet packages, you must recompile it with the latest version of those packages. This ensures compatibility with the current Stride ecosystem.
+
+## About the Module Initializer Attribute
+
+The `ModuleInitializer` attribute is now generated using a Roslyn source generator. This means the file `sources/core/Stride.Core.CompilerServices/Generators/ModuleInitializerGenerator.cs` must run during your code's compilation. Otherwise, the module initializer and potentially other source generators added in the future will not function correctly.
