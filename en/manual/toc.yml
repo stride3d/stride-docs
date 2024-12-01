@@ -561,6 +561,12 @@ items:
       - name: Create Packages
         href: nuget/create-packages.md
 
+  - name: Extensibility
+    href: extensibility/index.md
+    items:
+      - name: C# Libraries
+        href: extensibility/csharp-libraries.md
+
   - name: Troubleshooting
     href: troubleshooting/index.md
     items:
