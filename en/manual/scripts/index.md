@@ -40,4 +40,5 @@ You can still use standard C# classes in Stride, but these aren't called scripts
 * [Debugging](debugging.md)
 * [Preprocessor variables](preprocessor-variables.md)
 * [Create a model from code](create-a-model-from-code.md)
-* [Create Gizmos for you components](gizmos.md)
+* [Create Gizmos for your components](gizmos.md)
+* [Create Custom Assets](custom-assets.md)
