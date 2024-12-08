@@ -1,4 +1,6 @@
-# Bepu Physics
+# Bullet Physics
+
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
 
 ![Physics in Stride](media/physics-index-physics-in-stride.png)
 

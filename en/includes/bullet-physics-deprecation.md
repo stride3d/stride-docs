@@ -1,0 +1,2 @@
+> [!WARNING]
+> The Bullet physics is being phased out in Stride. We no longer plan to update or expand its features as our focus shifts to the [Bepu physics](../manual/physics/index.md). We recommend transitioning to Bepu Physics for access to the latest updates and ongoing improvements.
