@@ -3,6 +3,8 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+
 In this tutorial, we'll use the [static collider and rigidbody components](colliders.md) to create a ball bouncing on a floor.
 
 >[!Note]

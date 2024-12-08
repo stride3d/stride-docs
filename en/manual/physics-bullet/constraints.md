@@ -1,5 +1,7 @@
 # Constraints
 
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+
 [!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
 
 <span class="badge text-bg-primary">Advanced</span>

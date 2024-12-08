@@ -1,5 +1,7 @@
 # Kinematic rigidbodies
 
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+
 Sometimes you want to move [rigidbodies](rigid-bodies.md) in a specific way rather than have other objects move them. For example, you might control an elevator with a script, via its `Transform` property, rather than have other objects push and pull it. This is a **kinematic** rigidbody.
 
 Although kinematic rigidbodies aren't moved by physics, other objects can still collide with them. For example, in the case of the elevator, objects placed inside won't fall through the elevator floor.

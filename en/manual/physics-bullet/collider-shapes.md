@@ -3,6 +3,8 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+
 For [colliders](colliders.md) to interact, you need to set their shape in the **Property Grid**. You can specify a geometric shape, or use a collider shape asset.
 
 ![Select a collider shape](media/select-collider-shape.png)
