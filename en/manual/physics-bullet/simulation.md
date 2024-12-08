@@ -3,6 +3,8 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+
 Stride's physics are controlled by the [Simulation](xref:Stride.Physics.Simulation) class.
 You can change how Stride initializes the [simulation](xref:Stride.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:Stride.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.
 

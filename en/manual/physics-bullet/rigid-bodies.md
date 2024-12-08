@@ -3,6 +3,8 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
+[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+
 **Rigidbodies** move based on physical forces applied to them, such as gravity and collisions. Typical rigidbodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigidbodies they collide with.
 
 ![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
