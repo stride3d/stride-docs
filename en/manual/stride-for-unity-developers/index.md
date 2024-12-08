@@ -205,6 +205,9 @@ The editor opens in a new tab. You can arrange the tabs how you like, or float t
 
 >[!Note]
 >When you modify resource files outside Game Studio, the corresponding assets update automatically in Game Studio.
+ 
+### Scriptable Objects
+See the [Custom Assets](../scripts/custom-assets.md) page.
 
 ### Import assets
 
