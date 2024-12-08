@@ -419,7 +419,7 @@ items:
           - name: Custom particles
             href: particles/tutorials/custom-particles.md
 
-  - name: Physics
+  - name: Physics [WIP]
     href: physics/index.md
     items:
       - name: Colliders
@@ -452,6 +452,40 @@ items:
             href: physics/script-a-trigger.md
       - name: Physics jitter
         href: physics/fix-physics-jitter.md
+
+  - name: Physics Bullet
+    href: physics-bullet/index.md
+    items:
+      - name: Colliders
+        href: physics-bullet/colliders.md
+        items:
+          - name: Static colliders
+            href: physics-bullet/static-colliders.md
+          - name: Rigidbodies
+            href: physics-bullet/rigid-bodies.md
+          - name: Kinematic rigidbodies
+            href: physics-bullet/kinematic-rigid-bodies.md
+          - name: Characters
+            href: physics-bullet/characters.md
+          - name: Collider shapes
+            href: physics-bullet/collider-shapes.md
+          - name: Triggers
+            href: physics-bullet/triggers.md
+          - name: Constraints
+            href: physics-bullet/constraints.md
+      - name: Raycasting
+        href: physics-bullet/raycasting.md
+      - name: Simulation
+        href: physics-bullet/simulation.md
+      - name: Tutorials
+        href: physics-bullet/tutorials.md
+        items:
+          - name: Create a bouncing ball
+            href: physics-bullet/create-a-bouncing-ball.md
+          - name: Script a trigger
+            href: physics-bullet/script-a-trigger.md
+      - name: Physics jitter
+        href: physics-bullet/fix-physics-jitter.md
 
   - name: Platforms
     href: platforms/index.md
