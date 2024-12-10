@@ -33,11 +33,7 @@ public override void Start()
     VirtualButtonBinding b2 = new VirtualButtonBinding("MyButton", VirtualButton.GamePad.Start);
     VirtualButtonBinding b3 = new VirtualButtonBinding("MyButton", VirtualButton.Mouse.Left);
 
-    VirtualButtonConfig c = new VirtualButtonConfig();
-
-    c.Add(b1);
-    c.Add(b2);
-    c.Add(b3);
+    VirtualButtonConfig c = [b1, b2, b3];
 
     Input.VirtualButtonConfigSet.Add(c);
 }
