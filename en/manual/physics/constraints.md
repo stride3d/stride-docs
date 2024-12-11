@@ -1,5 +1,8 @@
 # Constraints
 
+> [!WARNING]
+TODO
+
 [!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
 
 <span class="badge text-bg-primary">Advanced</span>

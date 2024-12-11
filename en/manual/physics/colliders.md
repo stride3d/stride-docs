@@ -3,91 +3,146 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-To use physics in your project, add a **collider** component to an entity. 
+> [!WARNING]
+TODO
 
-Colliders define the shapes and rules of physics objects. There are three types:
+Each [collidables](colliders.md) must have a collider, That will define it's shape. You can do so in the **Property Grid**. 
+You can specify a geometric shape, or use a collider shape asset.
+By default, it's an EmptyCollider wich can be considered like a ghost. It can be usefull with static collidables to anchor things.
 
-* [static colliders](static-colliders.md) don't move (eg walls, floors, heavy objects, etc)
-* [rigidbodies](rigid-bodies.md) are moved around by forces such as collision and gravity (eg balls, barrels, etc)
-* [characters](characters.md) are controlled by user input (ie player characters)
+![Select a collider shape](media/select-collider-shape.png)
 
-You can also: 
+Components can have multiple intersecting shapes, and don't have to match the entity model, if it has one. Each shape has additional properties including size, orientation, offset, and so on.
 
-* set the [shape of collider components](collider-shapes.md)
-* make [triggers](triggers.md), and detect when objects pass through them
-* constrict collider movement with [constraints](constraints.md)
+## Types of collider shape
 
-## How colliders interact
+### Box
 
-Colliders interact according to the table below.
+![Box](media/box.png)
 
-|   | Kinematic objects   | Kinematic triggers   | Rigidbody colliders   | Rigidbody triggers   | Static colliders        | Static triggers   
-|---|-------------|---------------------|-------------|---------------------|----------|------------------
-| Kinematic objects        | Collisions           | Collisions  | Collisions and dynamic| Collisions   | Collisions    | Collisions     
-| Kinematic triggers | Collisions           | Collisions   |Collisions           | Collisions     | Collisions     | Collisions   
-| Rigidbody colliders          | Collisions and dynamic     | Collisions     | Collisions and dynamic     | Collisions     | Collisions and dynamic| Collisions
-| Rigidbody triggers | Collisions         | Collisions  | Collisions | Collisions     | Collisions     | Collisions
-| Static colliders| Collisions| Collisions| Collisions and dynamic | Collisions   | Nothing   | Nothing
-|Static triggers     | Collisions     | Collisions     | Collisions     | Collisions    | Nothing    | Nothing
+| Property       | Description |
+| -------------- |-------------| 
+| Is 2D | Makes the box infinitely flat in one dimension. |
+| Size    | The box size in XYZ values. |
+| Local offset     | The box position relative its entity.|
+| Local rotation      | The box rotation in XYZ values.|
 
-* "Collisions" refers to collision information and events only. This means the collision is detected in the code, but the objects don't bump into each other (no dynamic response).
+### Capsule
 
-* "Dynamic" means both collision information and events, plus dynamic response (ie the colliders bump into each other instead of passing through).
+![Capsule](media/capsule.png)
 
-For example, rigidbody colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers; collisions are detected in the code, but objects simply pass through.
+The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
 
-## Show colliders in the Scene Editor
+| Property       | Description |
+| -------------- |-------------| 
+| Is 2D | Makes the capsule infinitely flat in one dimension.|
+| Length | The length of the capsule.|
+| Radius | The radius of the capsule.|
+| Orientation | The axis along which the shape is stretched (X, Y, or Z).|
+| Local offset     | The capsule position relative to its entity.|
+| Local rotation      | The capsule rotation in XYZ values.|
 
-By default, colliders are invisible in the Scene Editor. To show them:
+### Cone
 
-1. In the Game Studio toolbar, in the top right, click the **Display gizmo options** icon.
+![Cone](media/cone.png)
 
-   ![Display gizmo options](media/display-gizmo-options.png)
+| Property       | Description |
+| -------------- |-------------| 
+| Height | The height of the cone.|
+| Radius | The radius of the cone at the bottom end.|
+| Orientation | The axis along which the shape is stretched (X, Y, or Z).|
+| Local offset     | The cone position relative to its entity.|
+| Local rotation      | The cone rotation in XYZ values.|
 
-2. Select **Physics**.
+### Cylinder
 
-    ![Display physics option](media/display-physics-option.png)
+![Cylinder](media/cylinder.png)
 
-The Scene Editor displays collider shapes.
+| Property       | Description |
+| -------------- |-------------| 
+| Height | The length of the cylinder.|
+| Radius | The radius of the cylinder.|
+| Orientation | Sets the axis along which the shape is stretched (X, Y, or Z).|
+| Local offset     | The cylinder position relative to its entity.|
+| Local rotation      | The cylinder  rotation in XYZ values.|
 
-![Display physics](media/display-physics.png)
+### Sphere
 
-## Show colliders at runtime
+![Sphere](media/sphere.png)
 
-You can make colliders visible at runtime, which is useful for debugging problems with physics. To do this, use:
+| Property       | Description |
+| -------------- |-------------| 
+| Is 2D | Makes the sphere infinitely flat in one dimension. |
+| Radius | The radius of the sphere.|
+| Local offset     | The sphere position relative to its entity.|
 
-``
-this.GetSimulation().ColliderShapesRendering = true;
-``
+### Infinite plane
 
-> [!Note]
-> Collider shapes for infinite planes are always invisible.
+![Infinite plane](media/infinite-plane.png)
 
-### Keyboard shortcut
+The infinite plane covers an infinite distance across one dimension.
+Think of it like a wall or floor stretching into the distance for ever.
+You can use several infinite planes together to box users in and stop them "tunneling" outside the level.
 
-To show or hide collider shapes at runtime with a keyboard shortcut, use the **Debug physics shapes** script.
+| Property       | Description |
+| -------------- |-------------| 
+| Normal  | Which vector (X, Y, or Z) is perpendicular to the plane. For example, to make an infinite floor, set the normal property to: _X:0, Y:1, Z:0_. |
+| Offset     | The plane position relative to its entity.|
 
-1. In the **Asset View**, click **Add asset**.
+### Asset
 
-2. Select **Scripts** > **Debug physics shapes**.
+Assigns a collider shape from a collider shape asset (see **Collider shape assets** below).
 
-    ![Add debug physics shape script](media/add-debug-physics-shapes-script.png)
+| Property       | Description |
+| -------------- |-------------| 
+| Shape | The collider shape asset used to generate the collider shape.|
 
-3. In the Game Studio toolbar, click **Reload assemblies and update scripts**.
+## Collider shape assets
 
-    ![Reload assemblies](../platforms/media/reload-assemblies.png)
+You can also create **collider shape assets** and use them as your collider shape. This means you can edit the collider shape asset and automatically update it in every entity that uses it.
 
-4. Add the **Debug physics shapes** script as a component to an entity in the scene. It doesn't matter which entity.
+## Create a collider shape asset
 
-    ![Add debug physics shapes script component](media/add-debug-physics-shapes-component.png)
+1. In the **Asset View** (bottom by default), click **Add asset**.
 
-The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime. You can edit the script to bind a different key combination.
+2. Select **Physics**, then select the shape you want to create.
+
+    ![Create collider shape asset](media/create-collider-shape-asset.png)
+
+Game Studio creates the new collider shape asset in the **CollisionMeshes** folder.
+
+![Collider shape asset in Asset View](media/collider-shape-in-asset-view.png)
+
+### Create a collider shape asset from a model
+
+This is useful to quickly create a collider shape that matches a model.
+
+1. In the **Asset View** (bottom by default), click **Add asset**.
+
+2. Select **Physics** > **Convex hull**.
+
+    The **Select an asset** window opens.
+
+    ![Select model](media/select-model.png)
+
+3. Browse to the model asset you want to create a collider shape asset from and click **OK**.
+
+Game Studio creates a collider shape asset from the model.
+
+## Use a collider shape asset
+
+1. Under the **static collider** or **rigidbody** properties, under **Collider Shapes**, select **Asset**. 
+
+    ![Select collider shape asset](media/select-asset-collider-shape.png)
+
+2. Next to **Shape**, specify the collider shape asset you want to use.
+
+    ![Select collider shape asset](media/select-collider-shape-asset.png)
+
+    To do this, drag the asset from the **Asset View** to the **Shape** field in the Property Grid. Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**) and browse to the asset.
 
 ## See also
 
-* [Collider shapes](collider-shapes.md)
-* [Static colliders](static-colliders.md)
-* [Rigidbodies](rigid-bodies.md)
-* [Kinematic rigidbodies](kinematic-rigid-bodies.md)
-* [Simulation](simulation.md)
-* [Physics tutorials](tutorials.md)
+* [Colliders](colliders.md)
+* [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
+* [Tutorial: Script a trigger](script-a-trigger.md)

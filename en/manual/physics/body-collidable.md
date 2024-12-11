@@ -1,18 +1,20 @@
-# Rigidbodies
+# Body
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-**Rigidbodies** move based on physical forces applied to them, such as gravity and collisions. Typical rigidbodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigidbodies they collide with.
+> [!WARNING]
+TODO
+
+**Body** move based on physical forces applied to them, such as gravity and collisions. Typical (rigid)bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigidbodies they collide with.
 
 ![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-
 ## Add a rigidbody collider
 
-1. Select the entity you want to be a rigidbody collider.
+1. Select the entity you want to be a body.
 
-2. In the **Property Grid**, click **Add component** and select **Rigidbody**.
+2. In the **Property Grid**, click **Add component** and select **body**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 

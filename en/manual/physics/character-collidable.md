@@ -1,7 +1,10 @@
-# Characters
+# Character
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+
+> [!WARNING]
+TODO
 
 **Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:Stride.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:Stride.Physics.CharacterComponent.SetVelocity\(Stride.Core.Mathematics.Vector3\)), [Jump](xref:Stride.Physics.CharacterComponent.Jump), and [Teleport](xref:Stride.Physics.CharacterComponent.Teleport\(Stride.Core.Mathematics.Vector3\)).
 
