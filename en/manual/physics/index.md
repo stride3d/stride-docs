@@ -20,6 +20,12 @@ This section explains how physics components work, how to add them to your proje
     * [Constraints](constraints.md): Create appealing and realistic physics
 * [Raycasting](raycasting.md): Trace intersecting objects
 
+> [!WARNING]
+> Pages to redirect or recycle
+* [Simulation](simulation.md): How Stride controls physics
+* [Collider Shapes](collider-shapes.md): How Stride controls physics
+* [Kinematic Rigid Bodies](kinematic-rigid-bodies.md): How Stride controls physics
+
 ### Tutorials
 
 * [Physics tutorials](tutorials.md)
