@@ -10,20 +10,19 @@ This section explains how physics components work, how to add them to your proje
 
 ## In this section
 
-* [Configuration](configuration.md): Manage simulations and all global parameters
-* [Collidables](collidables.md): Let's define our object type
-    * [Static collidable](static-colliders.md): Objects that don't move (terrain, ..)
+* [Configuration](configuration.md): Setting up Bepu
+* [Simulation](simulation.md): Managing the simulations parameters
+* [Collidables](colliders.md): The physics objects in your game world
+    * [Static collidable](static-colliders.md): Objects that don't move (terrain, ...)
     * [Body collidable](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
-    * [Character collidable](characters.md): Colliders for basic characters (such as players, annimals, npcs, ..)
-    * [Colliders](colliders.md): Define the geometric shape of yours collidable components
-    * [Triggers](triggers.md): Use triggers to detect passing objects
-    * [Constraints](constraints.md): Create appealing and realistic physics
+    * [Character collidable](characters.md): Colliders for basic characters (such as players, animals, npcs, ...)
+* [Collider Shapes](collider-shapes.md): Define the geometric shape of yours collidable components
+* [Constraints](constraints.md): Create appealing and realistic physics
+* [Triggers](triggers.md): Use triggers to detect passing objects
 * [Raycasting](raycasting.md): Trace intersecting objects
 
 > [!WARNING]
 > Pages to redirect or recycle
-* [Simulation](simulation.md): How Stride controls physics
-* [Collider Shapes](collider-shapes.md): How Stride controls physics
 * [Kinematic Rigid Bodies](kinematic-rigid-bodies.md): How Stride controls physics
 
 ### Tutorials

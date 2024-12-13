@@ -35,13 +35,7 @@ You should now have something like that:
 
 ![Bepu configuration](media/Bepu-configuration.png)
 
-### Simulation Settings
-
-These settings control the rules and parameters your physics simulation run under, enabling customization and fine-tuning of the physics environment to suit your game's requirements.
-You may also create multiple simulations and distribute your physics object between them depending on your needs.
-
-Have a look at the [API](https://doc.stride3d.net/latest/en/api/index.html) for more detail on what each property does.
-
 ## See also
 
-* [index](index.md)
+* [Simulation](simulation.md)
+* [Index](index.md)

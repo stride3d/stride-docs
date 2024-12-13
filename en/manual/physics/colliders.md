@@ -1,58 +1,68 @@
-# Colliders
+# Collidables
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-Each [collidables](colliders.md) should have a collider defining its shape. You can set them through the **Property Grid**.
+Collidables are the base entity components for physics objects. There are three types:
 
-![Collider Types](media/collider-types.png)
+* [Statics](static-colliders.md): Objects that don't move (terrain, ...)
+* [Bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
+* [Characters](characters.md): Colliders for basic characters (such as players, animals, npcs, ...)
 
-# Empty
+You can also:
 
-Empty do not collide with other objects, they are mostly used to anchor bodies with [constraints](constraints.md).
+* Define the [shape of collidables components](collider-shapes.md)
+* Make [triggers](triggers.md), and detect when other physics objects pass through them
+* Constrain collider movement with [constraints](constraints.md)
 
-# Compound
+## Collisions
 
-A compound collider is a shape made up of a bunch of more primitive shapes, most of these are self-explanatory, while `Convex Hull` has a section describing it in more detail below.
+Collidables interact according to the table below.
 
-![Select a collider shape](media/compound-types.png)
+|            | Characters           | Bodies               | Statics              |
+|------------|----------------------|----------------------|----------------------|
+| Characters | Collides             | Collides and bounces | Collides             |
+| Bodies     | Collides and bounces | Collides and bounces | Collides and bounces |
+| Statics    | Collides             | Collides and bounces | Pass through         |
 
-Those individual primitives can intersect between each other, and don't necessarily have to match the model they are attached to. Each shape has additional properties including size, orientation, offset, and so on.
+Characters do not have any inertia, and so cannot bounce off of bodies or statics when colliding with them.
 
-# Meshes
+Three other factor control whether two collidables would collide with each other, their `Collision Layer`, `Collision Group` and their `Contact Event Handler`
 
-Mesh colliders use 3D models as the collision shape itself. They are significantly slower than compounds, use them only when building a compound collider would be counter-productive.
+## Collision Layers
 
-> [!WARNING]
-> Never use mesh colliders for your bodies, use them only for statics, they are far too slow to be used as bodies. If you absolutely need a more complex shape than the primitive ones, use a convex hull instead.
+The collision layer controls whether that object would collide with object on other layers.
 
-# Convex Hulls
+This relationship is controlled through the [Simulation's Collision Matrix](simulation.md).
 
-A convex hull is a convex shape that envelopes another. For example, the convex hull of the Eiffel Tower would be a pyramid large enough to contain the entire tower without any bits poking through.
+## Collision Group
 
-Convex shapes are easier to test for collision, simulate and find intersections with, reducing the compute load physics engine have to deal with compared to their mesh counterpart.
+This property is used to filter collisions inside a group of object, when two or more objects must share the same `Collision Layer`, but should not collide between each other.
 
-## Creating a Convex Hull
+It allows objects sharing the same `CollisionGroup.Id` to pass through each other when the absolute difference between their `IndexA`,`IndexB`, and `IndexC` is less than two.
 
-1. In the Asset View pane, press the Add asset button, hover on the Physics-Bepu option and select Convex hull
+Its utility is best shown through concrete examples.
 
-   ![Adding a convex hull](media/convex-hull-add-asset.png)
+- You have multiple characters `A, B, C, D` all set to the same `CollisionLayer`, they are split in two teams `A, B` and `C, D`. Members of the same team must not collide between each other, you can set `A, B`'s Id to 1 and `C, D`'s Id to 2.
 
-   A new window will open prompting you to select a model asset, select the asset you want to create this hull from and press Ok.
+- You have a chain of three colliders attached to each other `A, B, C`, you don't want A and C to collide with B, but A and C should collide together.
+Set A, B and C's Ids to 1 to start filtering, leave A's `IndexA` at 0, B's to 1 and C to 2.
+A and C will collide since the difference between their `IndexA` is equal to two,
+but neither of them will collide with B since they are both only one away from B's `IndexA` value.
 
-   You can now add this new hull to one of your collidable.
+## Contact Event Handler
 
-2. Select the entity you want to add this Convex Hull to, add in a collidable component as is described in the [static](static-colliders.md) or [body](rigid-bodies.md) section.
+The contact event handler is a class that receives collision data whenever the object it is associated with collides with the world.
 
-3. Next to `Colliders`, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select `ConvexHullCollider`
+It is most often used to transform physics object into 'trigger boxes', areas that run events whenever objects, like the player character, passes through them. See [Triggers](triggers.md).
 
-   ![Adding a convex hull](media/convex-hull-add-to-component.png)
-
-4. Set the `Hull` property to your newly created hull by pressing on the hand icon
-   ![Setting the property](media/convex-hull-set-hull.png)
+If the contact event handler you bind to an object is set to `NoContactResponse`, the object will never collide with anything, it will only collect collision events.
 
 ## See also
 
+* [Configuration](configuration.md)
+* [Static](static-colliders.md)
+* [Body](rigid-bodies.md)
+* [Character](characters.md)
 * [Colliders](colliders.md)
-* [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
-* [Tutorial: Script a trigger](script-a-trigger.md)
+* [Physics tutorials](tutorials.md)
