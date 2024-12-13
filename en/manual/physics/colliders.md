@@ -56,7 +56,7 @@ The contact event handler is a class that receives collision data whenever the o
 
 It is most often used to transform physics object into 'trigger boxes', areas that run events whenever objects, like the player character, passes through them. See [Triggers](triggers.md).
 
-If the contact event handler you bind to an object is set to `NoContactResponse`, the object will never collide with anything, it will only collect collision events.
+If the contact event handler you bind to an object is set to `NoContactResponse`, the object will never prevent anything from passing through it, it will only collect collision events.
 
 ## See also
 

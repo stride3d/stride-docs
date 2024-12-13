@@ -3,9 +3,6 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-> [!WARNING]
-> This is a WIP documentation. This page is mostly done.
-
 ## Adding Bepu physics to your game
 
 Some projects may not come with Bepu Physics pre-installed, to add it to your project right-click on the **game** project and select `Add dependency...`
