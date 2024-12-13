@@ -1,11 +1,14 @@
 # Bepu Physics - Configuration
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+
 > [!WARNING]
 > This is a WIP documentation. This page is mostly done.
 
 ## Adding Bepu physics to your game
 
-Some projects may not come with Bepu Physics pre-installed, to add it to your project right click on the **game** project and select `Add dependency...`
+Some projects may not come with Bepu Physics pre-installed, to add it to your project right-click on the **game** project and select `Add dependency...`
 
 ![Add dependency](media/Add-dependency.png)
 
@@ -38,3 +41,7 @@ These settings control the rules and parameters your physics simulation run unde
 You may also create multiple simulations and distribute your physics object between them depending on your needs.
 
 Have a look at the [API](https://doc.stride3d.net/latest/en/api/index.html) for more detail on what each property does.
+
+## See also
+
+* [index](index.md)
