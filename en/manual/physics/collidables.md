@@ -7,9 +7,9 @@ To use physics in your project, add a **Collidables** component to an entity.
 
 Collidables define the type of physics objects. There are three types:
 
-* [Static collidable](static-collidable.md): Objects that don't move (terrain, ..)
-* [Body collidable](body-collidable.md): Moving objects, affected by gravity and collisions or Kinematics
-* [Character collidable](character-collidable.md): Colliders for basic characters (such as players, annimals, npcs, ..)
+* [Static collidable](static-colliders.md): Objects that don't move (terrain, ..)
+* [Body collidable](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
+* [Character collidable](characters.md): Colliders for basic characters (such as players, annimals, npcs, ..)
 
 You can also: 
 
@@ -95,8 +95,8 @@ The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**
 ## See also
 
 * [Configuration](configuration.md)
-* [Static collidable](static-collidable.md)
-* [Body collidable](body-collidable.md)
-* [Character collidable](character-collidable.md)
+* [Static collidable](static-colliders.md)
+* [Body collidable](rigid-bodies.md)
+* [Character collidable](characters.md)
 * [Colliders](colliders.md)
 * [Physics tutorials](tutorials.md)

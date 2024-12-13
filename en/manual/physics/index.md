@@ -12,9 +12,9 @@ This section explains how physics components work, how to add them to your proje
 
 * [Configuration](configuration.md): Manage simulations and all global parameters
 * [Collidables](collidables.md): Let's define our object type
-    * [Static collidable](static-collidable.md): Objects that don't move (terrain, ..)
-    * [Body collidable](body-collidable.md): Moving objects, affected by gravity and collisions or Kinematics
-    * [Character collidable](character-collidable.md): Colliders for basic characters (such as players, annimals, npcs, ..)
+    * [Static collidable](static-colliders.md): Objects that don't move (terrain, ..)
+    * [Body collidable](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
+    * [Character collidable](characters.md): Colliders for basic characters (such as players, annimals, npcs, ..)
     * [Colliders](colliders.md): Define the geometric shape of yours collidable components
     * [Triggers](triggers.md): Use triggers to detect passing objects
     * [Constraints](constraints.md): Create appealing and realistic physics
