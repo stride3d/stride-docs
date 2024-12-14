@@ -17,7 +17,7 @@ This section explains how physics components work, how to add them to your proje
     * [Bodies](rigid-bodies.md): Objects that can be knocked around, cans, balls, boxes ...
     * [Characters](characters.md): Entities which are moved programmatically, the player character, animals, moving platforms ...
 * [Collider Shapes](collider-shapes.md): Define the geometric shape of yours collidable components
-* [Constraints](constraints.md): Create appealing and realistic physics
+* [Constraints](constraints.md): Join physics objects together, constrain them around points.
 * [Triggers](triggers.md): Use triggers to detect passing objects
 * [Physics Queries](raycasting.md): Operations to find objects in the scene
 * [Physics Update](physics-update.md): Updating logic alongside physics

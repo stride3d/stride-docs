@@ -29,6 +29,8 @@ Here's everything that may prevent those objects from moving smoothly:
 - You are setting the entity's position/rotation instead of the physics object's `LinearVelocity`/`AngularVelocity`
 - Your objects are not `Awake`
 
+Lastly, maybe consider using a [Constraint](constraints.md) instead.
+
 ## See also
 
 * [Simulation](simulation.md)
