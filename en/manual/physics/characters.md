@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-**Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:Stride.BepuPhysics.CharacterComponent) can be moved with [Move](xref:Stride.BepuPhysics.CharacterComponent.Move\(Stride.Core.Mathematics.Vector3\)), [TryJump](xref:Stride.BepuPhysics.CharacterComponent.TryJump), and teleported by setting its [Position](xref:Stride.BepuPhysics.BodyComponent.Position) property.
+**Characters** are used for player and NPC movement. Entities with [character components](xref:Stride.BepuPhysics.CharacterComponent) can be moved with [Move](xref:Stride.BepuPhysics.CharacterComponent.Move\(Stride.Core.Mathematics.Vector3\)), [TryJump](xref:Stride.BepuPhysics.CharacterComponent.TryJump), and teleported by setting its [Position](xref:Stride.BepuPhysics.BodyComponent.Position) property.
 
 ## Add a character component to an entity
 
@@ -13,13 +13,45 @@
 
     ![Add character component](media/add-character-component.png)
 
->[!Note]
+> [!Note]
 > You will need to set a collider for this newly created character, you can do so through the Collider property. The capsule shape is appropriate for most character colliders. For more information, see [collider shapes](collider-shapes.md).
 
 > [!WARNING]
-> Never use mesh colliders for characters, use them only for statics, they are far too slow to be used as bodies. If you absolutely need a more complex shape than the primitive ones, use a convex hull instead, see [collider shapes](collider-shapes.md).
+> Never use mesh colliders for characters, use them only for statics, they are far too slow to be used as characters. If you absolutely need a more complex shape than the primitive ones, use a convex hull instead, see [collider shapes](collider-shapes.md).
 
-Have a look at the [API](xref:Stride.BepuPhysics.CharacterComponent) for more detail on what each property does.
+Have a look at the [API](xref:Stride.BepuPhysics.CharacterComponent) for more detail on the properties of this component.
+
+## Custom Character Controllers
+
+When creating a controller, it is recommended to create a new class inheriting from this component instead of using it as is, you can access its internal state and override it with your own logic to better fit your game.
+
+```cs
+using Stride.BepuPhysics;
+using Stride.Core.Mathematics;
+
+public class MyCharacterController : CharacterComponent
+{
+    public override void Move(Vector3 direction)
+    {
+        base.Move(direction);
+    }
+
+    public override void TryJump()
+    {
+        base.TryJump();
+    }
+
+    public override void SimulationUpdate(BepuSimulation sim, float simTimeStep)
+    {
+        base.SimulationUpdate(sim, simTimeStep);
+    }
+
+    public override void AfterSimulationUpdate(BepuSimulation sim, float simTimeStep)
+    {
+        base.AfterSimulationUpdate(sim, simTimeStep);
+    }
+}
+```
 
 ## See also
 
