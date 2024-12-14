@@ -9,22 +9,10 @@ env:
   DOCS_PATH: stride-docs
 
 on:
-  push:
-    branches:
-      - staging
-    paths-ignore:
-      - 'README.md'
-      - 'Stride.Docs.sln'
-      - 'BuildDocs.ps1'
-      - 'wiki/**'
-      - .gitignore
-      - '.github/**'
   workflow_dispatch:
 
 jobs:
   build:
-    # Run this job only if the repository is 'stride3d/stride-docs'
-    if: github.repository == 'stride3d/stride-docs'
     runs-on: windows-2022
 
     steps:
