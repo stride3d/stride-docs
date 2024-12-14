@@ -3,42 +3,23 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-> [!WARNING]
-TODO
-
-**Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:Stride.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:Stride.Physics.CharacterComponent.SetVelocity\(Stride.Core.Mathematics.Vector3\)), [Jump](xref:Stride.Physics.CharacterComponent.Jump), and [Teleport](xref:Stride.Physics.CharacterComponent.Teleport\(Stride.Core.Mathematics.Vector3\)).
+**Character** colliders are used for player and script-controlled characters such as NPCs. Entities with [character components](xref:Stride.BepuPhysics.CharacterComponent) can be moved with [Move](xref:Stride.BepuPhysics.CharacterComponent.Move\(Stride.Core.Mathematics.Vector3\)), [TryJump](xref:Stride.BepuPhysics.CharacterComponent.TryJump), and teleported by setting its [Position](xref:Stride.BepuPhysics.BodyComponent.Position) property.
 
 ## Add a character component to an entity
 
 1. In the **Scene Editor**, select the entity you want to add the component to.
 
-2. In the **Property Grid**, click **Add component** and select **Character**.
+2. In the **Property Grid**, click `Add component`, hover `Physics - Bepu` and select `CharacterComponent`.
 
     ![Add character component](media/add-character-component.png)
 
 >[!Note]
-> For the character collider to interact with other physics objects, you also need to set a  collider shape in the collider component properties. The capsule shape is appropriate for most character colliders. For more information, see [collider shapes](collider-shapes.md).
+> You will need to set a collider for this newly created character, you can do so through the Collider property. The capsule shape is appropriate for most character colliders. For more information, see [collider shapes](collider-shapes.md).
 
-## Component properties
+> [!WARNING]
+> Never use mesh colliders for characters, use them only for statics, they are far too slow to be used as bodies. If you absolutely need a more complex shape than the primitive ones, use a convex hull instead, see [collider shapes](collider-shapes.md).
 
-You can adjust the character component properties in the **Property Grid**.
-
-Property              |   Description
-----------------------|-----------------------
-Collision Group       | Sets which collision group the object belongs to.
-Can Collide With      | Sets which groups the object collides with.
-Collision Events      | If this is enabled, the object reports collision events, which you can use in scripts. It has no effect on physics. If you have no scripts using collision events for the object, disable this option to save CPU.
-Can Sleep             | If this is enabled, the physics engine doesn't process physics objects when they're not moving. This saves CPU.
-Restitution           | Sets the amount of kinetic energy lost or gained after a collision. A typical value is between 0 and 1. If the restitution property of colliding entities is 0, the entities lose all energy and stop moving immediately on impact. If the restitution is 1, they lose no energy and rebound with the same velocity they collided at. Use this to change the "bounciness" of rigidbodies.
-Friction              | Sets the surface friction.
-Rolling Friction      | Sets the rolling friction.
-CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
-CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection. 
-Gravity               | For rigidbodies, sets a custom gravity vector applied if Override Gravity is selected. For characters, specifies how much gravity affects the character.
-Step Height           | The maximum height the character can step onto.
-Fall Speed            | The maximum fall speed.
-Max Slope             | The maximum slope the character can climb, in degrees. 
-Jump Speed            | The amount of jump force.
+Have a look at the [API](xref:Stride.BepuPhysics.CharacterComponent) for more detail on what each property does.
 
 ## See also
 
