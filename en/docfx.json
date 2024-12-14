@@ -32,7 +32,8 @@
         {
           "files": [
             "sources/assets/Stride.Core.Assets/Stride.Core.Assets.csproj",
-            "sources/engine/Stride.Physics/Stride.Physics.csproj"
+            "sources/engine/Stride.Physics/Stride.Physics.csproj",
+            "sources/engine/Stride.BepuPhysics/Stride.BepuPhysics/Stride.BepuPhysics.csproj"
           ],
           "src": "../../stride",
           "properties": {
