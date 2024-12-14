@@ -9,6 +9,8 @@ Collidables are the base entity components for physics objects. There are three 
 * [Bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
 * [Characters](characters.md): Colliders for basic characters (such as players, animals, npcs, ...)
 
+![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
+
 You can also:
 
 * Define the [shape of collidables components](collider-shapes.md)
