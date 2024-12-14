@@ -20,6 +20,7 @@ This section explains how physics components work, how to add them to your proje
 * [Constraints](constraints.md): Create appealing and realistic physics
 * [Triggers](triggers.md): Use triggers to detect passing objects
 * [Physics Queries](raycasting.md): Operations to find objects in the scene
+* [Physics Update](physics-update.md): Updating logic alongside physics
 
 > [!WARNING]
 > Pages to redirect or recycle

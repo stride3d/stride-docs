@@ -1,128 +1,35 @@
-# Fix physics jitter
-
-> [!WARNING]
-> This page is outdated, the information contained therein are for Bullet, the previous physics engine
+# Physics Jitter
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Programmer</span>
 
-In Stride, there is no default smoothing applied to entities that are attached to physics entities. This can cause noticeable jitter, especially if the camera is attached to a character component.
-
-In this tutorial, we will explore how to add smoothing to an entity using a SyncScript.
+Physics engine operate on a fixed time step; instead of updating physics every frame, physics engine update at a fixed frequency, 60 times per second for example.
 
 > [!Note]
-> You can also decrease the `FixedTimeStep` in the physics settings configuration to achieve more accurate physics simulations. For example, changing it from `0.016667` to `0.008` will increase accuracy but at the cost of higher CPU usage.
+> This is controlled through the `FixedTimeStep` property in your [Simulation Settings](simulation.md)
 
-## Code to handle smoothing between two entities
-The following code is all that's needed to smoothly attach two entities. Ensure that you unparent the entity you are trying to smooth, otherwise the transform processor will override this script.
+The discrepancy between when your game updates and when physics updates means that you may see physics objects, or things that are attached to physics objects, move in a jittery manner. They jitter because they stay static after every physics update while the whole rest of the world moves every single frame.
 
-```cs
-[ComponentCategory("Utils")]
-[DataContract("SmoothFollowAndRotate")]
-public class SmoothFollowAndRotate : SyncScript
-{
-    public Entity EntityToFollow { get; set; }
-    public float Speed { get; set; } = 1;
+It becomes less noticeable when your frame rate approaches the physics update rate, but it will always occasionally jitter as there is no feasible way to reach exact parity between frame rate and physics.
 
-    public override void Update()
-    {
-        var deltaTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
-        var currentPosition = Entity.Transform.Position;
-        var currentRotation = Entity.Transform.Rotation;
+There are ways to combat this issue though.
 
-        var lerpSpeed = 1f - MathF.Exp(-Speed * deltaTime);
+## Body Component Interpolation Mode
 
-        EntityToFollow.Transform.GetWorldTransformation(out var otherPosition, out var otherRotation, out var _);
+Bodies have an `Interpolation Mode` property, this property smooth out the jitter by interpolating the bodies' position and rotation between every physics update.
+- `Interpolated` takes the two last position and rotation the physics engine set for this body and smoothly moves the object from the oldest to the youngest position. This means that the object is always 'in the past' compared to its physics representation since it is always between the two last position instead of exactly at the last one.
+- `Extrapolated` also takes the two last position and rotation, but instead of being between the two, it starts from the last position and continues moving in the same direction. If the velocity of the object is constant, this works perfectly, but if it suddenly collides along that path, it will 'correct' itself leading to some jerky motion.
 
-        var newPosition = Vector3.Lerp(currentPosition, otherPosition, lerpSpeed);
-        Entity.Transform.Position = newPosition;
+## Jitter when a physics object follows another
 
-        Quaternion.Slerp(ref currentRotation, ref otherRotation, lerpSpeed, out var newRotation);
-        Entity.Transform.Rotation = newRotation;
-    }
-}
-```
+There is a fair amount of jitter issues that may come up when setting up objects to move relative to each other.
+Here's everything that may prevent those objects from moving smoothly:
+- The objects are not set to interpolate
+- Your logic does not run in [Physics Update](physics-update.md), it overrides interpolation
+- You are setting the entity's position/rotation instead of the physics object's `LinearVelocity`/`AngularVelocity`
+- Your objects are not `Awake`
 
-## Example Usage
+## See also
 
-This example demonstrates modifications to the **First Person Shooter** template to integrate smooth camera movement.
-
-1. Detach the camera from the physics entity.
-2. Remove the FPS camera script from the camera.
-3. Create a new entity as a child of the character body.
-4. Add the FPS script to the new entity.
-5. Adjust any code that directly references the `CameraComponent` to reflect these changes.
-
-### PlayerInput.cs
-
-Change
-
-```cs
-public CameraComponent Camera { get; set; }
-```
-to
-
-```cs
-public Entity Camera { get; set; }
-```
-
-### Utils.cs
-
-Change
-
-```cs
-CameraComponent camera
-```
-to
-
-```cs
-Entity camera,
-```
-
-and change
-
-```cs
-camera.Update();
-var inverseView = Matrix.Invert(camera.ViewMatrix);
-```
-
-to
-
-```cs
-var inverseView = camera.Transform.WorldMatrix;
-```
-
-### FpsCamera.cs
-
-Remove
-
-```cs
-/// <summary>
-/// Gets the camera component used to visualized the scene.
-/// </summary>
-private Entity Component;
-```
-and change
-
-```cs
-private void UpdateViewMatrix()
-{
-    var camera = Component;
-    if (camera == null) return;
-    var rotation = Quaternion.RotationYawPitchRoll(Yaw, Pitch0);
-
-    Entity.Transform.Rotation = rotation;
-}
-```
-to
-
-```cs
-private void UpdateViewMatrix()
-{
-    var rotation = Quaternion.RotationYawPitchRoll(Yaw, Pitch, 0);
-
-    Entity.Transform.Rotation = rotation;
-}
-```
-
-That should be all that is needed to see the smoothing in action as a before and after. You can see the original issue in the Stride GitHub [here](https://github.com/stride3d/stride/issues/2216) if you need to find more info on the problem.
+* [Simulation](simulation.md)
+* [Index](index.md)
