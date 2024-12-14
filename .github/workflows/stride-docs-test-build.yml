@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build Stride Docs for Azure Web App Staging
+name: Build Stride Docs - Test Build
 
 env:
   COMMON_SETTINGS_PATH: en/docfx.json
