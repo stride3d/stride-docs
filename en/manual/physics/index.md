@@ -19,7 +19,7 @@ This section explains how physics components work, how to add them to your proje
 * [Collider Shapes](collider-shapes.md): Define the geometric shape of yours collidable components
 * [Constraints](constraints.md): Create appealing and realistic physics
 * [Triggers](triggers.md): Use triggers to detect passing objects
-* [Raycasting](raycasting.md): Trace intersecting objects
+* [Physics Queries](raycasting.md): Operations to find objects in the scene
 
 > [!WARNING]
 > Pages to redirect or recycle

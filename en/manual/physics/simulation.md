@@ -19,6 +19,12 @@ Those rules can be set by modifying the collision matrix at runtime, or through 
 
 For example, pressing `Change values...`  next to `Layer0` and un-ticking `Layer1` would cause all objects on `Layer0` to pass through objects on `Layer1`.
 
+## Retrieving the Simulation
+
+There are multiple ways to retrieve a reference to this `BepuSimulation` from inside one of your `ScriptComponent`:
+- The recommended way is through a reference to a physics component, something like `myBody.Simulation` as it is the fastest.
+- Or through the `Entity.GetSimulation()` extension method.
+
 ## See also
 * [Colliders](colliders.md)
 * [Collider shapes](collider-shapes.md)
