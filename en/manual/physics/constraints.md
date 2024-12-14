@@ -1,7 +1,7 @@
 # Constraints
 
 > [!WARNING]
-TODO
+> This page is outdated, the information contained therein are for Bullet, the previous physics engine
 
 [!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
 

@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Programmer</span>
 
 > [!WARNING]
-TODO
+> This page is outdated, the information contained therein are for Bullet, the previous physics engine
 
 **Raycasting** traces an invisible line through the scene to find intersecting [colliders](colliders.md). This is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
 

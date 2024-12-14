@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Designer</span>
 
 > [!WARNING]
-TODO
+> This page is outdated, the information contained therein are for Bullet, the previous physics engine
 
 **Body** move based on physical forces applied to them, such as gravity and collisions. Typical (rigid)bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigidbodies they collide with.
 
