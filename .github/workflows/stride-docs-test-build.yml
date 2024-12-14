@@ -47,11 +47,11 @@ jobs:
     - name: Checkout Stride (note the LFS)
       uses: actions/checkout@v4
       with:
-        repository: stride3d/stride
+        repository: VaclavElias/stride
         token: ${{ secrets.GITHUB_TOKEN }}
         path: stride
         lfs: true
-        ref: master
+        ref: docs-test
 
     - name: Install DocFX
       # This installs the latest version of DocFX and may introduce breaking changes
