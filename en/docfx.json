@@ -21,7 +21,8 @@
             "sources/engine/Stride.Shaders/Stride.Shaders.csproj",
             "sources/engine/Stride.UI/Stride.UI.csproj",
             "sources/engine/Stride.VirtualReality/Stride.VirtualReality.csproj",
-            "sources/engine/Stride.Navigation/Stride.Navigation.csproj"
+            "sources/engine/Stride.Navigation/Stride.Navigation.csproj",
+            "sources/engine/Stride.BepuPhysics/Stride.BepuPhysics/Stride.BepuPhysics.csproj"
           ],
           "src": "../../stride",
           "properties": {
@@ -32,8 +33,7 @@
         {
           "files": [
             "sources/assets/Stride.Core.Assets/Stride.Core.Assets.csproj",
-            "sources/engine/Stride.Physics/Stride.Physics.csproj",
-            "sources/engine/Stride.BepuPhysics/Stride.BepuPhysics/Stride.BepuPhysics.csproj"
+            "sources/engine/Stride.Physics/Stride.Physics.csproj"
           ],
           "src": "../../stride",
           "properties": {
