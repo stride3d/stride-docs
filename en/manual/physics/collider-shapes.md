@@ -52,6 +52,20 @@ Convex shapes are easier to test for collision, simulate and find intersections 
 
    ![Setting the property](media/convex-hull-set-hull.png)
 
+## Performance Consideration
+
+The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md)
+
+Use simple shapes whenever possible. Spheres and capsules are fastest followed by boxes, cylinders, and finally convex hulls. While cylinders and convex hulls are not slow in an absolute sense, they can be an order of magnitude slower than spheres and capsules.
+
+While you shouldn't be too afraid of cylinders and convex hulls (they're still pretty fast), it's hard to beat the simpler shapes.
+
+If you need to use a convex hull, use the minimum number of vertices needed to approximate the shape. The cost of hull collision detection is proportional to their complexity.
+
+If you *really*, *definitely* need a mobile mesh, especially one that needs to collide with other meshes, spend a while confirming that you *really*, **definitely**, ***seriously*** need it and there is no other option, and then use a compound of simple shapes instead.
+
+Okay, so maybe you actually truly really seriously need an actual mobile mesh. Keep the number of triangles to the minimum necessary to approximate the desired shape, and try to keep the triangles fairly uniform in size. Long sliver-like triangles can end up with large and inefficient bounding boxes. Static meshes follow the same optimization guidelines. Don't be surprised when you run into behavioral issues associated with infinitely thin one-sided triangles not colliding with each other and relatively crappy performance.
+
 ## See also
 
 * [Colliders](colliders.md)

@@ -25,6 +25,12 @@ There are multiple ways to retrieve a reference to this `BepuSimulation` from in
 - The recommended way is through a reference to a physics component, something like `myBody.Simulation` as it is the fastest.
 - Or through the `Entity.GetSimulation()` extension method.
 
+## Performance Considerations
+
+The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md)
+
+If physics causes your game to hang for a while when simulating for the first time, it may be related to just-in-time compilation. If it becomes a problem, consider running a small simulation that hits all the relevant codepaths (a bunch of objects colliding with constraints applied) behind a loading screen. Using an ahead-of-time compilation toolchain would also work.
+
 ## See also
 * [Colliders](colliders.md)
 * [Collider shapes](collider-shapes.md)
