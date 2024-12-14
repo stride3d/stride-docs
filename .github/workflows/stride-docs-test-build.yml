@@ -1,0 +1,85 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build Stride Docs for Azure Web App Staging
+
+env:
+  COMMON_SETTINGS_PATH: en/docfx.json
+  VERSION: "2.0.0.${{ github.run_number }}"
+  DOCS_PATH: stride-docs
+
+on:
+  push:
+    branches:
+      - staging
+    paths-ignore:
+      - 'README.md'
+      - 'Stride.Docs.sln'
+      - 'BuildDocs.ps1'
+      - 'wiki/**'
+      - .gitignore
+      - '.github/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Run this job only if the repository is 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs'
+    runs-on: windows-2022
+
+    steps:
+    - name: .NET SDK Setup
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.x
+
+    # Checkout the Stride Docs repository from the branch that triggered the workflow
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v4
+      with:
+        path: ${{ env.DOCS_PATH }}
+        lfs: true
+
+    - name: Set Version in docfx.json
+      run: |
+        $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
+        $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
+        Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
+      shell: pwsh
+
+    # - name: Display Updated docfx.json
+    #   run: cat "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}"
+    #   shell: pwsh
+
+    # - name: Fail the Workflow
+    #   run: exit 1
+    #   shell: pwsh
+
+    # Checkout the Stride repository from the default branch
+    - name: Checkout Stride (note the LFS)
+      uses: actions/checkout@v4
+      with:
+        repository: stride3d/stride
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: stride
+        lfs: true
+        ref: master
+
+    - name: Install DocFX
+      # This installs the latest version of DocFX and may introduce breaking changes
+      # run: dotnet tool update -g docfx
+      # This installs a specific, tested version of DocFX.
+      run: dotnet tool update -g docfx --version 2.77.0
+
+    - name: Build documentation
+      run: ./build-all.bat
+      working-directory: ${{ env.DOCS_PATH }}
+
+    - name: Compress artifact
+      run: 7z a -r DocFX-app.zip ./${{ env.DOCS_PATH }}/_site/*
+
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v4
+      with:
+        name: DocFX-app
+        path: DocFX-app.zip
