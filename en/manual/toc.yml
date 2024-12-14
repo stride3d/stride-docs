@@ -422,6 +422,10 @@ items:
   - name: Physics [WIP]
     href: physics/index.md
     items:
+      - name: Configuration
+        href: physics/configuration.md
+      - name: Simulation
+        href: physics/simulation.md
       - name: Colliders
         href: physics/colliders.md
         items:
@@ -433,16 +437,16 @@ items:
             href: physics/kinematic-rigid-bodies.md
           - name: Characters
             href: physics/characters.md
-          - name: Collider shapes
-            href: physics/collider-shapes.md
-          - name: Triggers
-            href: physics/triggers.md
-          - name: Constraints
-            href: physics/constraints.md
-      - name: Raycasting
+      - name: Collider shapes
+        href: physics/collider-shapes.md
+      - name: Triggers
+        href: physics/triggers.md
+      - name: Constraints
+        href: physics/constraints.md
+      - name: Physics Queries
         href: physics/raycasting.md
-      - name: Simulation
-        href: physics/simulation.md
+      - name: Physics Update
+        href: physics/physics-update.md
       - name: Tutorials
         href: physics/tutorials.md
         items:
