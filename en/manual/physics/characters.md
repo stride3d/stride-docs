@@ -5,7 +5,7 @@
 
 **Characters** are used for player and NPC movement. Entities with [character components](xref:Stride.BepuPhysics.CharacterComponent) can be moved with [Move](xref:Stride.BepuPhysics.CharacterComponent.Move\(Stride.Core.Mathematics.Vector3\)), [TryJump](xref:Stride.BepuPhysics.CharacterComponent.TryJump), and teleported by setting its [Position](xref:Stride.BepuPhysics.BodyComponent.Position) property.
 
-## Add a character component to an entity
+## Add a Character Component to an Entity
 
 1. In the **Scene Editor**, select the entity you want to add the component to.
 
@@ -55,6 +55,6 @@ public class MyCharacterController : CharacterComponent
 
 ## See also
 
-* [Static colliders](static-colliders.md)
-* [Rigidbodies](rigid-bodies.md)
+* [Statics](static-colliders.md)
+* [Bodies](rigid-bodies.md)
 * [Collider shapes](collider-shapes.md)
