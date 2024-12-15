@@ -6,30 +6,14 @@
 > [!WARNING]
 > This page is outdated, the information contained therein are for Bullet, the previous physics engine
 
-In this tutorial, we'll create a [trigger](../physics/triggers.md) that doubles the size of a ball when the ball passes through it.
+In this tutorial, we'll create a [trigger](triggers.md) that doubles the size of a ball when the ball passes through it.
 
 >[!Note]
 >The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
 
 ## 1. Create a bouncing ball
 
-Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial. This creates a simple scene in which a ball falls from mid-air, hits the ground, and bounces.
-
-## 2. Set the restitution
-
-For this tutorial, we'll set the restitution of both the ground and the sphere to 0.9, which makes the ball very bouncy. This makes it easier to see the effect of the trigger later, as the ball will bounce in and out of the trigger area repeatedly.
-
-1. Select the **Sphere** entity.
-
-2. In the **Property Grid**, under **Rigidbody**, set the **Restitution** to *0.9*.
-
-    ![Set restitution for a sphere](media/physics-tutorials-rigidbody-restitution.png)
-
-3. Select the **Ground** entity.
-
-4. In the **Property Grid**, under **Static Collider**, set the **Restitution** to *0.9*.
-
-    ![Set restitution for the ground](media/physics-tutorials-static-collider-restitution.png)
+Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial. This creates a simple scene in which a ball falls from midair, hits the ground, and bounces.
 
 ## 3. Add a trigger 
 
@@ -43,33 +27,17 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
 2. This entity will be our trigger, so rename it *Trigger* to make it easy to identify.
 
-3. Since we don't need the trigger to move, we'll make it a static collider. In the **Property Grid**, click **Add component** and select **Static Collider**.
+3. Since we don't need the trigger to move, we'll make it a [Static Component](static-colliders.md). In the **Property Grid**, click **Add component** and select **Static component**.
 
-    ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
+    ![Add Static collider component](media/add-static-component.png)
 
-4. In the **Property Grid**, expand the **Static Collider component** to view its properties.
+4. In the **Property Grid**, expand the **Static Component** to view its properties.
 
-5. Select the **Is Trigger** checkbox.
+5. We need to give the trigger a shape. Next to **Colliders**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Box**.
 
-    ![Check 'Is trigger'](media/physics-tutorials-create-a-trigger-is-trigger-checkbox.png)
+   ![Add collider shape](media/compound-types.png)
 
-    This makes the collider a trigger. This means objects can pass through it, but are still detected in the code.
-
-6. We need to give the trigger a shape. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Box**.
-
-    ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
-
-    This gives the trigger a box shape.
-
-    ![Added trigger](media/physics-tutorials-added-trigger-area.png)
-
-7. Let's make the trigger a larger area. In the **Property Grid**, under the **Transform** component properties, set the **scale** to: *X:2, Y:2, Z:2*
-
-    ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
-
-    This doubles the size of the trigger.
-
-    ![Added trigger](media/physics-tutorials-added-trigger-doubled-area.png)
+   This gives the trigger a box shape.
 
 ## 4. Give the trigger a model
 
@@ -127,16 +95,14 @@ We need to position the trigger between the ground and the sphere, so the ball f
     
 In the **Property Grid**, under **Transform**, set the **Position** to: *X:0, Y:3, Z:0*
 
-Now the trigger entity is between the ground and the sphere:
-
-![Trigger between ground and sphere](media/physics-tutorials-create-a-trigger-trigger-between-ground-and-sphere.png)
+Now the trigger entity is between the ground and the sphere.
 
 ## 6. Change the sphere size with script
 
-If we run the project now (**F5**), the ball falls through the trigger, but nothing happens.
+If we run the project now (**F5**), the ball bounces off the trigger, but nothing happens.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/bouncing-ball-with-trigger-no-effect.png">
+<video autoplay loop class="responsive-video">
    <source src="media/bouncing-ball-with-trigger-no-effect.mp4" type="video/mp4">
 </video>
 </p>
@@ -146,9 +112,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 >[!Note]
 >For more information about scripts, see [Scripts](../scripts/index.md).
 
-1. In the **Asset View**, click **Add asset** and select **Scripts** > **Async Script**.
-
-    ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
+1. In the **Asset View**, click **Add asset** and select **Scripts** > **Sync Script**.
 
 2. In the **Create a script** dialog, name your script *Trigger* and click **Create script**.
 
@@ -158,44 +122,54 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
 3. Open the script, replace its content with the following code, and save the file:
 
-    ```cs
-    using Stride.Engine;
-    using Stride.Physics;
-    using System.Threading.Tasks;
-    using Stride.Core.Mathematics;
+   ```cs
+   using Stride.BepuPhysics;
+   using Stride.BepuPhysics.Definitions.Contacts;
+   using Stride.Core.Mathematics;
+   using Stride.Engine;
+   
+   namespace TransformTrigger
+   {
+       // Adding IContactEventHandler to listen to contact events
+       public class Trigger : SyncScript, IContactEventHandler 
+       {
+           public override void Start()
+           {
+               // Initialization of the script.
+           }
+   
+           public override void Update()
+           {
+               // Do stuff every new frame
+           }
+   
+           // Let objects pass through this trigger, false would make objects bounce off it
+           public bool NoContactResponse => true;
+   
+           void IContactEventHandler.OnStartedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
+               ref TManifold contactManifold,
+               bool flippedManifold,
+               int workerIndex,
+               BepuSimulation bepuSimulation)
+           {
+               // When something enters inside this object
+               other.Entity.Transform.Scale = new Vector3(2.0f);
+           }
+   
+           void IContactEventHandler.OnStoppedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
+               ref TManifold contactManifold,
+               bool flippedManifold,
+               int workerIndex,
+               BepuSimulation bepuSimulation)
+           {
+               // When something exits this object
+               other.Entity.Transform.Scale = new Vector3(1.0f);
+           }
+       }
+   }
+   ```
 
-    namespace TransformTrigger
-    // You can use any namespace you like for this script.
-    {
-        public class Trigger : AsyncScript
-        {
-            public override async Task Execute()
-            {
-                var trigger = Entity.Get<PhysicsComponent>();
-                trigger.ProcessCollisions = true;
-
-                // Start state machine
-                while (Game.IsRunning)
-                {
-                    // 1. Wait for an entity to collide with the trigger
-                    var firstCollision = await trigger.NewCollision();
-
-                    var otherCollider = trigger == firstCollision.ColliderA
-                        ? firstCollision.ColliderB
-                        : firstCollision.ColliderA;
-                    otherCollider.Entity.Transform.Scale = new Vector3(2.0f, 2.0f, 2.0f);
-
-                    // 2. Wait for the entity to exit the trigger
-                    await firstCollision.Ended();
-
-                    otherCollider.Entity.Transform.Scale= new Vector3(1.0f, 1.0f, 1.0f);
-                }
-            }
-        }
-    }
-    ```
-
-    This code doubles the size (scale) of any entity that enters the trigger. When the entity exits the trigger, it returns to its original size.
+   This code doubles the size (scale) of any entity that enters the trigger. When the entity exits the trigger, it is set to a unit size.
 
 4. Reload the assemblies.
 
@@ -209,6 +183,14 @@ Finally, let's add this script to the trigger entity as a component.
 
     ![Add script component to entity](media/physics-tutorials-create-a-trigger-add-script-component-to-entity.png)
 
+3. Inside your **Static Component** click on the hand icon next to the `Contact Event Handler` property
+
+   ![Set contact handler](media/physics-tutorials-create-a-trigger-set-handler.png)
+
+4. Select your newly created `Trigger` component and press `Ok`
+
+   ![Set contact handler](media/physics-tutorials-create-a-trigger-select-handler-component.png)
+
 ## 8. Run the project
 
 Run the project (**F5**) to see the trigger in action.
@@ -216,74 +198,8 @@ Run the project (**F5**) to see the trigger in action.
 The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/bouncing-ball-with-trigger-scaled_first_frame.png">
+<video autoplay loop class="responsive-video">
    <source src="media/bouncing-ball-with-trigger-scaled.mp4" type="video/mp4">
-</video>
-</p>
-
-## More ideas
-
-You can alter the script to make other changes when the sphere enters the trigger. 
-
-For example, you can switch the material on the sphere entity. This script switches the material on the Sphere entity from the **Sphere Material** to the **Ground Material** and back again:
-
-```cs
-using Stride.Engine;
-using Stride.Physics;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Rendering;
-
-namespace TransformTrigger
-// You can use any namespace you like for this script.
-{
-    public class Trigger : AsyncScript
-    {
-        private Material material1;
-        private Material material2;
-    
-        public override async Task Execute()
-        {
-            var trigger = Entity.Get<PhysicsComponent>();
-            trigger.ProcessCollisions = true;
-            
-            // Make sure the materials are loaded 
-            material1 = Content.Load<Material>("Sphere Material");
-            material2 = Content.Load<Material>("Ground Material");
-
-            // Start state machine
-            while (Game.IsRunning)
-            {
-                // 1. Wait for an entity to collide with the trigger
-                var firstCollision = await trigger.NewCollision();
-
-                var otherCollider = trigger == firstCollision.ColliderA
-                    ? firstCollision.ColliderB
-                    : firstCollision.ColliderA;
-                    
-                // 2. Change the material on the entity
-                otherCollider.Entity.Get<ModelComponent>().Materials[0] = material2;
-                
-                // 3. Wait for the entity to exit the trigger
-                await firstCollision.Ended();
-
-                // 4. Change the material back to the original one
-                otherCollider.Entity.Get<ModelComponent>().Materials[0] = material1;
-            }
-        }
-        
-        public override void Cancel()
-        {
-            Content.Unload(material1);
-            Content.Unload(material2);
-        }
-    }
-}
-```
-
-<p>
-<video autoplay loop class="responsive-video" poster="media/bouncing-ball-with-trigger-material_first_frame.png">
-   <source src="media/bouncing-ball-with-trigger-material.mp4" type="video/mp4">
 </video>
 </p>
 
