@@ -1,8 +1,5 @@
 # Create a bouncing ball
 
-> [!WARNING]
-> This page is outdated, the information contained therein are for Bullet, the previous physics engine
-
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 

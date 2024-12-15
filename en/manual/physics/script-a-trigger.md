@@ -3,9 +3,6 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-> [!WARNING]
-> This page is outdated, the information contained therein are for Bullet, the previous physics engine
-
 In this tutorial, we'll create a [trigger](triggers.md) that doubles the size of a ball when the ball passes through it.
 
 >[!Note]
