@@ -1,93 +1,70 @@
-# Colliders
+# Collidables
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-To use physics in your project, add a **collider** component to an entity. 
+Collidables are the base entity components for physics objects. There are three types:
 
-Colliders define the shapes and rules of physics objects. There are three types:
+* [Statics](static-colliders.md): Objects that don't move (terrain, ...)
+* [Bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
+* [Characters](characters.md): Colliders for basic characters (such as players, animals, npcs, ...)
 
-* [static colliders](static-colliders.md) don't move (eg walls, floors, heavy objects, etc)
-* [rigidbodies](rigid-bodies.md) are moved around by forces such as collision and gravity (eg balls, barrels, etc)
-* [characters](characters.md) are controlled by user input (ie player characters)
+![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-You can also: 
+You can also:
 
-* set the [shape of collider components](collider-shapes.md)
-* make [triggers](triggers.md), and detect when objects pass through them
-* constrict collider movement with [constraints](constraints.md)
+* Define the [shape of collidables components](collider-shapes.md)
+* Make [triggers](triggers.md), and detect when other physics objects pass through them
+* Constrain collider movement with [constraints](constraints.md)
 
-## How colliders interact
+## Collisions
 
-Colliders interact according to the table below.
+Collidables interact according to the table below.
 
-|   | Kinematic objects   | Kinematic triggers   | Rigidbody colliders   | Rigidbody triggers   | Static colliders        | Static triggers   
-|---|-------------|---------------------|-------------|---------------------|----------|------------------
-| Kinematic objects        | Collisions           | Collisions  | Collisions and dynamic| Collisions   | Collisions    | Collisions     
-| Kinematic triggers | Collisions           | Collisions   |Collisions           | Collisions     | Collisions     | Collisions   
-| Rigidbody colliders          | Collisions and dynamic     | Collisions     | Collisions and dynamic     | Collisions     | Collisions and dynamic| Collisions
-| Rigidbody triggers | Collisions         | Collisions  | Collisions | Collisions     | Collisions     | Collisions
-| Static colliders| Collisions| Collisions| Collisions and dynamic | Collisions   | Nothing   | Nothing
-|Static triggers     | Collisions     | Collisions     | Collisions     | Collisions    | Nothing    | Nothing
+|            | Characters           | Bodies               | Statics              |
+|------------|----------------------|----------------------|----------------------|
+| Characters | Collides             | Collides and bounces | Collides             |
+| Bodies     | Collides and bounces | Collides and bounces | Collides and bounces |
+| Statics    | Collides             | Collides and bounces | Pass through         |
 
-* "Collisions" refers to collision information and events only. This means the collision is detected in the code, but the objects don't bump into each other (no dynamic response).
+Characters do not have any inertia, and so cannot bounce off of bodies or statics when colliding with them.
 
-* "Dynamic" means both collision information and events, plus dynamic response (ie the colliders bump into each other instead of passing through).
+Three other factor control whether two collidables would collide with each other, their `Collision Layer`, `Collision Group` and their `Contact Event Handler`
 
-For example, rigidbody colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers; collisions are detected in the code, but objects simply pass through.
+## Collision Layers
 
-## Show colliders in the Scene Editor
+The collision layer controls whether that object would collide with object on other layers.
 
-By default, colliders are invisible in the Scene Editor. To show them:
+This relationship is controlled through the [Simulation's Collision Matrix](simulation.md).
 
-1. In the Game Studio toolbar, in the top right, click the **Display gizmo options** icon.
+## Collision Group
 
-   ![Display gizmo options](media/display-gizmo-options.png)
+This property is used to filter collisions inside a group of object, when two or more objects must share the same `Collision Layer`, but should not collide between each other.
 
-2. Select **Physics**.
+It allows objects sharing the same `CollisionGroup.Id` to pass through each other when the absolute difference between their `IndexA`,`IndexB`, and `IndexC` is less than two.
 
-    ![Display physics option](media/display-physics-option.png)
+Its utility is best shown through concrete examples.
 
-The Scene Editor displays collider shapes.
+- You have multiple characters `A, B, C, D` all set to the same `CollisionLayer`, they are split in two teams `A, B` and `C, D`. Members of the same team must not collide between each other, you can set `A, B`'s Id to 1 and `C, D`'s Id to 2.
 
-![Display physics](media/display-physics.png)
+- You have a chain of three colliders attached to each other `A, B, C`, you don't want A and C to collide with B, but A and C should collide together.
+Set A, B and C's Ids to 1 to start filtering, leave A's `IndexA` at 0, B's to 1 and C to 2.
+A and C will collide since the difference between their `IndexA` is equal to two,
+but neither of them will collide with B since they are both only one away from B's `IndexA` value.
 
-## Show colliders at runtime
+## Contact Event Handler
 
-You can make colliders visible at runtime, which is useful for debugging problems with physics. To do this, use:
+The contact event handler is a class that receives collision data whenever the object it is associated with collides with the world.
 
-``
-this.GetSimulation().ColliderShapesRendering = true;
-``
+It is most often used to transform physics object into 'trigger boxes', areas that run events whenever objects, like the player character, passes through them. See [Triggers](triggers.md).
 
-> [!Note]
-> Collider shapes for infinite planes are always invisible.
-
-### Keyboard shortcut
-
-To show or hide collider shapes at runtime with a keyboard shortcut, use the **Debug physics shapes** script.
-
-1. In the **Asset View**, click **Add asset**.
-
-2. Select **Scripts** > **Debug physics shapes**.
-
-    ![Add debug physics shape script](media/add-debug-physics-shapes-script.png)
-
-3. In the Game Studio toolbar, click **Reload assemblies and update scripts**.
-
-    ![Reload assemblies](../platforms/media/reload-assemblies.png)
-
-4. Add the **Debug physics shapes** script as a component to an entity in the scene. It doesn't matter which entity.
-
-    ![Add debug physics shapes script component](media/add-debug-physics-shapes-component.png)
-
-The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime. You can edit the script to bind a different key combination.
+If the contact event handler you bind to an object is set to `NoContactResponse`, the object will never prevent anything from passing through it, it will only collect collision events.
 
 ## See also
 
-* [Collider shapes](collider-shapes.md)
-* [Static colliders](static-colliders.md)
-* [Rigidbodies](rigid-bodies.md)
-* [Kinematic rigidbodies](kinematic-rigid-bodies.md)
-* [Simulation](simulation.md)
+* [Configuration](configuration.md)
+* [Static](static-colliders.md)
+* [Body](rigid-bodies.md)
+* [Character](characters.md)
+* [Colliders](colliders.md)
 * [Physics tutorials](tutorials.md)

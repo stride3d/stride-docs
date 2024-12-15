@@ -1,140 +1,70 @@
-# Collider shapes
+# Collider Shapes
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-For [colliders](colliders.md) to interact, you need to set their shape in the **Property Grid**. You can specify a geometric shape, or use a collider shape asset.
+Each [collidables](colliders.md) should have a collider defining its shape. You can set them through the **Property Grid**.
 
-![Select a collider shape](media/select-collider-shape.png)
+![Collider Types](media/collider-types.png)
 
-Components can have multiple intersecting shapes, and don't have to match the entity model, if it has one. Each shape has additional properties including size, orientation, offset, and so on.
+# Empty
 
-## Types of collider shape
+Empty do not collide with other objects, they are mostly used to anchor bodies with [constraints](constraints.md).
 
-### Box
+# Compound
 
-![Box](media/box.png)
+A compound collider is a shape made up of a bunch of more primitive shapes, most of these are self-explanatory, while `Convex Hull` has a section describing it in more detail below.
 
-| Property       | Description |
-| -------------- |-------------| 
-| Is 2D | Makes the box infinitely flat in one dimension. |
-| Size    | The box size in XYZ values. |
-| Local offset     | The box position relative its entity.|
-| Local rotation      | The box rotation in XYZ values.|
+![Select a collider shape](media/compound-types.png)
 
-### Capsule
+Those individual primitives can intersect between each other, and don't necessarily have to match the model they are attached to. Each shape has additional properties including size, orientation, offset, and so on.
 
-![Capsule](media/capsule.png)
+# Meshes
 
-The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
+Mesh colliders use 3D models as the collision shape itself. They are significantly slower than compounds, use them only when building a compound collider would be counter-productive.
 
-| Property       | Description |
-| -------------- |-------------| 
-| Is 2D | Makes the capsule infinitely flat in one dimension.|
-| Length | The length of the capsule.|
-| Radius | The radius of the capsule.|
-| Orientation | The axis along which the shape is stretched (X, Y, or Z).|
-| Local offset     | The capsule position relative to its entity.|
-| Local rotation      | The capsule rotation in XYZ values.|
+> [!WARNING]
+> Never use mesh colliders for body collidables, use them only for statics, they are far too slow to be used as bodies. If you absolutely need a more complex shape than the primitive ones, use a convex hull instead.
 
-### Cone
+# Convex Hulls
 
-![Cone](media/cone.png)
+A convex hull is a convex shape that envelopes another. For example, the convex hull of the Eiffel Tower would be a pyramid large enough to contain the entire tower without any bits poking through.
 
-| Property       | Description |
-| -------------- |-------------| 
-| Height | The height of the cone.|
-| Radius | The radius of the cone at the bottom end.|
-| Orientation | The axis along which the shape is stretched (X, Y, or Z).|
-| Local offset     | The cone position relative to its entity.|
-| Local rotation      | The cone rotation in XYZ values.|
+Convex shapes are easier to test for collision, simulate and find intersections with, reducing the compute load physics engine have to deal with compared to their mesh counterpart.
 
-### Cylinder
+## Creating a Convex Hull
 
-![Cylinder](media/cylinder.png)
+1. In the Asset View pane, press the Add asset button, hover on the Physics-Bepu option and select Convex hull
 
-| Property       | Description |
-| -------------- |-------------| 
-| Height | The length of the cylinder.|
-| Radius | The radius of the cylinder.|
-| Orientation | Sets the axis along which the shape is stretched (X, Y, or Z).|
-| Local offset     | The cylinder position relative to its entity.|
-| Local rotation      | The cylinder  rotation in XYZ values.|
+   ![Adding a convex hull](media/convex-hull-add-asset.png)
 
-### Sphere
+   A new window will open prompting you to select a model asset, select the asset you want to create this hull from and press Ok.
 
-![Sphere](media/sphere.png)
+   You can now add this new hull to one of your collidable.
 
-| Property       | Description |
-| -------------- |-------------| 
-| Is 2D | Makes the sphere infinitely flat in one dimension. |
-| Radius | The radius of the sphere.|
-| Local offset     | The sphere position relative to its entity.|
+2. Select the entity you want to add this Convex Hull to, add in a collidable component as is described in the [static](static-colliders.md) or [body](rigid-bodies.md) section.
 
-### Infinite plane
+3. Next to `Colliders`, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select `ConvexHullCollider`
 
-![Infinite plane](media/infinite-plane.png)
+   ![Adding a convex hull](media/convex-hull-add-to-component.png)
 
-The infinite plane covers an infinite distance across one dimension.
-Think of it like a wall or floor stretching into the distance for ever.
-You can use several infinite planes together to box users in and stop them "tunneling" outside the level.
+4. Set the `Hull` property to your newly created hull by pressing on the hand icon
 
-| Property       | Description |
-| -------------- |-------------| 
-| Normal  | Which vector (X, Y, or Z) is perpendicular to the plane. For example, to make an infinite floor, set the normal property to: _X:0, Y:1, Z:0_. |
-| Offset     | The plane position relative to its entity.|
+   ![Setting the property](media/convex-hull-set-hull.png)
 
-### Asset
+## Performance Consideration
 
-Assigns a collider shape from a collider shape asset (see **Collider shape assets** below).
+The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md)
 
-| Property       | Description |
-| -------------- |-------------| 
-| Shape | The collider shape asset used to generate the collider shape.|
+Use simple shapes whenever possible. Spheres and capsules are fastest followed by boxes, cylinders, and finally convex hulls. While cylinders and convex hulls are not slow in an absolute sense, they can be an order of magnitude slower than spheres and capsules.
 
-## Collider shape assets
+While you shouldn't be too afraid of cylinders and convex hulls (they're still pretty fast), it's hard to beat the simpler shapes.
 
-You can also create **collider shape assets** and use them as your collider shape. This means you can edit the collider shape asset and automatically update it in every entity that uses it.
+If you need to use a convex hull, use the minimum number of vertices needed to approximate the shape. The cost of hull collision detection is proportional to their complexity.
 
-## Create a collider shape asset
+If you *really*, *definitely* need a mobile mesh, especially one that needs to collide with other meshes, spend a while confirming that you *really*, **definitely**, ***seriously*** need it and there is no other option, and then use a compound of simple shapes instead.
 
-1. In the **Asset View** (bottom by default), click **Add asset**.
-
-2. Select **Physics**, then select the shape you want to create.
-
-    ![Create collider shape asset](media/create-collider-shape-asset.png)
-
-Game Studio creates the new collider shape asset in the **CollisionMeshes** folder.
-
-![Collider shape asset in Asset View](media/collider-shape-in-asset-view.png)
-
-### Create a collider shape asset from a model
-
-This is useful to quickly create a collider shape that matches a model.
-
-1. In the **Asset View** (bottom by default), click **Add asset**.
-
-2. Select **Physics** > **Convex hull**.
-
-    The **Select an asset** window opens.
-
-    ![Select model](media/select-model.png)
-
-3. Browse to the model asset you want to create a collider shape asset from and click **OK**.
-
-Game Studio creates a collider shape asset from the model.
-
-## Use a collider shape asset
-
-1. Under the **static collider** or **rigidbody** properties, under **Collider Shapes**, select **Asset**. 
-
-    ![Select collider shape asset](media/select-asset-collider-shape.png)
-
-2. Next to **Shape**, specify the collider shape asset you want to use.
-
-    ![Select collider shape asset](media/select-collider-shape-asset.png)
-
-    To do this, drag the asset from the **Asset View** to the **Shape** field in the Property Grid. Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**) and browse to the asset.
+Okay, so maybe you actually truly really seriously need an actual mobile mesh. Keep the number of triangles to the minimum necessary to approximate the desired shape, and try to keep the triangles fairly uniform in size. Long sliver-like triangles can end up with large and inefficient bounding boxes. Static meshes follow the same optimization guidelines. Don't be surprised when you run into behavioral issues associated with infinitely thin one-sided triangles not colliding with each other and relatively crappy performance.
 
 ## See also
 

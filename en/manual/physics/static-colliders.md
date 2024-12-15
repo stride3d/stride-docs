@@ -1,4 +1,4 @@
-# Static colliders
+# Static
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
@@ -7,52 +7,26 @@
 
 ![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-## Add a static collider
-   
-1. Select the entity you want to make a static collider.
+## Add a Static Component to an Entity
 
-2. In the **Property Grid**, click **Add component** and select **Static Collider**.
+1. In the **Scene Editor**, select the entity you want to add the component to.
 
-    ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
+2. In the **Property Grid**, click `Add component`, hover `Physics - Bepu` and select `StaticComponent`.
 
-3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property Grid**, expand the **Static Collider component** to view its properties.
+   ![Add static component](media/add-static-component.png)
 
-4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select the shape you want.
+> [!Note]
+> You will need to set a collider for this newly created static component, you can do so through the Collider property, see [collider shapes](collider-shapes.md).
 
-    ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
+Have a look at the [API](xref:Stride.BepuPhysics.StaticComponent) for more detail on the properties of this component.
 
-## Static collider properties
+## Moving Static Components at Runtime
 
-You can adjust the static collider properties in the **Property Grid**.
-
-![Static collider properties](media/static-collider-properties.png)
-
-Property              |   Description
-----------------------|-----------------------
-Collision Group       | Sets which collision group the object belongs to.
-Can Collide With      | Sets which groups the object collides with.
-Collision Events      | If this is enabled, the object reports collision events, which you can use in scripts. It has no effect on physics. If you have no scripts using collision events for the object, disable this option to save CPU.
-Can Sleep             | If this is enabled, the physics engine doesn't process physics objects when they're not moving. This saves CPU.
-Restitution           | Sets the amount of kinetic energy lost or gained after a collision. A typical value is between 0 and 1. If the restitution property of colliding entities is 0, the entities lose all energy and stop moving immediately on impact. If the restitution is 1, they lose no energy and rebound with the same velocity they collided at. Use this to change the "bounciness" of rigidbodies.
-Friction              | Sets the surface friction.
-Rolling Friction      | Sets the rolling friction.
-CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
-CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.
-Is Trigger            | Toggles whether the static collider is a [trigger](triggers.md).
-
-## Move a static collider at runtime
-
-If you need to move a static collider at runtime, you can do it with a script:
-
-```cs
-PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;
-PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
-PhysicsComponent.UpdatePhysicsTransformation();
-```
+Moving a static collider while your game runs is generally not recommended as it will lead to unexpected collision issues and performance degradation. Moving it every couple of seconds should be fine, but if you have to move it more frequently, use a [Body](rigid-bodies.md) instead.
 
 ## See also
 
-* [Rigidbodies](rigid-bodies.md)
+* [Bodies](rigid-bodies.md)
 * [Characters](characters.md)
 * [Collider shapes](collider-shapes.md)
 * [Triggers](triggers.md)

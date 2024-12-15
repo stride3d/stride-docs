@@ -3,63 +3,42 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-If you set a collider to be a **trigger**, other colliders no longer bump into it. Instead, they pass through.
+A trigger is a collision shape which detects when colliders enter it, it can be used to run an event when a player character enters a room for example.
+ 
+Triggers in Stride's Bepu implementation fall into what is known as a special kind of Contact Event Handler.
 
-The trigger detects when colliders enter it, which you can use to script events. For example, you can detect when a player character enters a room, and use this in your script to trigger an event. For more information, see [Events](../scripts/events.md).
+The contact event handler is a class that receives collision data whenever the object it is associated with collides with the world.
 
->[!Note]
->[Character colliders](characters.md) can't be used as triggers.
+If the contact event handler you bind to an object is set to `NoContactResponse`, it is a Trigger, the object will never prevent anything from passing through it, it will only receive collision events.
 
-## Create a trigger 
-
-1. Create a [collider](colliders.md).
-
-2. In the **Property Grid**, under the collider component properties, select **Is Trigger**.
-
-![Select 'Is trigger'](media/triggers-select-is-trigger-checkbox.png)
-
-## Detect trigger collisions
-
-You can see when something enters the trigger using the following code:
-
+Here's a basic example of a component which acts as a trigger to display a message in the console:
 ```cs
-// Wait for an entity to collide with the trigger
-var firstCollision = await trigger.NewCollision();
+using Stride.BepuPhysics;
+using Stride.BepuPhysics.Definitions.Contacts;
+using Stride.Engine;
 
-var otherCollider = trigger == firstCollision.ColliderA
-    ? firstCollision.ColliderB
-    : firstCollision.ColliderA;
-```
-
-Alternatively, directly access the `TrackingHashSet`:
-
-```cs
-var trigger = Entity.Get<PhysicsComponent>();
-foreach (var collision in trigger.Collisions)
+public class Test : StartupScript, IContactEventHandler
 {
-    //do something with the collision
+    public bool NoContactResponse => true;
+
+    void IContactEventHandler.OnStartedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
+        ref TManifold contactManifold,
+        bool flippedManifold,
+        int workerIndex,
+        BepuSimulation bepuSimulation)
+    {
+        Log.Warning("Entered!");
+    }
+
+    void IContactEventHandler.OnStoppedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
+        ref TManifold contactManifold,
+        bool flippedManifold,
+        int workerIndex,
+        BepuSimulation bepuSimulation)
+    {
+        Log.Warning("Exited!");
+    }
 }
-```
-
-Or use the `TrackingHashSet` events:
-
-```cs
-var trigger = Entity.Get<PhysicsComponent>();
-trigger.Collisions.CollectionChanged += (sender, args) =>
-{
-    if (args.Action == NotifyCollectionChangedAction.Add)
-    {
-        //new collision
-        var collision = (Collision) args.Item;
-        //do something
-    }
-    else if (args.Action == NotifyCollectionChangedAction.Remove)
-    {
-        //old collision
-        var collision = (Collision)args.Item;
-        //do something
-    }
-};
 ```
 
 For an example of how to use triggers, see the [Script a trigger](script-a-trigger.md) tutorial.
@@ -67,6 +46,5 @@ For an example of how to use triggers, see the [Script a trigger](script-a-trigg
 ## See also
 
 * [Tutorial: Script a trigger](script-a-trigger.md)
-* [Colliders](colliders.md)
+* [Collidables](colliders.md)
 * [Collider shapes](collider-shapes.md)
-* [Events](../scripts/events.md)

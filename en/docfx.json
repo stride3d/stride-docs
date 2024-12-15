@@ -21,7 +21,8 @@
             "sources/engine/Stride.Shaders/Stride.Shaders.csproj",
             "sources/engine/Stride.UI/Stride.UI.csproj",
             "sources/engine/Stride.VirtualReality/Stride.VirtualReality.csproj",
-            "sources/engine/Stride.Navigation/Stride.Navigation.csproj"
+            "sources/engine/Stride.Navigation/Stride.Navigation.csproj",
+            "sources/engine/Stride.BepuPhysics/Stride.BepuPhysics/Stride.BepuPhysics.csproj"
           ],
           "src": "../../stride",
           "properties": {

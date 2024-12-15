@@ -3,26 +3,33 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
-Stride's physics are controlled by the [Simulation](xref:Stride.Physics.Simulation) class.
-You can change how Stride initializes the [simulation](xref:Stride.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:Stride.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.
+Stride's physics are controlled by the [Simulation](xref:Stride.BepuPhysics.BepuSimulation) class.
+You can change how Stride initializes the [Simulation](xref:Stride.BepuPhysics.BepuSimulation) by going to the [Configuration](configuration.md) section of your game's settings.
 
->[!Note]
->Your scene must have at least one [Collider](colliders.md) in order for Stride to initialize the [Simulation](xref:Stride.Physics.Simulation) instance.
+These settings control the rules and parameters your physics simulation run under, enabling customization and fine-tuning of the physics environment to suit your game's requirements.
+You may also create multiple simulations and distribute your physics object between them depending on your needs.
 
-![Physics Settings](media/simulation-physics-settings.png)
+Have a look at the [API](xref:Stride.BepuPhysics.BepuSimulation) for more detail on what each property does.
 
-* `CollisionsOnly` initializes the [Simulation](xref:Stride.Physics.Simulation) with collision detection turned on, but no other physics. Objects won't react to physical forces.
+## Collision Layers and the Collision Matrix
 
-* `ContinuousCollisionDetection` initializes the [Simulation](xref:Stride.Physics.Simulation) with continuous collision detection (CCD). CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
+You can assign your physics object to specific collision layers, those layers can then be set to ignore objects assigned to other layers. 
 
-> [!Note] 
-> The ``SoftBodySupport``, ``MultiThreaded``, and ``UseHardwareWhenPossible`` flags are currently disabled.
+Those rules can be set by modifying the collision matrix at runtime, or through the `Layer[...]` fields in the editor.
 
-At runtime, you can change some [Simulation](xref:Stride.Physics.Simulation) parameters:
+For example, pressing `Change values...`  next to `Layer0` and un-ticking `Layer1` would cause all objects on `Layer0` to pass through objects on `Layer1`.
 
-* `Gravity` — the global gravity, in [world units](../game-studio/world-units.md) per second squared
-* `FixedTimeStep` — the length of a simulation timestep, in seconds
-* `MaxSubSteps` — the maximum number of fixed timesteps the engine takes per update
+## Retrieving the Simulation
+
+There are multiple ways to retrieve a reference to this `BepuSimulation` from inside one of your `ScriptComponent`:
+- The recommended way is through a reference to a physics component, something like `myBody.Simulation` as it is the fastest.
+- Or through the `Entity.GetSimulation()` extension method.
+
+## Performance Considerations
+
+The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md)
+
+If physics causes your game to hang for a while when simulating for the first time, it may be related to just-in-time compilation. If it becomes a problem, consider running a small simulation that hits all the relevant codepaths (a bunch of objects colliding with constraints applied) behind a loading screen. Using an ahead-of-time compilation toolchain would also work.
 
 ## See also
 * [Colliders](colliders.md)
