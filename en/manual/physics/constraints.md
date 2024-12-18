@@ -67,18 +67,32 @@ Below is a table organizing the constraints by a logical order (from simpler and
 These variants allow the same basic constraint type to be used for different behaviors—ranging from passively limiting motion to actively driving it toward a controlled target state.
 
 
-## Performance And Stability
+## Performance and Stability
 
-The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md)
+The following are relevant excerpts from [Bepu's documentation StabilityTips](https://github.com/bepu/bepuphysics2/blob/master/Documentation/StabilityTips.md) and [Substepping](https://github.com/bepu/bepuphysics2/blob/master/Documentation/Substepping.md)
 
-Try using the minimum number of solver iterations sufficient to retain stability. The cost of the solver stage is linear with the number of iterations, and some simulations can get by with very few.
+Constraints can introduce complexity into physics simulations, sometimes causing instability, jitter, or excessive oscillation. Common sources of instability include incomplete force propagation across complex constraint networks (leading to jitter, especially in tall stacks) and overly stiff constraints pushing beyond what the solver can handle at a given frequency.
 
-For some simulations with very complex constraint configurations, there may be no practical number of solver iterations that can stabilize the simulation. In these cases, you may need to instead use substepping or a shorter time step duration for the entire simulation. More frequent solver execution can massively improve simulation quality, allowing you to drop velocity iteration counts massively (even to just 1 per substep). See the Substepping documentation for more details.
+### Improving Stability
+- **Increase Solver Iterations**: If objects bounce or jitter (especially in complex stacks or with high mass-ratio configurations), increasing `Simulation.Solver.IterationCount` can help the solver better converge.
+- **Reduce Constraint Stiffness**: Constraints with very high frequencies relative to the simulation timestep can cause instability. Try setting constraint frequencies to no more than about half the simulation rate.
+- **Avoid Extreme Mass Ratios**: Heavy objects relying on very light supports cause convergence issues. Wherever possible, reduce mass ratios or add support structures.
+- **Use Substepping**: For difficult simulations (e.g., high stiffness or large mass ratios), consider solver substepping. Substepping effectively increases the solver update rate within each main timestep, improving stability without always needing high iteration counts.
 
-> [!WARNING]
-> Probably need to adapt and extend some parts of the above to our implementation, not sure how relevant everything is. Take stuff from https://github.com/bepu/bepuphysics2/blob/master/Documentation/StabilityTips.md and https://github.com/bepu/bepuphysics2/blob/master/Documentation/Substepping.md
-> - Eideren
+### Using Substepping
+- **Configuration**: Specify a `SolveDescription` with `SubstepCount > 1` when creating the simulation. For example, `SubstepCount = 4` at 60Hz results in a 240Hz effective solver rate.
+- **Benefits**: Substepping can handle stiffer constraints and more extreme mass ratios, often reducing the total iteration count needed.
+- **Trade-Offs**: Substepping doesn’t re-run full collision detection at each substep—only the solver. While cheaper, this can lead to slightly outdated contacts and minor artifacts. Mitigate by adjusting damping, sleeping thresholds, or turning substepping off if needed.
+
+### General Tips
+1. Start simple: a few solver iterations, no substepping.
+2. If instability persists, add more solver iterations or start using substepping.
+3. Keep constraints and mass distributions realistic and not too extreme.
+4. Fine-tune damping, contact configurations, or substep counts if subtle jitter remains.
+
+Balancing solver iterations, constraint stiffness, mass ratios, and substepping can greatly improve both performance and stability in complex, constraint-driven simulations.
 
 ## See also
 
 * [Colliders](colliders.md)
+* [simulation](simulation.md)
