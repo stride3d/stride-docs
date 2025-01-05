@@ -3,11 +3,11 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-Collidables are the base entity components for physics objects. There are three types:
+Collidables are the base entity components for physics objects. There are three main types:
 
-* [Statics](static-colliders.md): Objects that don't move (terrain, ...)
-* [Bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions or Kinematics
-* [Characters](characters.md): Colliders for basic characters (such as players, animals, npcs, ...)
+* [Statics](static-colliders.md): Objects that don't move (terrain, walls, floors, large rocks)
+* [Bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions (cans, balls, boxes) or [Kinematics](kinematic-rigid-bodies.md) (moving platforms, doors)
+* [Characters](characters.md): Colliders for basic characters (player character, animals, NPCs)
 
 ![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
@@ -41,7 +41,7 @@ This relationship is controlled through the [Simulation's Collision Matrix](simu
 
 This property is used to filter collisions inside a group of object, when two or more objects must share the same `Collision Layer`, but should not collide between each other.
 
-It allows objects sharing the same `CollisionGroup.Id` to pass through each other when the absolute difference between their `IndexA`,`IndexB`, and `IndexC` is less than two.
+It allows objects sharing the same `CollisionGroup.Id` to pass through each other when the absolute difference between their `IndexA`, `IndexB`, and `IndexC` is less than two.
 
 Its utility is best shown through concrete examples.
 
