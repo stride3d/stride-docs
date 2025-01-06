@@ -1,4 +1,7 @@
-# 🛠️ Game studio 
+# 🛠️ Game studio
+
+<span class="badge text-bg-info">12 lessons</span>
+<span class="badge text-bg-warning">1 hour</span>
 
 The Stride engine comes with an editor called **Game Studio**. The videos below cover the basics of the UI and how various concepts work inside the editor. 
 

@@ -1,4 +1,8 @@
 # 📈 C# Intermediate
+
+<span class="badge text-bg-info">11 lessons</span>
+<span class="badge text-bg-warning">4 hours</span>
+
 These tutorials cover various intermediate principles of using C# when working with the Stride game engine.
 
 It is recommended that you complete all the [C# Beginner tutorials](../csharpbeginner/index.md) before moving on to the intermediate tutorials.

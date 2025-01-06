@@ -3,7 +3,7 @@ pdfFileName: stride-tutorials.pdf
 items:
 - name: 🎓 Tutorials
   href: index.md
-- name: 🛠️ Game studio
+- name: 🛠️ Game studio (1 hour)
   expanded: false
   href: gamestudio/index.md
   items:
@@ -31,7 +31,7 @@ items:
     href: gamestudio/11-physics-intro.md
   - name: Static colliders
     href: gamestudio/12-static-colliders.md
-- name: 🌱 C# Beginner
+- name: 🌱 C# Beginner (2.5 hours)
   expanded: false
   href: csharpbeginner/index.md
   items:
@@ -67,7 +67,7 @@ items:
     href: csharpbeginner/loading-content.md
   - name: Instantiating prefabs
     href: csharpbeginner/instantiating-prefabs.md
-- name: 📈 C# Intermediate ⭐New
+- name: 📈 C# Intermediate (4 hours)
   href: csharpintermediate/index.md
   items:
   - name: Introduction
