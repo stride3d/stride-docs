@@ -81,6 +81,9 @@ The **Stride Launcher** will download and install the latest version of Stride.
 
     While the installation is in progress, the release notes are displayed.
 
+    > [!Warning]
+    > If the .NET SDK has never been installed on your machine, the .NET SDK installation window might appear below the Stride installation window. Please check step 12 for details and be prepared to manually continue the .NET SDK installation.
+
 12. During the installation, you might be asked to install the .NET SDK if it's not already on your machine.
 
     ![Installation of .NET SDK](media/install-dotnet-SDK.webp)
@@ -99,6 +102,8 @@ The **Stride Launcher** will download and install the latest version of Stride.
 
 > [!Note]
 >  **Stride Launcher:** If you click **Start** and see an error message such as `Could not find a compatible version of MSBuild.` or `Path to dotnet executable is not set.`, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.
+>
+> Example error: ![First launch error](media/stride-launcher-first-time-after-installation-error.webp)
  
 > [!Note]
 > If you don't install the prerequisites, Stride won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Stride doesn't run](../troubleshooting/stride-doesnt-run.md).
