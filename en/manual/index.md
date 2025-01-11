@@ -18,7 +18,7 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 #### Tutorials
 
-- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length.
+- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
 
 #### Contributors
 
