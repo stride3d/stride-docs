@@ -21,7 +21,7 @@ You can now add Bepu's own physics component, but before playing around with tha
 
 ## Configuring Physics
 
-To manage Bepu's simulation configuration, in the `Asset View` pane, select your `GameSettings` asset which is at the root of your asset folder, look at the property grid, press on the `+` sign next to `Add configuration` and select `Bepu Configuration`
+To manage Bepu's simulation configuration, in the `Asset View` pane, select your `GameSettings` asset which is at the root of your asset folder, look at the property grid, press on the `+` sign next to `Add configuration` and select `Bepu Configuration`.
 
 ![Create settings](media/bepu-import-settings.png)
 
