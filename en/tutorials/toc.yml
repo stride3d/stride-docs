@@ -94,3 +94,8 @@ items:
     href: csharpintermediate/third-person-camera.md
   - name: Navigation
     href: csharpintermediate/navigation.md
+- name: ⚡ Quick Tutorials
+  href: quick-tutorials/index.md
+  items:
+  - name: Custom dropdown properties
+    href: https://www.youtube.com/watch?v=hjScw6Xp2gY
