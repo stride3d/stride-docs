@@ -23,7 +23,7 @@ Here is some examples of entity processors:
 
 - @'Stride.Engine.Processors.TransformProcessor': Compute transformation matrices from hierarchy and local transformation stored in @'Stride.Engine.TransformComponent'.
   - As a result, @'Stride.Engine.EntityManager' can be used as a hierarchical scenegraph instead of a simple entity list.
-- @'Stride.Engine.MeshProcessor': Add @'Stride.Engine.ModelComponent.Model' to rendering.
+- @'Stride.Engine.Processors.ModelTransformProcessor': Add @'Stride.Engine.ModelComponent.Model' to rendering.
 - @'Stride.Rendering.Lights.LightProcessor': Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)
 
 ## Entity System
