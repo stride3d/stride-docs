@@ -10,8 +10,8 @@ First of all, after saving all your changes, open your project with Visual Studi
 ![Open project in Visual Studio](../game-studio/media/open-project-in-visual-studio.png)
 
 A few things to look out for:
-* Delete unecessary assets (i.e. GameSettings, etc...)
-* Delete unecessary `PackageReference`
+* Delete unnecessary assets (i.e. GameSettings, etc...)
+* Delete unnecessary `PackageReference`
 
 ## Optional: Setup Package properties
 
