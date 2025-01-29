@@ -147,6 +147,25 @@ public bool HasTheItem()
     - you won't need to keep a document going over each identifier you might have in game, one just has to look at the directory were they are stored in the editor.
 - Easy to extend; your identifier can now be more than just that, you can attach properties to it, perhaps a description to keep more information about this key.
 
+## Avoid EventKeys, async and other systems with large levels of indirection when mutating the game state
+Event keys and async methods carry a lot of implicit complexity as they may not complete when signaled/called. When the async resumed/the event key is received, the game may not be in a state where the logic you run is still valid. Some entities might have been removed from the scene, the inventory might no longer hold the item, the player character may be incapacitated ...
+
+This quirk also means that their execution are not part of their callers' stack, making debugging issues with them far harder to figure out.
+
+Their lifetime is also far harder to reason about as EventKeys will carry the signal even if the scene was replaced in the meantime, while async will continue running when running outside your AsyncScript's `Execute()`
+
+Alternatives to EventKeys
+- C# events, although this requires the receivers to have a direct reference to the sender
+- Components with an interface bound to a [Flexible processors](../engine/entity-component-system/flexible-processing.md). Add the processor to the service registry, call some method which goes through and call each one of the components implementing the interface of that processor
+
+Alternatives to async
+- Restructure your async into a synchronous one ... obviously !
+- If you can't avoid using async ...
+- Don't touch the game state, just take some input, spit out an output that gets read by a `SyncScript`
+- Ensure you always leave the game state in a valid state before awaiting, and after awaiting check that it is still in a state were continuing the async method makes sense. I.e.: are we suddenly back on the main menu ?!
+
+You may notice that those two last ones could require a ton of additional logic to support properly, this is an indication that your logic should be rethought - you're writing yourself into a corner
+
 ## Avoid writing extension methods for access shortcuts
 
 This is specifically referring to methods of this kind:
@@ -163,51 +182,53 @@ It's a double-edged sword:
 - Polluting intellisense; in most cases this is a non-issue, but collection types are a prime example of this. Discoverability for extension methods through intellisense is nigh-on-impossible, there are just far too many extension methods introduced by linq.
 - It might imply to the user that your shortcut is somehow different from the source.
 
-## Avoid EventKeys, async and other systems with large levels of indirection when mutating the game state
-Event keys and async methods carry a lot of implicit complexity as they may not complete when signaled/called. When the async resumed/the event key is received, the game may not be in a state where the logic you run is still valid. Some entities might have been removed from the scene, the inventory might no longer hold the item, the player character may be incapacitated ...
+## Entity and components' lifetime
 
-This quirk also means that their execution are not part of their callers' stack, making debugging issues with them far harder to figure out.
+One unexpected quirk of Stride is that components and entities are expected to survive across any number of removal and re-insertion into the scene. Those objects are never truly 'destroyed', they are treated like any other c# object, they either exist or are out of scope.
 
-Their lifetime is also far harder to reason about as EventKeys will carry the signal even if the scene was replaced in the meantime, while async will continue running when running outside your AsyncScript's `Execute()`
+Make sure that your components adhere to this rule by rolling back any effects introduced in `Start()` through `Cancel()`
+This quirk provides a couple of nice benefits, a major one is that you can temporarily remove components, entities and even scenes from your game and re-introduce them whenever you need without any loss of data or complex serialization steps.
 
-Prefer using c# events instead of EventKeys, and restructure your async into synchronous calls if you can avoid introducing any latency, otherwise, try to avoid touching the game state if at all possible.
+This also means that you should avoid writing any custom 'destroy' function to ensure that any part of the engine at any time can simply remove the entity from the scene and rely on your implementation of `Cancel()` to take care of anything that should occur when 'destroyed'.
 
-## Object definition, ownership, a hierarchical idea
+### Usage of Get<MyComponent>
 
-`.Get<MyComponent>()` must be used only for conditional logic, if the caller expects it to exist, it should be part of some definition
+When using `Get<MyComponent>` ask yourself whether the function would fail to operate if that call were to return null, if that is the case, then your function is dependent on that component existing on that entity. 
+This is a hard dependency, you should do everything you can to notify the rest of your codebase and designers using the editor that it this component is a requirement to avoid wasting time debugging issues related to it.
 
-Yes:
+There are a couple of ways to do so, here we simply add the component directly as a parameter to the function:
+```cs
+// From
+public void MyFunction(Entity entity)
+{
+    entity.Get<MyComponent>().DoSomething();
+}
+// To
+public void MyFunction(MyComponent component)
+{
+    component.DoSomething();
+}
 ```
-EntityA { components for this item }
+And here we add this component as a property to set in the editor:
+```cs
+// From
+public void MyFunction()
+{
+    Entity.Get<MyComponent>().DoSomething();
+}
+
+// To
+
+// The 'required' keyword will generate a warning on build when the value is not set in the editor
+public required MyComponent MyRequiredComponent { get; set; }
+
+public void MyFunction()
+{
+    MyRequiredComponent.DoSomething();
+}
 ```
-No:
-```
-EntityA
-  - EntityA { components for this item }
-  - ColGroup0_EntityA { some other components also related to this item }
-```
 
-Destroying an object
-The above idea is helpful as it is now very obvious how your object should be destroyed when you need to do so, pick the entity your 'definition' component is on and simply remove it from the scene
+A trap you may fall into after reading this is to write defensively, checking if it is null and returning in such cases even if the rest of the logic expects some sort of change.
+This will more often than not force you to write far more boilerplate logic than you would have if you ensured you had a valid one in the first place.
 
-One caveat that you may still fall into with this idea, is if you have another component that must be notified of when this entity is destroyed.
-This can be resolved in two ways
-- If that component requires this other component, you should consider merging them, strong dependencies like so imply that you should design those in some other way
-- This object should be the only one aware of the former's existence, that way, you ensure that the codepath must go through that object to remove the former object
-
-
-
-
-# Definition
-
-
-# Destroying
-
-Destroying or removing an entity from the world should always be as simple as `Entity.Scene = null`, or `MyComponent.Entity.Scene = null`.
-Rely on overriding your script's `Cancel` method to clean things you might have set up.
-
-Upholding this idea makes managing your objects' very straightforward, anyone would intuitively rely on scene removal for any entity or component to stop them existing/affecting the game. And with how we laid out how objects are defined through ECS, we intuitively know which entity we must remove for a component to behave
-
-
-## Class imply identity, struct imply data
-
+One thing you may also consider is whether to simply merge the dependant object together, if either one of the objects are used only for the other's purpose, it may make far more sense to simply merge them instead of having two different components.
