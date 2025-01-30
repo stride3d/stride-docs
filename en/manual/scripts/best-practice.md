@@ -1,20 +1,17 @@
-# TODO: ADD EXAMPLES OF HOW TO AVOID ISSUES I AM RAISING
-# TODO: DO NOT FIGHT ECS, WORK WITH IT, IF YOU REALLY WANT TO DO WITHOUT, MAKE SURE THAT YOUR OTHER SYSTEM IS FINISHED BEFORE WRITING ANY LOGIC FOR IT
-
 # Best Practices
 
-Tips to build a robust and maintainable CodeBase for your Stride Project
+Tips to build a robust and maintainable CodeBase for your Stride project
 
-## Don't rush big systems
+## Think Twice, Implement Once
 
-Before starting on larger systems, make sure it would integrate with the rest of the existing systems, would it play well with saving and reloading, with the multiplayer architecture, when the game is paused, would it leak into other scenes ...
+Before starting on major systems, make sure it would integrate with the rest of the existing systems; how would it behave when saving and reloading, with the multiplayer architecture, when the game is paused, would it leak into other scenes or game modes ...
 
-Having this in mind ensures you won't write yourself into a corner, creating a system that needs to be patched up to work properly within your project, increasing your project's technical debt.
+Having this in mind ensures you won't write yourself into a corner, creating a system that would need to be patched up when you could have figured it out earlier with a bit of planning, best to avoid introducing any technical debt if you can help it.
 
 A trap you may fall into is to then over design your systems, supporting features that your game will never need, convincing yourself that you could re-use that system for another game, that you could share or sell it.
 The vast majority of systems in games are purpose built for that game, your next game will require other features you could not support, let alone predict. You will also acquire a significant amount of experience working on this one, seeing issues it had and wanting to rewrite a better one.
 
-### Figuring out your system's lifetime
+### Figuring Out Your System's Lifetime
 
 What is the scope of the system you're writing;
 - Should the same instance be used throughout the entire lifetime of the application ?
@@ -32,7 +29,7 @@ Some entry and exit points to manage your systems' lifetime:
 - Through your game's `BeginRun()` and `EndRun()`
 - As a component processor when associated component types are added to the scene
 
-## Statics, singletons and other global-like writes
+## Statics, Singletons and Other Globals
 We strongly advise you to make sure that the entirety of your game's state is implemented as instance properties on components inside the root scene's hierarchy. Avoid static properties and static objects.
 
 This is essential to reduce bugs that come in when implementing systems that manage the game's state, like the saving system, or the multiplayer layer.
@@ -44,7 +41,16 @@ Some systems may not make sense as part of the scene when:
 - The system is read-only
     - Multiplayer server browser or matchmaking back-end. Once connected to a session it's a different story though, now you must hold a bunch of states that are only valid to this session, it should not leak to the rest of the program, and so is best left as a component on an entity in the scene.
 
-Those restrictions do not prevent you from using the singleton pattern, you can use the `ServiceRegistry` which can be accessed from any `ScriptComponent`;
+Those restrictions do not prevent you from using the singleton pattern, you can use the `ServiceRegistry` which can be accessed from any `ScriptComponent`
+
+<p class="d-inline-flex gap-1">
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Show Example
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+
 ```cs
 // Here's a basic singleton class
 public class MySingleton : IService
@@ -88,10 +94,12 @@ public class MySingleton : SyncScript, IService
     }
 }
 ```
+  </div>
+</div>
 
-## Implement custom assets
+## Implement Custom Assets
 
-Some of the systems you will build make far more sense as assets rather than entities, consider making them an asset when any of the following is true:
+Some of the systems you will build make far more sense as [assets](custom-assets.md) rather than entities, consider making them an asset when any of the following is true:
 - It survives between multiple scenes
 - It is read only
 - It is not part of the definition of an entity, doesn't exist within your game world
@@ -104,11 +112,11 @@ Examples of such are:
 - Loot tables, having a list of `UrlReference<Prefab>` with a probability of drop to easily re-use across multiple mobs
 - As an all-purpose robust 'key' or 'identifier' type, see [this section](#strings-as-keys-or-identifiers)
 
-### Do not mutate Assets
+### Do not Mutate Assets
 To that point, make sure to only mutate assets when it makes sense to do so. Remember that a single asset may be referenced by hundreds of components and systems, those may not expect them to change at runtime. Adhering strictly to this idea also ensures that your game's state does not leak through them when loading a new session, game mode, or whatever else.
 For example, let's say you have an Axe Asset which has a list of modifier, you save the game, progress for a bit then add a modifier, but end up reloading ot the previous save, the modifier will carry over to that previous game state.
 
-### Scene quirks
+### Scene Quirks
 The default scene the game spawns for you is the instance stored in the content manager, when running the game you mutate that very instance, meaning that if you want to retrieve the scene in its initial state, you must force the content manager to unload it, and then reload it.
 This makes it a bit counterintuitive when you just want to re-spawn the current scene to roll back your changes.
 
@@ -147,8 +155,8 @@ public bool HasTheItem()
     - you won't need to keep a document going over each identifier you might have in game, one just has to look at the directory were they are stored in the editor.
 - Easy to extend; your identifier can now be more than just that, you can attach properties to it, perhaps a description to keep more information about this key.
 
-## Avoid EventKeys, async and other systems with large levels of indirection when mutating the game state
-Event keys and async methods carry a lot of implicit complexity as they may not complete when signaled/called. When the async resumed/the event key is received, the game may not be in a state where the logic you run is still valid. Some entities might have been removed from the scene, the inventory might no longer hold the item, the player character may be incapacitated ...
+## Avoid Patterns with High Levels of Indirection 
+Particularly when mutating the game state, [Event Keys](events.md) and async methods carry a lot of implicit complexity as they may not complete when signaled/called. When the async resumed/the event key is received, the game may not be in a state where the logic you run is still valid. Some entities might have been removed from the scene, the inventory might no longer hold the item, the player character may be incapacitated ...
 
 This quirk also means that their execution are not part of their callers' stack, making debugging issues with them far harder to figure out.
 
@@ -166,7 +174,7 @@ Alternatives to async
 
 You may notice that those two last ones could require a ton of additional logic to support properly, this is an indication that your logic should be rethought - you're writing yourself into a corner
 
-## Avoid writing extension methods for access shortcuts
+## Avoid Writing Shortcut Extension Methods 
 
 This is specifically referring to methods of this kind:
 ```
@@ -182,7 +190,7 @@ It's a double-edged sword:
 - Polluting intellisense; in most cases this is a non-issue, but collection types are a prime example of this. Discoverability for extension methods through intellisense is nigh-on-impossible, there are just far too many extension methods introduced by linq.
 - It might imply to the user that your shortcut is somehow different from the source.
 
-## Entity and components' lifetime
+## Entity and Components' Lifetime
 
 One unexpected quirk of Stride is that components and entities are expected to survive across any number of removal and re-insertion into the scene. Those objects are never truly 'destroyed', they are treated like any other c# object, they either exist or are out of scope.
 
@@ -232,3 +240,10 @@ A trap you may fall into after reading this is to write defensively, checking if
 This will more often than not force you to write far more boilerplate logic than you would have if you ensured you had a valid one in the first place.
 
 One thing you may also consider is whether to simply merge the dependant object together, if either one of the objects are used only for the other's purpose, it may make far more sense to simply merge them instead of having two different components.
+
+
+## See also
+
+* [Scheduling and priorities](scheduling-and-priorities.md)
+* [Flexible processors](../engine/entity-component-system/flexible-processing.md)
+* [Custom Assets](custom-assets.md)
