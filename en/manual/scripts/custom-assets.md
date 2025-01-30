@@ -177,3 +177,8 @@ RootAssets: []
 And you're finally done, have fun !
 
 ![Result](media/template-result.png)
+
+
+## See also
+
+* [Best Practice](best-practice.md)

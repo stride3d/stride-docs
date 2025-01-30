@@ -508,3 +508,8 @@ System.Diagnostics.Debug.WriteLine("hello");
 
 >[!Note]
 > To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
+
+
+## See also
+
+* [Best Practice](../scripts/best-practice.md)
