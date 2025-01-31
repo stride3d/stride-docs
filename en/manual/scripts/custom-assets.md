@@ -23,7 +23,7 @@ Here's how it looks like in a default game project:
   </ItemGroup>
 </Project>
 ```
->[!Warning]
+> [!Warning]
 > Make sure that the version specified for `Stride.Core.Assets` matches the other package's versions.
 
 Inside the same project, create a new csharp file and replace its content with the following:
@@ -82,8 +82,12 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
 
     public override IEnumerable<ObjectUrl> GetInputFiles(AssetItem assetItem)
     {
-        // Yield asset items you are dependent on to include them in the build 
-        
+        // Yield assets that must be built before this one is built,
+	// this is for cases were you need to read from a compiled version of an asset to build this one.
+	// Note that creating cyclic references through this method will cause a deadlock when building
+	// (e.g.: A is input of B while B is input of A)
+
+	// below only for reference purposes, useless in this context
         var asset = (YOUR_CLASS_ASSET)assetItem.Asset;
         foreach (var block in asset.PrefabCollection)
         {
@@ -116,6 +120,10 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
     }
 }
 ```
+
+> [!Warning]
+> Every changes made to the runtime asset will break previously built asset databases, make sure to delete the build artifacts stride generates for assets (`YOUR_PROJECT.Windows/obj/stride` and `bin/db`) after changing the class to make sure the asset database is fully rebuilt on the next build.
+
 This takes care of the support for this asset, you could create a `*.blks` file inside your `Assets` directory and fill in the content manually, but might as well do it through the editor ...
 
 ## Adding a section for the Add asset menu inside the editor
