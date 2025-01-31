@@ -121,7 +121,7 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
 }
 ```
 
->[!Warning]
+> [!Warning]
 > Every changes made to the runtime asset will break previously built asset databases, make sure to delete the build artifacts stride generates for assets (`YOUR_PROJECT.Windows/obj/stride` and `bin/db`) after changing the class to make sure the asset database is fully rebuilt on the next build.
 
 This takes care of the support for this asset, you could create a `*.blks` file inside your `Assets` directory and fill in the content manually, but might as well do it through the editor ...
