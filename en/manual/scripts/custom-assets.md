@@ -23,7 +23,7 @@ Here's how it looks like in a default game project:
   </ItemGroup>
 </Project>
 ```
->[!Warning]
+> [!Warning]
 > Make sure that the version specified for `Stride.Core.Assets` matches the other package's versions.
 
 Inside the same project, create a new csharp file and replace its content with the following:
