@@ -21,11 +21,10 @@ This approach also solves many update order dependencies issues (just need to or
 
 Here is some examples of entity processors:
 
-- @'Stride.Engine.TransformationProcessor': Compute transformation matrices from hierarchy and local transformation stored in @'Stride.Engine.TransformationComponent'.
-  
-  As a result, @'Stride.Engine.EntityManager' can be used as a hierarchical scenegraph instead of a simple entity list.
-- @'Stride.Engine.MeshProcessor': Add @'Stride.Engine.ModelComponent.Model' to rendering.
-- @'Stride.Engine.LightProcessor': Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)
+- @'Stride.Engine.Processors.TransformProcessor': Compute transformation matrices from hierarchy and local transformation stored in @'Stride.Engine.TransformComponent'.
+  - As a result, @'Stride.Engine.EntityManager' can be used as a hierarchical scenegraph instead of a simple entity list.
+- @'Stride.Engine.Processors.ModelTransformProcessor': Add @'Stride.Engine.ModelComponent.Model' to rendering.
+- @'Stride.Rendering.Lights.LightProcessor': Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)
 
 ## Entity System
 
@@ -45,5 +44,5 @@ foreach (var entity in engine.EntityManager.Entities)
 
 @'Stride.Engine.EntityManager' can be used to enumerate its `Entities (ref:{Stride.Engine.Entity})`. Note that children of a given entities will also be in this list.
 
-To manipulate entities as a scenegraph, refer to @'Stride.Engine.TransformationComponent' class.
+To manipulate entities as a scenegraph, refer to @'Stride.Engine.TransformComponent' class.
 

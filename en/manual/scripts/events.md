@@ -1,5 +1,8 @@
 # Events
 
+>[!Note]
+>Events are not recommended anymore, see [Best Practice](best-practice.md)
+
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
@@ -54,6 +57,7 @@ string asyncData = await gameOverListenerWithData.ReceiveAsync();
 
 ## See also
 
+* [Best Practice](best-practice.md)
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)

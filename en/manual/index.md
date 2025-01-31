@@ -11,10 +11,20 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 ### Recent updates
 
+#### Manual
+
+- <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
+- <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
+
+#### Tutorials
+
+- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
+
 #### Contributors
 
-- <span class="badge text-bg-success">New</span> [Contributing - Core Team](../contributors/core-team.md) - The Stride core team
-- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - Status added 
+- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHup Project - Roadmap link added
+
+### Previous updates
 
 #### Manual
 - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script.md) - Asynchronous script example improved
@@ -27,16 +37,10 @@ These pages contain information about how to use Stride, an open-source C# game 
 - <span class="badge text-bg-info">Updated</span> [Engine - Entity Component model](engine/entity-component-system/index.md) - Content improvements
 - <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
 
-### Previous updates
+#### Contributors
 
-- <span class="badge text-bg-success">New</span> [NuGet](nuget/index.md)
-- <span class="badge text-bg-success">New</span> [Video](video/index.md)
-- <span class="badge text-bg-success">New</span> [Cached files](files-and-folders/cached-files.md)
-- <span class="badge text-bg-success">New</span> [iOS](platforms/ios.md)
-- <span class="badge text-bg-success">New</span> [Compile shaders](graphics/effects-and-shaders/compile-shaders.md)
-- <span class="badge text-bg-info">Updated</span> [Skyboxes and backgrounds](graphics/textures/skyboxes-and-backgrounds.md)
-- <span class="badge text-bg-info">Updated</span> [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
-- <span class="badge text-bg-info">Updated</span> [Material slots](graphics/materials/material-slots.md)
+- <span class="badge text-bg-success">New</span> [Contributing - Core Team](../contributors/core-team.md) - The Stride core team
+- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - Status added 
 
 ## Improve this documentation
 

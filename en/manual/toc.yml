@@ -426,14 +426,14 @@ items:
         href: physics/configuration.md
       - name: Simulation
         href: physics/simulation.md
-      - name: Colliders
+      - name: Collidables
         href: physics/colliders.md
         items:
-          - name: Static colliders
+          - name: Statics
             href: physics/static-colliders.md
-          - name: Rigidbodies
+          - name: Bodies
             href: physics/rigid-bodies.md
-          - name: Kinematic rigidbodies
+          - name: Kinematic Bodies
             href: physics/kinematic-rigid-bodies.md
           - name: Characters
             href: physics/characters.md
@@ -540,6 +540,8 @@ items:
         href: scripts/gizmos.md
       - name: Create Custom Assets
         href: scripts/custom-assets.md
+      - name: Best Practice
+        href: scripts/best-practice.md
 
   - name: Sprites
     href: sprites/index.md

@@ -91,7 +91,7 @@ This creates a file in the Debug folder of your project (eg *MyGame\MyGame\Bin\W
 
 ## Example script
 
-The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Error`). If it doesn't load, the log records an error message (`Log.Debug`).
+The following script checks that the texture `MyTexture` is loaded. When the texture loads, the log displays a debug message (`Log.Debug`). If it doesn't load, the log records an error message (`Log.Error`).
 
 ```cs
 using System.Linq;
