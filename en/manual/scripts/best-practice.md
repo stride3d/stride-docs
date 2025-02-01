@@ -25,7 +25,7 @@ This will set some expectation as to where the system you're building should res
 
 Some entry and exit points to manage your systems' lifetime:
 - On demand by getting and setting it in the Services
-- System as a [singleton script](#Statics-singletons-and-other-global-like-writes) with the `Start()` and `Cancel()` 
+- System as a [singleton script](#statics-singletons-and-other-globals) with the `Start()` and `Cancel()` 
 - Through your game's `BeginRun()` and `EndRun()`
 - As a component processor when associated component types are added to the scene
 
