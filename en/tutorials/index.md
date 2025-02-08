@@ -22,6 +22,10 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <img src="media/gamestudio.jpg" class="card-img-top" alt="Game studio tutorials">
             <div class="card-body">
                 <h5 class="card-title">🛠️ Game Studio</h5>
+                <p>
+                    <span class="badge text-bg-info">12 lessons</span>
+                    <span class="badge text-bg-warning">1 hour</span>
+                </p>
                 <p class="card-text">The Stride engine comes with an editor called Game Studio, which is the central tool for game 🕹️ and application production in Stride.</p>
                 <p class="card-text">Learn about Stride launcher, main interface, scene management, transforming entities, asset pipelines and more.</p>
             </div>
@@ -33,6 +37,10 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <img src="media/csharp-beginner.png" class="card-img-top" alt="C# beginner tutorials">
             <div class="card-body">
                 <h5 class="card-title">🌱 C# Beginner</h5>
+                <p>
+                    <span class="badge text-bg-info">15 lessons</span>
+                    <span class="badge text-bg-warning">2.5 hours</span>
+                </p>
                 <p class="card-text">These tutorials cover the beginner principles of using C# when working with the Stride game engine 🎮.</p>
                 <p class="card-text">Learn about entities, transform positions, editor properties, components, delta time, cloning, keyboard and mouse input and more.</p>
             </div>
@@ -44,11 +52,30 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <img src="media/csharp-intermediate.png" class="card-img-top" alt="C# intermediate tutorials">
             <div class="card-body">
                 <h5 class="card-title">📈 C# Intermediate</h5>
+                <p>
+                    <span class="badge text-bg-info">11 lessons</span>
+                    <span class="badge text-bg-warning">4 hours</span>
+                </p>
                 <p class="card-text">These tutorials cover various intermediate principles of using C# when working with the Stride game engine 🎮.</p>
                 <p class="card-text">Learn more about UI basics, collision triggers, ray-casting, async scripts, scenes, animations, audio, camera and navigation.</p>
-                <p><span class="badge text-bg-success">New</span></p>
+                <!--<p><span class="badge text-bg-success">New</span></p>-->
             </div>
             <p class="px-3 mb-4">🚀 Jump to the <a class="stretched-link" href="csharpintermediate/index.md">C# intermediate tutorials</a></p>
+        </div>
+    </div>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/quick-tutorials.webp" class="card-img-top" alt="Stride Quick Tutorials">
+            <div class="card-body">
+                <h5 class="card-title">⚡ Quick Tutorials</h5>
+                <p>
+                    <span class="badge text-bg-info">1 lesson</span>
+                    <span class="badge text-bg-warning">4 minutes</span>
+                </p>
+                <p class="card-text">These quick tutorials provide bite-sized lessons to help you get up to speed with the Stride game engine in no time.</p>
+                <p class="card-text">Learn about setting up your first project, basic scripting, simple animations, quick UI tips, and more.</p>
+            </div>
+            <p class="px-3 mb-4">🚀 Jump to the <a class="stretched-link" href="quick-tutorials/index.md">Quick tutorials</a></p>
         </div>
     </div>
 </div>

@@ -27,7 +27,7 @@ There are multiple ways to retrieve a reference to this `BepuSimulation` from in
 
 ## Performance Considerations
 
-The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md)
+The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md).
 
 ### General
 - **JIT Compilation Spikes**: Large spikes in physics step time after launch may be due to JIT compilation. Consider running a small simulation behind a loading screen to prime all relevant code paths. AOT compilation can also help.

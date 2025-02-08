@@ -12,11 +12,11 @@ This section explains how physics components work, how to add them to your proje
 
 * [Configuration](configuration.md): Setting up Bepu
 * [Simulation](simulation.md): Managing the simulations parameters
-* [Collidables](colliders.md): The physics objects in your game world
-    * [Statics](static-colliders.md): Strong immovable objects like walls, floors, large rocks, and so on
-    * [Bodies](rigid-bodies.md): Objects that can be knocked around, cans, balls, boxes ...
-    * [Kinematic Bodies](kinematic-rigid-bodies.md): Entities which are moved programmatically, moving platforms, doors, ...
-    * [Characters](characters.md): Creatures which are moved programmatically, the player character, animals ...
+* [Collidables](colliders.md): Physics objects in your game world
+    * [Statics](static-colliders.md): Strong immovable objects such as terrain, walls, floors, or large rocks
+    * [Bodies](rigid-bodies.md): Movable objects that can be knocked around, like cans, balls, or boxes
+    * [Kinematic Bodies](kinematic-rigid-bodies.md): Entities moved programmatically, such as moving platforms or doors
+    * [Characters](characters.md): Creatures moved programmatically, such as the player character, animals, or NPCs (non-player characters)
 * [Collider Shapes](collider-shapes.md): Define the geometric shape of yours collidable components
 * [Triggers](triggers.md): Use triggers to detect passing objects
 * [Constraints](constraints.md): Join physics objects together, constrain them around points
