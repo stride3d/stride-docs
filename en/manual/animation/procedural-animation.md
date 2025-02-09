@@ -139,4 +139,4 @@ public class AnimationLight : StartupScript
 * [Additive animation](additive-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Custom attributes](custom-attributes.md)

@@ -108,4 +108,4 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Custom attributes](custom-attributes.md)
