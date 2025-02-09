@@ -10,11 +10,11 @@ The **model node link** component attaches an entity to a node of a skeleton on 
 
 For example, imagine you have two models: a knight, and a sword. The character has a sword swinging animation. You can use a model link node to place the sword in the knight's hand and attach it to the correct node in the knight skeleton, so the sword swings with the knight animation.
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video" poster="../particles/tutorials/media/sword-slash-1.jpg">
    <source src="../particles/tutorials/media/sword-slash-1.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 ## Set up a model node link component
 
@@ -61,6 +61,41 @@ To add an offset to the linked entity, use the entity's [TransformComponent](xre
 >[!Note]
 >If you don't want to add an offset, make sure the values are all set to `0,0,0`.
 
+## Example script
+
+This script demonstrates how to link one entity (such as a `SwordModel`) to a specific bone (`weapon_bone_R`) in another entity's skeleton hierarchy (in this case, the `mannequinModel`) using Stride's `ModelNodeLinkComponent`.
+
+```csharp
+public class BoneLink : StartupScript
+{
+    // This example assumes you've created a project with the default Stride models
+    // "mannequinModel" and "SwordModel." Add them from the "Assets/Models" folder to your scene,
+    // and then attach this script to the "SwordModel" entity
+
+    ModelNodeLinkComponent boneLink;
+
+    public override void Start()
+    {
+        // Initialize the script
+        // Here we locate the entity named "mannequinModel" by searching the root scene's entities
+        Entity owner = SceneSystem.SceneInstance.RootScene.Entities.Where(e => e.Name == "mannequinModel").Single();
+
+        boneLink = new ModelNodeLinkComponent
+        {
+             // This is the ModelComponent on the target entity (mannequinModel)
+            Target = owner.Get<ModelComponent>(),
+
+            // We set a "hard link" to Nodes[70], which corresponds to "weapon_bone_R"
+            // in the target's skeleton hierarchy
+            NodeName = owner.Get<ModelComponent>().Model.Skeleton.Nodes[70].Name
+        };
+
+        // Finally, add this link component to our current (SwordModel) entity
+        base.Entity.Components.Add(boneLink);
+    }
+}
+```
+
 ## See also
 
 * [Import animations](import-animations.md)
@@ -71,7 +106,7 @@ To add an offset to the linked entity, use the entity's [TransformComponent](xre
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
-* [custom attributes](custom-attributes.md)
+* [Custom attributes](custom-attributes.md)
 
 For examples of how model node links are used, see:
 
