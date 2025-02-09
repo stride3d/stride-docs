@@ -73,11 +73,11 @@ Now we'll move the camera to give us a good view of the scene.
 
 Let's see what the scene looks like so far. To run the project, press **F5**.
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video">
    <source src="media/physics-tutorials-create-a-bouncing-ball-falling-ball.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 The Sphere (body) responds to gravity and falls. The Ground (static collider) breaks its fall. But there's no bounce effect yet.
 
@@ -96,11 +96,11 @@ Let's set the `Spring Frequency` and `Spring Damping Ratio` of the Sphere.
 
 To see how this changes the physics, run the project again (**F5**). This time, the ball bounces on the ground before coming to a stop:
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video">
    <source src="media/physics-tutorials-create-a-bouncing-ball-falling-and-bouncing-ball.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Now that we've created a bouncing ball, we can use it to learn to [Script a trigger](script-a-trigger.md).
 

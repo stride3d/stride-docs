@@ -11,11 +11,11 @@ If you modify a nested prefab, all the dependent prefabs inherit the change auto
 
 This video demonstrates an example of nested prefabs:
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video" poster="media/create-nested-prefab.jpg">
    <source src="media/create-nested-prefab.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 In the center pane, we already have a prefab named **Lamp**. In the right pane, we create a new prefab named **Boxes**, comprising several box entities positioned together. We add the Boxes prefab to the Lamp prefab. Changes made to the Boxes prefab are reflected in the Lamp prefab. These are in turn reflected in the instances of the Lamp prefab in the scene (left pane).
 
