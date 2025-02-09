@@ -166,9 +166,9 @@ Alternatives to EventKeys:
 
 Alternatives to async:
 - Restructure your async into a synchronous one ... obviously!
-- If you can't avoid using async ...
-- Don't touch the game state, just take some input, spit out an output that gets read by a `SyncScript`
-- Ensure you always leave the game state in a valid state before awaiting, and after awaiting check that it is still in a state were continuing the async method makes sense. I.e.: are we suddenly back on the main menu?!
+- If you can't avoid using async:
+  - Don't touch the game state, just take some input, spit out an output that gets read by a `SyncScript`
+  - Ensure you always leave the game state in a valid state before awaiting, and after awaiting check that it is still in a state were continuing the async method makes sense. I.e.: are we suddenly back on the main menu?!
 
 You may notice that those two last ones could require a ton of additional logic to support properly, this is an indication that your logic should be rethought - you're writing yourself into a corner.
 
