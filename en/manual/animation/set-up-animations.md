@@ -55,13 +55,13 @@ After you add animations to an entity, you need to play them with a [script](../
 ### Example script
 
 ```cs
-    public class SimpleAnimationScript : StartupScript
+public class SimpleAnimationScript : StartupScript
+{
+    public override void Start()
     {
-        public override void Start()
-        {
-            Entity.Get<AnimationComponent>().Play("Walk");
-        }
+        Entity.Get<AnimationComponent>().Play("Walk");
     }
+}
 ```
 
 This script looks for an animation with the name *Walk* under the animation component on the entity.
@@ -93,4 +93,4 @@ Game Studio adds the script as a component. You can adjust [public variables you
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Custom attributes](custom-attributes.md)
