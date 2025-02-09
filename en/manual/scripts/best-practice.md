@@ -1,6 +1,6 @@
 # Best Practices
 
-Tips to build a robust and maintainable CodeBase for your Stride project
+Tips to build a robust and maintainable codebase for your Stride project.
 
 ## Think Twice, Implement Once
 
@@ -13,12 +13,12 @@ The vast majority of systems in games are purpose built for that game, your next
 
 ### Figuring Out Your System's Lifetime
 
-What is the scope of the system you're writing;
-- Should the same instance be used throughout the entire lifetime of the application ?
-- Only while playing a game session ?
-- Only for the duration of the currently loaded game session ? 
-- Within a single map ?
-- For a specific game mode ?
+What is the scope of the system you're writing:
+- Should the same instance be used throughout the entire lifetime of the application?
+- Only while playing a game session?
+- Only for the duration of the currently loaded game session? 
+- Within a single map?
+- For a specific game mode?
 - ...
 
 This will set some expectation as to where the system you're building should reside, how it interacts with other systems, and when it should be started and disposed ...
@@ -41,7 +41,7 @@ Some systems may not make sense as part of the scene when:
 - The system is read-only
     - Multiplayer server browser or matchmaking back-end. Once connected to a session it's a different story though, now you must hold a bunch of states that are only valid to this session, it should not leak to the rest of the program, and so is best left as a component on an entity in the scene.
 
-Those restrictions do not prevent you from using the singleton pattern, you can use the `ServiceRegistry` which can be accessed from any `ScriptComponent`
+Those restrictions do not prevent you from using the singleton pattern, you can use the `ServiceRegistry` which can be accessed from any `ScriptComponent`.
 
 <p class="d-inline-flex gap-1">
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -49,7 +49,6 @@ Those restrictions do not prevent you from using the singleton pattern, you can 
   </button>
 </p>
 <div class="collapse" id="collapseExample">
-  <div class="card card-body">
 
 ```cs
 // Here's a basic singleton class
@@ -94,7 +93,6 @@ public class MySingleton : SyncScript, IService
     }
 }
 ```
-  </div>
 </div>
 
 ## Implement Custom Assets
@@ -133,7 +131,7 @@ Here's a couple of reasons why this is a bad idea:
 
 All of this will inevitably lead to bugs, or additional work to avoid them - time you could definitely use to take care of other, more fun parts of your game.
 
-There are a couple ways to avoid this, one of the more robust ones is to rely on assets themselves; see [custom assets](custom-assets.md)
+There are a couple ways to avoid this, one of the more robust ones is to rely on assets themselves; see [custom assets](custom-assets.md).
 ```cs
 public class Item { }
 
@@ -160,19 +158,19 @@ Particularly when mutating the game state, [Event Keys](events.md) and async met
 
 This quirk also means that their execution are not part of their callers' stack, making debugging issues with them far harder to figure out.
 
-Their lifetime is also far harder to reason about as EventKeys will carry the signal even if the scene was replaced in the meantime, while async will continue running when running outside your AsyncScript's `Execute()`
+Their lifetime is also far harder to reason about as EventKeys will carry the signal even if the scene was replaced in the meantime, while async will continue running when running outside your AsyncScript's `Execute()`.
 
-Alternatives to EventKeys
+Alternatives to EventKeys:
 - C# events, although this requires the receivers to have a direct reference to the sender
 - Components with an interface bound to a [Flexible processors](../engine/entity-component-system/flexible-processing.md). Add the processor to the service registry, call some method which goes through and call each one of the components implementing the interface of that processor
 
-Alternatives to async
-- Restructure your async into a synchronous one ... obviously !
-- If you can't avoid using async ...
-- Don't touch the game state, just take some input, spit out an output that gets read by a `SyncScript`
-- Ensure you always leave the game state in a valid state before awaiting, and after awaiting check that it is still in a state were continuing the async method makes sense. I.e.: are we suddenly back on the main menu ?!
+Alternatives to async:
+- Restructure your async into a synchronous one ... obviously!
+- If you can't avoid using async:
+  - Don't touch the game state, just take some input, spit out an output that gets read by a `SyncScript`
+  - Ensure you always leave the game state in a valid state before awaiting, and after awaiting check that it is still in a state were continuing the async method makes sense. I.e.: are we suddenly back on the main menu?!
 
-You may notice that those two last ones could require a ton of additional logic to support properly, this is an indication that your logic should be rethought - you're writing yourself into a corner
+You may notice that those two last ones could require a ton of additional logic to support properly, this is an indication that your logic should be rethought - you're writing yourself into a corner.
 
 ## Avoid Writing Shortcut Extension Methods 
 
@@ -201,8 +199,7 @@ This also means that you should avoid writing any custom 'destroy' function to e
 
 ### Usage of Get<MyComponent>
 
-When using `Get<MyComponent>` ask yourself whether the function would fail to operate if that call were to return null, if that is the case, then your function is dependent on that component existing on that entity. 
-This is a hard dependency, you should do everything you can to notify the rest of your codebase and designers using the editor that it this component is a requirement to avoid wasting time debugging issues related to it.
+When using `Get<MyComponent>` ask yourself whether the function would fail to operate if that call were to return null, if that is the case, then your function is dependent on that component existing on that entity. This is a hard dependency, you should do everything you can to notify the rest of your codebase and designers using the editor that in this component is a requirement to avoid wasting time debugging issues related to it.
 
 There are a couple of ways to do so, here we simply add the component directly as a parameter to the function:
 ```cs
@@ -226,7 +223,6 @@ public void MyFunction()
 }
 
 // To
-
 // The 'required' keyword will generate a warning on build when the value is not set in the editor
 public required MyComponent MyRequiredComponent { get; set; }
 

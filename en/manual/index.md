@@ -13,14 +13,15 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 #### Manual
 
+- <span class="badge text-bg-success">New</span> [Scripts](scripts/best-practice.md) - Best Practises docs added
 - <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
 - <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
 
 #### Tutorials
 
-- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
+- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Quick Tutorails section added
 
-#### Contributors
+#### Contributing
 
 - <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHup Project - Roadmap link added
 
@@ -37,7 +38,11 @@ These pages contain information about how to use Stride, an open-source C# game 
 - <span class="badge text-bg-info">Updated</span> [Engine - Entity Component model](engine/entity-component-system/index.md) - Content improvements
 - <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
 
-#### Contributors
+#### Tutorials
+
+- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
+- 
+#### Contributing
 
 - <span class="badge text-bg-success">New</span> [Contributing - Core Team](../contributors/core-team.md) - The Stride core team
 - <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - Status added 
