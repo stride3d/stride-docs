@@ -36,11 +36,11 @@ When you're ready to publish your game, create a release build from Visual Studi
 
     ![Publish Self Contained](media\publish-self-contained.png)
 
-    >[!Note]
+    > [!Note]
     >
-    >You can only build for platforms you've added to your Stride project. For instructions about how to do this, see [Add or remove a platform](../platforms/add-or-remove-a-platform.md).
+    > You can only build for platforms you've added to your Stride project. For instructions about how to do this, see [Add or remove a platform](../platforms/add-or-remove-a-platform.md).
     >
-    >To build for Android or iOS, you need Xamarin, which is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
+    > To build for Android or iOS, you need Xamarin, which is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
 
 10. Under **Build**, select **Publish Selection** and click the **Publish** button.
 
@@ -96,7 +96,7 @@ After you create a release build, how you distribute it is up to you.
 
 To run games made with Stride on Windows, users need:
 
-* .NET 8 Runtimes (Unless you published with **self-contained**)
+* .NET 8 Runtime (Unless you published with **self-contained**)
 
 * DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan
 
