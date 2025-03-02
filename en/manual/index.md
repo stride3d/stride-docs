@@ -28,6 +28,7 @@ These pages contain information about how to use Stride, an open-source C# game 
 ### Previous updates
 
 #### Manual
+- <span class="badge text-bg-info">Updated</span> [Files and Folders](files-and-folders/distribute-a-game.md) - Game distribution steps updated
 - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script.md) - Asynchronous script example improved
 - <span class="badge text-bg-success">New</span> [Scripts - Gizmos](scripts/gizmos.md) - Description and example of the Flexible Processing system
 - <span class="badge text-bg-success">New</span> [ECS - Flexible Processing](engine/entity-component-system/flexible-processing.md) - Description and example of the Flexible Processing system

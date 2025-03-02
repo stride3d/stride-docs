@@ -34,3 +34,5 @@ The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while 
    - Update SDK version references
 1. Modify `manual\troubleshooting\stride-doesnt-run.md`
    - Update SDK version references
+1. Modify `manual\files-and-folders\distribute-a-game.md`
+   - Update SDK version references
