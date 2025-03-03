@@ -32,11 +32,11 @@ To create ribbons and trails, you usually need to sort the particles into an ord
 
 Here's an example of how unsorted particles look at runtime:
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video" poster="tutorials/media/sword-slash-2.jpg">
    <source src="tutorials/media/sword-slash-2.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Rather than the particles connecting in order, the strip erratically jumps between particles. (This is the same problem alpha-blended quads have when they're not properly sorted.)
 

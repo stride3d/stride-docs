@@ -20,11 +20,11 @@ To add a sprite to a scene, add a **sprite component** to an entity. Afterwards,
 
 3. From the **Asset View**, drag the sprite sheet to the **Source** field in the Sprite component:
 
-    <p>
+    <div class="ratio ratio-16x9 mb-3">
         <video autoplay loop class="responsive-video" poster="media\drag-sprite-sheet-to-asset-picker.png">
         <source src="media\drag-sprite-sheet-to-asset-picker.mp4" type="video/mp4">
         </video>
-    </p>
+    </div>
 
     Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
 

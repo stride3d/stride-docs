@@ -137,4 +137,4 @@ You can use additive animations with animations that use the same skeleton and s
 * [Animation scripts](animation-scripts.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
-* [custom attributes](custom-attributes.md)
+* [Custom attributes](custom-attributes.md)

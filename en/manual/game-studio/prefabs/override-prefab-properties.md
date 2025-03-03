@@ -12,11 +12,11 @@ In the following video, the **Lamp** prefab contains several box entities that b
 
 If we add another box to the **Boxes** parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the **Boxes** parent from that instance.
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video" poster="media/delete-boxes-from-prefab-instance.jpg">
    <source src="media/delete-boxes-from-prefab-instance.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 ## View overridden properties
 

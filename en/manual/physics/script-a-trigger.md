@@ -98,11 +98,11 @@ Now the trigger entity is between the ground and the sphere.
 
 If we run the project now (**F5**), the ball bounces off the trigger, but nothing happens.
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video">
    <source src="media/bouncing-ball-with-trigger-no-effect.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 Let's write a script to change the size of the ball when it enters the trigger.
 
@@ -194,11 +194,11 @@ Run the project (**F5**) to see the trigger in action.
 
 The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
 
-<p>
+<div class="ratio ratio-16x9 mb-3">
 <video autoplay loop class="responsive-video">
    <source src="media/bouncing-ball-with-trigger-scaled.mp4" type="video/mp4">
 </video>
-</p>
+</div>
 
 ## See also
 

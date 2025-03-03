@@ -63,4 +63,4 @@ To use an animation asset, add an [AnimationComponent](xref:Stride.Engine.Animat
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
 * [Model node links](model-node-links.md)
-* [custom attributes](custom-attributes.md)
+* [Custom attributes](custom-attributes.md)
