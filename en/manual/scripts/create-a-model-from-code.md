@@ -6,9 +6,7 @@
 You can create models in scripts at runtime. You can do this in several different ways, including:
 
 * creating a model from an asset
-
 * creating a procedural model using built-in geometric primitives (eg a sphere or cube)
-
 * instantiating a prefab that contains a model (see [Use prefabs](../game-studio/prefabs/use-prefabs.md))
 
 ## Create a model from an asset
@@ -21,17 +19,17 @@ You can create models in scripts at runtime. You can do this in several differen
 
     ```cs
     // Create a new entity and add it to the scene.
-	var entity = new Entity();
-	SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
-
+    var entity = new Entity();
+    SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
+  
     // Add a model included in the game files.
-	var modelComponent = entity.GetOrCreate<ModelComponent>();
-	modelComponent.Model = Content.Load<Model>("MyFolder/MyModel");
+    var modelComponent = entity.GetOrCreate<ModelComponent>();
+    modelComponent.Model = Content.Load<Model>("MyFolder/MyModel");
     ```
-
-    >[!Tip]
-    >To find the model's asset URL, in the **Asset View**, move the mouse over the model.
-    >![(Get asset URL](media/get-asset-url.png)
+  
+    > [!Tip]
+    > To find the model's asset URL, in the **Asset View**, move the mouse over the model.
+    > ![(Get asset URL](media/get-asset-url.png)
 
 3. Add the script as a **script component** to any entity in the scene. It doesn't matter which entity you use. For instructions, see [Use a script](use-a-script.md).
 
@@ -105,7 +103,7 @@ You can create models in scripts at runtime. You can do this in several differen
         { 
             /* Vertex buffer and index buffer setup */ 
             PrimitiveType = Stride.Graphics.PrimitiveType.TriangleList,
-            DrawCount = indicies.Length,
+            DrawCount = indices.Length,
             IndexBuffer = new IndexBufferBinding(indexBuffer, true, indices.Length),
             VertexBuffers = new[] { new VertexBufferBinding(vertexBuffer, 
                                       VertexPositionTexture.Layout, vertexBuffer.ElementCount) },
@@ -116,8 +114,8 @@ You can create models in scripts at runtime. You can do this in several differen
     ```
 
 
->[!Note]
->For more information about how to set up vertex and index buffers, see [Drawing vertices](../graphics/low-level-api/draw-vertices.md).
+> [!Note]
+> For more information about how to set up vertex and index buffers, see [Drawing vertices](../graphics/low-level-api/draw-vertices.md).
 
 Finally, you need to give the model one or more materials. There are two ways to do this.
 
@@ -145,18 +143,18 @@ Finally, you need to give the model one or more materials. There are two ways to
 For example:
 
 ```cs
-    // Create a material (eg with red diffuse color).
-    var materialDescription = new MaterialDescriptor
-    {
-        Attributes =
-	    {
-	        DiffuseModel = new MaterialDiffuseLambertModelFeature(),
-	        Diffuse = new MaterialDiffuseMapFeature(new ComputeColor { Key = MaterialKeys.DiffuseValue })
-	    }
-    };
-    var material = Material.New(GraphicsDevice, materialDescription);
-    material.Parameters[0].Set(MaterialKeys.DiffuseValue, Color.Red);
-    model.Materials.Add(0, material);
+// Create a material (eg with red diffuse color).
+var materialDescription = new MaterialDescriptor
+{
+    Attributes =
+	{
+	    DiffuseModel = new MaterialDiffuseLambertModelFeature(),
+	    Diffuse = new MaterialDiffuseMapFeature(new ComputeColor { Key = MaterialKeys.DiffuseValue })
+	}
+};
+var material = Material.New(GraphicsDevice, materialDescription);
+material.Parameters[0].Set(MaterialKeys.DiffuseValue, Color.Red);
+model.Materials.Add(0, material);
 ```
 
 ## See also
