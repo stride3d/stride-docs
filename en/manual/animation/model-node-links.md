@@ -19,7 +19,6 @@ For example, imagine you have two models: a knight, and a sword. The character h
 ## Set up a model node link component
 
 1. In the **Scene Editor**, select the entity you want to link to a node in another entity.
-
 2. In the **Property Grid**, click **Add component** and select **Model node link**.
 
     ![Add component](../particles/tutorials/media/add-model-node-link.png)
@@ -38,11 +37,11 @@ For example, imagine you have two models: a knight, and a sword. The character h
 
 4. Select the model you want to link the entity to and click **OK**.
 
-    >[!Note]
-    >The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
+    > [!Note]
+    > The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
-    >[!Tip]
-    >If you don't specify a model, Stride links the entity to the model on the parent entity.
+    > [!Tip]
+    > If you don't specify a model, Stride links the entity to the model on the parent entity.
 
 5. In **Node name**, select the node in the model you want to attach this entity to.
 
@@ -58,8 +57,8 @@ To add an offset to the linked entity, use the entity's [TransformComponent](xre
 
 ![Transform](media/transform-component.png)
 
->[!Note]
->If you don't want to add an offset, make sure the values are all set to `0,0,0`.
+> [!Note]
+> If you don't want to add an offset, make sure the values are all set to `0,0,0`.
 
 ## Example script
 
