@@ -147,10 +147,10 @@ For example:
 var materialDescription = new MaterialDescriptor
 {
     Attributes =
-	{
-	    DiffuseModel = new MaterialDiffuseLambertModelFeature(),
-	    Diffuse = new MaterialDiffuseMapFeature(new ComputeColor { Key = MaterialKeys.DiffuseValue })
-	}
+    {
+        DiffuseModel = new MaterialDiffuseLambertModelFeature(),
+        Diffuse = new MaterialDiffuseMapFeature(new ComputeColor { Key = MaterialKeys.DiffuseValue })
+    }
 };
 var material = Material.New(GraphicsDevice, materialDescription);
 material.Parameters[0].Set(MaterialKeys.DiffuseValue, Color.Red);
