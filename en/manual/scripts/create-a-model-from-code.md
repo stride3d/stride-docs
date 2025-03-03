@@ -29,6 +29,7 @@ You can create models in scripts at runtime. You can do this in several differen
   
     > [!Tip]
     > To find the model's asset URL, in the **Asset View**, move the mouse over the model.
+    >
     > ![(Get asset URL](media/get-asset-url.png)
 
 3. Add the script as a **script component** to any entity in the scene. It doesn't matter which entity you use. For instructions, see [Use a script](use-a-script.md).

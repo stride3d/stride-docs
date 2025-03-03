@@ -54,7 +54,7 @@ When you're ready to publish your game, create a release build from Visual Studi
 ### To build using terminal instead of Visual Studio
 
  1. Ensure the relevant .NET SDK is installed (Stride 4.2 is on .NET 8)
- 2. open the folder of your project where the *.Windows.csproj file sits.
+ 2. Open the folder of your project where the `*.Windows.csproj` file sits.
 
     ![Project Folder](media/project-folder.png)
 
@@ -62,32 +62,28 @@ When you're ready to publish your game, create a release build from Visual Studi
     
     ![Open terminal](media/open-terminal.png)
 
- 4. finally publish with the command 
+ 4. Finally publish with the command 
  
- ```
- dotnet publish
- ```
+    ```
+    dotnet publish
+    ```
 
- or the below to include the .NET runtime with your game
+    or the below to include the .NET runtime with your game
 
- ```
- dotnet publish -r win-x64 --self-contained true --framework net8.0-windows
- ```
+    ```
+    dotnet publish -r win-x64 --self-contained  true --  framework net8.0-windows
+    ```
  
- You can also append `--output <YOUR_EXPORT_FOLDER>` to specify where to export to.
+    You can also append `--output <YOUR_EXPORT_FOLDER>` to specify where to export to.
 
 ## 2. Delete unnecessary files
 
 In the release folder in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*), you can delete the following unnecessary files:
 
 * `.pdb` files (debug information)
-
 * `.xml` files (API documentation)
-
 * files that contain `vshost` in their filenames (eg `MyGame5.vshost.exe` and `MyGame5.vshost.exe.manifest`) 
-
 * folders other than the `x64`, `x86`, or `data` folders
-
 * other unnecessary files, such as custom configuration files (ie files not created with Stride)
 
 ## 3. Distribute your game
@@ -97,9 +93,7 @@ After you create a release build, how you distribute it is up to you.
 To run games made with Stride on Windows, users need:
 
 * .NET 8 Runtime (Unless you published with **self-contained**)
-
 * DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan
-
 * Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
 
 ## See also
@@ -107,5 +101,4 @@ To run games made with Stride on Windows, users need:
 * [Add or remove a platform](../platforms/add-or-remove-a-platform.md)
 * [Version control](version-control.md)
 * [Project structure](project-structure.md)
-
 * [Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish)
