@@ -456,7 +456,8 @@ items:
             href: physics/script-a-trigger.md
       - name: Physics jitter
         href: physics/fix-physics-jitter.md
-
+      - name: FAQ
+        href: physics/faq.md
   - name: Physics Bullet
     href: physics-bullet/index.md
     items:
