@@ -17,11 +17,13 @@ This diagram shows the Material interfaces and implementation classes:
 
 The file @'Stride.Rendering.Materials.MaterialKeys' contains most material keys you might need to use, have a look through it to figure out which one you might need to get to modify the parameter you are interested in.
 
-Let's say you have this fairly simple material
+Let's say you have this fairly simple material:
+
 ![media/runtime-param-modif-ex.png](media/runtime-param-modif-ex.png)
 
 And you want to clone that material, but change its color to red at runtime.
 Searching through the different keys contained in @'Stride.Rendering.Materials.MaterialKeys' you would find `MaterialKeys.DiffuseValue` and use it as the key to set the new color value you want:
+
 ```csharp
 var clone = SerializerExtensions.Clone(MyMaterial);
 clone.Passes[0].Parameters.Set(MaterialKeys.DiffuseValue, new Color4(1, 0, 0));
