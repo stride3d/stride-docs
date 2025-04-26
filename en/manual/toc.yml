@@ -540,7 +540,7 @@ items:
         href: scripts/gizmos.md
       - name: Create Custom Assets
         href: scripts/custom-assets.md
-      - name: Best Practice
+      - name: Best Practices
         href: scripts/best-practice.md
 
   - name: Sprites
