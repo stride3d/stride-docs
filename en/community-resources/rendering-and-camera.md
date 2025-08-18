@@ -31,4 +31,4 @@
 - [StrideCameraController](https://github.com/herocrab/StrideCameraController) - Swapping Cameras/Resident Evil Style
 - [CameraFollow.cs](https://gist.github.com/ykafia/371b310de1ba7bb8ab3d2feffce2a190)
 - [SplitScreen](https://github.com/profan/XenkoByteSized#xenkobytesizedsplitscreen)
-   
+- [Multiple Cameras in the scene](https://www.youtube.com/watch?v=_qUhcn9i_yw)
