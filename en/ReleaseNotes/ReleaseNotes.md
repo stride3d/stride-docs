@@ -10,6 +10,8 @@ A massive thank you to the open-source Stride community for your dedicated contr
 
 ## Minor releases since the last major release
 
+- [4.2.0.2381](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2381): March 2025
+- [4.2.0.2374](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2374): February 2025
 - [4.2.0.2293](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2293): January 2025
 - [4.2.0.2282](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2282): December 2024
 - [4.2.0.2232](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2232): September 2024

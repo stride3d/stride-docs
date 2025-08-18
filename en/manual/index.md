@@ -13,6 +13,7 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 #### Manual
 
+- <span class="badge text-bg-info">Updated</span> [Graphics - Materials - Materials for developers ](graphics/materials/materials-for-developers.md) - Modifying parameters at runtime added
 - <span class="badge text-bg-success">New</span> [Scripts](scripts/best-practice.md) - Best Practises docs added
 - <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
 - <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
@@ -23,7 +24,7 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 #### Contributing
 
-- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHup Project - Roadmap link added
+- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHub Project - Roadmap link added
 
 ### Previous updates
 
