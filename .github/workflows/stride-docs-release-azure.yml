@@ -3,6 +3,9 @@
 
 name: Build Stride Docs for Azure Web App Release 🚀
 
+permissions:
+  contents: write  # required to create releases/tags
+
 env:
   COMMON_SETTINGS_PATH: en/docfx.json
   VERSION: "2.0.0.${{ github.run_number }}"

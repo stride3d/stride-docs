@@ -30,6 +30,11 @@ items:
     href: engine/bug-bounties.md
   - name: Building source on Windows
     href: engine/building-source-windows.md
+    items:
+    - name: Visual Studio
+      href: engine/building-source-windows-visual-studio.md
+    - name: Rider or Other IDEs
+      href: engine/building-source-windows-other-ide.md
   - name: Localization
     href: engine/localization.md
   - name: Hot reloading editor shaders
