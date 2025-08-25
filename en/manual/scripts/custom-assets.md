@@ -37,6 +37,7 @@ using Stride.Core.BuildEngine;
 using Stride.Core.Serialization;
 using Stride.Core.Serialization.Contents;
 using Stride.Engine;
+using Stride.Engine.Design;
 
 namespace YOUR_GAME_NAMESPACE;
 
@@ -45,7 +46,11 @@ namespace YOUR_GAME_NAMESPACE;
 /// </summary>
 [DataContract]
 [ContentSerializer(typeof(DataContentSerializerWithReuse<YOUR_CLASS>))]
+// The ReferenceSerializer attribute is required when specifying a DataSerializerGlobal with ReferenceSerializer<>,
+// The two of them specifies to the serializers that this class is a runtime Asset
 [ReferenceSerializer, DataSerializerGlobal(typeof(ReferenceSerializer<YOUR_CLASS>), Profile = "Content")]
+// The line below ensures that the asset's reference is re-used instead of cloned for all new instances when instantiating prefabs
+[DataSerializerGlobal(typeof(CloneSerializer<YOUR_CLASS>), Profile = "Clone")]
 public class YOUR_CLASS
 {
 	// Replace this with whatever you would want this asset to hold at runtime
@@ -122,7 +127,7 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
 ```
 
 > [!Warning]
-> Every changes made to the runtime asset will break previously built asset databases, make sure to delete the build artifacts stride generates for assets (`YOUR_PROJECT.Windows/obj/stride` and `bin/db`) after changing the class to make sure the asset database is fully rebuilt on the next build.
+> Every changes made to the runtime asset will break previously built asset databases, make sure to clean the solution or manually delete the build artifacts stride generates for assets (`YOUR_PROJECT.Windows/obj/stride` and `bin/db`) after changing the class to make sure the asset database is fully rebuilt on the next build.
 
 This takes care of the support for this asset, you could create a `*.blks` file inside your `Assets` directory and fill in the content manually, but might as well do it through the editor ...
 

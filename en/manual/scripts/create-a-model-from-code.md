@@ -154,7 +154,7 @@ var materialDescription = new MaterialDescriptor
     }
 };
 var material = Material.New(GraphicsDevice, materialDescription);
-material.Parameters[0].Set(MaterialKeys.DiffuseValue, Color.Red);
+material.Passes[0].Parameters.Set(MaterialKeys.DiffuseValue, Color.Red);
 model.Materials.Add(0, material);
 ```
 
