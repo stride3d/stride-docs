@@ -1,4 +1,6 @@
-# Unable to Resolve Stride.GameStudio
+# NuGet.Config Misconfiguration
+
+## Unable to Resolve Stride.GameStudio
 
 If you encounter the error:
 
@@ -32,3 +34,18 @@ This usually means your NuGet package sources are misconfigured.
     ```
 
 4. Save the file and try restoring packages again.
+
+## The install program (Launcher) finds the 3.x versions and no 4.x
+
+Your `NuGet.Config` doesn't have most likely `nuget.org` source configured.
+
+To fix it, follow the same steps as above, but make sure your `NuGet.Config` contains at least this:
+    
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  </packageSources>
+</configuration>
+```
