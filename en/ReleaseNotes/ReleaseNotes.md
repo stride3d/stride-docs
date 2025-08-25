@@ -8,8 +8,9 @@ Read the full blog post here: [Announcing Stride 4.2](https://www.stride3d.net/b
 
 A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.2 a reality.
 
-## Minor releases since the last major release
+## Other releases since the last major release
 
+- [4.2.1.2442](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.1.2442): August 2025
 - [4.2.0.2381](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2381): March 2025
 - [4.2.0.2374](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2374): February 2025
 - [4.2.0.2293](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2293): January 2025

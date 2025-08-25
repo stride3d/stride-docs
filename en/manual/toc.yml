@@ -628,5 +628,9 @@ items:
         href: troubleshooting/lights-dont-cast-shadows.md
       - name: Full call stack not available
         href: troubleshooting/full-call-stack-not-available.md
-      - name: "Error: A SceneCameraRenderer in use has no camera assigned to its [Slot]. Make sure a camera is enabled and assigned to the [Slot]"
+      - name: SceneCameraRenderer error
         href: troubleshooting/error-a-scenecamerarenderer-in-use-has-no-camera-set.md
+      - name: Unable to resolve Stride.GameStudio
+        href: troubleshooting/unable-to-resolve-stride-game-studio.md
+      - name: The Launcher is showing only 3.x version
+        href: troubleshooting/unable-to-resolve-stride-game-studio.md
