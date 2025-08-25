@@ -1,6 +1,6 @@
-# NuGet.Config Misconfiguration
+# NuGet.Config misconfiguration
 
-## Unable to Resolve Stride.GameStudio
+## Unable to resolve Stride.GameStudio
 
 If you encounter the error:
 
@@ -16,13 +16,12 @@ at Stride.LauncherApp.ViewModels.PackageVersionViewModel.<>c__DisplayClass55_0.<
 
 This usually means your NuGet package sources are misconfigured.
 
-## How to Fix
+## How to fix
 
 1. Locate your NuGet configuration file:
    - `C:\Users\YourUserName\AppData\Roaming\NuGet\NuGet.Config`
 2. Make a backup of the file before editing.
 3. Open the file and ensure it contains the following lines:
-
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <configuration>
@@ -32,20 +31,26 @@ This usually means your NuGet package sources are misconfigured.
       </packageSources>
     </configuration>
     ```
-
 4. Save the file and try restoring packages again.
 
-## The install program (Launcher) finds the 3.x versions and no 4.x
+## The launcher only finds 3.x versions, not 4.x
 
-Your `NuGet.Config` doesn't have most likely `nuget.org` source configured.
+If the install program (Launcher) only shows Stride 3.x versions and not 4.x, your `NuGet.Config` file is likely missing the `nuget.org` package source.
 
-To fix it, follow the same steps as above, but make sure your `NuGet.Config` contains at least this:
-    
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-  </packageSources>
-</configuration>
-```
+### How to fix
+
+1. Open your NuGet configuration file:
+   - `C:\Users\YourUserName\AppData\Roaming\NuGet\NuGet.Config`
+2. Make a backup before editing.
+3. Ensure your `NuGet.Config` contains at least the following:
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <configuration>
+      <packageSources>
+        <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+      </packageSources>
+    </configuration>
+    ```
+4. Save the file and restart the Launcher.
+
+You should now see the latest Stride 4.x versions available for installation.
