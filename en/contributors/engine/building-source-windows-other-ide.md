@@ -6,18 +6,15 @@
 3. **Clone the repository:**
    ```bash
    git lfs clone https://github.com/stride3d/stride.git
-
    ```
 4. **Build using the command line:**
    - Navigate to the `/build` directory in the command prompt and run:
    ```bash
    msbuild /t:Restore Stride.sln
-
    ```
    - Then run:
    ```bash
    compile.bat
-
    ```
 
 ## Build Stride with Rider
