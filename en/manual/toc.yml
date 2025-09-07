@@ -634,3 +634,6 @@ items:
         href: troubleshooting/unable-to-resolve-stride-game-studio.md
       - name: The Launcher is showing only 3.x version
         href: troubleshooting/unable-to-resolve-stride-game-studio.md
+
+  - name: Glossary
+    href: glossary/index.md
