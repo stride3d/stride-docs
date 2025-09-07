@@ -33,7 +33,7 @@
 - [3D Primitive](https://doc.stride3d.net/latest/en/api/Stride.Graphics.GeometricPrimitives.GeometricPrimitive.Cube.html): A basic 3D model, such as a capsule, cube, or sphere.
 - [Camera](../graphics/cameras/index.md): A camera that allows viewing the scene from different angles.
 - [Graphics Compositor](../graphics/graphics-compositor/index.md): A component that organizes how scenes are rendered in the Stride engine.
-- Procedural Model: A model generated algorithmically rather than being pre-made, for example utilizing vertices and indices to define its shape.
+- Procedural Model: A model built at runtime from generated meshes (e.g., via built-in geometric primitives or custom vertex/index buffers) rather than imported as an asset.
 - [Material](../graphics/materials/index.md): A visual property that defines how an entity is rendered, including color, texture, and shading.
 - [Skybox](../graphics/textures/skyboxes-and-backgrounds.md): A textured 3D model that provides a background for the scene.
  
