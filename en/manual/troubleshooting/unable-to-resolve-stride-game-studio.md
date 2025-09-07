@@ -16,7 +16,7 @@ at Stride.LauncherApp.ViewModels.PackageVersionViewModel.<>c__DisplayClass55_0.<
 
 This usually means your NuGet package sources are misconfigured.
 
-## How to fix
+### How to fix
 
 1. Locate your NuGet configuration file:
    - `C:\Users\YourUserName\AppData\Roaming\NuGet\NuGet.Config`
