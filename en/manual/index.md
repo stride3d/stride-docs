@@ -13,22 +13,15 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 #### Manual
 
-- <span class="badge text-bg-info">Updated</span> [Graphics - Materials - Materials for developers ](graphics/materials/materials-for-developers.md) - Modifying parameters at runtime added
-- <span class="badge text-bg-success">New</span> [Scripts](scripts/best-practice.md) - Best Practises docs added
-- <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
-- <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
-
-#### Tutorials
-
-- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Quick Tutorails section added
-
-#### Contributing
-
-- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHub Project - Roadmap link added
+- <span class="badge text-bg-success">New</span> [Glossary](glossary/index.md) - New glossary section added 
 
 ### Previous updates
 
 #### Manual
+- <span class="badge text-bg-info">Updated</span> [Graphics - Materials - Materials for developers ](graphics/materials/materials-for-developers.md) - Modifying parameters at runtime added
+- <span class="badge text-bg-success">New</span> [Scripts](scripts/best-practice.md) - Best Practices docs added
+- <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
+- <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
 - <span class="badge text-bg-info">Updated</span> [Files and Folders](files-and-folders/distribute-a-game.md) - Game distribution steps updated
 - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script.md) - Asynchronous script example improved
 - <span class="badge text-bg-success">New</span> [Scripts - Gizmos](scripts/gizmos.md) - Description and example of the Flexible Processing system
@@ -42,10 +35,12 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 #### Tutorials
 
+- <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Quick Tutorials section added
 - <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
-- 
+
 #### Contributing
 
+- <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHub Project - Roadmap link added
 - <span class="badge text-bg-success">New</span> [Contributing - Core Team](../contributors/core-team.md) - The Stride core team
 - <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - Status added 
 
