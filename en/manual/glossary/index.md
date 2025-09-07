@@ -26,16 +26,16 @@
 - [Game](https://doc.stride3d.net/latest/en/api/Stride.Engine.Game.html): A game refers to any interactive or visual project created using a game engine. This can range from traditional playable games to simulations, visualizations, or any real-time interactive experiences where users can interact with or observe elements within a scene.
 - [Game Loop](https://en.wikipedia.org/wiki/Video_game_programming#Game_structure): The main loop that drives the game, updating the state and rendering the scene.
 - [Scene](../game-studio/scenes.md): The container for entities, which defines the game world or environment.
-- [Transform](https://doc.stride3d.net/latest/en/tutorials/csharpbeginner/transform-position.html): Defines an entity's position, rotation, and scale in the scene.
+- [Transform](../../tutorials/csharpbeginner/transform-position.md): Defines an entity's position, rotation, and scale in the scene.
  
 ## Graphics terms
 
 - [3D Primitive](https://doc.stride3d.net/latest/en/api/Stride.Graphics.GeometricPrimitives.GeometricPrimitive.Cube.html): A basic 3D model, such as a capsule, cube, or sphere.
-- [Camera](../graphics/cameras/index.md): A camera that allows viewing the scene from different angles.
-- [Graphics Compositor](../graphics/graphics-compositor/index.md): A component that organizes how scenes are rendered in the Stride engine.
-- Procedural Model: A model built at runtime from generated meshes (e.g., via built-in geometric primitives or custom vertex/index buffers) rather than imported as an asset.
+- [Camera](../graphics/cameras/index.md): A component that captures the scene from a point of view (perspective or orthographic).
+- [Graphics Compositor](../graphics/graphics-compositor/index.md): Organizes how scenes are rendered, including cameras, render targets, and post effects.
+- Procedural Model: A model built at runtime from generated meshes (e.g., via built-in geometric primitives or custom vertex/index buffers) rather than imported as an asset. See also: [Create a model from code](../scripts/create-a-model-from-code.md) and [Draw vertices](../graphics/low-level-api/draw-vertices.md).
 - [Material](../graphics/materials/index.md): A visual property that defines how an entity is rendered, including color, texture, and shading.
-- [Skybox](../graphics/textures/skyboxes-and-backgrounds.md): A textured 3D model that provides a background for the scene.
+- [Skybox](../graphics/textures/skyboxes-and-backgrounds.md): A background rendered using a cubemap or 360° panoramic texture to simulate distant surroundings.
  
 ## Lighting terms
 
@@ -48,15 +48,15 @@
 - [BodyComponent](https://doc.stride3d.net/latest/en/api/Stride.BepuPhysics.BodyComponent.html): A physics component that allows an entity to respond to forces like gravity and collisions.
 - [Bepu Physics](../physics/index.md): The preferred physics engine for Stride, providing advanced [Bepu physics](https://github.com/bepu/bepuphysics2) simulation capabilities. 
 - [Collidable](../physics/colliders.md): A component that defines the shape of an entity for physical interactions.
-- [Impulse](https://doc.stride3d.net/latest/en/api/Stride.BepuPhysics.BodyComponent.html#Stride_BepuPhysics_BodyComponent_ApplyImpulse_Stride_Core_Mathematics_Vector3_Stride_Core_Mathematics_Vector3_): A vector that represents a physical impulse applied to an [entity](../physics/rigid-bodies.md).
+- [Impulse](https://doc.stride3d.net/latest/en/api/Stride.BepuPhysics.BodyComponent.html#Stride_BepuPhysics_BodyComponent_ApplyImpulse_Stride_Core_Mathematics_Vector3_Stride_Core_Mathematics_Vector3_): An instantaneous change in momentum applied to a [rigid body](../physics/rigid-bodies.md).
 - Movement
-  - **Physics-Based Movement:** Moving entities using the physics engine to simulate realistic interactions.
-  - **Non-Physical Movement:** Moving entities by directly changing their position without physics interactions.
+  - Physics-Based Movement: Moving entities using the physics engine to simulate realistic interactions.
+  - Non-Physical Movement: Moving entities by directly changing their position without physics interactions.
 - [Physics Engine](../physics/index.md): A system that simulates physical interactions between entities in the scene.
 
 ## Scripting terms
 
-- [Camera Controller](https://doc.stride3d.net/latest/en/tutorials/csharpintermediate/third-person-camera.html): A script that enables basic camera movement using keyboard and mouse inputs.
+- [Camera Controller](../../tutorials/csharpintermediate/third-person-camera.md): A script that enables basic camera movement using keyboard and mouse inputs.
 - [Update Method](../scripts/types-of-script.md#synchronous-scripts): A callback method that is called every frame to update the game state.
 
 ## UI terms
