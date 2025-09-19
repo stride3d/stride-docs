@@ -17,24 +17,16 @@ using Stride.BepuPhysics;
 using Stride.BepuPhysics.Definitions.Contacts;
 using Stride.Engine;
 
-public class Test : StartupScript, IContactEventHandler
+public class Test : StartupScript, IContactHandler
 {
     public bool NoContactResponse => true;
 
-    void IContactEventHandler.OnStartedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
-        ref TManifold contactManifold,
-        bool flippedManifold,
-        int workerIndex,
-        BepuSimulation bepuSimulation)
+    void IContactHandler.OnStartedTouching<TManifold>(ContactData<TManifold> contactData)
     {
         Log.Warning("Entered!");
     }
 
-    void IContactEventHandler.OnStoppedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
-        ref TManifold contactManifold,
-        bool flippedManifold,
-        int workerIndex,
-        BepuSimulation bepuSimulation)
+    void IContactHandler.OnStoppedTouching<TManifold>(ContactData<TManifold> contactData)
     {
         Log.Warning("Exited!");
     }
