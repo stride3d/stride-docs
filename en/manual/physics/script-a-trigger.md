@@ -127,8 +127,8 @@ Let's write a script to change the size of the ball when it enters the trigger.
    
    namespace TransformTrigger
    {
-       // Adding IContactEventHandler to listen to contact events
-       public class Trigger : SyncScript, IContactEventHandler 
+       // Adding IContactHandler to listen to contact events
+       public class Trigger : SyncScript, IContactHandler 
        {
            public override void Start()
            {
@@ -143,24 +143,16 @@ Let's write a script to change the size of the ball when it enters the trigger.
            // Let objects pass through this trigger, false would make objects bounce off it
            public bool NoContactResponse => true;
    
-           void IContactEventHandler.OnStartedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
-               ref TManifold contactManifold,
-               bool flippedManifold,
-               int workerIndex,
-               BepuSimulation bepuSimulation)
+           void IContactHandler.OnStartedTouching<TManifold>(ContactData<TManifold> contactData)
            {
                // When something enters inside this object
-               other.Entity.Transform.Scale = new Vector3(2.0f);
+               contactData.Other.Entity.Transform.Scale = new Vector3(2.0f);
            }
    
-           void IContactEventHandler.OnStoppedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other,
-               ref TManifold contactManifold,
-               bool flippedManifold,
-               int workerIndex,
-               BepuSimulation bepuSimulation)
+           void IContactHandler.OnStoppedTouching<TManifold>(ContactData<TManifold> contactData)
            {
                // When something exits this object
-               other.Entity.Transform.Scale = new Vector3(1.0f);
+               contactData.Other.Entity.Transform.Scale = new Vector3(1.0f);
            }
        }
    }
