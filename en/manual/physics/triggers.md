@@ -21,12 +21,12 @@ public class Test : StartupScript, IContactHandler
 {
     public bool NoContactResponse => true;
 
-    void IContactHandler.OnStartedTouching<TManifold>(ContactData<TManifold> contactData)
+    void IContactHandler.OnStartedTouching<TManifold>(Contacts<TManifold> contacts)
     {
         Log.Warning("Entered!");
     }
 
-    void IContactHandler.OnStoppedTouching<TManifold>(ContactData<TManifold> contactData)
+    void IContactHandler.OnStoppedTouching<TManifold>(Contacts<TManifold> contacts)
     {
         Log.Warning("Exited!");
     }

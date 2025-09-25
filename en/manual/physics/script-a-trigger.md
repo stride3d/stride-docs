@@ -143,16 +143,16 @@ Let's write a script to change the size of the ball when it enters the trigger.
            // Let objects pass through this trigger, false would make objects bounce off it
            public bool NoContactResponse => true;
    
-           void IContactHandler.OnStartedTouching<TManifold>(ContactData<TManifold> contactData)
+           void IContactHandler.OnStartedTouching<TManifold>(Contacts<TManifold> contacts)
            {
                // When something enters inside this object
-               contactData.Other.Entity.Transform.Scale = new Vector3(2.0f);
+               contacts.Other.Entity.Transform.Scale = new Vector3(2.0f);
            }
    
-           void IContactHandler.OnStoppedTouching<TManifold>(ContactData<TManifold> contactData)
+           void IContactHandler.OnStoppedTouching<TManifold>(Contacts<TManifold> contacts)
            {
                // When something exits this object
-               contactData.Other.Entity.Transform.Scale = new Vector3(1.0f);
+               contacts.Other.Entity.Transform.Scale = new Vector3(1.0f);
            }
        }
    }
