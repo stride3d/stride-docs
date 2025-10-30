@@ -1,7 +1,6 @@
 ## Tools and Importers
 
 ## Assets
-- [Create a custom data asset](https://github.com/manio143/StrideCustomAsset)
 - [Blender plugin to export bulk anims for importing into Stride](https://github.com/JackPilley/BlenderToStrideAnimationSeparator)
 - [Loading additional asset databases](https://gist.github.com/aikixd/b0decb0cfc28bbdacb46d953691f76fd)
 - [LoadObjTest](https://github.com/jeske/LoadObjTest) - Runtime load an asset from a filesystem WavefrontOBJ file in code.
@@ -16,7 +15,6 @@
 - [BlenderToXenkoAnimationSeparater](https://github.com/GutterLab/BlenderToXenkoAnimationSeparator)
 
 ## Extension Libraries
-- [Bepu Physics in Stride](https://www.nuget.org/packages/Stride.BepuPhysics)
 - [Run Stride Gamestudio with only Nuget!](https://github.com/Doprez/stride-gamestudio-nuget)
 - [Stride Live Editor for changing entity data at runtime](https://github.com/tebjan/StrideLiveEditor)
 
