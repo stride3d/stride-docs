@@ -168,6 +168,27 @@ Then you can set the value in the material properties:
 
 ![Select shader](media/use-computecolorwave-shader.png)
 
+## Troubleshooting
+
+You can access the compilation logs of your shaders through the Game Studio's debug window's EffectCompilerCache tab (`Ctrl+Shift+D` or `Help`>`Show debug window`).
+
+The launcher hosts a Visual Studio extension specifically for syntax highlighting and errors you may want to use.
+
+The engine's source also provides a good reference point for how one would write shaders. To that end [Stride.ShaderExplorer](https://github.com/tebjan/Stride.ShaderExplorer) facilitates the act of finding and browsing through the different shaders the source contains.
+
+A common issue you may stumble onto is the following:
+> E1202: The mixin X in Y dependency is not in the module
+
+This error often comes about as a result of missing or malformed Generics and Composition nodes.
+When that is the case you have two options:
+
+- Either manually fill these in through the material's Yaml file.
+- Or remove and add the shader back in.
+
+In both cases, you will have to close the Game Studio before doing those operation, for the former it's to ensure that the asset is reloaded from the disk. And for the latter, it's because the cache used by the property grid needs to be rebuilt.
+
+We're currently in the process of rebuilding the shader system's backend, which should hopefully get rid of these friction.
+
 ## Custom shader sample
 
 For an example of a custom shader, see the **custom material shader** sample project included with Stride.
