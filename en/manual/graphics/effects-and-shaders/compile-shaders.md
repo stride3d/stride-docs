@@ -5,12 +5,12 @@
 
 Stride converts Stride shaders (`sdsl` and `.sdfx` files) into the shader language used by the [graphics platform](../../platforms/set-the-graphics-platform.md).
 
-| Platform       | Shader language 
-| -------------- | ---- 
-| Direct3D       | HLSL
-| OpenGL         | GLSL
-| Vulkan         | SPIR-V
-| iOS            | OpenGL ES
+| Platform | Shader language |
+|----------|-----------------|
+| Direct3D | HLSL            |
+| OpenGL   | GLSL            |
+| Vulkan   | SPIR-V          |
+| iOS      | OpenGL ES       |
 
 Stride can convert the shaders at runtime (when the game is running) or at build time (when the editor builds the game assets). When Stride generates shaders at runtime, rendering stops until the shader is compiled. This is usually something you want to avoid in your release build — especially on mobile platforms, which have less CPU, so the pause can be more noticable.
 
@@ -77,6 +77,6 @@ The iOS device should now be able to communicate with the PC via your Mac to bui
 
 ## Error messages
 
-If your application tries to connect to Game Studio to compile a shader or to notify Game Studio that it needs new shaders, but can't connect, the Visual Studio output displays this error:
+You may see the following error in Visual Studio's output pane while running your game:
 
-"[RouterClient]: Error: Could not connect to connection router using mode Connect. System.AggregateException: One or more errors occurred. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:31254"
+> [RouterClient]: Error: Could not connect to connection router using mode Connect. System.AggregateException: One or more errors occurred. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:31254
