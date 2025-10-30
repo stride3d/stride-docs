@@ -75,7 +75,7 @@ As iOS devices can't connect directly to PC, to convert Stride shaders remotely 
 
 The iOS device should now be able to communicate with the PC via your Mac to build shaders remotely.
 
-## Error Messages
+## Error messages
 
 You may see the following error in Visual Studio's output pane while running your game:
 
