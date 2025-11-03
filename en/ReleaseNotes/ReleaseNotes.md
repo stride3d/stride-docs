@@ -10,6 +10,7 @@ A massive thank you to the open-source Stride community for your dedicated contr
 
 ## Other releases since the last major release
 
+- [4.2.1.2485](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.1.2485): October 2025
 - [4.2.1.2442](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.1.2442): August 2025
 - [4.2.0.2381](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2381): March 2025
 - [4.2.0.2374](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2374): February 2025
@@ -17,6 +18,7 @@ A massive thank you to the open-source Stride community for your dedicated contr
 - [4.2.0.2282](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2282): December 2024
 - [4.2.0.2232](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2232): September 2024
 - [4.2.0.2188](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2188): June 2024
+- [4.2.0.2122](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2122): March 2024
 
 ## What's new in Stride 4.2
 Stride 4.2 includes numerous enhancements and improvements. Here’s what to expect:
