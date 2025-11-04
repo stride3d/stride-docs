@@ -53,6 +53,9 @@ jobs:
         lfs: true
         ref: master
 
+    - name: Build Stride.Core.CompilerServices.csproj
+      run: dotnet build stride/sources/core/Stride.Core.CompilerServices/Stride.Core.CompilerServices.csproj -c Release
+
     - name: Install DocFX
       # This installs the latest version of DocFX and may introduce breaking changes
       # run: dotnet tool update -g docfx
