@@ -13,17 +13,17 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2022
+    runs-on: windows-latest
 
     steps:
     - name: .NET SDK Setup
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 8.x
+        dotnet-version: 10.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: ${{ env.DOCS_PATH }}
         lfs: true
@@ -45,7 +45,7 @@ jobs:
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: stride3d/stride
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -67,7 +67,7 @@ jobs:
       run: 7z a -r DocFX-app.zip ./${{ env.DOCS_PATH }}/_site/*
 
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: DocFX-app
         path: DocFX-app.zip
