@@ -53,7 +53,7 @@ When you're ready to publish your game, create a release build from Visual Studi
 
 ### To build using terminal instead of Visual Studio
 
- 1. Ensure the relevant .NET SDK is installed (Stride 4.2 is on .NET 8)
+ 1. Ensure the relevant .NET SDK is installed (Stride 4.3 is on .NET 10)
  2. Open the folder of your project where the `*.Windows.csproj` file sits.
 
     ![Project Folder](media/project-folder.png)
@@ -71,7 +71,7 @@ When you're ready to publish your game, create a release build from Visual Studi
     or the below to include the .NET runtime with your game
 
     ```
-    dotnet publish -r win-x64 --self-contained  true --  framework net8.0-windows
+    dotnet publish -r win-x64 --self-contained  true --  framework net10.0-windows
     ```
  
     You can also append `--output <YOUR_EXPORT_FOLDER>` to specify where to export to.
@@ -92,7 +92,7 @@ After you create a release build, how you distribute it is up to you.
 
 To run games made with Stride on Windows, users need:
 
-* .NET 8 Runtime (Unless you published with **self-contained**)
+* .NET 10 Runtime (Unless you published with **self-contained**)
 * DirectX11 (included with Windows 10 and later), OpenGL, or Vulkan
 * Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
 
