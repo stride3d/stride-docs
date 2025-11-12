@@ -1,19 +1,31 @@
-# Stride 4.3 Release notes
+# Stride 4.2 Release notes
 
 February 6th, 2024
 
-Stride contributors are thrilled to announce the release of Stride 4.3, now fully compatible with .NET 10 and leveraging the latest enhancements in C# 14. This release brings significant improvements in performance, stability, and developer experience.
+Stride contributors are thrilled to announce the release of Stride 4.2, now fully compatible with .NET 8 and leveraging the latest enhancements in C# 12. This release brings significant improvements in performance, stability, and developer experience.
 
-Read the full blog post here: [Announcing Stride 4.3](https://www.stride3d.net/blog/announcing-stride-4-3-in-dotnet-10/)
+Read the full blog post here: [Announcing Stride 4.2](https://www.stride3d.net/blog/announcing-stride-4-2-in-dotnet-8/)
 
-A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.3 a reality.
+A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.2 a reality.
 
-## What's new in Stride 4.3
-Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
+## Other releases since the last major release
 
-- **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
+- [4.2.1.2485](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.1.2485): October 2025
+- [4.2.1.2442](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.1.2442): August 2025
+- [4.2.0.2381](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2381): March 2025
+- [4.2.0.2374](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2374): February 2025
+- [4.2.0.2293](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2293): January 2025
+- [4.2.0.2282](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2282): December 2024
+- [4.2.0.2232](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2232): September 2024
+- [4.2.0.2188](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2188): June 2024
+- [4.2.0.2122](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2122): March 2024
 
-- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)
+## What's new in Stride 4.2
+Stride 4.2 includes numerous enhancements and improvements. Here’s what to expect:
+
+- **.NET 8 Integration**: Stride 4.2 is now fully aligned with .NET 8, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
+
+- **C# 12 Features**: With C# 12, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 12](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)
 
 - **Changed Assimp Binding to Silk.Net.Assimp**: This update transitions the asset compiler's binding from C++/CLR to Silk.Net.Assimp, a move that not only simplifies the codebase but also paves the way for asset compilation on non-Windows systems, broadening Stride's accessibility. [See the pull request](https://github.com/stride3d/stride/pull/1158)
 
@@ -95,7 +107,7 @@ Stride 4.3 includes numerous enhancements and improvements. Here’s what to exp
 * [VR] Remove framecap from VR sample by @Eideren in https://github.com/stride3d/stride/pull/2002
 * Bump Newtonsoft.Json from 12.0.3 to 13.0.1 in /sources/metrics/Stride.Metrics by @dependabot in https://github.com/stride3d/stride/pull/1539
 * [OpenVR] Handle custom resolution specified by the user through VR settings by @Eideren in https://github.com/stride3d/stride/pull/2000
-* Update NuGet libraries to 6.4.3 by @manio143 in https://github.com/stride3d/stride/pull/2017
+* Update NuGet libraries to 6.4.2 by @manio143 in https://github.com/stride3d/stride/pull/2017
 * Let the user pick which animation stack to import in an fbx by @adrsch in https://github.com/stride3d/stride/pull/1977
 * Fixes OpenGL by @MaximilianEmel in https://github.com/stride3d/stride/pull/2023
 * Update dotnet 8 by @Doprez in https://github.com/stride3d/stride/pull/1616
@@ -145,7 +157,7 @@ A heartfelt thank you to all the contributors who have played a significant role
 
 ## New Contributors
 
-We are especially excited to welcome the following new contributors to Stride with the 4.3 release. Your contributions are greatly appreciated!
+We are especially excited to welcome the following new contributors to Stride with the 4.2 release. Your contributions are greatly appreciated!
 
 * @adrsch made their first contribution in https://github.com/stride3d/stride/pull/1920
 * @froce made their first contribution in https://github.com/stride3d/stride/pull/1788
@@ -155,7 +167,7 @@ We are especially excited to welcome the following new contributors to Stride wi
 * @MaximilianEmel made their first contribution in https://github.com/stride3d/stride/pull/1956
 * @ch3mbot made their first contribution in https://github.com/stride3d/stride/pull/1769
 
-## Stride 4.3 Feature Overview
+## Stride 4.2 Feature Overview
 
 ### F# and Visual Basic Integration
 
@@ -187,7 +199,7 @@ let main argv =
     0
 ```
 
-![Example basic 3d scene with a capsule](media/ReleaseNotes-4.3/stride-game-engine-example01-basic-3d-scene.webp)
+![Example basic 3d scene with a capsule](media/ReleaseNotes-4.2/stride-game-engine-example01-basic-3d-scene.webp)
 
 The equivalent Visual Basic example:
 
@@ -229,7 +241,7 @@ Although there have been [many fixes](https://github.com/stride3d/stride/pulls?p
 - [Can not create "C# Beginner" project #1650](https://github.com/stride3d/stride/issues/1650)
 
 ## Also good to know
-Although not directly tied to Release 4.3, we have some more big things going on.
+Although not directly tied to Release 4.2, we have some more big things going on.
 
 For instance to our website and documentation. We also had another community meeting to address all those new members.
 
