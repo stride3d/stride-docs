@@ -2,16 +2,66 @@
 
 Tips to build a robust and maintainable codebase for your Stride project.
 
-## Think Twice, Implement Once
+## Planning Ahead and Technical Debt
 
-Before starting on major systems, make sure it would integrate with the rest of the existing systems; how would it behave when saving and reloading, with the multiplayer architecture, when the game is paused, would it leak into other scenes or game modes ...
+Before writing major systems, consider how it would fit with the rest of the existing systems.
+Many systems become interdependent once implemented, for example:
+- How should this new system behave when saving and reloading a game session.
+- When the game is paused.
+- When loading in a new scene.
+- When changing game mode.
+- Which player input should it read.
+- How should it synchronize across clients in a multiplayer context.
+- etc.
 
-Having this in mind ensures you won't write yourself into a corner, creating a system that would need to be patched up when you could have figured it out earlier with a bit of planning, best to avoid introducing any technical debt if you can help it.
+With that said, one will stumble on issues along the way that will require a change in design, a rewrite of those systems, for example: an uninteresting or unfeasible feature, a re-evaluation of your game's scope, shortcuts made to get a feature out the door sooner, an ill-defined initial design, and so on.
 
-A trap you may fall into is to then over design your systems, supporting features that your game will never need, convincing yourself that you could re-use that system for another game, that you could share or sell it.
-The vast majority of systems in games are purpose built for that game, your next game will require other features you could not support, let alone predict. You will also acquire a significant amount of experience working on this one, seeing issues it had and wanting to rewrite a better one.
+The design of a game is not set in stone; it is refined as Macklin and Sharp, Game Designers at Parsons School of Design, observed:
+> Designing games is challenging [...] Compounding all this is the fact that game designers can’t really “see” their designs until they are played, and their games can’t be played until they are made. This is where the iterative design process comes in handy.  
+> Macklin, C., & Sharp, J. (2016). Games, design and play: A detailed approach to iterative game design. Addison-Wesley Professional.
 
-### Figuring Out Your System's Lifetime
+You might feel like leaving those rewrites on the back burner as they don't contribute directly to the game, but doing so will cause you to slowly write yourself into a corner, wasting time stacking quick patches around problematic systems to keep them going, accruing bugs and performance issues instead of dealing with the problem head-on.
+
+Frederick Brooks, one of the most influential software designers, on planning and rewriting software:
+> [...] is not whether to build a pilot system and throw it away. You will do that. The only question is whether to plan in advance to build a throwaway, or to promise to deliver the throwaway to customers. Seen this way, the answer is much clearer. Delivering that throwaway to customers buys time, but it does so only at the cost of agony for the user, distraction for the builders while they do the redesign, and a bad reputation for the product that the best redesign will find hard to live down.  
+> Hence plan to throw one away; you will, anyhow.  
+> Frederick P. Brooks Jr. (1975). The Mythical Man-Month. Addison-Wesley.
+
+## Premature Generalization
+
+Related to the above, we may fall into the extreme opposite, over designing systems. Misleading ourselves into adding features covering hypothetical cases, expanding it to accommodate future games, or encapsulating it to share it for others to use.
+
+Here's Richard Fabian, Senior Programmer on Max Payne 3, on systems re-use:
+> It is regarded as one of the holy grails of development to be able to consistently reduce development overhead by reusing old code. [...] The unfortunate truth is any interesting new features you want to add will probably be incompatible with your old code and old way of laying out your data, and you will need to either rewrite the old code to allow for the new feature, or rewrite the old code to allow for the new data layout.  
+> Richard Fabian. [Data-Oriented Design](https://www.dataorienteddesign.com/dodbook.pdf#page=214) 11.7 Reusable generic code
+
+Continuing on the same subject, here's a survey by William Agresti:
+> One survey result had implications for a role that reuse may play in large software projects exceeding their budgets: 40% of developers reported that in 25% or more of the cases, they ended up extensively modifying or completely rewriting a module that had planned to be reused.  
+> Agresti, W. (2011) Software Reuse: Developers’ Experiences and Perceptions. Journal of Software Engineering and Applications, 4, 48-58. doi: [10.4236/jsea.2011.41006](http://dx.doi.org/10.4236/jsea.2011.41006).
+
+When starting a new project, it's also likely that we would prefer rewriting those systems. Our experience on previous projects may provide us with insight to design them in a more concise, maintainable, or robust way.
+
+There definitely are systems that could very well be re-used, but we're not building [middleware](https://en.wikipedia.org/wiki/Middleware). We should ask ourselves if now is the right time to work on generalizing the system, or whether our game should take precedence.
+
+## AI assistants and LLMs
+
+Large language models and AI assistants have become ubiquitous in most programmers' toolboxes. However, like all tools, they have their drawbacks. Consider the well-known idiom:
+> If all you have is a hammer, everything looks like a nail.
+
+As this phrase implies, we should carefully consider when to apply a given tool, lest we become overzealous or over-reliant on them, like the following study infers:
+> AI tools were perceived as helpful for understanding code and increasing confidence, particularly during initial development. However, students reported difficulties transferring knowledge to unaided tasks, revealing possible overreliance and gaps in conceptual understanding.
+> Rojas-Galeano et al. (2025). Between Tool and Trouble: Student Attitudes Toward AI in Programming Education. doi: [10.48550/arXiv.2508.05999](https://doi.org/10.48550/arXiv.2508.05999).
+
+Relying on LLMs for design or programming tasks will stunt our growth in those areas, those are skills we must maintain and improve through continuous practice. The following excerpt conveys how this reliance affects us:
+> [...] over-reliance on AI tools has led to a decline in confidence and skill retention, as students became less attentive to grammar rules and idea formulation, relying instead on AI to complete those tasks.
+> Budiyono, Herman. (2025). Exploring long-term impact of AI writing tools on
+independent writing skills: A case study of Indonesian language education students.
+International Journal of Information and Education Technology, 15(5), 1003-1013.
+[10.18178/ijiet.2025.15.5.2306](https://doi.org/10.18178/ijiet.2025.15.5.2306).
+
+We must use LLMs to teach us new concepts or skills, but troubleshooting complex issues, designing groundbreaking systems, and creating innovative solutions to our design problems, that is our own prerogative. Given enough experience, those are areas where we perform better than an LLM could.
+
+## Figuring Out Your System's Lifetime
 
 What is the scope of the system you're writing:
 - Should the same instance be used throughout the entire lifetime of the application?
