@@ -4,18 +4,18 @@
 
 If you're having trouble running Stride, make sure you've installed all the prerequisites:
 
-* .NET 8 SDK
+* .NET SDK 10.0
 * Visual C++ Redistributable 2019 (or later)
 * .NET Framework 4.7.2 (required for the Visual Studio plugin)
 * Visual Studio or Build Tools (optional but recommended)
 
 Alternatively, uninstall Stride, restart the Stride installer, and install the prerequisites when prompted.
 
-### .NET SDK 8.0
+### .NET SDK 10.0
 
-.NET SDK 8.0 should have been installed by Stride prerequisite installer, if Visual Studio 2022 didn't do it previously.
+.NET SDK 10.0 should have been installed by Stride prerequisite installer, if Visual Studio 2022 didn't do it previously.
 
-If for some reason you need to install it manually, you can use [this link](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and select the latest .NET 8 SDK for Windows.
+If for some reason you need to install it manually, you can use [this link](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) and select the latest .NET SDK 10.0 for Windows.
 
 ### Visual C++ Redistributable 2019 (or later)
 
@@ -43,7 +43,7 @@ If you have Visual Studio 2022 (or later) installed, you need to have the follow
 * **.NET desktop development** with **Development tools for .NET** optional component enabled.
 
 > [!Note]
-> Earlier versions might work with older version of Stride. However, for Stride 4.2 and later you only need to have .NET 8 SDK installed.
+> Earlier versions might work with older version of Stride. However, for Stride 4.2 and later you only need to have .NET SDK 10.0 installed.
 
 ### Build Tools for Visual Studio 2022 (optional)
 
