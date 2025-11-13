@@ -22,11 +22,11 @@ jobs:
         dotnet-version: 10.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
-    - name: Checkout Stride Docs
-      uses: actions/checkout@v5
-      with:
-        path: ${{ env.DOCS_PATH }}
-        lfs: true
+    # - name: Checkout Stride Docs
+    #   uses: actions/checkout@v5
+    #   with:
+    #     path: ${{ env.DOCS_PATH }}
+    #     lfs: true
 
     - name: Set Version in docfx.json
       run: |
@@ -44,14 +44,14 @@ jobs:
     #   shell: pwsh
 
     # Checkout the Stride repository from the default branch
-    - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v5
-      with:
-        repository: stride3d/stride
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: stride
-        lfs: true
-        ref: master
+    # - name: Checkout Stride (note the LFS)
+    #   uses: actions/checkout@v5
+    #   with:
+    #     repository: stride3d/stride
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+    #     path: stride
+    #     lfs: true
+    #     ref: master
 
     - name: Checkout DocFX PR Branch
       uses: actions/checkout@v5
@@ -61,12 +61,13 @@ jobs:
         path: docfx-build
 
     - name: Build DocFX from PR
-      run: dotnet publish src/docfx -f net10.0 -c Release /p:Version=${GITHUB_REF_NAME#v} --self-contained -r win-x64 -o drop/publish/win-x64
-      working-directory: docfx-build
+      run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
+      #run: dotnet publish src/docfx -f net10.0 -c Release /p:Version=2.8-stride --self-contained -r win-x64 -o drop/publish/win-x64
+      #working-directory: docfx-build
       shell: pwsh
 
-    - name: Add DocFX to PATH
-      run: echo "docfx-build/drop/publish/win-x64" >> $env:GITHUB_PATH
+    - name: Build Install DocFX
+      run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
       shell: pwsh
 
     - name: Build documentation
