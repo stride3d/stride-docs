@@ -67,20 +67,21 @@ jobs:
 
     - name: Restore npm dependencies
       run: npm install
-      working-directory: templates
+      working-directory:  docfx-build/templates
 
     - name: Build site templates
       run: npm run build
-      working-directory: templates
+      working-directory:  docfx-build/templates
 
     - name: Build DocFX from PR
       run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
       #run: dotnet publish src/docfx -f net10.0 -c Release /p:Version=2.8-stride --self-contained -r win-x64 -o drop/publish/win-x64
-      #working-directory: docfx-build
+      working-directory: docfx-build
       shell: pwsh
 
     - name: Build Install DocFX
       run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
+      working-directory: docfx-build
       shell: pwsh
 
     - name: Build documentation
