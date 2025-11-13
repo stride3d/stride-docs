@@ -16,7 +16,7 @@ When you're ready to publish your game, create a release build from Visual Studi
 
 4. In Visual Studio, from the **Solution Explorer** right click your Windows project and select **Publish**
 
-    ![Select Publish](media\publish-project-dropdown.png)
+    ![Select Publish](media/publish-project-dropdown.png)
 
 5. Select the **Target** **Folder** in the publish window.
 
@@ -26,7 +26,7 @@ When you're ready to publish your game, create a release build from Visual Studi
 
 8. You should now see the **Publish** view where you can manage the project export settings.
 
-    ![Publish View](media\publish-view.png)
+    ![Publish View](media/publish-view.png)
 
 9. Finally you can click publish and see your project in the output folder you selected at **step 6**
 
@@ -34,7 +34,7 @@ When you're ready to publish your game, create a release build from Visual Studi
 
     Select **Show all settings** -> **Deployment mode** -> **Self-contained** -> **Save**
 
-    ![Publish Self Contained](media\publish-self-contained.png)
+    ![Publish Self Contained](media/publish-self-contained.png)
 
     > [!Note]
     >
