@@ -28,7 +28,7 @@ jobs:
         path: ${{ env.DOCS_PATH }}
         lfs: true
 
-    # - name: Set Version in docfx.json
+    - name: Set Version in docfx.json
       run: |
         $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
         $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
