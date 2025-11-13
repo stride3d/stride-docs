@@ -58,6 +58,13 @@ jobs:
     #   with:
     #     node-version: '20'
 
+    - name: Checkout DocFX PR Branch
+      uses: actions/checkout@v5
+      with:
+        repository: filzrev/docfx
+        ref: feat-add-net10-support
+        path: docfx-build
+
     - name: Restore npm dependencies
       run: npm install
       working-directory: templates
@@ -65,13 +72,6 @@ jobs:
     - name: Build site templates
       run: npm run build
       working-directory: templates
-
-    - name: Checkout DocFX PR Branch
-      uses: actions/checkout@v5
-      with:
-        repository: filzrev/docfx
-        ref: feat-add-net10-support
-        path: docfx-build
 
     - name: Build DocFX from PR
       run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
