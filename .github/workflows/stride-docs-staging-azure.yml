@@ -113,7 +113,7 @@ jobs:
 
   deploy:
     if: github.repository == 'stride3d/stride-docs'
-    runs-on: windows-2022
+    runs-on: windows-latest
 
     needs: build
     environment:
