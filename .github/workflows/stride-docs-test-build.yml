@@ -53,6 +53,19 @@ jobs:
     #     lfs: true
     #     ref: master
 
+    # - name: Setup Node.js
+    #   uses: actions/setup-node@v4
+    #   with:
+    #     node-version: '20'
+
+    - name: Restore npm dependencies
+      run: npm install
+      working-directory: templates
+
+    - name: Build site templates
+      run: npm run build
+      working-directory: templates
+
     - name: Checkout DocFX PR Branch
       uses: actions/checkout@v5
       with:
