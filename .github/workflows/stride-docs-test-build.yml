@@ -22,18 +22,18 @@ jobs:
         dotnet-version: 10.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
-    # - name: Checkout Stride Docs
-    #   uses: actions/checkout@v5
-    #   with:
-    #     path: ${{ env.DOCS_PATH }}
-    #     lfs: true
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v5
+      with:
+        path: ${{ env.DOCS_PATH }}
+        lfs: true
 
     # - name: Set Version in docfx.json
-    #   run: |
-    #     $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
-    #     $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
-    #     Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
-    #   shell: pwsh
+      run: |
+        $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
+        $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
+        Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
+      shell: pwsh
 
     # - name: Display Updated docfx.json
     #   run: cat "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}"
@@ -44,20 +44,16 @@ jobs:
     #   shell: pwsh
 
     # Checkout the Stride repository from the default branch
-    # - name: Checkout Stride (note the LFS)
-    #   uses: actions/checkout@v5
-    #   with:
-    #     repository: stride3d/stride
-    #     token: ${{ secrets.GITHUB_TOKEN }}
-    #     path: stride
-    #     lfs: true
-    #     ref: master
+    - name: Checkout Stride (note the LFS)
+      uses: actions/checkout@v5
+      with:
+        repository: stride3d/stride
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: stride
+        lfs: true
+        ref: master
 
-    # - name: Setup Node.js
-    #   uses: actions/setup-node@v4
-    #   with:
-    #     node-version: '20'
-
+    # Temporary solution till the new docfx is available
     - name: Checkout DocFX PR Branch
       uses: actions/checkout@v5
       with:
@@ -75,7 +71,6 @@ jobs:
 
     - name: Build DocFX from PR
       run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
-      #run: dotnet publish src/docfx -f net10.0 -c Release /p:Version=2.8-stride --self-contained -r win-x64 -o drop/publish/win-x64
       working-directory: docfx-build
       shell: pwsh
 
@@ -83,6 +78,13 @@ jobs:
       run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
       working-directory: docfx-build
       shell: pwsh
+      # End of Temporary solution
+
+    #- name: Install DocFX
+      # This installs the latest version of DocFX and may introduce breaking changes
+      # run: dotnet tool update -g docfx
+      # This installs a specific, tested version of DocFX.
+      #run: dotnet tool update -g docfx --version 2.78.3
 
     - name: Build documentation
       run: ./build-all.bat
