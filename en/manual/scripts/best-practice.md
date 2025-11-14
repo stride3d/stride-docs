@@ -17,23 +17,28 @@ Many systems become interdependent once implemented, for example:
 With that said, one will stumble on issues along the way that will require a change in design, a rewrite of those systems, for example: an uninteresting or unfeasible feature, a re-evaluation of your game's scope, shortcuts made to get a feature out the door sooner, an ill-defined initial design, and so on.
 
 The design of a game is not set in stone; it is refined as Macklin and Sharp, Game Designers at Parsons School of Design, observed:
+
 > Designing games is challenging [...] Compounding all this is the fact that game designers can’t really “see” their designs until they are played, and their games can’t be played until they are made. This is where the iterative design process comes in handy.  
-> Macklin, C., & Sharp, J. (2016). Games, design and play: A detailed approach to iterative game design. Addison-Wesley Professional.
+>
+> <strong>Macklin, C., & Sharp, J.</strong> (2016). Games, design and play: A detailed approach to iterative game design. Addison-Wesley Professional.
 
 You might feel like leaving those rewrites on the back burner as they don't contribute directly to the game, but doing so will cause you to slowly write yourself into a corner, wasting time stacking quick patches around problematic systems to keep them going, accruing bugs and performance issues instead of dealing with the problem head-on.
 
 Frederick Brooks, one of the most influential software designers, on planning and rewriting software:
-> [...] is not whether to build a pilot system and throw it away. You will do that. The only question is whether to plan in advance to build a throwaway, or to promise to deliver the throwaway to customers. Seen this way, the answer is much clearer. Delivering that throwaway to customers buys time, but it does so only at the cost of agony for the user, distraction for the builders while they do the redesign, and a bad reputation for the product that the best redesign will find hard to live down.  
-> Hence plan to throw one away; you will, anyhow.  
-> Frederick P. Brooks Jr. (1975). The Mythical Man-Month. Addison-Wesley.
+> [...] is not whether to build a pilot system and throw it away. You will do that. The only question is whether to plan in advance to build a throwaway, or to promise to deliver the throwaway to customers. Seen this way, the answer is much clearer. Delivering that throwaway to customers buys time, but it does so only at the cost of agony for the user, distraction for the builders while they do the redesign, and a bad reputation for the product that the best redesign will find hard to live down.
+>
+> Hence plan to throw one away; you will, anyhow.
+>
+> <strong>Frederick P. Brooks Jr.</strong> (1975). The Mythical Man-Month. Addison-Wesley.
 
 ## Premature Generalization
 
 Related to the above, we may fall into the extreme opposite, over designing systems. Misleading ourselves into adding features covering hypothetical cases, expanding it to accommodate future games, or encapsulating it to share it for others to use.
 
 Here's Richard Fabian, Senior Programmer on Max Payne 3, on systems re-use:
-> It is regarded as one of the holy grails of development to be able to consistently reduce development overhead by reusing old code. [...] The unfortunate truth is any interesting new features you want to add will probably be incompatible with your old code and old way of laying out your data, and you will need to either rewrite the old code to allow for the new feature, or rewrite the old code to allow for the new data layout.  
-> Richard Fabian. [Data-Oriented Design](https://www.dataorienteddesign.com/dodbook.pdf#page=214) 11.7 Reusable generic code
+> It is regarded as one of the holy grails of development to be able to consistently reduce development overhead by reusing old code. [...] The unfortunate truth is any interesting new features you want to add will probably be incompatible with your old code and old way of laying out your data, and you will need to either rewrite the old code to allow for the new feature, or rewrite the old code to allow for the new data layout.
+>
+> <strong>Richard Fabian</strong>. [Data-Oriented Design](https://www.dataorienteddesign.com/dodbook.pdf#page=214) 11.7 Reusable generic code.
 
 Continuing on the same subject, here's a survey by William Agresti:
 > One survey result had implications for a role that reuse may play in large software projects exceeding their budgets: 40% of developers reported that in 25% or more of the cases, they ended up extensively modifying or completely rewriting a module that had planned to be reused.  
