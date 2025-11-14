@@ -44,3 +44,21 @@
 footer .link-danger {
     color: var(--stride-red-web);
 }
+
+blockquote {
+    border-width: 0 0 0 4px;
+    border-color: var(--stride-red-web);
+    background: #f4f4f4;
+    padding: 9px .8em 1px 0.8em;
+    font-style: italic;
+    /*line-height: 27px;*/
+}
+
+    blockquote p:last-child {
+        font-style: normal;
+    }
+
+[data-bs-theme=dark] blockquote {
+    border-color: var(--stride-red-web);
+    background: #33383c;
+}
