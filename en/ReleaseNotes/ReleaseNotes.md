@@ -88,37 +88,25 @@ We are especially excited to welcome the following new contributors to Stride wi
 
 ## Stride 4.3 feature overview
 
-[WIP]
- 
-### Bepu Physics Integration
+### Bepu physics integration
+
 Adding support for [Bepu Physics](https://github.com/bepu/bepuphysics2), a ridiculously fast physics engine written entirely in c#.
 
 Having both a game and physics engine in the same ecosystem reduces the cost of maintaining and improving it, the overhead that we may incur when communicating between the two APIs, and the barrier to entry for contributors.
 
 Bullet is still the default physics engine, and we welcome any contribution towards it, but our efforts will be focused on Bepu from now.
 
-The integration is effectively done, with Bepu's feature set now being slightly ahead of Bullet's.
+The integration is effectively done, with Bepu's feature set now being slightly ahead of Bullet's. Have a look at [this page](https://doc.stride3d.net/latest/en/manual/physics/configuration.html) if you want to migrate to Bepu.
 
-Have a look at [this page](https://doc.stride3d.net/latest/en/manual/physics/configuration.html) if you want to migrate to Bepu.
+### Vulkan compute shader support
+
+Vulkan graphics backend has been modified to support compute shaders, the shader compiler has also been modified to support computer shader generation for GLSL.
 
 ### User-defined Assets
 
 Introducing [Custom Assets](https://doc.stride3d.net/latest/en/manual/scripts/custom-assets.html), a way to define and store data which can be referenced across multiple components, scenes and through other assets.
 
 The asset compiler also gives you the ability to build more complex systems like custom file importers.
-
-### Efficient High-Level API to read and manipulate meshes
-Vertex buffers do not have a standardized layout, each mesh may have its own specific layout and data type it uses for its vertices. Some have blend weights, or tangents, while others only have positions - they may also use different data types, for example Half4 positions, 4byte color ...
-
-We added in two helpers in [VertexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.VertexBufferHelper.html) and [IndexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.IndexBufferHelper.html) to provide a standardized way to read and write to those buffers.
-
-### Vulkan Compute Shader Support
-Vulkan graphics backend has been modified to support compute shaders, the shader compiler has also been modified to support computer shader generation for GLSL.
-
-### Interface processor
-Stride has a [component processors](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/usage.html), a user-defined class which can collect and process all components of a given type in the running game. It is also known as the `System` part of the `ECS` acronym. 
-
-The new [Flexible processing system](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/flexible-processing.html) provides more type safety, and the ability to process components by their interfaces. You could, for example, implement a custom update callback any component could receive through this API.
 
 ### Ongoing efforts to build projects *from* Linux and Apple desktops
 
@@ -133,35 +121,44 @@ We've introduced a couple of changes to improve on that front:
 
 Some work is still required on this front, but simpler projects can now be built from those platforms.
 
+### Efficient API to manipulate meshes
+
+Vertex buffers do not have a standardized layout, each mesh may have its own specific layout and data type it uses for its vertices. Some have blend weights, or tangents, while others only have positions - they may also use different data types, for example Half4 positions, 4byte color ...
+
+We added in two helpers in [VertexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.VertexBufferHelper.html) and [IndexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.IndexBufferHelper.html) to provide a standardized way to read and write to those buffers.
+
 ### Open project with Rider and VSCode from the GameStudio
 
 While any IDE can open and build Stride projects, the editor button to open said project only had special handling for Visual Studio. @Jklawreszuk added support for Rider and VSCode.
 
-### 
+### Interface processor
 
+Stride has a [component processors](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/usage.html), a user-defined class which can collect and process all components of a given type in the running game. It is also known as the `System` part of the `ECS` acronym. 
+
+The new [flexible processing system](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/flexible-processing.html) provides more type safety, and the ability to process components by their interfaces. You could, for example, implement a custom update callback any component could receive through this API.
+
+### And more minor changes
+
+- [HDR Rendering Support for D3d/Windows](https://github.com/stride3d/stride/pull/2711)
 - [User-defined gizmos](https://doc.stride3d.net/latest/en/manual/scripts/gizmos.html)
-- HDR Rendering Support for D3d/Windows
-- Haptic feedback integration for VR runtimes
+- [Haptic feedback integration for VR runtimes](https://github.com/stride3d/stride/pull/2169)
+- [API for OpenXR Passthrough](https://github.com/stride3d/stride/pull/2141)
 
 ## Fixes
 Although there have been [many fixes](https://github.com/stride3d/stride/pulls?page=2&q=is%3Apr+merged%3A%3E2023-10-10), we'd like to point some of them out:
 
-[WIP]
 - Major performance improvements, particularly for graphics and UI
-- Vulkan: concurrency fixes, resizing fixes, compute support.
-- OpenGL: fixes for resizing, UIPage crash, updated libraries.
-- OpenXR: stability improvements, passthrough API additions.
-- Silk.NET updates
-- Assembly reloading
+- Multiple fixes improving Vulkan, OpenGL, games under Linux and OpenXR stability
+- And fixes for edge cases when reloading assemblies in the game studio
 
 ## Also good to know
 
 [WIP]
-Mention breaking changes between major versions
-Ongoing work for building the game from other platforms
-Ongoing work for running the editor on other platforms
-Ongoing work to improve the Shader system
-Ongoing work to improve D3d12 and Vulkan, and deprecate D3d11 and OpenGL
+We are already hard at work on a bunch of ongoing projects for version 4.4 and beyond;
+- Continuing work to allow for building games *from* other platforms
+- Converting our Windows-only GameStudio to cross-platform through Avalonia
+- Improvements to shader compilation, reducing in-game hangs while building shader permutations
+- More work on D3d12 and Vulkan as we slowly transition away from D3d11
 
 ## Acknowledgements
 We extend our heartfelt gratitude for all the hard work and donations we have received. Your generous contributions significantly aid in the continuous development and enhancement of the Stride community and projects. Thank you for your support and belief in our collective efforts.
