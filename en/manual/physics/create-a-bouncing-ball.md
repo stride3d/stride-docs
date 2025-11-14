@@ -83,7 +83,8 @@ The Sphere (body) responds to gravity and falls. The Ground (static collider) br
 
 To create a bounce effect, we need to change the `Spring Frequency` and `Spring Daming Ratio` of the Sphere.
 
-> [!Note] Bepu internally uses speculative contacts which does not play well with traditional coefficient of restitution. Instead, bounces can be implemented through contact constraint springiness, this specificity mean that bounces actually take place over multiple simulation steps instead of on contact. This may be counter-intuitive for users accustomed to other engine's restitution-based bounciness.
+> [!NOTE]
+> Bepu internally uses speculative contacts which does not play well with traditional coefficient of restitution. Instead, bounces can be implemented through contact constraint springiness, this specificity mean that bounces actually take place over multiple simulation steps instead of on contact. This may be counter-intuitive for users accustomed to other engine's restitution-based bounciness.
 
 * Bounciness is dominated by `Spring Damping Ratio`; setting it to zero minimizes energy loss on impact.
 * Increasing `Spring Frequency` can make impacts less bouncy when. This happens because the integration rate becomes too slow to represent the motion, and it gets damped away. Increasing the substepping rate or using more timesteps preserves bounciness with higher frequencies.

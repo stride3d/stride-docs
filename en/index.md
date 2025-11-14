@@ -75,9 +75,9 @@ Welcome to the Stride documentation, specifically designed for game developers, 
 
 You can download PDF versions of various Stride documentation sections:
 
-- [Stride Manual](manual/stride-manual.pdf): (File size: 82MB)
-- [Stride Tutorials](tutorials/stride-tutorials.pdf): (File size: 13MB)
-- [Contributing to Stride](contributors/contributing-in-stride.pdf): (File size: 8MB)
+- [Stride Manual](manual/stride-manual.pdf): (File size: 120MB)
+- [Stride Tutorials](tutorials/stride-tutorials.pdf): (File size: 17MB)
+- [Contributing to Stride](contributors/contributing-in-stride.pdf): (File size: 16MB)
 
 > [!NOTE]
 > Please note that while our English documentation is actively updated, translations may not always be current. We recommend English-literate users to refer to the original for the latest information. To help with translations or report discrepancies, please see our GitHub or community forums. Your input is invaluable!

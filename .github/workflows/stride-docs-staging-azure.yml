@@ -25,17 +25,17 @@ jobs:
   build:
     # Run this job only if the repository is 'stride3d/stride-docs'
     if: github.repository == 'stride3d/stride-docs'
-    runs-on: windows-2022
+    runs-on: windows-latest
 
     steps:
     - name: .NET SDK Setup
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.x
+        dotnet-version: 10.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: ${{ env.DOCS_PATH }}
         lfs: true
@@ -57,7 +57,7 @@ jobs:
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: stride3d/stride
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -65,11 +65,38 @@ jobs:
         lfs: true
         ref: master
 
-    - name: Install DocFX
+    # Temporary solution till the new docfx is available
+    - name: Checkout DocFX PR Branch
+      uses: actions/checkout@v5
+      with:
+        repository: filzrev/docfx
+        ref: feat-add-net10-support
+        path: docfx-build
+
+    - name: Restore npm dependencies
+      run: npm install
+      working-directory:  docfx-build/templates
+
+    - name: Build site templates
+      run: npm run build
+      working-directory:  docfx-build/templates
+
+    - name: Build DocFX from PR
+      run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
+      working-directory: docfx-build
+      shell: pwsh
+
+    - name: Build Install DocFX
+      run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
+      working-directory: docfx-build
+      shell: pwsh
+      # End of Temporary solution
+      
+    #- name: Install DocFX
       # This installs the latest version of DocFX and may introduce breaking changes
       # run: dotnet tool update -g docfx
       # This installs a specific, tested version of DocFX.
-      run: dotnet tool update -g docfx --version 2.78.3
+      #run: dotnet tool update -g docfx --version 2.78.3
 
     - name: Build documentation
       run: ./build-all.bat
@@ -79,14 +106,14 @@ jobs:
       run: 7z a -r DocFX-app.zip ./${{ env.DOCS_PATH }}/_site/*
 
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: DocFX-app
         path: DocFX-app.zip
 
   deploy:
     if: github.repository == 'stride3d/stride-docs'
-    runs-on: windows-2022
+    runs-on: windows-latest
 
     needs: build
     environment:
@@ -95,7 +122,7 @@ jobs:
 
     steps:
     - name: Download artifact from build job
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v6
       with:
         name: DocFX-app
 
