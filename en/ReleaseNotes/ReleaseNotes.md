@@ -35,13 +35,13 @@ Stride 4.3 includes numerous enhancements and improvements. Here’s what to exp
 * fix: Regression in mesh bounds calculation introduced through #2858 by @johang88 in https://github.com/stride3d/stride/pull/2952
 * fix: Ensure cached data is up to date when models are mutated by @Eideren in https://github.com/stride3d/stride/pull/2936
 * feat: Match constructors between Index and VertexBufferHelper and improve documentation by @Eideren in https://github.com/stride3d/stride/pull/2941
+### ⌨️ Input
+* fix: Adds touch support to Winforms based GameForm by @joreg in https://github.com/stride3d/stride/pull/1664
 ### ⚙️ Physics
 * docs: fix incorrect documentation from pr #2930 by @Eideren in https://github.com/stride3d/stride/pull/2943
 * fix: Removal of self while running OnSimulationUpdate by @Eideren in https://github.com/stride3d/stride/pull/2954
 ### 🔄 Serialization
 * fix: Instantiate() behavior for Prefab and Entity references by @Eideren in https://github.com/stride3d/stride/pull/2914
-### 💪 Other changes
-* Adds touch support to Winforms based GameForm by @joreg in https://github.com/stride3d/stride/pull/1664
 
 ## Contributors
 
@@ -53,7 +53,38 @@ We are especially excited to welcome the following new contributors to Stride wi
 
 * @ModxVoldHunter made their first contribution in https://github.com/stride3d/stride/pull/2961
 
-[TODO] add all new contributors from 4.2
+### New contributors since 4.2
+
+* @C0dingSteve made their first contribution in https://github.com/stride3d/stride/pull/2847
+* @MEEMexe made their first contribution in https://github.com/stride3d/stride/pull/2871
+* @ferafiks made their first contribution in https://github.com/stride3d/stride/pull/2845
+* @Kreblc3428 made their first contribution in https://github.com/stride3d/stride/pull/2873
+* @Acissathar made their first contribution in https://github.com/stride3d/stride/pull/2902
+* @rmtttt made their first contribution in https://github.com/stride3d/stride/pull/2925
+* @laske185 made their first contribution in https://github.com/stride3d/stride/pull/2674
+* @MikhailArsentevTheSecond made their first contribution in https://github.com/stride3d/stride/pull/2728
+* @hoelzl made their first contribution in https://github.com/stride3d/stride/pull/2755
+* @kutal10 made their first contribution in https://github.com/stride3d/stride/pull/2792
+* @ClamEater14 made their first contribution in https://github.com/stride3d/stride/pull/2593
+* @net2cn made their first contribution in https://github.com/stride3d/stride/pull/2598
+* @Nicogo1705 made their first contribution in https://github.com/stride3d/stride/pull/2571
+* @ourabigdev made their first contribution in https://github.com/stride3d/stride/pull/2582
+* @kopffarben made their first contribution in https://github.com/stride3d/stride/pull/2482
+* @Feralnex made their first contribution in https://github.com/stride3d/stride/pull/2494
+* @TranquilAbyss made their first contribution in https://github.com/stride3d/stride/pull/2518
+* @levifmorais made their first contribution in https://github.com/stride3d/stride/pull/2546
+* @tymokvo made their first contribution in https://github.com/stride3d/stride/pull/2339
+* @Arc-huangjingtong made their first contribution in https://github.com/stride3d/stride/pull/2357
+* @minktusk made their first contribution in https://github.com/stride3d/stride/pull/2345
+* @timcassell made their first contribution in https://github.com/stride3d/stride/pull/2373
+* @dloe made their first contribution in https://github.com/stride3d/stride/pull/2257
+* @wrshield made their first contribution in https://github.com/stride3d/stride/pull/2272
+* @soorMSWE made their first contribution in https://github.com/stride3d/stride/pull/2280
+* @MechWarrior99 made their first contribution in https://github.com/stride3d/stride/pull/2258
+* @kristian15959 made their first contribution in https://github.com/stride3d/stride/pull/2294
+* @YerkoAndrei made their first contribution in https://github.com/stride3d/stride/pull/2307
+* @ComputerSmoke made their first contribution in https://github.com/stride3d/stride/pull/2169
+* @timconner made their first contribution in https://github.com/stride3d/stride/pull/2183
 
 ## Stride 4.3 feature overview
 
