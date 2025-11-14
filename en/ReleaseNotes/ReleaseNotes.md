@@ -156,7 +156,8 @@ Although there have been [many fixes](https://github.com/stride3d/stride/pulls?p
 [WIP]
 We are already hard at work on a bunch of ongoing projects for version 4.4 and beyond;
 - Continuing work to allow for building games *from* other platforms
-- Converting our Windows-only GameStudio to cross-platform through Avalonia. [Here](https://github.com/orgs/stride3d/projects/6)
+- Converting our Windows-only GameStudio to cross-platform through Avalonia.  
+  We welcome anyone willing to contribute to this project over [Here](https://github.com/orgs/stride3d/projects/6) - just have to make sure to add a comment to one of the unassigned issues you want to work on.
 - Improvements to shader compilation, reducing in-game hangs while building shader permutations. [Here](https://github.com/stride3d/SDSL)
 - More work on D3d12 and Vulkan as we slowly transition away from D3d11
 
