@@ -11,9 +11,9 @@ A massive thank you to the open-source Stride community for your dedicated contr
 ## What's new in this release
 Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
 
-- **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-
-- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://devblogs.microsoft.com/dotnet/announcing-csharp-12/)
+- **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
+ 
+- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://learn.microsoft.com/en-gb/dotnet/csharp/whats-new/csharp-14)
 
 ## What has changed since Stride 4.2
 
@@ -43,8 +43,8 @@ Stride can build games under Windows to target the different devices we support,
 
 We've introduced a couple of changes to improve on that front:
 - Replacing our custom C++/CLI FBX importer with [Assimp](https://github.com/assimp/assimp)
-- Fixing the asset compiler to run on all desktop OSes.
-- Many build-system refactors to move toward fully cross-platform development.
+- Fixing the asset compiler to run on all desktop OSes
+- Many build-system refactors to move toward fully cross-platform development
 - Building VHACD for Linux
 - Adjust FreeImage and DirectXTex for all platforms
 
@@ -85,11 +85,10 @@ Although there have been [many fixes](https://github.com/stride3d/stride/pulls?p
 [WIP]
 We are already hard at work on a bunch of ongoing projects for version 4.4 and beyond;
 - Continuing work to allow for building games *from* other platforms
-- Converting our Windows-only GameStudio to cross-platform through Avalonia.  
-  We welcome anyone willing to contribute to this project over [Here](https://github.com/orgs/stride3d/projects/6) - just have to make sure to add a comment to one of the unassigned issues you want to work on.
+- Converting our Windows-only GameStudio to cross-platform through Avalonia
+  We welcome anyone willing to contribute to this project over [Here](https://github.com/orgs/stride3d/projects/6) - just have to make sure to add a comment to one of the unassigned issues you want to work on
 - Improvements to shader compilation, reducing in-game hangs while building shader permutations. [Here](https://github.com/stride3d/SDSL)
 - More work on D3d12 and Vulkan as we slowly transition away from D3d11
-
 
 ## Changelog for this release
 
