@@ -89,18 +89,33 @@ We are especially excited to welcome the following new contributors to Stride wi
 ## Stride 4.3 feature overview
 
 [WIP]
-- Bepu Physics Integration
-    - Bullet Physics is being phased out
-- ScriptableObject-like custom data assets
+ 
+### Bepu Physics Integration
+Adding support for [Bepu Physics](https://github.com/bepu/bepuphysics2), a ridiculously fast physics engine written entirely in c#.
+
+Having both a game and physics engine in the same ecosystem reduces the cost of maintaining and improving it, the overhead that we may incur when communicating between the two APIs, and the barrier to entry for contributors.
+
+Bullet is still the default physics engine, and we welcome any contribution towards it, but our efforts will be focused on Bepu from now.
+
+The integration is effectively done, with Bepu's feature set now being slightly ahead of Bullet's.
+
+Have a look at [this page](https://doc.stride3d.net/latest/en/manual/physics/configuration.html) if you want to migrate to Bepu.
+
+### User-defined Assets
+
+Introducing [Custom Assets](https://doc.stride3d.net/latest/en/manual/scripts/custom-assets.html), a way to define and store data which can be referenced across multiple components, scenes and through other assets.
+
+The asset compiler also gives you the ability to build more complex systems like custom file importers.
+
 - Efficient High-Level API to read and manipulate meshes
 - Major performance improvements, particularly for graphics and UI
 - Vulkan Compute Shader Support
-- Flexible processing system
+- [Flexible processing system](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/flexible-processing.html)
 - Unified 3D Asset Importer
 - UI layout gap property
     - Similar to CSS gap
 - GameStudio can detect and work with multiple installed IDEs
-- User-defined gizmos
+- [User-defined gizmos](https://doc.stride3d.net/latest/en/manual/scripts/gizmos.html)
 - HDR Rendering Support for D3d/Windows
 - Haptic feedback integration for VR runtimes
 
