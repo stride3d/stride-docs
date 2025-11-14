@@ -9,7 +9,7 @@ Updating Stride is a straightforward process, but it's important to follow the s
 
 ## Updating Stride
 
-1. **Update Visual Studio 2022:** Ensure that you have the latest version of Visual Studio 2022. This is crucial for compatibility with the latest Stride version. After updating Visual Studio, restart your computer to apply the changes fully.
+1. **Update Visual Studio 2026:** Ensure that you have the latest version of Visual Studio 2026. This is crucial for compatibility with the latest Stride version. After updating Visual Studio, restart your computer to apply the changes fully.
 1. **Stride Launcher Instructions:** Open the Stride Launcher. Follow the instructions provided to update or install the Visual Studio plugin for Stride. This step is essential for integrating the latest version of Stride with your development environment.
 1. **Restart Again:** After completing the installation or update of the Visual Studio plugin, restart your computer once more. This helps to ensure that all components are correctly loaded and ready for use.
 
