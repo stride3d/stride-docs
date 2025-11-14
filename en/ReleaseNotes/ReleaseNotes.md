@@ -88,16 +88,42 @@ We are especially excited to welcome the following new contributors to Stride wi
 
 ## Stride 4.3 feature overview
 
-[TODO]
+[WIP]
+- Bepu Physics Integration
+    - Bullet Physics is being phased out
+- ScriptableObject-like custom data assets
+- Efficient High-Level API to read and manipulate meshes
+- Major performance improvements, particularly for graphics and UI
+- Vulkan Compute Shader Support
+- Flexible processing system
+- Unified 3D Asset Importer
+- UI layout gap property
+    - Similar to CSS gap
+- GameStudio can detect and work with multiple installed IDEs
+- User-defined gizmos
+- HDR Rendering Support for D3d/Windows
+- Haptic feedback integration for VR runtimes
 
 ## Fixes
 Although there have been [many fixes](https://github.com/stride3d/stride/pulls?page=2&q=is%3Apr+merged%3A%3E2023-10-10), we'd like to point some of them out:
 
-[TODO]
+[WIP]
+- Vulkan: concurrency fixes, resizing fixes, compute support.
+- OpenGL: fixes for resizing, UIPage crash, updated libraries.
+- OpenXR: stability improvements, passthrough API additions.
+- Asset compiler can now run on all desktop OSes.
+- Increasing number of assets can be compiled on Linux/macOS.
+- Many build-system refactors to move toward fully cross-platform development.
+- Linux VHACD
+- FreeImage modernization
+- DirectXTex portability work
+- Silk.NET updates
+- Assembly reloading
 
 ## Also good to know
 
-[TODO]
+[WIP]
+Mention breaking changes between major versions
 
 ## Acknowledgements
 We extend our heartfelt gratitude for all the hard work and donations we have received. Your generous contributions significantly aid in the continuous development and enhancement of the Stride community and projects. Thank you for your support and belief in our collective efforts.
