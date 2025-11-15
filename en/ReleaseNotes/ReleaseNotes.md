@@ -19,7 +19,7 @@ Stride 4.3 includes numerous enhancements and improvements. Here’s what to exp
 
 ### Bepu physics integration
 
-Adding support for [Bepu Physics](https://github.com/bepu/bepuphysics2), a ridiculously fast physics engine written entirely in c#.
+Adding support for [Bepu Physics](https://github.com/bepu/bepuphysics2), a ridiculously fast physics engine written entirely in C#.
 
 Having both a game and physics engine in the same ecosystem reduces the cost of maintaining and improving it, the overhead that we may incur when communicating between the two APIs, and the barrier to entry for contributors.
 
