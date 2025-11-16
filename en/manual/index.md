@@ -22,7 +22,7 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
   - <span class="badge text-bg-info">Updated</span> [Scripts - Best Practices](scripts/best-practice.md) - More content added
   - <span class="badge text-bg-warning">Important</span> [Physics - Script a trigger](physics/script-a-trigger.md) - Example updated
   - <span class="badge text-bg-warning">Important</span> [Physics - Triggers](physics/triggers.md) - Example updated 
-  - <span class="badge text-bg-info">Updated</span> [Graphics - Custom shaders](graphics/effects-and-shaders/custom-shaers.md) - Troubleshooting section added
+  - <span class="badge text-bg-info">Updated</span> [Graphics - Custom shaders](graphics/effects-and-shaders/custom-shaders.md) - Troubleshooting section added
   - <span class="badge text-bg-success">New</span> [Glossary](glossary/index.md) - New glossary section added 
 
 **Previous updates**
