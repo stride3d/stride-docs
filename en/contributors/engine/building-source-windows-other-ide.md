@@ -1,8 +1,8 @@
 # Build Stride without Visual Studio
 
-1. **Install** [Visual Studio Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe) with the same prerequisites listed above.
+1. **Install** [Visual Studio Build Tools](https://aka.ms/vs/stable/vs_BuildTools.exe) with the same prerequisites listed above.
 2. **Add MSBuild to your system's PATH:**
-   - Add MSBuild's directory to your `PATH` environment variable (e.g., `C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin`).
+   - Add MSBuild's directory to your `PATH` environment variable (e.g., `C:\Program Files (x86)\Microsoft Visual Studio\2026\BuildTools\MSBuild\Current\Bin`).
 3. **Clone the repository:**
    ```bash
    git lfs clone https://github.com/stride3d/stride.git
