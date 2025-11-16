@@ -30,9 +30,18 @@ The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while 
 
 1. Modify `contributors\engine\building-source-windows.md`
    - Update SDK version references
+   - Update Visual Studio version
+1. Modify `contributors\engine\building-source-windows-other-ide.md`
+   - Update Build Tools path
+1. Modify `contributors\engine\building-source-windows-visual-studio.md`
+   - Update Visual Studio version
 1. Modify `manual\troubleshooting\stride-doesnt-run.md`
-   - Update SDK version references
+   - Update SDK and .NET version references
+   - Update Visual Studio version 
 1. Modify `manual\files-and-folders\distribute-a-game.md`
    - Update SDK version references
 1. Modify `manual\get-started\update-stride.md` 
    - Update Visual Studio version
+1. Modify `includes\docs-prerequisites.md` 
+   - Update SDK and .NET version references
+   - Update Visual Studio version 
