@@ -14,7 +14,7 @@ You might want to clean the cache if:
 
     ![Clean solution](media/clean-solution.png)
 
-2. If you have the [Stride Visual Studio extension](../get-started/visual-studio-extension.md) installed, you can also clean the asset cache. **Using VS 2022**: To do this, under Extensions > **Stride**, select **Clean intermediate assets for Solution**.
+2. If you have the [Stride Visual Studio extension](../get-started/visual-studio-extension.md) installed, you can also clean the asset cache. **Using Visual Studio**: To do this, under Extensions > **Stride**, select **Clean intermediate assets for Solution**.
 
     ![Clean solution](media/clean-assets.png)
 

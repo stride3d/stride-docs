@@ -3,7 +3,7 @@
 ![Physics in Stride](media/physics-index-physics-in-stride.png)
 
 > [!WARNING]
-> These pages are being updated. [Bullet Physics](../physics-bullet/index.md) is being phased out. We no longer plan to support or expand its features as our focus shifts to Bepu Physics. We recommend transitioning to Bepu Physics for access to the latest updates and ongoing improvements.
+> [Bullet Physics](../physics-bullet/index.md) is being phased out. We no longer plan to support or expand its features as our focus shifts to Bepu Physics. We recommend transitioning to Bepu Physics for access to the latest updates and ongoing improvements.
 
 Stride simulates real-world physics such as gravity and collisions using "Bepu physics".
 This section explains how physics components work, how to add them to your project, and how to use them with scripts.
