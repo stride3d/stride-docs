@@ -19,6 +19,10 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
 **Recent updates**
 
 - Manual
+  - <span class="badge text-bg-info">Updated</span> [Scripts - Best Practices](scripts/best-practice.md) - More content added
+  - <span class="badge text-bg-warning">Important</span> [Physics - Script a trigger](physics/script-a-trigger.md) - Example updated
+  - <span class="badge text-bg-warning">Important</span> [Physics - Triggers](physics/triggers.md) - Example updated 
+  - <span class="badge text-bg-info">Updated</span> [Graphics - Custom shaders](graphics/effects-and-shaders/custom-shaers.md) - Troubleshooting section added
   - <span class="badge text-bg-success">New</span> [Glossary](glossary/index.md) - New glossary section added 
 
 **Previous updates**
@@ -43,5 +47,5 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
   - <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
 - Contributing
   - <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - GitHub Project - Roadmap link added
-  - <span class="badge text-bg-success">New</span> [Contributing - Core Team](../contributors/core-team.md) - The Stride core team
+  - <span class="badge text-bg-success">New</span> [Contributing - Core team](../contributors/core-team.md) - The Stride core team
   - <span class="badge text-bg-info">Updated</span> [Contributing - Roadmap](../contributors/roadmap.md) - Status added
