@@ -1,4 +1,4 @@
-# Build Stride with Visual Studio 2022
+# Build Stride with Visual Studio 2026
 
 Here are the steps to build Stride with Visual Studio. If you do not have or want to use Visual Studio, see [building with other IDEs](building-source-windows-other-ide.md).
 
@@ -7,7 +7,7 @@ Here are the steps to build Stride with Visual Studio. If you do not have or wan
    git lfs clone https://github.com/stride3d/stride.git
    ```
 2. **Open the solution:**
-   - Open `<StrideDir>\build\Stride.sln` with Visual Studio 2022. 
+   - Open `<StrideDir>\build\Stride.sln` with Visual Studio. 
    - Build the `Stride.GameStudio` project in the `60-Editor` solution folder (it should be the default startup project) or run it directly from Visual Studio's toolbar.
    - _Optionally_, open and build `Stride.Android.sln`, `Stride.iOS.sln`, etc.
 
@@ -17,9 +17,9 @@ Here are the steps to build Stride with Visual Studio. If you do not have or wan
 ## If building failed
 
 * Some errors for test projects are normal, GameStudio will start anyway.
-* The Visual Studio extension might fail to build if you are missing the [Visual Studio SDK](https://learn.microsoft.com/en-us/visualstudio/extensibility/installing-the-visual-studio-sdk?view=vs-2022), but Game Studio will start anyway.
+* The Visual Studio extension might fail to build if you are missing the [Visual Studio SDK](https://learn.microsoft.com/en-us/visualstudio/extensibility/installing-the-visual-studio-sdk?view=visualstudio), but Game Studio will start anyway.
 * If you skipped any of the **Prerequisites** thinking you already have the latest version, please update to the latest to be sure.
-* Visual Studio might have issues building properly if an older version is present alongside 2022. If you want to keep those versions, ensure they are up to date and that you are building Stride using Visual Studio 2022.
+* Visual Studio might have issues building properly if an older version is present alongside 2026. If you want to keep those versions, ensure they are up to date and that you are building Stride using Visual Studio 2026.
 * Your system's `PATH` should not contain older versions of MSBuild (e.g., `...\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin` should be removed).
 * Some changes might require a system reboot. Try that if you haven't yet, for example, if you see these errors:
   * `Could not find a compatible version of MSBuild.`
