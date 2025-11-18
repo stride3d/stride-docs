@@ -82,7 +82,6 @@ Although there have been [many fixes](https://github.com/stride3d/stride/pulls?p
 
 ### Also good to know
 
-[WIP]
 We are already hard at work on a bunch of ongoing projects for version 4.4 and beyond;
 - Continuing work to allow for building games *from* other platforms
 - Converting our Windows-only GameStudio to cross-platform through Avalonia
