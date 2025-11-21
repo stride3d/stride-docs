@@ -20,9 +20,13 @@ Assuming the transition is from version `4.1` to `4.2`, and that the Stride sour
    - `dotnet-version:` Update to the related .NET version
 1. Merging `master` to `staging` branch will automatically trigger deployment to our [staging environment](https://stride-doc-staging.azurewebsites.net/latest/en/)
 1. ⚠️ Merging `master` to `release` branch will automatically trigger deployment to our production website
+1. It might take up to 24 hours for the CDN to refresh. The best approach is to contact the core contributors and request a CDN reset
 
 > [!CAUTION]
 > ⚠️ You must manually rename the existing folder on the server from `4.1` to `4.1-backup`, otherwise, the deployment to production will delete this folder while deploying to the `4.2` folder. Once `4.2` is deployed, it is safe to rename `4.1-backup` back to `4.1`. Any further deployments will affect only the `4.2` folder.
+
+> [!CAUTION]
+> There is a rule `<action type="Rewrite" url="4.3/{R:1}" />` in the root `web.config` that might need adjustment, even though it already points to **4.3**. Changing it to **4.2** will correctly show the 4.2 docs as the default, as expected. After switching it back to **4.3**, if the site still displays **4.2**, try appending `?randomtext` to the end of the URL. This forces an uncached version, which should finally display the **4.3** docs. At that point, the **4.3** rewrite rule is confirmed to work for uncached pages, meaning the CDN needs to be reset.
 
 The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while maintaining accessibility to previous versions. Note, that the deployment profile must be set to not delete existing items.
 
