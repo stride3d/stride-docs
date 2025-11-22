@@ -6,7 +6,7 @@ Stride contributors are thrilled to announce the release of Stride 4.3, now full
 
 Read the full blog post here: [Announcing Stride 4.3](https://www.stride3d.net/blog/announcing-stride-4-3-in-dotnet-10/)
 
-A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.3 a reality.
+A massive thank you to the open-source Stride community for your dedicated contributions.
 
 ## What's new in this release
 Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
