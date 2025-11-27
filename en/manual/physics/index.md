@@ -22,6 +22,7 @@ This section explains how physics components work, how to add them to your proje
 * [Constraints](constraints.md): Join physics objects together, constrain them around points
 * [Physics Queries](raycasting.md): Operations to find objects in the scene
 * [Physics Update](physics-update.md): Updating logic alongside physics
+* [FAQ](faq.md): Frequently asked questions
 
 ### Tutorials
 
