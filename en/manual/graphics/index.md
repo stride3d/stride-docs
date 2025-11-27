@@ -25,6 +25,7 @@ The graphics module provides a set of methods to display the game. Although Stri
 * [Textures](textures/index.md)
 * [Lights and shadows](lights-and-shadows/index.md)
 * [Post effects](post-effects/index.md)
+* [Window Configuration](window-configuration.md)
 * [Graphics compositor](graphics-compositor/index.md)
 * [Effects and shaders](effects-and-shaders/index.md)
 * [Low-level API](low-level-api/index.md)
