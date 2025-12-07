@@ -289,6 +289,8 @@ items:
             href: graphics/post-effects/light-streaks.md
           - name: Local reflections
             href: graphics/post-effects/local-reflections.md
+      - name: Window Configuration
+        href: graphics/window-configuration.md
       - name: Graphics compositor
         href: graphics/graphics-compositor/index.md
         items:

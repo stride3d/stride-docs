@@ -6,14 +6,14 @@ Stride contributors are thrilled to announce the release of Stride 4.3, now full
 
 Read the full blog post here: [Announcing Stride 4.3](https://www.stride3d.net/blog/announcing-stride-4-3-in-dotnet-10/)
 
-A massive thank you to the open-source Stride community for your dedicated contributions. This release saw over 75 contributions from more than 22 amazing contributors, each playing a crucial role in making Stride 4.3 a reality.
+A massive thank you to the open-source Stride community for your dedicated contributions.
 
 ## What's new in this release
 Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
 
 - **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
  
-- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://learn.microsoft.com/en-gb/dotnet/csharp/whats-new/csharp-14)
+- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://devblogs.microsoft.com/dotnet/introducing-csharp-14/)
 
 ## What has changed since Stride 4.2
 
@@ -82,7 +82,6 @@ Although there have been [many fixes](https://github.com/stride3d/stride/pulls?p
 
 ### Also good to know
 
-[WIP]
 We are already hard at work on a bunch of ongoing projects for version 4.4 and beyond;
 - Continuing work to allow for building games *from* other platforms
 - Converting our Windows-only GameStudio to cross-platform through Avalonia

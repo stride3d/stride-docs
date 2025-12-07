@@ -12,7 +12,7 @@ In this tutorial, we'll create a [trigger](triggers.md) that doubles the size of
 
 Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial. This creates a simple scene in which a ball falls from midair, hits the ground, and bounces.
 
-## 3. Add a trigger 
+## 2. Add a trigger 
 
 Now we'll add a trigger between the ball and the ground, so the ball passes through it.
 
@@ -36,7 +36,7 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
    This gives the trigger a box shape.
 
-## 4. Give the trigger a model
+## 3. Give the trigger a model
 
 Right now, the trigger is invisible at runtime. To better show how the trigger works, we'll make it a transparent box. This has no effect on how the trigger works; it just means we can easily see where it is at runtime.
 
@@ -86,7 +86,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     Now the trigger area will be visible at runtime.
 
-## 5. Position the trigger 
+## 4. Position the trigger 
 
 We need to position the trigger between the ground and the sphere, so the ball falls through it.
     
@@ -94,7 +94,7 @@ In the **Property Grid**, under **Transform**, set the **Position** to: *X:0, Y:
 
 Now the trigger entity is between the ground and the sphere.
 
-## 6. Change the sphere size with script
+## 5. Change the sphere size with script
 
 If we run the project now (**F5**), the ball bounces off the trigger, but nothing happens.
 
@@ -162,7 +162,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
 4. Reload the assemblies.
 
-## 7. Add the script
+## 6. Add the script
 
 Finally, let's add this script to the trigger entity as a component.
 
@@ -180,7 +180,7 @@ Finally, let's add this script to the trigger entity as a component.
 
    ![Set contact handler](media/physics-tutorials-create-a-trigger-select-handler-component.png)
 
-## 8. Run the project
+## 7. Run the project
 
 Run the project (**F5**) to see the trigger in action.
 
