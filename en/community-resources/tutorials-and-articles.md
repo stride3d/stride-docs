@@ -1,5 +1,6 @@
 # Tutorials
 
+* [Tutorials by Asatte Games](https://youtube.com/playlist?list=PLkdj9mBu4LRaTZLuhI6SZD5lc3W2OCFPD&si=9IBQwSTLNQFk6Zd7)
 * [Tutorials by Manio143](https://www.youtube.com/playlist?list=PL3KxSbsaNqqvlio_mwy0CIMZcYQugcRIc)
 * [Coding Sea](https://www.youtube.com/@CodingSea/videos)
     * [Basic Platformer Movement Tutorial](https://www.youtube.com/watch?v=eTMT5up1AlY&t=2s)
