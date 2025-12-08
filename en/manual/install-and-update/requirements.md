@@ -1,4 +1,4 @@
-# Development Requirements
+# Requirements
 
 ## General requirements 
 
@@ -13,7 +13,7 @@ To develop projects with Stride, you need:
 | RAM | 4GB (minimum), 8GB (recommended) <small class="text-secondary">[see (2)]</small>
 | .NET SDK | 8+ <small class="text-secondary">[see (3)]</small> |
 
-(1) Earlier versions of Windows _may_ work but are untested.
+(1) Earlier versions of Windows _may_ work, but are untested.
 
 (2) RAM requirements vary depending on your project:
 * Developing simple 2D applications doesn't require much RAM.
