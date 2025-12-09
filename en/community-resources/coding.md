@@ -33,3 +33,8 @@
   - [Using Entity Processors for Scene Editor Plugins](https://github.com/Doprez/lod-example)
   - [Pathfinding With Entity Processors](https://github.com/Doprez/stride-pathfinding-demo)
   - [Arch ECS integrated into Stride](https://github.com/Doprez/stride-arch-ecs#add-arch-components-in-strides-editor)
+
+## Development Tools
+- [HS-Stride-Dev-Console](https://github.com/Keepsie/HS-Stride-Dev-Console) - In-game developer console for runtime commands, scripts, and debugging
+- [HS-Stride-Live-Dev-Editor](https://github.com/Keepsie/HS-Stride-Live-Dev-Editor) - Runtime entity editing with transform manipulation and scene browser
+- [HS-Stride-Engine-Core](https://github.com/Keepsie/HS-Stride-Engine-Core) - Unity-style foundation library with familiar lifecycle methods and helpers
