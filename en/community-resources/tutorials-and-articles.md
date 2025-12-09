@@ -1,5 +1,9 @@
 # Tutorials
 
+* [Tutorials by Asatte Games](https://youtube.com/playlist?list=PLkdj9mBu4LRaTZLuhI6SZD5lc3W2OCFPD&si=9IBQwSTLNQFk6Zd7)
+    * [Main Menu Tutorial - Part 1: Custom UI Library & Menu Layout](https://youtu.be/YsqxdHovn1E)
+    * [Main Menu Tutorial - Part 2: C# Logic & Audio](https://youtu.be/YsqxdHovn1E)
+    * [Main Menu Tutorial - Part 3: Pause Menu & FOV Logic](https://youtu.be/1lV0PL3EBIY)
 * [Tutorials by Manio143](https://www.youtube.com/playlist?list=PL3KxSbsaNqqvlio_mwy0CIMZcYQugcRIc)
 * [Coding Sea](https://www.youtube.com/@CodingSea/videos)
     * [Basic Platformer Movement Tutorial](https://www.youtube.com/watch?v=eTMT5up1AlY&t=2s)
