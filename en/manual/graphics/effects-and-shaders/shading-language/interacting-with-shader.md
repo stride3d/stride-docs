@@ -41,7 +41,7 @@ shader SimpleValues : ComputeShaderBase
 };
 ```
 
-```
+```csharp
 using Stride.Engine;
 using Stride.Graphics;
 using Stride.Rendering;
