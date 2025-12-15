@@ -23,5 +23,6 @@
 - [HS-Stride-Editor-Toolkit](https://github.com/Keepsie/HS-Stride-Editor-Toolkit) - Library for creating custom editor tools with file-based batch automation
 - [HS-Stride-Mass-Importer](https://github.com/Keepsie/HS-Stride-Mass-Importer) - Bulk import FBX, textures, and audio into Stride format automatically
 - [HS-Stride-Model-Importer](https://github.com/Keepsie/HS-Stride-Model-Importer) - Split multi-mesh FBX files into individual selectable parts with hierarchy
+- [HS-Stride-UI-Editor](https://github.com/Keepsie/HS-Stride-UI-Editor) - Standalone UI editor with modern visual workflow - native Stride UI, no framework
 
 
