@@ -43,8 +43,14 @@ If you're interested in **building the Stride engine from source** or **contribu
 >  If you click **Start** and see an error message such as `Could not find a compatible version of MSBuild.` or `Path to dotnet executable is not set.`, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.
 >
 > Example error: ![First launch error](media/stride-launcher-first-time-after-installation-error.webp)
- 
-# Troubleshooting
+
+## Installation Location
+
+The engine and it's editor Game Studio are a [NuGet package](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
+
+Changing the installation location is possible, but it is outside of the scope of this page.
+
+## Troubleshooting
 
 If you don't install the prerequisites, Stride won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Stride doesn't run](../troubleshooting/stride-doesnt-run.md).
 

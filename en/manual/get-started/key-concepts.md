@@ -51,7 +51,7 @@ For more information, read [types of script](../scripts/types-of-script).
 
 An **asset** is a representation of an element in the project (like a texture), that contains a list of it's properties in the engine (e.g. `.sdmat` `.sdprefab`).
 
-A **resource** is a file on the disk containing data, like an image (e.g. `.png` `.mp3`).
+A **resource** is a file on the disk containing data, like an image (e.g. `.png` `.mp3`), that's used in the project.
 
 Assets do not contain resource data. Instead, they reference a resource. For example: a texture asset (`.sdtex`) has a reference to an image (`.png`) that is located in the resource folder.
 
