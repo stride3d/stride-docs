@@ -6,14 +6,7 @@
 
 If you want to **create games using Stride**, this guide provides the installation steps you'll need to follow.
 
-The installer will automatically download and install the prerequisites if they are not detected, including the [Stride Launcher](launch-stride.md), which is essential for downloading and installing the latest version of Stride for game development.
-
 If you're interested in **building the Stride engine from source** or **contributing to its development**, please visit the [Stride GitHub repository](https://github.com/stride3d/stride) for instructions on how to build from source and contribute to the project.
-
-**Prerequisites (automatically installed if not present):**
-
-- Latest **.NET SDK** supported by Stride
-- Microsoft Visual C++ Redistributable
 
 ## Installation Steps
 
@@ -39,22 +32,11 @@ If you're interested in **building the Stride engine from source** or **contribu
 
     ![Stride ready to use](media/stride-launcher-ready.webp)
 
-> [!Note]
->  If you click **Start** and see an error message such as `Could not find a compatible version of MSBuild.` or `Path to dotnet executable is not set.`, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.
->
-> Example error: ![First launch error](media/stride-launcher-first-time-after-installation-error.webp)
-
 ## Installation Location
 
 The engine and it's editor Game Studio are a [NuGet package](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
 
 Changing the installation location is possible, but it is outside of the scope of this page.
-
-## Troubleshooting
-
-If you don't install the prerequisites, Stride won't run. In this case, you can download and install the prerequisites separately. For instructions, see [Troubleshooting — Stride doesn't run](../troubleshooting/stride-doesnt-run.md).
-
-Alternatively, uninstall Stride, restart the Stride installer, and install the prerequisites when prompted.
 
 ## Visual Studio integration
 
@@ -66,3 +48,15 @@ The Visual Studio integration is an optional extension for Visual Studio.
 The extension can be installed via the launcher, by navigating to the **Visual Studio extension** section.
 
 ![Image of the "Visual Studio extension" section in the Stride Launcher.](media/vs-extension.webp)
+
+## Troubleshooting
+
+### `Could not find a compatible version of MSBuild.` or `Path to dotnet executable is not set.`
+
+If you click **Start** and see one of the above error messages, close the Stride Launcher and restart it. This issue is caused by the Stride Launcher not detecting the .NET SDK installation. Restarting the Stride Launcher should resolve the issue. Alternatively, restart your computer.
+
+Example error: ![First launch error](media/stride-launcher-first-time-after-installation-error.webp)
+
+### Stride still refuses to open
+
+If you are still having issues with getting Stride to run, see [Troubleshooting — Stride doesn't run](../troubleshooting/stride-doesnt-run.md).
