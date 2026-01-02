@@ -10,7 +10,7 @@ A scene is a collection of entities that can be loaded and unloaded on demand. M
 
 In Stride, Scenes can contain sub-scenes that can be loaded and unloaded on demand.
 
-[IMAGE HERE]
+![An image showing a scene structure with multiple subscenes containing entities.](media/scene-nesting.webp)
 
 ## Entities
 
@@ -19,8 +19,6 @@ Entities represent different objects in a scene, like the player, enemies, walls
 ## Components
 
 Components dictate how entities which they are attached to behave. For example: a player movement component that makes an entity move, when keyboard buttons are pressed.
-
-[IMAGE HERE]
 
 In code, a component is a class that inherits `StartupScript`, `SyncScript` or `AsyncScript`.
 
