@@ -66,7 +66,3 @@ The Visual Studio integration is an optional extension for Visual Studio.
 The extension can be installed via the launcher, by navigating to the **Visual Studio extension** section.
 
 ![Image of the "Visual Studio extension" section in the Stride Launcher.](media/vs-extension.webp)
-
-## What's next?
-
-* [Launch Stride](launch-stride.md)
