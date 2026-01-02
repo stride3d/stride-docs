@@ -4,17 +4,17 @@
 
 **Game Studio** is an essential tool, used for editing assets, arranging scenes and much more. It's important to familiarize yourself with it's layout.
 
-[IMAGE HERE]
+![An image showing the Game Studio.](media/game-studio.webp)
 
 ## Asset Editor
 
-[IMAGE HERE]
+![An image showing a scene being edited in the Asset Editor.](media/asset-editor.webp)
 
 The **asset editor** is a dedicated editor for certain assets. It's most commonly used for editing scenes and their entities.
 
 ## Property Grid
 
-[IMAGE HERE]
+![An image showing an entity names "Ground" in the property grid with a single component.](media/property-grid.webp)
 
 The **property grid** displays a list of properties of selected assets and entities.
 
@@ -22,7 +22,7 @@ This is where you can assign [Components](key-concepts#components) to entities a
 
 ## Solution Explorer
 
-[IMAGE HERE]
+![An image of the solution explorer.](media/solution-explorer.webp)
 
 The **solution explorer** displays the hierarchy of elements in the C# solution associated with the Project. These elements contain assets and code.
 
@@ -34,11 +34,9 @@ Under each of those elements, there are 2 folders: **Assets** and **Code**.
 * **Assets** contains all assets of that element.
 * **Code** contains all code of that element.
 
-[IMAGE HERE]
-
 ## Asset View
 
-[IMAGE HERE]
+![An image of the asset view.](media/asset-view.webp)
 
 The **asset view** displays contents of a selected folder in the **[solution explorer](#solution-explorer)**.
 
