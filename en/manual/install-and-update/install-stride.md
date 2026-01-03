@@ -36,7 +36,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 
 The engine and it's editor Game Studio are a [NuGet package](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
 
-Changing the installation location is possible, but it is outside of the scope of this page.
+Changing the installation location is possible, but this is outside of the scope of this page.
 
 ## Visual Studio integration
 
