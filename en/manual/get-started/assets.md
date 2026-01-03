@@ -18,11 +18,11 @@ Then, select the type of resource you want to create.
 
 ![Popup showing a list of assets that can be created from the dragged resource.](media/asset-view-from-resource-type.webp)
 
-You will be asked, if you want to **copy the dragged file to the resources folder**. Most of the time, **you want to do this**, in order to make the project easier to share and easier to use version control with.
+You will be asked, if you want to **copy the dragged file to the resources folder**. Most of the time, **you want to do this**, in order to make the project easier to share and use version control with.
 
 ![A popup "Source file 'C:/Users/franc/Downloads/Grass0044K-PNG/Grass0044K-PNG_Color.png' is not inside of your project's resource folders, do you want to copy it?" with two options "yes" and "no".](media/asset-view-copy-resource.webp)
 
-Finally, you will be asked if you want to **move it to the default location**. Again, most of the time **you want to do this**, unless you want to have more control over where resources end up.
+Finally, you will be asked if you want to **move it to the default location**. Again, most of the time **you want to do this**, unless you need more control over where resources end up.
 
 ![A popup "Do you want to place the resource in the default location ?" with two options "yes" and "no"](media/asset-view-resource-default-location.webp)
 
@@ -30,11 +30,11 @@ Finally, you will be asked if you want to **move it to the default location**. A
 
 ![A screenshot of three items in the Asset View, all having a small circle in the top left corner of their icon with one being blue, one green and one gray.](media/asset-view-indicators.webp)
 
-Every asset has a little dot in the top left corner of their icon. This dot signifies if an asset is going to be included when building the project:
-* **Green** - the asset will be included in the build, because a different asset needs it.
+Every asset has a little dot in the top left corner of their icon. This dot indicates if an asset is going to be included when building the project:
 * **Blue** - the asset will be included in the build no matter if it's needed or not.
+* **Green** - the asset will be included in the build, because a different asset needs it.
 * **Gray** - the asset will not be included in the build.
 
-Stride doesn't include assets which aren't used anywhere, meaning that **the cannot be accessed when running the game**. In order to ensure, that an asset will be included in the build no matter what, right click on it and select **Include in build as root asset**.
+Stride doesn't include assets which aren't used anywhere, meaning that **they cannot be accessed when running the game**. In order to ensure, that an asset will always be included in the build, right click on it and select **Include in build as root asset**.
 
 ![A screenshot of an asset's context menu, highlighting an item "Include in build as root asset".](media/asset-view-include-root.webp)
