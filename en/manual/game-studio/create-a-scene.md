@@ -11,9 +11,15 @@ You can create scenes like any other asset. As they are complex assets, they hav
 
 1. In the **Asset View** (by default in the bottom pane), click **Add asset** and select **Scenes**.
 
-    ![Add a scene](media/add-scene.webp)
+    ![Add a scene](media/add-scene.png)
 
-2. Select the **Scene**.
+2. Select the appropriate **scene template**.
+
+    Template | Result
+    ---------|--------
+    Empty scene | An empty scene with no entities or preconfigured rendering pipeline
+    Scene with HDR pipeline | A scene containing basic entities and preconfigured for HDR rendering
+    Scene with LDR pipeline | A scene containing basic entities and preconfigured for LDR rendering
 
 ## Open a scene in the Scene Editor
 
