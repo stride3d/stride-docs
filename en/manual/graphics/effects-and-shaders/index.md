@@ -43,3 +43,4 @@ For mobile platforms, shaders are optimized by a GLSL optimizer to improve perfo
     - [Templates](shading-language/templates.md)
     - [Shader stage input/output automatic management](shading-language/automatic-shader-stage-input-output.md)
 * [Custom shaders](custom-shaders.md)
+* [Shader development with Visual Studio Code](shader-development-vscode.md)

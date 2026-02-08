@@ -325,6 +325,8 @@ items:
                 href: graphics/effects-and-shaders/shading-language/shader-stages.md
           - name: Custom shaders
             href: graphics/effects-and-shaders/custom-shaders.md
+          - name: Shader development with Visual Studio Code
+            href: graphics/effects-and-shaders/shader-development-vscode.md
           - name: Compile shaders
             href: graphics/effects-and-shaders/compile-shaders.md
       - name: Low-level API
