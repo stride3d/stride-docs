@@ -78,7 +78,7 @@ Focus                  | F (with entity selected)
 
 > [!TIP] 
 > You can change the scene navigator controls in **Edit > Settings** under **Scene Editor > Key bindings**.
-> ![Key bindings](media/settings-key-bindings.png)
+> ![Key bindings](media/settings-key-bindings.webp)
 
 ## Change camera editor perspective
 
