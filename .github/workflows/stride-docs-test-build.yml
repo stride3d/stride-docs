@@ -59,8 +59,9 @@ jobs:
       with:
         repository: dotnet/docfx
         # Tested commit
-        ref: 917cda8
+        ref: 917cda864650279e0bbe50b852cb98601e5efa4d
         path: docfx-build
+        fetch-depth: 0
 
     - name: Restore npm dependencies
       run: npm install
