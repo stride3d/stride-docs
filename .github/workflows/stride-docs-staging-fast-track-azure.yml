@@ -23,13 +23,13 @@ jobs:
 
     steps:
     - name: .NET SDK Setup
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 10.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         path: ${{ env.DOCS_PATH }}
         lfs: true
@@ -43,7 +43,7 @@ jobs:
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         repository: stride3d/stride
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -52,12 +52,14 @@ jobs:
         ref: master
 
     # Temporary solution till the new docfx is available
-    - name: Checkout DocFX PR Branch
-      uses: actions/checkout@v5
+    - name: Checkout DocFX
+      uses: actions/checkout@v6
       with:
-        repository: filzrev/docfx
-        ref: feat-add-net10-support
+        repository: dotnet/docfx
+        # Tested commit
+        ref: 917cda864650279e0bbe50b852cb98601e5efa4d
         path: docfx-build
+        fetch-depth: 0
 
     - name: Restore npm dependencies
       run: npm install

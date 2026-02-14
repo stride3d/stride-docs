@@ -16,13 +16,13 @@ jobs:
 
     steps:
     - name: .NET SDK Setup
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 10.x
 
     # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         path: ${{ env.DOCS_PATH }}
         lfs: true
@@ -36,25 +36,55 @@ jobs:
 
     # Checkout the Stride repository from the default branch
     - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         repository: stride3d/stride
         token: ${{ secrets.GITHUB_TOKEN }}
         path: stride
         lfs: true
+        ref: master
 
-    - name: Install DocFX
+    # Temporary solution till the new docfx is available
+    - name: Checkout DocFX
+      uses: actions/checkout@v6
+      with:
+        repository: dotnet/docfx
+        # Tested commit
+        ref: 917cda864650279e0bbe50b852cb98601e5efa4d
+        path: docfx-build
+        fetch-depth: 0
+
+    - name: Restore npm dependencies
+      run: npm install
+      working-directory:  docfx-build/templates
+
+    - name: Build site templates
+      run: npm run build
+      working-directory:  docfx-build/templates
+
+    - name: Build DocFX from PR
+      run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
+      working-directory: docfx-build
+      shell: pwsh
+
+    - name: Build Install DocFX
+      run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
+      working-directory: docfx-build
+      shell: pwsh
+      # End of Temporary solution
+
+    #- name: Install DocFX
       # This installs the latest version of DocFX and may introduce breaking changes
       # run: dotnet tool update -g docfx
       # This installs a specific, tested version of DocFX.
-      run: dotnet tool update -g docfx --version 2.78.3
+      #run: dotnet tool update -g docfx --version 2.78.3
 
     - name: Build documentation
       run: ./build-all.bat
       working-directory: ${{ env.DOCS_PATH }}
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.9.2
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ${{ env.DOCS_PATH }}/_site
