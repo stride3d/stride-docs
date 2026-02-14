@@ -11,6 +11,8 @@ You can also use custom shaders to create custom post effects. For more informat
 
 ## Create a shader
 
+### Option 1: Using Visual Studio (Recommended for Game Studio workflow)
+
 1. Make sure you have the [Stride Visual Studio extension](../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from SDSL ([Stride shading language](index.md)) to `.cs` files.
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../get-started/media/launch-your-game-ide-icon.webp) (**Open in IDE**) to open your project in Visual Studio.
@@ -62,6 +64,29 @@ You can also use custom shaders to create custom post effects. For more informat
 8. In Game Studio, reload the assemblies.
 
     ![Reload assemblies](../../particles/tutorials/media/reload-assemblies.png)
+
+### Option 2: Using Visual Studio Code (Advanced shader development)
+
+For shader-focused development with enhanced IntelliSense and inheritance visualization:
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/)
+2. Install the **Stride Shader Tools** extension:
+   - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=tebjan.sdsl)
+   - [OpenVSX](https://open-vsx.org/extension/tebjan/sdsl) (for VSCodium and other alternatives)
+3. Create your `.sdsl` file in your project's **Assets** folder (or a subfolder within Assets)
+
+   >[!Note]
+   >Shaders must be in the **Assets** folder of your package (the folder containing the `.sdpkg` file). This is part of Stride's [project structure](../../files-and-folders/project-structure.md).
+4. VS Code provides:
+   * Context-aware completions for inherited members, streams, and semantics
+   * Live inheritance tree visualization
+   * Go-to-definition through the shader hierarchy
+   * Real-time error reporting
+
+For detailed information on shader development with VS Code, see [Shader development with Visual Studio Code](shader-development-vscode.md).
+
+>[!Note]
+>When using VS Code for shader authoring, you still need Visual Studio with the Stride extension to generate the `.cs` files that Game Studio requires. The typical workflow is: develop and edit shaders in VS Code, then open the solution in Visual Studio to trigger the code generation, and finally reload assemblies in Game Studio.
 
     The **Asset View** lists the shader in the same directory as your scripts (eg **MyGame.Game**).
 
@@ -172,9 +197,9 @@ Then you can set the value in the material properties:
 
 You can access the compilation logs of your shaders through the Game Studio's debug window's EffectCompilerCache tab (`Ctrl+Shift+D` or `Help`>`Show debug window`).
 
-The launcher hosts a Visual Studio extension specifically for syntax highlighting and errors you may want to use.
+The launcher hosts a Visual Studio extension specifically for syntax highlighting and errors you may want to use. For advanced shader development with enhanced IntelliSense, see [Shader development with Visual Studio Code](shader-development-vscode.md).
 
-The engine's source also provides a good reference point for how one would write shaders. To that end [Stride.ShaderExplorer](https://github.com/tebjan/Stride.ShaderExplorer) facilitates the act of finding and browsing through the different shaders the source contains.
+The engine's source also provides a good reference point for how one would write shaders. [Stride.ShaderExplorer](https://github.com/tebjan/Stride.ShaderExplorer) is an excellent standalone tool for browsing and exploring the complete shader library and their inheritance relationships.
 
 A common issue you may stumble onto is the following:
 > E1202: The mixin X in Y dependency is not in the module
