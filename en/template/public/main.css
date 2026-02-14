@@ -7,6 +7,12 @@
     --bs-link-color-rgb: 218, 8, 48 !important;
     --bs-link-hover-color-rgb: 174, 6, 38 !important;
 }
+/* Tempory fix, stopped working from docfx 2.78.5 */
+/*@media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1768px;
+    }
+}*/
 
 .navbar-brand #logo {
     width: 124px;
