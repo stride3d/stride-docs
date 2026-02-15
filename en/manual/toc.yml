@@ -3,50 +3,34 @@ pdfFileName: stride-manual.pdf
 items:
   - name: Manual
     href: index.md
-  - name: Requirements
-    href: requirements/index.md
   - name: Stride for Unity® developers
     href: stride-for-unity-developers/index.md
   # - name: Stride for Godot developers
   #   href: stride-for-godot-developers/index.md
-  - name: Stride Launcher
-    href: stride-launcher/index.md
-
+  - name: Install and Update
+    href: install-and-update/index.md
+    items:
+      - name: Requirements
+        href: install-and-update/requirements.md
+      - name: Install Stride
+        href: install-and-update/install-stride.md
+      - name: Update Stride
+        href: install-and-update/update-stride.md
   - name: Get started
     href: get-started/index.md
     items:
-      - name: Install Stride
-        href: get-started/install-stride.md
-      - name: Visual Studio extension
-        href: get-started/visual-studio-extension.md
-      - name: Update Stride
-        href: get-started/update-stride.md
-      - name: Launch Stride
-        href: get-started/launch-stride.md
       - name: Create a project
         href: get-started/create-a-project.md
+      - name: Key Concepts
+        href: get-started/key-concepts.md
       - name: Game Studio
-        href: game-studio/index.md
+        href: get-started/game-studio.md
       - name: Assets
-        href: game-studio/assets.md
-        items:
-          - name: Create assets
-            href: game-studio/create-assets.md
-          - name: Use assets
-            href: game-studio/use-assets.md
-      - name: Scenes
-        href: game-studio/scenes.md
-        items:
-          - name: Create a scene
-            href: game-studio/create-a-scene.md
-          - name: Add entities
-            href: game-studio/add-entities.md
-          - name: Manage entities
-            href: game-studio/manage-entities.md
-          - name: Navigate in the Scene Editor
-            href: game-studio/navigate-in-the-scene-editor.md
+        href: get-started/assets.md
       - name: Launch a game
         href: get-started/launch-a-game.md
+      - name: Next Steps
+        href: get-started/next-steps.md
 
   - name: Animation
     href: animation/index.md

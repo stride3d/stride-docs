@@ -2,7 +2,7 @@
 
 Assuming the transition is from version `4.1` to `4.2`, and that the Stride source code has been updated to the corresponding .NET version, follow these steps. Note that some steps can be executed at a later stage if needed.
 
-1. Update `manual\requirements\index.md` to reflect the new .NET version references
+1. Update `manual\install-and-update\requirements.md` to reflect the new .NET version references
 1. Duplicate `ReleaseNotes\ReleaseNotes.md` and rename the copy to `ReleaseNotes-4.1.md`
 1. Update `ReleaseNotes.md`:
    - Change the content title to `4.2`
@@ -48,4 +48,4 @@ The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while 
    - Update Visual Studio version
 1. Modify `includes\docs-prerequisites.md` 
    - Update SDK and .NET version references
-   - Update Visual Studio version 
+   - Update Visual Studio version
