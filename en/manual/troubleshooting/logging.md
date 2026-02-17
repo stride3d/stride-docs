@@ -17,7 +17,19 @@ The name of the module (such as the script containing the log message) is displa
 
 The console displays log messages from all modules, not just your own scripts. For example, it also displays messages from the @'Stride.Core.Serialization.Contents.ContentManager'.
 
-If you run your game from Visual Studio, log messages are shown in the Visual Studio **Output** window instead.
+If you run your game from Visual Studio, log messages are not shown in the **Output** window by default.
+To display them, you need to manually register a log listener that writes to `Debug.WriteLine` (see example below).
+
+```csharp
+GlobalLogger.GlobalMessageLogged += new TextWriterLogListener(new DebugTextWriter());
+
+// Minimal TextWriter for Output window logging
+public class DebugTextWriter : TextWriter
+{
+    public override Encoding Encoding => Encoding.UTF8;
+    public override void WriteLine(string? value) => Debug.WriteLine(value);
+}
+```
 
 ![Log output window](media/log-output-in-visual-studio.png)
 
