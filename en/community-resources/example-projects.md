@@ -1,6 +1,7 @@
 # Example projects
 
 ## Input
+* [InputMan (2026) - Example project with action maps, rebind, chord binding and JSON profile](https://github.com/yuechen-li-dev/InputMan)
 * [Control - Input Manager](https://github.com/rsptim1/Ctrl)
 * [Easier input binding configuration](https://github.com/lparkermg/LPSoft.Stride.InputExtensions)
 * [Demos with a focus on Code-Only approach](https://github.com/najak3d/Stride3D_Demos)
