@@ -14,7 +14,7 @@
 - [StrideTriplanarShader](https://github.com/herocrab/StrideTriplanarShader) - Triplanar texture projection shader eliminating UV seams on complex or terrain meshes
 - [UnrealMotion](https://github.com/ykafia/UnrealMotion) - Unreal Engine-style per-object motion blur post-process effect for Stride
 - [Image Processing Shaders (VVVV community)](https://github.com/bj-rn/VL.Addons/tree/main/vl/shaders) - Collection of image processing and compositing shaders from the vvvv add-on library
-- [VL.StandardLibs — Core Stride Shaders](https://github.com/vvvv/VL.StandardLibs/tree/main/VL.Stride.Runtime/src/Effects) - Stride runtime shader effects bundled with the vvvv standard library
+- [VL.StandardLibs - Core Stride Shaders](https://github.com/vvvv/VL.StandardLibs/tree/main/VL.Stride.Runtime/src/Effects) - Stride runtime shader effects bundled with the vvvv standard library
 
 ## Tools and References
 

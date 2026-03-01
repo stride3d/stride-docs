@@ -6,7 +6,7 @@
 - [BlenderToXenkoAnimationSeparator (legacy)](https://github.com/GutterLab/BlenderToXenkoAnimationSeparator) - Original Xenko-era Blender animation export separator
 - [AutoImportStride](https://github.com/VirtualBrightPlayz/AutoImportStride) - Script that watches a folder and automatically imports new files into a Stride project
 - [LoadObjTest](https://github.com/jeske/LoadObjTest) - Demonstrates loading a Wavefront OBJ file from the filesystem at runtime in code
-- [StrideGltf — Load GLTF at Runtime](https://github.com/ykafia/StrideGltf/blob/master/GltfImport/LoadGLTF.cs) - Code snippet for importing a GLTF model into a running Stride game at runtime
+- [StrideGltf - Load GLTF at Runtime](https://github.com/ykafia/StrideGltf/blob/master/GltfImport/LoadGLTF.cs) - Code snippet for importing a GLTF model into a running Stride game at runtime
 - [Loading Additional Asset Databases](https://gist.github.com/aikixd/b0decb0cfc28bbdacb46d953691f76fd) - Gist showing how to mount additional Stride asset databases at runtime
 
 ## IDE and Editor Integration

@@ -13,4 +13,4 @@
 ## VVVV Integration
 
 - [VVVV 3D Rendering Documentation](https://thegraybook.vvvv.org/reference/libraries/graphics-3d.html) - Official vvvv documentation covering 3D rendering via the Stride backend
-- [VL.StandardLibs — Stride Integration Source](https://github.com/vvvv/VL.StandardLibs) - Source code for vvvv's standard library including the full Stride rendering integration
+- [VL.StandardLibs - Stride Integration Source](https://github.com/vvvv/VL.StandardLibs) - Source code for vvvv's standard library including the full Stride rendering integration

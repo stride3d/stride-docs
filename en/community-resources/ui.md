@@ -14,4 +14,4 @@
 - [Controller UI Navigation](https://gist.github.com/Aggror/4ba0632bd934103c6dcdb077a84376ef) - Gist adding gamepad/controller focus navigation between UI elements in Stride
 - [UI Navigation Proof of Concept](https://github.com/Basewq/XenkoProofOfConcepts/tree/master/UINavigationExample) - Example from XenkoProofOfConcepts showing keyboard and controller UI navigation patterns
 - [Myra UI Integration Example](https://github.com/Doprez/stride-ui-alternate-example) - Sample project using Myra as an alternative UI solution inside a Stride game
-- [Myra — Stride Integration Tutorial](https://github.com/rds1983/Myra/wiki/Using-Myra-in-Stride-Engine-Tutorial) - Official Myra wiki page walking through integration with the Stride engine step by step
+- [Myra - Stride Integration Tutorial](https://github.com/rds1983/Myra/wiki/Using-Myra-in-Stride-Engine-Tutorial) - Official Myra wiki page walking through integration with the Stride engine step by step
