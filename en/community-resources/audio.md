@@ -7,4 +7,4 @@
 
 ## Examples and Snippets
 
-- [Playing audio from code](https://doc.stride3d.net/latest/en/manual/audio/play-a-sound.html) - Official Stride docs covering how to play sounds and music at runtime
+- [Playing audio from code](https://doc.stride3d.net/latest/en/manual/audio/non-spatialized-audio.html) - Official Stride docs covering how to play sounds and music at runtime
