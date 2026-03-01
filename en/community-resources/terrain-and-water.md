@@ -1,16 +1,16 @@
-# Terrain and Water
+# ⛰️ Terrain and Water
 
 ## Terrain
-* [XenkoByteSized](https://github.com/profan/XenkoByteSized) - Subdivided Plane Mesh
-* [XenkoTerrain](https://github.com/TomGroner/XenkoTerrain) - Mesh terrain implementation
-* [XenkoMCTerrain](https://github.com/SilentCLD/XenkoMCTerrain) - Marching Cubes Terrain
-* [XenkoHMTerrain](https://github.com/SilentCLD/XenkoHMTerrain) - Height Map Terrain
-* [StrideTerrain](https://github.com/johang88/StrideTerrain) - Height Map Terrain
-* [TR.Stride: Various stride environment utilities](https://github.com/johang88/TR.Stride)
-* [Stride Voxel Scape](https://github.com/Jarb2104/StrideVoxelScape_v0.1)
+
+- [XenkoByteSized - Subdivided Plane](https://github.com/profan/XenkoByteSized) - Bite-sized example building a subdivided plane mesh suitable as a terrain base
+- [XenkoTerrain](https://github.com/TomGroner/XenkoTerrain) - Mesh-based terrain implementation with basic deformation support
+- [XenkoMCTerrain](https://github.com/SilentCLD/XenkoMCTerrain) - Marching cubes voxel terrain generating smooth isosurfaces from a 3D density field
+- [XenkoHMTerrain](https://github.com/SilentCLD/XenkoHMTerrain) - Height-map terrain rendering from a greyscale texture in Stride/Xenko
+- [StrideTerrain](https://github.com/johang88/StrideTerrain) - Modern height-map terrain system with LOD and texture splatting for Stride
+- [TR.Stride - Terrain](https://github.com/johang88/TR.Stride) - Height-map terrain module from the TR.Stride environment utilities suite
+- [StrideVoxelScape](https://github.com/Jarb2104/StrideVoxelScape_v0.1) - Voxel landscape generation and rendering demo built in Stride
 
 ## Water
-* [Simple water](https://github.com/TomGroner/XenkoFlowingWater)
-* [Simple water 2](https://github.com/johang88/StrideSimpleWater)
 
-
+- [XenkoFlowingWater](https://github.com/TomGroner/XenkoFlowingWater) - Flowing water surface shader with animated normals and refraction
+- [StrideSimpleWater](https://github.com/johang88/StrideSimpleWater) - Simple water plane with reflections, refractions, and wave displacement for Stride
