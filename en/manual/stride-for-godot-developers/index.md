@@ -32,14 +32,14 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 
 | Godot | Stride |
 |-------|--------|
-| Scene | Entity Tree |
+| Scene (`PackedScene`) | Prefab / scene asset |
 | Inspector | Property Grid |
 | FileSystem | Solution/Asset View |
-| Scene view | Scene Editor |
+| 2D/3D Viewport | Scene Editor |
 | Node | [`Entity`](xref:Stride.Engine.Entity) |
-| Node Script | [`SyncScript`](xref:Stride.Engine.SyncScript), [`AsyncScript`](xref:Stride.Engine.AsyncScript), [`StartupScript`](xref:Stride.Engine.StartupScript) |
-| Export | Serialize/DataMember |
-| GlobalClass | DataContract |
+| Script attached to Node | Script component ([`SyncScript`](xref:Stride.Engine.SyncScript), [`AsyncScript`](xref:Stride.Engine.AsyncScript), [`StartupScript`](xref:Stride.Engine.StartupScript)) |
+| `[Export]` | `[DataMember]` |
+| `[GlobalClass]` | `[DataContract]` on serializable classes (to expose custom types in the editor) |
 
 ## Folders and files
 
@@ -52,7 +52,7 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
   - Any additional subprojects. Stride scans subprojects the same way it scans the main project to find `DataContract` classes and features for the editor and game.
 - **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
 - **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
-- **Resources** is a suggested location for files such as images and audio used by your assets. Do not confuse this with Godot resources, which do not exist in Stride. In Stride, you can use scene folders in any way you want, including storing classes you would normally treat as Godot resources.
+- **Resources** is a suggested location for files such as images and audio used by your assets. Godot and Stride use different resource systems, so treat this as a project-organization folder rather than a Godot-style `Resource` type.
 
 ### Open the project directory from Game Studio
 
@@ -107,7 +107,7 @@ Like Nodes, entities are carriers for "behavior" and data. In Godot, this is typ
 
 ## Entity components
 
-In Stride, you add components to entities just like you add components to GameObjects in Unity®.
+In Stride, you add components to entities in the editor much like you attach child nodes or configure node properties in the Godot editor.
 
 To add a component to an entity in Game Studio:
 
@@ -133,9 +133,9 @@ Stride uses position, rotation, and scale to refer to the local position, rotati
 | Godot (typical 3D)         | Stride                       |
 |----------------------------|------------------------------|
 | `position`                 | `Transform.Position`         |
-| `rotation` (radians)       | `Transform.Rotation`         |
+| `quaternion` / `basis`     | `Transform.Rotation`         |
+| `rotation` / `rotation_degrees` | `Transform.RotationEulerXYZ` |
 | `scale`                    | `Transform.Scale`            |
-| `rotation` (Euler concept) | `Transform.RotationEulerXYZ` |
 
 > [!TIP]
 > In Godot, `Node3D.rotation` is Euler angles in **radians**, and Godot also exposes convenience properties like `rotation_degrees`.
@@ -148,10 +148,10 @@ In Godot, world-space transform values are typically accessed via `global_*` pro
 | Godot (4.x, Node3D)                                                                 | Stride                                                                                                 |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | `global_position` (== `global_transform.origin`)                                    | `Transform.WorldMatrix.TranslationVector`                                                              |
-| `global_rotation` (Euler, radians)                                                  | N/A                                                                                                    |
-| `global_scale`                                                                      | N/A                                                                                                    |
+| `global_rotation` (Euler, radians)                                                  | Decompose from `Transform.WorldMatrix`                                                                 |
+| `global_scale`                                                                      | Decompose from `Transform.WorldMatrix`                                                                 |
 | `global_transform`                                                                  | `Transform.WorldMatrix`                                                                                |
-| `global_transform.basis` (rotation/scale/shear in global space)                     | N/A                                                                                                    |
+| `global_transform.basis` (rotation/scale/shear in global space)                     | Use direction vectors and decomposition on `Transform.WorldMatrix`                                     |
 | Decompose from `global_transform` / `global_transform.basis` (rotation/scale etc.)  | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)`                                             |
 | Decompose translation/scale                                                         | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
 | Decompose translation/rotation/scale                                                | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
@@ -183,7 +183,9 @@ Assets are imported and managed in the **Asset View**.
 
 ## Resources
 
-Stride does not have resources in the same way Godot does. In Stride, you can add folders to your scene and place entities with your data there. Another approach is to store former resources in a separate prefab and load it into scenes that need that data.
+Godot uses dedicated `Resource` objects. Stride does not use the same resource-object model. In Stride, equivalent data is usually represented with assets, prefabs, and serializable classes (`[DataContract]` / `[DataMember]`) that you reference from entities and scripts.
+
+For deeper details, see [Godot Resource](https://docs.godotengine.org/en/stable/classes/class_resource.html) and [Godot PackedScene](https://docs.godotengine.org/en/stable/classes/class_packedscene.html).
 
 ## Supported file formats
 
@@ -206,6 +208,12 @@ The equivalent of Godot's inherited scene is archetypes. Archetypes are master a
 For example, imagine we have three sphere entities that share a material asset named Metal. Now imagine we want to change the color of only one sphere, but keep its other properties the same. We could duplicate the material asset, change its color, and then apply the new asset to only one sphere. But if we later want to change a different property across all the spheres, we have to modify both assets. This is time-consuming and leaves room for mistakes.
 
 The better approach is to derive a new asset from the archetype. The derived asset inherits properties from the archetype and lets you override individual properties where you need them. For example, we can derive the sphere's material asset and override its color. Then, if we change the gloss of the archetype, the gloss of all three spheres changes.
+
+## Object lifetime
+
+In Godot, nodes are commonly removed with `queue_free()` / `free()`. In Stride, entities and components are removed from scenes/entities and then released by the .NET garbage collector when no longer referenced.
+
+This enables patterns such as removing an entity from one scene and adding it to another later, as long as references are preserved.
 
 ## Input
 
@@ -232,6 +240,14 @@ public override void Update()
 }
 ```
 
+## Time
+
+| Godot | Stride |
+|---|---|
+| `delta` in `_Process(double delta)` | `Game.UpdateTime.Elapsed.TotalSeconds` |
+| `delta` in `_PhysicsProcess(double delta)` | `Game.UpdateTime.Elapsed.TotalSeconds` |
+| `Engine.time_scale` | `Game.UpdateTime.Factor` |
+
 ## Physics
 
 Both Stride and Godot offer comprehensive physics engines, but their approaches to handling collisions and physics-based interactions differ. Below is a comparison of their features and functionality.
@@ -244,7 +260,7 @@ In Stride, there are three main types of colliders:
 - **Rigidbodies:** Dynamic colliders that are subject to physics simulations, such as gravity or force.
 - **Characters:** Special colliders designed to work with character controllers.
 
-To handle collisions in Stride, you can add methods to a delegate within the `Start()` method of your script. These methods will be triggered when a collision occurs. For a comprehensive tutorial on collision handling in Stride, you can refer to this [YouTube Stride tutorial - Collision triggers](https://www.youtube.com/watch?v=SIy3pfoXfoQ&ab_channel=Stride).
+In Stride, collision handling is done through physics components and script logic that handle collision events and triggers. For details, see [Physics](../physics/index.md), [Triggers](../physics/triggers.md), and [Raycasting](../physics/raycasting.md).
 
 ### Godot
 
@@ -285,7 +301,7 @@ This approach in Stride embodies the principle of "Delegation over Inheritance",
 
 ### StartupScript
 
-`StartupScript` in Stride has a `Start` method, which is equivalent to Godot's `_Ready` method. A `StartupScript` primarily focuses on initialization tasks and doesn't offer much functionality beyond that.
+`StartupScript.Start()` is closest to Godot's `_Ready()` in terms of initialization flow, but they are not lifecycle-identical in every engine detail. In Godot, `_Ready()` runs when a node enters the scene tree, and parent nodes typically become ready before their children. In Stride, `StartupScript.Start()` runs when the script is started after the scene or entity is initialized, and the exact parent-child start order might not match Godot's. In practice, use `StartupScript` for initialization and setup tasks.
 
 #### Stride example
 ```csharp
@@ -459,7 +475,7 @@ In Godot, you use methods like `_Ready()` for initialization and `_Process(delta
 
 #### Stride
 
-After creating or editing a script, you must manually reload the assemblies by clicking **Reload assemblies** in the Game Studio toolbar.
+After you create a script, you may have to reload the assemblies manually. To do this, click **Reload assemblies** in the Game Studio toolbar.
 
 ![Reload assemblies](../platforms/media/reload-assemblies.png)
 
@@ -487,7 +503,14 @@ In Stride, scripts are listed alphabetically along with other components. In God
 
 For more information about adding scripts in Stride, see [Use a script](../scripts/use-a-script.md).
 
-## Instantiate Prefabs
+## Instantiate prefabs
+
+In Godot, the common equivalent is instantiating a `PackedScene`.
+
+```csharp
+var node = packedScene.Instantiate<Node3D>();
+AddChild(node);
+```
 
 In Stride, you can instantiate entities using prefabs like so:
 
@@ -518,7 +541,7 @@ public override void Start()
 
 ### Godot
 
-In Godot, you need to inherit from an engine class for it to be visible in the editor. Additionally, only types known to the Godot engine can be exported.
+In Godot C#, inspector-exposed members typically use `[Export]`, and the script is commonly attached to a node type. Export support is tied to types the engine can serialize.
 
 ### Stride
 
