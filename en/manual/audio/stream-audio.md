@@ -11,7 +11,7 @@ By default, Stride plays audio directly from memory. This is useful for short so
 Alternatively, Stride can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Stride plays it while buffering the following sequences in parallel. This saves a lot of memory when used for larger audio files such as background music and character dialogue.
 
 > [!Note] 
-Streaming audio increases latency unless you preload it with the ReadyToPlay task (see below).
+> Streaming audio increases latency unless you preload it with the ReadyToPlay task (see below).
 
 ![Streamed audio](media/audio-index-streamed-audio.png)
 
