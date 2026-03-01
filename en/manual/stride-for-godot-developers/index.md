@@ -2,7 +2,22 @@
 
 ## Editor
 
-The Stride editor is **Game Studio**.
+The Stride editor is **Game Studio**. This is the equivalent of the Godot Editor.
+
+### Godot
+
+Godot provides a built-in code editor that supports its own scripting language, GDScript, as well as C# and VisualScript. The Godot editor is more tightly integrated with the engine and is generally kept up-to-date with new features.
+
+In summary, while both Stride and Godot offer integrated code editors, Stride's editor is best considered a supplementary tool rather than a complete IDE. It is advised to use specialized IDEs for more complex development tasks in Stride. Godot's editor, on the other hand, is robust enough for full-scale development if you are using GDScript or C#.
+
+### Stride
+
+Stride comes with an integrated C# code editor within Game Studio. Although functional, this editor is not a high-priority feature and may not receive frequent updates. As such, it is generally recommended to use dedicated IDEs for code editing. Some popular choices include:
+
+- Visual Studio Code: Free, open-source and highly extensible.
+- Rider: Paid, but offers a robust set of features tailored for .NET development.
+- Visual Studio Community: Free for small teams and individual developers.
+- Visual Studio Professional and Enterprise: Paid versions with additional features and services.
 
 ![Godot layout](media/stride-vs-godot-godotlayout.webp)
 
@@ -21,8 +36,8 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 | Inspector | Property Grid |
 | FileSystem | Solution/Asset View |
 | Scene view | Scene Editor |
-| Node | Entity |
-| Node Script | SyncScript, AsyncScript, StartupScript |
+| Node | [`Entity`](xref:Stride.Engine.Entity) |
+| Node Script | [`SyncScript`](xref:Stride.Engine.SyncScript), [`AsyncScript`](xref:Stride.Engine.AsyncScript), [`StartupScript`](xref:Stride.Engine.StartupScript) |
 | Export | Serialize/DataMember |
 | GlobalClass | DataContract |
 
@@ -35,9 +50,9 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
   - `MyPackage.Game` contains your source code.
   - `MyPackage.Platform` contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg `MyPackage.Windows`, `MyPackage.Linux`, etc). These folders are usually small, and only contain the entry point of the program.
   - And any other Subprojects. Stride will scan the Subprojects too like the main Project to get DataContract classes and features into the Editor/Game ( it doesn't matter if its in a subproject or not
-- **Bin:** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
-- **obj:** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
-- **Resources:** is a suggested location for files such as images and audio files used by your assets, do not confuse them with Godot resources, these don't exist in Stride. Stride has in the Scene Folders (these can be used in any way) where you can put classes that would be normally Godot Resources
+- **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
+- **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
+- **Resources** is a suggested location for files such as images and audio files used by your assets, do not confuse them with Godot resources, these don't exist in Stride. Stride has in the Scene Folders (these can be used in any way) where you can put classes that would be normally Godot Resources
 
 ### Open the project directory from Game Studio
 
@@ -48,31 +63,123 @@ You can open the project directory from **Project > Show in explorer** in Game S
 ## Game settings
 Godot saves global settings in the [Project Settings](https://docs.godotengine.org/cs/stable/classes/class_projectsettings.html) .
 
-~~The location is not known to me~~
 
-Stride saves global settings in a single asset, the Game Settings asset. You can configure:
+Stride saves global settings in a single asset, the **Game Settings** asset. You can configure:
 
-- The default scene
-- Rendering settings
-- Editor settings
-- Texture settings
-- Physics settings
-- Overrides
-- 
+* The **default scene**
+* **Rendering settings**
+* **Editor settings**
+* **Texture settings**
+* **Physics settings**
+* **Overrides**
+
 To use the Game Settings asset, in the **Asset View**, select **GameSettings** and view its properties in the **Property Grid**.
+
+![Game settings](../stride-for-unity-developers/media/game-settings.png)
 
 ## Scenes
 
-Set the default scene
-You can have multiple scenes in your project. Stride loads the default scene at runtime.
+Like Godot, in Stride you place all objects in a scene. Game Studio stores scenes as separate `.sdscene` assets in your project directory.
+
+### Set the default scene
+
+You can have multiple scenes in your project. The scene that loads up as soon as your game starts is called the *Default Scene*.
 
 To set the default scene:
 
+1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+
+    ![Set default scene](../stride-for-unity-developers/media/stride-vs-unity-game-settings-default-scene.png)
+
+    The **Select an asset** window opens.
+2. Select the default scene and click **OK**.
+
+For more information about scenes, see [Scenes](../game-studio/scenes.md).
+
+
 ## Entities vs Nodes
 
-### Directions
+In Godot, objects in the scene are called **Nodes** (organized in the **Scene Tree**). In Stride, they're called **entities**.
+
+![Entities in Stride](../stride-for-unity-developers/media/stride-vs-unity-entities.jpg)
+
+Like Nodes, entities are carriers for “behavior” and data. In Godot this is typically done by using different node types (for example `Node3D`, `Sprite2D`, `AudioStreamPlayer`) and attaching scripts. In Stride, this is done by adding **components** (transform components, model components, audio components, and so on). If you're used to working with Nodes in Godot, you should have no problem using entities in Game Studio.
+
+## Entity components
+
+In Stride, you add components to entities just like you add components to GameObjects in Unity®.
+
+To add a component to an entity in Game Studio:
+
+1. Select the entity you want to add the component to.
+2. In the **Property Grid** (on the right by default), click **Add component** and select the component from the drop-down list.
+
+    ![Add component](../stride-for-unity-developers/media/stride-vs-unity-add-component-to-entity.png)
+
+### Transform component
+
+Like `Node3D` / `Node2D` in Godot, each entity in Stride has a [Transform component](xref:Stride.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
+
+![Transform component](../stride-for-unity-developers/media/stride-vs-unity-entity-transform-component.png)
+
+All entities are created with a Transform component by default.
+
+In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+
+#### Local Position/Rotation/Scale
+
+Stride uses position, rotation, and scale to refer to the local position, rotation, and scale.
+
+| Godot (typical 3D)         | Stride                       |
+|----------------------------|------------------------------|
+| `position`                 | `Transform.Position`         |
+| `rotation` (radians)       | `Transform.Rotation`         |
+| `scale`                    | `Transform.Scale`            |
+| `rotation` (Euler concept) | `Transform.RotationEulerXYZ` |
+
+> [!Tip]
+> In Godot, `Node3D.rotation` is Euler angles in **radians**, and Godot also exposes convenience properties like `rotation_degrees`.
+
+
+#### World Position/Rotation/Scale
+
+In Godot, world-space transform values are typically accessed via `global_*` properties or `global_transform`. In comparison to Godot, many of the Transform component's properties related to its location in the world are accessed via Stride's [WorldMatrix](xref:Stride.Engine.TransformComponent.WorldMatrix).
+
+| Godot (4.x, Node3D)                                                                 | Stride                                                                                                 |
+|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `global_position` (== `global_transform.origin`)                                    | `Transform.WorldMatrix.TranslationVector`                                                              |
+| `global_rotation` (Euler, radians)                                                  | N/A                                                                                                    |
+| `global_scale`                                                                      | N/A                                                                                                    |
+| `global_transform`                                                                  | `Transform.WorldMatrix`                                                                                |
+| `global_transform.basis` (rotation/scale/shear in global space)                     | N/A                                                                                                    |
+| Decompose from `global_transform` / `global_transform.basis` (rotation/scale etc.)  | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)`                                             |
+| Decompose translation/scale                                                         | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
+| Decompose translation/rotation/scale                                                | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
+
+> [!Note]
+> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
+> To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
+
+
+#### Transform Directions
+
+In Godot, direction vectors are commonly derived from the transform basis (for example using `global_transform.basis`). In Stride, the `WorldMatrix` exposes direction vectors directly. Note that those are matrix properties, so setting one of those is not enough to properly rotate the matrix.
+
+| Godot (typical 3D)                              | Stride                           |
+|-------------------------------------------------|----------------------------------|
+| `-global_transform.basis.z` (forward in 3D)     | `Transform.WorldMatrix.Forward`  |
+| `global_transform.basis.z` (backward in 3D)     | `Transform.WorldMatrix.Backward` |
+| `global_transform.basis.x` (right)              | `Transform.WorldMatrix.Right`    |
+| `-global_transform.basis.x` (left)              | `Transform.WorldMatrix.Left`     |
+| `global_transform.basis.y` (up)                 | `Transform.WorldMatrix.Up`       |
+| `-global_transform.basis.y` (down)              | `Transform.WorldMatrix.Down`     |
+
+>[!Note]
+> See note in [World Position/Rotation/Scale](#world-positionrotationscale)
 
 ## Assets
+
+Should this be removed?
 
 ## Resources
 
@@ -88,7 +195,7 @@ Like Godot, Stride supports file formats including:
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
 | Audio  	                    | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
 | Fonts                         | .ttf, .otf |
-|Video                          | .mp4
+| Video                         | .mp4
 
 For more information about assets, see [Assets](../game-studio/assets.md).
 
@@ -108,7 +215,7 @@ In Stride you have the Option to get the Input through Key Strokes like in Godot
 public override void Update()
 {
     // true for one frame in which the space bar was pressed
-    if(Input.IsKeyDown(Keys.Space))
+    if (Input.IsKeyDown(Keys.Space))
     {
         // Do something.
     }
@@ -136,31 +243,12 @@ In Stride, there are three main types of colliders:
 - **Static Colliders:** Fixed in place and do not move, typically used for environment elements like walls or floors.
 - **Rigidbodies:** Dynamic colliders that are subject to physics simulations, such as gravity or force.
 - **Characters:** Special colliders designed to work with character controllers.
--
+
 To handle collisions in Stride, you can add methods to a delegate within the `Start()` method of your script. These methods will be triggered when a collision occurs. For a comprehensive tutorial on collision handling in Stride, you can refer to this [YouTube Stride tutorial - Collision triggers](https://www.youtube.com/watch?v=SIy3pfoXfoQ&ab_channel=Stride).
 
 ### Godot
 
 In Godot, you can use a signal-based system to react to collisions. Signals are emitted when specific events occur, such as two objects colliding, and you can connect these signals to custom methods to execute your own logic.
-
-## Game Studio Editor
-
-Both Stride and Godot offer integrated code editors, but their capabilities and recommended usage differ.
-
-### Stride
-
-Stride comes with an integrated C# code editor within Game Studio. Although functional, this editor is not a high-priority feature and may not receive frequent updates. As such, it is generally recommended to use dedicated IDEs for code editing. Some popular choices include:
-
-- Visual Studio Code: Free, open-source and highly extensible.
-- Rider: Paid, but offers a robust set of features tailored for .NET development.
-- Visual Studio Community: Free for small teams and individual developers.
-- Visual Studio Professional and Enterprise: Paid versions with additional features and services.
- 
-### Godot
-
-Godot provides a built-in code editor that supports its own scripting language, GDScript, as well as C# and VisualScript. The Godot editor is more tightly integrated with the engine and is generally kept up-to-date with new features.
-
-In summary, while both Stride and Godot offer integrated code editors, Stride's editor is best considered a supplementary tool rather than a complete IDE. It is advised to use specialized IDEs for more complex development tasks in Stride. Godot's editor, on the other hand, is robust enough for full-scale development if you are using GDScript or C#.
 
 ## Scripts
 
@@ -351,14 +439,14 @@ To create a script, click **Add asset** button and select **Scripts**.
 
 Stride has a [SyncScript](xref:Stride.Engine.SyncScript) class that comes with methods such as:
 
-* [Start()](xref:Stride.Engine.StartupScript.Start) is called when the script is loaded.
-* [Update()](xref:Stride.Engine.SyncScript.Update) is called every frame.
+* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
+* [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) is called every update.
 
 
-If you need asynchronous or startup-specific logic, you can use:
+If you want your script to be a startup or asynchronous, use the corresponding script types:
 
-* [StartupScript](xref:Stride.Engine.StartupScript): this script has a single [Start()](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
-* [AsyncScript](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [Execute()](xref:Stride.Engine.AsyncScript.Execute) and you can use `async`/`await` inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
+* [`StartupScript`](xref:Stride.Engine.StartupScript): this script has a single [`StartupScript.Start()`](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
+* [`AsyncScript`](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [`AsyncScript.Execute()`](xref:Stride.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
 
 #### Godot
 
@@ -487,7 +575,7 @@ You can serialize any class marked with `[DataContract]` into the editor, includ
 
 ## Log output
 
-In Godot you can GD.Print your message. //TODO What does it mean?
+In Godot you can GD.Print your message.
 
 To view the log output, go to the **Game Studio** toolbar and click on **View**, then enable the **Output** option.
 
@@ -500,14 +588,25 @@ Once enabled, the **Output** tab will appear, typically located at the bottom of
 
 ### Print debug messages
 
-To print to the Visual Studio output, use:
+Logging from a ScriptComponent:
+
+```cs
+public override void Start()
+{
+    // Enables logging. It will also spawn a console window if no debuggers are attached.
+    // The argument dictates the kinds of message that will be filtered out, in this case, anything with less priority than warning won't show up
+    Log.ActivateLog(LogMessageType.Warning);
+    // Log this message to your console or IDE output window
+    Log.Warning("hello");
+}
+```
 
 ```cs
 System.Diagnostics.Debug.WriteLine("hello");
 ```
 
->[!Note]
-> To print debug messages, you have to run the game from Visual Studio, not Game Studio. There's no way to print to the Game Studio output window.
+> [!Note]
+> To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
 
 
 ## See also
