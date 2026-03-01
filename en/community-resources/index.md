@@ -1,7 +1,8 @@
 # Community Resources
 
-Stride's community has made and shared all kinds of awesome stuff over the years. Have a look around for inspiration or
-perhaps for something that you can reuse for your project.
+Stride's community has been busy. This section brings together over **230** links across **18** categories, covering everything from released games, shaders, and physics libraries to networking frameworks, AI tools, tutorials, and editor extensions. Whether you are just starting out or looking for a specific solution to a tricky problem, there is a good chance someone in the community has already tackled it.
+
+Have a look around for inspiration, or find something you can drop straight into your own project. And if you have built something worth sharing, the community would love to see it too, contributions to these pages are always welcome via a pull request on [stride-docs](https://github.com/stride3d/stride-docs).
 
 <div class="row g-4 mb-4">
 <div class="col-md-6">
