@@ -44,15 +44,15 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 ## Folders and files
 
 - **Assets**
-  - In Godot you can store assets everywhere.
-  - In Stride Assets are in the Assets Folder
-- Stride and Godot use the Standard C# Solution Structure. Key difference here is that Stride uses the multi Project architecture which leads to the following Projects
+  - In Godot, you can store assets anywhere.
+  - In Stride, assets are stored in the `Assets` folder.
+- Stride and Godot use the standard C# solution structure. A key difference is that Stride uses a multi-project architecture with the following projects:
   - `MyPackage.Game` contains your source code.
-  - `MyPackage.Platform` contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg `MyPackage.Windows`, `MyPackage.Linux`, etc). These folders are usually small, and only contain the entry point of the program.
-  - And any other Subprojects. Stride will scan the Subprojects too like the main Project to get DataContract classes and features into the Editor/Game ( it doesn't matter if its in a subproject or not
+  - `MyPackage.Platform` contains additional code for the platforms your project supports. Game Studio creates folders for each platform (for example, `MyPackage.Windows`, `MyPackage.Linux`, etc.). These folders are usually small and only contain the program entry point.
+  - Any additional subprojects. Stride scans subprojects the same way it scans the main project to find `DataContract` classes and features for the editor and game.
 - **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
 - **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
-- **Resources** is a suggested location for files such as images and audio files used by your assets, do not confuse them with Godot resources, these don't exist in Stride. Stride has in the Scene Folders (these can be used in any way) where you can put classes that would be normally Godot Resources
+- **Resources** is a suggested location for files such as images and audio used by your assets. Do not confuse this with Godot resources, which do not exist in Stride. In Stride, you can use scene folders in any way you want, including storing classes you would normally treat as Godot resources.
 
 ### Open the project directory from Game Studio
 
@@ -61,7 +61,7 @@ You can open the project directory from **Project > Show in explorer** in Game S
 ![Open project directory from Game Studio](../stride-for-unity-developers/media/stride-vs-unity-open-project-in-windows-explorer.png)
 
 ## Game settings
-Godot saves global settings in the [Project Settings](https://docs.godotengine.org/cs/stable/classes/class_projectsettings.html) .
+Godot saves global settings in [Project Settings](https://docs.godotengine.org/cs/stable/classes/class_projectsettings.html).
 
 
 Stride saves global settings in a single asset, the **Game Settings** asset. You can configure:
@@ -83,7 +83,7 @@ Like Godot, in Stride you place all objects in a scene. Game Studio stores scene
 
 ### Set the default scene
 
-You can have multiple scenes in your project. The scene that loads up as soon as your game starts is called the *Default Scene*.
+You can have multiple scenes in your project. The scene that loads as soon as your game starts is called the *Default Scene*.
 
 To set the default scene:
 
@@ -103,7 +103,7 @@ In Godot, objects in the scene are called **Nodes** (organized in the **Scene Tr
 
 ![Entities in Stride](../stride-for-unity-developers/media/stride-vs-unity-entities.jpg)
 
-Like Nodes, entities are carriers for “behavior” and data. In Godot this is typically done by using different node types (for example `Node3D`, `Sprite2D`, `AudioStreamPlayer`) and attaching scripts. In Stride, this is done by adding **components** (transform components, model components, audio components, and so on). If you're used to working with Nodes in Godot, you should have no problem using entities in Game Studio.
+Like Nodes, entities are carriers for "behavior" and data. In Godot, this is typically done by using different node types (for example, `Node3D`, `Sprite2D`, `AudioStreamPlayer`) and attaching scripts. In Stride, this is done by adding **components** (transform components, model components, audio components, and so on). If you're used to working with Nodes in Godot, you should have no problem using entities in Game Studio.
 
 ## Entity components
 
@@ -118,13 +118,13 @@ To add a component to an entity in Game Studio:
 
 ### Transform component
 
-Like `Node3D` / `Node2D` in Godot, each entity in Stride has a [Transform component](xref:Stride.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
+Like `Node3D` / `Node2D` in Godot, each entity in Stride has a [Transform component](xref:Stride.Engine.TransformComponent) that sets its position, rotation, and scale in the world.
 
 ![Transform component](../stride-for-unity-developers/media/stride-vs-unity-entity-transform-component.png)
 
 All entities are created with a Transform component by default.
 
-In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner than that you can use `TransformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner, you can use `TransformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()`, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
 
@@ -179,19 +179,19 @@ In Godot, direction vectors are commonly derived from the transform basis (for e
 
 ## Assets
 
-Should this be removed?
+Assets are imported and managed in the **Asset View**.
 
 ## Resources
 
-Stride doesn't have Resources like Godot has. In Stride you can add Folders to your Scene and add there Entities with your Data. Another approach would be to save your former Resources in a separate Prefab and load it into the scenes that need the Data.
+Stride does not have resources in the same way Godot does. In Stride, you can add folders to your scene and place entities with your data there. Another approach is to store former resources in a separate prefab and load it into scenes that need that data.
 
-## Supported File Formats
+## Supported file formats
 
 Like Godot, Stride supports file formats including:
 
 | Asset type  | Supported formats                                           
 |---|---|
-| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx
+| Models, animations, skeletons | .dae, .3ds, .obj, .blend, .x, .md2, .md3, .dxf, .fbx
 | Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff
 | Audio  	                    | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc
 | Fonts                         | .ttf, .otf |
@@ -199,9 +199,9 @@ Like Godot, Stride supports file formats including:
 
 For more information about assets, see [Assets](../game-studio/assets.md).
 
-## Prefab Inheritance
+## Prefab inheritance
 
-The equivalent of Godot's inherited Scene would be ArcheTypes. Archetypes are master assets that control the properties of assets you derive from them. Derived assets are useful when you want to create a "remixed" version of an asset. This is similar to prefabs.
+The equivalent of Godot's inherited scene is archetypes. Archetypes are master assets that control the properties of assets you derive from them. Derived assets are useful when you want to create a "remixed" version of an asset. This is similar to prefabs.
 
 For example, imagine we have three sphere entities that share a material asset named Metal. Now imagine we want to change the color of only one sphere, but keep its other properties the same. We could duplicate the material asset, change its color, and then apply the new asset to only one sphere. But if we later want to change a different property across all the spheres, we have to modify both assets. This is time-consuming and leaves room for mistakes.
 
@@ -209,7 +209,7 @@ The better approach is to derive a new asset from the archetype. The derived ass
 
 ## Input
 
-In Stride you have the Option to get the Input through Key Strokes like in Godot or through Virtual Buttons, which is similar to Godot's Key Mapping
+In Stride, you can handle input through keystrokes, similar to Godot, or through virtual buttons, which is similar to Godot's input mapping.
 
 ```cs
 public override void Update()
@@ -234,7 +234,7 @@ public override void Update()
 
 ## Physics
 
-Both Stride and Godot offer comprehensive physics engines, but their approach to handling collisions and physics-based interactions differ. Below is a comparison of their features and functionalities.
+Both Stride and Godot offer comprehensive physics engines, but their approaches to handling collisions and physics-based interactions differ. Below is a comparison of their features and functionality.
 
 ### Stride
 
@@ -252,16 +252,16 @@ In Godot, you can use a signal-based system to react to collisions. Signals are 
 
 ## Scripts
 
-### Different Approaches to Scripting
+### Different approaches to scripting
 
 In Stride, there are three types of scripts, offering a different paradigm compared to Godot. While Godot requires you to inherit from a specific class to create a node of that type, Stride allows you to extend entities by adding scripts and then searching for specific entities to interact with.
 
-### Extending Entities in Stride
+### Extending entities in Stride
 
 For example, instead of inheriting from `CharacterBody3D` in Godot, in Stride you would attach a `CharacterComponent` to an entity. Don't forget to also attach a collision shape to make it interactable. In your scripts, you can then search for these components to manipulate them.
 
 
-#### Stride Example
+#### Stride example
 
 ```csharp
 // Example of searching for a CharacterComponent in Stride
@@ -279,7 +279,7 @@ public class MyScript : SyncScript
 }
 ```
 
-### Delegation Over Inheritance
+### Delegation over inheritance
 
 This approach in Stride embodies the principle of "Delegation over Inheritance", providing you with greater flexibility when designing your game's architecture.
 
@@ -287,7 +287,7 @@ This approach in Stride embodies the principle of "Delegation over Inheritance",
 
 `StartupScript` in Stride has a `Start` method, which is equivalent to Godot's `_Ready` method. A `StartupScript` primarily focuses on initialization tasks and doesn't offer much functionality beyond that.
 
-#### Stride Example
+#### Stride example
 ```csharp
 public class BasicMethods : StartupScript
 {
@@ -304,7 +304,7 @@ public class BasicMethods : StartupScript
 }
 ```
  
-#### Godot Example
+#### Godot example
 
 ```csharp
 public class BasicMethods : Node
@@ -332,7 +332,7 @@ Both Stride and Godot offer methods that are repeatedly called for game updates.
 1. **Delta Time:** Stride's `Update()` does not include a delta time parameter. In contrast, Godot provides the time since the last frame as an argument (delta) in `_Process(double delta)`.
 2. **Access to Delta Time:** In Stride, you can still access the delta time through the Game property, `using Game.UpdateTime.Elapsed.TotalSeconds`.
 
-#### Stride Example
+#### Stride example
 
 
 ```csharp
@@ -350,7 +350,7 @@ public class BasicMethods : SyncScript
 }
 ```
 
-#### Godot Example
+#### Godot example
 
 ```csharp
 public class BasicMethods : Node
@@ -369,7 +369,7 @@ public class BasicMethods : Node
 
 Both Stride and Godot provide ways to run code asynchronously, but they use different approaches.
 
-#### Stride Example
+#### Stride example
 
 Stride offers a specialized `AsyncScript` class that allows you to execute code asynchronously using C#'s `async`/`await` syntax. The `Execute()` method can be awaited, allowing your code to run without blocking the main game loop.
 
@@ -402,7 +402,7 @@ public class BasicMethods : AsyncScript
 
 ```
 
-#### Godot Example
+#### Godot example
 
 Godot doesn't offer a dedicated `AsyncScript` class like Stride. However, you can still write asynchronous code in C# using the standard `async`/`await` syntax.
 
@@ -433,7 +433,7 @@ In both Stride and Godot, scripts are used to define behavior and logic for game
 
 #### Stride
 
-To create a script, click **Add asset** button and select **Scripts**.
+To create a script, click the **Add asset** button and select **Scripts**.
 
 ![Create script in Stride](../stride-for-unity-developers/media/stride-vs-unity-create-script.png)
 
@@ -550,7 +550,7 @@ public class MyClass
 }
 ```
 
-#### Excluding Members
+#### Excluding members
 
 To exclude a member from serialization, use the `[DataMemberIgnore]` attribute.
 
@@ -563,19 +563,19 @@ public class MyClass
 }
 ```
 
-#### Collections and Dictionaries
+#### Collections and dictionaries
 
 Stride supports `ICollection` and `IDictionary` classes for serialization. Note that only primitives and enums can be used as keys in dictionaries.
 
-In Godot you have to Export Godot Collections to be visible in the Editor.
+In Godot, you need to export Godot collections for them to be visible in the editor.
 
-#### Nested Serialization
+#### Nested serialization
 
 You can serialize any class marked with `[DataContract]` into the editor, including abstract classes or interfaces. The **Stride Editor** will search for types that match the interfaces or abstract classes, making them eligible for serialization.
 
 ## Log output
 
-In Godot you can GD.Print your message.
+In Godot, you can print a message with `GD.Print`.
 
 To view the log output, go to the **Game Studio** toolbar and click **View**, then enable the **Output** option.
 
