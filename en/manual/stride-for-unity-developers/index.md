@@ -76,7 +76,7 @@ To use the Game Settings asset, in the **Asset View**, select **GameSettings** a
 
 ## Scenes
 
-Like Unity®, in Stride, you place all objects in a scene. Game Studio stores scenes as separate ``.sdscene`` assets in your project directory.
+Like Unity®, in Stride, you place all objects in a scene. Game Studio stores scenes as separate `.sdscene` assets in your project directory.
 
 ### Set the default scene
 
@@ -120,7 +120,7 @@ Like GameObjects in Unity®, each entity in Stride has a [Transform component](x
 
 All entities are created with a Transform component by default.
 
-In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner than that you can use `TransformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
 
@@ -146,9 +146,8 @@ In comparison to Unity, many of the Transform component's properties related to 
 | `transform.scale` and `transform.position`                        | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
 | `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
->[!Note]
-> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
-To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
+> [!NOTE]
+> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now. To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
 
 #### Transform Directions
 
@@ -164,8 +163,8 @@ Note that those are matrix properties, so setting one of those is not enough to 
 | `transform.up`           | `Transform.WorldMatrix.Up`       |
 | `transform.up * -1`      | `Transform.WorldMatrix.Down`     |
 
->[!Note]
-> See note in [World Position/Rotation/Scale](#world-positionrotationscale)
+> [!NOTE]
+> See the note in [World Position/Rotation/Scale](#world-positionrotationscale)
 
 ## Assets
 
@@ -188,16 +187,17 @@ To open the dedicated editor for these types of assets:
 
 * double-click the asset, or
 * right-click the asset and select Edit asset, or
-* select the asset and type Ctrl + Enter
+* select the asset and press Ctrl + Enter
 
 The editor opens in a new tab. You can arrange the tabs how you like, or float them as separate windows, just like tabs in web browsers.
 
 ![Dedicated Stride editors](media/stride-vs-unity-different-editors.png)
 
->[!Note]
->When you modify resource files outside Game Studio, the corresponding assets update automatically in Game Studio.
+> [!NOTE]
+> When you modify resource files outside Game Studio, the corresponding assets update automatically in Game Studio.
  
-### Scriptable Objects
+### Scriptable objects
+
 See the [Custom Assets](../scripts/custom-assets.md) page.
 
 ### Import assets
@@ -208,8 +208,8 @@ As soon as you add an asset to your project, you can edit its properties in the 
 
 ![Add asset](media/stride-vs-unity-add-asset.png)
 
->[!Note]
-> Unlike Unity®, Stride doesn't automatically copy resource files to the project directory when you import them to projects.
+> [!NOTE]
+> Unlike Unity®, Stride doesn't automatically copy resource files to the project directory when you import them into projects.
 
 ### Supported file formats
 
@@ -257,7 +257,7 @@ Archetype
 
 For more information about archetypes, see [Archetypes](../game-studio/archetypes.md).
 
-## Object Life Time
+## Object lifetime
 
 Entities and components are not destroyed in Stride, they are removed from the scene they exist in and then freed by the [Garbage Collector](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/).
 
@@ -269,7 +269,7 @@ Components can be removed from an entity and added onto another without losing i
 
 Stride supports a variety of inputs. The code samples below demonstrate the difference in input code between Stride and Unity®.
 
-For more information about Input in Stride, see [Input](../input/index.md).
+For more information about input in Stride, see [Input](../input/index.md).
 
 #### Unity®
 
@@ -520,7 +520,7 @@ Alternatively, right-click the script in the **Asset View** and click **Open ass
 
 ### Event functions (Start, Update, Execute, etc)
 
-In Unity®, you work with MonoBehaviours with Start(), Update(), and other methods.
+In Unity®, you work with MonoBehaviours using Start(), Update(), and other methods.
 
 Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
 
@@ -598,10 +598,10 @@ To create a script, click the **Add asset** button and select **Scripts**.
 
 In Unity®, when you create a [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) script, it has two base functions: [`MonoBehaviour.Start()`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html) and [`MonoBehaviour.Update()`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html). Stride has a [`SyncScript`](xref:Stride.Engine.SyncScript) that works similarly. Like [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), [`SyncScript`](xref:Stride.Engine.SyncScript) has two methods:
 
-* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
+* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when the script is loaded.
 * [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) is called every update.
 
-Unlike [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), implementating the [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) method is not optional, and as such, must be implemented in every [`SyncScript`](xref:Stride.Engine.SyncScript).
+Unlike [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), implementing the [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) method is not optional, and as such, must be implemented in every [`SyncScript`](xref:Stride.Engine.SyncScript).
 
 If you want your script to be a startup or asynchronous, use the corresponding script types:
 
@@ -739,7 +739,7 @@ Light lightComponent = GetComponent<Light>();
 LightComponent lightComponent = Entity.Get<LightComponent>();
 ```
 
-### Access GameObject/entity  from component
+### Access GameObject/entity from component
 
 #### Unity®
 
@@ -755,7 +755,7 @@ Entity componentEntity = lightComponent.Entity;
 
 ## Log output
 
-To view the log output, go to the **Game Studio** toolbar and click on **View**, then enable the **Output** option.
+To view the log output, go to the **Game Studio** toolbar and click **View**, then enable the **Output** option.
 
 ![Enable output](media/enable-output.png)
 
@@ -782,7 +782,7 @@ public override void Start()
 System.Diagnostics.Debug.WriteLine("hello");
 ```
 
-> [!Note]
+> [!NOTE]
 > To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
 
 ## Attributes
@@ -796,8 +796,8 @@ System.Diagnostics.Debug.WriteLine("hello");
 | `[Header("My Header")]`   | `[Display(category: "My Header")]`  |
 | `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
 
-> [!Note]
-> You cannot serialize `private` fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
+> [!NOTE]
+> You cannot serialize `private` fields in Stride, if you want to set a field in the editor but prevent other scripts from writing to that field, you should use an [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
 
 ```cs
 public float MyProperty { get; init; }

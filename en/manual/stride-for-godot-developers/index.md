@@ -124,7 +124,7 @@ Like `Node3D` / `Node2D` in Godot, each entity in Stride has a [Transform compon
 
 All entities are created with a Transform component by default.
 
-In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner than that you can use `TransformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
 
@@ -137,7 +137,7 @@ Stride uses position, rotation, and scale to refer to the local position, rotati
 | `scale`                    | `Transform.Scale`            |
 | `rotation` (Euler concept) | `Transform.RotationEulerXYZ` |
 
-> [!Tip]
+> [!TIP]
 > In Godot, `Node3D.rotation` is Euler angles in **radians**, and Godot also exposes convenience properties like `rotation_degrees`.
 
 
@@ -156,7 +156,7 @@ In Godot, world-space transform values are typically accessed via `global_*` pro
 | Decompose translation/scale                                                         | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
 | Decompose translation/rotation/scale                                                | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
-> [!Note]
+> [!NOTE]
 > `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
 > To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
 
@@ -174,8 +174,8 @@ In Godot, direction vectors are commonly derived from the transform basis (for e
 | `global_transform.basis.y` (up)                 | `Transform.WorldMatrix.Up`       |
 | `-global_transform.basis.y` (down)              | `Transform.WorldMatrix.Down`     |
 
->[!Note]
-> See note in [World Position/Rotation/Scale](#world-positionrotationscale)
+> [!NOTE]
+> See the note in [World Position/Rotation/Scale](#world-positionrotationscale)
 
 ## Assets
 
@@ -439,7 +439,7 @@ To create a script, click **Add asset** button and select **Scripts**.
 
 Stride has a [SyncScript](xref:Stride.Engine.SyncScript) class that comes with methods such as:
 
-* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
+* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when the script is loaded.
 * [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) is called every update.
 
 
@@ -577,7 +577,7 @@ You can serialize any class marked with `[DataContract]` into the editor, includ
 
 In Godot you can GD.Print your message.
 
-To view the log output, go to the **Game Studio** toolbar and click on **View**, then enable the **Output** option.
+To view the log output, go to the **Game Studio** toolbar and click **View**, then enable the **Output** option.
 
 ![Enable output](../stride-for-unity-developers/media/enable-output.png)
 
@@ -605,7 +605,7 @@ public override void Start()
 System.Diagnostics.Debug.WriteLine("hello");
 ```
 
-> [!Note]
+> [!NOTE]
 > To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
 
 
