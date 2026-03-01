@@ -52,39 +52,39 @@ jobs:
         ref: master
 
     # Temporary solution till the new docfx is available
-    - name: Checkout DocFX
-      uses: actions/checkout@v6
-      with:
-        repository: dotnet/docfx
-        # Tested commit
-        ref: 917cda864650279e0bbe50b852cb98601e5efa4d
-        path: docfx-build
-        fetch-depth: 0
+    # - name: Checkout DocFX
+    #   uses: actions/checkout@v6
+    #   with:
+    #     repository: dotnet/docfx
+    #     # Tested commit
+    #     ref: 917cda864650279e0bbe50b852cb98601e5efa4d
+    #     path: docfx-build
+    #     fetch-depth: 0
 
-    - name: Restore npm dependencies
-      run: npm install
-      working-directory:  docfx-build/templates
+    # - name: Restore npm dependencies
+    #   run: npm install
+    #   working-directory:  docfx-build/templates
 
-    - name: Build site templates
-      run: npm run build
-      working-directory:  docfx-build/templates
+    # - name: Build site templates
+    #   run: npm run build
+    #   working-directory:  docfx-build/templates
 
-    - name: Build DocFX from PR
-      run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
-      working-directory: docfx-build
-      shell: pwsh
+    # - name: Build DocFX from PR
+    #   run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
+    #   working-directory: docfx-build
+    #   shell: pwsh
 
-    - name: Build Install DocFX
-      run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
-      working-directory: docfx-build
-      shell: pwsh
-      # End of Temporary solution
-      
-    #- name: Install DocFX
+    # - name: Build Install DocFX
+    #   run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
+    #   working-directory: docfx-build
+    #   shell: pwsh
+    # End of Temporary solution
+
+    - name: Install DocFX
       # This installs the latest version of DocFX and may introduce breaking changes
       # run: dotnet tool update -g docfx
       # This installs a specific, tested version of DocFX.
-      #run: dotnet tool update -g docfx --version 2.78.3
+      run: dotnet tool update -g docfx --version 2.78.5
 
     - name: Build documentation
       run: ./build-all.bat
