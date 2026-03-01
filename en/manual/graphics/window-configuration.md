@@ -116,7 +116,6 @@ Game.Window.IsMouseVisible = false;
 // Changes the position of the window
 Game.Window.Position = new Int2(50, 50);
 
-
 // True when the window has focus
 var hasFocus = Game.Window.IsFocused;
 

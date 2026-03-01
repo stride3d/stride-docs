@@ -1,28 +1,28 @@
-## Tools and Importers
+# 🛠️ Tools and Importers
 
-## Assets
-- [Blender plugin to export bulk anims for importing into Stride](https://github.com/JackPilley/BlenderToStrideAnimationSeparator)
-- [Loading additional asset databases](https://gist.github.com/aikixd/b0decb0cfc28bbdacb46d953691f76fd)
-- [LoadObjTest](https://github.com/jeske/LoadObjTest) - Runtime load an asset from a filesystem WavefrontOBJ file in code.
-- [AutoImportStride: A script to import files into Stride3D.](https://github.com/VirtualBrightPlayz/AutoImportStride)
-- [Microsoft.Extensions.Hosting.Stride3d: Hosting lifetime for Stride3d](https://github.com/spasarto/Microsoft.Extensions.Hosting.Stride3d)
-- [Import files into Stride3D](https://github.com/VirtualBrightPlayz/AutoImportStride)
-- [Loading a Wavefront OBJ file at runtime](https://github.com/jeske/LoadObjTest)
-- [Loading GLTF at runtime](https://github.com/ykafia/StrideGltf/blob/master/GltfImport/LoadGLTF.cs)
- 
-## Integration/Tools
-- [XenkoVisualStudioTemplates](https://github.com/tebjan/XenkoTemplates/releases) - Script and shader templates for Visual Studio
-- [BlenderToXenkoAnimationSeparater](https://github.com/GutterLab/BlenderToXenkoAnimationSeparator)
+## Asset Import and Loading
+
+- [BlenderToStrideAnimationSeparator](https://github.com/JackPilley/BlenderToStrideAnimationSeparator) - Blender plugin that splits and exports individual animations ready for Stride import
+- [BlenderToXenkoAnimationSeparator (legacy)](https://github.com/GutterLab/BlenderToXenkoAnimationSeparator) - Original Xenko-era Blender animation export separator
+- [AutoImportStride](https://github.com/VirtualBrightPlayz/AutoImportStride) - Script that watches a folder and automatically imports new files into a Stride project
+- [LoadObjTest](https://github.com/jeske/LoadObjTest) - Demonstrates loading a Wavefront OBJ file from the filesystem at runtime in code
+- [StrideGltf - Load GLTF at Runtime](https://github.com/ykafia/StrideGltf/blob/master/GltfImport/LoadGLTF.cs) - Code snippet for importing a GLTF model into a running Stride game at runtime
+- [Loading Additional Asset Databases](https://gist.github.com/aikixd/b0decb0cfc28bbdacb46d953691f76fd) - Gist showing how to mount additional Stride asset databases at runtime
+
+## IDE and Editor Integration
+
+- [XenkoTemplates](https://github.com/tebjan/XenkoTemplates/releases) - Script and shader item templates for Visual Studio targeting Stride projects
 
 ## Extension Libraries
-- [Run Stride Gamestudio with only Nuget!](https://github.com/Doprez/stride-gamestudio-nuget)
-- [Stride Live Editor for changing entity data at runtime](https://github.com/tebjan/StrideLiveEditor)
+
+- [stride-gamestudio-nuget](https://github.com/Doprez/stride-gamestudio-nuget) - Allows running the Stride GameStudio editor purely via NuGet, without a full SDK install
+- [StrideLiveEditor](https://github.com/tebjan/StrideLiveEditor) - Runtime editor overlay for tweaking entity properties and values while the game runs
+- [Microsoft.Extensions.Hosting.Stride3d](https://github.com/spasarto/Microsoft.Extensions.Hosting.Stride3d) - Integrates Stride's game loop with the .NET Generic Host for dependency injection and lifetime management
 
 ## Development Tools
-- [HS-Stride-Packer](https://github.com/Keepsie/HS-Stride-Packer) - Create and share .stridepackage files with automatic dependency handling
-- [HS-Stride-Editor-Toolkit](https://github.com/Keepsie/HS-Stride-Editor-Toolkit) - Library for creating custom editor tools with file-based batch automation
-- [HS-Stride-Mass-Importer](https://github.com/Keepsie/HS-Stride-Mass-Importer) - Bulk import FBX, textures, and audio into Stride format automatically
-- [HS-Stride-Model-Importer](https://github.com/Keepsie/HS-Stride-Model-Importer) - Split multi-mesh FBX files into individual selectable parts with hierarchy
-- [HS-Stride-UI-Editor](https://github.com/Keepsie/HS-Stride-UI-Editor) - Standalone UI editor with modern visual workflow - native Stride UI, no framework
 
-
+- [HS-Stride-Packer](https://github.com/Keepsie/HS-Stride-Packer) - Creates and shares `.stridepackage` files with automatic dependency resolution
+- [HS-Stride-Editor-Toolkit](https://github.com/Keepsie/HS-Stride-Editor-Toolkit) - Library for building custom GameStudio editor tools with file-based batch automation
+- [HS-Stride-Mass-Importer](https://github.com/Keepsie/HS-Stride-Mass-Importer) - Bulk-imports FBX files, textures, and audio into the Stride asset pipeline automatically
+- [HS-Stride-Model-Importer](https://github.com/Keepsie/HS-Stride-Model-Importer) - Splits multi-mesh FBX files into individually selectable parts with hierarchy intact
+- [HS-Stride-UI-Editor](https://github.com/Keepsie/HS-Stride-UI-Editor) - Standalone visual UI editor with a modern workflow using native Stride UI components

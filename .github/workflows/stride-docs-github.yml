@@ -80,7 +80,7 @@ jobs:
       #run: dotnet tool update -g docfx --version 2.78.3
 
     - name: Build documentation
-      run: ./build-all.bat
+      run: ./build-all-skip-pdf.bat
       working-directory: ${{ env.DOCS_PATH }}
 
     - name: Deploy

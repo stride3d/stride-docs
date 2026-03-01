@@ -24,7 +24,7 @@ To create an audio listener, attach an **audio listener component** to an entity
     The entity is now an audio listener.
 
 > [!Warning] 
-On iOS, you can create multiple objects with [Audio listener component](xref:Stride.Audio.AudioListener) in a scene, but only one is used at runtime.
+> On iOS, you can create multiple objects with [Audio listener component](xref:Stride.Audio.AudioListener) in a scene, but only one is used at runtime.
 
 ## See also
 * [Spatialized audio](spatialized-audio.md)
