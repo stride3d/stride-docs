@@ -322,6 +322,8 @@ public class BasicMethods : StartupScript
  
 #### Godot example
 
+##### [C#](#tab/StartupScript-csharp)
+
 ```csharp
 public class BasicMethods : Node
 {
@@ -339,6 +341,24 @@ public class BasicMethods : Node
     }
 }
 ```
+
+##### [GDScript](#tab/StartupScript-gdscript)
+
+```csharp
+extends Node
+
+func _ready() -> void:
+    # Initialization code for the script
+    pass
+
+# Godot doesn't have a direct equivalent to Stride's Cancel,
+# but you could use _ExitTree for cleanup
+func _exit_tree() -> void:
+    # Cleanup code for the script
+    pass
+```
+
+---
 
 ### SyncScript
 
@@ -368,6 +388,8 @@ public class BasicMethods : SyncScript
 
 #### Godot example
 
+##### [C#](#tab/SyncScript-csharp)
+
 ```csharp
 public class BasicMethods : Node
 {
@@ -381,14 +403,31 @@ public class BasicMethods : Node
 
 ```
 
-### AsyncScripts
+##### [GDScript](#tab/SyncScript-gdscript)
+
+```csharp
+extends Node
+
+func _ready() -> void:
+    pass
+
+func _exit_tree() -> void:
+    pass
+
+func _process(delta: float) -> void:
+    # Perform actions based on delta
+    pass
+```
+
+---
+
+### AsyncScript
 
 Both Stride and Godot provide ways to run code asynchronously, but they use different approaches.
 
 #### Stride example
 
 Stride offers a specialized `AsyncScript` class that allows you to execute code asynchronously using C#'s `async`/`await` syntax. The `Execute()` method can be awaited, allowing your code to run without blocking the main game loop.
-
 
 ```csharp
 public class BasicMethods : AsyncScript
@@ -422,6 +461,8 @@ public class BasicMethods : AsyncScript
 
 Godot doesn't offer a dedicated `AsyncScript` class like Stride. However, you can still write asynchronous code in C# using the standard `async`/`await` syntax.
 
+##### [C#](#tab/AsyncScript-csharp)
+
 ```csharp
 public class BasicMethods : Node
 {
@@ -438,6 +479,24 @@ public class BasicMethods : Node
     }
 }
 ```
+
+##### [GDScript](#tab/AsyncScript-gdscript)
+
+```csharp
+extends Node
+
+func _ready() -> void:
+    await get_tree().create_timer(1.0).timeout
+    # Execute code after 1-second timer elapses
+    pass
+
+# Godot doesn't have a direct equivalent to Stride's Cancel method
+func _exit_tree() -> void:
+    # Cleanup code for the script
+    pass
+```
+
+---
 
 In summary, both Stride and Godot offer mechanisms for running code asynchronously, but they achieve this in different ways. Stride provides a built-in `AsyncScript` class, whereas Godot allows for asynchronous code through standard C# mechanisms.
 
@@ -507,10 +566,21 @@ For more information about adding scripts in Stride, see [Use a script](../scrip
 
 In Godot, the common equivalent is instantiating a `PackedScene`.
 
+##### [C#](#tab/prefabs-csharp)
+
 ```csharp
 var node = packedScene.Instantiate<Node3D>();
 AddChild(node);
 ```
+
+##### [GDScript](#tab/prefabs-gdscript)
+
+```csharp
+var node = packedScene.instantiate()
+add_child(node)
+```
+
+---
 
 In Stride, you can instantiate entities using prefabs like so:
 
