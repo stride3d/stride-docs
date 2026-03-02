@@ -7,8 +7,8 @@ items:
     href: requirements/index.md
   - name: Stride for Unity® developers
     href: stride-for-unity-developers/index.md
-  # - name: Stride for Godot developers
-  #   href: stride-for-godot-developers/index.md
+  - name: Stride for Godot developers
+    href: stride-for-godot-developers/index.md
   - name: Stride Launcher
     href: stride-launcher/index.md
 
