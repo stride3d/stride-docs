@@ -34,27 +34,19 @@ Unity® and Stride use mostly common terms, with a few differences:
 Like Unity®, Stride projects are stored in a directory that contains:
 
 * The project `.sln` solution file, which you can open with Game Studio or any IDE such as Visual Studio
+* A **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries 
 
-* A **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries
-
-  ![Package folder structure](../files-and-folders/media/folder-structure.png)
-
+![Package folder structure](../files-and-folders/media/folder-structure.png)
 * **Assets** contains asset configuration files.
-
 * **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
-
 * **MyPackage.Game** contains your source code.
-
   * **MyPackage.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (e.g. *MyPackage.Windows*, *MyPackage.Linux*, etc.). These folders are usually small and only contain the entry point of the program.
-
 * **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
-
 * **Resources** is the recommended location for storing source files for your project, such as textures, models, and audio files.
 
 Stride and Unity® differ in the following ways:
 
 * Stride doesn't automatically copy resource files to your project folder when you import them into assets. You have to do this yourself. We recommend you save them in the **Resources** folder.
-
 * Stride doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead, we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
 
 For more information about project structure in Stride, including advice about how to organize and share your files, see the [Project structure](../files-and-folders/project-structure.md) page.
@@ -84,7 +76,7 @@ To use the Game Settings asset, in the **Asset View**, select **GameSettings** a
 
 ## Scenes
 
-Like Unity®, in Stride, you place all objects in a scene. Game Studio stores scenes as separate ``.sdscene`` assets in your project directory.
+Like Unity®, in Stride, you place all objects in a scene. Game Studio stores scenes as separate `.sdscene` assets in your project directory.
 
 ### Set the default scene
 
@@ -97,7 +89,6 @@ To set the default scene:
     ![Set default scene](media/stride-vs-unity-game-settings-default-scene.png)
 
     The **Select an asset** window opens.
-
 2. Select the default scene and click **OK**.
 
 For more information about scenes, see [Scenes](../game-studio/scenes.md).
@@ -129,7 +120,7 @@ Like GameObjects in Unity®, each entity in Stride has a [Transform component](x
 
 All entities are created with a Transform component by default.
 
-In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated in every Update frame. If you need to force an update sooner than that you can use `TranformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
+In Stride, Transform components contain a LocalMatrix and a WorldMatrix that are updated every Update frame. If you need to force an update sooner than that you can use `TransformComponent.UpdateLocalMatrix()`, `Transform.UpdateWorldMatrix()`, or `Transform.UpdateLocalFromWorld()` to do so, depending on how you need to update the matrix.
 
 #### Local Position/Rotation/Scale
 
@@ -155,9 +146,8 @@ In comparison to Unity, many of the Transform component's properties related to 
 | `transform.scale` and `transform.position`                        | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
 | `transform.scale`, `transform.rotation`, and `transform.position` | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
->[!Note]
-> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
-To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
+> [!NOTE]
+> `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now. To ensure you're reading the latest position and rotation, you should force the matrix to update by calling `Transform.UpdateWorldMatrix()` before reading from it.
 
 #### Transform Directions
 
@@ -173,8 +163,8 @@ Note that those are matrix properties, so setting one of those is not enough to 
 | `transform.up`           | `Transform.WorldMatrix.Up`       |
 | `transform.up * -1`      | `Transform.WorldMatrix.Down`     |
 
->[!Note]
-> See note in [World Position/Rotation/Scale](#world-positionrotationscale)
+> [!NOTE]
+> See the note in [World Position/Rotation/Scale](#world-positionrotationscale)
 
 ## Assets
 
@@ -197,16 +187,17 @@ To open the dedicated editor for these types of assets:
 
 * double-click the asset, or
 * right-click the asset and select Edit asset, or
-* select the asset and type Ctrl + Enter
+* select the asset and press Ctrl + Enter
 
 The editor opens in a new tab. You can arrange the tabs how you like, or float them as separate windows, just like tabs in web browsers.
 
 ![Dedicated Stride editors](media/stride-vs-unity-different-editors.png)
 
->[!Note]
->When you modify resource files outside Game Studio, the corresponding assets update automatically in Game Studio.
+> [!NOTE]
+> When you modify resource files outside Game Studio, the corresponding assets update automatically in Game Studio.
  
-### Scriptable Objects
+### Scriptable objects
+
 See the [Custom Assets](../scripts/custom-assets.md) page.
 
 ### Import assets
@@ -217,8 +208,8 @@ As soon as you add an asset to your project, you can edit its properties in the 
 
 ![Add asset](media/stride-vs-unity-add-asset.png)
 
->[!Note]
-> Unlike Unity®, Stride doesn't automatically copy resource files to the project directory when you import them to projects.
+> [!NOTE]
+> Unlike Unity®, Stride doesn't automatically copy resource files to the project directory when you import them into projects.
 
 ### Supported file formats
 
@@ -266,7 +257,7 @@ Archetype
 
 For more information about archetypes, see [Archetypes](../game-studio/archetypes.md).
 
-## Object Life Time
+## Object lifetime
 
 Entities and components are not destroyed in Stride, they are removed from the scene they exist in and then freed by the [Garbage Collector](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/).
 
@@ -278,7 +269,7 @@ Components can be removed from an entity and added onto another without losing i
 
 Stride supports a variety of inputs. The code samples below demonstrate the difference in input code between Stride and Unity®.
 
-For more information about Input in Stride, see [Input](../input/index.md).
+For more information about input in Stride, see [Input](../input/index.md).
 
 #### Unity®
 
@@ -529,7 +520,7 @@ Alternatively, right-click the script in the **Asset View** and click **Open ass
 
 ### Event functions (Start, Update, Execute, etc)
 
-In Unity®, you work with MonoBehaviours with Start(), Update(), and other methods.
+In Unity®, you work with MonoBehaviours using Start(), Update(), and other methods.
 
 Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
 
@@ -607,16 +598,14 @@ To create a script, click the **Add asset** button and select **Scripts**.
 
 In Unity®, when you create a [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) script, it has two base functions: [`MonoBehaviour.Start()`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html) and [`MonoBehaviour.Update()`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html). Stride has a [`SyncScript`](xref:Stride.Engine.SyncScript) that works similarly. Like [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), [`SyncScript`](xref:Stride.Engine.SyncScript) has two methods:
 
-* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when it the script is loaded.
-
+* [`SyncScript.Start()`](xref:Stride.Engine.StartupScript.Start) is called when the script is loaded.
 * [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) is called every update.
 
-Unlike [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), implementating the [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) method is not optional, and as such, must be implemented in every [`SyncScript`](xref:Stride.Engine.SyncScript).
+Unlike [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), implementing the [`SyncScript.Update()`](xref:Stride.Engine.SyncScript.Update) method is not optional, and as such, must be implemented in every [`SyncScript`](xref:Stride.Engine.SyncScript).
 
 If you want your script to be a startup or asynchronous, use the corresponding script types:
 
 * [`StartupScript`](xref:Stride.Engine.StartupScript): this script has a single [`StartupScript.Start()`](xref:Stride.Engine.StartupScript.Start) method. It initializes the scene and its content at startup.
-
 * [`AsyncScript`](xref:Stride.Engine.AsyncScript): an asynchronous script with a single method [`AsyncScript.Execute()`](xref:Stride.Engine.AsyncScript.Execute) and you can use async/await inside that method. Asynchronous scripts aren't loaded one by one like synchronous scripts. Instead, they're all loaded in parallel.
 
 ### Reload assemblies
@@ -750,7 +739,7 @@ Light lightComponent = GetComponent<Light>();
 LightComponent lightComponent = Entity.Get<LightComponent>();
 ```
 
-### Access GameObject/entity  from component
+### Access GameObject/entity from component
 
 #### Unity®
 
@@ -766,11 +755,11 @@ Entity componentEntity = lightComponent.Entity;
 
 ## Log output
 
-To see the output, in the Game Studio toolbar, under **View**, enable **Output**.
+To view the log output, go to the **Game Studio** toolbar and click **View**, then enable the **Output** option.
 
 ![Enable output](media/enable-output.png)
 
-Game Studio displays in the **Output** tab (at the bottom of Game Studio by default).
+Once enabled, the **Output** tab will appear, typically located at the bottom of the **Game Studio** interface.
 
 ![Output tab](media/output-tab.png)
 
@@ -793,8 +782,8 @@ public override void Start()
 System.Diagnostics.Debug.WriteLine("hello");
 ```
 
->[!Note]
->To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
+> [!NOTE]
+> To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
 
 ## Attributes
 
@@ -807,8 +796,8 @@ System.Diagnostics.Debug.WriteLine("hello");
 | `[Header("My Header")]`   | `[Display(category: "My Header")]`  |
 | `[Tooltip("My tooltip")]` | `/// <userdoc>My tooltip</userdoc>` |
 
->[!Note]
->You cannot serialize `private` fields in Stride, if you want to set a field in editor but prevent other scripts from writing to that field, you should use a [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
+> [!NOTE]
+> You cannot serialize `private` fields in Stride, if you want to set a field in the editor but prevent other scripts from writing to that field, you should use an [init property](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)
 
 ```cs
 public float MyProperty { get; init; }
