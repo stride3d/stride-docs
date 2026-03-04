@@ -448,7 +448,10 @@ items:
       - name: Constraints
         href: physics/constraints.md
       - name: Physics Queries
-        href: physics/raycasting.md
+        href: physics/raycasting/index.md
+        items:
+          - name: Raycasts
+            href: physics/raycasting/raycasts.md
       - name: Physics Update
         href: physics/physics-update.md
       - name: Tutorials
