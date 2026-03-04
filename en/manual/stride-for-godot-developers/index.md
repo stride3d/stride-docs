@@ -4,11 +4,19 @@
 
 The Stride editor is **Game Studio**. This is the equivalent of the Godot Editor.
 
+![Godot layout](media/stride-vs-godot-godotlayout.webp)
+
+![Stride Game Studio layout](media/stride-vs-godot-stridelayout.webp)
+
+You can customize the Game Studio layout by dragging tabs, similar to Visual Studio.
+
+For more information about Game Studio, see the [Game Studio](../game-studio/index.md) page.
+
+## Code Editor
+
 ### Godot
 
 Godot provides a built-in code editor that supports its own scripting language, GDScript, as well as C# and VisualScript. The Godot editor is more tightly integrated with the engine and is generally kept up-to-date with new features.
-
-In summary, while both Stride and Godot offer integrated code editors, Stride's editor is best considered a supplementary tool rather than a complete IDE. It is advised to use specialized IDEs for more complex development tasks in Stride. Godot's editor, on the other hand, is robust enough for full-scale development if you are using GDScript or C#.
 
 ### Stride
 
@@ -19,14 +27,7 @@ Stride comes with an integrated C# code editor within Game Studio. Although func
 - Visual Studio Community: Free for small teams and individual developers.
 - Visual Studio Professional and Enterprise: Paid versions with additional features and services.
 
-![Godot layout](media/stride-vs-godot-godotlayout.webp)
-
-![Stride Game Studio layout](media/stride-vs-godot-stridelayout.webp)
-
-You can customize the Game Studio layout by dragging tabs, similar to Visual Studio.
-
-For more information about Game Studio, see the [Game Studio](../game-studio/index.md) page.
-
+In summary, while both Stride and Godot offer integrated code editors, Stride's editor is best considered a supplementary tool rather than a complete IDE. It is advised to use specialized IDEs for more complex development tasks in Stride. Godot's editor, on the other hand, is robust enough for full-scale development if you are using GDScript or C#.
 
 ## Terminology
 
@@ -46,7 +47,7 @@ For more information about Game Studio, see the [Game Studio](../game-studio/ind
 - **Assets**
   - In Godot, you can store assets anywhere.
   - In Stride, assets are stored in the `Assets` folder.
-- Stride and Godot use the standard C# solution structure. A key difference is that Stride uses a multi-project architecture with the following projects:
+- Stride and Godot use the standard C# solution structure. A key difference is that **Stride uses a multi-project architecture with the following projects**:
   - `MyPackage.Game` contains your source code.
   - `MyPackage.Platform` contains additional code for the platforms your project supports. Game Studio creates folders for each platform (for example, `MyPackage.Windows`, `MyPackage.Linux`, etc.). These folders are usually small and only contain the program entry point.
   - Any additional subprojects. Stride scans subprojects the same way it scans the main project to find `DataContract` classes and features for the editor and game.
@@ -134,27 +135,29 @@ Stride uses position, rotation, and scale to refer to the local position, rotati
 |----------------------------|------------------------------|
 | `position`                 | `Transform.Position`         |
 | `quaternion` / `basis`     | `Transform.Rotation`         |
-| `rotation` / `rotation_degrees` | `Transform.RotationEulerXYZ` |
+| `rotation_degrees`         | `Transform.RotationEulerXYZ` |
 | `scale`                    | `Transform.Scale`            |
 
 > [!TIP]
 > In Godot, `Node3D.rotation` is Euler angles in **radians**, and Godot also exposes convenience properties like `rotation_degrees`.
+> 
+> In order to get and set rotation using degrees use the utility methods [`MathUtil.DegreesToRadians`](xref:Stride.Core.Mathematics.MathUtil.DegreesToRadians) and [`MathUtil.RadiansToDegrees`](xref:Stride.Core.Mathematics.MathUtil.RadiansToDegrees) with `Transform.RotationEulerXYZ`.
 
 
 #### World Position/Rotation/Scale
 
 In Godot, world-space transform values are typically accessed via `global_*` properties or `global_transform`. In comparison to Godot, many of the Transform component's properties related to its location in the world are accessed via Stride's [WorldMatrix](xref:Stride.Engine.TransformComponent.WorldMatrix).
 
-| Godot (4.x, Node3D)                                                                 | Stride                                                                                                 |
-|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `global_position` (== `global_transform.origin`)                                    | `Transform.WorldMatrix.TranslationVector`                                                              |
-| `global_rotation` (Euler, radians)                                                  | Decompose from `Transform.WorldMatrix`                                                                 |
-| `global_scale`                                                                      | Decompose from `Transform.WorldMatrix`                                                                 |
-| `global_transform`                                                                  | `Transform.WorldMatrix`                                                                                |
-| `global_transform.basis` (rotation/scale/shear in global space)                     | Use direction vectors and decomposition on `Transform.WorldMatrix`                                     |
-| Decompose from `global_transform` / `global_transform.basis` (rotation/scale etc.)  | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)`                                             |
-| Decompose translation/scale                                                         | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)`                          |
-| Decompose translation/rotation/scale                                                | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
+| Godot (4.x, Node3D) | Stride |
+|---------------------|--------|
+| `global_position` / `global_transform.origin` | `Transform.WorldMatrix.TranslationVector` |
+| `global_rotation` (Euler, radians) | Decompose from `Transform.WorldMatrix` |
+| `global_scale` | Decompose from `Transform.WorldMatrix` |
+| `global_transform` | `Transform.WorldMatrix` |
+| `global_transform.basis` (rotation/scale/shear in global space) | Use direction vectors and decomposition on `Transform.WorldMatrix` |
+| Decompose from `global_transform` / `global_transform.basis` (rotation/scale etc.) | `Transform.WorldMatrix.DecomposeXYZ(out Vector3 rotation)` |
+| Decompose translation/scale | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Vector3 translation)` |
+| Decompose translation/rotation/scale | `Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)` |
 
 > [!NOTE]
 > `WorldMatrix` is only updated after the entire Update loop runs, which means that you may be reading outdated data if that object's or its parent's position changed between the previous frame and now.
@@ -244,8 +247,8 @@ public override void Update()
 
 | Godot | Stride |
 |---|---|
-| `delta` in `_Process(double delta)` | `Game.UpdateTime.Elapsed.TotalSeconds` |
-| `delta` in `_PhysicsProcess(double delta)` | `Game.UpdateTime.Elapsed.TotalSeconds` |
+| `delta` in `_Process(double delta)` | `Game.UpdateTime.WarpElapsed.TotalSeconds` |
+| `delta` in `_PhysicsProcess(double delta)` | `simTimeStep` in `SimulationUpdate(BepuSimulation simulation, float simTimeStep)` |
 | `Engine.time_scale` | `Game.UpdateTime.Factor` |
 
 ## Physics
@@ -260,7 +263,7 @@ In Stride, there are three main types of colliders:
 - **Rigidbodies:** Dynamic colliders that are subject to physics simulations, such as gravity or force.
 - **Characters:** Special colliders designed to work with character controllers.
 
-In Stride, collision handling is done through physics components and script logic that handle collision events and triggers. For details, see [Physics](../physics/index.md), [Triggers](../physics/triggers.md), and [Raycasting](../physics/raycasting.md).
+In Stride, collision handling is done through physics components and script logic that handle collision events and triggers. For details, see [Physics](../physics/index.md), [Triggers](../physics/triggers.md), and [Physics Queries](../physics/raycasting.md).
 
 ### Godot
 
@@ -281,9 +284,9 @@ For example, instead of inheriting from `CharacterBody3D` in Godot, in Stride yo
 
 ```csharp
 // Example of searching for a CharacterComponent in Stride
-public class MyScript : SyncScript
+public class MyScript : StartupScript
 {
-    public override void Update()
+    public override void Start()
     {
         var characterComponent = Entity.Get<CharacterComponent>();
 
@@ -582,7 +585,9 @@ add_child(node)
 
 ---
 
-In Stride, you can instantiate entities using prefabs like so:
+In Stride, you can instantiate entities using prefabs. However unlike Godot, a prefab in Stride **can contain multiple entities at it's root**, meaning that instantiating will return **multiple entity instances**.
+
+In Stride, an entity can be instantiated like so:
 
 ```cs
 // Public member fields and properties displayed in the Game Studio Property Grid
