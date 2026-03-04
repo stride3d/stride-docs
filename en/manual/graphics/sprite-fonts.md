@@ -151,5 +151,4 @@ Like the offline-rasterized sprite font, the signed distance field sprite font b
 ## Further reading
 
 * [Paper on how distance fields and multi-channel distance fields in particular work](https://dspace.cvut.cz/bitstream/handle/10467/62770/F8-DP-2015-Chlumsky-Viktor-thesis.pdf)
-
 * [Stack Exchange thread outlining the differences between single-channel SDF and multi-channel SDF fonts](https://computergraphics.stackexchange.com/questions/306/sharp-corners-with-signed-distance-fields-fonts)

@@ -24,7 +24,7 @@ Here's how it looks like in a default game project:
 </Project>
 ```
 > [!Warning]
-> Make sure that the version specified for `Stride.Core.Assets` matches the other package's versions.
+> Make sure that the `TargetFrameworks` and all package versions match your current Stride version. The example above shows version 4.2.0.1 for reference.
 
 Inside the same project, create a new csharp file and replace its content with the following:
 ```cs

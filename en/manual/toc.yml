@@ -7,8 +7,8 @@ items:
     href: requirements/index.md
   - name: Stride for Unity® developers
     href: stride-for-unity-developers/index.md
-  # - name: Stride for Godot developers
-  #   href: stride-for-godot-developers/index.md
+  - name: Stride for Godot developers
+    href: stride-for-godot-developers/index.md
   - name: Stride Launcher
     href: stride-launcher/index.md
 
@@ -289,6 +289,8 @@ items:
             href: graphics/post-effects/light-streaks.md
           - name: Local reflections
             href: graphics/post-effects/local-reflections.md
+      - name: Window Configuration
+        href: graphics/window-configuration.md
       - name: Graphics compositor
         href: graphics/graphics-compositor/index.md
         items:
@@ -323,6 +325,8 @@ items:
                 href: graphics/effects-and-shaders/shading-language/shader-stages.md
           - name: Custom shaders
             href: graphics/effects-and-shaders/custom-shaders.md
+          - name: Shader development with Visual Studio Code
+            href: graphics/effects-and-shaders/shader-development-vscode.md
           - name: Compile shaders
             href: graphics/effects-and-shaders/compile-shaders.md
       - name: Low-level API

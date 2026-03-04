@@ -2,27 +2,37 @@ items:
 - name: 👾 Games and Demos
   href: games-and-demos.md
   expanded: true
+- name: 🤖 AI and Pathfinding
+  href: ai-and-pathfinding.md
+- name: 🔊 Audio
+  href: audio.md
+- name: 🔌 Embedding and Integration
+  href: embedded-stride.md
+- name: 🔧 Engine
+  href: engine.md
 - name: ⚙️ Example Projects
   href: example-projects.md
-- name: 🎓 Tutorials
-  href: tutorials-and-articles.md
+- name: 🎮 Input
+  href: input.md
 - name: ⨺ Models and Animations
   href: models-and-animations.md
-- name: ⛰️ Terrain and Water
-  href: terrain-and-water.md
+- name: 🌐 Networking
+  href: networking.md
 - name: 🍎  Physics
   href: physics.md
-- name: 🌈 Shaders
-  href: shaders.md
+- name: 👨‍💻 Programming and Scripting
+  href: coding.md
 - name: 🎥 Rendering and Camera
   href: rendering-and-camera.md
+- name: 🌈 Shaders
+  href: shaders.md
+- name: ⛰️ Terrain and Water
+  href: terrain-and-water.md
+- name: 🛠️ Tools and Importers
+  href: tools-and-importers.md
+- name: 🎓 Tutorials and Articles
+  href: tutorials-and-articles.md
 - name: 🪟 UI
   href: ui.md
 - name: 🗠 Visual Programming
   href: visual-programming.md
-- name: 🛠️ Tools and Importers
-  href: tools-and-importers.md
-- name: 👨‍💻 Programming and Scripting
-  href: coding.md
-- name: 🔌 Embedding and Integration
-  href: embedded-stride.md
