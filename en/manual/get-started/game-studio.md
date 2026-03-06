@@ -38,6 +38,8 @@ Under each of those elements, there are 2 folders: **Assets** and **Code**.
 
 ## Asset View
 
+[IMAGE HERE]
+
 The **asset view** displays contents of a selected folder in the **[solution explorer](#solution-explorer)**.
 
 Items from the **asset view** can be dragged into other editors (for example: dragging a prefab into the scene in the **[Asset Editor](#asset-editor)**).
