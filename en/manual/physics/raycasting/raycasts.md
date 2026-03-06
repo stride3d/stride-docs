@@ -23,7 +23,7 @@ public void Shoot()
     // The maximum distance of the ray
     var maxDistance = 16;
     
-    if (simulation.Raycast(origin, direction, distance, out HitInfo result))
+    if (simulation.RayCast(origin, direction, distance, out HitInfo result))
     {
         // Handle a successfull hit
     }
@@ -34,4 +34,43 @@ public void Shoot()
 
 The difference between this type of query and the normal one is that, when the ray reaches an object, it doesn't stop and instead it keeps going until it reaches it's maximum length.
 
-TODO: example on how to do this and allocate a stack
+A penetrating raycast returns multiple objects and also requires a **buffer**.
+
+```csharp
+public void Shoot()
+{
+    // Create a buffer
+    var buffer = new List<HitInfo>();
+    
+    // Iterate over all results
+    foreach (var item in simulation.RayCastPenetrating(origin, direction, distance, buffer))
+    {
+        // Handle a successfull hit
+    }
+}
+```
+
+> [!NOTE]
+> **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to do it yourself.
+
+### Penetrating raycast query (with `stackalloc`)
+
+When repeatedly performing a penetrating raycast, we have to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector. A prefered solution would be to use `stackalloc`.
+
+```csharp
+public void Shoot()
+{
+    // Allocate a buffer that can hold 16 elements
+    Span<HitInfo> buffer = stackalloc HitInfoSpan[16];
+    
+    // Iterate over all results
+    foreach (var item in simulation.RayCastPenetrating(origin, direction, distance, buffer))
+    {
+        // Handle a successfull hit
+    }
+}
+```
+
+#### Size limitation
+
+A span has a limited amount of elements it can contain. If there are more hits than the buffer size, only the closest ones will be returned.

@@ -11,6 +11,7 @@
 ## Query types
 
 * **Raycast** - fires a ray from a point in a specified direction and retrieves the object(s) it hits.
+* **Sweepcasts** - fires a shape in a specified direction and retrieves the object(s) it hits.
 * **Overlap** - retrieves the object(s) that overlap a specified area.
 
 ## Querying specific collision masks
@@ -36,5 +37,5 @@ var mask1 = CollisionMask.Layer1 | CollisionMask.Layer2;
 var mask2 = CollisionMask.Everything ^ CollisionMask.Layer3;
 
 // An inverted mask2 - only layer 3
-var mask2 = ~mask3;
+var mask3 = ~mask2;
 ```
