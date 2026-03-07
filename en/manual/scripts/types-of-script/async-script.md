@@ -61,7 +61,7 @@ public class Example : AsyncScript
 }
 ```
 
-## Threading safety
+## Thread safety
 
 When executing asynchronous code we can run into a situation, where **two different threads want to access or modify certain values at the same time**. This can result in **unwanted behaviours** or a **race condition**.
 
@@ -94,7 +94,30 @@ public class Example : AsyncScript
 
 ## Executing tasks in parallel
 
-TODO: write this.
+Sometimes it's usefull to execute two async tasks in the same script. This can be achieved using [`Task.Run`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run).
+
+> [!NOTE]
+> Using [`Task.Run`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run) will **run a task on the thread pool**. More information about this can be found [here](#thread-safety).
+
+```csharp
+public class Example : AsyncScript
+{
+    public override async Task Execute()
+    {
+        _ = Task.Run(async () => await ParallelTask());
+        
+        // Execute code at the same time as ParallelTask
+    }
+    
+    private async Task ParallelTask()
+    {
+        // Return to the main thread
+        await Script.NextFrame();
+        
+        // Execute code at the same time as Execute
+    }
+}
+```
 
 ## Overridable methods
 
