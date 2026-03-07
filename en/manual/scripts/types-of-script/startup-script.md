@@ -35,14 +35,14 @@ Startup scripts feature 2 methods which can be overridden in order to perform ga
 
 ### `Start()`
 
-The start method gets called only once when the script is loaded. This includes:
+The [Start](xref:Stride.Engine.StartupScript.Start) method gets called only once when the script is loaded. This includes:
 * When a scene the script is in gets loaded
 * When an entity the script is attached to gets added to the scene
 * When the script gets added to an entity in a scene
 
 ### `Cancel()`
 
-The cancel method gets called only once when the script is unloaded. This includes:
+The [Cancel](xref:Stride.Engine.ScriptComponent.Cancel) method gets called only once when the script is unloaded. This includes:
 * When a scene the script is in gets unloaded
 * When an entity the script is attached to gets removed from the scene
 * When the script gets removed from a scene entity

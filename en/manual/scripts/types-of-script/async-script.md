@@ -6,7 +6,7 @@
 Asynchronous scripts get executed only once asynchronously. They can be used for initializing the scene and it's contents or performing game logic for every frame.
 
 ```csharp
-public class Example : StartupScript
+public class Example : AsyncScript
 {
     public override Task Execute()
     {
@@ -131,14 +131,14 @@ Asynchronous scripts feature 2 methods which can be overridden in order to perfo
 
 ### `Execute()`
 
-The execute method gets called asynchronously when the script is loaded. This includes:
+The [Execute](xref:Stride.Engine.AsyncScript.Execute) method gets called asynchronously when the script is loaded. This includes:
 * When a scene the script is in gets loaded
 * When an entity the script is on gets added to the scene
 * When the script gets added to a scene entity
 
 ### `Cancel()`
 
-The cancel method gets called only once when the script is unloaded. This includes:
+The [Cancel](xref:Stride.Engine.ScriptComponent.Cancel) method gets called only once when the script is unloaded. This includes:
 * When a scene the script is in gets unloaded
 * When an entity the script is attached to gets removed from the scene
 * When the script gets removed from a scene entity
