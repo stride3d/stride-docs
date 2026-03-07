@@ -30,7 +30,7 @@ If you **don't need to await any tasks**, consider **using a [startup script](./
 
 Asynchronous programming in C# means writing code that can **run in parallel**.
 
-For example: let's say we have a method for saving the game's state that **takes 10 seconds** to execute. Instead of pausing everything untill it finishes running, **we can run it asynchronously**, meaning that **the game can continue while we are saving the player's progress**.
+For example: let's say we have a method for saving the game's state that **takes 10 seconds** to execute. Instead of pausing everything until it finishes running, **we can run it asynchronously**, meaning that **the game can continue while we are saving the player's progress**.
 
 An asynchronous method is a normal method that returns a `Task`, which can then be awaited. While it's running, other non asynchronous and asynchronous code will be allowed to run.
 
@@ -66,7 +66,7 @@ public class Example : AsyncScript
 
 ## Thread safety
 
-When executing asynchronous code we can run into a situation, where **two different threads want to access or modify certain values at the same time**. This can result in **unwanted behaviours** or a **race condition**.
+When executing asynchronous code we can run into a situation, where **two different threads want to access or modify certain values at the same time**. This can result in **unwanted behaviors** or a **race condition**.
 
 This is why it's important to **do everything related to the engine on the main thread**.
 
@@ -97,7 +97,7 @@ public class Example : AsyncScript
 
 ## Executing tasks in parallel
 
-Sometimes it's usefull to execute two async tasks in the same script. This can be achieved using [`Task.Run`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run).
+Sometimes it's useful to execute two async tasks in the same script. This can be achieved using [`Task.Run`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run).
 
 > [!NOTE]
 > Using [`Task.Run`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run) will **run a task on the thread pool**. More information about this can be found [here](#thread-safety).
@@ -124,7 +124,7 @@ public class Example : AsyncScript
 
 ## Overridable methods
 
-Asynchronous scripts feature 2 methods which can be overriden in order to perform game logic.
+Asynchronous scripts feature 2 methods which can be overridden in order to perform game logic.
 
 > [!NOTE]
 > These methods **only get called during runtime** - they will never be called in Game Studio.

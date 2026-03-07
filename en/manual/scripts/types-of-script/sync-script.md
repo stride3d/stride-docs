@@ -33,7 +33,7 @@ However, if your code **needs to await asynchronous methods**, then it's advised
 
 ## Initialization
 
-Often, synchronization scripts need to access other entities and / or components from the scene via code. Doing this every frame is unnecessary, which is why it's recomended to do the initialization in the [Start](#start) method and then access data from it in [Update](#update).
+Often, synchronization scripts need to access other entities and / or components from the scene via code. Doing this every frame is unnecessary, which is why it's recommended to do the initialization in the [Start](#start) method and then access data from it in [Update](#update).
 
 ```csharp
 public class Example : SyncScript
@@ -70,7 +70,7 @@ public class Example : SyncScript
 }
 ```
 
-Keep in mind, **this value isn't influenced by the [time factor](xref:Stride.Games.GameTime.Factor)**, which is a variable that can be modified in order to speed up or slow down the game. Most commnly, it's used when **pausing the game** which in the above example, **won't do anything**.
+Keep in mind, **this value isn't influenced by the [time factor](xref:Stride.Games.GameTime.Factor)**, which is a variable that can be modified in order to speed up or slow down the game. Most commonly, it's used when **pausing the game** which in the above example, **won't do anything**.
 
 To change this, we can either multiply [`Elapsed`](xref:Stride.Games.GameTime.Elapsed) by [`Factor`](xref:Stride.Games.GameTime.Factor) or simply use [`WarpElapsed`](xref:Stride.Games.GameTime.WarpElapsed).
 
