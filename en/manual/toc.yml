@@ -521,7 +521,14 @@ items:
     href: scripts/index.md
     items:
       - name: Types of script
-        href: scripts/types-of-script.md
+        href: scripts/types-of-script/index.md
+        items:
+          - name: Startup script
+            href: scripts/types-of-script/startup-script.md
+          - name: Sync script
+            href: scripts/types-of-script/sync-script.md
+          - name: Async script
+            href: scripts/types-of-script/async-script.md
       - name: Create a script
         href: scripts/create-a-script.md
       - name: Use a script
