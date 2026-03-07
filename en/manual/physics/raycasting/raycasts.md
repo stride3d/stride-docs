@@ -58,12 +58,12 @@ public void Shoot()
 
 ### Penetrating raycast query (with `stackalloc`)
 
-When repeatedly performing a penetrating raycast, we have to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector. A preferred solution would be to use `stackalloc`.
+When repeatedly performing a penetrating raycast, we have to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector (meaning more ram usage). A more optimal solution would be to use `stackalloc`.
 
 ```csharp
 public void Shoot()
 {
-    // Allocate a buffer that can hold 16 elements
+    // Allocate a buffer that can hold up to 16 elements
     Span<HitInfo> buffer = stackalloc HitInfoSpan[16];
     
     // Iterate over all results
@@ -74,6 +74,5 @@ public void Shoot()
 }
 ```
 
-#### Size limitation
-
-A span has a limited amount of elements it can contain. If there are more hits than the buffer size, only the closest ones will be returned.
+> [!NOTE]
+> **A span has a limited amount of elements it can contain**. If there are more hits than the buffer size, only the closest ones will be returned.
