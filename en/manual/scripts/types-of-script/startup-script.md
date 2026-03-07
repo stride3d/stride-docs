@@ -1,5 +1,8 @@
 # Startup script
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Startup scripts run when they are added or removed from a scene.
 
 ```csharp
@@ -7,12 +10,12 @@ public class Example : StartupScript
 {
     public override void Start()
     {
-        // Do logic for when the script is loaded
+        // Do stuff for when the script is loaded
     }
     
     public override void Cancel()
     {
-        // Do logic for when the script is unloaded
+        // Do stuff for when the script is unloaded
     }
 }
 ```

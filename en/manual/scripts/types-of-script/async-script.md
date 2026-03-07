@@ -1,5 +1,8 @@
 # Async script
 
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Asynchronous scripts get executed only once asynchronously. They can be used for initializing the scene and it's contents or performing game logic for every frame.
 
 ```csharp
@@ -7,12 +10,12 @@ public class Example : StartupScript
 {
     public override Task Execute()
     {
-        // Run the asynchronous code
+        // Execute the asynchronous code
     }
     
     public override void Cancel()
     {
-        // Do logic for when the script is unloaded
+        // Do stuff for when the script is unloaded
     }
 }
 ```
@@ -140,3 +143,7 @@ The cancel method gets called only once when the script is unloaded. This includ
 * When an entity the script is attached to gets removed from the scene
 * When the script gets removed from a scene entity
 * When the game gets closed
+
+## Tutorial
+
+Check out the [Async scripts tutorial](../../../tutorials/csharpintermediate/async-scripts.md) for more examples.

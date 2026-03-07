@@ -1,5 +1,8 @@
 # Sync script
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Synchronous scripts run for every frame of the game. They feature the same methods as [startup scripts](./startup-script.md), with the addition of [`Update()`](#update).
 
 ```csharp
@@ -7,17 +10,17 @@ public class Example : StartupScript
 {
     public override void Start()
     {
-        // Do logic for when the script is loaded
+        // Do stuff for when the script is loaded
     }
     
     public override void Update()
     {
-        // Do logic that needs to be performed every frame
+        // Do stuff that needs to be performed every frame
     }
     
     public override void Cancel()
     {
-        // Do logic for when the script is unloaded
+        // Do stuff for when the script is unloaded
     }
 }
 ```
