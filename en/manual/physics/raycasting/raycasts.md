@@ -1,12 +1,15 @@
 # Raycasts
 
-Raycasts are the most commonly used type of physics queries. It can be described as **"shooting an invisible laser" and seeing what it hits**.
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
 
-Raycasts are most commonly used in firing weapons and NPC AI.
+Raycasts are the most commonly used type of physics queries. They can be described as **"shooting an invisible laser" and seeing what it hits**.
+
+Raycasts can be used for firing weapons or NPC AI.
 
 ## Raycast query
 
-In order to query a raycast, use `Simulation.Raycast`.
+In order to query a raycast, use [`Simulation.Raycast`](xref:Stride.BepuPhysics.BepuSimulation.Raycast).
 
 ```csharp
 public void Shoot()
@@ -25,7 +28,7 @@ public void Shoot()
     
     if (simulation.RayCast(origin, direction, distance, out HitInfo result))
     {
-        // Handle a successfull hit
+        // Handle a successful hit
     }
 }
 ```
@@ -45,7 +48,7 @@ public void Shoot()
     // Iterate over all results
     foreach (var item in simulation.RayCastPenetrating(origin, direction, distance, buffer))
     {
-        // Handle a successfull hit
+        // Handle a successful hit
     }
 }
 ```
@@ -55,7 +58,7 @@ public void Shoot()
 
 ### Penetrating raycast query (with `stackalloc`)
 
-When repeatedly performing a penetrating raycast, we have to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector. A prefered solution would be to use `stackalloc`.
+When repeatedly performing a penetrating raycast, we have to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector. A preferred solution would be to use `stackalloc`.
 
 ```csharp
 public void Shoot()
@@ -66,7 +69,7 @@ public void Shoot()
     // Iterate over all results
     foreach (var item in simulation.RayCastPenetrating(origin, direction, distance, buffer))
     {
-        // Handle a successfull hit
+        // Handle a successful hit
     }
 }
 ```
