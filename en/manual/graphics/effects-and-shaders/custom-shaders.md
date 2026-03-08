@@ -71,7 +71,7 @@ For shader-focused development with enhanced IntelliSense and inheritance visual
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/)
 2. Install the **Stride Shader Tools** extension:
-   - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=tebjan.sdsl)
+   - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=stride.sdsl)
    - [OpenVSX](https://open-vsx.org/extension/tebjan/sdsl) (for VSCodium and other alternatives)
 3. Create your `.sdsl` file in your project's **Assets** folder (or a subfolder within Assets)
 
