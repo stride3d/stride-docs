@@ -33,24 +33,23 @@ However, if your code **needs to await asynchronous methods**, then it's advised
 
 ## Initialization
 
-Often, synchronization scripts need to access other entities and / or components from the scene via code. Doing this every frame is unnecessary, which is why it's recommended to do the initialization in the [Start](#start) method and then access data from it in [Update](#update).
+Often, synchronization scripts need to access things from the rest of the game. Doing this every frame is unnecessary, which is why it's recommended to do the initialization in the [Start](#start) method and then access data from it in [Update](#update).
 
 ```csharp
 public class Example : SyncScript
 {
-    private BodyComponent body;
+    private MyExampleService service;
     
     // Initialize our script
     public class Start()
     {
-        body = Entity.Get<BodyComponent>();
+        service = Services.GetService<MyExampleService>();
     }
     
     // Perform logic every frame
     public class Update()
     {
-        body.LinearVelocity = 100f * Vector3.UnitZ;
-        body.AngularVelocity = Vector3.Zero;
+        service.DoSomething();
     }
 }
 ```
@@ -100,19 +99,23 @@ Synchronous scripts feature 3 methods which can be overridden in order to perfor
 
 ### `Start()`
 
-The [Start](xref:Stride.Engine.StartupScript.Start) method gets called only once when the script is loaded. This includes:
+The [Start](xref:Stride.Engine.StartupScript.Start) method gets called when the script is added to the game. For example:
 * When a scene the script is in gets loaded
-* When an entity the script is attached to gets added to the scene
-* When the script gets added to an entity in a scene
+* When a new entity containing the script is added to a scene
+* When the script gets added to an already existing entity
+
+The method may be executed more than once if an entity the script is attached to gets removed and then re-added to the scene.
 
 ### `Update()`
 
-The [Update](xref:Stride.Engine.SyncScript.Update) method gets called every frame when the script is loaded.
+The [Update](xref:Stride.Engine.SyncScript.Update) method gets called every frame when the script is in a scene.
 
 ### `Cancel()`
 
-The [Cancel](xref:Stride.Engine.ScriptComponent.Cancel) method gets called only once when the script is unloaded. This includes:
+The [Cancel](xref:Stride.Engine.ScriptComponent.Cancel) method gets called when the script is removed from the game. This includes:
 * When a scene the script is in gets unloaded
-* When an entity the script is attached to gets removed from the scene
+* When an entity the script is attached to gets removed from it's scene
 * When the script gets removed from a scene entity
 * When the game gets closed
+
+The method may be executed more than once if an entity the script is attached to gets re-added and then removed from the scene.
