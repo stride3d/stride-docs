@@ -73,7 +73,7 @@ public class Example : AsyncScript
 {
     public override async Task Execute()
     {
-        Script.AddTask(async () => await ParallelTask());
+        Script.AddTask(ParallelTask);
         
         // Execute code at the same time as ParallelTask
     }
