@@ -4,6 +4,7 @@ items:
   - name: Manual
     href: index.md
   - name: Stride for Unity® developers
+    href: stride-for-unity-developers/index.md
   - name: Stride for Godot developers
     href: stride-for-godot-developers/index.md
   - name: Install and Update
