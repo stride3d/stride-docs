@@ -85,6 +85,9 @@ public class Example : AsyncScript
 }
 ```
 
+> [!WARNING]
+> **Avoid using [`Task.Run`](https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run)** for parallel tasks, as it will execute your code **on the thread pool instead of the main thread**. This will make interacting with the engine **unsafe** and could result in **unexpected behaviours**.
+
 ## Overridable methods
 
 Asynchronous scripts feature 2 methods which can be overridden in order to perform game logic.
