@@ -38,16 +38,18 @@ The engine and it's editor Game Studio are a [NuGet package](https://learn.micro
 
 Changing the installation location is possible, but this is outside of the scope of this page.
 
-## Visual Studio integration
+## Stride Extension
 
-The Visual Studio integration is an optional extension for Visual Studio.
-
-- **🟩 What it does**: provides syntax highlighting to shaders in Visual Studio.
+Stride has an optional extension that's avaliable for some IDEs.
+- **🟩 What it does**: let's you write shaders directly in Visual Studio.
 - **🟥 What it doesn't do**: provide C# syntax highlighting for Stride (that works without the extension).
 
-The extension can be installed via the launcher, by navigating to the **Visual Studio extension** section.
+The extension can be installed for Visual Studio via the launcher, by navigating to the **Visual Studio extension** section. For other IDEs, visit the [Stride Extension page](../get-started/visual-studio-extension.md).
 
 ![Image of the "Visual Studio extension" section in the Stride Launcher.](media/vs-extension.webp)
+
+> [!NOTE]
+> The "Visual Studio 2022: Install" button will also work for Visual Studio 2026.
 
 ## Troubleshooting
 

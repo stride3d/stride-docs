@@ -21,15 +21,17 @@ items:
     items:
       - name: Create a project
         href: get-started/create-a-project.md
-      - name: Key Concepts
+      - name: Key concepts
         href: get-started/key-concepts.md
       - name: Game Studio
         href: get-started/game-studio.md
+      - name: Stride Extension
+        href: get-started/visual-studio-extension.md
       - name: Assets
         href: get-started/assets.md
       - name: Launch a game
         href: get-started/launch-a-game.md
-      - name: Next Steps
+      - name: Next steps
         href: get-started/next-steps.md
 
   - name: Animation
