@@ -141,7 +141,7 @@ Stride uses position, rotation, and scale to refer to the local position, rotati
 > [!TIP]
 > In Godot, `Node3D.rotation` is Euler angles in **radians**, and Godot also exposes convenience properties like `rotation_degrees`.
 > 
-> In order to get and set rotation using degrees use the utility methods [`MathUtil.DegreesToRadians`](xref:Stride.Core.Mathematics.MathUtil.DegreesToRadians) and [`MathUtil.RadiansToDegrees`](xref:Stride.Core.Mathematics.MathUtil.RadiansToDegrees) with `Transform.RotationEulerXYZ`.
+> In order to get and set rotation using degrees use the utility methods [`MathUtil.DegreesToRadians`](xref:Stride.Core.Mathematics.MathUtil.DegreesToRadians*) and [`MathUtil.RadiansToDegrees`](xref:Stride.Core.Mathematics.MathUtil.RadiansToDegrees*) with `Transform.RotationEulerXYZ`.
 
 
 #### World Position/Rotation/Scale
