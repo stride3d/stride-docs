@@ -20,7 +20,7 @@ Entities represent different objects in a scene, like the player, enemies, walls
 
 Components dictate how entities which they are attached to behave. For example: a player movement component that makes an entity move, when keyboard buttons are pressed.
 
-In code, a component is a class that inherits `StartupScript`, `SyncScript` or `AsyncScript`.
+In code, a component is a class that inherits [`StartupScript`](xref:Stride.Engine.StartupScript), [`SyncScript`](xref:Stride.Engine.SyncScript) or [`AsyncScript`](xref:Stride.Engine.AsyncScript).
 
 ```csharp
 using Stride.Engine;
@@ -39,9 +39,9 @@ public class MyComponent : StartupScript
 ## Script types
 
 In Stride, a component can be created from one of 3 types of script:
-- **Startup Script** - a script that runs only once when it's added.
-- **Sync Script** - a script that runs when it's added and then every frame.
-- **Async Script** - an **asynchronous** script that runs only once when it's added, but can await the next frame continuously.
+- [**Startup Script**](../scripts/types-of-script/startup-script.md) - a script that runs only once when it's added.
+- [**Sync Script**](../scripts/types-of-script/sync-script.md) - a script that runs when it's added and then every frame.
+- [**Async Script**](../scripts/types-of-script/async-script.md) - an **asynchronous** script that runs only once when it's added, but can await the next frame continuously.
 
 For more information, read [types of script](../scripts/types-of-script).
 
