@@ -452,6 +452,8 @@ items:
         items:
           - name: Raycasts
             href: physics/raycasting/raycasts.md
+          - name: Sweepcasts
+            href: physics/raycasting/sweepcasts.md
       - name: Physics Update
         href: physics/physics-update.md
       - name: Tutorials
