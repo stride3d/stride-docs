@@ -66,7 +66,7 @@ public class Example : AsyncScript
 
 ## Executing tasks in parallel
 
-Sometimes it's useful to execute two async tasks in the same script. This can be achieved using [`Script.AddTask()`](xref:Stride.Engine.Processors.ScriptSystem.AddTask).
+Sometimes it's useful to execute two async tasks in the same script. This can be achieved using [`Script.AddTask()`](xref:Stride.Engine.Processors.ScriptSystem.AddTask*).
 
 ```csharp
 public class Example : AsyncScript
