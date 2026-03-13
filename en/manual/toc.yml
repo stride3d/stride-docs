@@ -16,6 +16,8 @@ items:
         href: install-and-update/install-stride.md
       - name: Update Stride
         href: install-and-update/update-stride.md
+      - name: Manage versions
+        href: install-and-update/manage-versions.md
   - name: Get started
     href: get-started/index.md
     items:
