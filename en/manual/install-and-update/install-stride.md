@@ -8,7 +8,7 @@ If you want to **create games using Stride**, this guide provides the installati
 
 If you're interested in **building the Stride engine from source** or **contributing to its development**, please visit the [Stride GitHub repository](https://github.com/stride3d/stride) for instructions on how to build from source and contribute to the project.
 
-## Installation Steps
+## Installation steps
 
 1. Download the Stride Installer from the [Stride website](http://stride3d.net/download/).
  
@@ -32,7 +32,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 
     ![Stride ready to use](media/stride-launcher-ready.webp)
 
-## Installation Location
+## Installation location
 
 The engine and it's editor Game Studio are a [NuGet package](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
 

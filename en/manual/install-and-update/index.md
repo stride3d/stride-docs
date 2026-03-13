@@ -1,4 +1,4 @@
-# Install and Update
+# Install and update
 
 <span class="badge text-bg-primary">Beginner</span>
 
@@ -8,6 +8,6 @@ The Stride editor is installed with a separate application, the **Stride Launche
 
 ## In this section:
 
-* [Requirements](requirements)
-* [Install Stride](install-stride)
-* [Update Stride](update-stride)
+* [Requirements](requirements.md)
+* [Install Stride](install-stride.md)
+* [Update Stride](update-stride.md)

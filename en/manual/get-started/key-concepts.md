@@ -43,7 +43,7 @@ In Stride, a component can be created from one of 3 types of script:
 - [**Sync Script**](../scripts/types-of-script/sync-script.md) - a script that runs when it's added and then every frame.
 - [**Async Script**](../scripts/types-of-script/async-script.md) - an **asynchronous** script that runs only once when it's added, but can await the next frame continuously.
 
-For more information, read [types of script](../scripts/types-of-script).
+For more information, read [types of script](../scripts/types-of-script.md).
 
 ## Assets and resources
 
@@ -57,4 +57,4 @@ Assets do not contain resource data. Instead, they reference a resource. For exa
 
 A Stride project is a standard [C# solution](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022). Assets and resources can be separated into multiple C# projects, for example: **MyGame** contains game assets and **MyGame.Windows** contains assets specific to the windows version of the game (like the window icon).
 
-For more information, read [project structure](../files-and-folders/project-structure).
+For more information, read [project structure](../files-and-folders/project-structure.md).

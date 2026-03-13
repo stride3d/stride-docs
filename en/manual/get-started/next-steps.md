@@ -1,4 +1,4 @@
-# Next Steps
+# Next steps
 
 Congratulations, by this point you should have everything to get yourself started with Stride!
 
@@ -10,13 +10,13 @@ In case you **get confused by certain terminology**, you can check out the [glos
 
 If you want to learn more about how to use Game Studio, check out the [Game Studio section](../game-studio/index.md) of the manual.
 
-## Get Started with scripting
+## Get started with scripting
 
 If you want to learn more about how to write scripts for Stride, check out the [Scripts section](../scripts/index.md) of the manual.
 
 For API reference, refer to the [API](../../api/index.md).
 
-## Get Started with graphics
+## Get started with graphics
 
 For general information about how graphics work in Stride, check out the [Graphics section](../graphics/index.md) section of the manual.
 

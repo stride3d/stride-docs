@@ -18,7 +18,7 @@ The **asset editor** is a dedicated editor for certain assets. It's most commonl
 
 The **property grid** displays a list of properties of selected assets and entities.
 
-This is where you can assign [Components](key-concepts#components) to entities and edit their properties.
+This is where you can assign [Components](key-concepts.md#components) to entities and edit their properties.
 
 ## Solution Explorer
 

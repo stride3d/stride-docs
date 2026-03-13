@@ -7,7 +7,7 @@ items:
     href: stride-for-unity-developers/index.md
   - name: Stride for Godot developers
     href: stride-for-godot-developers/index.md
-  - name: Install and Update
+  - name: Install and update
     href: install-and-update/index.md
     items:
       - name: Requirements
