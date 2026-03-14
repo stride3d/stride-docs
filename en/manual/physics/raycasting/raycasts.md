@@ -84,6 +84,7 @@ Every hit is represented by [`HitInfo`](xref:Stride.BepuPhysics.HitInfo), which 
 * [`Normal`](xref:Stride.BepuPhysics.HitInfo.Normal) - the normal vector of the surface that was hit.
 * [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the distance of the hit from the starting position.
 * [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) - the [collidable component](xref:Stride.BepuPhysics.CollidableComponent) that was hit.
+* [`ChildIndex`](xref:Stride.BepuPhysics.HitInfo.ChildIndex) - the index of the shape used in a [collidables](xref:Stride.BepuPhysics.HitInfo.Distance) [collider](xref:Stride.BepuPhysics.CollidableComponent.Collider) if it's a [compound collider](../collider-shapes.md#compound).
 
 ### Getting the entity
 

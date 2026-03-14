@@ -56,9 +56,12 @@ public void Overlap()
 }
 ```
 
+> [!NOTE]
+> **A span has a limited amount of elements it can contain**. If there are more hits than the buffer size, only the closest ones will be returned.
+
 ## OverlapInfo query
 
-This query works almost in the same way as the others. The main difference is that it treats each shape of a compound collider separately. This can result in the same [collidable](xref:Stride.BepuPhysics.CollidableComponent) being returned multiple times.
+This query works almost in the same way as the others. The main difference is that it treats each shape of a [compound collider](../collider-shapes.md#compound) separately. This can result in the same [collidable](xref:Stride.BepuPhysics.CollidableComponent) being returned multiple times.
 
 ```csharp
 public void Overlap()
