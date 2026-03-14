@@ -20,7 +20,10 @@ This section explains how physics components work, how to add them to your proje
 * [Collider Shapes](collider-shapes.md): Define the geometric shape of yours collidable components
 * [Triggers](triggers.md): Use triggers to detect passing objects
 * [Constraints](constraints.md): Join physics objects together, constrain them around points
-* [Physics Queries](raycasting.md): Operations to find objects in the scene
+* [Physics queries](raycasting/index.md): Operations to find objects in the scene
+  * [Raycasts](raycasting/raycasts.md): Retrieving objects from casting a ray
+  * [Sweepcasts](raycasting/sweepcasts.md): Retrieving objects from casting a shape
+  * [Overlaps](raycasting/overlaps.md): Retrieving objects that are intersecting with a shape
 * [Physics Update](physics-update.md): Updating logic alongside physics
 
 ### Tutorials

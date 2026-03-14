@@ -1,10 +1,13 @@
 # Sweepcasts
 
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Programmer</span>
+
 A **sweepcast** is similar to a raycast, with the distinction of using shapes instead of a ray. It casts a shape in a direction and returns what it collided with. In more basic terms, it's like **launching a shape and seeing what it hits**.
 
 ## Sweepcast query
 
-In order to query a sweepcast, use [`Simulation.SweepCast`](xref:Stride.BepuPhysics.BepuSimulation.SweepCast``1(``0@,Stride.BepuPhysics.Definitions.RigidPose@,Stride.BepuPhysics.Definitions.BodyVelocity@,System.Single,Stride.BepuPhysics.HitInfo@,Stride.BepuPhysics.CollisionMask)). The method returns true, if it managed to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
+In order to query a sweepcast, use [`Simulation.SweepCast`](xref:Stride.BepuPhysics.BepuSimulation.SweepCast*). The method returns true, if it managed to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
 
 ### Shape
 
@@ -29,7 +32,7 @@ The **velocity** describes the path the shape will be following in the sweepcast
 
 Creating a new instance of [BodyVelocity](xref:Stride.BepuPhysics.Definitions.BodyVelocity) requires two arguments: linear velocity (velocity used for changing position) and angular velocity (velocity used for changing rotation).
 
-### Max Distance
+### Max distance
 
 The **maximum distance** controls the length of the sweepcast. However, the actual maximum distance is **also influenced by the magnitute of the linear velocity vector**.
 
@@ -65,7 +68,7 @@ public void Shoot()
 > [!NOTE]
 > **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to do it yourself.
 
-### Penetrating sweepcast query (with `stackalloc`)
+## Penetrating sweepcast query (with `stackalloc`)
 
 When repeatedly performing a penetrating sweepcast, it has to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector (meaning more ram usage). A more optimal solution would be to use `stackalloc`.
 
@@ -73,7 +76,7 @@ When repeatedly performing a penetrating sweepcast, it has to keep allocating me
 public void Shoot()
 {
     // Allocate a buffer that can hold up to 16 elements
-    Span<HitInfo> buffer = stackalloc HitInfoSpan[16];
+    Span<HitInfoStack> buffer = stackalloc HitInfoStack[16];
     
     // Iterate over all results
     foreach (var hitInfo in simulation.SweepCastPenetrating(shape, pose, velocity, maxDistance, buffer))
@@ -85,6 +88,28 @@ public void Shoot()
 
 > [!NOTE]
 > **A span has a limited amount of elements it can contain**. If there are more hits than the buffer size, only the closest ones will be returned.
+
+## Handling a hit
+
+Every hit is represented by [`HitInfo`](xref:Stride.BepuPhysics.HitInfo), which contains all information about the hit.
+* [`Point`](xref:Stride.BepuPhysics.HitInfo.Point) - the position in the world where the collidable was hit.
+* [`Normal`](xref:Stride.BepuPhysics.HitInfo.Normal) - the normal vector of the surface that was hit.
+* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the distance of the hit from the starting position.
+* [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) - the [collidable component](xref:Stride.BepuPhysics.CollidableComponent) that was hit.
+
+### Getting the entity
+
+Because [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) is a component, you can get the entity from it.
+
+```csharp
+var entity = hit.Collidable.Entity;
+```
+
+## Using a collision mask
+
+Every query has an optional parameter specifying which collision layers it should be performed on.
+
+For more information on how to use collision masks, visit the [main physics queries page](index.md#querying-specific-collision-masks).
 
 ## Examples
 
@@ -122,7 +147,7 @@ public void Shoot()
 
 ### Sweepcasting a box with penetration
 
-This method will perform [`SweepCastPenetrating`](xref:Stride.BepuPhysics.BepuSimulation.SweepCastPenetrating*) a box in the direction the entity is looking at.
+This method will perform [`SweepCastPenetrating`](xref:Stride.BepuPhysics.BepuSimulation.SweepCastPenetrating*) with a box in the direction the entity is looking at.
 
 ```csharp
 public void SweepcastBox()
@@ -138,7 +163,7 @@ public void SweepcastBox()
     
     foreach (var hitInfo in simulation.SweepCastPenetrating(new Box(1f, 1f, 1f), pose, velocity, 16f, buffer))
     {
-        
+        // Handle a successful hit
     }
 }
 ```

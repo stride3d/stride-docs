@@ -447,13 +447,15 @@ items:
         href: physics/triggers.md
       - name: Constraints
         href: physics/constraints.md
-      - name: Physics Queries
+      - name: Physics queries
         href: physics/raycasting/index.md
         items:
           - name: Raycasts
             href: physics/raycasting/raycasts.md
           - name: Sweepcasts
             href: physics/raycasting/sweepcasts.md
+          - name: Overlaps
+            href: physics/raycasting/overlaps.md
       - name: Physics Update
         href: physics/physics-update.md
       - name: Tutorials

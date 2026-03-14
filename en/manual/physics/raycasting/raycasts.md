@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
-**Raycast** is the most commonly used type of physics query. It casts a ray in a direction and returns what it collided with. In more basic terms, it's like shooting an invisible laser and seeing what it hits.
+**Raycast** is the most commonly used type of physics query. It casts a ray in a direction and returns what it collided with. In more basic terms, **it's like shooting an invisible laser and seeing what it hits**.
 
 Raycasts can be used for firing weapons or NPC AI.
 
@@ -33,7 +33,7 @@ public void Shoot()
 }
 ```
 
-### Penetrating raycast query
+## Penetrating raycast query
 
 The difference between this type of query and the normal one is that, when the ray reaches an object, it doesn't stop and instead it keeps going until it reaches it's maximum length.
 
@@ -56,7 +56,7 @@ public void Shoot()
 > [!NOTE]
 > **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to do it yourself.
 
-### Penetrating raycast query (with `stackalloc`)
+## Penetrating raycast query (with `stackalloc`)
 
 When repeatedly performing a penetrating raycast, it has to keep allocating memory on the heap for the results, which puts more strain on the Garbage Collector (meaning more ram usage). A more optimal solution would be to use `stackalloc`.
 
@@ -64,7 +64,7 @@ When repeatedly performing a penetrating raycast, it has to keep allocating memo
 public void Shoot()
 {
     // Allocate a buffer that can hold up to 16 elements
-    Span<HitInfo> buffer = stackalloc HitInfoSpan[16];
+    Span<HitInfoStack> buffer = stackalloc HitInfoStack[16];
     
     // Iterate over all results
     foreach (var hitInfo in simulation.RayCastPenetrating(origin, direction, distance, maxDistance, buffer))
@@ -76,6 +76,28 @@ public void Shoot()
 
 > [!NOTE]
 > **A span has a limited amount of elements it can contain**. If there are more hits than the buffer size, only the closest ones will be returned.
+
+## Handling a hit
+
+Every hit is represented by [`HitInfo`](xref:Stride.BepuPhysics.HitInfo), which contains all information about the hit.
+* [`Point`](xref:Stride.BepuPhysics.HitInfo.Point) - the position in the world where the collidable was hit.
+* [`Normal`](xref:Stride.BepuPhysics.HitInfo.Normal) - the normal vector of the surface that was hit.
+* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the distance of the hit from the starting position.
+* [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) - the [collidable component](xref:Stride.BepuPhysics.CollidableComponent) that was hit.
+
+### Getting the entity
+
+Because [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) is a component, you can get the entity from it.
+
+```csharp
+var entity = hit.Collidable.Entity;
+```
+
+## Using a collision mask
+
+Every query has an optional parameter specifying which collision layers it should be performed on.
+
+For more information on how to use collision masks, visit the [main physics queries page](index.md#querying-specific-collision-masks).
 
 ## Examples
 
@@ -128,7 +150,7 @@ public void Shoot()
 }
 ```
 
-### Raycasting from the mouse
+### Raycasting using the mouse
 
 This method will query a raycast from the mouse's position on the screen.
 
