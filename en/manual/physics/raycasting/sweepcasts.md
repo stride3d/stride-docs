@@ -3,11 +3,11 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
-A **sweepcast** is similar to a raycast, with the distinction of using shapes instead of a ray. It casts a shape in a direction and returns what it collided with. In more basic terms, it's like **launching a shape and seeing what it hits**.
+A **sweepcast** is similar to a raycast, with the distinction of using shapes instead of a ray. It casts a shape in a direction and returns what it collided with. In more basic terms, it's like **launching an invisible object and seeing what it hits**.
 
 ## Sweepcast query
 
-In order to query a sweepcast, use [`Simulation.SweepCast`](xref:Stride.BepuPhysics.BepuSimulation.SweepCast*). The method returns true, if it managed to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
+In order to query a sweepcast, use [`Simulation.SweepCast`](xref:Stride.BepuPhysics.BepuSimulation.SweepCast*). The method returns true, if it manages to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
 
 ### Shape
 
@@ -28,7 +28,7 @@ var pose = new RigidPose(position, rotation);
 
 ### Velocity
 
-The **velocity** describes the path the shape will be following in the sweepcast.
+The **velocity** describes the path that the shape will be following in the sweepcast.
 
 Creating a new instance of [BodyVelocity](xref:Stride.BepuPhysics.Definitions.BodyVelocity) requires two arguments: linear velocity (velocity used for changing position) and angular velocity (velocity used for changing rotation).
 
@@ -44,6 +44,9 @@ var velocity = new BodyVelocity(2f * Vector2.UnitY, Vector2.Zero);
 
 var actualMaxDistance = maxDistance * velocity.Linear.Length();
 ```
+
+> [!NOTE]
+> The actual max distance is **not something you need to worry about most of the time**. When using `WorldMatrix.Forward` or similar for the linear velocity, the vector's length will always be equal to 1, meaning that `maxDistance` will be the actual maximum distance.
 
 ## Penetrating sweepcast query
 
@@ -114,7 +117,7 @@ For more information on how to use collision masks, visit the [main physics quer
 
 ## Examples
 
-Here is a list of examples of using **sweepcasts** in a game.
+Here are a few examples of using **sweepcasts** in a game.
 
 ### Thick raycast
 

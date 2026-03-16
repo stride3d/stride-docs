@@ -9,7 +9,7 @@ Raycasts can be used for firing weapons or NPC AI.
 
 ## Raycast query
 
-In order to query a raycast, use [`Simulation.RayCast`](xref:Stride.BepuPhysics.BepuSimulation.RayCast*). The method returns true, if it managed to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
+In order to query a raycast, use [`Simulation.RayCast`](xref:Stride.BepuPhysics.BepuSimulation.RayCast*). The method returns true, if it manages to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
 
 ```csharp
 public void Shoot()
@@ -102,11 +102,11 @@ For more information on how to use collision masks, visit the [main physics quer
 
 ## Examples
 
-Here is a list of examples of using **raycasts** in a game.
+Here are a few examples of using **raycasts** in a game.
 
 ### Dealing damage
 
-On left click, if there is an entity with a 'HostileUnit' script in front the entity that this script is attached to, deal damage to it. Collision Layers 0 and 1 will be ignored.
+When the left mouse button is pressed, if there is an entity with a 'HostileUnit' script in front the entity that is firing the ray, deal damage to it. Collision Layers 0 and 1 will be ignored.
 
 ```csharp
 public override void Update()
@@ -118,7 +118,8 @@ public override void Update()
     // All layers except 0 & 1
     var layers = CollisionMask.Everything & ~(CollisionMask.Layer0 | CollisionMask.Layer1); 
 
-    if (Input.IsMouseButtonPressed(MouseButton.Left) && simulation.RayCast(rayStart, rayDir, maxDistance, out HitInfo hitResult, layers))
+    if (Input.IsMouseButtonPressed(MouseButton.Left) &&
+        simulation.RayCast(rayStart, rayDir, maxDistance, out HitInfo hitResult, layers))
     {
         var hostile = hitResult.Collidable.Entity.Get<HostileUnit>();
         

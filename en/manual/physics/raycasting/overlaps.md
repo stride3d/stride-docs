@@ -61,7 +61,7 @@ public void Overlap()
 
 ## OverlapInfo query
 
-This query works almost in the same way as the others. The main difference is that it treats each shape of a [compound collider](../collider-shapes.md#compound) separately. This can result in the same [collidable](xref:Stride.BepuPhysics.CollidableComponent) being returned multiple times.
+This query works almost in the same way as the others. The main difference is that it treats each shape of a [compound collider](../collider-shapes.md#compound) separately. This can result in the same [collidables](xref:Stride.BepuPhysics.CollidableComponent) being returned multiple times.
 
 ```csharp
 public void Overlap()
@@ -85,18 +85,20 @@ For more information on how to use collision masks, visit the [main physics quer
 
 ## Examples
 
-Here is a list of examples of using **overlaps** in a game.
+Here are a few examples of using **overlaps** in a game.
 
 ### Checking if the player is on the ground
 
-This example will perform an overlap using a sphere slightly below the player to check if it is touching the ground.
+This example will perform an overlap using a sphere slightly below the player to check if it's touching the ground.
 
-It's assumed the player is using a capsule for it's collision with the height of `2`. So the overlap needs to be offsetted from the center by `-0.5` in order to perfectly match the bottom of the capsule with the sphere and the by an additional small value of `-0.1f` to be able to check the ground.
+It's assumed the player is using a capsule for it's collision with the height of `2`. So the overlap needs to be offsetted from the center by `-0.5` in order to perfectly match the bottom of the capsule with the sphere and then by an additional small value of `-0.01` to be able to check the ground.
 
 ```csharp
 public bool CheckGrounded(BodyComponent body)
 {
     var sim = body.Simulation;
+    
+    // Sphere's radius needs to match the capsule's radius
     var shape = new Sphere(0.5f);
     var pose = new RigidPose(Entity.Transform.WorldMatrix.TranslationVector - 0.51f, Vector3.Zero);
     
@@ -105,6 +107,7 @@ public bool CheckGrounded(BodyComponent body)
     
     Stack<CollidableStack> buffer = stackalloc CollidableStack[1];
     
+    // If there are any collisions under the player, the player is on the ground
     return sim.Overlap(sphere, pose, buffer, mask).Any();
 }
 ```
