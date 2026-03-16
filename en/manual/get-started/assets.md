@@ -38,3 +38,7 @@ Every asset has a little dot in the top left corner of their icon. This dot indi
 Stride doesn't include assets which aren't used anywhere, meaning that **they cannot be accessed when running the game**. In order to ensure, that an asset will always be included in the build, right click on it and select **Include in build as root asset**.
 
 ![A screenshot of an asset's context menu, highlighting an item "Include in build as root asset".](media/asset-view-include-root.webp)
+
+## Further reading
+
+For more information, visit the [Assets](../game-studio/assets.md) page.

@@ -43,3 +43,7 @@ The **asset view** displays contents of a selected folder in the **[solution exp
 Items from the **asset view** can be dragged into other editors (for example: dragging a prefab into the scene in the **[Asset Editor](#asset-editor)**).
 
 To create a new asset, click the **Add asset** button in the top left corner.
+
+## Further reading
+
+For more information, visit the [Game Studio](../game-studio/index.md) page.
