@@ -85,6 +85,7 @@ public void InitializeUI()
 | Snap text          | If selected, the UI text is snapped to the closest pixel
 | Fixed size         | Gets or sets the value indicating whether the UI should always be a fixed size on screen (eg a component with a height of 1 will use 0.1 of the screen). **Note:** This feature doesn't work in the current version of Stride
 | Render group       | The [render group](../graphics/graphics-compositor/render-groups-and-masks.md) the UI uses
+| Render order | Controls draw order when multiple UI components overlap. Lower values render first (behind), higher values render on top. Default is 0.
 
 ## UI scripts
 
