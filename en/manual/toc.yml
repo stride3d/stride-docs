@@ -115,18 +115,6 @@ items:
       - name: Asset introspection
         href: engine/asset-introspection.md
 
-  - name: Files and folders
-    href: files-and-folders/index.md
-    items:
-      - name: Project structure
-        href: files-and-folders/project-structure.md
-      - name: Cached files
-        href: files-and-folders/cached-files.md
-      - name: Version control
-        href: files-and-folders/version-control.md
-      - name: Distribute a game
-        href: files-and-folders/distribute-a-game.md
-
   - name: Game Studio
     href: game-studio/index.md
     items:
@@ -504,6 +492,27 @@ items:
         href: platforms/add-or-remove-a-platform.md
       - name: Set the graphics platform
         href: platforms/set-the-graphics-platform.md
+
+  - name: Project
+    href: files-and-folders/index.md
+    items:
+      - name: Project structure
+        href: files-and-folders/project-structure.md
+      - name: Packages
+        href: files-and-folders/project-packages/index.md
+        items:
+          - name: Create a package
+            href: files-and-folders/project-packages/create-a-package.md
+          - name: Package properties
+            href: files-and-folders/project-packages/package-properties.md
+          - name: Dependencies
+            href: files-and-folders/project-packages/dependencies.md
+      - name: Version control
+        href: files-and-folders/version-control.md
+      - name: Cached files
+        href: files-and-folders/cached-files.md
+      - name: Distribute a game
+        href: files-and-folders/distribute-a-game.md
 
   - name: Scripts
     href: scripts/index.md
