@@ -11,7 +11,7 @@ If your script isn't producing the expected result at runtime, you can debug it 
 1. Open the script in Visual Studio.
 
     >[!Tip]
-    >To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](media/launch-your-game-ide-icon.png) (**Open in IDE**).
+    >To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](media/launch-your-game-IDE-icon.png) (**Open in IDE**).
 
 2. Press **F9** to add a break point at the required places.
 
@@ -33,7 +33,7 @@ For more information about debugging in Visual Studio, see the [MSDN documentati
 ## See also
 
 * [Debugging in Visual Studio (MSDN documentation)](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx)
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)

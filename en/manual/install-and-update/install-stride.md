@@ -27,7 +27,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 
     Click **Yes** to install the latest version.
 
-5. (Optional) The Stride Launcher asks if you want to install the Visual Studio integration. Installing it isn't mandatory and it can be done later with the launcher. For more information, visit [this section](#visual-studio-integration).
+5. (Optional) The Stride Launcher asks if you want to install the Visual Studio integration. Installing it isn't mandatory and it can be done later with the launcher. For more information, visit [this section](#stride-extension).
 
     ![Install Visual Studio integration](media/install-VS-plug-in-prompt.webp)
 

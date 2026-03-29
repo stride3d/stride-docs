@@ -522,7 +522,7 @@ Alternatively, right-click the script in the **Asset View** and click **Open ass
 
 In Unity®, you work with MonoBehaviours using Start(), Update(), and other methods.
 
-Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
+Instead of MonoBehaviours, Stride has three types of scripts: SyncScript, AsyncScript, and StartupScript. For more information, see [Types of script](../scripts/types-of-script/index.md).
 
 ### Unity® MonoBehaviour
 

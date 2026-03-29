@@ -28,7 +28,7 @@ This page explains how to launch your game using Game Studio or Visual Studio.
 
 ## Launch a game from Visual Studio
 
-1. In Game Studio, in the toolbar, click ![Open in IDE](media/launch-your-game-ide-icon.webp) (**Open in IDE**) to launch Visual Studio.
+1. In Game Studio, in the toolbar, click ![Open in IDE](media/launch-your-game-IDE-icon.webp) (**Open in IDE**) to launch Visual Studio.
 
 2. In the Visual Studio toolbar, set the appropriate project as the startup project.
          

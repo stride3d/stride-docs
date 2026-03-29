@@ -50,7 +50,7 @@ For more information check out the [sync script page](./sync-script.md).
 Asynchronous scripts are initialized only once, then canceled when removed from the scene.
 
 * Asynchronous code goes in the [Execute](./async-script.md#execute) function.
-* Code performing the cancellation goes in the [Cancel](./async-script#cancel) method.
+* Code performing the cancellation goes in the [Cancel](./async-script.md#cancel) method.
 
 The following script performs actions that depend on events and triggers:
 
@@ -68,10 +68,10 @@ For more information check out the [async script page](./async-script.md).
 
 ## See also
 
-* [Create a script](create-a-script.md)
-* [Use a script](use-a-script.md)
-* [Public properties and fields](public-properties-and-fields.md)
-* [Scheduling and priorities](scheduling-and-priorities.md)
-* [Events](events.md)
-* [Debugging](debugging.md)
-* [Preprocessor variables](preprocessor-variables.md)
+* [Create a script](../create-a-script.md)
+* [Use a script](../use-a-script.md)
+* [Public properties and fields](../public-properties-and-fields.md)
+* [Scheduling and priorities](../scheduling-and-priorities.md)
+* [Events](../events.md)
+* [Debugging](../debugging.md)
+* [Preprocessor variables](../preprocessor-variables.md)

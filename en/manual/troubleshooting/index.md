@@ -2,7 +2,7 @@
 
 These pages describe how to fix problems with Stride.
 
-![Troubleshooting](media/troubleshooting.png)
+![Troubleshooting](media/Troubleshooting.png)
 
 * [Logging](logging.md)
 * [Debug text](debug-text.md)
