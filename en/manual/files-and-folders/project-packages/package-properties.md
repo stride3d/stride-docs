@@ -34,7 +34,7 @@ AssetFolders:
     - Path: !dir Effects
 ResourceFolders:
     - !dir Resources
-OutputGroupDirectories: []
+OutputGroupDirectories: {}
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []

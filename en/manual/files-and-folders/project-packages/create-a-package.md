@@ -59,7 +59,7 @@ Give the package a name and then continue through the steps until the package is
 >     - Path: !dir Effects
 > ResourceFolders:
 >     - !dir Resources
-> OutputGroupDirectories: []
+> OutputGroupDirectories: {}
 > ExplicitFolders: []
 > Bundles: []
 > TemplateFolders: []
@@ -102,7 +102,7 @@ dotnet sln add MyGame.MyLibrary
 >     - Path: !dir Effects
 > ResourceFolders:
 >     - !dir Resources
-> OutputGroupDirectories: []
+> OutputGroupDirectories: {}
 > ExplicitFolders: []
 > Bundles: []
 > TemplateFolders: []
