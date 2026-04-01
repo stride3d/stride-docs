@@ -7,13 +7,11 @@ Stride caches assets and code in folders inside of your project:
 
 Additionally, Stride also uses these files:
 * **\*.sdpkg.user** - file containing user-specific information used by the editor (like camera position and rotation).
-* **Asset cache** - contains every asset that was ever loaded by any project. By default, it's located in **%temp%/Stride**, which can be changed in Game Studio in **Edit > Settings > Environment > Build cache directory**.
 * **Settings cache** - contains Game Studio's settings. It's located in **%AppData%/Stride**.
 
 You might want to clean the cache if:
 * the cache is taking up too much space on disk
 * assets don't update in-game after you edit or delete them
-* Game Studio is in a bad state.
 
 Cleaning the cache **won't affect your project**.
 
