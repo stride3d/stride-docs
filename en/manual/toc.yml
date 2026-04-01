@@ -507,6 +507,15 @@ items:
             href: files-and-folders/project-packages/package-properties.md
           - name: Dependencies
             href: files-and-folders/project-packages/dependencies.md
+      - name: External packages
+        href: files-and-folders/external-packages/index.md
+        items:
+          - name: What is Nuget
+            href: files-and-folders/external-packages/what-is-nuget.md
+          - name: Using Nuget packages
+            href: files-and-folders/external-packages/using-nuget-packages.md
+          - name: Publish a Nuget package
+            href: files-and-folders/external-packages/publish-a-nuget-package.md
       - name: Version control
         href: files-and-folders/version-control.md
       - name: Cached files
@@ -602,20 +611,6 @@ items:
             href: virtual-reality/display-a-UI-in-an-overlay.md
       - name: VR sickness
         href: virtual-reality/vr-sickness.md
-
-  - name: NuGet
-    href: nuget/index.md
-    items:
-      - name: Consume Packages
-        href: nuget/consume-packages.md
-      - name: Create Packages
-        href: nuget/create-packages.md
-
-  - name: Extensibility
-    href: extensibility/index.md
-    items:
-      - name: C# Libraries
-        href: extensibility/csharp-libraries.md
 
   - name: Troubleshooting
     href: troubleshooting/index.md
