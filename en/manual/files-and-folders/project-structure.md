@@ -1,10 +1,10 @@
 # Project structure
 
-This page explains in detail how a Stride project is structured in the files.
+This page explains in detail how a Stride project's files are structured.
 
 ## Overview
 
-A Stride project is a standard **C# solution**, consisting of a single **[solution file](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file)** and multiple **[package](#packages) folders**, which contain code, assets and resources.
+A Stride project is a **standard C# solution**, consisting of a single **[solution file](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file) (`.sln`)** and multiple **[package](#packages) folders**, which contain code, assets and resources.
 
 IMAGE OF THE FILE STRUCTURE
 
@@ -47,7 +47,7 @@ game.Run();
 
 ## Package bin and obj folders
 
-Every package has a `bin` and an `obj` folders which are automatically created when opening or running the project. They stored cached data used by Stride.
+Every package has a `bin` and an `obj` folders which are automatically created when opening or running the project. They store cached data used by Stride.
 
 > [!NOTE]
 > These folders **can be safely deleted without affecting the rest of the project**. For more information, visit the [cached files page](cached-files.md).
@@ -63,5 +63,6 @@ The location of this folder can be changed by going to the `.csproj` file of a p
 
 ## See also
 
+* [Packages](project-packages/index.md)
 * [Version control](version-control.md)
 * [Distribute a game](distribute-a-game.md)

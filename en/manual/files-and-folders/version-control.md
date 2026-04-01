@@ -10,7 +10,6 @@ There are certain files that version control should ignore, as they are used for
 1. Package **bin** and project **Bin** folders - these folders contain the build results of your game. This includes the builds that are created when launching the game from Game Studio.
 2. Package **obj** folders - these folders contain cached data used by C# and Stride.
 3. **\*.user** files - these files store save data for the local user (such as the camera position in Game Studio).
-4. Other C# files - 
 
 ### For Git
 
@@ -23,7 +22,7 @@ We recommend using the [official Github `.gitignore` for Dotnet projects](https:
 
 ## Large files
 
-Some version control systems have special mechanisms for handling large files that can improve performance of large projects. In Stride, these are most commonly the resource files. For more information, visit the [project structure page](project-structure.md).
+Some version control systems have special mechanisms for handling large files that can improve performance of those systems in large projects. In Stride, these are most commonly the resource files. For more information, visit the [project structure page](project-structure.md).
 
 ## See also
 

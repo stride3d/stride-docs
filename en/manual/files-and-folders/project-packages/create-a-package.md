@@ -6,7 +6,7 @@ In this guide, we will dive into how to create custom packages.
 
 TODO: IMAGE OF PLATFORM PACKAGES
 
-Platform packages are created when adding a platform to the project. Steps on how to do that are located on the [Add or remove a platform page](../../platforms/add-or-remove-a-platform.md)
+Platform packages are created when adding a platform to the project. Steps on how to do that are located on the [add or remove a platform page](../../platforms/add-or-remove-a-platform.md).
 
 ## Create a standard package
 
@@ -22,7 +22,7 @@ You can select from one of two templates:
 
 ### [Visual Studio](#tab/visual-studio)
 
-You can create a new package in the **Solution Explorer** panel by right clicking on the solution and selecting **Add > New Project...**.
+You can create a new package in the **Solution Explorer** panel by right clicking on the solution and selecting **Add > New Project...**
 
 ![](media/visual-studio-new-package.webp)
 
@@ -49,7 +49,7 @@ Give the package a name and then continue through the steps until the package is
 > !Package
 > SerializedVersion: {Assets: 3.1.0.0}
 > Meta:
->     Name: MyGame
+>     Name: MyGame.MyLibrary
 >     Version: 1.0.0
 >     Authors: []
 >     Owners: []
@@ -68,7 +68,7 @@ Give the package a name and then continue through the steps until the package is
 
 ### [Command line](#tab/command-line)
 
-If your IDE of choice isn't included in this list, you can create a new package from the terminal via the `dotnet` command.
+If your IDE of choice isn't included on this page, you can create a new package from the terminal instead via the `dotnet` command.
 
 ```bash
 dotnet new classlib --name MyGame.MyLibrary
@@ -92,7 +92,7 @@ dotnet sln add MyGame.MyLibrary
 > !Package
 > SerializedVersion: {Assets: 3.1.0.0}
 > Meta:
->     Name: MyGame
+>     Name: MyGame.MyLibrary
 >     Version: 1.0.0
 >     Authors: []
 >     Owners: []
@@ -113,15 +113,16 @@ dotnet sln add MyGame.MyLibrary
 
 ## Using your new package
 
-After creating a new package, it won't be possible to use it anywhere in your game, as it's not being used in any other package.
+After creating a new package, it won't be possible to use it anywhere in your game, because by default, it won't be used by any other package.
 
 TODO: ADD VISUALISATION
 
-To change that, you'll have to add it as a dependency to package(s) where you want to use it.
+To change that, you'll have to add it as a dependency to the package(s) that you want to use it.
 
 For more information, visit the [dependencies page](dependencies.md#add-a-dependency).
 
 ## See also
 
+* [Add or remove a platform](../../platforms/add-or-remove-platform.md)
 * [Package properties](package-properties.md)
 * [Dependencies](dependencies.md)

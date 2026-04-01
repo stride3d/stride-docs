@@ -1,6 +1,6 @@
 # Using Nuget packages
 
-Nuget packages
+This is a guide on how to use Nuget packages with Stride.
 
 ## The idea
 
@@ -27,12 +27,12 @@ In the **Solution Explorer** panel, right click on the project package you want 
 
 ![](media/visual-studio-manage-nuget-context-menu.webp)
 
-Select the **Browser** category and search for the package you want to add.
+Select the **Browser** tab and search for the package you want to add.
 
 ![](media/visual-studio-nuget-browser.webp)
 
 > [!NOTE]
-> If no packages are showing up, make sure that the **package source** is set to **Nuget**.
+> If no packages are showing up, make sure that the **package source** is set to **nuget.org**.
 > 
 > ![](media/visual-studio-manage-nuget-source.webp)
 
@@ -58,6 +58,12 @@ dotnet add Path/To/Project/Package package NameOfNugetPackage
 
 ## Using assets in Game Studio
 
+> [!NOTE]
+> This only applies to packages that include custom Stride assets.
+
 In Game Studio, in the **Solution explorer** panel, expand **External packages** and look for the package you have just added.
 
 ![](media/game-studio-external-package-assets.webp)
+
+> [!NOTE]
+> You might need to reload the project in order to make the package to show up.

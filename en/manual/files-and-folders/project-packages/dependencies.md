@@ -18,7 +18,7 @@ You can add a package as a dependency to another package by right clicking it in
 
 ### [Visual Studio](#tab/visual-studio)
 
-You can add a package as a dependency to another package by right clicking it in the **Solution Explorer** panel and selecting **Add > Project Reference...**.
+You can add a package as a dependency to another package by right clicking it in the **Solution Explorer** panel and selecting **Add > Project Reference...**
 
 ![](media/visual-studio-add-dependency.webp)
 
@@ -27,7 +27,9 @@ You can add a package as a dependency to another package by right clicking it in
 
 ### [Command line](#tab/command-line)
 
-If your IDE of choice isn't included in this list, you can add **Package A** as a dependency of **Package B** from the terminal via the `dotnet` command.
+If your IDE of choice isn't included in this list, you can do this from the terminal instead via the `dotnet` command.
+
+The below command will add **PackageA** as a dependency of **PackageB** (**PackageA** will be used by **PackageB**).
 
 ```bash
 dotnet add PackageB reference PackageA

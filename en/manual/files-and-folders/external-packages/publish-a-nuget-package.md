@@ -1,10 +1,10 @@
 # Publish a Nuget package
 
-This is a guide on how to publish a Stride package and share it.
+This is a guide on how to publish and share a Stride package.
 
 ## Setup
 
-Before a package can be published, it first has to be properly setup in order to work with Stride.
+Before a package can be published, it first has to be properly setup in order to work with Stride and C#.
 
 ### Changing metadata
 
@@ -16,7 +16,7 @@ In the **Solution Explorer** panel, right click on your package and select **Pro
 
 ![](media/visual-studio-package-properties-context-menu.webp)
 
-In the **Package** tab and edit the id, version, authors, etc.
+In the **Package** tab, fill out all the fields you need.
 
 ![](media/visual-studio-package-properties-package-tab.webp)
 
@@ -71,14 +71,14 @@ internal class Module
 > [!NOTE]
 > If your package **doesn't have a `.sdpkg` file** and it **only includes code**, you can skip this step.
 
-The `.sdpkg` file's name **has to exactly match the package id and the `.csproj` file's name**. If it's incorrect, the engine won't load it and in turns, it will prevent it's assets from loading.
+The `.sdpkg` file's name **has to exactly match the package id and the `.csproj` file's name**. If it's incorrect, the engine won't load it and in turn, it will prevent it's assets from loading.
 
 ### Including assets and resources
 
 > [!NOTE]
 > If your package **doesn't have a `.sdpkg` file** and it **only includes code**, you can skip this step.
 
-Without proper setup, Nuget packages will ignore any non-code content.
+Without proper setup, the packing process will ignore any non-code content.
 
 To make Nuget include stride files in the package, you'll have to modify the `.csproj` file of the package and include these lines:
 
@@ -92,7 +92,7 @@ To make Nuget include stride files in the package, you'll have to modify the `.c
 ```
 
 **Explanation** z<br/>
-The `<None>` property tell C# to not treat the specified files in `Include` as code, which is what it already did, except that now, we can set additional parameters. This includes setting `Pack` to `true` in order to include these files in the package as standard files and specifying the `PackagePath` to make sure they are placed in the correct spot in the package.
+The `<None>` item tells C# to not treat the specified files in `Include` as code, which is what it already did, except that now, we can set additional parameters. This includes setting `Pack` to `true` in order to include these files in the package as standard files and specifying the `PackagePath` to make sure they are placed in the correct directory in the package.
 
 > [!NOTE]
 > If your package includes more directories outside of `Assets`, `Resources` and `Effects`, make sure to create separate entries for them.
@@ -138,3 +138,7 @@ Things to look out for:
 ## Publishing your package
 
 You can publish your package on [nuget.org](https://nuget.org) directly from the website, or by using commands like `dotnet` or `nuget`.
+
+## See also
+
+* [Using Nuget packages](using-nuget-packages.md)
