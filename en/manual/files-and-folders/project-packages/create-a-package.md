@@ -123,6 +123,6 @@ For more information, visit the [dependencies page](dependencies.md#add-a-depend
 
 ## See also
 
-* [Add or remove a platform](../../platforms/add-or-remove-platform.md)
+* [Add or remove a platform](../../platforms/add-or-remove-a-platform.md)
 * [Package properties](package-properties.md)
 * [Dependencies](dependencies.md)

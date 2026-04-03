@@ -496,7 +496,7 @@ items:
   - name: Project
     href: files-and-folders/index.md
     items:
-      - name: Project structure
+      - name: Project file structure
         href: files-and-folders/project-structure.md
       - name: Packages
         href: files-and-folders/project-packages/index.md
@@ -520,8 +520,17 @@ items:
         href: files-and-folders/version-control.md
       - name: Cached files
         href: files-and-folders/cached-files.md
-      - name: Distribute a game
-        href: files-and-folders/distribute-a-game.md
+      - name: Building the game
+        href: files-and-folders/building-the-game/index.md
+        items:
+          - name: Setup
+            href: files-and-folders/building-the-game/setup.md
+          - name: Building
+            href: files-and-folders/building-the-game/building.md
+          - name: Build file structure
+            href: files-and-folders/building-the-game/build-file-structure.md
+          - name: Cleaning up
+            href: files-and-folders/building-the-game/cleaning-up.md
 
   - name: Scripts
     href: scripts/index.md
