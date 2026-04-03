@@ -18,7 +18,17 @@ This will open a new tab and a setup wizard. Select the **Folder** option, then 
 
 Now, you can change the settings by pressing the **Show all settings** button.
 
-![](media/visual-studio-publish-show-all-settings.webp)
+![](media/visual-studio-publish-settings.webp)
+
+| Setting | Description |
+| :-- | :-- |
+| Configuration | The [configuration](index.md#configurations) to be used when publishing. |
+| Target framework | The [.NET framework](https://learn.microsoft.com/en-us/dotnet/standard/frameworks) that will be used by the game. |
+| Deployment mode | Determines whenever the framework that is required to run the game should be embedded in the application, removing the need to install the .NET runtime by other users. For more information, check out the [self contained section](#self-contained). |
+| Target runtime | The platform and processor architecture to publish for. |
+| Target location | The location of the final build. For more information, check out the [output directory section](#the-output-directory). |
+| Produce single file | When true, all non-native libraries will be embedded in the executable. For more information, check out the [single file and include native libraries section](#single-file-and-include-native-libraries). |
+| Enable ReadyToRun compilation | Improves startup performance at the cost of the application size. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/dotnet/core/deploying/ready-to-run). |
 
 For some options, you might need to change the platform package's properties, which can be done by right clicking on it and selecting **Properties**.
 
