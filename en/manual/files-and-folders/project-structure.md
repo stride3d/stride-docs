@@ -8,7 +8,7 @@ A Stride project is a **standard C# solution**, consisting of a single **[soluti
 
 IMAGE OF THE FILE STRUCTURE
 
-* [**Bin**](#Project Bin folder) - folder containing build files.
+* [**Bin**](#project-bin-folder) - folder containing build files.
 * **NameOfGame**, **NameOfGame.PlatformName** - package folders
 * **`.sln` file** - the solution file used by C# and Game Studio for opening the project.
 
