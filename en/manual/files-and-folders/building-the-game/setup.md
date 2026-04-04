@@ -26,7 +26,7 @@ Now, you can change the settings by pressing the **Show all settings** button.
 | Target framework | The [.NET framework](https://learn.microsoft.com/en-us/dotnet/standard/frameworks) that will be used by the game. |
 | Deployment mode | Determines whenever the framework that is required to run the game should be embedded in the application, removing the need to install the .NET runtime by other users. For more information, check out the [self contained section](#self-contained). |
 | Target runtime | The platform and processor architecture to publish for. |
-| Target location | The location of the final build. For more information, check out the [output directory section](#the-output-directory). |
+| Target location | The location of the published build. For more information, check out the [output directory section](#the-output-directory). |
 | Produce single file | When true, all non-native libraries will be embedded in the executable. For more information, check out the [single file and include native libraries section](#single-file-and-include-native-libraries). |
 | Enable ReadyToRun compilation | Improves startup performance at the cost of the application size. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/dotnet/core/deploying/ready-to-run). |
 
@@ -70,7 +70,7 @@ In the **platform package's properties**, look for a field named **Icon**.
 
 ### [Manual](#tab/manual)
 
-In the `.csproj` file, add `<AssemblyName>Insert name here</AssemblyName>` to the `<Property Group>`.
+In the `.csproj` file, change the value of `<ApplicationIcon>Resources\Icon.ico</ApplicationIcon>` in the `<Property Group>`.
 
 ---
 
@@ -103,12 +103,12 @@ In the `.csproj` file, add `<SelfContained>true</SelfContained>` to the `<Proper
 
 ## Single file and include native libraries
 
-By default, building will create a `.dll` file for every package used by the project. These files can be embeded in the application executable itself by enabling **Publish single file**.
+By default, building will create a `.dll` file for every package used by the project. These files can be embedded in the application executable itself by enabling **Publish single file**.
 
 Despite it's name, this option **still won't make the game a single file**, as it won't embed the native libraries used by Stride. For that, you'll have to additionally enable **Include native libraries for self extract**.
 
 > [!NOTE]
-> Even with all these options enabled, Stride will still produce an additional folder for it's assets named `data`, that needs to be included when shipping the game.
+> Even with all these options enabled, Stride will still produce an additional folder for it's assets named `data`, that needs to be included with the game.
 
 ### [Visual Studio](#tab/visual-studio)
 
@@ -136,9 +136,9 @@ By default, the publish directory is set to `$(OutputPath)/publish`.
 
 ### [Visual Studio](#tab/visual-studio)
 
-To change the **output path**, open the **platform package's properties** and look for a field named **INSERT NAME HERE**.
+To change the **output path**, double click on the platform package and change the value of `<OutputPath>` in the `<Property Group>`.
 
-TODO: IMAGE
+![](media/visual-studio-csproj.webp)
 
 To change the **publish directory**, open the profile settings and modify the value of **Target location**.
 
@@ -146,9 +146,9 @@ To change the **publish directory**, open the profile settings and modify the va
 
 ### [Manual](#tab/manual)
 
-To change the **output path**, in the `.csproj` file, add `<SelfContained>true</SelfContained>` and `<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>` to the `<Property Group>`.
+To change the **output path**, in the `.csproj` file, change the value of `<OutputPath>` in the `<Property Group>`.
 
-To change the **publish directory**, in the `.csproj` file, add `<PublishDir>true</PublishDir>` to the `<Property Group>`.
+To change the **publish directory**, in the `.csproj` file, add `<PublishDir>../Path/To/Directory</PublishDir>` to the `<Property Group>`.
 
 ---
 

@@ -13,7 +13,8 @@ You might want to clean the cache if:
 * the cache is taking up too much space on disk
 * assets don't update in-game after you edit or delete them
 
-Cleaning the cache **won't affect your project**.
+> [!NOTE]
+> Cleaning the cache **won't affect your project**!
 
 ## Cleaning the project cache
 

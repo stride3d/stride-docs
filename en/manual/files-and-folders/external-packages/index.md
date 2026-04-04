@@ -2,7 +2,7 @@
 
 In Stride it is possible to use external [Nuget](https://www.nuget.org/) packages in your projects. These packages can contain not only code, but also their own **assets and resources**.
 
-This system allows you to create and share your own packages for Stride with other people, as well as get access to those made by others.
+This system allows you to create and share your own packages for Stride with other people, as well as access those made by others.
 
 ## In this section
 * [What is Nuget](what-is-nuget.md)

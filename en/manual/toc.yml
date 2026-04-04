@@ -527,10 +527,10 @@ items:
             href: files-and-folders/building-the-game/setup.md
           - name: Building
             href: files-and-folders/building-the-game/building.md
-          - name: Build file structure
-            href: files-and-folders/building-the-game/build-file-structure.md
           - name: Cleaning up
             href: files-and-folders/building-the-game/cleaning-up.md
+          - name: Build file structure
+            href: files-and-folders/building-the-game/build-file-structure.md
 
   - name: Scripts
     href: scripts/index.md

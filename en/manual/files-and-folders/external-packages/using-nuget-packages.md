@@ -14,12 +14,12 @@ TODO: VISUALIZATION HERE
 
 Nuget packages are hosted on [nuget.org](https://nuget.org). **You can use this website in order to search for a Nuget package**.
 
-Alternatively, check if your IDE of choice has a built-in browser of it's own.
+Alternatively, check if your IDE of choice has a built-in browser of it's own (like Visual Studio).
 
 ## Adding a Nuget package as a dependency
 
 > [!NOTE]
-> Currently, you cannot do this using Game Studio.
+> Currently, you cannot do this using **Game Studio**.
 
 ### [Visual Studio](#tab/add-visual-studio)
 
@@ -43,6 +43,8 @@ Select the **Browser** tab and search for the package you want to add.
 
 After selecting the package, click the **install** button on the right.
 
+TODO: IMAGE
+
 > [!NOTE]
 > Make sure to save!
 
@@ -61,9 +63,9 @@ dotnet add Path/To/Project/Package package NameOfNugetPackage
 > [!NOTE]
 > This only applies to packages that include custom Stride assets.
 
-In Game Studio, in the **Solution explorer** panel, expand **External packages** and look for the package you have just added.
+In **Game Studio**, in the **Solution explorer** panel, expand **External packages** and look for the package you have just added.
 
 ![](media/game-studio-external-package-assets.webp)
 
 > [!NOTE]
-> You might need to reload the project in order to make the package to show up.
+> You may need to reload the project in order to make the package show up.

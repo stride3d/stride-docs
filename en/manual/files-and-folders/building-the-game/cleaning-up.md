@@ -30,5 +30,5 @@ After you publish the game, the **Cleanup Publish** target will be executed. It 
 
 ## See also
 
-* [Target element]([build-file-structure.md](https://learn.microsoft.com/en-us/visualstudio/msbuild/target-element-msbuild)
+* [Target element (MSBuild)](https://learn.microsoft.com/en-us/visualstudio/msbuild/target-element-msbuild)
 * [Build file structure](build-file-structure.md)

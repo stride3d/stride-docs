@@ -1,16 +1,22 @@
 # Build file structure
 
-This page explains in detail how a built Stride game's files are structured.
+This page explains the file structure of a built Stride game.
 
 ## Overview
 
-All builds are located in the `Bin` directory. It contains multiple sub-directories that categorize builds based on their configuration and platform.
+By default, all builds are located in the **Bin** directory. It contains multiple sub-directories that categorize builds based on their configuration and platform.
 
-When building the Release version of the game, the actual published files are located in the typical build location under the directory ``publish``.
+When building the Release version of the game, the actual published files **aren't located in the standard directory**, but in it's subdirectory called **publish**.
 
 TODO: VISUALIZATION
 
+> [!NOTE]
+> The build location can be configured. For more information visit the [setup page](setup.md).
+
 ## Contents of the build folder
+
+> [!NOTE]
+> Depending on [your setup](setup.md), some of these files might not be generated.
 
 The build folder contains the following files:
 
@@ -27,4 +33,5 @@ Additionally, there are also these files, that don't need to be included with th
 
 ## See also:
 
+* [Setup](setup.md)
 * [Cleaning up](cleaning-up.md)

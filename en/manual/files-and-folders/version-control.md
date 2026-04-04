@@ -22,7 +22,7 @@ We recommend using the [official Github `.gitignore` for Dotnet projects](https:
 
 ## Large files
 
-Some version control systems have special mechanisms for handling large files that can improve performance of those systems in large projects. In Stride, these are most commonly the resource files. For more information, visit the [project structure page](project-structure.md).
+Some version control systems have special mechanisms for handling large files that can improve performance of those systems in large projects. In Stride, **these are most commonly the resource files**. For more information, visit the [project structure page](project-structure.md).
 
 ## See also
 

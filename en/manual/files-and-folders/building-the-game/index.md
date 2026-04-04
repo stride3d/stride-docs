@@ -10,8 +10,8 @@ For it's build system, Stride uses [MSBuild](https://learn.microsoft.com/en-us/v
 ## Configurations
 
 Games can be built using one of two different configurations:
-* **Debug** - used for testing and debugging, allows you to connect a debugger to create break points and inspect the game while it's running
-* **Release** - used for creating the final version of the game
+* **Debug** - used for testing and debugging, allows you to connect a debugger to create break points and inspect the game while it's running.
+* **Release** - used for creating the final version of the game.
 
 When you launch the game from **Game Studio** or your **IDE**, it gets built in the **Debug** configuration.
 

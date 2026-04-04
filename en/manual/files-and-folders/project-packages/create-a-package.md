@@ -12,12 +12,12 @@ Platform packages are created when adding a platform to the project. Steps on ho
 
 ### [Game Studio](#tab/game-studio)
 
-You can create a new package in the **Solution explorer** panel by right clicking on the solution and selecting **"New project..."**.
+To create a new package, in the **Solution explorer** panel right click on your solution and select **New project...**
 
 ![](media/game-studio-new-package.webp)
 
 You can select from one of two templates:
-* **New game** - creates a new game package along additional packages for selected platforms.
+* **New game** - creates a new game package along additional platform packages for selected targets.
 * **Code library** - a standard empty package that is meant to be used by other packages for code and assets.
 
 ### [Visual Studio](#tab/visual-studio)
@@ -36,10 +36,10 @@ Give the package a name and then continue through the steps until the package is
 > Make sure to save!
 
 > [!WARNING]
-> The created package **will be missing references to Stride libraries**. You will have to add them yourself.
+> The created package **will be missing references to Stride libraries**! You will have to add them yourself.
 
 > [!WARNING]
-> Creating a package through Visual Studio **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders. Make sure to create them yourself.
+> Creating a package through Visual Studio **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders! Make sure to create them yourself.
 > 
 > ![](media/visual-studio-new-package-created.webp)
 > 
@@ -87,10 +87,10 @@ dotnet sln add MyGame.MyLibrary
 ```
 
 > [!WARNING]
-> The created package **will be missing references to Stride libraries**. You will have to add them yourself.
+> The created package **will be missing references to Stride libraries**! You will have to add them yourself.
 
 > [!WARNING]
-> Creating a package through the command line **won't create the `.sdpkg` file** nor the *> *Assets** and **Resources** folders. Make sure to create them yourself.
+> Creating a package through the command line **won't create the `.sdpkg` file** nor the *> *Assets** and **Resources** folders! Make sure to create them yourself.
 > 
 > Here is a template for the `.sdpkg` file.
 > 
@@ -125,7 +125,7 @@ dotnet sln add MyGame.MyLibrary
 
 ## Using your new package
 
-After creating a new package, it won't be possible to use it anywhere in your game, because by default, it won't be used by any other package.
+After creating a new package, it will be completely separate from the rest of the game. All code and assets in it won't be usable by any other package.
 
 TODO: ADD VISUALISATION
 

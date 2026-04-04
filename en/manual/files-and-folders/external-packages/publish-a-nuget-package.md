@@ -24,6 +24,8 @@ In the **Package** tab, fill out all the fields you need.
 
 You can change the metadata manually, by editing the `.csproj` file of the package you are trying to publish.
 
+Example configuration:
+
 ```xml
 <PropertyGroup>
   <PackageId>MyGame.MyLibrary</PackageId>
@@ -71,7 +73,7 @@ internal class Module
 > [!NOTE]
 > If your package **doesn't have a `.sdpkg` file** and it **only includes code**, you can skip this step.
 
-The `.sdpkg` file's name **has to exactly match the package id and the `.csproj` file's name**. If it's incorrect, the engine won't load it and in turn, it will prevent it's assets from loading.
+The `.sdpkg` file's name **has to match the package id and the `.csproj` file's name exactly**. If it's incorrect, the engine won't load it and in turn, it will prevent it's assets from loading.
 
 ### Including assets and resources
 
@@ -91,7 +93,7 @@ To make Nuget include stride files in the package, you'll have to modify the `.c
 </ItemGroup>
 ```
 
-**Explanation** z<br/>
+**Explanation** <br/>
 The `<None>` item tells C# to not treat the specified files in `Include` as code, which is what it already did, except that now, we can set additional parameters. This includes setting `Pack` to `true` in order to include these files in the package as standard files and specifying the `PackagePath` to make sure they are placed in the correct directory in the package.
 
 > [!NOTE]
@@ -127,7 +129,7 @@ This will create the `.nupkg` file under `/path/to/the/package/bin/Release`.
 
 ## Checking the package contents
 
-You can check to see if the package's contents were generated correctly by using [nuget.info](https://nuget.info). It's a website that let's you open a `.nupkg` file and inspect it.
+You can check to see if the package's contents were generated correctly by using [nuget.info](https://nuget.info) - a website for inspecting `.nupkg` files.
 
 ![](media/nuget-info.webp)
 

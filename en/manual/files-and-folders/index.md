@@ -18,5 +18,5 @@ This section explains how a Stride project is structured, how it works and how t
 * [Building the game](building-the-game/index.md)
   * [Setup](building-the-game/setup.md)
   * [Building](building-the-game/building.md)
-  * [Build file structure](building-the-game/build-file-structure.md)
   * [Cleaning up](building-the-game/cleaning-up.md)
+  * [Build file structure](building-the-game/build-file-structure.md)
