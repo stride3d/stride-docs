@@ -32,11 +32,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    # - name: Checkout Stride Docs
-    #   uses: actions/checkout@v6
-    #   with:
-    #     path: ${{ env.DOCS_PATH }}
-    #     lfs: true
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v6
+      with:
+        path: ${{ env.DOCS_PATH }}
+        lfs: true
 
     - name: Run Global Setup
       id: setup
