@@ -30,12 +30,15 @@ var isHit = simulation.RayCast(Vector3.ZERO, -Vector3.UnitY, 3f, out var hit, ma
 You can create a mask for multiple layers, using [bitwise and shift operators](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators).
 
 ```csharp
-// A mask for Layer1 and Layer 2
+// | combines multiple masks into one
+// mask1 contains layer1 and layer2
 var mask1 = CollisionMask.Layer1 | CollisionMask.Layer2;
 
-// A mask for every layer except layer 3
+// ^ removes a value from a mask
+// mask2 contains everything except layer 3
 var mask2 = CollisionMask.Everything ^ CollisionMask.Layer3;
 
-// An inverted mask2 - only for layer 3
+// ~ inverts a mask
+// mask3 contains everything not in mask2 (only layer3)
 var mask3 = ~mask2;
 ```

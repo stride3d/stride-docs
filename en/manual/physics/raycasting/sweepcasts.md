@@ -7,7 +7,7 @@ A **sweepcast** is similar to a raycast, with the distinction of using shapes in
 
 ## Sweepcast query
 
-In order to query a sweepcast, use [`Simulation.SweepCast`](xref:Stride.BepuPhysics.BepuSimulation.SweepCast*). The method returns true, if it manages to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
+In order to perform a sweepcast, use [`Simulation.SweepCast`](xref:Stride.BepuPhysics.BepuSimulation.SweepCast*). The method returns true, if it manages to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
 
 ### Shape
 
@@ -52,7 +52,7 @@ var actualMaxDistance = maxDistance * velocity.Linear.Length();
 
 The difference between this type of query and the normal one is that, when the shape reaches an object, it doesn't stop and instead it keeps going until it reaches it's maximum length.
 
-To query a penetrating sweepcast, use [`Simulation.SweepCastPenetrating`](xref:Stride.BepuPhysics.BepuSimulation.SweepCastPenetrating*).
+To perform a penetrating sweepcast, use [`Simulation.SweepCastPenetrating`](xref:Stride.BepuPhysics.BepuSimulation.SweepCastPenetrating*).
 
 ```csharp
 public void Shoot()
@@ -69,7 +69,7 @@ public void Shoot()
 ```
 
 > [!NOTE]
-> **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to do it yourself.
+> **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to sort the results yourself.
 
 ## Penetrating sweepcast query (with `stackalloc`)
 
@@ -97,7 +97,7 @@ public void Shoot()
 Every hit is represented by [`HitInfo`](xref:Stride.BepuPhysics.HitInfo), which contains all information about the hit.
 * [`Point`](xref:Stride.BepuPhysics.HitInfo.Point) - the position in the world where the collidable was hit.
 * [`Normal`](xref:Stride.BepuPhysics.HitInfo.Normal) - the normal vector of the surface that was hit.
-* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the distance of the hit from the starting position.
+* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the actual distance the shape travelled multiplied by it's velocity (Distance = directionLength * actualDistance).
 * [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) - the [collidable component](xref:Stride.BepuPhysics.CollidableComponent) that was hit.
 * [`ChildIndex`](xref:Stride.BepuPhysics.HitInfo.ChildIndex) - the index of the shape used in a [collidables](xref:Stride.BepuPhysics.HitInfo.Distance) [collider](xref:Stride.BepuPhysics.CollidableComponent.Collider) if it's a [compound collider](../collider-shapes.md#compound).
 
@@ -107,6 +107,14 @@ Because [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) is a componen
 
 ```csharp
 var entity = hit.Collidable.Entity;
+```
+
+### Getting the actual distance
+
+The actual distance can be calculated by using [Vector3.Distance](xref:Stride.Core.Mathematics.Vector3.Distance*) with the ray origin and [`Point`](xref:Stride.BepuPhysics.HitInfo.Point).
+
+```csharp
+var actualDistance = Vector3.Distance(origin, hit.Point);
 ```
 
 ## Using a collision mask

@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
-An **overlap** checks for intersecting collisions in the bounds of a shape. In more basic terms, **it checks which collisions are inside or partially inside of a shape**.
+An **overlap** checks for intersecting collisions in the bounds of a shape. In more basic terms, **it checks which colliders are inside or partially inside of a shape**.
 
 ## Overlap query
 
@@ -79,7 +79,7 @@ public void Overlap()
 
 ## Using a collision mask
 
-Every query has an optional parameter specifying which collision layers it should be performed on.
+Every query has an optional parameter specifying which colliders layers it should be performed on.
 
 For more information on how to use collision masks, visit the [main physics queries page](index.md#querying-specific-collision-masks).
 

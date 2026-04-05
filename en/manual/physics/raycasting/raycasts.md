@@ -9,7 +9,7 @@ Raycasts can be used for firing weapons or NPC AI.
 
 ## Raycast query
 
-In order to query a raycast, use [`Simulation.RayCast`](xref:Stride.BepuPhysics.BepuSimulation.RayCast*). The method returns true, if it manages to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
+In order to perform a raycast, use [`Simulation.RayCast`](xref:Stride.BepuPhysics.BepuSimulation.RayCast*). The method returns true, if it manages to hit something. In that case, all information about the hit will be contained in [HitInfo](xref:Stride.BepuPhysics.HitInfo).
 
 ```csharp
 public void Shoot()
@@ -37,7 +37,7 @@ public void Shoot()
 
 The difference between this type of query and the normal one is that, when the ray reaches an object, it doesn't stop and instead it keeps going until it reaches it's maximum length.
 
-To query a penetrating raycast, use [`Simulation.RayCastPenetrating`](xref:Stride.BepuPhysics.BepuSimulation.RayCastPenetrating*).
+To perform a penetrating raycast, use [`Simulation.RayCastPenetrating`](xref:Stride.BepuPhysics.BepuSimulation.RayCastPenetrating*).
 
 ```csharp
 public void Shoot()
@@ -54,7 +54,7 @@ public void Shoot()
 ```
 
 > [!NOTE]
-> **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to do it yourself.
+> **There are no guarantees as to the order hits are returned in**. If you want them to be ordered by distance, you will have to sort the results yourself.
 
 ## Penetrating raycast query (with `stackalloc`)
 
@@ -82,7 +82,7 @@ public void Shoot()
 Every hit is represented by [`HitInfo`](xref:Stride.BepuPhysics.HitInfo), which contains all information about the hit.
 * [`Point`](xref:Stride.BepuPhysics.HitInfo.Point) - the position in the world where the collidable was hit.
 * [`Normal`](xref:Stride.BepuPhysics.HitInfo.Normal) - the normal vector of the surface that was hit.
-* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the distance of the hit from the starting position.
+* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the actual distance the ray travelled multiplied by it's direction amplitude (Distance = directionLength * actualDistance).
 * [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) - the [collidable component](xref:Stride.BepuPhysics.CollidableComponent) that was hit.
 * [`ChildIndex`](xref:Stride.BepuPhysics.HitInfo.ChildIndex) - the index of the shape used in a [collidables](xref:Stride.BepuPhysics.HitInfo.Distance) [collider](xref:Stride.BepuPhysics.CollidableComponent.Collider) if it's a [compound collider](../collider-shapes.md#compound).
 
@@ -92,6 +92,14 @@ Because [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) is a componen
 
 ```csharp
 var entity = hit.Collidable.Entity;
+```
+
+### Getting the actual distance
+
+The actual distance can be calculated by using [Vector3.Distance](xref:Stride.Core.Mathematics.Vector3.Distance*) with the ray origin and [`Point`](xref:Stride.BepuPhysics.HitInfo.Point).
+
+```csharp
+var actualDistance = Vector3.Distance(origin, hit.Point);
 ```
 
 ## Using a collision mask
@@ -132,7 +140,7 @@ public override void Update()
 
 ### Getting info from a penetrating raycast
 
-This method will query a penetrating raycast in the direction the entity is looking at, in a range of 16 meters.
+This method will perform a penetrating raycast in the direction the entity is looking at, in a range of 16 meters.
 
 The method will only log information of the first 16 hits.
 
@@ -154,7 +162,7 @@ public void Shoot()
 
 ### Raycasting using the mouse
 
-This method will query a raycast from the mouse's position on the screen.
+This method will perform a raycast from the mouse's position on the screen.
 
 ```cs
 public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera)
