@@ -40,7 +40,7 @@ jobs:
 
     - name: Run Global Setup
       id: setup
-      uses: ./.github/actions/setup-stride
+      uses: ./stride-docs/.github/actions/setup-stride
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         skip-pdf-building: ${{ github.event.inputs.skipPdfBuilding }}
