@@ -23,6 +23,12 @@ runs:
     with:
       dotnet-version: 10.x
 
+  - name: Checkout Stride Docs
+    uses: actions/checkout@v6
+    with:
+      path: ${{ env.DOCS_PATH }}
+      lfs: true
+
   - name: Set Version in docfx.json
     run: |
       $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
