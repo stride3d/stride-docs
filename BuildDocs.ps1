@@ -2,7 +2,7 @@
 .SYNOPSIS
     This script builds documentation (manuals, tutorials, release notes) in selected language(s) from the languages.json file and optionally includes API documentation.
 .DESCRIPTION
-    The script allows the user to build documentation in English or any other available language specified in the languages.json file. It provides options to build documentation in all available languages, run a local website for the documentation, or cancel the operation. If the user chooses to build the documentation, the script also prompts whether API documentation should be included.
+    The script allows the user to build documentation in English or any other available language specified in the languages.json file. It provides options to build documentation in all available languages, run a local website for the documentation, or cancel the operation. If the user chooses to build the documentation, the script also prompts whether API documentation should be included unless API building is explicitly skipped.
 .NOTES
     The documentation files are expected to be in Markdown format (.md). The script uses the DocFX tool to build the documentation and optionally includes API documentation. The script generates the API documentation from C# source files using DocFX metadata and can run a local website using the DocFX serve command. This script can also be run from GitHub Actions.
 .LINK
@@ -12,14 +12,19 @@
 .LINK
     https://dotnet.github.io/docfx/index.html
 .PARAMETER BuildAll
-    Switch parameter. If provided, the script will build documentation in all available languages and include API documentation.
+    Switch parameter. If provided, the script will build documentation in all available languages and include API documentation unless SkipApiBuilding is also provided.
 .PARAMETER Version
     The Version to build the Docs, the default is the latest version
+.PARAMETER SkipApiBuilding
+    Switch parameter. If provided, it skips API metadata generation and excludes API documentation from the build.
 .PARAMETER SkipPdfBuilding
     Switch parameter. If provided, It skips Pdf generation step.
 .EXAMPLE
     .\BuildDocs.ps1 -BuildAll
     In this example, the script will build the documentation in all available languages and include API documentation. Use this in GitHub Actions.
+.EXAMPLE
+    .\BuildDocs.ps1 -BuildAll -SkipApiBuilding
+    In this example, the script will build the documentation in all available languages without generating API documentation. Use this in GitHub Actions when API docs should be skipped.
 .EXAMPLE
     .\BuildDocs.ps1
     In this example, the script will prompt the user to select an operation and an optional language. If the user chooses to build the documentation, the script will also ask if they want to include API documentation.
@@ -29,6 +34,7 @@
 
 param (
     [switch]$BuildAll,
+    [switch]$SkipApiBuilding,
     [ArgumentCompleter({
         [OutputType([System.Management.Automation.CompletionResult])]
         param([string] $CommandName,[string] $ParameterName,[string] $WordToComplete,[System.Management.Automation.Language.CommandAst] $CommandAst,[System.Collections.IDictionary] $FakeBoundParameters)
@@ -450,7 +456,7 @@ Start-Transcript -Path $Settings.LogPath
 if ($BuildAll)
 {
     $isAllLanguages = $true
-    $API = $true
+    $API = -not $SkipApiBuilding
     $ReuseAPI = $false
 }
 else {
@@ -472,19 +478,26 @@ else {
     # Ask if the user wants to include API
     if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
     {
-        $API = Ask-IncludeAPI
-
-        if ($API)
+        if ($SkipApiBuilding)
         {
-            # Check for .yml files
-            $ymlFiles = Get-ChildItem -Path "en/api/" -Filter "*.yml"
+            $API = $false
+            $ReuseAPI = $false
+        }
+        else
+        {
+            $API = Ask-IncludeAPI
 
-            if ($ymlFiles.Count -gt 0)
+            if ($API)
             {
-                $ReuseAPI = Ask-UseExistingAPI
+                # Check for .yml files
+                $ymlFiles = Get-ChildItem -Path "en/api/" -Filter "*.yml"
+
+                if ($ymlFiles.Count -gt 0)
+                {
+                    $ReuseAPI = Ask-UseExistingAPI
+                }
             }
         }
-
     } elseif ($isCanceled) {
         Write-Host -ForegroundColor Red "Operation canceled by user."
         Stop-Transcript
