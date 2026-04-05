@@ -114,7 +114,7 @@ var entity = hit.Collidable.Entity;
 The actual distance can be calculated by using [Vector3.Distance](xref:Stride.Core.Mathematics.Vector3.Distance*) with the ray origin and [`Point`](xref:Stride.BepuPhysics.HitInfo.Point).
 
 ```csharp
-var actualDistance = Vector3.Distance(origin, hit.Point);
+var actualDistance = Vector3.Distance(pose.Position, hit.Point);
 ```
 
 ## Using a collision mask
