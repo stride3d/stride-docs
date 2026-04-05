@@ -1,9 +1,9 @@
 # Package properties
 
-Every package contains it's own set of properties, that can be customized.
+Every project package contains it's own set of properties, that can be customized.
 
 > [!NOTE]
-> Currently there is no way to change package properties via **Game Studio** - you have to **modify the `.sdpkg` file directly**.
+> Currently there is no way to change project package properties via **Game Studio** - you have to **modify the `.sdpkg` file directly**.
 
 | Property | Description |
 | :-- | :-- |
@@ -18,7 +18,7 @@ Every package contains it's own set of properties, that can be customized.
 
 ## Example
 
-Here is an example `.sdpkg` file.
+Here is an example `.sdpkg` file for the library "MyGame" that has two asset folders "Assets" and "Effects" and a single resource folder "Resources".
 
 ```yaml
 !Package

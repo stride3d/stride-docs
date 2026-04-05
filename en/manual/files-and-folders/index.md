@@ -5,7 +5,7 @@ This section explains how a Stride project is structured, how it works and how t
 ## In this section
 
 * [Project structure](project-structure.md)
-* [Packages](project-packages/index.md)
+* [Project Packages](project-packages/index.md)
   * [Create a package](project-packages/create-a-package.md)
   * [Package properties](project-packages/package-properties.md)
   * [Dependencies](project-packages/dependencies.md)

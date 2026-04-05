@@ -28,10 +28,12 @@ The build folder contains the following files:
 Additionally, there are also these files, that don't need to be included with the game.
 
 * **createdump.exe** - application for capturing information about a crash.
-* **`.pdb` files** - files containing debug information, used for attaching a debugger (using breakpoints). These files can be used by players to create mods more easily.
-* **`.xml` files** - files containing the generated code API for every package in your project.
+* **`.pdb` files** - they contain debug information, used for attaching a debugger (using breakpoints), creating more detailed logs or helping players make mods more easily. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+* **`.xml` files** - they contain generated documentation for every package in your project. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/xml-documentation).
 
 ## See also:
 
 * [Setup](setup.md)
 * [Cleaning up](cleaning-up.md)
+* [Specifying symbol (.pdb) and source files in the Visual Studio debugger](https://learn.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
+* [Tutorial: Create XML documentation](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/xml-documentation)

@@ -1,6 +1,8 @@
 # Create a package
 
-In this guide, we will dive into how to create custom packages.
+In this guide, we will dive into how to create custom project packages.
+
+**For .NET developers:** a Stride project package is a standard C# project.
 
 ## Create a platform package
 
@@ -12,17 +14,17 @@ Platform packages are created when adding a platform to the project. Steps on ho
 
 ### [Game Studio](#tab/game-studio)
 
-To create a new package, in the **Solution explorer** panel right click on your solution and select **New project...**
+To create a new platform package, in the **Solution explorer** panel right click on your solution and select **New project...**
 
 ![](media/game-studio-new-package.webp)
 
 You can select from one of two templates:
-* **New game** - creates a new game package along additional platform packages for selected targets.
-* **Code library** - a standard empty package that is meant to be used by other packages for code and assets.
+* **New game** - creates a new project package for a new game, along with additional platform packages for selected targets.
+* **Code library** - a standard empty project package that is meant to be used by other packages for code and assets.
 
 ### [Visual Studio](#tab/visual-studio)
 
-You can create a new package in the **Solution Explorer** panel by right clicking on the solution and selecting **Add > New Project...**
+You can create a new platform package in the **Solution Explorer** panel by right clicking on the solution and selecting **Add > New Project...**
 
 ![](media/visual-studio-new-package.webp)
 
@@ -36,14 +38,14 @@ Give the package a name and then continue through the steps until the package is
 > Make sure to save!
 
 > [!WARNING]
-> The created package **will be missing references to Stride libraries**! You will have to add them yourself.
+> The created project package **will be missing references to Stride libraries**! You will have to add them yourself.
 
 > [!WARNING]
-> Creating a package through Visual Studio **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders! Make sure to create them yourself.
+> Creating a project package through Visual Studio **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders! Make sure to create them yourself.
 > 
 > ![](media/visual-studio-new-package-created.webp)
 > 
-> Here is a template for the `.sdpkg` file.
+> Here is a template for the `.sdpkg` file. Change **MyGame.MyLibrary** to the name of your package. For more information on how to configure this file, visit the [package properties page](package-properties.md).
 > 
 > ```yaml
 > !Package
@@ -74,25 +76,25 @@ Give the package a name and then continue through the steps until the package is
 
 ### [Command line](#tab/command-line)
 
-If your IDE of choice isn't included on this page, you can create a new package from the terminal instead via the `dotnet` command.
+If your IDE of choice isn't included on this page, you can create a new project package from the terminal instead via the `dotnet` command.
 
 ```bash
 dotnet new classlib --name MyGame.MyLibrary
 ```
 
-You also need to add it to your solution.
+You will also need to add it to your project's solution file.
 
 ```bash
 dotnet sln add MyGame.MyLibrary
 ```
 
 > [!WARNING]
-> The created package **will be missing references to Stride libraries**! You will have to add them yourself.
+> The created project package **will be missing references to Stride libraries**! You will have to add them yourself.
 
 > [!WARNING]
-> Creating a package through the command line **won't create the `.sdpkg` file** nor the *> *Assets** and **Resources** folders! Make sure to create them yourself.
+> Creating a project package through the command line **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders! Make sure to create them yourself.
 > 
-> Here is a template for the `.sdpkg` file.
+> Here is a template for the `.sdpkg` file. Change **MyGame.MyLibrary** to the name of your package. For more information on how to configure this file, visit the [package properties page](package-properties.md).
 > 
 > ```yaml
 > !Package
@@ -123,9 +125,9 @@ dotnet sln add MyGame.MyLibrary
 
 ---
 
-## Using your new package
+## Using your new project package
 
-After creating a new package, it will be completely separate from the rest of the game. All code and assets in it won't be usable by any other package.
+By default, all code and assets in a newly created project package won't be accessible from any other package, due to not being referenced.
 
 TODO: ADD VISUALISATION
 

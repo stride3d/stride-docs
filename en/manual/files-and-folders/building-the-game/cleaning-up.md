@@ -4,8 +4,8 @@ The build process generates additional [files that aren't necessary for the game
 
 ## Files to delete
 
-* **`.xml` files** - the generated code API.
 * **`.pdb` files** - information used for debugging.
+* **`.xml` files** - the generated code documentation.
 
 ## Automatic cleanup
 

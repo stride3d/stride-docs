@@ -498,7 +498,7 @@ items:
     items:
       - name: Project file structure
         href: files-and-folders/project-structure.md
-      - name: Packages
+      - name: Project Packages
         href: files-and-folders/project-packages/index.md
         items:
           - name: Create a package

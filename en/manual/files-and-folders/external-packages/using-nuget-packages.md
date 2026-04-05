@@ -1,22 +1,22 @@
 # Using Nuget packages
 
-This is a guide on how to use Nuget packages with Stride.
+This is a guide on how to use external Nuget packages with Stride.
 
 ## The idea
 
-Nuget packages can be added to a project **as a dependency of another project package**. 
+An external Nuget package can be added **as a dependency of another project package** (for .NET developers: as a dependency of another C# project). 
 
-This is most often the **package named after your project**, which contains the majority of the code and assets.
+In most cases, you would add this to the **main non-platform project package** (eg. **MyGame**, not **MyGame.Windows**), which contains the majority of the code and assets.
 
 TODO: VISUALIZATION HERE
 
 ## Finding Nuget packages
 
-Nuget packages are hosted on [nuget.org](https://nuget.org). **You can use this website in order to search for a Nuget package**.
+Nuget packages are hosted on [nuget.org](https://nuget.org). **You can use this website to search for them**.
 
 Alternatively, check if your IDE of choice has a built-in browser of it's own (like Visual Studio).
 
-## Adding a Nuget package as a dependency
+## Adding an external Nuget package as a dependency
 
 > [!NOTE]
 > Currently, you cannot do this using **Game Studio**.
@@ -69,3 +69,8 @@ In **Game Studio**, in the **Solution explorer** panel, expand **External packag
 
 > [!NOTE]
 > You may need to reload the project in order to make the package show up.
+
+## See also
+
+* [What is Nuget](what-is-nuget.md)
+* [Dependencies](../project-packages/dependencies.md)
