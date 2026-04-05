@@ -1,0 +1,100 @@
+name: 'Setup Stride'
+description: 'Sets up .NET, checkouts repos, and installs DocFX'
+
+inputs:
+  github-token:
+    description: 'GitHub token used for repository checkout'
+    required: true
+  skip-pdf-building:
+    description: 'Skip PDF building when set to Yes'
+    required: false
+    default: 'No'
+  skip-api-building:
+    description: 'Skip API building when set to Yes'
+    required: false
+    default: 'No'
+
+runs:
+  using: "composite"
+
+  steps:
+  - name: .NET SDK Setup
+    uses: actions/setup-dotnet@v5
+    with:
+      dotnet-version: 10.x
+
+  # Checkout the Stride Docs repository from the branch that triggered the workflow
+  - name: Checkout Stride Docs
+    uses: actions/checkout@v6
+    with:
+      path: ${{ env.DOCS_PATH }}
+      lfs: true
+
+  - name: Set Version in docfx.json
+    run: |
+      $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
+      $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
+      Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
+    shell: pwsh
+
+  # Checkout the Stride repository from the default branch
+  - name: Checkout Stride (note the LFS)
+    uses: actions/checkout@v6
+    with:
+      repository: stride3d/stride
+      token: ${{ inputs.github-token }}
+      path: stride
+      lfs: true
+      ref: master
+
+  # Temporary solution till the new docfx is available
+  # - name: Checkout DocFX
+  #   uses: actions/checkout@v6
+  #   with:
+  #     repository: dotnet/docfx
+  #     # Tested commit
+  #     ref: 917cda864650279e0bbe50b852cb98601e5efa4d
+  #     path: docfx-build
+  #     fetch-depth: 0
+
+  # - name: Restore npm dependencies
+  #   run: npm install
+  #   working-directory:  docfx-build/templates
+
+  # - name: Build site templates
+  #   run: npm run build
+  #   working-directory:  docfx-build/templates
+
+  # - name: Build DocFX from PR
+  #   run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
+  #   working-directory: docfx-build
+  #   shell: pwsh
+
+  # - name: Build Install DocFX
+  #   run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
+  #   working-directory: docfx-build
+  #   shell: pwsh
+  # End of Temporary solution
+
+  - name: Install DocFX
+    # This installs the latest version of DocFX and may introduce breaking changes
+    # run: dotnet tool update -g docfx
+    # This installs a specific, tested version of DocFX.
+    run: dotnet tool update -g docfx --version 2.78.5
+    shell: pwsh
+
+  - name: Build documentation
+    run: |
+      $arguments = @()
+
+      if ('${{ inputs.skip-pdf-building }}' -eq 'Yes') {
+        $arguments += '-SkipPdfBuilding'
+      }
+
+      if ('${{ inputs.skip-api-building }}' -eq 'Yes') {
+        $arguments += '-SkipApiBuilding'
+      }
+
+      ./build-all.bat @arguments
+    working-directory: ${{ env.DOCS_PATH }}
+    shell: pwsh
