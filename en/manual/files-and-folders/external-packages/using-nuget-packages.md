@@ -14,6 +14,9 @@ TODO: VISUALIZATION HERE
 
 Nuget packages are hosted on [nuget.org](https://nuget.org). **You can use this website to search for them**.
 
+> [!NOTE]
+> It's also possible to host your own Nuget feed with packages meant for internal use within your organization. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/nuget/hosting-packages/overview).
+
 Alternatively, check if your IDE of choice has a built-in browser of it's own (like Visual Studio).
 
 ## Adding an external Nuget package as a dependency
