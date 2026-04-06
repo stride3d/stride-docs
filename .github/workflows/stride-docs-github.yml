@@ -11,19 +11,13 @@ on:
       skipPdfBuilding:
         description: Skip PDF building
         required: true
-        default: 'Yes'
-        type: choice
-        options:
-          - 'Yes'
-          - 'No'
+        default: true
+        type: boolean
       skipApiBuilding:
         description: Skip API building
         required: true
-        default: 'Yes'
-        type: choice
-        options:
-          - 'Yes'
-          - 'No'
+        default: true
+        type: boolean
 
 permissions:
   contents: read
@@ -51,8 +45,8 @@ jobs:
       uses: ./stride-docs/.github/actions/setup-stride
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        skip-pdf-building: ${{ github.event.inputs.skipPdfBuilding }}
-        skip-api-building: ${{ github.event.inputs.skipApiBuilding }}
+        skip-pdf-building: ${{ inputs.skipPdfBuilding }}
+        skip-api-building: ${{ inputs.skipApiBuilding }}
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v4

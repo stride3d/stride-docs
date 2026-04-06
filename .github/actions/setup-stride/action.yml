@@ -6,13 +6,13 @@ inputs:
     description: 'GitHub token used for repository checkout'
     required: true
   skip-pdf-building:
-    description: 'Skip PDF building when set to Yes'
+    description: 'Skip PDF building when set to true'
     required: false
-    default: 'No'
+    default: 'false'
   skip-api-building:
-    description: 'Skip API building when set to Yes'
+    description: 'Skip API building when set to true'
     required: false
-    default: 'No'
+    default: 'false'
 
 runs:
   using: "composite"
@@ -80,11 +80,11 @@ runs:
     run: |
       $arguments = @()
 
-      if ('${{ inputs.skip-pdf-building }}' -eq 'Yes') {
+      if ('${{ inputs.skip-pdf-building }}' -eq 'true') {
         $arguments += '-SkipPdfBuilding'
       }
 
-      if ('${{ inputs.skip-api-building }}' -eq 'Yes') {
+      if ('${{ inputs.skip-api-building }}' -eq 'true') {
         $arguments += '-SkipApiBuilding'
       }
 
