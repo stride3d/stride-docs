@@ -45,11 +45,8 @@ jobs:
         skip-pdf-building: ${{ github.event.inputs.skipPdfBuilding }}
         skip-api-building: ${{ github.event.inputs.skipApiBuilding }}
 
-    - name: Compress artifact
-      run: 7z a -r DocFX-app.zip ./${{ env.DOCS_PATH }}/_site/*
-
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: DocFX-app
-        path: DocFX-app.zip
+        path: ./${{ env.DOCS_PATH }}/_site
