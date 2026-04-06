@@ -109,6 +109,14 @@ Because [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) is a componen
 var entity = hit.Collidable.Entity;
 ```
 
+### Getting the distance from a hit
+
+Distance from a hit can be calculated by using [Vector3.Distance](xref:Stride.Core.Mathematics.Vector3.Distance*) with the ray origin and [`Point`](xref:Stride.BepuPhysics.HitInfo.Point).
+
+```csharp
+var actualDistance = Vector3.Distance(origin, hit.Point);
+```
+
 ## Using a collision mask
 
 Every query has an optional parameter specifying which collision layers it should be performed on.
