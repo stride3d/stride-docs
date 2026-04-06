@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build Stride Docs - Test Build
 
 env:
@@ -10,93 +7,40 @@ env:
 
 on:
   workflow_dispatch:
+    inputs:
+      skipPdfBuilding:
+        description: Skip PDF building
+        required: true
+        default: true
+        type: boolean
+      skipApiBuilding:
+        description: Skip API building
+        required: true
+        default: true
+        type: boolean
 
 jobs:
   build:
+    name: Build documentation
     runs-on: windows-latest
 
     steps:
-    - name: .NET SDK Setup
-      uses: actions/setup-dotnet@v5
-      with:
-        dotnet-version: 10.x
-
-    # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
       uses: actions/checkout@v6
       with:
         path: ${{ env.DOCS_PATH }}
         lfs: true
 
-    - name: Set Version in docfx.json
-      run: |
-        $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
-        $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
-        Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
-      shell: pwsh
-
-    # - name: Display Updated docfx.json
-    #   run: cat "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}"
-    #   shell: pwsh
-
-    # - name: Fail the Workflow
-    #   run: exit 1
-    #   shell: pwsh
-
-    # Checkout the Stride repository from the default branch
-    - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v6
+    - name: Run Global Setup
+      id: setup
+      uses: ./stride-docs/.github/actions/setup-stride
       with:
-        repository: stride3d/stride
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: stride
-        lfs: true
-        ref: master
-
-    # Temporary solution till the new docfx is available
-    # - name: Checkout DocFX
-    #   uses: actions/checkout@v6
-    #   with:
-    #     repository: dotnet/docfx
-    #     # Tested commit
-    #     ref: 917cda864650279e0bbe50b852cb98601e5efa4d
-    #     path: docfx-build
-    #     fetch-depth: 0
-
-    # - name: Restore npm dependencies
-    #   run: npm install
-    #   working-directory:  docfx-build/templates
-
-    # - name: Build site templates
-    #   run: npm run build
-    #   working-directory:  docfx-build/templates
-
-    # - name: Build DocFX from PR
-    #   run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
-    #   working-directory: docfx-build
-    #   shell: pwsh
-
-    # - name: Build Install DocFX
-    #   run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
-    #   working-directory: docfx-build
-    #   shell: pwsh
-    # End of Temporary solution
-
-    - name: Install DocFX
-      # This installs the latest version of DocFX and may introduce breaking changes
-      # run: dotnet tool update -g docfx
-      # This installs a specific, tested version of DocFX.
-      run: dotnet tool update -g docfx --version 2.78.5
-
-    - name: Build documentation
-      run: ./build-all.bat
-      working-directory: ${{ env.DOCS_PATH }}
-
-    - name: Compress artifact
-      run: 7z a -r DocFX-app.zip ./${{ env.DOCS_PATH }}/_site/*
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        skip-pdf-building: ${{ inputs.skipPdfBuilding }}
+        skip-api-building: ${{ inputs.skipApiBuilding }}
 
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: DocFX-app
-        path: DocFX-app.zip
+        path: ./${{ env.DOCS_PATH }}/_site

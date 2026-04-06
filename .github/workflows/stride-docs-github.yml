@@ -1,5 +1,3 @@
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build Stride Docs for GitHub Staging
 
 env:
@@ -9,83 +7,60 @@ env:
 
 on:
   workflow_dispatch:
+    inputs:
+      skipPdfBuilding:
+        description: Skip PDF building
+        required: true
+        default: true
+        type: boolean
+      skipApiBuilding:
+        description: Skip API building
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  publish-docs:
+  build:
+    name: Build documentation
     runs-on: windows-latest
 
     steps:
-    - name: .NET SDK Setup
-      uses: actions/setup-dotnet@v5
-      with:
-        dotnet-version: 10.x
-
-    # Checkout the Stride Docs repository from the branch that triggered the workflow
     - name: Checkout Stride Docs
       uses: actions/checkout@v6
       with:
         path: ${{ env.DOCS_PATH }}
         lfs: true
 
-    - name: Set Version in docfx.json
-      run: |
-        $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
-        $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
-        Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
-      shell: pwsh
-
-    # Checkout the Stride repository from the default branch
-    - name: Checkout Stride (note the LFS)
-      uses: actions/checkout@v6
+    - name: Run Global Setup
+      id: setup
+      uses: ./stride-docs/.github/actions/setup-stride
       with:
-        repository: stride3d/stride
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: stride
-        lfs: true
-        ref: master
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        skip-pdf-building: ${{ inputs.skipPdfBuilding }}
+        skip-api-building: ${{ inputs.skipApiBuilding }}
 
-    # Temporary solution till the new docfx is available
-    # - name: Checkout DocFX
-    #   uses: actions/checkout@v6
-    #   with:
-    #     repository: dotnet/docfx
-    #     # Tested commit
-    #     ref: 917cda864650279e0bbe50b852cb98601e5efa4d
-    #     path: docfx-build
-    #     fetch-depth: 0
-
-    # - name: Restore npm dependencies
-    #   run: npm install
-    #   working-directory:  docfx-build/templates
-
-    # - name: Build site templates
-    #   run: npm run build
-    #   working-directory:  docfx-build/templates
-
-    # - name: Build DocFX from PR
-    #   run: dotnet pack src/docfx -c Release /p:Version=2.9-stride -o drop/nuget
-    #   working-directory: docfx-build
-    #   shell: pwsh
-
-    # - name: Build Install DocFX
-    #   run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
-    #   working-directory: docfx-build
-    #   shell: pwsh
-    # End of Temporary solution
-
-    - name: Install DocFX
-      # This installs the latest version of DocFX and may introduce breaking changes
-      # run: dotnet tool update -g docfx
-      # This installs a specific, tested version of DocFX.
-      run: dotnet tool update -g docfx --version 2.78.5
-
-    - name: Build documentation
-      run: ./build-all-skip-pdf.bat
-      working-directory: ${{ env.DOCS_PATH }}
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v4
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ${{ env.DOCS_PATH }}/_site
-        publish_branch: gh-pages
+        path: ${{ env.DOCS_PATH }}/_site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
