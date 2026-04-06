@@ -46,8 +46,6 @@ Select the **Browser** tab and search for the package you want to add.
 
 After selecting the package, click the **install** button on the right.
 
-TODO: IMAGE
-
 > [!NOTE]
 > Make sure to save!
 
