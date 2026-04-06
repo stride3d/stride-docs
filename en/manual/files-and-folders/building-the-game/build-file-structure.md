@@ -8,7 +8,7 @@ By default, all builds are located in the **Bin** directory. It contains multipl
 
 When building the Release version of the game, the actual published files **aren't located in the standard directory**, but in it's subdirectory called **publish**.
 
-TODO: VISUALIZATION
+![](media/build-file-structure-publish-subdirectory.webp)
 
 > [!NOTE]
 > The build location can be configured. For more information visit the [setup page](setup.md).

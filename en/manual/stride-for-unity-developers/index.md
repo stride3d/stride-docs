@@ -36,7 +36,7 @@ Like Unity®, Stride projects are stored in a directory that contains:
 * The project `.sln` solution file, which you can open with Game Studio or any IDE such as Visual Studio
 * A **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries 
 
-![Package folder structure](../files-and-folders/media/folder-structure.png)
+![Package folder structure](../files-and-folders/media/file-structure.webp)
 * **Assets** contains asset configuration files.
 * **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
 * **MyPackage.Game** contains your source code.

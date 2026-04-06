@@ -6,7 +6,7 @@ This page explains in detail how a Stride project's files are structured.
 
 A Stride project is a **standard C# solution**, consisting of a single [solution file](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file) (`.sln`) and multiple [project package](#project-packages) folders, which contain code, assets and resources.
 
-IMAGE OF THE FILE STRUCTURE
+![](media/file-structure.webp)
 
 * **Bin** - folder containing build files. For more information visit [this section](#project-bin-folder).
 * **NameOfGame**, **NameOfGame.PlatformName** - package folders
@@ -27,9 +27,9 @@ A project package may contain:
 * **Resources** - the resources folder. Name of this folder or additional folders can be configured in the `.sdpkg` file.
 * **`.sdpkg` file** - contains configurable metadata of the package.
 * **`.sdpkg.user` file** - contains user-specific data about the editor that is not meant to be shared with source control.
-* **`.csprj` file** - a C# project file containing information about how it's code will be compiled.
+* **`.csproj` file** - a C# project file containing information about how it's code will be compiled.
 
-TODO: VISUALISATION
+![](media/project-package-structure.webp)
 
 > [!NOTE]
 > The file containing the [entry point](project-packages/index.md#entry-point) and the code needed to start the game is automatically generated when a platform is added to the project.

@@ -21,7 +21,7 @@ We recommend using the [official Github `.gitignore` for Dotnet projects](https:
 > [!WARNING]
 > This file should be placed at the root of the Stride project, next to the `.sln` file. If your git repository isn't initialized at the root, the `.gitignore` file will still be detected.
 >
-> TODO: ADD PICTURE
+> ![](media/version-control-gitignore-location.webp)
 
 ## Large files
 
@@ -31,7 +31,7 @@ Some version control systems have special mechanisms for handling large files th
 
 Files that are used for creating assets, but aren't used in the game (such `.psd` photoshop files) **shouldn't be included in the project files**. If you want to keep them in version control, considering having them in a separate directory.
 
-TODO: VISUALIZATION
+![](media/version-control-content-creation-files.webp)
 
 ## See also
 
