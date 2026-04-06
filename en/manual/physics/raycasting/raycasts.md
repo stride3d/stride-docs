@@ -82,7 +82,7 @@ public void Shoot()
 Every hit is represented by [`HitInfo`](xref:Stride.BepuPhysics.HitInfo), which contains all information about the hit.
 * [`Point`](xref:Stride.BepuPhysics.HitInfo.Point) - the position in the world where the collidable was hit.
 * [`Normal`](xref:Stride.BepuPhysics.HitInfo.Normal) - the normal vector of the surface that was hit.
-* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the actual distance the ray travelled multiplied by it's direction amplitude (Distance = directionLength * actualDistance).
+* [`Distance`](xref:Stride.BepuPhysics.HitInfo.Distance) - the distance travelled by the shape multiplied by it's velocity (Distance = directionLength * actualDistance).
 * [`Collidable`](xref:Stride.BepuPhysics.HitInfo.Collidable) - the [collidable component](xref:Stride.BepuPhysics.CollidableComponent) that was hit.
 * [`ChildIndex`](xref:Stride.BepuPhysics.HitInfo.ChildIndex) - the index of the shape used in a [collidables](xref:Stride.BepuPhysics.HitInfo.Distance) [collider](xref:Stride.BepuPhysics.CollidableComponent.Collider) if it's a [compound collider](../collider-shapes.md#compound).
 
