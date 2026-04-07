@@ -325,7 +325,7 @@ public class BasicMethods : StartupScript
  
 #### Godot example
 
-##### [C#](#tab/StartupScript-csharp)
+##### [C#](#tab/csharp)
 
 ```csharp
 public class BasicMethods : Node
@@ -345,9 +345,9 @@ public class BasicMethods : Node
 }
 ```
 
-##### [GDScript](#tab/StartupScript-gdscript)
+##### [GDScript](#tab/gdscript)
 
-```csharp
+```gdscript
 extends Node
 
 func _ready() -> void:
@@ -391,7 +391,7 @@ public class BasicMethods : SyncScript
 
 #### Godot example
 
-##### [C#](#tab/SyncScript-csharp)
+##### [C#](#tab/csharp)
 
 ```csharp
 public class BasicMethods : Node
@@ -406,9 +406,9 @@ public class BasicMethods : Node
 
 ```
 
-##### [GDScript](#tab/SyncScript-gdscript)
+##### [GDScript](#tab/gdscript)
 
-```csharp
+```gdscript
 extends Node
 
 func _ready() -> void:
@@ -464,7 +464,7 @@ public class BasicMethods : AsyncScript
 
 Godot doesn't offer a dedicated `AsyncScript` class like Stride. However, you can still write asynchronous code in C# using the standard `async`/`await` syntax.
 
-##### [C#](#tab/AsyncScript-csharp)
+##### [C#](#tab/csharp)
 
 ```csharp
 public class BasicMethods : Node
@@ -483,9 +483,9 @@ public class BasicMethods : Node
 }
 ```
 
-##### [GDScript](#tab/AsyncScript-gdscript)
+##### [GDScript](#tab/gdscript)
 
-```csharp
+```gdscript
 extends Node
 
 func _ready() -> void:
@@ -569,16 +569,16 @@ For more information about adding scripts in Stride, see [Use a script](../scrip
 
 In Godot, the common equivalent is instantiating a `PackedScene`.
 
-##### [C#](#tab/prefabs-csharp)
+##### [C#](#tab/csharp)
 
 ```csharp
 var node = packedScene.Instantiate<Node3D>();
 AddChild(node);
 ```
 
-##### [GDScript](#tab/prefabs-gdscript)
+##### [GDScript](#tab/gdscript)
 
-```csharp
+```gdscript
 var node = packedScene.instantiate()
 add_child(node)
 ```
