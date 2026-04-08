@@ -1,4 +1,4 @@
-# File structure
+# Project file structure
 
 This page explains in detail how a Stride project's files are structured.
 

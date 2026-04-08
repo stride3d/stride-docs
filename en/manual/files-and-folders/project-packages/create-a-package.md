@@ -129,7 +129,7 @@ dotnet sln add MyGame.MyLibrary
 
 By default, all code and assets in a newly created project package won't be accessible from any other package, due to not being referenced.
 
-TODO: ADD VISUALISATION
+![](media/project-package-unreferenced.webp)
 
 To change that, you'll have to add it as a dependency to the package(s) that you want to use it.
 

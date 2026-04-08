@@ -4,11 +4,11 @@ Project packages can depend on other packages in order to use their code and/or 
 
 **For .NET developers:** a Stride project package is a standard C# project.
 
-TODO: VISUALISATION IMAGE
+![](media/project-package-dependencies.webp)
 
 Packages **cannot be co-dependent**: if **packageA** has a dependency on **packageB**, **packageB** cannot have a dependency on **packageA**.
 
-TODO: VISUALISATION IMAGE
+![](media/project-package-codependency.webp)
 
 ## Add a dependency
 
@@ -43,11 +43,11 @@ dotnet add PackageB reference PackageA
 
 It is possible to have project packages that aren't referenced by any of the platform packages nor their dependencies.
 
-TODO: VISUALISATION IMAGE
+![](media/project-package-unreferenced.webp)
 
 These packages will be ignored by the compiler and **won't be included in the build**. This is useful for creating special builds of your project that include additional content, or only include a portion of the game (like a demo).
 
-TODO: VISUALISATION IMAGE
+![](media/project-package-special-builds.webp)
 
 > [!WARNING]
 > If at least one of the project packages that are included in the build are using assets from an unreferenced package, **Game Studio will fail to open and the game will fail to build**.
