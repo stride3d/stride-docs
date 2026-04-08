@@ -80,8 +80,6 @@ Making an application **self contained** removes the requirement for a user to h
 
 Due to how .NET applications generally work, Stride games require the runtime in order to even run. If it's not present, the game will instead show a window asking the user to install it.
 
-TODO: IMAGE
-
 > [!NOTE]
 > .NET applications are fairly common, especially on **Windows**, so it's very likely that a user already has it installed.
 

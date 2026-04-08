@@ -6,7 +6,7 @@ Project packages can depend on other packages in order to use their code and/or 
 
 TODO: VISUALISATION IMAGE
 
-Packages **cannot be co-dependent**: if **package A** has a dependency on **package B**, **package B** cannot have a dependency on **package A**.
+Packages **cannot be co-dependent**: if **packageA** has a dependency on **packageB**, **packageB** cannot have a dependency on **packageA**.
 
 TODO: VISUALISATION IMAGE
 

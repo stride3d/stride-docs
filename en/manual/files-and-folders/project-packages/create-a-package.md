@@ -6,7 +6,7 @@ In this guide, we will dive into how to create custom project packages.
 
 ## Create a platform package
 
-TODO: IMAGE OF PLATFORM PACKAGES
+![](media/platform-packages.webp)
 
 Platform packages are created when adding a platform to the project. Steps on how to do that are located on the [add or remove a platform page](../../platforms/add-or-remove-a-platform.md).
 

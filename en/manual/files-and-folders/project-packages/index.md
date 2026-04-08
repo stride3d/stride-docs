@@ -6,7 +6,7 @@ Stride separates project files into **project packages**. This allows for better
 
 ## Platform packages
 
-IMAGE OF WINDOWS, LINUX AND MACOS PACKAGES
+![](media/platform-packages.webp)
 
 Every project contains one or more **platform packages** that represent each platform the game is being developed for. Those packages also contain the [entry point](#entry-point) of the executable.
 
