@@ -58,4 +58,4 @@ You need to have the following workloads and/or components installed:
 
 ## See also
 
-* [Install Stride](../get-started/install-stride.md)
+* [Install Stride](../install-and-update/install-stride.md)

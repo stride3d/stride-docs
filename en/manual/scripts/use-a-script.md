@@ -78,7 +78,7 @@ myEntity.Add(new myAsyncScript());
 
 ## See also
 
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Create a script](create-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)

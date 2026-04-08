@@ -5,7 +5,7 @@
 
 Stride doesn't run scripts simultaneously; they run one at a time. Where scripts depend on each other, you should make sure they run in the correct order by giving them priorities.
 
-Priorities apply to all kinds of scripts. This means that, for example, [synchronous and asynchronous scripts](types-of-script.md) don't have separate priority lists. They both join the same queue.
+Priorities apply to all kinds of scripts. This means that, for example, [synchronous and asynchronous scripts](types-of-script/index.md) don't have separate priority lists. They both join the same queue.
 
 Scripts with lower priority numbers have higher priorities. For example, a script with priority 1 runs before a script with priority 2, and a script with priority -1 runs before a script with priority 1. By default, scripts have a priority of 0.
 
@@ -26,7 +26,7 @@ Priorities aren't set in the scripts themselves. Instead, they're set in the scr
 
 ## See also
 
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)

@@ -2,7 +2,7 @@
 
 **Particles** are shapes that, used in large numbers, create pseudo-3D effects. You can use particles to create effects such as liquid, fire, explosions, smoke, lightning, motion trails, magic effects, and so on.
 
-![Particles](media/particles.png)
+![Particles](media/Particles.png)
 
 ## In this section
 

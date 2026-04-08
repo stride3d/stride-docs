@@ -176,7 +176,7 @@
 
 ## Scripting terms
 
-- [Asynchronous script](../scripts/types-of-script.md): Runs a task-like Execute method; can await operations and return to the main thread with `await Script.NextFrame()`.
+- [Asynchronous script](../scripts/types-of-script/async-script.md): Runs a task-like Execute method; can await operations and return to the main thread with `await Script.NextFrame()`.
 - [Best practices](../scripts/best-practice.md): Recommended coding patterns for Stride projects.
 - [Camera controller](../../tutorials/csharpintermediate/third-person-camera.md): A script enabling camera movement using input.
 - [Content.Load<T>](../scripts/create-a-model-from-code.md): Load assets at runtime via the content system.
@@ -188,9 +188,9 @@
 - [Public properties and fields](../scripts/public-properties-and-fields.md): Expose script fields to the editor.
 - [SceneSystem.SceneInstance.RootScene](../scripts/create-a-model-from-code.md): Access the active scene instance.
 - [Scheduling and priorities](../scripts/scheduling-and-priorities.md): Control script execution order and timing.
-- [Startup script](../scripts/types-of-script.md): Runs when added/removed at runtime; used to initialize or tear down game elements.
-- [Synchronous script](../scripts/types-of-script.md): Has an Update method that runs every frame on the main thread.
-- [Update method](../scripts/types-of-script.md#synchronous-scripts): A callback that runs every frame to update game logic.
+- [Startup script](../scripts/types-of-script/startup-script.md): Runs when added/removed at runtime; used to initialize or tear down game elements.
+- [Synchronous script](../scripts/types-of-script/sync-script.md): Has an Update method that runs every frame on the main thread.
+- [Update method](../scripts/types-of-script/sync-script.md#update): A callback that runs every frame to update game logic.
 
 ## Sprites terms
 

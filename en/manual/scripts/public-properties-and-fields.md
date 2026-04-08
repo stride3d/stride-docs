@@ -121,7 +121,7 @@ The [`MemberRequiredAttribute`](xref:Stride.Core.Annotations.MemberRequiredAttri
 ## See also
 
 * [Serialization](serialization.md)
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
