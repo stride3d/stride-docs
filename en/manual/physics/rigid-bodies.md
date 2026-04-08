@@ -4,6 +4,8 @@
 <span class="badge text-bg-success">Designer</span>
 
 **Body** move based on physical forces applied to them, such as gravity and collisions. Typical (rigid)bodies are boxes, balls, furniture, and so on — objects that can be pushed, pulled, and knocked around, and also have effects on other bodies they collide with.
+Any body can be **Kinematic**, an object that is not affected by physics forces like gravity or collisions but can interact with dynamic objects through user-defined motion
+See [Kinematic Bodies](kinematic-rigid-bodies.md) for more informations.
 
 ![Static and rigidbody colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
