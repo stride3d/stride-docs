@@ -1,5 +1,7 @@
 # Create a package
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 In this guide, we will dive into how to create custom project packages.
 
 **For .NET developers:** a Stride project package is a standard C# project.

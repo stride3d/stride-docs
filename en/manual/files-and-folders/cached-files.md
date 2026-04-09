@@ -1,5 +1,7 @@
 # Cached files
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 Stride caches assets and code in folders inside of your project:
 * **~/Bin** - contains the built game executables, including the one used when launching the game from Game Studio.
 * **~/PackageName/bin** - contains build files for the specific package.

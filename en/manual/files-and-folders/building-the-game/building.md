@@ -1,5 +1,7 @@
 # Building
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Currently, release versions of Stride games cannot be built using **Game Studio**. Instead, you can use your **IDE** or **the command line**.
 
 > [!TIP]

@@ -1,5 +1,7 @@
 # Project
 
+<span class="badge text-bg-primary">Beginner</span>
+
 This section explains how a Stride project is structured, how it works and how to work with it.
 
 ## In this section

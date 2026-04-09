@@ -1,5 +1,7 @@
 # Using Nuget packages
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 This is a guide on how to use external Nuget packages with Stride.
 
 ## The idea

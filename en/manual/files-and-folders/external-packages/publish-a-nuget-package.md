@@ -1,5 +1,7 @@
 # Publish a Nuget package
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 This is a guide on how to publish and share a Stride package.
 
 ## Setup

@@ -1,5 +1,7 @@
 # Project Packages
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 Stride separates project files into **project packages**. This allows for better organization, faster compilation and splitting the game into separate parts (eg. DLC).
 
 **For .NET developers:** a Stride project package is a standard C# project.

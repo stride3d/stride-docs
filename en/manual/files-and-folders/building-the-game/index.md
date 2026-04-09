@@ -1,5 +1,7 @@
 # Building the game
 
+<span class="badge text-bg-primary">Beginner</span>
+
 In order to turn the uncompiled project into an executable application, it has to be **built** first.
 
 For it's build system, Stride uses [MSBuild](https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild). It's a powerful platform that's used by most C# projects.

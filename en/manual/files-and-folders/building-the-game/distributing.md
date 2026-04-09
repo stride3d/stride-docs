@@ -1,5 +1,7 @@
 # Distributing
 
+<span class="badge text-bg-primary">Beginner</span>
+
 This page contains information about how to distribute a game made with Stride.
 
 ## Requirements

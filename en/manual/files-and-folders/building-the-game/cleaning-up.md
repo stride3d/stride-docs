@@ -1,5 +1,7 @@
 # Cleaning up
 
+<span class="badge text-bg-primary">Beginner</span>
+
 The build process generates additional [files that aren't necessary for the game to work](build-file-structure.md). This page explains how to clean them up in order to not clutter your game's files.
 
 ## Files to delete

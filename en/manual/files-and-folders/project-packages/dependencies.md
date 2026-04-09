@@ -1,5 +1,7 @@
 # Dependencies
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 Project packages can depend on other packages in order to use their code and/or assets.
 
 **For .NET developers:** a Stride project package is a standard C# project.

@@ -1,5 +1,7 @@
 # Version control
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 Version control software allows you to work on your project with multiple people at the same time and keep a history of changes that can be used for backups.
 
 The most commonly used version controlled system is [Git](https://git-scm.com/).

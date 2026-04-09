@@ -1,5 +1,7 @@
 # Package properties
 
+<span class="badge text-bg-primary">Advanced</span>
+
 Every project package contains it's own set of properties, that can be customized.
 
 > [!NOTE]

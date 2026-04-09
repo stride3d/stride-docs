@@ -1,5 +1,7 @@
 # Project file structure
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 This page explains in detail how a Stride project's files are structured.
 
 ## Overview

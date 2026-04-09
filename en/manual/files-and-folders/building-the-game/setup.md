@@ -1,5 +1,7 @@
 # Setup
 
+<span class="badge text-bg-primary">Beginner</span>
+
 There are many configurable options that change how the game gets built. This page goes over a few of the more important ones.
 
 ## How to change properties

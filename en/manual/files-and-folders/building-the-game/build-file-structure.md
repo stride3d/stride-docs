@@ -1,5 +1,7 @@
 # Build file structure
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 This page explains the file structure of a built Stride game.
 
 ## Overview
