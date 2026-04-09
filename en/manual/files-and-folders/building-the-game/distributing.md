@@ -28,8 +28,6 @@ In order to run, Stride games require a user to have the following installed:
 
 ## Steam and Proton
 
-**Current status:** 🟥 doesn't work (as of 08.04.2026)
-
 Proton is a compatibility layer used by [Steam](https://store.steampowered.com), that allows players to run games built for **Windows** on machines running **Linux**.
 
 **Stride games aren't as well supported by Proton as games made for other engines**. It's possible that an update to Stride or the compatibility layer might break your game. To make sure it runs properly on Linux, consider **creating a native build for that platform**.

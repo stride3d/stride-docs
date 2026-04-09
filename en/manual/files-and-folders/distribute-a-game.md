@@ -1,3 +1,3 @@
 ---
-redirect_url: building-the-game/index.html
+redirect_url: building-the-game/distributing.html
 ---
