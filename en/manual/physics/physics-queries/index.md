@@ -35,10 +35,16 @@ You can create a mask for multiple layers, using [bitwise and shift operators](h
 var mask1 = CollisionMask.Layer1 | CollisionMask.Layer2;
 
 // ^ removes a value from a mask
-// mask2 contains everything except layer 3
+// mask2 contains every layer except layer3
 var mask2 = CollisionMask.Everything ^ CollisionMask.Layer3;
 
 // ~ inverts a mask
-// mask3 contains everything not in mask2 (only layer3)
+// mask3 contains every layer not in mask2 (only layer3)
 var mask3 = ~mask2;
 ```
+
+## In this section
+
+* [Raycasts](raycasts.md)
+* [Sweepcasts](sweepcasts.md)
+* [Overlaps](overlaps.md)

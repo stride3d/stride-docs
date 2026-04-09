@@ -168,7 +168,7 @@
   - Non-physical movement: Moving entities by directly changing their position without physics interactions.
   - Physics-based movement: Moving entities using the physics engine to simulate realistic interactions.
 - [Physics engine](../physics/index.md): Simulates physical interactions between entities in the scene.
-- [Physics queries](../physics/raycasting/index.md): Raycasts and overlaps to test collisions.
+- [Physics queries](../physics/physics-queries/index.md): Raycasts and overlaps to test collisions.
 - [Physics update](../physics/physics-update.md): Fixed timestep and update order considerations.
 - [Rigid body](../physics/rigid-bodies.md): Dynamic colliders affected by forces (gravity, collisions).
 - [Static](../physics/static-colliders.md): Non-moving colliders (terrain, walls) that other objects collide with.
