@@ -1,3 +1,3 @@
 ---
-redirect_url: raycasting/index.html
+redirect_url: physics-queries/index.html
 ---
