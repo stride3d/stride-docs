@@ -37,4 +37,5 @@ Currently, release versions of Stride games cannot be built using **Game Studio*
 
 * [Setup](setup.md)
 * [Cleaning up](cleaning-up.md)
+* [Cleaning up](distributing.md)
 * [Build file structure](build-file-structure.md)

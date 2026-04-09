@@ -4,6 +4,7 @@ The build process generates additional [files that aren't necessary for the game
 
 ## Files to delete
 
+* **Empty folders** - sometimes created by the build process.
 * **`.pdb` files** - information used for debugging.
 * **`.xml` files** - the generated code documentation.
 

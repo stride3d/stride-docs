@@ -25,3 +25,4 @@ When you launch the game from **Game Studio** or your **IDE**, it gets built in 
 * [Building](building.md)
 * [Cleaning up](cleaning-up.md)
 * [Build file structure](build-file-structure.md)
+* [Distributing](distributing.md)

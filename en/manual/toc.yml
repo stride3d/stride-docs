@@ -531,6 +531,8 @@ items:
             href: files-and-folders/building-the-game/cleaning-up.md
           - name: Build file structure
             href: files-and-folders/building-the-game/build-file-structure.md
+          - name: Distributing
+            href: files-and-folders/building-the-game/distributing.md
 
   - name: Scripts
     href: scripts/index.md

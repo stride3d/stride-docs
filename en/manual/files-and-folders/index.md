@@ -20,3 +20,4 @@ This section explains how a Stride project is structured, how it works and how t
   * [Building](building-the-game/building.md)
   * [Cleaning up](building-the-game/cleaning-up.md)
   * [Build file structure](building-the-game/build-file-structure.md)
+  * [Distributing](building-the-game/distributing.md)

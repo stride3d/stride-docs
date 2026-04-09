@@ -44,10 +44,7 @@ For more information about how to **correctly** fill out metadata, visit [the Mi
 
 ### Add the module initializer
 
-> [!NOTE]
-> If your package **doesn't include Stride code**, you can skip this step.
-
-To ensure that Stride loads your custom [data contracts](../../scripts/serialization.md#datacontractattribute), you'll have to add a **module initializer** in order to manually register them.
+If Stride is failing to load your custom package, you'll have to manually register it using a **module initializer**.
 
 To do this, create a `Module.cs` file in the root of your package and add the below code to it:
 
