@@ -2,50 +2,96 @@
 
 ## Released Games
 
-<div style="display: flex; flex-direction: column; gap: 15px;">
-    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
-        <img src="media/distant_worlds_2/DW2_header.webp" width="150" alt="Distant Worlds 2 Header" style="margin-right: 15px; border-radius: 5px;">
-        <img src="media/distant_worlds_2/DW2_Screenshot1.webp" width="150" alt="Distant Worlds 2 Screenshot" style="margin-right: 15px; border-radius: 5px;">
-        <div>
-            <h3 style="margin: 0 0 5px 0; color: #fff;">Distant Worlds 2</h3>
-            <p style="margin: 0 0 10px 0; color: #ccc;">Vast, pausable real-time 4X space strategy game</p>
-            <a href="https://store.steampowered.com/app/1531540/Distant_Worlds_2/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
+<div class="row g-4 mb-3">
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/distant_worlds_2/DW2_header.webp" class="card-img-top" alt="Distant Worlds 2 Header">
+            <img src="media/distant_worlds_2/DW2_Screenshot1.webp" class="card-img-bottom-disabled" alt="Distant Worlds 2 Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">Distant Worlds 2</h5>
+                <p class="card-text">
+                    Grand-scale, pausable real-time 4X strategy game where you build and guide a vast space empire through exploration, diplomacy, research, trade, and war.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/1531540/Distant_Worlds_2/">Steam Link</a></p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
-        <img src="media/fps_infinite/FPSI_header.webp" width="150" alt="FPS Infinite Header" style="margin-right: 15px; border-radius: 5px;">
-        <img src="media/fps_infinite/FPSI_Screenshot1.webp" width="150" alt="FPS Infinite Screenshot" style="margin-right: 15px; border-radius: 5px;">
-        <div>
-            <h3 style="margin: 0 0 5px 0; color: #fff;">FPS Infinite</h3>
-            <p style="margin: 0 0 10px 0; color: #ccc;">Procedural FPS with VR support</p>
-            <a href="https://store.steampowered.com/app/1256380/FPS_Infinite/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/fps_infinite/FPSI_header.webp" class="card-img-top" alt="FPS Infinite Header">
+            <img src="media/fps_infinite/FPSI_Screenshot1.webp" class="card-img-bottom-disabled" alt="FPS Infinite Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">FPS Infinite</h5>
+                <p class="card-text">
+                    Procedural FPS with VR support. This is a full free game inspired by Metroid Prime: explore randomly generated worlds for new abilities to unlock new ones.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/1256380/FPS_Infinite/">Steam Link</a></p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
-        <img src="media/snaake_and_friends/S&F_header.webp" width="150" alt="Snaaker Friends Header" style="margin-right: 15px; border-radius: 5px;">
-        <img src="media/snaake_and_friends/S&F_Screenshot1.webp" width="150" alt="Snaaker Friends Screenshot" style="margin-right: 15px; border-radius: 5px;">
-        <div>
-            <h3 style="margin: 0 0 5px 0; color: #fff;">Snaaker Friends</h3>
-            <p style="margin: 0 0 10px 0; color: #ccc;">Multiplayer Snake-inspired game</p>
-            <a href="https://store.steampowered.com/app/1443760/Snaaker__Friends/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/snaake_and_friends/S&F_header.webp" class="card-img-top" alt="Snaaker Friends Header">
+            <img src="media/snaake_and_friends/S&F_Screenshot1.webp" class="card-img-bottom-disabled" alt="Snaaker Friends Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">Snaaker Friends</h5>
+                <p class="card-text">
+                    What do you get if you cross Snake with Snooker, Pool, and Football? Multiplayer Snake-inspired game.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/1443760/Snaaker__Friends/">Steam Link</a></p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
-        <img src="media/children_of_galaxy/CHG_header.webp" width="150" alt="Children of the Galaxy Header" style="margin-right: 15px; border-radius: 5px;">
-        <img src="media/children_of_galaxy/CHG_Screenshot1.webp" width="150" alt="Children of the Galaxy Screenshot" style="margin-right: 15px; border-radius: 5px;">
-        <div>
-            <h3 style="margin: 0 0 5px 0; color: #fff;">Children of the Galaxy</h3>
-            <p style="margin: 0 0 10px 0; color: #ccc;">Turn-based strategy game</p>
-            <a href="https://www.emptykeys.com/games/children-of-the-galaxy/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Website Link</a>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/children_of_galaxy/CHG_header.webp" class="card-img-top" alt="Children of Galaxy Header">
+            <img src="media/children_of_galaxy/CHG_Screenshot1.webp" class="card-img-bottom-disabled" alt="Children of Galaxy Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">Children of Galaxy</h5>
+                <p class="card-text">
+                    Children of the Galaxy is a grand scale 4x turn-based strategy game with a turn-based combat and tactical elements.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://www.emptykeys.com/games/children-of-the-galaxy/">Website Link</a></p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
-        <img src="media/virtual_desktop/VD_header.webp" width="150" alt="Virtual Desktop Header" style="margin-right: 15px; border-radius: 5px;">
-        <img src="media/virtual_desktop/VD_Screenshot1.webp" width="150" alt="Virtual Desktop Screenshot" style="margin-right: 15px; border-radius: 5px;">
-        <div>
-            <h3 style="margin: 0 0 5px 0; color: #fff;">Virtual Desktop</h3>
-            <p style="margin: 0 0 10px 0; color: #ccc;">VR desktop streaming app powered by Stride</p>
-            <a href="https://www.vrdesktop.net/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Website Link</a>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/virtual_desktop/VD_header.webp" class="card-img-top" alt="Virtual Desktop Header">
+            <img src="media/virtual_desktop/VD_Screenshot1.webp" class="card-img-bottom-disabled" alt="Virtual Desktop Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">Virtual Desktop</h5>
+                <p class="card-text">
+                    VR desktop streaming app powered by Stride. Watch movies, browse the web or play games on a giant virtual screen.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://www.vrdesktop.net/">Website Link</a></p>
+        </div>
+    </div>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/one-late-night/one-late-night-header.webp" class="card-img-top" alt="One Late Night: Remake Header">
+            <img src="media/one-late-night/one-late-night-gameplay.webp" class="card-img-bottom-disabled" alt="One Late Night: Remake Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">One Late Night: Remake</h5>
+                <p class="card-text">
+                    This game brings back the cult indie office-horror classic with modern visuals and controls, expanded story, and new scares 💀
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/4394140/One_Late_Night_Remake/">Steam Link</a></p>
+        </div>
+    </div>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/banpo-bridge/banpo-bridge-header.webp" class="card-img-top" alt="Banpo Bridge Header">
+            <img src="media/banpo-bridge/banpo-bridge-gameplay.webp" class="card-img-bottom-disabled" alt="Banpo's Bridge Wondrous Worlds Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">Banpo's Bridge Wondrous Worlds</h5>
+                <p class="card-text">
+                    Banpo's Bridge Wondrous Worlds is a reimagining of the classic Japanese puzzle genre, Hashiwokakero, or hashi
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/3454920/Banpos_Bridge_Wondrous_Worlds/">Steam Link</a></p>
         </div>
     </div>
 </div>
