@@ -2,51 +2,52 @@
 
 ![Platforms](media/game-engine-system-requirements-intro-pic.png)
 
-Stride is cross-platform game engine. This means you can create your game once, then compile and deploy it on all the platforms Stride supports. The engine converts C# and shaders to the different native languages, and abstracts the concepts that differ between platforms, so you don't have to adapt your code for each platform.
+Stride is a cross-platform engine, which means that you can create a single game and publish it on multiple platforms.
 
-## Supported platforms
+## Supported development platforms
 
-* Windows 7, 8, 10
-* Windows Universal Platform (UWP)
-* [Linux](linux/index.md)
-* Android 2.3 and later
-* [iOS 8.0 and later](ios.md)
+This is a list of all platforms that Stride supports for developing games.
 
-> [!TIP]
-> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:Stride.Core.Platform.Type) variable.
+* Windows 10, 11
+* Linux (code-only)
 
-## Supported graphics platforms
+> [!NOTE]
+> **Game Studio** is being rewritten to be cross-platform. Currently however, it's not possible to use it outside of **Windows**.
 
-* Direct3D 9 (limited support), 10, 11, 12
-* OpenGL 3, 4
-* OpenGL ES 2 (limited support), 3
-* Vulkan
+## Supported target platforms
 
->[!Note]
->Stride only supports MSAA (multisample anti-aliasing) for Direct3D 11 and later.
->Depending on your device's OpenGL shader compiler, Stride might not run with OpenGL ES2.
+* Windows 10, 11
+* Linux
+* Android
+* MacOS (currently broken)
+* iOS (untested)
 
->[!Warning]
->Direct3D 9 doesn't support HDR textures. Using HDR textures with DirextX 9 will crash your game.
+## Platform specific code
 
-## Set the graphics platform
+Each platform has it's own [project package](#) that contains the [entry point](#) and other exclusive code for that platform.
 
-You set the graphics platform in the **Game settings** asset under **Rendering settings > Target graphics platform**.
+Alternatively, you can also check the current platform using [Platform.Type](xref:Stride.Core.Platform.Type).
 
-![Select graphics platform](media/change-graphics-platform.png)
+```csharp
+if (Platform.Type == PlatformType.Android)
+{
+    // This code will only be executed on Android
+}
+```
 
-For more information, see [Set the graphics platform](set-the-graphics-platform.md).
+TODO: add links
 
-## Preprocessor variables
-
-Stride defines preprocessor variables if you want to write code that compiles only under a specific platform. For more information, see [Preprocessor variables](../scripts/preprocessor-variables.md).
+> [!WARNING]
+> Stride also provides [preprocessor variables](../scripts/preprocessor-variables.md) for doing this, however, it's generally advised to avoid using them.
 
 ## In this section
 
-* [Linux](linux/index.md)
+* [Windows](windows/index.md)
 * [UWP](uwp/index.md)
     * [Xbox Live](uwp/xbox-live.md)
-* [iOS](ios.md)
+* [Linux](linux/index.md)
+* [MacOS](macos/index.md)
+* [Android](android/index.md)
+* [iOS](ios/index.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
 * [Set the graphics platform](set-the-graphics-platform.md)
-* [Game settings](../game-studio/game-settings.md)
