@@ -1,6 +1,6 @@
 # Setup and requirements
 
-To develop for Linux using Stride, you need a Linux PC with a graphics card that supports at least OpenGL 4.2 or Vulkan 1.0. The preferred Linux distribution for Stride is Debian 12 or later, as this was the setup we used to develop the Linux version of Stride.
+To develop for Linux using Stride, you need a Linux PC with a graphics card that supports Vulkan.
 
 The instructions below assume you have Debian 12 installed.
 
@@ -19,19 +19,19 @@ You need the following packages:
 
 To render fonts, we use the [FreeType](https://www.freetype.org/) library. The minimum required version is 2.6 and can be installed via:
 
-### [Debian / Ubuntu](#tab/freetype-ubuntu)
+### [Debian / Ubuntu](#tab/ubuntu)
 
 ```bash
 sudo apt install libfreetype6-dev
 ```
 
-### [Fedora](#tab/freetype-fedora)
+### [Fedora](#tab/fedora)
 
 ```bash
 sudo dnf install freetype-devel
 ```
 
-### [Arch](#tab/freetype-arch)
+### [Arch](#tab/arch)
 
 ```bash
 sudo pacman -S freetype2
@@ -43,19 +43,19 @@ sudo pacman -S freetype2
 
 To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. It can be installed via:
 
-### [Debian / Ubuntu](#tab/openal-ubuntu)
+### [Debian / Ubuntu](#tab/ubuntu)
 
 ```bash
 sudo apt install libopenal-dev
 ```
 
-### [Fedora](#tab/openal-fedora)
+### [Fedora](#tab/fedora)
 
 ```bash
 sudo dnf install openal-soft-devel
 ```
 
-### [Arch](#tab/openal-arch)
+### [Arch](#tab/arch)
 
 ```bash
 sudo pacman -S openal
@@ -67,19 +67,19 @@ sudo pacman -S openal
 
 To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which provides the ability to create windows, handle mouse, keyboard and joystick events. The minimum required version is 2.0.4 and can be installed via:
 
-### [Debian / Ubuntu](#tab/sdl2-ubuntu)
+### [Debian / Ubuntu](#tab/ubuntu)
 
 ```bash
 sudo apt install libsdl2-dev
 ```
 
-### [Fedora](#tab/sdl2-fedora)
+### [Fedora](#tab/fedora)
 
 ```bash
 sudo dnf install SDL2-devel
 ```
 
-### [Arch](#tab/sdl2-arch)
+### [Arch](#tab/arch)
 
 ```bash
 sudo pacman -S sdl2
@@ -92,22 +92,37 @@ sudo pacman -S sdl2
 [FreeImage](https://freeimage.sourceforge.io/) is battle-tested library for loading and saving popular image file formats like BMP, PNG, JPEG etc. The minimum required version is 3.18 and can be installed via:
 
 
-### [Debian / Ubuntu](#tab/freeimage-ubuntu)
+### [Debian / Ubuntu](#tab/ubuntu)
 
 ```bash
 sudo apt install libfreeimage-dev
 ```
 
-### [Fedora](#tab/freeimage-fedora)
+### [Fedora](#tab/fedora)
 
 ```bash
 sudo dnf install freeimage-devel
 ```
 
-### [Arch](#tab/freeimage-arch)
+### [Arch](#tab/arch)
+
+Freeimage isn't available in Arch's package manager, but it can be installed by manually compiling the source code.
+
+You can get the source code from [the freeimage website](https://freeimage.sourceforge.io/download.html) (download the source distribution).
+
+After extracting, compile and install the package using `makepkg`.
 
 ```bash
-sudo pacman -S freeimage
+makepkg -i
+```
+
+Alternatively, you can use a tool, such as `yay` to obtain the package from the AUR.
+
+> [!WARNING]
+> Packages listed on the AUR **are maintained by other users**, meaning that it's **possible for them to contain malicious code**. Proceed at your own risk.
+
+```bash
+yay -S freeimage
 ```
 
 ---
