@@ -2,11 +2,53 @@
 
 ## Released Games
 
-- [Distant Worlds 2](https://store.steampowered.com/app/1531540/Distant_Worlds_2/) - Vast, pausable real-time 4X space strategy game
-- [FPS Infinite](https://store.steampowered.com/app/1256380/FPS_Infinite/) - Procedural FPS with VR support
-- [Snaaker Friends](https://store.steampowered.com/app/1443760/Snaaker__Friends/) - Multiplayer Snake-inspired game
-- [Children of the Galaxy](https://www.emptykeys.com/games/children-of-the-galaxy/) - Turn-based strategy game
-- [Virtual Desktop](https://www.vrdesktop.net/) - VR desktop streaming app powered by Stride
+<div style="display: flex; flex-direction: column; gap: 15px;">
+    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
+        <img src="media/distant_worlds_2/DW2_header.webp" width="150" alt="Distant Worlds 2 Header" style="margin-right: 15px; border-radius: 5px;">
+        <img src="media/distant_worlds_2/DW2_Screenshot1.webp" width="150" alt="Distant Worlds 2 Screenshot" style="margin-right: 15px; border-radius: 5px;">
+        <div>
+            <h3 style="margin: 0 0 5px 0; color: #fff;">Distant Worlds 2</h3>
+            <p style="margin: 0 0 10px 0; color: #ccc;">Vast, pausable real-time 4X space strategy game</p>
+            <a href="https://store.steampowered.com/app/1531540/Distant_Worlds_2/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
+        <img src="media/fps_infinite/FPSI_header.webp" width="150" alt="FPS Infinite Header" style="margin-right: 15px; border-radius: 5px;">
+        <img src="media/fps_infinite/FPSI_Screenshot1.webp" width="150" alt="FPS Infinite Screenshot" style="margin-right: 15px; border-radius: 5px;">
+        <div>
+            <h3 style="margin: 0 0 5px 0; color: #fff;">FPS Infinite</h3>
+            <p style="margin: 0 0 10px 0; color: #ccc;">Procedural FPS with VR support</p>
+            <a href="https://store.steampowered.com/app/1256380/FPS_Infinite/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
+        <img src="media/snaake_and_friends/S&F_header.webp" width="150" alt="Snaaker Friends Header" style="margin-right: 15px; border-radius: 5px;">
+        <img src="media/snaake_and_friends/S&F_Screenshot1.webp" width="150" alt="Snaaker Friends Screenshot" style="margin-right: 15px; border-radius: 5px;">
+        <div>
+            <h3 style="margin: 0 0 5px 0; color: #fff;">Snaaker Friends</h3>
+            <p style="margin: 0 0 10px 0; color: #ccc;">Multiplayer Snake-inspired game</p>
+            <a href="https://store.steampowered.com/app/1443760/Snaaker__Friends/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
+        <img src="media/children_of_galaxy/CHG_header.webp" width="150" alt="Children of the Galaxy Header" style="margin-right: 15px; border-radius: 5px;">
+        <img src="media/children_of_galaxy/CHG_Screenshot1.webp" width="150" alt="Children of the Galaxy Screenshot" style="margin-right: 15px; border-radius: 5px;">
+        <div>
+            <h3 style="margin: 0 0 5px 0; color: #fff;">Children of the Galaxy</h3>
+            <p style="margin: 0 0 10px 0; color: #ccc;">Turn-based strategy game</p>
+            <a href="https://www.emptykeys.com/games/children-of-the-galaxy/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Website Link</a>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
+        <img src="media/virtual_desktop/VD_header.webp" width="150" alt="Virtual Desktop Header" style="margin-right: 15px; border-radius: 5px;">
+        <img src="media/virtual_desktop/VD_Screenshot1.webp" width="150" alt="Virtual Desktop Screenshot" style="margin-right: 15px; border-radius: 5px;">
+        <div>
+            <h3 style="margin: 0 0 5px 0; color: #fff;">Virtual Desktop</h3>
+            <p style="margin: 0 0 10px 0; color: #ccc;">VR desktop streaming app powered by Stride</p>
+            <a href="https://www.vrdesktop.net/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Website Link</a>
+        </div>
+    </div>
+</div>
 
 ## Open-Source Games and Prototypes
 
