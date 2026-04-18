@@ -9,7 +9,7 @@
         <div>
             <h3 style="margin: 0 0 5px 0; color: #fff;">Distant Worlds 2</h3>
             <p style="margin: 0 0 10px 0; color: #ccc;">Vast, pausable real-time 4X space strategy game</p>
-            <a href="https://store.steampowered.com/app/1531540/Distant_Worlds_2/" style="color: #4da6ff; text-decoration: none; font-weight: bold;">Steam Link</a>
+            <a href="https://store.steampowered.com/app/1531540/Distant_Worlds_2/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
         </div>
     </div>
     <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
@@ -18,7 +18,7 @@
         <div>
             <h3 style="margin: 0 0 5px 0; color: #fff;">FPS Infinite</h3>
             <p style="margin: 0 0 10px 0; color: #ccc;">Procedural FPS with VR support</p>
-            <a href="https://store.steampowered.com/app/1256380/FPS_Infinite/" style="color: #4da6ff; text-decoration: none; font-weight: bold;">Steam Link</a>
+            <a href="https://store.steampowered.com/app/1256380/FPS_Infinite/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
         </div>
     </div>
     <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
@@ -27,7 +27,7 @@
         <div>
             <h3 style="margin: 0 0 5px 0; color: #fff;">Snaaker Friends</h3>
             <p style="margin: 0 0 10px 0; color: #ccc;">Multiplayer Snake-inspired game</p>
-            <a href="https://store.steampowered.com/app/1443760/Snaaker__Friends/" style="color: #4da6ff; text-decoration: none; font-weight: bold;">Steam Link</a>
+            <a href="https://store.steampowered.com/app/1443760/Snaaker__Friends/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Steam Link</a>
         </div>
     </div>
     <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
@@ -36,7 +36,7 @@
         <div>
             <h3 style="margin: 0 0 5px 0; color: #fff;">Children of the Galaxy</h3>
             <p style="margin: 0 0 10px 0; color: #ccc;">Turn-based strategy game</p>
-            <a href="https://www.emptykeys.com/games/children-of-the-galaxy/" style="color: #4da6ff; text-decoration: none; font-weight: bold;">Website Link</a>
+            <a href="https://www.emptykeys.com/games/children-of-the-galaxy/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Website Link</a>
         </div>
     </div>
     <div style="display: flex; align-items: center; border: 1px solid #555; padding: 15px; border-radius: 8px; background-color: #2a2a2a; color: #fff;">
@@ -45,7 +45,7 @@
         <div>
             <h3 style="margin: 0 0 5px 0; color: #fff;">Virtual Desktop</h3>
             <p style="margin: 0 0 10px 0; color: #ccc;">VR desktop streaming app powered by Stride</p>
-            <a href="https://www.vrdesktop.net/" style="color: #4da6ff; text-decoration: none; font-weight: bold;">Website Link</a>
+            <a href="https://www.vrdesktop.net/" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Website Link</a>
         </div>
     </div>
 </div>
