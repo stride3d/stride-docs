@@ -43,7 +43,7 @@ To perform a penetrating raycast, use [`Simulation.RayCastPenetrating`](xref:Str
 public void Shoot()
 {
     var hits = new List<HitInfo>();
-    simulation.RayCastPenetrating(origin, direction, distance, maxDistance, hits);
+    simulation.RayCastPenetrating(origin, direction, maxDistance, hits);
     
     // Iterate over all results
     foreach (var hitInfo in hits)
@@ -67,7 +67,7 @@ public void Shoot()
     Span<HitInfoStack> buffer = stackalloc HitInfoStack[16];
     
     // Iterate over all results
-    foreach (var hitInfo in simulation.RayCastPenetrating(origin, direction, distance, maxDistance, buffer))
+    foreach (var hitInfo in simulation.RayCastPenetrating(origin, direction, maxDistance, buffer))
     {
         // Handle a successful hit
     }
@@ -170,7 +170,7 @@ public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, Camer
     Matrix invViewProj = Matrix.Invert(camera.ViewProjectionMatrix);
 
     // Reconstruct the projection-space position in the (-1, +1) range.
-    //    Don't forget that Y is down in screen coordinates, but up in projection space
+    // Don't forget that Y is down in screen coordinates, but up in projection space
     Vector3 sPos;
     sPos.X = screenPos.X * 2f - 1f;
     sPos.Y = 1f - screenPos.Y * 2f;
