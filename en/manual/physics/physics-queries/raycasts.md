@@ -26,7 +26,7 @@ public void Shoot()
     // The maximum distance of the ray
     var maxDistance = 16f;
     
-    if (simulation.RayCast(origin, direction, distance, maxDistance, out HitInfo result))
+    if (simulation.RayCast(origin, direction, maxDistance, out HitInfo result))
     {
         // Handle a successful hit
     }
@@ -67,7 +67,7 @@ public void Shoot()
     Span<HitInfoStack> buffer = stackalloc HitInfoStack[16];
     
     // Iterate over all results
-    foreach (var hitInfo in simulation.RayCastPenetrating(origin, direction, maxDistance, buffer))
+    foreach (var hitInfo in simulation.RayCastPenetrating(origin, maxDistance, buffer))
     {
         // Handle a successful hit
     }
