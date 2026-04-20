@@ -11,7 +11,7 @@ Stride is designed for game developers who want a powerful, flexible, and open-s
 
 For video tutorials, have a look at the [Tutorials](../../tutorials/index.md).
 
-![Game Studio](media/get-started.webp)
+![Game Studio](media/game-studio.webp)
 
 ## In this section
 
