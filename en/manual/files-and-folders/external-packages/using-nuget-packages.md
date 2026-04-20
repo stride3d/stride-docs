@@ -8,9 +8,7 @@ This is a guide on how to use external Nuget packages with Stride.
 
 An external Nuget package can be added **as a dependency of another project package** (for .NET developers: as a dependency of another C# project). 
 
-In most cases, you would add this to the **main non-platform project package** (eg. **MyGame**, not **MyGame.Windows**), which contains the majority of the code and assets.
-
-TODO: VISUALIZATION HERE
+In most cases, you would add this to the **main non-platform project package** (eg. **MyGame**, not **MyGame.Windows**), which contains the majority of code and assets.
 
 ## Finding Nuget packages
 
@@ -71,7 +69,7 @@ In **Game Studio**, in the **Solution explorer** panel, expand **External packag
 ![](media/game-studio-external-package-assets.webp)
 
 > [!NOTE]
-> You may need to reload the project in order to make the package show up.
+> You may need to reload the project for the package to show up.
 
 ## See also
 

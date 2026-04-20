@@ -3,12 +3,12 @@
 <span class="badge text-bg-primary">Intermediate</span>
 
 Stride caches assets and code in folders inside of your project:
-* **~/Bin** - contains the built game executables, including the one used when launching the game from Game Studio.
-* **~/PackageName/bin** - contains build files for the specific package.
-* **~/PackageName/obj** - contains cached data for that package.
+* **~/Bin** - contains the built game executables, including the one used when launching your game from Game Studio.
+* **~/PackageName/bin** - contains build files of a project package.
+* **~/PackageName/obj** - contains cached data of a project package.
 
 Additionally, Stride also uses these files:
-* **\*.sdpkg.user** - file containing user-specific information used by the editor (like camera position and rotation).
+* **.sdpkg.user** - files containing user-specific information used by the editor (like camera position and rotation).
 * **Settings cache** - contains Game Studio's settings. It's located in **%AppData%/Stride**.
 
 You might want to clean the cache if:
@@ -24,8 +24,8 @@ Look for a way to clean the solution in your IDE.
 
 ### [Visual Studio](#tab/clean-solution-visual-studio)
 
-1. To clean the code cache, select **Build > Clean Solution**.
-2. If you have the [Stride Extension for Visual Studio](../get-started/visual-studio-extension.md), to clean the asset cache, select **Extensions > Stride > Clean intermediate assets for Solution**.
+1. To clean the cache, select **Build > Clean Solution**.
+2. If you have the [Stride Extension for Visual Studio](../get-started/visual-studio-extension.md), to only clean the asset cache, select **Extensions > Stride > Clean intermediate assets for Solution**.
 
 ### [Command line](#tab/clean-solution-command-line)
 

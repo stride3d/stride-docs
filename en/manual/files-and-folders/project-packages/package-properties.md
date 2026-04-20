@@ -42,3 +42,7 @@ Bundles: []
 TemplateFolders: []
 RootAssets: []
 ```
+
+## See also
+
+* [Create a package](create-a-package.md)

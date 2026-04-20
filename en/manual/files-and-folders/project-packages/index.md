@@ -1,4 +1,4 @@
-# Project Packages
+# Project packages
 
 <span class="badge text-bg-primary">Intermediate</span>
 

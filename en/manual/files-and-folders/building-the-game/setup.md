@@ -10,7 +10,7 @@ There are many configurable options that change how the game gets built. This pa
 
 **Visual Studio** has it's own [publishing system](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/visual-studio-publish-profiles), which provides a graphical way of managing build settings.
 
-In the **Solution Explorer** panel right click on the platform package which you want to setup and select **Publish**.
+In the **Solution Explorer** panel, right click on the platform package which you want to setup and select **Publish**.
 
 ![](media/visual-studio-publish-context-menu.webp)
 
@@ -80,7 +80,7 @@ In the `.csproj` file, change the value of `<ApplicationIcon>Resources\Icon.ico<
 
 Making an application **self contained** removes the requirement for a user to have the **.NET runtime** installed on their machine.
 
-Due to how .NET applications generally work, Stride games require the runtime in order to even run. If it's not present, the game will instead show a window asking the user to install it.
+Due to how .NET applications generally work, Stride games require the runtime in order to run. If it's not present, the game will instead show a window asking the user to install it.
 
 > [!NOTE]
 > .NET applications are fairly common, especially on **Windows**, so it's very likely that a user already has it installed.

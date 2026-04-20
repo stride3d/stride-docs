@@ -93,7 +93,7 @@ To make Nuget include stride files in the package, you'll have to modify the `.c
 ```
 
 **Explanation** <br/>
-The `<None>` item tells C# to not treat the specified files in `Include` as code, which is what it already did, except that now, we can set additional parameters. This includes setting `Pack` to `true` in order to include these files in the package as standard files and specifying the `PackagePath` to make sure they are placed in the correct directory in the package.
+The `<None>` item tells C# not to treat the specified files in `Include` as code. This is what it already did, but by explicitly stating this, we can set additional parameters. This includes setting `Pack` to `true` in order to include these items in the package as normal files and specifying the `PackagePath` to make sure they are placed in the correct directory inside of the package.
 
 > [!NOTE]
 > If your package includes more directories outside of `Assets`, `Resources` and `Effects`, make sure to create separate entries for them.
@@ -116,7 +116,7 @@ Once the process is done, the `.nupkg` file will be created in `/packageLocation
 
 ### [Command line](#tab/packing-command-line)
 
-In order to pack a package using the command line, use the `dotnet` command.
+In order to pack using the command line, use the `dotnet` command.
 
 ```bash
 dotnet pack path/to/the/package

@@ -2,7 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-Currently, release versions of Stride games cannot be built using **Game Studio**. Instead, you can use your **IDE** or **the command line**.
+Currently, release versions of Stride games cannot be built using **Game Studio**. Instead, you can use your **IDE** or the **command line**.
 
 > [!TIP]
 > It's recommended to first delete everything in the [publish directory](setup.md#the-output-directory) to cleanup any unused folders.
@@ -19,7 +19,7 @@ Currently, release versions of Stride games cannot be built using **Game Studio*
     
     ![](media/visual-studio-publish-button.webp)
 
-4. Once the application finishes building, click the **Navigate** button to open the folder containing your build.
+4. Once the application finishes building, click **Navigate** to open the folder containing your build.
     
     ![](media/visual-studio-publish-navigate.webp)
 

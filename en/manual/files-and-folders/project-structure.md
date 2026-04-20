@@ -11,7 +11,7 @@ A Stride project is a **standard C# solution**, consisting of a single [solution
 ![](media/file-structure.webp)
 
 * **Bin** - folder containing build files. For more information visit [this section](#project-bin-folder).
-* **NameOfGame**, **NameOfGame.PlatformName** - package folders
+* **NameOfGame**, **NameOfGame.PlatformName** - package folders.
 * **`.sln` file** - the solution file used by C# and Game Studio for opening the project.
 
 ## Project packages
@@ -33,12 +33,9 @@ A project package may contain:
 
 ![](media/project-package-structure.webp)
 
-> [!NOTE]
-> The file containing the [entry point](project-packages/index.md#entry-point) and the code needed to start the game is automatically generated when a platform is added to the project.
-
 ## Package bin and obj folders
 
-Every project package has a `bin` and an `obj` folders which are automatically created when opening or running the project. They store cached data used by Stride.
+Every project package has `bin` and `obj` folders which are automatically created when opening or running the project. They store cached data used by Stride.
 
 > [!NOTE]
 > These folders **can be safely deleted without affecting the rest of the project**. For more information, visit the [cached files page](cached-files.md).

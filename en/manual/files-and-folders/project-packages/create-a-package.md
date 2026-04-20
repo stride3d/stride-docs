@@ -10,7 +10,7 @@ In this guide, we will dive into how to create custom project packages.
 
 ![](media/platform-packages.webp)
 
-Platform packages are created when adding a platform to the project. Steps on how to do that are located on the [add or remove a platform page](../../platforms/add-or-remove-a-platform.md).
+Platform packages are created when adding a platform to the project. Steps on how to do that are located in the [add or remove a platform page](../../platforms/add-or-remove-a-platform.md).
 
 ## Create a standard package
 
@@ -40,10 +40,10 @@ Give the package a name and then continue through the steps until the package is
 > Make sure to save!
 
 > [!WARNING]
-> The created project package **will be missing references to Stride libraries**! You will have to add them yourself.
+> The created project package **will be missing references to Stride libraries**. You will have to add them yourself!
 
 > [!WARNING]
-> Creating a project package through Visual Studio **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders! Make sure to create them yourself.
+> Creating a project package through Visual Studio **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders. Make sure to create them yourself!
 > 
 > ![](media/visual-studio-new-package-created.webp)
 > 
@@ -91,10 +91,10 @@ dotnet sln add MyGame.MyLibrary
 ```
 
 > [!WARNING]
-> The created project package **will be missing references to Stride libraries**! You will have to add them yourself.
+> The created project package **will be missing references to Stride libraries**. You will have to add them yourself!
 
 > [!WARNING]
-> Creating a project package through the command line **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders! Make sure to create them yourself.
+> Creating a project package through the command line **won't create the `.sdpkg` file** nor the **Assets** and **Resources** folders. Make sure to create them yourself!
 > 
 > Here is a template for the `.sdpkg` file. Change **MyGame.MyLibrary** to the name of your package. For more information on how to configure this file, visit the [package properties page](package-properties.md).
 > 

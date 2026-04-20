@@ -4,7 +4,7 @@
 
 Version control software allows you to work on your project with multiple people at the same time and keep a history of changes that can be used for backups.
 
-The most commonly used version controlled system is [Git](https://git-scm.com/).
+The most commonly used version control system is [Git](https://git-scm.com/).
 
 > [!NOTE]
 > Explaining how to use version control software is outside of the scope of this page.
@@ -12,7 +12,7 @@ The most commonly used version controlled system is [Git](https://git-scm.com/).
 ## Files to ignore
 
 There are certain files that version control should ignore, as they are used for caching or storing local data:
-1. Project package **bin** and project **Bin** folders - these folders contain the build results of your game. This includes the builds that are created when launching the game from Game Studio.
+1. Project package **bin** and project **Bin** folders - these folders contain generated build files, including those used by Game Studio when playing.
 2. Project package **obj** folders - these folders contain cached data used by C# and Stride.
 3. **\*.user** files - these files store save data for the local user (such as the camera position in Game Studio).
 
@@ -31,7 +31,7 @@ Some version control systems have special mechanisms for handling large files th
 
 ## Content creation files
 
-Files that are used for creating assets, but aren't used in the game (such `.psd` photoshop files) **shouldn't be included in the project files**. If you want to keep them in version control, considering having them in a separate directory.
+Files that are used for creating assets, but aren't used in the game (such `.psd` photoshop files) **shouldn't be stored in the project files**. If you want to keep them in version control, considering including them in a separate directory.
 
 ![](media/version-control-content-creation-files.webp)
 

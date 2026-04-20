@@ -12,7 +12,7 @@ The build process generates additional [files that aren't necessary for the game
 
 ## Automatic cleanup
 
-You can setup the build process to automatically delete the unnecessary files after publishing. Just add the below to the `.csproj` file of the platform package:
+You can setup the build process to automatically delete the unnecessary files after publishing. Just add the below to the `.csproj` file of the platform package.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -29,7 +29,7 @@ You can setup the build process to automatically delete the unnecessary files af
 ```
 
 **Explanation** <br/>
-After you publish the game, the **Cleanup Publish** target will be executed. It first defines a list of `.xml` and `.pdb` files located in the publish directory and stores them in a new property called **FilesToCleanup**. Then the [Delete](https://learn.microsoft.com/en-us/visualstudio/msbuild/delete-task) task goes over that list and deletes them.
+After you publish the game, the **Cleanup Publish** target will be executed. It first defines a list of `.xml` and `.pdb` files located in the publish directory and stores them in a new property called **FilesToCleanup**. Then the [Delete](https://learn.microsoft.com/en-us/visualstudio/msbuild/delete-task) task goes over that list and deletes all of it's items.
 
 ## See also
 

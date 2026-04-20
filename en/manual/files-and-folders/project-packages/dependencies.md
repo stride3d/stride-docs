@@ -16,7 +16,7 @@ Packages **cannot be co-dependent**: if **packageA** has a dependency on **packa
 
 ### [Game Studio](#tab/game-studio)
 
-You can add **PackageA** as a dependency of **PackageB** (**PackageA** will be used by **PackageB**) by right clicking on **PackageB** in the **Solution explorer** panel and selecting **Add dependency...**
+You can add **PackageA** as a dependency of **PackageB** (**PackageA** will be used by **PackageB**) by right clicking **PackageB** in the **Solution explorer** panel and selecting **Add dependency...**
 
 ![](media/game-studio-add-dependency.webp)
 
@@ -33,7 +33,7 @@ You can add **PackageA** as a dependency of **PackageB** (**PackageA** will be u
 
 If your IDE of choice isn't listed here, you can do this from the terminal instead via the `dotnet` command.
 
-The below command will add **PackageA** as a dependency of **PackageB** (**PackageA** will be used by **PackageB**).
+The command below will add **PackageA** as a dependency of **PackageB** (**PackageA** will be used by **PackageB**).
 
 ```bash
 dotnet add PackageB reference PackageA
@@ -47,7 +47,7 @@ It is possible to have project packages that aren't referenced by any of the pla
 
 ![](media/project-package-unreferenced.webp)
 
-These packages will be ignored by the compiler and **won't be included in the build**. This is useful for creating special builds of your project that include additional content, or only include a portion of the game (like a demo).
+These packages will be ignored by the compiler and **won't be included in the build**. This is useful for creating special versions of your project that include additional content, or only include a portion of the game (like a demo).
 
 ![](media/project-package-special-builds.webp)
 

@@ -7,7 +7,7 @@ This section explains how a Stride project is structured, how it works and how t
 ## In this section
 
 * [Project file structure](project-structure.md)
-* [Project Packages](project-packages/index.md)
+* [Project packages](project-packages/index.md)
   * [Create a package](project-packages/create-a-package.md)
   * [Package properties](project-packages/package-properties.md)
   * [Dependencies](project-packages/dependencies.md)
@@ -15,8 +15,8 @@ This section explains how a Stride project is structured, how it works and how t
   * [What is Nuget](external-packages/what-is-nuget.md)
   * [Using Nuget packages](external-packages/using-nuget-packages.md)
   * [Publish a Nuget package](external-packages/publish-a-nuget-package.md)
-* [Cached files](cached-files.md)
 * [Version control](version-control.md)
+* [Cached files](cached-files.md)
 * [Building the game](building-the-game/index.md)
   * [Setup](building-the-game/setup.md)
   * [Building](building-the-game/building.md)
