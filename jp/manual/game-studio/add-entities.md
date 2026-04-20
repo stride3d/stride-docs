@@ -71,7 +71,7 @@
    エンティティとそのすべてのプロパティが複製されます。
 
 	<video controls autoplay loop height="360" width="480">
-	   <source src="../get-started/media/populate-scene-duplicate-entity.mp4" type="video/mp4">
+	   <source src="../game-studio/media/populate-scene-duplicate-entity.mp4" type="video/mp4">
 	</video>
 
 または、エンティティを右クリックして、［Duplicate selected entities］を選択します。

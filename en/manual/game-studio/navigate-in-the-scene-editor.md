@@ -107,7 +107,7 @@ Corner   | Faces the three adjacent faces at a 45° angle
 
 To display the Scene Editor camera options, click the **camera icon** in the top-right of the Scene Editor.
 
-![Switch to orthographic](../get-started/media/switch-to-orthographic.png)
+![Switch to orthographic](media/switch-to-orthographic.png)
 
 ### Perspective and orthographic views
 
@@ -139,7 +139,7 @@ The near and far planes determine where the camera's view begins and ends.
 
 Game Studio renders the area between the near and far planes.
 
-![Camera position](../get-started/media/camera-position.png)
+![Camera position](media/camera-position.png)
 
 #### Camera speed
 
