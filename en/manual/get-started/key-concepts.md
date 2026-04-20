@@ -55,6 +55,10 @@ Assets do not contain resource data. Instead, they reference a resource. For exa
 
 ## Project structure
 
-A Stride project is a standard [C# solution](https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022). Assets and resources can be separated into multiple C# projects, for example: **MyGame** contains game assets and **MyGame.Windows** contains assets specific to the windows version of the game (like the window icon).
+A Stride project is separated into multiple project packages, which contain their own code, assets and resources.
+
+For example, a new project is separated into:
+* **MyGame** - contains content for the game.
+* **MyGame.NameOfPlatform** (such as MyGame.Windows) - content specific to the version of the game for a specific platform (like the window icon).
 
 For more information, read [project structure](../files-and-folders/project-structure.md).
