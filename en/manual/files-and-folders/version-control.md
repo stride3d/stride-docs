@@ -18,7 +18,23 @@ There are certain files that version control should ignore, as they are used for
 
 ### For Git
 
-We recommend using the [official Github `.gitignore` for Dotnet projects](https://github.com/github/gitignore/blob/main/Dotnet.gitignore).
+Stride generates a `.gitignore` file automatically when creating a new project.
+
+```
+*.user
+*.lock
+*.lock.json
+.vs/
+_ReSharper*
+*.suo
+*.VC.db
+*.vshost.exe
+*.manifest
+*.sdf
+[Bb]in/
+obj/
+Cache/
+```
 
 > [!WARNING]
 > This file should be placed at the root of the Stride project, next to the `.sln` file. If your git repository isn't initialized at the root, the `.gitignore` file will still be detected.
