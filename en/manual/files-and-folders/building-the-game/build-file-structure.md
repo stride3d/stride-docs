@@ -22,7 +22,7 @@ When building the Release version of the game, the actual published files **aren
 
 The build folder contains the following files:
 
-* **MyGame.PlatformName** - the executable. It's file extension depends on the platform (eg. `.exe` on Windows).
+* **MyGame.PlatformName** - the executable. It's file extension depends on the platform (e.g. `.exe` on Windows).
 * **data** - folder containing asset bundles.
 * **`.dll` and `.so` files** - libraries used by the game. They can be embedded in the executable itself, in order to declutter the folder.
 * **`.json` files** - contain information needed to launch the game. Depending on the configuration, they might not be needed and won't be generated.

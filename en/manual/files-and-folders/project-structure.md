@@ -22,7 +22,7 @@ At the root, a Stride project is comprised of multiple [project packages](projec
 
 By default, there are at least 2 project packages in a Stride project:
 * **NameOfGame** - contains most code, assets and resources for the game.
-* **NameOfGame.PlatformName** (eg. NameOfGame.Windows) - dedicated package for a given platform, contains the [**entry point**](project-packages/index.md#entry-point) and other files specific to the platform (such as the window icon).
+* **NameOfGame.PlatformName** (e.g. NameOfGame.Windows) - dedicated package for a given platform, contains the [**entry point**](project-packages/index.md#entry-point) and other files specific to the platform (such as the window icon).
 
 A project package may contain:
 * **Assets** - the assets folder. Name of this folder or additional folders can be configured in the `.sdpkg` file.

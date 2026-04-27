@@ -1,4 +1,4 @@
-# Publish a Nuget package
+# Publish a NuGet package
 
 <span class="badge text-bg-primary">Intermediate</span>
 
@@ -81,7 +81,7 @@ The `.sdpkg` file's name **has to match the package id and the `.csproj` file's 
 
 Without proper setup, the packing process will ignore any non-code content.
 
-To make Nuget include stride files in the package, you'll have to modify the `.csproj` file of the package and include these lines:
+To make NuGet include stride files in the package, you'll have to modify the `.csproj` file of the package and include these lines:
 
 ```xml
 <ItemGroup>
@@ -142,4 +142,4 @@ You can publish your package on [nuget.org](https://nuget.org) directly from the
 
 ## See also
 
-* [Using Nuget packages](using-nuget-packages.md)
+* [Using NuGet packages](using-nuget-packages.md)

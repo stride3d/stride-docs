@@ -1,32 +1,32 @@
-# Using Nuget packages
+# Using NuGet packages
 
 <span class="badge text-bg-primary">Intermediate</span>
 
-This is a guide on how to use external Nuget packages with Stride.
+This is a guide on how to use external NuGet packages with Stride.
 
 ## The idea
 
-An external Nuget package can be added **as a dependency of another project package** (for .NET developers: as a dependency of another C# project). 
+An external NuGet package can be added **as a dependency of another project package** (for .NET developers: as a dependency of another C# project). 
 
-In most cases, you would add this to the **main non-platform project package** (eg. **MyGame**, not **MyGame.Windows**), which contains the majority of code and assets.
+In most cases, you would add this to the **main non-platform project package** (e.g. **MyGame**, not **MyGame.Windows**), which contains the majority of code and assets.
 
-## Finding Nuget packages
+## Finding NuGet packages
 
-Nuget packages are hosted on [nuget.org](https://nuget.org). **You can use this website to search for them**.
+NuGet packages are hosted on [nuget.org](https://nuget.org). **You can use this website to search for them**.
 
 > [!NOTE]
-> It's also possible to host your own Nuget feed with packages meant for internal use within your organization. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/nuget/hosting-packages/overview).
+> It's also possible to host your own NuGet feed with packages meant for internal use within your organization. For more information, read the [Microsoft article](https://learn.microsoft.com/en-us/nuget/hosting-packages/overview).
 
 Alternatively, check if your IDE of choice has a built-in browser of it's own (like Visual Studio).
 
-## Adding an external Nuget package as a dependency
+## Adding an external NuGet package as a dependency
 
 > [!NOTE]
 > Currently, you cannot do this using **Game Studio**.
 
 ### [Visual Studio](#tab/add-visual-studio)
 
-In the **Solution Explorer** panel, right click on the project package you want to add the Nuget package to and select **Manage Nuget packages...**
+In the **Solution Explorer** panel, right click on the project package you want to add the NuGet package to and select **Manage NuGet packages...**
 
 ![](media/visual-studio-manage-nuget-context-menu.webp)
 
@@ -51,7 +51,7 @@ After selecting the package, click the **install** button on the right.
 
 ### [Command line](#tab/add-command-line)
 
-If your IDE doesn't have a way of adding Nuget packages, you can use the `dotnet` command in the terminal.
+If your IDE doesn't have a way of adding NuGet packages, you can use the `dotnet` command in the terminal.
 
 ```bash
 dotnet add Path/To/Project/Package package NameOfNugetPackage
@@ -73,5 +73,5 @@ In **Game Studio**, in the **Solution explorer** panel, expand **External packag
 
 ## See also
 
-* [What is Nuget](what-is-nuget.md)
+* [What is NuGet](what-is-nuget.md)
 * [Dependencies](../project-packages/dependencies.md)

@@ -510,11 +510,11 @@ items:
       - name: External packages
         href: files-and-folders/external-packages/index.md
         items:
-          - name: What is Nuget
+          - name: What is NuGet
             href: files-and-folders/external-packages/what-is-nuget.md
-          - name: Using Nuget packages
+          - name: Using NuGet packages
             href: files-and-folders/external-packages/using-nuget-packages.md
-          - name: Publish a Nuget package
+          - name: Publish a NuGet package
             href: files-and-folders/external-packages/publish-a-nuget-package.md
       - name: Version control
         href: files-and-folders/version-control.md
