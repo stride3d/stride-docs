@@ -8,7 +8,7 @@ Some assets require **resource files**. For example, texture assets need image f
 
 You can compile and optimize assets with a special compiler provided by Stride. Compiled assets are packed together as reusable bundles.
 
-![Assets displayed in the Asset View](../get-started/media/asset-creation-asset-view-tab-knight.png)
+![Assets displayed in the Asset View](media/asset-creation-asset-view-tab-knight.png)
 
 You can: 
 

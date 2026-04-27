@@ -12,23 +12,23 @@ For example, to change the color of a material asset::
 
  1. In the **Asset View** (in the bottom by default), select the material.
  
-	![Select material in the Asset View](../get-started/media/edit-asset-sphere-material-asset-view-tab.png)
+	![Select material in the Asset View](media/edit-asset-sphere-material-asset-view-tab.png)
 
  2. In the Property Grid, under **Shading > Diffuse**, next to **Diffuse Map**, click the **colored box**, which displays the asset color (yellow in this example).
  
 	The color picker opens.
  
-	![Color picker and Palette](../get-started/media/edit-asset-color-picker-palette-diffuse.png)
+	![Color picker and Palette](media/edit-asset-color-picker-palette-diffuse.png)
 	
  4. Select a new color for the asset.
 	
-	![Asset is now red](../get-started/media/edit-asset-color-change-selected-asset.png)
+	![Asset is now red](media/edit-asset-color-change-selected-asset.png)
 
 The **Asset Preview** (bottom right by default) displays asset changes in real time.
 
 The **Asset View** indicates assets with unsaved changes with asterisks (*).
 
-![Unsaved changes](../get-started/media/asset-unsaved-changes.png)
+![Unsaved changes](media/asset-unsaved-changes.png)
 
 ## Edit assets using dedicated editors
 
@@ -67,7 +67,7 @@ Assets are contained in the **Assets** folder of your project package. You can s
 
 > [!TIP]
 > To see the URL and type of an asset, move the mouse over the asset thumbnail.
-> ![Details of new asset in Asset View tab](../get-started/media/asset-creation-solution-explorer.png)
+> ![Details of new asset in Asset View tab](media/asset-creation-solution-explorer.png)
  
 ## Include assets in the build
 
@@ -98,7 +98,7 @@ If you plan to load an asset at runtime using scripts, make it a root asset. To 
 
 To change the Asset View options, click the eye icon in the Asset View toolbar.
 
-![Asset View options](../get-started/media/asset-view-options.png)
+![Asset View options](media/asset-view-options.png)
 
 You can:
 
@@ -136,7 +136,7 @@ You can add multiple filters. Name filters are green, tag filters are blue, and 
 
 To toggle a filter on and off without removing it, click it. Disabled filters have darker colors.
 
-![filter-tags](../get-started/media/disabled-filter-tags.png)
+![filter-tags](media/disabled-filter-tags.png)
 
 ### Remove a filter
 

@@ -1,6 +1,6 @@
 # Stride manual
 
-![Manual](get-started/media/game-editor-scene.jpg)
+![Manual](media/game-editor-scene.jpg)
 
 These pages contain information about how to use Stride, an open-source C# game engine.
 
