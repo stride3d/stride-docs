@@ -115,18 +115,6 @@ items:
       - name: Asset introspection
         href: engine/asset-introspection.md
 
-  - name: Files and folders
-    href: files-and-folders/index.md
-    items:
-      - name: Project structure
-        href: files-and-folders/project-structure.md
-      - name: Cached files
-        href: files-and-folders/cached-files.md
-      - name: Version control
-        href: files-and-folders/version-control.md
-      - name: Distribute a game
-        href: files-and-folders/distribute-a-game.md
-
   - name: Game Studio
     href: game-studio/index.md
     items:
@@ -512,6 +500,47 @@ items:
       - name: Set the graphics platform
         href: platforms/set-the-graphics-platform.md
 
+  - name: Project
+    href: files-and-folders/index.md
+    items:
+      - name: Project file structure
+        href: files-and-folders/project-structure.md
+      - name: Project packages
+        href: files-and-folders/project-packages/index.md
+        items:
+          - name: Create a package
+            href: files-and-folders/project-packages/create-a-package.md
+          - name: Package properties
+            href: files-and-folders/project-packages/package-properties.md
+          - name: Dependencies
+            href: files-and-folders/project-packages/dependencies.md
+      - name: External packages
+        href: files-and-folders/external-packages/index.md
+        items:
+          - name: What is NuGet
+            href: files-and-folders/external-packages/what-is-nuget.md
+          - name: Using NuGet packages
+            href: files-and-folders/external-packages/using-nuget-packages.md
+          - name: Publish a NuGet package
+            href: files-and-folders/external-packages/publish-a-nuget-package.md
+      - name: Version control
+        href: files-and-folders/version-control.md
+      - name: Cached files
+        href: files-and-folders/cached-files.md
+      - name: Building the game
+        href: files-and-folders/building-the-game/index.md
+        items:
+          - name: Setup
+            href: files-and-folders/building-the-game/setup.md
+          - name: Building
+            href: files-and-folders/building-the-game/building.md
+          - name: Cleaning up
+            href: files-and-folders/building-the-game/cleaning-up.md
+          - name: Build file structure
+            href: files-and-folders/building-the-game/build-file-structure.md
+          - name: Distributing
+            href: files-and-folders/building-the-game/distributing.md
+
   - name: Scripts
     href: scripts/index.md
     items:
@@ -600,20 +629,6 @@ items:
             href: virtual-reality/display-a-UI-in-an-overlay.md
       - name: VR sickness
         href: virtual-reality/vr-sickness.md
-
-  - name: NuGet
-    href: nuget/index.md
-    items:
-      - name: Consume Packages
-        href: nuget/consume-packages.md
-      - name: Create Packages
-        href: nuget/create-packages.md
-
-  - name: Extensibility
-    href: extensibility/index.md
-    items:
-      - name: C# Libraries
-        href: extensibility/csharp-libraries.md
 
   - name: Troubleshooting
     href: troubleshooting/index.md

@@ -1,10 +1,25 @@
-# Files and folders
+# Project
 
-This section explains Stride's files and folders and the best way to organize them in development.
+<span class="badge text-bg-primary">Beginner</span>
+
+This section explains how a Stride project is structured, how it works and how to work with it.
 
 ## In this section
 
-* [Project structure](project-structure.md)
-* [Cached files](cached-files.md)
+* [Project file structure](project-structure.md)
+* [Project packages](project-packages/index.md)
+  * [Create a package](project-packages/create-a-package.md)
+  * [Package properties](project-packages/package-properties.md)
+  * [Dependencies](project-packages/dependencies.md)
+* [External packages](external-packages/index.md)
+  * [What is NuGet](external-packages/what-is-nuget.md)
+  * [Using NuGet packages](external-packages/using-nuget-packages.md)
+  * [Publish a NuGet package](external-packages/publish-a-nuget-package.md)
 * [Version control](version-control.md)
-* [Distribute a game](distribute-a-game.md)
+* [Cached files](cached-files.md)
+* [Building the game](building-the-game/index.md)
+  * [Setup](building-the-game/setup.md)
+  * [Building](building-the-game/building.md)
+  * [Cleaning up](building-the-game/cleaning-up.md)
+  * [Build file structure](building-the-game/build-file-structure.md)
+  * [Distributing](building-the-game/distributing.md)

@@ -1,32 +1,56 @@
-# Project structure
+# Project file structure
 
-Stride saves your projects as [Visual Studio solution files](https://msdn.microsoft.com/en-us/library/bb165951.aspx?f=255&MSPPError=-2147217396). You can open the projects with Stride Game Studio or any IDE such as Visual Studio.
+<span class="badge text-bg-primary">Intermediate</span>
 
-Stride organizes project files into **packages**. Each package comprises several folders and an *.sdpkg file which describes the package. 
+This page explains in detail how a Stride project's files are structured.
 
-A project can contain one package or several. You can share packages between projects.
+## Overview
 
-## Package folder structure
+A Stride project is a **standard C# solution**, consisting of a single [solution file](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file) (`.sln`) and multiple [project package](#project-packages) folders, which contain code, assets and resources.
 
-![Folder structure](media/folder-structure.png)
+![](media/file-structure.webp)
 
-* **Assets** contains the [asset](../game-studio/assets.md) files which represent elements in your game.
+* **Bin** - folder containing build files. For more information visit [this section](#project-bin-folder).
+* **NameOfGame**, **NameOfGame.PlatformName** - package folders.
+* **`.sln` file** - the solution file used by C# and Game Studio for opening the project.
 
-* **Bin** contains the compiled binaries and data. Stride creates the folder when you build the project, with a subdirectory for each platform.
+## Project packages
 
-* **MyGame.Game** contains the source code of your game as a cross-platform Visual Studio project (.csproj). You can add multiple projects to the same game.
+At the root, a Stride project is comprised of multiple [project packages](project-packages/index.md). They are used for separating code, assets and resources.
 
-*	**MyGame.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg *MyPackage.Windows*, *MyPackage.Linux*, etc). These folders are usually small, and only contain the entry point of the program.
+**For .NET developers:** a Stride project package is a standard C# project.
 
-* **obj** contains cached files. Game Studio creates this folder when you build your project.
+By default, there are at least 2 project packages in a Stride project:
+* **NameOfGame** - contains most code, assets and resources for the game.
+* **NameOfGame.PlatformName** (e.g. NameOfGame.Windows) - dedicated package for a given platform, contains the [**entry point**](project-packages/index.md#entry-point) and other files specific to the platform (such as the window icon).
 
-* **Resources** is a suggested location for files such as images and audio files used by your assets.
+A project package may contain:
+* **Assets** - the assets folder. Name of this folder or additional folders can be configured in the `.sdpkg` file.
+* **Resources** - the resources folder. Name of this folder or additional folders can be configured in the `.sdpkg` file.
+* **`.sdpkg` file** - contains configurable metadata of the package.
+* **`.sdpkg.user` file** - contains user-specific data about the editor that is not meant to be shared with source control.
+* **`.csproj` file** - a C# project file containing information about how it's code will be compiled.
 
-## Recommended project structure
+![](media/project-package-structure.webp)
 
-For advice about the best way to organize your project, see the [Version control](version-control.md) page.
+## Package bin and obj folders
+
+Every project package has `bin` and `obj` folders which are automatically created when opening or running the project. They store cached data used by Stride.
+
+> [!NOTE]
+> These folders **can be safely deleted without affecting the rest of the project**. For more information, visit the [cached files page](cached-files.md).
+
+## Project Bin folder
+
+In the root of the project directory, there is a `Bin` folder that contains game builds for each platform. Every time the game is launched from Game Studio or from an IDE, a debug version is built and placed in that folder.
+
+The location of this folder can be changed by going to the `.csproj` file of a platform's package and changing the value of `<OutputPath>`. For more information, read the [building setup page](building-the-game/setup.md).
+
+> [!NOTE]
+> To build the **release version** of the game, visit the [building the game section](building-the-game/index.md).
 
 ## See also
 
+* [Packages](project-packages/index.md)
 * [Version control](version-control.md)
-* [Distribute a game](distribute-a-game.md)
+* [Building the game section](building-the-game/index.md)
