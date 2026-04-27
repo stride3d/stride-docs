@@ -55,7 +55,7 @@ Assets do not contain resource data. Instead, they reference a resource. For exa
 
 ## Project structure
 
-A Stride project is separated into multiple project packages, which contain their own code, assets and resources.
+A Stride project is separated into multiple [project packages](../files-and-folders/project-packages/index.md), which contain their own code, assets and resources.
 
 For example, a new project is separated into:
 * **MyGame** - contains content for the game.
