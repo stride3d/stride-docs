@@ -60,6 +60,22 @@ items:
       - name: Custom attributes
         href: animation/custom-attributes.md
 
+  - name: Assets
+    href: assets/index.md
+    items:
+      - name: Create an asset
+        href: assets/create-an-asset.md
+      - name: Edit an asset
+        href: assets/edit-an-asset.md
+      - name: Use an asset
+        href: assets/use-an-asset.md
+      - name: Assets in code
+        href: assets/assets-in-code.md
+      - name: Asset compilation
+        href: assets/asset-compilation.md
+      - name: Asset bundles
+        href: assets/asset-bundles.md
+
   - name: Audio
     href: audio/index.md
     items:
@@ -92,13 +108,6 @@ items:
   - name: Engine
     href: engine/index.md
     items:
-      - name: Assets
-        href: engine/assets/index.md
-        items:
-          - name: Asset bundles
-            href: engine/assets/asset-bundles.md
-          - name: Asset control
-            href: engine/assets/asset-control.md
       - name: ECS (Entity Component System)
         href: engine/entity-component-system/index.md
         items:
