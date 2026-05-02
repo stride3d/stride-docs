@@ -25,11 +25,10 @@
 - [Archetype](../game-studio/archetypes.md): A template for asset properties that other assets can inherit from.
 - [Asset](../game-studio/assets.md): Content used by the game (models, textures, materials, scripts, etc.) managed by the asset pipeline.
 - Asset URL: The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`. See [Create a model from code](../scripts/create-a-model-from-code.md) and [Create a script](../scripts/create-a-script.md).
-- [Asset bundles](../engine/assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
-- [Asset control](../engine/assets/asset-control.md): Control asset loading, references, and lifetime.
-- [Build pipeline](../engine/build-pipeline.md): Compiles assets into runtime-ready formats.
+- [Asset compilation](../assets/asset-compilation.md): Compiles assets into runtime-ready formats.
+- [Asset bundles](../assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
 - [Prefab](../game-studio/prefabs/index.md): A reusable entity hierarchy that can be instantiated at design time or runtime.
-- Root asset: An asset included in the build so it is available at runtime. See [Manage assets](../game-studio/manage-assets.md).
+- [Root asset](../assets/asset-compilation.md#root-assets): An asset included in the build so it is available at runtime.
 
 ## Audio terms
 
