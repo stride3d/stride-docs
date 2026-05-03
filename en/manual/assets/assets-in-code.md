@@ -1,6 +1,6 @@
 # Assets in code
 
-Assets can be loaded in code via the content system.
+This page explains how to use assets in code.
 
 ## Url reference
 

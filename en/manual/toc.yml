@@ -69,8 +69,10 @@ items:
         href: assets/edit-an-asset.md
       - name: Use an asset
         href: assets/use-an-asset.md
-      - name: Assets in code
+      - name: Use an asset in code
         href: assets/assets-in-code.md
+      - name: Archetypes
+        href: assets/archetypes.md
       - name: Asset compilation
         href: assets/asset-compilation.md
       - name: Asset bundles
