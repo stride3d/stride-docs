@@ -17,3 +17,13 @@ TODO: IMAGE
 As for **resources**, it isn't possible to view them in Game Studio. You can browse through them by opening the directory containing your project and going to a resource folder of the target [project package](../files-and-folders/project-packages/index.md).
 
 For more information, visit the [project file structure page](../files-and-folders/project-structure.md).
+
+## In this section
+
+* [Create an asset](create-an-asset.md)
+* [Edit an asset](edit-an-asset.md)
+* [Use an asset](use-an-asset.md)
+* [Assets in code](assets-in-code.md)
+* [Archetypes](archetypes.md)
+* [Asset compilation](asset-compilation.md)
+* [Asset bundles](asset-bundles.md)
