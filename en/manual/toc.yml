@@ -500,6 +500,9 @@ items:
       - name: Set the graphics platform
         href: platforms/set-the-graphics-platform.md
 
+  - name: Scenes
+    href: scenes/index.md
+
   - name: Project
     href: files-and-folders/index.md
     items:
