@@ -2,14 +2,12 @@
 
 When assets get compiled with the final game, they are turned into **asset bundles**. By default, only one asset bundle is created, but this can be changed to for example: split off DLC content into a separate bundle, so that it could be sold separately.
 
-When an application starts Stride only loads the `default` bundle. Other bundles need to be loaded through code.
+When an application starts, Stride only loads the `default` bundle. Other bundles need to be loaded manually through code.
 
 ## Create an asset bundle
 
 > [!NOTE]
 > Currently, this has to be done manually.
-
-TODO: TEST IF YOU CAN DO THIS IN BASE PROJECT PACKAGE AND NOT PLATFORM
 
 In order to create new asset bundles, you'll have to modify the `.sdpkg` file of a project package. For more information about project package properties visit [this page](../files-and-folders/project-packages/package-properties.md).
 
@@ -19,7 +17,7 @@ There are 2 types of selectors:
 * 🏷️ **Tag selector** - selects assets that have at least one of the specified tags in `Tags`.
 * 📁 **Path selector** - selects assets based on the provided list of paths in `Paths`. Filters work similarly to the [`.gitignore` filtering convention](https://git-scm.com/docs/gitignore#_pattern_format) with a few exceptions: `!` (negate), `[]` (groups) and `#` (comments). This means that you can select **individual files**, **entire folders** or **files with a specific extension**.
 
-Here's an example showing how to create asset bundles:
+Here's an example configuration:
 
 ```yaml
 Bundles:
@@ -45,6 +43,9 @@ Bundles:
         - folder3/*.xml
 ```
 
+> [!WARNING]
+> Currently if any of your custom bundles is **empty**, Stride will **fail to build** your game.
+
 ### Root assets
 
 It's important to note that assets contained in custom asset bundles **shouldn't be referenced by the base game**, as Stride will fail to load them if their asset bundle is unavailable. However, doing this will result in Stride not compiling them in any bundle, due to seeing them as being unused.
@@ -58,8 +59,8 @@ For more information about root assets, visit the [asset compilation page](asset
 When compiling, assets are placed in the most appropriate bundle.
 
 1. Assets not defined in `Bundles` are placed in the **default** bundle, which is loaded automatically
-2. If an asset is needed by **BundleA** and **BundleB**, but **BundleB** has a dependency on **BundleA**, that asset is placed only in **BundleA**
-3. If an asset is needed by **BundleA** and **BundleB** and both of them aren't dependent on each other, that asset is placed in both of them.
+2. If an asset is selected by **BundleA** and **BundleB**, but **BundleB** has a dependency on **BundleA**, that asset is placed only in **BundleA**
+3. If an asset is selected by **BundleA** and **BundleB** and both of them aren't dependent on each other, that asset is placed in both of them.
 
 TODO: VISUALIZATION
 
@@ -70,22 +71,26 @@ TODO: CHECK ABOVE
 
 ## Loading bundles
 
-Stride **automatically loads the default bundle**. However other bundles need to be manually loaded through code.
+Stride **automatically loads the default bundle**. However, other bundles need to be manually loaded through code.
 
 ```csharp
-Content.DatabaseFileProvider.ObjectDatabase.LoadBundle("NameOfBundle");
+Content.FileProvider.ObjectDatabase.LoadBundle("NameOfBundle");
 ```
 
-TODO: CHECK IF THIS THROW AN ERROR IF THE BUNDLE ISN'T PRESENT
-
-Then, assets can be loaded via the **content system**. For more information, visit the [assets in code page](assets-in-code.md).
+Assets can then be loaded via the **content system**. For more information, visit the [assets in code page](assets-in-code.md).
 
 ## Bundle location
 
-Bundles are located in `data/db/bundles` next to the built executable.
+Bundles are located in `data/db/bundles` next to the built executable. You can recognize them by their name.
 
 TODO: VISUALIZATION
 
-TODO: CHECK THE ACTUAL RESULT IF BUNDLES ARE CONTAINED IN MULTIPLE FILES
+> [!NOTE]
+> Bundles tend to be split into multiple files that start with the same name.
+> 
+> TODO: VISUALIZATION (WHY NOT)
 
-TODO: CHECK IF YOU CAN REMOVE A BUNDLE WITHOUT STRIDE COMPLAINING
+## See also
+
+* [Asset compilation](asset-compilation.md)
+* [Assets in code](assets-in-code.md)

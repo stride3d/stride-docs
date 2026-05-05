@@ -26,13 +26,43 @@ Each color represents something:
 
 A few remarks:
 
-* Root assets are defined **per platform**. When marking as root, you have to make sure to do that for every platform your project is targeting.
-    TODO: CHECK THAT WHEN YOU MARK SOMETHING IT'S ONLY MARKED FOR THAT ONE PLATFORM
-* TODO: CHECK IF YOU CAN ADD ROOT ASSETS TO THE MAIN GAME PROJECT PACKAGE
+* Root assets can be defined in any project package (TODO: CHECK THIS).
 * You can only mark individual assets as root, not folders.
 
 ### How to mark an asset as root
 
-You can mark an asset as root by right clicking on it in the **Asset view** panel and selecting **Mark as root**.
+You can mark an asset as root by right clicking on it in the **Asset view** panel and selecting **🔵 Mark as root**.
 
 TODO: IMAGE
+
+> [!WARNING]
+> Marking an asset as root in **Game Studio** will only mark it **for the selected platform**. Make sure to either:
+> * Mark the asset as root for every platform your project targets
+> * Edit the main project package `.sdpkg` manually. For more information, visit the [package properties page](../files-and-folders/project-packages/package-properties.md).
+
+## Checking assets
+
+You can use [`Content.FileProvider.ContentIndexMap`](xref:Stride.Core.Serialization.Contents.IContentIndexMap) to check what assets are available.
+
+```csharp
+if (Content.FileProvider.ContentIndexMap.Contains("Models/Enemy"))
+{
+    // Execute code if the asset exists
+}
+
+var allContent = Content.FileProvider.ContentIndexMap.GetMergedIdMap()
+    .Select(x => x.Key);
+```
+
+> [!NOTE]
+> The content system also contains shaders and shader information. If you want to use [`GetMergedIdMap`](xref:Stride.Core.Serialization.Contents.IContentIndexMap.GetMergedIdMap) to check which assets are loaded, consider filtering out paths that start with `shaders/` and `__shaders_bytecode__/`.
+> 
+> ```csharp
+> var allAssets = Content.FileProvider.ContentIndexMap.GetMergedIdMap()
+>     .Select(x => x.Key)
+>     .Where(x => !x.StartsWith("shaders/") && !x.StartsWith("__shaders_bytecode__/"));
+> ```
+
+## See also
+
+* [Assets in code](assets-in-code.md)

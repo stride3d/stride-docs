@@ -8,8 +8,6 @@ In the **Property grid** you can sometimes find a property that looks like this:
 
 TODO: IMAGE
 
-In the above example, it's the **Model** property in the **model component**.
-
 This is where you can assign a reference to another asset. There are two available buttons:
 * 👆 **Hand** - opens up a dialogue to select an existing asset.
 * **Eraser** - clears the reference.
@@ -31,3 +29,8 @@ public class Example : StartupScript
 ```
 
 For more information on how to use assets in your own code, visit the [assets in code page](assets-in-code.md).
+
+## See also
+
+* [Assets in code](assets-in-code.md)
+* [Asset compilation](asset-compilation.md)
