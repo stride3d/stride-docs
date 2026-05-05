@@ -4,7 +4,7 @@ This page explains how to use assets in code.
 
 ## Url reference
 
-You can create an assignable reference to another asset in your own script by using [`UrlReference<T>`](xref:Stride.Core.Serialization.UrlReference`1), where `T` is the asset type you want to use.
+You can create an assignable reference to an asset in your own script by using [`UrlReference<T>`](xref:Stride.Core.Serialization.UrlReference`1), where `T` is the asset type you want to use.
 
 ```csharp
 public class Example : StartupScript
@@ -16,6 +16,12 @@ public class Example : StartupScript
 It will show up in the **Property grid** like so:
 
 TODO: IMAGE
+
+You can retrieve the asset through code by using **content system** using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*).
+
+```csharp
+var asset = Content.Load(MyAssetReference);
+```
 
 For more information on how to assign an asset, visit the [use an asset page](use-an-asset.md).
 
@@ -49,3 +55,8 @@ public override void Cancel()
 The asset compiler only knows which assets to include based on their references. When loading assets from a path, we are not telling Stride that we need to use them.
 
 To fix that, you can [include the target assets as root](asset-compilation.md#how-to-mark-an-asset-as-root) to make sure they are always included with the build, or try using [url references](#url-reference) instead.
+
+## See also
+
+* [Use an asset](use-an-asset.md)
+* [Asset compilation](asset-compilation.md)
