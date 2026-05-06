@@ -77,7 +77,7 @@ Stride **automatically loads the default bundle**. However, other bundles need t
 Content.FileProvider.ObjectDatabase.LoadBundle("NameOfBundle");
 ```
 
-Assets can then be loaded via the **content system**. For more information, visit the [assets in code page](assets-in-code.md).
+Assets can then be loaded via the **content system**. For more information, visit the [use an asset in code page](use-an-asset-in-code.md).
 
 ## Bundle location
 
@@ -93,4 +93,4 @@ TODO: VISUALIZATION
 ## See also
 
 * [Asset compilation](asset-compilation.md)
-* [Assets in code](assets-in-code.md)
+* [Use an asset in code](use-an-asset-in-code.md)

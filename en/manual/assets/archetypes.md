@@ -11,7 +11,7 @@ Here is some terminology to keep in mind:
 
 ## Creating a derived asset
 
-In the **asset view** panel, right click on the asset you want to derive from and select **Create derived asset**.
+In the **asset view**, right click on the asset you want to derive from and select **Create derived asset**.
 
 TODO: IMAGE
 

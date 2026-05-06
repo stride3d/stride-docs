@@ -2,13 +2,13 @@
 
 Assets can be edited in **Game Studio**.
 
-## Editing in Property grid
+## Editing in property grid
 
-When you select an asset in the **asset view** panel, it's properties will show up in the **property grid**.
+When you select an asset in the **asset view**, it's properties will show up in the **property grid**.
 
 TODO: IMAGE
 
-You can modify them to your liking and your changes will be reflected in the **asset preview** panel in real time.
+Your changes will be reflected in the **asset preview** in real time.
 
 TODO: IMAGE
 
@@ -38,4 +38,4 @@ To open a dedicated editor for an asset:
 # See also
 
 * [Use an asset](use-an-asset.md)
-* [Assets in code](assets-in-code.md)
+* [Use an asset in code](use-an-asset-in-code.md)
