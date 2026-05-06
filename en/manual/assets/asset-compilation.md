@@ -10,7 +10,7 @@ TODO: VISUALIZATION
 
 ## Blue, green and gray dots
 
-In the **Asset view** panel, you can see a dot in the top left corner that signifies how an asset will be compiled.
+In the **asset view**, you can see a dot in the top left corner that signifies how an asset will be compiled.
 
 TODO: IMAGE
 
@@ -31,7 +31,7 @@ A few remarks:
 
 ### How to mark an asset as root
 
-You can mark an asset as root by right clicking on it in the **Asset view** panel and selecting **🔵 Mark as root**.
+You can mark an asset as root by right clicking on it in the **asset view** and selecting **🔵 Mark as root**.
 
 TODO: IMAGE
 
@@ -65,4 +65,4 @@ var allContent = Content.FileProvider.ContentIndexMap.GetMergedIdMap()
 
 ## See also
 
-* [Assets in code](assets-in-code.md)
+* [Use an asset in code](use-an-asset-in-code.md)

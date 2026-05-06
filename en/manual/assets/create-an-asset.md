@@ -1,10 +1,10 @@
 # Create an asset
 
-Assets can be created with **Game Studio** in the **Asset view** panel.
+Assets can be created with **Game Studio** in the **asset view**.
 
 ## Create an asset
 
-1. In the **Asset view** panel, click the **Add assets** button.
+1. In the **asset view**, click the **Add assets** button.
 
     TODO: IMAGE
 
@@ -22,7 +22,7 @@ Assets can be created with **Game Studio** in the **Asset view** panel.
 
 ## Create an asset from resource
 
-To create an asset from a resource, simply drag and drop it into the **Asset view** panel and select the type of resource you want to create.
+To create an asset from a resource, simply drag and drop it into the **asset view** and select the type of resource you want to create.
 
 TODO: IMAGE
 
@@ -37,4 +37,4 @@ TODO: IMAGE
 ## See also
 * [Edit an asset](edit-an-asset.md)
 * [Use an asset](use-an-asset.md)
-* [Assets in code](assets in code.md)
+* [Use an asset in code](use-an-asset-in-code.md)
