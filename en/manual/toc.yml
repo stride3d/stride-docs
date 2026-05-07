@@ -146,17 +146,6 @@ items:
             href: game-studio/add-entities.md
           - name: Manage entities
             href: game-studio/manage-entities.md
-      - name: Assets
-        href: game-studio/assets.md
-        items:
-          - name: Create assets
-            href: game-studio/create-assets.md
-          - name: Manage assets
-            href: game-studio/manage-assets.md
-          - name: Use assets
-            href: game-studio/use-assets.md
-          - name: Archetypes
-            href: game-studio/archetypes.md
       - name: Prefabs
         href: game-studio/prefabs/index.md
         items:
