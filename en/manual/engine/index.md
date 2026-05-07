@@ -10,5 +10,5 @@
 
 # See also
 
-- [Introduction to assets](../game-studio/assets.md)
+- [Assets](../assets/index.md)
 - [Scripts](../scripts/index.md)

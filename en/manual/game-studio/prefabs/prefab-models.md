@@ -38,4 +38,4 @@ Prefab models don't expose materials. This means you can't view or edit them in 
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)
-* [Archetypes](../archetypes.md)
+* [Archetypes](../../assets/archetypes.md)

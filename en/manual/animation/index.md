@@ -28,7 +28,7 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 **Skinned models** are models that have been skinned to match a skeleton. The **skin** describes how vertices of the mesh transform when bones move. 
 
 >[!NOTE]
->In Game Studio, you can only create simple 3D models such as spheres and cubes. For information about how to do this, see [Create assets](../game-studio/create-assets.md). To create more complex models, use dedicated software like 3DS Max, Maya, or Blender, then [import the model into Game Studio](import-animations.md).
+>In Game Studio, you can only create simple 3D models such as spheres and cubes. For information about how to do this, see the [create an asset page](../assets/create-an-asset.md). To create more complex models, use dedicated software like 3DS Max, Maya, or Blender, then [import the model into Game Studio](import-animations.md).
 
 ## Animation clips
 
