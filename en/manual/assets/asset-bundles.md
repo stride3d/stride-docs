@@ -65,9 +65,7 @@ Stride tries to place assets in the most appropriate bundle.
 TODO: VISUALIZATION
 
 > [!NOTE]
-> Loading two bundles with the same asset won't result in a duplicate!
-
-TODO: CHECK ABOVE
+> Loading two bundles with the same asset won't result in a duplicate.
 
 ## Loading bundles
 
@@ -77,7 +75,8 @@ Stride **automatically loads the default bundle**. However, other bundles need t
 await Content.FileProvider.ObjectDatabase.LoadBundle("NameOfBundle");
 ```
 
-TODO: CHECK IF DEPENDENCIES ARE LOADED AUTOMATICALLY
+> [!NOTE]
+> When loading a bundle, it's dependencies are loaded automatically.
 
 Assets can then be loaded via the **content system**. For more information, visit the [use an asset in code page](use-an-asset-in-code.md).
 
