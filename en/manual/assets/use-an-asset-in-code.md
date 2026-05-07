@@ -19,7 +19,7 @@ public class Example : StartupScript
 
 The above will show up in the **property grid** like so:
 
-TODO: IMAGE
+![](media/property-grid-direct-reference-example.webp)
 
 Stride will then automatically handle assigning and manage the reference count. However, if you want more control, consider using a [url reference](#url-reference) instead.
 
@@ -65,7 +65,7 @@ public class Example : StartupScript
 
 It will show up in the **property grid** like so:
 
-TODO: IMAGE
+![](media/property-grid-url-reference-example.webp)
 
 You can retrieve the asset through code via the **content system** by using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*) and and then unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
 

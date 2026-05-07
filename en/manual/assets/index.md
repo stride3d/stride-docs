@@ -12,7 +12,7 @@ In short:
 
 In **Game Studio** you can view assets in the **asset view** by selecting an **assets** folder in the **solution explorer**.
 
-TODO: IMAGE
+![](media/solution-explorer-assets.webp)
 
 As for **resources**, it isn't possible to view them in **Game Studio**. You can browse through them by opening the directory containing your project and going to a resource folder of the target [project package](../files-and-folders/project-packages/index.md).
 

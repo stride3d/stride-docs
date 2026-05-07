@@ -13,7 +13,7 @@ Here is some terminology to keep in mind:
 
 In the **asset view**, right click on the asset you want to derive from and select **Create derived asset**.
 
-TODO: IMAGE
+![](media/asset-view-create-derived.webp)
 
 **Game Studio** then creates a new derived asset which you can modify.
 
@@ -21,7 +21,7 @@ TODO: IMAGE
 
 When changing a property of a derived asset in the **property grid**, it will be marked as an overridden. Overridden properties are slightly brighter and bolder.
 
-TODO: IMAGE
+![](media/property-grid-overriden-property.webp)
 
 Override properties will not be updated when they are changed on the archetype.
 
@@ -33,7 +33,7 @@ In case you want to revert a property to use the same values as the archetype, r
 
 If you want to turn a derived asset into a normal one (unlinking it from the archetype), in the **asset view** right click on it and select **Clear archetype**.
 
-TODO: IMAGE
+![](media/property-grid-reset-to-base.webp)
 
 The asset will now no longer follow changes done to the archetype.
 

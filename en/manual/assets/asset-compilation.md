@@ -12,7 +12,7 @@ TODO: VISUALIZATION
 
 In the **asset view**, you can see a dot in the top left corner that signifies how an asset will be compiled.
 
-TODO: IMAGE
+![](media/asset-view-indicators.webp)
 
 Each color represents something:
 
@@ -33,7 +33,7 @@ A few remarks:
 
 You can mark an asset as root by right clicking on it in the **asset view** and selecting **🔵 Mark as root**.
 
-TODO: IMAGE
+![](media/asset-view-include-root.webp)
 
 > [!WARNING]
 > Marking an asset as root in **Game Studio** will only mark it **for the selected platform**. Make sure to either:
