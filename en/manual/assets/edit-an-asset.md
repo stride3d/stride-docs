@@ -18,7 +18,7 @@ Modified assets aren't automatically saved. You will have to save them manually 
 
 Certain assets require the use of a dedicated editor. The most notable example of this are **Scenes**.
 
-Currently the assets that have a dedicated editor are:
+Currently, the assets that have a dedicated editor are:
 
 * Graphics compositor
 * Prefabs
@@ -27,13 +27,10 @@ Currently the assets that have a dedicated editor are:
 * Ui pages
 * Ui libraries
 * Scripts
-* TODO: CHECK ALL OF THIS
 
-To open a dedicated editor for an asset:
+To open a dedicated editor for an asset simply **double click it**, right click and select **Edit asset** or select it and press **Ctrl + Enter**.
 
-* Double click it
-* Right click and select **Edit asset**
-* Select it and press **Ctrl + Enter**
+TODO: IMAGE OF CONTEXT MENU
 
 # See also
 

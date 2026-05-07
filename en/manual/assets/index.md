@@ -1,12 +1,12 @@
 # Assets
 
-**Assets** are representations of elements in a project (such as scenes, textures or audio) which can be used by scripts or other assets. An example would be the **model component** using a **model asset**.
+**Assets** are representations of elements in a project (such as scenes, textures or audio), which can be used by scripts or other assets. An example would be the **model component** using a **model asset**.
 
-**Resources** on the other hand are the files containing actual data, which can then be used by assets.
+**Resources** on the other hand are the files containing actual data (such as images or music), which can then be used by assets.
 
 In short:
-* **Resources** are raw data files (`.png`, `.wav`, `.fbx`)
-* **Assets** is what can be used in game. They can reference resource files and contain additional properties.
+* **Resources** - raw data files (`.png`, `.wav`, `.fbx`)
+* **Assets** - an element that can be used in a game. They can use resource files and contain additional properties.
 
 ## Location of assets and resources
 
