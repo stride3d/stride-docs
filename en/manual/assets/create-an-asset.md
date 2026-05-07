@@ -6,33 +6,25 @@ Assets can be created with **Game Studio** in the **asset view**.
 
 1. In the **asset view**, click the **Add assets** button.
 
-    TODO: IMAGE
+    ![](media/asset-view-add-asset.webp)
 
 2. Select the type of asset you want to create.
 
-    TODO: IMAGE
-
-3. If the asset requires a resource, it will prompt you to select it from the resources folder or somewhere else on your computer.
-
-    TODO: IMAGE
-    
-    If the resource isn't present in the resources folder, **Game Studio** will ask you if you want to move it there. In the majority of cases, **you will want to click yes**.
-
-    TODO: IMAGE
+    ![](media/asset-view-create-new.webp)
 
 ## Create an asset from resource
 
 To create an asset from a resource, simply drag and drop it into the **asset view** and select the type of resource you want to create.
 
-TODO: IMAGE
+![](media/asset-view-from-resource-type.webp)
 
-You will be asked, if you want to **copy the dragged file to the resources folder**. Most of the time, **you will want to do this** in order to make the project easier to share and use version control with.
+If the resource isn't present in the resources folder, **Game Studio** will ask you if you want to move it there. In the majority of cases, **you will want to click yes**.
 
-TODO: IMAGE
+![](media/asset-view-copy-resource.webp)
 
 Finally, you will be asked if you want to **move it to the default location**. Again, most of the time **you will want to do this**, unless you need more control over where resources end up.
 
-TODO: IMAGE
+![](media/asset-view-resource-default-location.webp)
 
 ## See also
 * [Edit an asset](edit-an-asset.md)

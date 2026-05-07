@@ -8,7 +8,7 @@ An asset is a representation of an element of your game, such as texture, animat
 
 To create an asset, click the **➕ Add asset** button in the  **Asset view** and select the type of asset you want to create.
 
-![Image of the "Add asset" menu in the asset view.](media/asset-view-create-new.webp)
+![](../assets/media/asset-view-create-new.webp)
 
 ## Create assets from resources
 
@@ -16,19 +16,19 @@ To create an asset from a resource, simply drag and drop it from a folder.
 
 Then, select the type of resource you want to create.
 
-![Popup showing a list of assets that can be created from the dragged resource.](media/asset-view-from-resource-type.webp)
+![](../assets/media/asset-view-from-resource-type.webp)
 
 You will be asked, if you want to **copy the dragged file to the resources folder**. Most of the time, **you want to do this**, in order to make the project easier to share and use version control with.
 
-![A popup "Source file 'C:/Users/franc/Downloads/Grass0044K-PNG/Grass0044K-PNG_Color.png' is not inside of your project's resource folders, do you want to copy it?" with two options "yes" and "no".](media/asset-view-copy-resource.webp)
+![](../assets/media/asset-view-copy-resource.webp)
 
 Finally, you will be asked if you want to **move it to the default location**. Again, most of the time **you want to do this**, unless you need more control over where resources end up.
 
-![A popup "Do you want to place the resource in the default location ?" with two options "yes" and "no"](media/asset-view-resource-default-location.webp)
+![](../assets/media/asset-view-resource-default-location.webp)
 
 ## Green, blue and gray dots
 
-![A screenshot of three items in the Asset View, all having a small circle in the top left corner of their icon with one being blue, one green and one gray.](media/asset-view-indicators.webp)
+![](../assets/media/asset-view-indicators.webp)
 
 Every asset has a little dot in the top left corner of their icon. This dot indicates if an asset is going to be included when building the project:
 * **Blue** - the asset will be included in the build no matter if it's needed or not.
@@ -37,8 +37,8 @@ Every asset has a little dot in the top left corner of their icon. This dot indi
 
 Stride doesn't include assets which aren't used anywhere, meaning that **they cannot be accessed when running the game**. In order to ensure, that an asset will always be included in the build, right click on it and select **Include in build as root asset**.
 
-![A screenshot of an asset's context menu, highlighting an item "Include in build as root asset".](media/asset-view-include-root.webp)
+![](../assets/media/asset-view-include-root.webp)
 
 ## Further reading
 
-For more information, visit the [Assets](../game-studio/assets.md) section.
+For more information, visit [Assets](../assets/index.md).

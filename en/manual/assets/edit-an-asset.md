@@ -6,11 +6,11 @@ Assets can be edited in **Game Studio**.
 
 When you select an asset in the **asset view**, it's properties will show up in the **property grid**.
 
-TODO: IMAGE
+![](media/property-grid-asset-properties.webp)
 
 Your changes will be reflected in the **asset preview** in real time.
 
-TODO: IMAGE
+![](media/asset-preview.webp)
 
 Modified assets aren't automatically saved. You will have to save them manually by going to **File > Save** or by pressing **Ctrl + S**.
 
@@ -30,7 +30,7 @@ Currently, the assets that have a dedicated editor are:
 
 To open a dedicated editor for an asset simply **double click it**, right click and select **Edit asset** or select it and press **Ctrl + Enter**.
 
-TODO: IMAGE OF CONTEXT MENU
+![](media/asset-view-edit-asset.webp)
 
 # See also
 
