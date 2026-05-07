@@ -26,11 +26,11 @@ To create an asset from a resource, simply drag and drop it into the **asset vie
 
 TODO: IMAGE
 
-You will be asked, if you want to **copy the dragged file to the resources folder**. Most of the time, **you want to do this**, in order to make the project easier to share and use version control with.
+You will be asked, if you want to **copy the dragged file to the resources folder**. Most of the time, **you will want to do this** in order to make the project easier to share and use version control with.
 
 TODO: IMAGE
 
-Finally, you will be asked if you want to **move it to the default location**. Again, most of the time **you want to do this**, unless you need more control over where resources end up.
+Finally, you will be asked if you want to **move it to the default location**. Again, most of the time **you will want to do this**, unless you need more control over where resources end up.
 
 TODO: IMAGE
 
