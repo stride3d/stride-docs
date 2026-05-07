@@ -71,6 +71,8 @@ items:
         href: assets/use-an-asset.md
       - name: Use an asset in code
         href: assets/use-an-asset-in-code.md
+      - name: Tags
+        href: assets/tags.md
       - name: Archetypes
         href: assets/archetypes.md
       - name: Asset compilation
