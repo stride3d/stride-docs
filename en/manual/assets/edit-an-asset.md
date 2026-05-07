@@ -12,7 +12,7 @@ Your changes will be reflected in the **asset preview** in real time.
 
 TODO: IMAGE
 
-Modified assets aren't automatically saved. You will have to save them manually by going to **File > Save** TODO CHECK THIS or by pressing a keyboard shortcut (Ctrl + S by default TODO check if shortcuts can be modified).
+Modified assets aren't automatically saved. You will have to save them manually by going to **File > Save** or by pressing **Ctrl + S**.
 
 ## Editing using a dedicated editor
 
