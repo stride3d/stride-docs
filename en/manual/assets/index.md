@@ -24,6 +24,7 @@ For more information, visit the [project file structure page](../files-and-folde
 * [Edit an asset](edit-an-asset.md)
 * [Use an asset](use-an-asset.md)
 * [Use an asset in code](use-an-asset-in-code.md)
+* [Tags](tags.md)
 * [Archetypes](archetypes.md)
 * [Asset compilation](asset-compilation.md)
 * [Asset bundles](asset-bundles.md)
