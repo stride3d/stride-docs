@@ -4,17 +4,13 @@ Assets can be created with **Game Studio** in the **Asset view**.
 
 ## Create an asset
 
-1. In the **Asset view**, click the **➕ Add assets** button.
+To create an asset, click the **➕ Add assets** button in the **Asset view** and select the type of asset you want to create.
 
-    ![](media/asset-view-add-asset.webp)
-
-2. Select the type of asset you want to create.
-
-    ![](media/asset-view-create-new.webp)
+![](media/asset-view-create-new.webp)
 
 ## Create an asset from resource
 
-To create an asset from a resource, simply drag and drop it into the **Asset view** and select the type of resource you want to create.
+To create an asset from a resource, simply drag and drop it into the **Asset view** and select the type of asset you want to create.
 
 ![](media/asset-view-from-resource-type.webp)
 

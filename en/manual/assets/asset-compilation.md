@@ -31,7 +31,7 @@ A few remarks:
 
 ### How to mark an asset as root
 
-You can mark an asset as root by right clicking on it in the **Asset view** and selecting **🔵 Mark as root**.
+You can mark an asset as root by right clicking on it in the **Asset view** and selecting **🔵 Include in build as root asset**.
 
 ![](media/asset-view-include-root.webp)
 
