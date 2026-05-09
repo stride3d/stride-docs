@@ -2,9 +2,9 @@
 
 Assets can be edited in **Game Studio**.
 
-## Editing in property grid
+## Editing in Property grid
 
-When you select an asset in the **asset view**, it's properties will show up in the **property grid**.
+When you select an asset in the **Asset view**, it's properties will show up in the **Property grid**.
 
 ![](media/property-grid-asset-properties.webp)
 

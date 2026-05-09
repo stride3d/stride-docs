@@ -4,7 +4,7 @@ Assets can be referenced by other assets or components in a scene.
 
 ## Components and other assets
 
-In the **property grid**, you can sometimes find a property that looks like this:
+In the **Property grid**, you can sometimes find a property that looks like this:
 
 ![](media/property-grid-asset-reference.webp)
 
@@ -14,7 +14,7 @@ In here, you can assign a reference to another asset. There are two available bu
 * **Eraser** - clears the reference.
 
 > [!TIP]
-> You can also **drag and drop** an asset from the **asset view**.
+> You can also **drag and drop** an asset from the **Asset view**.
 > 
 > ![](media/property-grid-asset-reference-drag-and-drop.webp)
 
@@ -26,7 +26,7 @@ You can create an assignable reference to an asset in your script by creating a 
 public Model ModelAsset { get; set; }
 ```
 
-This will show up in the **property grid** like so.
+This will show up in the **Property grid** like so.
 
 ![](media/property-grid-direct-reference-example.webp)
 

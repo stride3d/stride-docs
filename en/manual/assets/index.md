@@ -10,7 +10,7 @@ In short:
 
 ## Location of assets and resources
 
-In **Game Studio** you can view assets in the **asset view** by selecting an **assets** folder in the **solution explorer**.
+In **Game Studio** you can view assets in the **Asset view** by selecting an **assets** folder in the **solution explorer**.
 
 ![](media/solution-explorer-assets.webp)
 

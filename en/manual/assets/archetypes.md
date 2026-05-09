@@ -11,7 +11,7 @@ Here is some terminology to keep in mind:
 
 ## Creating a derived asset
 
-In the **asset view**, right click on the asset you want to derive from and select **Create derived asset**.
+In the **Asset view**, right click on the asset you want to derive from and select **Create derived asset**.
 
 ![](media/asset-view-create-derived.webp)
 
@@ -19,7 +19,7 @@ In the **asset view**, right click on the asset you want to derive from and sele
 
 ## Overriding values
 
-When changing a property of a derived asset in the **property grid**, it will be marked as an overridden. Overridden properties are slightly brighter and bolder.
+When changing a property of a derived asset in the **Property grid**, it will be marked as an overridden. Overridden properties are slightly brighter and bolder.
 
 ![](media/property-grid-overriden-property.webp)
 
@@ -27,11 +27,11 @@ Override properties will not be updated when they are changed on the archetype.
 
 ## Reverting overrides
 
-In case you want to revert a property to use the same values as the archetype, right click on it in the **property grid** and select **Reset to base value**.
+In case you want to revert a property to use the same values as the archetype, right click on it in the **Property grid** and select **Reset to base value**.
 
 ## Unlink from archetype
 
-If you want to turn a derived asset into a normal one (unlinking it from the archetype), in the **asset view** right click on it and select **Clear archetype**.
+If you want to turn a derived asset into a normal one (unlinking it from the archetype), in the **Asset view** right click on it and select **Clear archetype**.
 
 ![](media/property-grid-reset-to-base.webp)
 
