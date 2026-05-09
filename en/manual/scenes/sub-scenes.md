@@ -1,8 +1,14 @@
 # Sub-scenes
 
-On top of holding entities, scenes can also contain **other sub-scenes**.
+On top of holding entities, scenes can also contain **sub-scenes**.
 
 TODO: IMAGE
+
+## Adding a sub-scene in Game Studio
+
+Sub-scenes in Game Studio are separate from sub-scenes at runtime. Adding sub-scenes here is only done for organization purposes.
+
+To add a sub scene, **drag and drop** a scene asset onto a scene.
 
 ## Loading in Game Studio
 

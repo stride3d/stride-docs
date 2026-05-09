@@ -1,6 +1,6 @@
 # Scenes
 
-**Scenes** are loadable containers that hold a collection of entities. They can be used for creating levels or splitting off sections of your game into dynamically loaded sections for optimized performance.
+**Scenes** are loadable containers that hold a collection of entities. They can be used for creating levels or splitting your game into dynamically loaded sections for optimized performance.
 
 ## Sub-scenes
 
