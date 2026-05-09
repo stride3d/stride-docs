@@ -1,5 +1,7 @@
 # Edit an asset
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Assets can be edited with **Game Studio**.
 
 Most assets are just a simple list of properties, which can be edited in the **Property grid**. However, more complex assets (such as scenes) require the use of a **dedicated editor**.

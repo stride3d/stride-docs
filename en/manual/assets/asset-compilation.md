@@ -1,5 +1,7 @@
 # Asset compilation
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Assets are compiled into **bundles**.
 
 ## Which assets are compiled

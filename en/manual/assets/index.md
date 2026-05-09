@@ -1,5 +1,7 @@
 # Assets
 
+<span class="badge text-bg-primary">Beginner</span>
+
 **Assets** are representations of elements in a project (such as scenes, textures or audio), which can be used by scripts or other assets. An example would be the **model component** using a **model asset**.
 
 **Resources** on the other hand are the files containing actual data (such as images or music), which can be used by assets.

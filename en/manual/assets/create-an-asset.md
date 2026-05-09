@@ -1,5 +1,7 @@
 # Create an asset
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Assets can be created with **Game Studio** in the **Asset view**.
 
 ## Create an asset

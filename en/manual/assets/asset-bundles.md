@@ -1,5 +1,8 @@
 # Asset bundles
 
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
+
 After compilation, assets are turned into **asset bundles**. By default, only one asset bundle is created, but this can be changed in order to, for example: separate DLC content into it's own bundle, so that it could be sold separately.
 
 When the game starts, Stride only loads the `default` bundle. Other bundles need to be loaded manually through code.
