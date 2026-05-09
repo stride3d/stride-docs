@@ -10,7 +10,7 @@ In the **Property grid**, you can sometimes find a property that looks like this
 
 In here, you can assign a reference to another asset. There are two available buttons:
 
-* 👆 **Hand** - opens up a dialogue to select an existing asset.
+* **Hand** - opens up a dialogue to select an existing asset.
 * **Eraser** - clears the reference.
 
 > [!TIP]

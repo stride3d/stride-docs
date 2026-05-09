@@ -4,7 +4,7 @@ Assets can be created with **Game Studio** in the **Asset view**.
 
 ## Create an asset
 
-1. In the **Asset view**, click the **Add assets** button.
+1. In the **Asset view**, click the **➕ Add assets** button.
 
     ![](media/asset-view-add-asset.webp)
 

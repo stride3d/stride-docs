@@ -1,8 +1,8 @@
 # Tags
 
-Assets can be tagged to help search for them more easily, or to organize them in [asset bundles](asset-bundles.md).
+Assets can be tagged to help with searching and to organize them in [asset bundles](asset-bundles.md).
 
-Tags aren't available at runtime. They are only used as a tool in **Game Studio** and in compilation for [asset bundles](asset-bundles.md).
+Tags aren't available at runtime. They are only used as a tool in **Game Studio** and during compilation in [asset bundles](asset-bundles.md).
 
 ## Add or remove a tag
 

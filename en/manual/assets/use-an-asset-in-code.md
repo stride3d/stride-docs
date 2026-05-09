@@ -40,7 +40,7 @@ It will show up in the **Property grid** like so:
 
 ![Image of the script in the Property grid showing the property with the text "No asset selected", two icons of a hand and an eraser and an empty square with a hand icon.](media/property-grid-url-reference-example.webp)
 
-You can retrieve the asset through code via the **content system** by using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*) and and then unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
+The asset can be retrieved via the **content system** by using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*) and and then unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
 
 ```csharp
 public override void Start()
@@ -61,7 +61,7 @@ public override void Cancel()
 
 Assets can also be loaded based on their path in the Assets folder directly through code, **without having to assign anything**.
 
-You can load assets at runtime through code using [`Content.Load<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.Load``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) or [`Content.LoadAsync<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.LoadAsync``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and then unload them using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
+Assets can be loaded via the **content system** using [`Content.Load<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.Load``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) or [`Content.LoadAsync<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.LoadAsync``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and then unloaded using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
 
 ```csharp
 public override void Start()
