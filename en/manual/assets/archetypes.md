@@ -1,5 +1,7 @@
 # Archetypes
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 Stride allows you to create variants of the same asset that only change a selected number of properties, while remaining synchronized with the base.
 
 TODO: IMAGE OR VISUALIZATION

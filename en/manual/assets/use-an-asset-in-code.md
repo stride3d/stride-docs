@@ -1,5 +1,8 @@
 # Use an asset in code
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
 There are a few ways of using assets in code:
 
 * [**Referencing**](#referencing-an-asset) - the easiest way, creates an assignable reference in the **Property grid**.

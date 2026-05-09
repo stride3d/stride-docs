@@ -1,5 +1,7 @@
 # Use an asset
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Assets can be referenced by other assets or components in a scene.
 
 ## Components and other assets
