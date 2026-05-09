@@ -62,8 +62,6 @@ Stride tries to place assets in the most appropriate bundle.
 2. If an asset is selected by **BundleA** and **BundleB**, but **BundleB** has a dependency on **BundleA**, that asset is placed only in **BundleA**.
 3. If an asset is selected by **BundleA** and **BundleB** and both of them aren't dependent on each other, that asset is placed in both of them.
 
-TODO: VISUALIZATION
-
 > [!NOTE]
 > Loading two bundles with the same asset won't result in a duplicate.
 
@@ -84,12 +82,12 @@ Assets can then be loaded via the **content system**. For more information, visi
 
 Bundles are located in `data/db/bundles` next to the built executable. You can recognize them by their name.
 
+For more information about the build location, visit the [build file structure page](../files-and-folders/building-the-game/build-file-structure.md).
+
 TODO: VISUALIZATION
 
 > [!NOTE]
 > Bundles tend to be split into multiple files that start with the same name.
-> 
-> TODO: VISUALIZATION (WHY NOT)
 
 ## See also
 

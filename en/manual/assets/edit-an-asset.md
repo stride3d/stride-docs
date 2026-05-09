@@ -1,6 +1,8 @@
 # Edit an asset
 
-Assets can be edited in **Game Studio**.
+Assets can be edited with **Game Studio**.
+
+Most assets are just a simple list of properties, which can be edited in the **Property grid**. However, more complex assets (such as scenes) require the use of a **dedicated editor**.
 
 ## Editing in Property grid
 
@@ -12,7 +14,8 @@ Your changes will be reflected in the **asset preview** in real time.
 
 ![](media/asset-preview.webp)
 
-Modified assets aren't automatically saved. You will have to save them manually by going to **File > Save** or by pressing **Ctrl + S**.
+> [!NOTE]
+> Modified assets aren't automatically saved. You will have to save them manually by going to **File > Save** or by pressing **Ctrl + S**.
 
 ## Editing using a dedicated editor
 
@@ -28,7 +31,7 @@ Currently, the assets that have a dedicated editor are:
 * Ui libraries
 * Scripts
 
-To open a dedicated editor for an asset simply **double click it**, right click and select **Edit asset** or select it and press **Ctrl + Enter**.
+To open a dedicated editor for an asset either **double click it**, right click and select **🖉 Edit asset** or select it and press **Ctrl + Enter**.
 
 ![](media/asset-view-edit-asset.webp)
 

@@ -6,7 +6,7 @@
 
 In short:
 * **Resources** - raw data files (`.png`, `.wav`, `.fbx`)
-* **Assets** - an element that can be used in a game. They can use resource files and contain additional properties.
+* **Assets** - usable elements in the game. They can use resource files and contain additional properties.
 
 ## Location of assets and resources
 
