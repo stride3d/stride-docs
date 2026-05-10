@@ -6,8 +6,8 @@
 There are a few ways of using assets in code:
 
 * [**Referencing**](#referencing-an-asset) - the easiest way, creates an assignable reference in the **Property grid**.
-* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, while allowing you to manually handle loading and unloading of the asset.
-* [**Loading from path**](#loading-from-path) - a manual way of loading assets based on their path. You also have to make sure the assets are included in the build and to unload them.
+* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, but let's you handle loading and unloading manually. Most commonly used with **scenes**.
+* [**Loading from path**](#loading-from-path) - a manual way of loading assets based on their path.
 
 ## Referencing an asset
 
