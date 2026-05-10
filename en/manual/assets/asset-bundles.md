@@ -87,7 +87,7 @@ Bundles are located in `data/db/bundles` next to the built executable. You can r
 
 For more information about the build location, visit the [build file structure page](../files-and-folders/building-the-game/build-file-structure.md).
 
-TODO: VISUALIZATION
+![](media/asset-bundle-location.webp)
 
 > [!NOTE]
 > Bundles tend to be split into multiple files that start with the same name.
