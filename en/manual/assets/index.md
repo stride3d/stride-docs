@@ -10,6 +10,10 @@ In short:
 * **Resources** - raw data files (`.png`, `.wav`, `.fbx`)
 * **Assets** - usable elements in the game. They can use resource files and contain additional properties.
 
+## Blue, green and gray dots
+
+[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+
 ## Location of assets and resources
 
 In **Game Studio** you can view assets in the **Asset view** by selecting an **assets** folder in the **solution explorer**.
