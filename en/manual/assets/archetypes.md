@@ -4,12 +4,12 @@
 
 Stride allows you to create variants of the same asset that only change a selected number of properties, while remaining synchronized with the base.
 
-TODO: IMAGE OR VISUALIZATION
+![](media/archetypes.webp)
 
 Here is some terminology to keep in mind:
 
-* **Archetype** - the original asset from which a different asset derives from.
-* **Derived asset** - an asset that derives from a different asset (an archetype).
+* **Archetype** - the original asset.
+* **Derived asset** - an asset that derives from an archetype.
 
 ## Creating a derived asset
 
