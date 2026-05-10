@@ -26,15 +26,7 @@ Finally, you will be asked if you want to **move it to the default location**. A
 
 ## Blue, green and gray dots
 
-In the **Asset view**, you can see a dot in the top left corner that signifies how an asset will be compiled.
-
-![](../assets/media/asset-view-indicators.webp)
-
-Each color represents something:
-
-* 🔵 **Blue** (will be compiled) - this asset is marked as root, meaning that it will always be compiled in the game no matter if it's referenced or not.
-* 🟢 **Green** (will be compiled) - this asset is referenced by another asset that is used in the game, meaning that it will be compiled.
-* ⚫ **Gray** (won't be compiled) - this asset isn't referenced by any other asset that's used in the game, meaning that it won't be compiled.
+[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
 
 Stride doesn't include assets which aren't used anywhere, meaning that **they cannot be accessed when running the game**. In order to ensure, that an asset will always be included in the build, right click on it and select **🔵 Include in build as root asset**.
 
