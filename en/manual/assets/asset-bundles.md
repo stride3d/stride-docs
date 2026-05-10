@@ -70,7 +70,7 @@ Stride tries to place assets in the most appropriate bundle.
 
 ## Loading bundles
 
-Stride **automatically loads the default bundle**. However, other bundles need to be manually loaded through code.
+Stride **automatically loads the default bundle**. However, other bundles need to be manually loaded through code using [`LoadBundle`](xref:Stride.Core.Storage.ObjectDatabase.LoadBundle*).
 
 ```csharp
 await Content.FileProvider.ObjectDatabase.LoadBundle("NameOfBundle");
