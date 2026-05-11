@@ -12,7 +12,13 @@ In short:
 
 ## Blue, green and gray dots
 
+Stride only compiles assets which are used in the game. This means that if an asset isn't referenced by another asset that is determined as needed, it will be ignored.
+
+TODO: VISUALIZATION
+
 [!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+
+For more information about how assets are compiled, visit [Asset compilation](asset-compilation.md)
 
 ## Location of assets and resources
 
@@ -22,7 +28,7 @@ In **Game Studio** you can view assets in the **Asset view** by selecting an **a
 
 As for **resources**, it isn't possible to view them in **Game Studio**. You can browse through them by opening the directory containing your project and going to a resource folder of the target [project package](../files-and-folders/project-packages/index.md).
 
-For more information, visit the [project file structure page](../files-and-folders/project-structure.md).
+For more information, visit [Project file structure](../files-and-folders/project-structure.md).
 
 ## In this section
 

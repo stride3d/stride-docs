@@ -6,7 +6,7 @@
 There are a few ways of using assets in code:
 
 * [**Referencing**](#referencing-an-asset) - the easiest way, creates an assignable reference in the **Property grid**.
-* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, but let's you handle loading and unloading manually. Most commonly used with **scenes**.
+* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, but let's you handle loading and unloading manually (most commonly used with **scenes**).
 * [**Loading from path**](#loading-from-path) - a manual way of loading assets based on their path.
 
 ## Referencing an asset
@@ -43,7 +43,7 @@ It will show up in the **Property grid** like so:
 
 ![Image of the script in the Property grid showing the property with the text "No asset selected", two icons of a hand and an eraser and an empty square with a hand icon.](media/property-grid-url-reference-example.webp)
 
-The asset can be retrieved via the **content system** by using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*) and and then unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
+The asset can be loaded via the **content system** by using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*) and and then unloaded using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
 
 ```csharp
 public override void Start()
@@ -57,14 +57,13 @@ public override void Cancel()
 }
 ```
 
-> [!WARNING]
-> When assets are loaded manually, **they have to be manually unloaded too**, or else Stride will keep the assets **loaded in memory forever**.
+[!INCLUDE [content-loading-warning](../../includes/content-loading-warning.md)]
 
 ## Loading from path
 
-Assets can also be loaded based on their path in the Assets folder directly through code, **without having to assign anything**.
+Assets can also be loaded based on their path in the **assets** folder directly through code, **without having to assign anything**.
 
-Assets can be loaded via the **content system** using [`Content.Load<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.Load``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) or [`Content.LoadAsync<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.LoadAsync``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and then unloaded using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
+This is done via the **content system** using [`Content.Load<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.Load``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) or [`Content.LoadAsync<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.LoadAsync``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and then unloading is done using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
 
 ```csharp
 public override void Start()
@@ -78,8 +77,7 @@ public override void Cancel()
 }
 ```
 
-> [!WARNING]
-> When assets are loaded manually, **they have to be manually unloaded too**, or else Stride will keep the assets **loaded in memory forever**.
+[!INCLUDE [content-loading-warning](../../includes/content-loading-warning.md)]
 
 ### Missing assets
 

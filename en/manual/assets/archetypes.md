@@ -21,15 +21,15 @@ In the **Asset view**, right click on the asset you want to derive from and sele
 
 ## Overriding values
 
-When changing a property of a derived asset in the **Property grid**, it will be marked as an overridden. Overridden properties are slightly brighter and bolder.
+When changing a property of a derived asset in the **Property grid**, it will be marked as overridden. Overridden properties are slightly brighter and bolder.
 
 ![](media/property-grid-overriden-property.webp)
 
-Override properties will not be updated when they are changed on the archetype.
+Overridden properties will not be updated when they are changed on the archetype.
 
 ## Reverting overrides
 
-In case you want to revert a property to use the same values as the archetype, right click on it in the **Property grid** and select **Reset to base value**.
+In case you want to revert a property override to use the same values as the archetype, right click on it in the **Property grid** and select **Reset to base value**.
 
 ## Unlink from archetype
 
@@ -37,7 +37,7 @@ If you want to turn a derived asset into a normal one (unlinking it from the arc
 
 ![](media/property-grid-reset-to-base.webp)
 
-The asset will now no longer follow changes done to the archetype.
+Now, the asset will no longer follow changes done to the archetype.
 
 ## See also
 

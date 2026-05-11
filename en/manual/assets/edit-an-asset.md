@@ -2,8 +2,6 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-Assets can be edited with **Game Studio**.
-
 Most assets are just a simple list of properties, which can be edited in the **Property grid**. However, more complex assets (such as scenes) require the use of a **dedicated editor**.
 
 ## Editing in Property grid
@@ -12,7 +10,7 @@ When you select an asset in the **Asset view**, it's properties will show up in 
 
 ![](media/property-grid-asset-properties.webp)
 
-Your changes will be reflected in the **asset preview** in real time.
+Your changes will be reflected in the **Asset preview** in real time.
 
 ![](media/asset-preview.webp)
 

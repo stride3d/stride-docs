@@ -53,9 +53,9 @@ Bundles:
 
 It's important to note that assets from optional bundles (such as DLC content) **shouldn't be referenced by assets from the default bundle**. If the other bundle is missing, Stride will fail when trying to load it's assets.
 
-However, if a bundle's assets are unreferenced, Stride will not compile them. To prevent this, make sure to **mark the appropriate assets (such as scenes) as root**. This will allow you to access the bundle's assets in code.
+However, if a bundle's assets are unreferenced, Stride will not compile them. To prevent this, make sure to **mark the appropriate assets (such as scenes) as root**. The assets will then be accessible in code.
 
-For more information about root assets, visit the [asset compilation page](asset-compilation.md).
+For more information about root assets, visit [Asset compilation](asset-compilation.md).
 
 ### Compiling behaviour
 

@@ -28,11 +28,11 @@ You can create an assignable reference to an asset in your script by creating a 
 public Model ModelAsset { get; set; }
 ```
 
-This will show up in the **Property grid** like so.
+This will show up in the **Property grid** like so:
 
 ![](media/property-grid-direct-reference-example.webp)
 
-This way, the asset will be loaded automatically. However, Stride also provides a way of **managing loading manually**. For more information, visit the [use an asset in code page](use-an-asset-in-code.md).
+This way, the asset will be loaded automatically. Stride also provides a way of **managing loading manually**. For more information, visit [Use an asset in code](use-an-asset-in-code.md).
 
 ## See also
 
