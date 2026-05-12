@@ -19,25 +19,25 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
 **Recent updates**
 
 - Manual
-  - <span class="badge text-bg-info">Updated</span> [Scripts - Best Practices](scripts/best-practice.md) - More content added
-  - <span class="badge text-bg-warning">Important</span> [Physics - Script a trigger](physics/script-a-trigger.md) - Example updated
-  - <span class="badge text-bg-warning">Important</span> [Physics - Triggers](physics/triggers.md) - Example updated 
-  - <span class="badge text-bg-info">Updated</span> [Graphics - Custom shaders](graphics/effects-and-shaders/custom-shaders.md) - Troubleshooting section added
-  - <span class="badge text-bg-success">New</span> [Glossary](glossary/index.md) - New glossary section added 
+  - <span class="badge text-bg-warning">Rewritten</span> [Get Started](get-started/index.md) - Section rewritten
+  - <span class="badge text-bg-success">New</span> [Install and update](install-and-update/index.md) - New install and update section
+  - <span class="badge text-bg-success">New</span> [Stride for Godot developers](stride-for-godot-developers/index.md) - New guide for people coming from Godot
+  - <span class="badge text-bg-success">New</span> [Project](files-and-folders/index.md) - New project section
+  - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script/index.md) - Updated types of script and created sub-pages for each script type
+- <span>Contributors</span>
+  - <span class="badge text-bg-info">Updated</span> [Contribute to the engine - Bug bounties](../contributors/engine/bug-bounties.md) - Clarified a couple of points
+- Community resources
+  - <span class="badge text-bg-info">Updated</span> [../community-resources/games-and-demos.md] - Improved "Released Games" list
+
 
 **Previous updates**
 
 - Manual
-  - <span class="badge text-bg-info">Updated</span> [Graphics - Materials - Materials for developers ](graphics/materials/materials-for-developers.md) - Modifying parameters at runtime added
-  - <span class="badge text-bg-success">New</span> [Scripts](scripts/best-practice.md) - Best Practices docs added
-  - <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
-  - <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
-  - <span class="badge text-bg-info">Updated</span> [Files and Folders](files-and-folders/distribute-a-game.md) - Game distribution steps updated
-  - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script/index.md) - Asynchronous script example improved
-  - <span class="badge text-bg-success">New</span> [Scripts - Gizmos](scripts/gizmos.md) - Description and example of the Flexible Processing system
-  - <span class="badge text-bg-success">New</span> [ECS - Flexible Processing](engine/entity-component-system/flexible-processing.md) - Description and example of the Flexible Processing system
-  - <span class="badge text-bg-info">Updated</span> [Linux - Setup and requirements](platforms/linux/setup-and-requirements.md) - Fedora OS option added
-
+  - <span class="badge text-bg-info">Updated</span> [Scripts - Best Practices](scripts/best-practice.md) - More content added
+  - <span class="badge text-bg-info">Updated</span> [Physics - Script a trigger](physics/script-a-trigger.md) - Example updated
+  - <span class="badge text-bg-info">Updated</span> [Physics - Triggers](physics/triggers.md) - Example updated 
+  - <span class="badge text-bg-info">Updated</span> [Graphics - Custom shaders](graphics/effects-and-shaders/custom-shaders.md) - Troubleshooting section added
+  - <span class="badge text-bg-success">New</span> [Glossary](glossary/index.md) - New glossary section added
 - Tutorials
   - <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Quick Tutorials section added
   - <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length
