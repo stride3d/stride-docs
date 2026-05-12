@@ -27,7 +27,7 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
 - <span>Contributors</span>
   - <span class="badge text-bg-info">Updated</span> [Contribute to the engine - Bug bounties](../contributors/engine/bug-bounties.md) - Clarified a couple of points
 - Community resources
-  - <span class="badge text-bg-info">Updated</span> [../community-resources/games-and-demos.md] - Improved "Released Games" list
+  - <span class="badge text-bg-info">Updated</span> [Games and demos](../community-resources/games-and-demos.md) - Improved "Released Games" list
 
 
 **Previous updates**
