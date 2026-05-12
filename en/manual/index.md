@@ -24,10 +24,10 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
   - <span class="badge text-bg-success">New</span> [Stride for Godot developers](stride-for-godot-developers/index.md) - New guide for people coming from Godot
   - <span class="badge text-bg-success">New</span> [Project](files-and-folders/index.md) - New project section
   - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script/index.md) - Updated types of script and created sub-pages for each script type
-- <span>Contributors</span>
+- Contributing
   - <span class="badge text-bg-info">Updated</span> [Contribute to the engine - Bug bounties](../contributors/engine/bug-bounties.md) - Clarified a couple of points
 - Community resources
-  - <span class="badge text-bg-info">Updated</span> [Games and demos](../community-resources/games-and-demos.md) - Improved "Released Games" list
+  - <span class="badge text-bg-info">Updated</span> [Games and demos](../community-resources/games-and-demos.md) - Improved the list of released games
 
 
 **Previous updates**
