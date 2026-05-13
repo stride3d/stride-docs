@@ -17,7 +17,6 @@ The world scale can be read from the [**world matrix**](matrixes.md) or by using
 // Make sure to update the world matrix before doing anything
 Entity.Transform.UpdateWorldMatrix();
 
-// Using world matrix
 var scaleVector = Entity.Transform.WorldMatrix.ScaleVector;
 
 Entity.Transform.GetWorldTransformation(out var position, out var rotation, out var scale);

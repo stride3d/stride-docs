@@ -18,10 +18,3 @@ TODO: IMAGE
 
 > [!NOTE]
 > This does not impact how the scenes are loaded at runtime.
-
-## Loading at runtime
-
-By default, Stride doesn't load sub-scenes.
-
-TODO: CHECK WHAT HAPPENS WHEN YOU LOAD SCENES VIA CONTENT MULTIPLE TIMES
-TODO: CHECK WHAT HAPPENS WHEN YOU HAVE ONE SCENE AS A SUB-SCENE OF TWO OTHER SUB-SCENES (this is incredibly difficult to explain)

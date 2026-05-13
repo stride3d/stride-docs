@@ -500,37 +500,6 @@ items:
       - name: Set the graphics platform
         href: platforms/set-the-graphics-platform.md
 
-  - name: Scenes
-    href: scenes/index.md
-    items:
-      - name: Create a scene
-        href: scenes/create-a-scene.md
-      - name: Sub-scenes
-        href: scenes/sub-scenes.md
-      - name: Scene loading
-        href: scenes/scene-loading.md
-      - name: Entities
-        href: scenes/entities/index.md
-        items:
-          - name: Create an entity
-            href: scenes/entities/create-an-entity.md
-          - name: Components
-            href: scenes/entities/components.md
-          - name: Transform
-            href: scenes/entities/transform/index.md
-            items:
-              - name: Position
-                href: scenes/entities/transform/position.md
-              - name: Rotation
-                href: scenes/entities/transform/rotation.md
-                items:
-                  - name: Quaternion
-                    href: scenes/entities/transform/quaternions.md
-              - name: Scale
-                href: scenes/entities/transform/scale.md
-              - name: Matrixes
-                href: scenes/entities/transform/matrixes.md
-
   - name: Project
     href: files-and-folders/index.md
     items:
@@ -571,6 +540,37 @@ items:
             href: files-and-folders/building-the-game/build-file-structure.md
           - name: Distributing
             href: files-and-folders/building-the-game/distributing.md
+
+  - name: Scenes
+    href: scenes/index.md
+    items:
+      - name: Create a scene
+        href: scenes/create-a-scene.md
+      - name: Sub-scenes
+        href: scenes/sub-scenes.md
+      - name: Scene loading
+        href: scenes/scene-loading.md
+      - name: Entities
+        href: scenes/entities/index.md
+        items:
+          - name: Add or remove an entity
+            href: scenes/entities/add-or-remove-an-entity.md
+          - name: Components
+            href: scenes/entities/components.md
+          - name: Transform
+            href: scenes/entities/transform/index.md
+            items:
+              - name: Position
+                href: scenes/entities/transform/position.md
+              - name: Rotation
+                href: scenes/entities/transform/rotation.md
+                items:
+                  - name: Quaternion
+                    href: scenes/entities/transform/quaternions.md
+              - name: Scale
+                href: scenes/entities/transform/scale.md
+              - name: Matrixes
+                href: scenes/entities/transform/matrixes.md
 
   - name: Scripts
     href: scripts/index.md

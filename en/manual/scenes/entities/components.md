@@ -2,9 +2,20 @@
 
 Every entity has a list of **components** that define what the entity is, how it looks and how it behaves.
 
+## Create a new component
+
+Stride allows you to create your own components by making your own scripts. For more information, visit [Scripts](../../scripts/index.md).
+
 ## Add a component in Game Studio
 
-## Add a component at runtime
+## Add a component in code
+
+To add a component, use `Entity.Add`.
+
+```csharp
+var component = new MyComponent();
+Entity.Add(component);
+```
 
 ## Get a component in code
 
@@ -26,5 +37,3 @@ foreach (var item in Entity)
     // do something with the component
 }
 ```
-
-## Create a new component
