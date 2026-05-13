@@ -1,60 +1,80 @@
 ﻿# Graphics API
 
-Graphics APIs are responsible for performing basic rendering operations. They differ in platform availability and have their own benefits and drawbacks.
+**Graphics APIs** are responsible for performing basic rendering operations. They differ in platform availability and have their own benefits and drawbacks.
 
-## Changing Graphics API
+## Supported graphics APIs
 
-To change the Graphics API that your project is using, add the following line to the `PropertyGroup` of a [platform package's](../files-and-folders/project-packages/index.md#platform-packages) `.csproj` file:
+Stride has support for the following APIs:
 
-`<StrideGraphicsApi>NameOfGraphicsAPIHere</StrideGraphicsApi>`
+### Direct3D11
 
-![image](https://user-images.githubusercontent.com/5742236/155832596-48165499-51ac-4026-9140-30b35dfa4f0b.png)
+**Available on platforms:** Windows
+
+Direct3D is a graphics API developed by Microsoft. Stride's implementation for version 11 is the most mature, which is why it's used as the default on Windows.
+
+### Direct3D12
+
+**Available on platforms:** Windows
+
+Version 12 of Direct3D is the newest release of the API. Currently, Stride's implementation for it isn't as stable as the one for 11, which is why it isn't used by default.
+
+### Vulkan
+
+**Available on platforms:** Windows, Linux, MacOS, Android, iOS
+
+Vulkan is a modern graphics API that provides great performance benefits and control over how rendering is performed. It's used as the default on non-Windows platforms.
+
+## Changing the graphics API
+
+To change the graphics API used by your project, add the following line to the `PropertyGroup` of a [platform package's](../files-and-folders/project-packages/index.md#platform-packages) `.csproj` file:
+
+```xml
+<StrideGraphicsApi>NameOfGraphicsAPIHere</StrideGraphicsApi>
+```
+
+![](media/graphics-api-xml-property.webp)
 
 Stride supports the following values:
 
 * Direct3D11
 * Direct3D12
 * Vulkan
-* OpenGLES
 * Null
-
-## Supported Graphics APIs
-
-### Direct3D11
-
-**Available on platforms:** Windows
-
-Direct3D is a graphics API developed by Microsoft for Windows. Stride's implementation for version 11 is the most mature one out of all, which is why it's used as the default.
-
-### Direct3D12
-
-**Available on platforms:** Windows
-
-Version 12 of Direct3D is the newest version of the API. Currently, Stride's implementation for it isn't as stable as the one for 11, which is why it isn't used as default.
-
-### Vulkan
-
-**Available on platforms:** Windows, Linux, Android
-
-Vulkan is a modern graphics API that provides great performance benefits and control over how rendering is done. It's the most recommended choice for **Linux**.
-
-### OpenGLES
-
-**Available on platforms:** Windows, Linux, Android
-
-OpenGLES is a subset of OpenGL designed for embedded systems (such as smartphones).
 
 ## Checking the API at runtime
 
 You can check which API your project is using from [`GraphicsDevice.Platform`](xref:Stride.Graphics.GraphicsDevice.Platform).
 
-## Building the engine with a different Graphics API
+```csharp
+public override void Update()
+{
+    DebugText.Print($"Graphics API: {GraphicsDevice.Platform}", new(50, 50));
+}
+```
 
-When building the engine from source code, it will be built with support for only `Direct3D11`. You can change that using build parameters by setting `StrideGraphicsApiDependentBuildAll` to true.
+## Building the engine with a different API
+
+When building the engine from source code, it will be built with support only for the default API for your OS. You can change that by setting `StrideGraphicsApiDependentBuildAll` to `true` in build parameters.
 
 ```bash
-dotnet build ./build/Stride.sln /p:StrideGraphicsApiDependentBuildAll=true
+msbuild -p:StrideGraphicsApiDependentBuildAll=true ./build/Stride.sln
 ```
+
+To only build selected api's, set the `StrideGraphicsApis` property to your desired value.
+
+### [Powershell](#tab/powershell)
+
+```powershell
+msbuild -p:StrideGraphicsApis=`"Api1`;Api2`"
+```
+
+### [Bash](#tab/bash)
+
+```bash
+msbuild -p:StrideGraphicsApis=\"Api1\;Api2\"
+```
+
+---
 
 ## See also
 
