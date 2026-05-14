@@ -10,6 +10,6 @@ For example: if two entities are 1m apart from each other and the parent's scale
 
 TODO: VISUALIZATION
 
-We refer to that spacing relative to their parent, as **local-space**, while the "real world" result as **world-space**.
+Transforms relative to their parent are referred to as **local-space** and the "real world" result as **world-space**.
 
 Typically, we work with values from the **local-space**, but sometimes, if we need to access entities nested in other entities, we use their **world** values.

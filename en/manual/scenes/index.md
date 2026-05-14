@@ -6,7 +6,7 @@
 
 On top of containing entities and their children, scenes can also hold other scenes in themselves.
 
-An example of this would be a scene called **Level1** containing sub-scenes with different sections that are dynamically loaded depending on where the player is in the level.
+An example of this would be a scene called **Level1** containing sub-scenes with different sections that are dynamically loaded depending on where the player is in the world.
 
 TODO: EXAMPLE IMAGE OF STARBREACH MAYBE
 

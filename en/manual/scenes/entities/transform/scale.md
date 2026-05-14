@@ -19,7 +19,7 @@ Entity.Transform.UpdateWorldMatrix();
 
 var scaleVector = Entity.Transform.WorldMatrix.ScaleVector;
 
-Entity.Transform.GetWorldTransformation(out var position, out var rotation, out var scale);
+Entity.Transform.GetWorldTransformation(out _, out _, out var scale);
 ```
 
 Setting the world scale is done by dividing it by the parent's
