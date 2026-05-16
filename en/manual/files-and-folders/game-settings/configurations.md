@@ -1,6 +1,6 @@
 # Configurations
 
-Systems in Stride separate their settings into **configurations** (such as audio or physics). Most need to be added to the game settings asset manually. If a configuration isn't added when running the game, Stride will create a blank one.
+Systems in Stride separate their settings into **configurations**. Most need to be added to the game settings asset manually. If a configuration doesn't exist in game settings while the game is running, Stride will create a blank one.
 
 You can add a configuration by pressing **➕ Add configuration** and selecting the type of configuration which you want to add.
 
@@ -36,7 +36,7 @@ For more information about audio, visit [Audio](../../audio/index.md).
 
 ### Bepu
 
-TODO: IMAGE
+![](../../physics/media/Bepu-configuration.png)
 
 | Property | Description |
 | :-- | :-- |
