@@ -159,11 +159,6 @@ items:
             href: game-studio/prefabs/override-prefab-properties.md
           - name: Prefab models
             href: game-studio/prefabs/prefab-models.md
-      - name: Game settings
-        href: game-studio/game-settings.md
-        items:
-          - name: Splash screen
-            href: game-studio/splash-screen.md
       - name: World units
         href: game-studio/world-units.md
 
@@ -523,6 +518,17 @@ items:
             href: files-and-folders/external-packages/using-nuget-packages.md
           - name: Publish a NuGet package
             href: files-and-folders/external-packages/publish-a-nuget-package.md
+      - name: Game Settings
+        href: files-and-folders/game-settings/index.md
+        items:
+          - name: Basic properties
+            href: files-and-folders/game-settings/basic-properties.md
+          - name: Configurations
+            href: files-and-folders/game-settings/configurations.md
+          - name: Splash screen
+            href: files-and-folders/game-settings/splash-screen.md
+          - name: Accessing in code
+            href: files-and-folders/game-settings/accessing-in-code.md
       - name: Version control
         href: files-and-folders/version-control.md
       - name: Cached files
