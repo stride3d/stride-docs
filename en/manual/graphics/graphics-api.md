@@ -65,7 +65,7 @@ To only build selected api's, set the `StrideGraphicsApis` property to your desi
 ### [Powershell](#tab/powershell)
 
 ```powershell
-msbuild -p:StrideGraphicsApis=`"Api1`;Api2`"
+msbuild -p:StrideGraphicsApis=`"Api1;Api2`"
 ```
 
 ### [Bash](#tab/bash)
