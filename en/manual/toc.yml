@@ -548,6 +548,8 @@ items:
         href: scenes/create-a-scene.md
       - name: Sub-scenes
         href: scenes/sub-scenes.md
+      - name: Structuring scenes
+        href: scenes/structuring-scenes.md
       - name: Scene loading
         href: scenes/scene-loading.md
       - name: Entities

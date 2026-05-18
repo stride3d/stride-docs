@@ -30,9 +30,28 @@ To unload a scene, remove it from it's parent and unload it using `Content.Unloa
 ```csharp
 public void UnloadScene(Scene scene)
 {
-    Entity.Scene.Children.Remove(scene);
+    scene.Parent.Children.Remove(scene);
     Content.Unload(scene);
 }
 ```
 
 ## Reload a scene
+
+Scene reloading can be achieved by first **unloading a scene** and then **loading it** using the **content system**. This will make Stride reload scene data from disk, removing all changes done to it during runtime.
+
+```csharp
+public void ReloadScene(Scene scene, UrlReference<Scene> sceneUrl)
+{
+    var parent = scene.Parent;
+
+    // Remove the scene from the world
+    parent.Children.Remove(scene);
+
+    // Reload from disk
+    Content.Unload(sceneUrl);
+    scene = Content.Load(sceneUrl);
+
+    // Add the scene to the world
+    parent.Children.Add(scene);
+}
+```
