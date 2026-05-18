@@ -46,7 +46,7 @@ When using the stack, the method won't require a collection anymore and instead 
 public void Overlap()
 {
     // Allocate a buffer that can hold up to 16 elements
-    Span<CollidableStack> buffer = stackalloc CollidableStack[16];
+    Stack<CollidableStack> buffer = stackalloc CollidableStack[16];
     
     // Iterate over all results
     foreach (var collidable in simulation.Overlap(shape, pose, buffer))
@@ -67,7 +67,7 @@ This query works almost in the same way as the others. The main difference is th
 public void Overlap()
 {
     // Allocate a buffer that can hold up to 16 elements
-    Span<CollidableStack> buffer = stackalloc CollidableStack[16];
+    Stack<CollidableStack> buffer = stackalloc CollidableStack[16];
     
     // Iterate over all results
     foreach (var info in simulation.OverlapInfo(shape, pose, buffer))
@@ -108,6 +108,9 @@ public bool CheckGrounded(BodyComponent body)
     Stack<CollidableStack> buffer = stackalloc CollidableStack[1];
     
     // If there are any collisions under the player, the player is on the ground
-    return sim.Overlap(sphere, pose, buffer, mask).Any();
+    foreach (var item in sim.Overlap(sphere, pose, buffer, mask))
+        return true;
+
+    return false;
 }
 ```
