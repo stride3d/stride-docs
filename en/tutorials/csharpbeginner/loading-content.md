@@ -6,7 +6,7 @@ This C# Beginner tutorial covers how to load content from code.
 
 Assets like models, textures, sound etc can be loaded from during runtime. At that point we no longer speak of assets but of 'content'.
 
-This tutorial specifically loads content of the `Model` type. Loaded content that is no longer required in your scene, should be unloaded again so save up memory. For more information on assets see the [use an asset in code page](../../manual/assets/use-an-asset-in-code.md).
+This tutorial specifically loads content of the `Model` type. Loaded content that is no longer required in your scene, should be unloaded again so save up memory. For more information on assets see [Use an asset in code](../../manual/assets/use-an-asset-in-code.md).
 
 ![Loading content](media/loading-content.webp)
 
