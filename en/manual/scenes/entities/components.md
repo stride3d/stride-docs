@@ -8,32 +8,76 @@ Stride allows you to create your own components by making your own scripts. For 
 
 ## Add a component in Game Studio
 
-## Add a component in code
+1. Select an entity in the **scene editor hierarchy**. This will make your entity's components show up in the **Property grid**.
+    
+    TODO: IMAGE
 
-To add a component, use `Entity.Add`.
+2. Press the **➕ Add component** button located at the top and select your component.
+    
+    TODO: IMAGE
+
+## Manage components in code
+
+When coding in Stride, you are given full control over components in entities.
+
+To add a component use [`Entity.Add`](xref:Stride.Engine.Entity.Add*).
 
 ```csharp
-var component = new MyComponent();
-Entity.Add(component);
+var myComponent = new MyComponent();
+Entity.Add(myComponent);
 ```
 
-## Get a component in code
-
-If you need to get ahold of a component in an entity, you can get it with `Entity.Get<T>` or `Entity.GetAll<T>` where `T` is the component type.
+To get a component use [`Entity.Get`](xref:Stride.Engine.Entity.Get*), [`Entity.GetAll`](xref:Stride.Engine.Entity.GetAll*) or [`Entity.GetOrCreate`](xref:Stride.Engine.Entity.GetOrCreate*).
 
 ```csharp
-var audio = Entity.Get<AudioEmitterComponent>();
-audio["main"].Play();
+// Get a single component
+var component = Entity.Get<MyComponent>();
+// Get all components
+var component = Entity.GetAll<MyComponent>();
+// Add a new component if it doesn't exist and then get it
+var component = Entity.GetOrCreate<MyComponent>();
 ```
 
-> [!CAUTION]
-> TODO: BEST PRACTICES NOTICE
+> [!WARNING]
+> We recommend you avoid getting components directly through code and instead create a property to assign them in the **Property grid**.
+> 
+> ```csharp
+> public class Example : StartupScript
+> {
+>     public MyComponent ComponentToAssign { get; set; }
+> }
+> ```
+> 
+> TODO: IMAGE OF SCRIPT IN THE PROPERTY GRID
+> 
+> For more information visit [Best practices](../../scripts/best-practice.md).
 
-You can also enumerate over all components in an entity.
+You can iterate over all components of an entity.
 
 ```csharp
 foreach (var item in Entity)
 {
-    // do something with the component
+    if (item is MyComponent component)
+    {
+        // Your code here
+    }
 }
+```
+
+You can access or modify properties and fields or call methods of any component.
+
+```csharp
+component.SomeProperty = "New value";
+component.DoSomething();
+```
+
+To remove a component, use [`Entity.Remove`](xref:Stride.Engine.Entity.Remove*) or [`Entity.RemoveAll`](xref:Stride.Engine.Entity.RemoveAll*).
+
+```csharp
+// Remove a specific component
+Entity.Remove(component);
+// Remove the first component of type
+Entity.Remove<MyComponent>();
+// Remove all component of type
+Entity.RemoveAll<MyComponent>();
 ```

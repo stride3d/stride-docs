@@ -4,6 +4,14 @@ This page explains how to add or remove an entity in **Game Studio** and at runt
 
 ## Add an entity in Game Studio
 
+You can open the entity creation menu by pressing the ➕ icon at the top of the hierarchy or right clicking anywhere in the hierarchy or scene view.
+
+TODO: IMAGE
+
+Here, you can select one of the entity templates or create an empty entity.
+
+TODO: IMAGE
+
 ## Add an entity in code
 
 Entities can be created at runtime or instantiated from a prefab.
@@ -37,7 +45,7 @@ These entities exist **outside of the game world** in an inactive state: all scr
 * Assigned a parent:
 
     ```csharp
-    myNewEntity.Transform.Parent = myNewEntity;
+    myNewEntity.Transform.Parent = myParent;
     ```
 
 * Added as a child of an entity:
@@ -47,6 +55,10 @@ These entities exist **outside of the game world** in an inactive state: all scr
     ```
 
 ## Remove an entity in Game Studio
+
+To remove an entity, right click on it and select **Delete** or alternatively press the **delete key** on your keyboard.
+
+TODO: IMAGE
 
 ## Remove an entity in code
 
