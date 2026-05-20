@@ -55,10 +55,12 @@ runs:
   - name: Restore npm dependencies
     run: npm install
     working-directory:  docfx-build/templates
+    shell: pwsh
 
   - name: Build site templates
     run: npm run build
     working-directory:  docfx-build/templates
+    shell: pwsh
 
   - name: Add night build NuGet source
     run: |
