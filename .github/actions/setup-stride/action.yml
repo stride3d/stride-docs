@@ -23,6 +23,23 @@ runs:
     with:
       dotnet-version: 10.x
 
+  - name: Configure MSBuild SDK resolver
+    run: |
+      $dotnetRoot = Split-Path (Get-Command dotnet).Source -Parent
+      $sdkVersion = & dotnet --version
+      $msbuildSdksPath = Join-Path $dotnetRoot "sdk\$sdkVersion\Sdks"
+
+      echo "DOTNET_ROOT=$dotnetRoot" >> $env:GITHUB_ENV
+      echo "MSBuildSDKsPath=$msbuildSdksPath" >> $env:GITHUB_ENV
+
+      Write-Host "DOTNET_ROOT=$dotnetRoot"
+      Write-Host "MSBuildSDKsPath=$msbuildSdksPath"
+
+      if (-not (Test-Path $msbuildSdksPath)) {
+        throw "MSBuildSDKsPath does not exist: $msbuildSdksPath"
+      }
+    shell: pwsh
+
   - name: Set Version in docfx.json
     run: |
       $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
