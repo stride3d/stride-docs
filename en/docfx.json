@@ -27,6 +27,7 @@
           "src": "../../stride",
           "properties": {
             "TargetFramework": "net10.0",
+            "LangVersion": "preview",
             "StrideBuildDoc": "true"
           }
         },
@@ -38,6 +39,7 @@
           "src": "../../stride",
           "properties": {
             "TargetFramework": "net10.0-windows7.0",
+            "LangVersion": "preview",
             "StrideBuildDoc": "true"
           }
         }
