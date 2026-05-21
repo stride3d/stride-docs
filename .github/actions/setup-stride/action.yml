@@ -31,9 +31,11 @@ runs:
 
       echo "DOTNET_ROOT=$dotnetRoot" >> $env:GITHUB_ENV
       echo "MSBuildSDKsPath=$msbuildSdksPath" >> $env:GITHUB_ENV
+      echo "MSBuildEnableWorkloadResolver=false" >> $env:GITHUB_ENV
 
       Write-Host "DOTNET_ROOT=$dotnetRoot"
       Write-Host "MSBuildSDKsPath=$msbuildSdksPath"
+      Write-Host "MSBuildEnableWorkloadResolver=false"
 
       if (-not (Test-Path $msbuildSdksPath)) {
         throw "MSBuildSDKsPath does not exist: $msbuildSdksPath"
