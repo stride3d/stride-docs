@@ -1,10 +1,10 @@
 # Windows
 
-Windows is the most popular computer operating system for playing video games in the world.
+Windows is the most popular desktop operating system for playing video games in the world.
 
 ## Development support
 
-Windows has full support for developing games with Stride. All tools are available for it, including **Game Studio** (the editor).
+Stride fully supports developing games on Windows. All tools are available for it, including **Game Studio** (the editor).
 
 ## General support
 
