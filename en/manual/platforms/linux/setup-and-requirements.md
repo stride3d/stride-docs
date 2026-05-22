@@ -103,7 +103,7 @@ sudo dnf install freeimage-devel
 
 Freeimage isn't available in Arch's package manager, but it can be manually compiled from source code.
 
-You can get the source code from the [freeimage website](https://freeimage.sourceforge.io/download.html) (download the source distribution).
+You can get the source code from [the freeimage website](https://freeimage.sourceforge.io/download.html) (download the source distribution).
 
 Alternatively, you can use a tool, such as `yay` to obtain the package from the AUR.
 
