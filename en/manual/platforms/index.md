@@ -6,10 +6,9 @@ Stride is a cross-platform engine, which means that you can create a single game
 
 ## Supported development platforms
 
-This is a list of all platforms that Stride supports for developing games.
-
 * Windows 10, 11
 * Linux (code-only)
+* MacOS (code-only)
 
 > [!NOTE]
 > **Game Studio** is being rewritten to be cross-platform. Currently however, it's not possible to use it outside of **Windows**.
@@ -36,7 +35,7 @@ if (Platform.Type == PlatformType.Android)
 ```
 
 > [!WARNING]
-> Stride also sets [preprocessor variables](../scripts/preprocessor-variables.md) depending on the current platform, however, it's generally advised to avoid using them. For more information read [Best practices](../scripts/best-practice.md).
+> Stride also sets [preprocessor variables](../scripts/preprocessor-variables.md) for some platforms, however, it's generally advised to avoid using them.
 
 ## In this section
 
