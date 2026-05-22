@@ -1,6 +1,6 @@
 # Linux
 
-Linux is a suite of open source operating systems. It isn't a single product, but instead a base for creating custom operating systems, called **distributions**. Recently, it has been growing in popularity among gamers due to devices such as the Steam Deck.
+**Linux** is a suite of open source operating systems. It isn't a single product, but instead a base for creating custom OS's, called **distributions**. Recently, it has been growing in popularity among gamers due to devices such as the Steam Deck.
 
 It is possible to run games built for Windows on Linux using **compatibility layers** such as Proton, which is built into Steam. This however can decrease performance, making native builds a more preferable option.
 

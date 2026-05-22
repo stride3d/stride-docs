@@ -1,6 +1,6 @@
 # MacOS
 
-MacOS is a desktop operating system used on Apple devices.
+**MacOS** is a desktop operating system used on [Apple](https://apple.com) devices.
 
 ## Development support
 
