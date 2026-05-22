@@ -104,6 +104,11 @@ runs:
   #   run: dotnet tool update -g docfx --version 2.78.5
   #   shell: pwsh
 
+  - name: Prebuild Stride
+    run: dotnet build build\Stride.sln -c Release
+    working-directory: stride
+    shell: pwsh
+
   - name: Build documentation
     run: |
       $arguments = @()
