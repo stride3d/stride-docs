@@ -18,13 +18,13 @@ This is a list of all platforms that Stride supports for developing games.
 
 * Windows 10, 11
 * Linux
+* MacOS (untested)
 * Android
-* MacOS (currently broken)
 * iOS (untested)
 
 ## Platform specific code
 
-Each platform has it's own [project package](#) that contains the [entry point](#) and other exclusive code for that platform.
+Each platform has it's own [project package](../files-and-folders/project-packages/index.md) that contains the [entry point](../files-and-folders/project-packages/index.md#entry-point) and other exclusive code for that platform.
 
 Alternatively, you can also check the current platform using [Platform.Type](xref:Stride.Core.Platform.Type).
 
@@ -35,10 +35,8 @@ if (Platform.Type == PlatformType.Android)
 }
 ```
 
-TODO: add links
-
 > [!WARNING]
-> Stride also provides [preprocessor variables](../scripts/preprocessor-variables.md) for doing this, however, it's generally advised to avoid using them.
+> Stride also sets [preprocessor variables](../scripts/preprocessor-variables.md) depending on the current platform, however, it's generally advised to avoid using them. For more information read [Best practices](../scripts/best-practice.md).
 
 ## In this section
 
