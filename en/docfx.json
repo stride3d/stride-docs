@@ -4,7 +4,7 @@
       "src": [
         {
           "files": [
-            "sources/core/Stride.Core/Stride.Core.csproj",
+            "sources/core/Stride.Core/Stride.Core.csproj"
           ],
           "src": "../../stride",
           "properties": {
