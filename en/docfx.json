@@ -49,7 +49,7 @@
       "includePrivateMembers": false,
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
-      "noRestore": false,
+      "noRestore": true,
       "namespaceLayout": "flattened",
       "memberLayout": "samePage",
       "allowCompilationErrors": false
