@@ -10,32 +10,38 @@ If you're developing for multiple platforms, you often need to write custom code
 
 ## Platforms
 
-| Variable                               | Value                          |
-| -------------------------------------- | ------------------------------ |
-| STRIDE_PLATFORM_WINDOWS         | Windows (standard and RT)      |
-| STRIDE_PLATFORM_WINDOWS_DESKTOP | Windows (non-RT)               |
-| STRIDE_PLATFORM_MONO_MOBILE     | Xamarin.iOS or Xamarin.Android |
-| STRIDE_PLATFORM_ANDROID         | Xamarin.Android                |
-| STRIDE_PLATFORM_IOS             | Xamarin.iOS                    |
+| Variable | Platform |
+| :-- | :-- |
+| STRIDE_PLATFORM_DESKTOP | Any desktop platform (Windows, Linux or Macos) |
+| STRIDE_PLATFORM_MONO_MOBILE | Any mobile platform (Android or iOS) |
+| STRIDE_PLATFORM_ANDROID | Android |
+| STRIDE_PLATFORM_IOS | iOS |
+
+Additionally, msbuild provides these variables:
+
+| Variable | Platform |
+| :-- | :-- |
+| WINDOWS | Windows |
+| MACOS | MacOS |
 
 ## Graphics APIs
 
-| Variable                                      | Value                 |
-| --------------------------------------------- | --------------------- |
-| STRIDE_GRAPHICS_API_DIRECT3D   | Direct3D 11           |
-| STRIDE_GRAPHICS_API_OPENGL     | OpenGL (Core and ES)  |
-| STRIDE_GRAPHICS_API_OPENGLCORE | OpenGL Core (Desktop) |
-| STRIDE_GRAPHICS_API_OPENGLES   | OpenGL ES             |
-| STRIDE_GRAPHICS_API_VULKAN     | Vulkan                |
+| Variable | Graphics API |
+| :-- | :-- |
+| STRIDE_GRAPHICS_API_DIRECT3D | Direct3D 11 or 12 |
+| STRIDE_GRAPHICS_API_DIRECT3D11 | Direct3D 11 |
+| STRIDE_GRAPHICS_API_DIRECT3D12 | Direct3D 12 |
+| STRIDE_GRAPHICS_API_VULKAN | Vulkan |
+| STRIDE_GRAPHICS_API_NULL | Null |
 
 ## Example
 
 ```cs
-#if STRIDE_PLATFORM_WINDOWS
-    // Windows-specific code goes here...
+#if STRIDE_PLATFORM_DESKTOP
+    // Desktop-specific code goes here...
 
-#elif STRIDE_PLATFORM_MONO_MOBILE
-    // iOS and Android-specific code goes here...
+#elif STRIDE_PLATFORM_ANDROID
+    // Android-specific code goes here...
 
 #else
     // Other platform code goes here...
