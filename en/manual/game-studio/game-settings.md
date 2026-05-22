@@ -160,13 +160,13 @@ You can override settings for particular platforms, graphics APIs, and so on. Fo
 
 1. With the **GameSettings** asset selected, in the **Property Grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
-    ![Select graphics platform](../platforms/media/add-override.png)
+    ![Select graphics platform](/media/add-override.png)
 
     Game Studio adds an override.
 
 2. In the new override, next to **Platforms**, select the platforms you want the override to apply to. You can select as many as you need.
 
-    ![Select graphics platform override](../platforms/media/select-override-platform.png)
+    ![Select graphics platform override](/media/select-override-platform.png)
 
 3. **Optional**: If you want this override to apply only to a specific GPU platform, choose it from the **Specific filter** drop-down list.
 
@@ -176,7 +176,7 @@ You can override settings for particular platforms, graphics APIs, and so on. Fo
 
 4. In the **Configuration** drop-down menu, select the kind of setting you want to override (**Editor**, **Texture**, **Rendering** or **Physics**).
 
-    ![Select graphics platform override](../platforms/media/select-override-configuration.png)
+    ![Select graphics platform override](media/select-override-configuration.png)
 
 5. Set the options you want to override.
 
