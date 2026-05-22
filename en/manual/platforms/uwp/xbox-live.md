@@ -1,5 +1,7 @@
 # Xbox Live
 
+> [!INCLUDE [out-of-date-page](../../../includes/out-of-date-page.md)]
+
 This page explains how to configure your project to work with Xbox Live.
 
 ## 1. Before you start

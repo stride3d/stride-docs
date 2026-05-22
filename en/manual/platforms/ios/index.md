@@ -4,8 +4,9 @@ iOS is an operating system used on mobile devices made by Apple.
 
 ## General support
 
-Building games for iOS is currently untested.
+All of Stride's core features should work on iOS. You might run into issues when using certain systems (such as video).
 
-## Building
+Stride supports building for iOS, but it hasn't been tested in a while. There might be problems that may not be easily solvable without modifications to the engine.
 
-iOS applications, which includes games made with Stride, can only be built on devices using MacOS.
+> [!NOTE]
+> All iOS applications (including games made with Stride) **can only be built on devices running MacOS**.
