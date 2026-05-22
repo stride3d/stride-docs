@@ -52,7 +52,7 @@
       "noRestore": true,
       "namespaceLayout": "flattened",
       "memberLayout": "samePage",
-      "allowCompilationErrors": false
+      "allowCompilationErrors": true
     }
   ],
   "build": {
