@@ -1,6 +1,6 @@
 # MacOS
 
-**MacOS** is a desktop operating system used on [Apple](https://apple.com) devices.
+**MacOS** is a desktop operating system used by [Apple](https://apple.com) devices.
 
 ## Development support
 
@@ -14,6 +14,6 @@ Alternatively, it is possible to create Stride games on MacOS using a **code-onl
 
 ## General support
 
-All of Stride's core features should work on MacOS. However, you might run into issues when using certain systems (such as video).
+All of Stride's core features **should** work on MacOS. However, you might run into issues when using certain systems (such as video).
 
-Stride supports building for MacOS, but it hasn't been tested in a while. There might be problems that may not be easily solvable without modifications to the engine.
+Stride supports building for MacOS, but **it hasn't been tested in a while**. There might be problems that may not be easily solvable without modifications to the engine.

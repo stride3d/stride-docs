@@ -1,10 +1,10 @@
 # Setup and requirements
 
-This page describes how to setup your computer in order to develop and play Stride games.
+This page describes how to setup your Linux machine in order to develop and play Stride games.
 
 ## Setup
 
-In order to run games made for Linux, you'll need a Linux PC with a graphics card that supports Vulkan along with the following packages:
+In order to run games made for Linux, you'll need a Linux PC with a graphics card that supports Vulkan, along with the following packages:
 
 * [FreeType](#freetype)
 * [OpenAL](#openal)
@@ -101,14 +101,16 @@ sudo dnf install freeimage-devel
 
 ### [Arch](#tab/arch)
 
-Freeimage isn't available in Arch's package manager, but it can be manually compiled from source code.
+Freeimage isn't available in Arch's package manager, but it can be manually compiled from source code. You can get the source code from [the freeimage website](https://freeimage.sourceforge.io/download.html) (download the source distribution).
 
-You can get the source code from [the freeimage website](https://freeimage.sourceforge.io/download.html) (download the source distribution).
-
-Alternatively, you can use a tool, such as `yay` to obtain the package from the AUR.
+Alternatively, you can use a tool such as `yay` to obtain the package from the AUR.
 
 ```bash
 yay -S freeimage
 ```
 
 ---
+
+## See also
+
+* [Building the game](../../files-and-folders/building-the-game/index.md)

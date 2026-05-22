@@ -9,3 +9,7 @@ Stride fully supports developing games on Windows. All tools are available for i
 ## General support
 
 All of Stride's features are fully supported on Windows.
+
+## See also
+
+* [Game Studio](../../game-studio/index.md)
