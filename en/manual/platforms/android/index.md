@@ -1,6 +1,6 @@
 # Android
 
-Android is a mobile operating system developed by Google used in most smarthphones and tablets.
+**Android** is a mobile operating system developed by [Google](https://about.google/) used in most smarthphones and tablets.
 
 ## General support
 

@@ -6,20 +6,20 @@ Stride is a cross-platform engine, which means that you can create a single game
 
 ## Supported development platforms
 
-* Windows 10, 11
-* Linux (code-only)
-* MacOS (code-only)
+* [Windows](windows/index.md) 10, 11
+* [Linux](linux/index.md) (code-only)
+* [MacOS](macos/index.md) (code-only)
 
 > [!NOTE]
 > **Game Studio** is being rewritten to be cross-platform. Currently however, it's not possible to use it outside of **Windows**.
 
 ## Supported target platforms
 
-* Windows 10, 11
-* Linux
-* MacOS (untested)
-* Android
-* iOS (untested)
+* [Windows](windows/index.md) 10, 11
+* [Linux](linux/index.md)
+* [MacOS](macos/index.md) (untested)
+* [Android](android/index.md)
+* [iOS](ios/index.md) (untested)
 
 ## Platform specific code
 
@@ -41,10 +41,11 @@ if (Platform.Type == PlatformType.Android)
 
 * [Windows](windows/index.md)
 * [UWP](uwp/index.md)
-    * [Xbox Live](uwp/xbox-live.md)
+  * [Xbox Live](uwp/xbox-live.md)
 * [Linux](linux/index.md)
+  * [Setup and requirements](linux/setup-and-requirements.md)
 * [MacOS](macos/index.md)
 * [Android](android/index.md)
 * [iOS](ios/index.md)
+  * [Build guide](ios/build-guide.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
-* [Set the graphics platform](set-the-graphics-platform.md)

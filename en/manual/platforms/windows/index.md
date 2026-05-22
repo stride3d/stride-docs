@@ -1,6 +1,6 @@
 # Windows
 
-Windows is the most popular desktop operating system for playing video games in the world.
+**Windows** is the most popular desktop operating system for playing video games in the world.
 
 ## Development support
 
