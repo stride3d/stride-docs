@@ -4,7 +4,7 @@ MacOS is a desktop operating system used on Apple devices.
 
 ## Development support
 
-Currently, MacOS is only **partially supported**. It's not possible to run **Game Studio** on it.
+Currently, MacOS is only **partially supported**. It's not possible to run **Game Studio**  (the editor) on it.
 
 However, it is possible to code and build games natively, meaning that when in a team, some programmers could work on a project using MacOS for tasks that don't require the editor.
 
