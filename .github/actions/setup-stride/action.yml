@@ -91,6 +91,31 @@ runs:
     working-directory: docfx-build
     shell: pwsh
 
+  - name: Install MSVC ARM64/ARM64EC build tools
+    run: |
+      $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+      $installer = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vs_installer.exe"
+
+      $installPath = & $vswhere -latest -products * -property installationPath
+
+      if (-not $installPath) {
+        throw "Visual Studio installation not found."
+      }
+
+      Write-Host "Visual Studio install path: $installPath"
+
+      Start-Process -FilePath $installer -ArgumentList @(
+        "modify",
+        "--installPath", $installPath,
+        "--add", "Microsoft.VisualStudio.Component.VC.Tools.ARM64",
+        "--add", "Microsoft.VisualStudio.Component.VC.Tools.ARM64EC",
+        "--quiet",
+        "--norestart",
+        "--nocache",
+        "--wait"
+      ) -Wait -NoNewWindow
+    shell: pwsh
+
   - name: Build Install DocFX
     run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
     working-directory: docfx-build
@@ -104,10 +129,10 @@ runs:
   #   run: dotnet tool update -g docfx --version 2.78.5
   #   shell: pwsh
 
-  - name: Prebuild Stride
-    run: dotnet build build\Stride.sln -c Release
-    working-directory: stride
-    shell: pwsh
+  # - name: Prebuild Stride
+  #   run: dotnet build build\Stride.sln -c Release
+  #   working-directory: stride
+  #   shell: pwsh
 
   - name: Build documentation
     run: |
