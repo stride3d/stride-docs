@@ -18,6 +18,11 @@ on:
         required: true
         default: true
         type: boolean
+      strideBranch:
+        description: Stride branch to checkout
+        required: true
+        default: master
+        type: string
 
 jobs:
   build:
@@ -38,6 +43,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         skip-pdf-building: ${{ inputs.skipPdfBuilding }}
         skip-api-building: ${{ inputs.skipApiBuilding }}
+        stride-branch: ${{ inputs.strideBranch }}
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v7

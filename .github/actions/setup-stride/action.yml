@@ -13,6 +13,10 @@ inputs:
     description: 'Skip API building when set to true'
     required: false
     default: 'false'
+  stride-branch:
+    description: 'Stride branch to checkout'
+    required: false
+    default: 'master'
 
 runs:
   using: "composite"
@@ -23,7 +27,7 @@ runs:
     with:
       dotnet-version: 10.x
 
-  - name: Configure MSBuild SDK resolver
+  - name: Configure MSBuild SDK resolver - Temporary
     run: |
       $dotnetRoot = Split-Path (Get-Command dotnet).Source -Parent
       $sdkVersion = & dotnet --version
@@ -57,7 +61,7 @@ runs:
       token: ${{ inputs.github-token }}
       path: stride
       lfs: true
-      ref: master
+      ref: ${{ inputs.stride-branch }}
 
   # Temporary solution till the new docfx is available
   - name: Checkout DocFX
@@ -91,7 +95,7 @@ runs:
     working-directory: docfx-build
     shell: pwsh
 
-  - name: Install MSVC ARM64/ARM64EC build tools
+  - name: Install MSVC ARM64/ARM64EC build tools - Temporary
     run: |
       $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
       $installer = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vs_installer.exe"
