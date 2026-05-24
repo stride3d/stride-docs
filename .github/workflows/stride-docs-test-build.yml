@@ -18,11 +18,19 @@ on:
         required: true
         default: true
         type: boolean
+      strideBranch:
+        description: Stride branch to checkout
+        required: true
+        default: master
+        type: string
+
+permissions:
+  contents: read
 
 jobs:
   build:
     name: Build documentation
-    runs-on: windows-latest
+    runs-on: windows-2025-vs2026
 
     steps:
     - name: Checkout Stride Docs
@@ -38,6 +46,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         skip-pdf-building: ${{ inputs.skipPdfBuilding }}
         skip-api-building: ${{ inputs.skipApiBuilding }}
+        stride-branch: ${{ inputs.strideBranch }}
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v7
