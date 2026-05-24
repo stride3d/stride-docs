@@ -9,7 +9,6 @@ In order to run games made for Linux, you'll need a Linux PC with a graphics car
 * [FreeType](#freetype)
 * [OpenAL](#openal)
 * [SDL2](#sdl2)
-* [FreeImage](#freeimage)
 
 ## FreeType
 
@@ -33,8 +32,6 @@ sudo dnf install freetype-devel
 sudo pacman -S freetype2
 ```
 
----
-
 ## OpenAL
 
 To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. It can be installed with your distribution's package manager:
@@ -57,8 +54,6 @@ sudo dnf install openal-soft-devel
 sudo pacman -S openal
 ```
 
----
-
 ## SDL2
 
 To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which provides the ability to create windows, handle mouse, keyboard and joystick events. The minimum required version is 2.0.4 and can be installed with your distribution's package manager:
@@ -79,34 +74,6 @@ sudo dnf install SDL2-devel
 
 ```bash
 sudo pacman -S sdl2
-```
-
----
-
-## FreeImage
-
-[FreeImage](https://freeimage.sourceforge.io/) is battle-tested library for loading and saving popular image file formats like BMP, PNG, JPEG etc. The minimum required version is 3.18 and can be installed with your distribution's package manager:
-
-### [Debian / Ubuntu](#tab/ubuntu)
-
-```bash
-sudo apt install libfreeimage-dev
-```
-
-### [Fedora](#tab/fedora)
-
-```bash
-sudo dnf install freeimage-devel
-```
-
-### [Arch](#tab/arch)
-
-Freeimage isn't available in Arch's package manager, but it can be manually compiled from source code. You can get the source code from [the freeimage website](https://freeimage.sourceforge.io/download.html) (download the source distribution).
-
-Alternatively, you can use a tool such as `yay` to obtain the package from the AUR.
-
-```bash
-yay -S freeimage
 ```
 
 ---
