@@ -49,10 +49,10 @@
       "includePrivateMembers": false,
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
-      "noRestore": true,
+      "noRestore": false,
       "namespaceLayout": "flattened",
       "memberLayout": "samePage",
-      "allowCompilationErrors": true
+      "allowCompilationErrors": false
     }
   ],
   "build": {
