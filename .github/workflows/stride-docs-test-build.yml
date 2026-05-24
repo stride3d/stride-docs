@@ -24,6 +24,9 @@ on:
         default: master
         type: string
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build documentation
