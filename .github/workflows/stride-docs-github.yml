@@ -18,6 +18,10 @@ on:
         required: true
         default: true
         type: boolean
+      stride-branch:
+        description: 'Stride branch to checkout'
+        required: false
+        default: 'master'
 
 permissions:
   contents: read
@@ -31,7 +35,7 @@ concurrency:
 jobs:
   build:
     name: Build documentation
-    runs-on: windows-latest
+    runs-on: windows-2025-vs2026
 
     steps:
     - name: Checkout Stride Docs
@@ -47,9 +51,10 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         skip-pdf-building: ${{ inputs.skipPdfBuilding }}
         skip-api-building: ${{ inputs.skipApiBuilding }}
+        stride-branch: ${{ inputs.strideBranch }}
 
     - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v4
+      uses: actions/upload-pages-artifact@v5
       with:
         path: ${{ env.DOCS_PATH }}/_site
 
