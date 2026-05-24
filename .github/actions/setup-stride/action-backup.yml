@@ -27,24 +27,24 @@ runs:
     with:
       dotnet-version: 10.x
 
-  # - name: Configure MSBuild SDK resolver - Temporary
-  #   run: |
-  #     $dotnetRoot = Split-Path (Get-Command dotnet).Source -Parent
-  #     $sdkVersion = & dotnet --version
-  #     $msbuildSdksPath = Join-Path $dotnetRoot "sdk\$sdkVersion\Sdks"
+  - name: Configure MSBuild SDK resolver - Temporary
+    run: |
+      $dotnetRoot = Split-Path (Get-Command dotnet).Source -Parent
+      $sdkVersion = & dotnet --version
+      $msbuildSdksPath = Join-Path $dotnetRoot "sdk\$sdkVersion\Sdks"
 
-  #     echo "DOTNET_ROOT=$dotnetRoot" >> $env:GITHUB_ENV
-  #     echo "MSBuildSDKsPath=$msbuildSdksPath" >> $env:GITHUB_ENV
-  #     echo "MSBuildEnableWorkloadResolver=false" >> $env:GITHUB_ENV
+      echo "DOTNET_ROOT=$dotnetRoot" >> $env:GITHUB_ENV
+      echo "MSBuildSDKsPath=$msbuildSdksPath" >> $env:GITHUB_ENV
+      echo "MSBuildEnableWorkloadResolver=false" >> $env:GITHUB_ENV
 
-  #     Write-Host "DOTNET_ROOT=$dotnetRoot"
-  #     Write-Host "MSBuildSDKsPath=$msbuildSdksPath"
-  #     Write-Host "MSBuildEnableWorkloadResolver=false"
+      Write-Host "DOTNET_ROOT=$dotnetRoot"
+      Write-Host "MSBuildSDKsPath=$msbuildSdksPath"
+      Write-Host "MSBuildEnableWorkloadResolver=false"
 
-  #     if (-not (Test-Path $msbuildSdksPath)) {
-  #       throw "MSBuildSDKsPath does not exist: $msbuildSdksPath"
-  #     }
-  #   shell: pwsh
+      if (-not (Test-Path $msbuildSdksPath)) {
+        throw "MSBuildSDKsPath does not exist: $msbuildSdksPath"
+      }
+    shell: pwsh
 
   - name: Set Version in docfx.json
     run: |
@@ -75,14 +75,6 @@ runs:
       path: docfx-build
       fetch-depth: 0
 
-  - name: Set up dependency caching for faster builds
-    uses: actions/cache@v5
-    with:
-      path: ~/.nuget/packages
-      key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets', '**/packages.lock.json', '**/NuGet.config') }}
-      restore-keys: |
-        ${{ runner.os }}-nuget-
-
   - name: Restore npm dependencies
     run: npm install
     working-directory:  docfx-build/templates
@@ -103,30 +95,30 @@ runs:
     working-directory: docfx-build
     shell: pwsh
 
-  # - name: Install MSVC ARM64/ARM64EC build tools - Temporary
-  #   run: |
-  #     $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
-  #     $installer = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vs_installer.exe"
+  - name: Install MSVC ARM64/ARM64EC build tools - Temporary
+    run: |
+      $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+      $installer = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vs_installer.exe"
 
-  #     $installPath = & $vswhere -latest -products * -property installationPath
+      $installPath = & $vswhere -latest -products * -property installationPath
 
-  #     if (-not $installPath) {
-  #       throw "Visual Studio installation not found."
-  #     }
+      if (-not $installPath) {
+        throw "Visual Studio installation not found."
+      }
 
-  #     Write-Host "Visual Studio install path: $installPath"
+      Write-Host "Visual Studio install path: $installPath"
 
-  #     Start-Process -FilePath $installer -ArgumentList @(
-  #       "modify",
-  #       "--installPath", $installPath,
-  #       "--add", "Microsoft.VisualStudio.Component.VC.Tools.ARM64",
-  #       "--add", "Microsoft.VisualStudio.Component.VC.Tools.ARM64EC",
-  #       "--quiet",
-  #       "--norestart",
-  #       "--nocache",
-  #       "--wait"
-  #     ) -Wait -NoNewWindow
-  #   shell: pwsh
+      Start-Process -FilePath $installer -ArgumentList @(
+        "modify",
+        "--installPath", $installPath,
+        "--add", "Microsoft.VisualStudio.Component.VC.Tools.ARM64",
+        "--add", "Microsoft.VisualStudio.Component.VC.Tools.ARM64EC",
+        "--quiet",
+        "--norestart",
+        "--nocache",
+        "--wait"
+      ) -Wait -NoNewWindow
+    shell: pwsh
 
   - name: Build Install DocFX
     run: dotnet tool install -g docfx --version 2.9-stride --add-source drop/nuget
