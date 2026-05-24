@@ -16,11 +16,13 @@ Alternatively, it is possible to create Stride games on Linux using a **code-onl
 
 ## General support
 
-All of Stride's core features work on Linux. However, you might run into issues when using certain systems (such as video).
+All of Stride's features are fully supported on Linux.
 
-## Wayland support
+## Wayland
 
-Currently, games made with Stride can only run using Xorg.
+Wayland is a communication protocol for communication between a display server and it's applications, that has gained popularity among many Linux desktop environments. Many apps however are still yet to adopt it, relying on the outdated X windowing system. They work with wayland compositors thanks to a compatibility layer "xWayland", but can't utilize modern wayland features (such as fractional scalling).
+
+Currently, games made with Stride can only run using the X windowing system.
 
 ## In this section
 
