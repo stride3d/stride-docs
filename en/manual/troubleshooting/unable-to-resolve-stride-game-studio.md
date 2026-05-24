@@ -19,7 +19,7 @@ This usually means your NuGet package sources are misconfigured.
 ### How to fix
 
 1. Locate your NuGet configuration file:
-   - `C:\Users\YourUserName\AppData\Roaming\NuGet\NuGet.Config`
+   - `%appdata%\NuGet\NuGet.Config`
 2. Make a backup of the file before editing.
 3. Open the file and ensure it contains the following lines:
     ```xml

@@ -2,9 +2,9 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-Properties of the game's window can be controled through code.
+Properties of the game's window can be controlled through code.
 
-Currently, this cannot be configured in Game Studio, so a simple alternative is to have a [`Startup Script`](../scripts/types-of-script#startup-scripts) in the root scene of your project, that changes values of `Game.Window`.
+Currently, this cannot be configured in Game Studio, so a simple alternative is to have a [`Startup Script`](../scripts/types-of-script/startup-script.md) in the root scene of your project, that changes values of `Game.Window`.
 
 > [!Note]
 > The best solution would be to change these properties before the window is opened, by overriding the `Game` class, but this is outside of the scope of this page.

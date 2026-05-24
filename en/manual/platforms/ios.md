@@ -19,7 +19,7 @@ To deploy your game on iOS devices, you need to connect the device to a Mac with
 4. Open your solution in Visual Studio.
 
     >[!Tip]
-    >To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](../scripts/media/launch-your-game-ide-icon.png) (**Open in IDE**).
+    >To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](../scripts/media/launch-your-game-IDE-icon.png) (**Open in IDE**).
 
 5. In the Visual Studio toolbar, click ![Xamarin button](media/xamarin-button.png).
 

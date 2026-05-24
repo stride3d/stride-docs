@@ -15,7 +15,7 @@ You can also use custom shaders to create custom post effects. For more informat
 
 1. Make sure you have the [Stride Visual Studio extension](../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from SDSL ([Stride shading language](index.md)) to `.cs` files.
 
-2. In Game Studio, in the toolbar, click ![Open in IDE](../../get-started/media/launch-your-game-ide-icon.webp) (**Open in IDE**) to open your project in Visual Studio.
+2. In Game Studio, in the toolbar, click ![Open in IDE](../../get-started/media/launch-your-game-IDE-icon.webp) (**Open in IDE**) to open your project in Visual Studio.
 
 3. In the Visual Studio **Solution Explorer**, right-click the project (eg *MyGame.Game*) and select **Add > New item**.
 
@@ -71,7 +71,7 @@ For shader-focused development with enhanced IntelliSense and inheritance visual
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/)
 2. Install the **Stride Shader Tools** extension:
-   - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=tebjan.sdsl)
+   - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=stride.sdsl)
    - [OpenVSX](https://open-vsx.org/extension/tebjan/sdsl) (for VSCodium and other alternatives)
 3. Create your `.sdsl` file in your project's **Assets** folder (or a subfolder within Assets)
 

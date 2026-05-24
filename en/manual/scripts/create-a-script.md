@@ -12,7 +12,7 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 	![Select script type window](media/create-a-script-script-asset-selection.png)
 
 	>[!Note]
-	>For information about different types of script, see [Types of script](types-of-script.md).
+	>For information about different types of script, see [Types of script](types-of-script/index.md).
 
 	The **New script** dialog opens.
 
@@ -128,7 +128,7 @@ You can see the script in the **Asset View**.
 ## See also
 
 * [Best Practice](best-practice.md)
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)

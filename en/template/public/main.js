@@ -1,3 +1,5 @@
+import gdscript from './highlight/gdscript.js'
+
 const app = {
     languageDropdownCreated: false,
     iconLinks: [
@@ -240,6 +242,9 @@ const app = {
         this.waitForNavbarAndAddLanguageNavigation();
         this.addVersionNavigation();
         this.loadVersions();
+    },
+    configureHljs: function (hljs) {
+        hljs.registerLanguage('gdscript', gdscript);
     }
 };
 

@@ -31,7 +31,7 @@ You can still use standard C# classes in Stride, but these aren't called scripts
 
 ## In this section
 
-* [Types of script](types-of-script.md)
+* [Types of script](types-of-script/index.md)
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)

@@ -82,8 +82,4 @@ To create a project from a sample or template:
     	
  5. Select the platforms you want your game to support and click **OK**.
 
-Stride creates the project and opens it in Game Studio. 
-
-## What's next?
-
-* [Get familiar with Game Studio](../game-studio/index.md)
+Stride creates the project and opens it in Game Studio.

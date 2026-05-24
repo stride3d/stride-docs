@@ -33,15 +33,11 @@ To edit any page of this manual, click the **Edit this page** link at the bottom
   - <span class="badge text-bg-success">New</span> [Physics](physics/index.md) - Bepu Physics docs added
   - <span class="badge text-bg-info">Updated</span> [Bullet Physics](physics-bullet/index.md) - Bullet Physics docs moved
   - <span class="badge text-bg-info">Updated</span> [Files and Folders](files-and-folders/distribute-a-game.md) - Game distribution steps updated
-  - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script.md) - Asynchronous script example improved
+  - <span class="badge text-bg-info">Updated</span> [Scripts - Types of script](scripts/types-of-script/index.md) - Asynchronous script example improved
   - <span class="badge text-bg-success">New</span> [Scripts - Gizmos](scripts/gizmos.md) - Description and example of the Flexible Processing system
   - <span class="badge text-bg-success">New</span> [ECS - Flexible Processing](engine/entity-component-system/flexible-processing.md) - Description and example of the Flexible Processing system
   - <span class="badge text-bg-info">Updated</span> [Linux - Setup and requirements](platforms/linux/setup-and-requirements.md) - Fedora OS option added
-  - <span class="badge text-bg-success">New</span> [Scripts - Serialization](scripts/serialization.md) - Explanation of serialization
-  - <span class="badge text-bg-info">Updated</span> [Scripts - Public properties and fields](scripts/public-properties-and-fields.md) - Content improvements and additions
-  - <span class="badge text-bg-success">New</span> [Engine - Entity Component model - Usage](engine/entity-component-system/usage.md) - Explanation of ECS usage
-  - <span class="badge text-bg-info">Updated</span> [Engine - Entity Component model](engine/entity-component-system/index.md) - Content improvements
-  - <span class="badge text-bg-info">Updated</span> [Stride for Unity® developers](stride-for-unity-developers/index.md) - Content improvements
+
 - Tutorials
   - <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Quick Tutorials section added
   - <span class="badge text-bg-info">Updated</span> [Tutorials](../tutorials/index.md) - Added lesson counts and total length

@@ -28,7 +28,7 @@ This page explains how to launch your game using Game Studio or Visual Studio.
 
 ## Launch a game from Visual Studio
 
-1. In Game Studio, in the toolbar, click ![Open in IDE](media/launch-your-game-ide-icon.webp) (**Open in IDE**) to launch Visual Studio.
+1. In Game Studio, in the toolbar, click ![Open in IDE](media/launch-your-game-IDE-icon.webp) (**Open in IDE**) to launch Visual Studio.
 
 2. In the Visual Studio toolbar, set the appropriate project as the startup project.
          
@@ -46,35 +46,3 @@ This page explains how to launch your game using Game Studio or Visual Studio.
    * To start the game with debugging, click **Start** or press **F5**.
 
       ![Visual Studio Start button](media/visual-studio-start-button.webp)
-
-## Remove borders
-
-By default, the game runs with window borders.
-
-| With borders              | Without borders 
-|---------------------------|-----------------
-| ![With borders](media/with-borders.webp)   | ![Without borders](media/without-borders.webp) 
-
-To run the game without borders, use:
-
-```cs
-Game.Window.IsBorderLess = true;
-```
-
-For example:
-
-```cs
-using Stride.Engine;
-
-namespace MyGame
-{
-    public class MyScript : StartupScript
-    {
-        public override void Start()
-        {
-            base.Start();
-            Game.Window.IsBorderLess = true;
-        }
-    }
-}
-```

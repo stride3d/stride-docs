@@ -3,50 +3,38 @@ pdfFileName: stride-manual.pdf
 items:
   - name: Manual
     href: index.md
-  - name: Requirements
-    href: requirements/index.md
   - name: Stride for Unity® developers
     href: stride-for-unity-developers/index.md
   - name: Stride for Godot developers
     href: stride-for-godot-developers/index.md
-  - name: Stride Launcher
-    href: stride-launcher/index.md
-
+  - name: Install and update
+    href: install-and-update/index.md
+    items:
+      - name: Requirements
+        href: install-and-update/requirements.md
+      - name: Install Stride
+        href: install-and-update/install-stride.md
+      - name: Update Stride
+        href: install-and-update/update-stride.md
+      - name: Manage versions
+        href: install-and-update/manage-versions.md
   - name: Get started
     href: get-started/index.md
     items:
-      - name: Install Stride
-        href: get-started/install-stride.md
-      - name: Visual Studio extension
-        href: get-started/visual-studio-extension.md
-      - name: Update Stride
-        href: get-started/update-stride.md
-      - name: Launch Stride
-        href: get-started/launch-stride.md
       - name: Create a project
         href: get-started/create-a-project.md
+      - name: Key concepts
+        href: get-started/key-concepts.md
       - name: Game Studio
-        href: game-studio/index.md
+        href: get-started/game-studio.md
+      - name: Stride Extension
+        href: get-started/visual-studio-extension.md
       - name: Assets
-        href: game-studio/assets.md
-        items:
-          - name: Create assets
-            href: game-studio/create-assets.md
-          - name: Use assets
-            href: game-studio/use-assets.md
-      - name: Scenes
-        href: game-studio/scenes.md
-        items:
-          - name: Create a scene
-            href: game-studio/create-a-scene.md
-          - name: Add entities
-            href: game-studio/add-entities.md
-          - name: Manage entities
-            href: game-studio/manage-entities.md
-          - name: Navigate in the Scene Editor
-            href: game-studio/navigate-in-the-scene-editor.md
+        href: get-started/assets.md
       - name: Launch a game
         href: get-started/launch-a-game.md
+      - name: Next steps
+        href: get-started/next-steps.md
 
   - name: Animation
     href: animation/index.md
@@ -126,18 +114,6 @@ items:
         href: engine/build-pipeline.md
       - name: Asset introspection
         href: engine/asset-introspection.md
-
-  - name: Files and folders
-    href: files-and-folders/index.md
-    items:
-      - name: Project structure
-        href: files-and-folders/project-structure.md
-      - name: Cached files
-        href: files-and-folders/cached-files.md
-      - name: Version control
-        href: files-and-folders/version-control.md
-      - name: Distribute a game
-        href: files-and-folders/distribute-a-game.md
 
   - name: Game Studio
     href: game-studio/index.md
@@ -447,8 +423,15 @@ items:
         href: physics/triggers.md
       - name: Constraints
         href: physics/constraints.md
-      - name: Physics Queries
-        href: physics/raycasting.md
+      - name: Physics queries
+        href: physics/physics-queries/index.md
+        items:
+          - name: Raycasts
+            href: physics/physics-queries/raycasts.md
+          - name: Sweepcasts
+            href: physics/physics-queries/sweepcasts.md
+          - name: Overlaps
+            href: physics/physics-queries/overlaps.md
       - name: Physics Update
         href: physics/physics-update.md
       - name: Tutorials
@@ -517,11 +500,59 @@ items:
       - name: Set the graphics platform
         href: platforms/set-the-graphics-platform.md
 
+  - name: Project
+    href: files-and-folders/index.md
+    items:
+      - name: Project file structure
+        href: files-and-folders/project-structure.md
+      - name: Project packages
+        href: files-and-folders/project-packages/index.md
+        items:
+          - name: Create a package
+            href: files-and-folders/project-packages/create-a-package.md
+          - name: Package properties
+            href: files-and-folders/project-packages/package-properties.md
+          - name: Dependencies
+            href: files-and-folders/project-packages/dependencies.md
+      - name: External packages
+        href: files-and-folders/external-packages/index.md
+        items:
+          - name: What is NuGet
+            href: files-and-folders/external-packages/what-is-nuget.md
+          - name: Using NuGet packages
+            href: files-and-folders/external-packages/using-nuget-packages.md
+          - name: Publish a NuGet package
+            href: files-and-folders/external-packages/publish-a-nuget-package.md
+      - name: Version control
+        href: files-and-folders/version-control.md
+      - name: Cached files
+        href: files-and-folders/cached-files.md
+      - name: Building the game
+        href: files-and-folders/building-the-game/index.md
+        items:
+          - name: Setup
+            href: files-and-folders/building-the-game/setup.md
+          - name: Building
+            href: files-and-folders/building-the-game/building.md
+          - name: Cleaning up
+            href: files-and-folders/building-the-game/cleaning-up.md
+          - name: Build file structure
+            href: files-and-folders/building-the-game/build-file-structure.md
+          - name: Distributing
+            href: files-and-folders/building-the-game/distributing.md
+
   - name: Scripts
     href: scripts/index.md
     items:
       - name: Types of script
-        href: scripts/types-of-script.md
+        href: scripts/types-of-script/index.md
+        items:
+          - name: Startup script
+            href: scripts/types-of-script/startup-script.md
+          - name: Sync script
+            href: scripts/types-of-script/sync-script.md
+          - name: Async script
+            href: scripts/types-of-script/async-script.md
       - name: Create a script
         href: scripts/create-a-script.md
       - name: Use a script
@@ -598,20 +629,6 @@ items:
             href: virtual-reality/display-a-UI-in-an-overlay.md
       - name: VR sickness
         href: virtual-reality/vr-sickness.md
-
-  - name: NuGet
-    href: nuget/index.md
-    items:
-      - name: Consume Packages
-        href: nuget/consume-packages.md
-      - name: Create Packages
-        href: nuget/create-packages.md
-
-  - name: Extensibility
-    href: extensibility/index.md
-    items:
-      - name: C# Libraries
-        href: extensibility/csharp-libraries.md
 
   - name: Troubleshooting
     href: troubleshooting/index.md

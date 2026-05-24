@@ -32,7 +32,7 @@ The VS Code extension provides:
 1. Open Visual Studio Code
 2. Install the **Stride Shader Tools** extension:
    - Open Extensions view (Ctrl+Shift+X) and search for **"Stride Shader Tools"**
-   - Or install directly from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=tebjan.sdsl) or [OpenVSX](https://open-vsx.org/extension/tebjan/sdsl) (for VSCodium and alternatives)
+   - Or install directly from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=stride.sdsl) or [OpenVSX](https://open-vsx.org/extension/tebjan/sdsl) (for VSCodium and alternatives)
 
 ### Configuration
 
