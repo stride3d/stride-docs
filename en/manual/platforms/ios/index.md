@@ -4,7 +4,7 @@
 
 ## General support
 
-All of Stride's core features **should** work on iOS. However, you might run into issues when using certain systems (such as video).
+All of Stride's core features **should** work on iOS.
 
 Stride supports building for iOS, but **it hasn't been tested in a while**. There might be problems that may not be easily solvable without modifications to the engine.
 

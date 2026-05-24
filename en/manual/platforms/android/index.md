@@ -4,4 +4,4 @@
 
 ## General support
 
-All of Stride's core features work on Android. However, you might run into issues when using certain systems.
+All of Stride's core features **should** work on Android.
