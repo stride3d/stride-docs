@@ -22,14 +22,13 @@
 
 ## Asset terms
 
-- [Archetype](../game-studio/archetypes.md): A template for asset properties that other assets can inherit from.
-- [Asset](../game-studio/assets.md): Content used by the game (models, textures, materials, scripts, etc.) managed by the asset pipeline.
+- [Archetype](../assets/archetypes.md): A template for asset properties that other assets can inherit from.
+- [Asset](../assets/index.md): Content used by the game (models, textures, materials, scripts, etc.) managed by the asset pipeline.
 - Asset URL: The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`. See [Create a model from code](../scripts/create-a-model-from-code.md) and [Create a script](../scripts/create-a-script.md).
-- [Asset bundles](../engine/assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
-- [Asset control](../engine/assets/asset-control.md): Control asset loading, references, and lifetime.
-- [Build pipeline](../engine/build-pipeline.md): Compiles assets into runtime-ready formats.
+- [Asset compilation](../assets/asset-compilation.md): Compiles assets into runtime-ready formats.
+- [Asset bundles](../assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
 - [Prefab](../game-studio/prefabs/index.md): A reusable entity hierarchy that can be instantiated at design time or runtime.
-- Root asset: An asset included in the build so it is available at runtime. See [Manage assets](../game-studio/manage-assets.md).
+- [Root asset](../assets/asset-compilation.md#root-assets): An asset included in the build so it is available at runtime.
 
 ## Audio terms
 
@@ -51,9 +50,9 @@
 ## Editor terms
 
 - [Add entities](../game-studio/add-entities.md): Create new entities in a scene.
-- [Archetypes](../game-studio/archetypes.md): Share default properties across assets.
-- [Asset View](../game-studio/assets.md): Panel used to manage assets in your project.
-- [Create assets](../game-studio/create-assets.md): Create and organize project assets.
+- [Archetypes](../assets/archetypes.md): Share default properties across assets.
+- [Asset View](../assets/index.md): Panel used to manage assets in your project.
+- [Create assets](../assets/create-an-asset.md): Create and organize project assets.
 - [Game settings](../game-studio/game-settings.md): Project-wide defaults such as the graphics compositor and rendering options.
 - [Graphics compositor editor](../graphics/graphics-compositor/index.md): Node-based editor to configure the rendering pipeline.
 - [Manage entities](../game-studio/manage-entities.md): Select, group, and organize entities.
@@ -62,7 +61,7 @@
 - [Property Grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
 - [Scene Editor](../game-studio/scenes.md): The 3D/2D viewport for arranging entities in a scene.
 - [Splash screen](../game-studio/splash-screen.md): Configure startup visuals.
-- [Use assets](../game-studio/use-assets.md): Reference and place assets in scenes.
+- [Use assets](../assets/use-an-asset.md): Reference and place assets in scenes.
 - [World units](../game-studio/world-units.md): Scene scale conventions (unit size, conversions).
 
 ## General terms

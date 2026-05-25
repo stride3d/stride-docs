@@ -14,7 +14,7 @@ Every project package contains it's own set of properties, that can be customize
 | ResourceFolders | List of directory paths that contain resources. |
 | OutputGroupDirectories | A dictionary containing a custom output directory for each specified bundle name. |
 | ExplicitFolders (currently broken) | List of directory paths that are meant to always be loaded by **Game Studio**, even if they do not contain any assets. |
-| Bundles | List of bundles and their metadata. For more information read [Asset Bundles](../../engine/assets/asset-bundles.md). |
+| Bundles | List of bundles and their metadata. For more information read [Asset Bundles](../../assets/asset-bundles.md). |
 | TemplateFolders | List of directory paths containing custom templates in the `.sdtpl` format. For more information read [Custom Assets](../../scripts/custom-assets.md#adding-a-section-for-the-add-asset-menu-inside-the-editor). |
 | RootAssets | List of root assets (assets that will always be included with the build). |
 

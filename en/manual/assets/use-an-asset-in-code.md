@@ -1,0 +1,91 @@
+# Use an asset in code
+
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
+There are a few ways of using assets in code:
+
+* [**Referencing**](#referencing-an-asset) - the easiest way, creates an assignable reference in the **Property grid**.
+* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, but let's you handle loading and unloading manually (most commonly used with **scenes**).
+* [**Loading from path**](#loading-from-path) - a manual way of loading assets based on their path.
+
+## Referencing an asset
+
+The easiest way of using an asset in your own script is to **create an assignable reference** using a public property or field.
+
+```csharp
+public class Example : StartupScript
+{
+    public Model ModelAsset { get; set; }
+}
+```
+
+The above will show up in the **Property grid** like so:
+
+![Image of the script in the Property grid showing the property with the text "No asset selected", two icons of a hand and an eraser and an empty square with a hand icon.](media/property-grid-direct-reference-example.webp)
+
+Stride will automatically handle loading and unloading. If you want more control over how assets are loaded, consider using a [url reference](#url-reference) instead.
+
+## Url reference
+
+**Url references** provide a way of assigning an asset in the Property grid **without loading it**.
+
+You can create an assignable url reference to an asset in your own script by using [`UrlReference<T>`](xref:Stride.Core.Serialization.UrlReference`1), where `T` is the asset type you want to use.
+
+```csharp
+public class Example : StartupScript
+{
+    public UrlReference<Model> MyAssetReference { get; set; }
+}
+```
+
+It will show up in the **Property grid** like so:
+
+![Image of the script in the Property grid showing the property with the text "No asset selected", two icons of a hand and an eraser and an empty square with a hand icon.](media/property-grid-url-reference-example.webp)
+
+The asset can be loaded via the **content system** by using [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.LoadAsync*) and and then unloaded using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
+
+```csharp
+public override void Start()
+{
+    var asset = Content.Load(MyAssetReference);
+}
+
+public override void Cancel()
+{
+    var asset = Content.Unload(MyAssetReference);
+}
+```
+
+[!INCLUDE [content-loading-warning](../../includes/content-loading-warning.md)]
+
+## Loading from path
+
+Assets can also be loaded based on their path in the **assets** folder directly through code, **without having to assign anything**.
+
+This is done via the **content system** using [`Content.Load<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.Load``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) or [`Content.LoadAsync<T>`](xref:Stride.Core.Serialization.Contents.ContentManager.LoadAsync``1(System.String,Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and then unloading is done using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*).
+
+```csharp
+public override void Start()
+{
+    var loadedModel = Content.Load<Model>("path/to/asset");
+}
+
+public override void Cancel()
+{
+    Content.Unload("path/to/asset");
+}
+```
+
+[!INCLUDE [content-loading-warning](../../includes/content-loading-warning.md)]
+
+### Missing assets
+
+The asset compiler only knows which assets to include in the build based on their references. When loading assets only from a path, **Stride doesn't know that the asset is needed**.
+
+To fix that, you can [mark the missing assets as root](asset-compilation.md#how-to-mark-an-asset-as-root) to make sure they are always included with the build, or try using [url references](#url-reference) instead.
+
+## See also
+
+* [Use an asset](use-an-asset.md)
+* [Asset compilation](asset-compilation.md)
