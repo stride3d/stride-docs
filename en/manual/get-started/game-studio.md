@@ -18,7 +18,7 @@ The **asset editor** is a dedicated editor for certain assets. It's most commonl
 
 The **property grid** displays a list of properties of selected assets and entities.
 
-This is where you can assign [Components](key-concepts.md#components) to entities and edit their properties.
+This is where you can assign [components](key-concepts.md#components) to entities and edit their properties.
 
 ## Solution Explorer
 
@@ -26,13 +26,13 @@ This is where you can assign [Components](key-concepts.md#components) to entitie
 
 The **solution explorer** displays the hierarchy of elements in the C# solution associated with the Project. These elements contain assets and code.
 
-In a new project, there are 2 or more items under the solution: `NameOfMyProject` and `NameOfMyProject.NameOfPlatform` (there could be one or more of these).
-* `NameOfProject` contains files for the game.
-* `NameOfProject.NameOfPlatform` contains files specific to that platform (mostly, the Program.cs file from which the game starts and the window icon).
+In a new project, there are 2 or more items under the solution: **NameOfMyProject** and **NameOfMyProject.NameOfPlatform** (there could be one or more of these).
+* **NameOfProject** - contains files for the game.
+* **NameOfProject.NameOfPlatform** - contains files specific to that platform (mostly, the `NameOfProjectApp`.cs file from which the game starts and the window icon).
 
 Under each of those elements, there are 2 folders: **Assets** and **Code**.
-* **Assets** contains all assets of that element.
-* **Code** contains all code of that element.
+* **Assets** - contains all assets of that element.
+* **Code** - contains all code of that element.
 
 ## Asset View
 

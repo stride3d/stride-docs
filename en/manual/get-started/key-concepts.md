@@ -43,7 +43,7 @@ In Stride, a component can be created from one of 3 types of script:
 - [**Sync Script**](../scripts/types-of-script/sync-script.md) - a script that runs when it's added and then every frame.
 - [**Async Script**](../scripts/types-of-script/async-script.md) - an **asynchronous** script that runs only once when it's added, but can await the next frame continuously.
 
-For more information, read [types of script](../scripts/types-of-script/index.md).
+For more information, read [Types of script](../scripts/types-of-script/index.md).
 
 ## Assets and resources
 
@@ -57,8 +57,8 @@ Assets do not contain resource data. Instead, they reference a resource. For exa
 
 A Stride project is separated into multiple [project packages](../files-and-folders/project-packages/index.md), which contain their own code, assets and resources.
 
-For example, a new project is separated into:
+For example, a new project consists of:
 * **MyGame** - contains content for the game.
-* **MyGame.NameOfPlatform** (such as MyGame.Windows) - content specific to the version of the game for a specific platform (like the window icon).
+* **MyGame.NameOfPlatform** (such as MyGame.Windows) - contains content specific to the version of the game for a specific platform (like the window icon).
 
-For more information, read [project structure](../files-and-folders/project-structure.md).
+For more information, read [Project structure](../files-and-folders/project-structure.md).
