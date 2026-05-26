@@ -53,7 +53,7 @@ Entity.Transform.UpdateWorldMatrix();
 Entity.Transform.SetWorld(worldPosition, worldRotation);
 ```
 
-To set the world scale, you can set the local position to your desired world scale demodulated by the parent world scale.
+To set the world scale, you can set the local scale to your desired world scale demodulated by the parent world scale.
 
 ```csharp
 var worldScale = new Vector3(1f, 1f, 1f);
