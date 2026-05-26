@@ -1,5 +1,7 @@
 ﻿# Graphics API
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 **Graphics APIs** are responsible for performing basic rendering operations. They differ in platform availability and have their own benefits and drawbacks.
 
 ## Supported graphics APIs
