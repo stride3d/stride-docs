@@ -10,7 +10,7 @@ However, it is possible to code and build games natively, meaning that when in a
 
 [!INCLUDE [xplat-editor-notice](../../../includes/xplat-editor-notice.md)]
 
-Alternatively, it is possible to create Stride games on MacOS using a **code-only** approach, removing the need for an editor all together.
+Alternatively, it is possible to create Stride games on MacOS using a [code-only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html) approach, removing the need for an editor all together.
 
 ## General support
 

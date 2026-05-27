@@ -12,7 +12,7 @@ However, it is still possible to code and build games natively, meaning that whe
 
 [!INCLUDE [xplat-editor-notice](../../../includes/xplat-editor-notice.md)]
 
-Alternatively, it is possible to create Stride games on Linux using a **code-only** approach, removing the need for an editor all together.
+Alternatively, it is possible to create Stride games on Linux using a [code-only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html) approach, removing the need for an editor all together.
 
 ## General support
 
