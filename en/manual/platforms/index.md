@@ -7,8 +7,8 @@ Stride is a cross-platform engine, which means that you can create a single game
 ## Supported development platforms
 
 * [Windows](windows/index.md) 10, 11
-* [Linux](linux/index.md) (code-only)
-* [MacOS](macos/index.md) (code-only)
+* [Linux](linux/index.md) (with [code-only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html))
+* [MacOS](macos/index.md) (with [code-only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html))
 
 > [!NOTE]
 > **Game Studio** is being rewritten to be cross-platform. Currently however, it's not possible to use it outside of **Windows**.
