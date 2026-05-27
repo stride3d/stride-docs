@@ -13,7 +13,7 @@ There are two ways to create assets:
 
  2. Select the type of asset you want to create.
 
-	![Select asset type](../get-started/media/asset-creation-create-new-asset-asset-view-tab.png)
+	![Select asset type](media/asset-creation-create-new-asset-asset-view-tab.png)
  	
 	Game Studio displays a list of asset templates. These are assets configured for a specific use.
 	
@@ -21,7 +21,7 @@ There are two ways to create assets:
 
     Game Studio adds the asset to the Asset View:
 
-	![Asset added to Asset View' tab](../get-started/media/asset-creation-asset-view-tab-procedural-model.png)
+	![Asset added to Asset View' tab](media/asset-creation-asset-view-tab-procedural-model.png)
 
 > [!Note]
 > Some assets, such as textures, require a resource file. When you add these assets, Game Studio prompts you for a resource file.

@@ -54,7 +54,7 @@ You need to have the following workloads and/or components installed:
 
 > [!NOTE]
 > If you don't need Visual Studio, don't worry – it doesn't install it.
-> ![Installing VS build tools](../get-started/media/installing-vs-build-tools.webp)
+> ![Installing VS build tools](media/installing-vs-build-tools.webp)
 
 ## See also
 

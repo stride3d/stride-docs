@@ -71,12 +71,12 @@ You can duplicate an entity along with all its properties. Duplicating an entity
    The entity and all its properties are duplicated.
    
 	<video controls autoplay loop height="360" width="480">
-	   <source src="../get-started/media/populate-scene-duplicate-entity.mp4" type="video/mp4">
+	   <source src="media/populate-scene-duplicate-entity.mp4" type="video/mp4">
 	</video>
 
 Alternatively, right-click the entity and select **Duplicate selected entities**.
 
-   ![Duplicate selected entities](../get-started/media/duplicate-selected-entities.png)
+   ![Duplicate selected entities](media/duplicate-selected-entities.png)
 
 ## Rename an entity
 

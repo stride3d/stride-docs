@@ -6,9 +6,9 @@ An asset is a representation of an element of your game inside Game Studio, such
 
 ## Create an asset
 
-To create an asset, click the "Add Asset" button in the  **Asset View** and select the type of asset you want to create.
+To create an asset, click the **➕ Add asset** button in the  **Asset view** and select the type of asset you want to create.
 
-![Image of the "Add Asset" menu in the asset view.](media/asset-view-create-new.webp)
+![Image of the "Add asset" menu in the asset view.](media/asset-view-create-new.webp)
 
 ## Create assets from resources
 
@@ -41,4 +41,4 @@ Stride doesn't include assets which aren't used anywhere, meaning that **they ca
 
 ## Further reading
 
-For more information, visit the [Assets](../game-studio/assets.md) page.
+For more information, visit [Assets](../game-studio/assets.md).
