@@ -20,7 +20,6 @@ In order to run, Stride games require a user to have the following installed:
 * FreeType (for installation instructions, visit the [Linux page](../../platforms/linux/setup-and-requirements.md#freetype))
 * OpenAL (for installation instructions, visit the [Linux page](../../platforms/linux/setup-and-requirements.md#openal))
 * SDL2 (for installation instructions, visit the [Linux page](../../platforms/linux/setup-and-requirements.md#sdl2))
-* FreeImage (for installation instructions, visit the [Linux page](../../platforms/linux/setup-and-requirements.md#freeimage))
 * Vulkan
 
 > [!NOTE]

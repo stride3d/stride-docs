@@ -32,6 +32,8 @@ sudo dnf install freetype-devel
 sudo pacman -S freetype2
 ```
 
+---
+
 ## OpenAL
 
 To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. It can be installed with your distribution's package manager:
@@ -53,6 +55,8 @@ sudo dnf install openal-soft-devel
 ```bash
 sudo pacman -S openal
 ```
+
+---
 
 ## SDL2
 
