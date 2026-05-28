@@ -4,7 +4,7 @@ Every entity has a list of **components** that define what the entity is, how it
 
 ## Create a new component
 
-Stride allows you to create your own components by making your own scripts. For more information, visit [Scripts](../../scripts/index.md).
+Stride allows you to create your own components with scripts. For more information, visit [Scripts](../../scripts/index.md).
 
 ## Add a component in Game Studio
 

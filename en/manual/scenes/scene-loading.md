@@ -51,7 +51,7 @@ public void ReloadScene(Scene scene, UrlReference<Scene> sceneUrl)
     Content.Unload(sceneUrl);
     scene = Content.Load(sceneUrl);
 
-    // Add the scene to the world
+    // Re-add the scene to the world
     parent.Children.Add(scene);
 }
 ```

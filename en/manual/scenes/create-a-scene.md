@@ -24,6 +24,6 @@ var scene = new Scene();
 
 This scene isn't loadable, meaning that it can't be unloaded using the **content system**.
 
-Scenes created at runtime hold no benefit over entities. Creating blank scenes can only be useful for replacing the root scene, which isn't the recommended way of structuring your game.
+Using empty scenes in code holds no benefit over entities. It can only be useful for replacing the root scene, which isn't the recommended way of structuring your game.
 
 Blank scenes are used by the [splash screen](../game-studio/splash-screen.md) for showing different content before loading the main scene.

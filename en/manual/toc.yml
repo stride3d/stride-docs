@@ -560,12 +560,12 @@ items:
           - name: Transform
             href: scenes/entities/transform/index.md
             items:
-              - name: World units
-                href: scenes/entities/transform/world-units.md
               - name: Types of rotation
                 href: scenes/entities/transform/types-of-rotation.md
               - name: Matrixes
                 href: scenes/entities/transform/matrixes.md
+              - name: World units
+                href: scenes/entities/transform/world-units.md
 
   - name: Scripts
     href: scripts/index.md

@@ -8,7 +8,7 @@ TODO: VISUALIZATION
 
 Every entity has a [transform component](xref:Stride.Engine.TransformComponent) that defines how it's positioned in relation to it's parent.
 
-## Add an entity in Game Studio
+## Create an entity in Game Studio
 
 You can open the entity creation menu by pressing the ➕ icon at the top of the hierarchy or right clicking anywhere in the hierarchy or scene view.
 
@@ -18,9 +18,9 @@ Here, you can select one of the entity templates or create an empty entity.
 
 TODO: IMAGE
 
-## Add an entity in code
+## Entities in code
 
-Entities can be created at runtime or instantiated from a prefab.
+Entities can be instantiated from a prefab, or created at runtime from scratch like so:
 
 ```csharp
 // Create a blank entity
@@ -34,7 +34,7 @@ var myNewEntity = new Entity("Entity name")
 }
 ```
 
-These entities exist **outside of the game world** in an inactive state: all scripts aren't being updated. To change this, they have to be either:
+These entities exist **outside of the game world** in an inactive state: none of their scripts are doing anything. To change this, they have to be either:
 
 * Assigned a scene:
 
@@ -59,14 +59,6 @@ These entities exist **outside of the game world** in an inactive state: all scr
     ```csharp
     MyEntity.Transform.Children.Add(myNewEntity);
     ```
-
-## Remove an entity in Game Studio
-
-To remove an entity, right click on it and select **Delete** or alternatively press the **delete key** on your keyboard.
-
-TODO: IMAGE
-
-## Remove an entity in code
 
 To remove an entity, simply set their scene to `null`.
 
