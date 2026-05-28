@@ -7,7 +7,7 @@
 
 The screenshot below shows a scene with a knight, a light, a background, and a camera entity:
 
-![Basic scene in Stride](../get-started/media/scene-creation-basic-scene-in-stride.png)
+![Basic scene in Stride](media/scene-creation-basic-scene-in-stride.png)
 
 Scenes are a type of [asset](/assets.md). As they are complex assets, they have a dedicated editor, the **Scene Editor**.
 

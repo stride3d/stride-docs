@@ -72,7 +72,7 @@ The near and far planes determine where the camera's view begins and ends.
 
 Stride renders the area between the near and far planes.
 
-![Camera position](../../get-started/media/camera-position.png)
+![Camera position](../../game-studio/media/camera-position.png)
 
 | Near plane 0.1 (default); far plane: 50  | Near plane: 7; far plane 1000 (default)
 |--------------------|------------------

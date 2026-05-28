@@ -8,18 +8,18 @@ In case you **get confused by certain terminology**, you can check out the [glos
 
 ## Learn more about Game Studio
 
-If you want to learn more about how to use Game Studio, check out the [Game Studio section](../game-studio/index.md) of the manual.
+If you want to learn more about how to use Game Studio, check out [Game Studio](../game-studio/index.md) of the manual.
 
 ## Get started with scripting
 
-If you want to learn more about how to write scripts for Stride, check out the [Scripts section](../scripts/index.md) of the manual.
+If you want to learn more about how to write scripts for Stride, check out [Scripts](../scripts/index.md) of the manual.
 
 For API reference, refer to the [API](../../api/index.md).
 
 ## Get started with graphics
 
-For general information about how graphics work in Stride, check out the [Graphics section](../graphics/index.md) section of the manual.
+For general information about how graphics work in Stride, check out [Graphics](../graphics/index.md) section of the manual.
 
 Other sections that might be useful are [Animation](../animation/index.md) and [Particles](../particles/index.md).
 
-For 2D, it's also a good idea to check out the [Sprites section](../sprites/index.md).
+For 2D, it's also a good idea to check out [Sprites](../sprites/index.md).

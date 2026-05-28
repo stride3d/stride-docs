@@ -42,7 +42,7 @@ In the **Asset View**, click **Add asset** > **Texture**, then select a template
 
 Alternatively, drag the texture file from Explorer to the Asset View:
 
-![Drap and drop a resource file to the Asset View](../../get-started/media/create-assets-drop-resource.png)
+![Drap and drop a resource file to the Asset View](media/create-assets-drop-resource.png)
 
 Then select a texture template (**color**, **grayscale** or **normal map**):
    
@@ -50,7 +50,7 @@ Then select a texture template (**color**, **grayscale** or **normal map**):
 
 Game Studio adds the texture to the Asset View:
 
-![Texture asset created](../../get-started/media/create-assets-drag-drop-asset-created.png)
+![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 
 ## Texture properties
 

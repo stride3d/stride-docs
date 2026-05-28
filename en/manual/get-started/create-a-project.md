@@ -39,7 +39,7 @@ To create an empty project:
 
 6. Under **Platforms**, select the platforms you want your game to support.  
 
-    >[!Note]
+    >[!NOTE]
     >To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio).
     >If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
 
@@ -49,7 +49,7 @@ To create an empty project:
     
     **Graphics API:** The graphics features you can use in your project depend on the API you select. For advanced graphics features, select the latest version of the graphics APIs.
     
-    >[!Warning]
+    >[!WARNING]
     >Some graphics cards don't support the latest APIs. For some mobile devices, only Direct3D 9.3 / OpenGL ES 2.0 and Direct3D 10.0 / OpenGL ES 3.0 are available.
 
     **High or Low Dynamic Range (HDR / LDR):** This defines how color is computed in your project. In LDR mode, colors range from 0 to 1. In HDR mode colors can take any float value. HDR provides more advanced and realistic rendering but requires more processing power and profile Direct3D 10.0 / OpenGL ES 3.0 or later.

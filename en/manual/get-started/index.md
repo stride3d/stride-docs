@@ -9,9 +9,9 @@ Welcome to Stride! This chapter provides everything you need to start creating g
 
 Stride is designed for game developers who want a powerful, flexible, and open-source engine for their projects. Whether you're an experienced developer or just starting out, these guides will walk you through the basics and help you get up and running quickly.
 
-For video tutorials, have a look at the [Tutorials](../../tutorials/index.md).
+For video tutorials, have a look at [Tutorials](../../tutorials/index.md).
 
-![Game Studio](media/get-started.webp)
+![Game Studio](media/game-studio.webp)
 
 ## In this section
 
