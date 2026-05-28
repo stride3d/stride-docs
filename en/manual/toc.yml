@@ -555,8 +555,6 @@ items:
       - name: Entities
         href: scenes/entities/index.md
         items:
-          - name: Add or remove an entity
-            href: scenes/entities/add-or-remove-an-entity.md
           - name: Components
             href: scenes/entities/components.md
           - name: Transform
