@@ -5,7 +5,7 @@
 
 
 ### Prerequesites:
-VoxelGI requires Graphics Profile Level 11 or Higher (Direct3D 11.0 / OpenGL ES 3.1). This can be set in the Game Settings asset under the Rendering category.
+VoxelGI requires Graphics Profile Level 11 or Higher. This can be set in the Game Settings asset under the Rendering category.
 
 Since Stride is modular, we need to add a reference to the `Stride.Voxels` plugin:
 
