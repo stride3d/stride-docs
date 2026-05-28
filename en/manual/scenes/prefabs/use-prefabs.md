@@ -24,8 +24,8 @@ If you don't want to create a parent entity with the prefab, hold **Alt** when y
 
 In this case, a parent entity is unnecessary. Instead, you can create several instances of the prefab, then re-arrange their individual crate entities to create the effect you need.
 
-| Relative positions maintained                   | Relative positions ignored                  |
-|-------------------------------------------------|---------------------------------------------|
+| Relative positions maintained | Relative positions ignored |
+| :-- | :-- |
 | ![Boxes duplicated](media/boxes-duplicated.jpg) | ![Boxes duplicated](media/boxes-random.jpg) |
 
 ## Break link to prefab
@@ -55,7 +55,7 @@ public class SpawnPrefabOnStart : StartupScript
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > `Instantiate()` by itself isn't enough to add a prefab instance to the scene. You also need to `Add()` or `AddRange()` them to a scene . For example, if your prefab contains a model, the model is invisible until you add the prefab instance. Likewise, if your prefab contains a script, the script won't work until you add the prefab instance.
 
 If you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate and add it with the following code:
@@ -78,15 +78,7 @@ private void InstantiateBulletPrefab()
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include new changes.
+> 
 > For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at runtime. The script won't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs will have the new color, but existing prefabs won't.
-
-## See also
-
-* [Prefab index](index.md)
-* [Create a prefab](create-a-prefab.md)
-* [Edit prefabs](edit-prefabs.md)
-* [Nested prefabs](nested-prefabs.md)
-* [Override prefab properties](override-prefab-properties.md)
-* [Prefab models](prefab-models.md)
