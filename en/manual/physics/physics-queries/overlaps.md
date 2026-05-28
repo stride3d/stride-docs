@@ -105,9 +105,12 @@ public bool CheckGrounded(BodyComponent body)
     // Checking every layer except the one the player is on
     var mask = ~body.CollisionLayer.ToMask();
     
-    Stack<CollidableStack> buffer = stackalloc CollidableStack[1];
+    Span<CollidableStack> buffer = stackalloc CollidableStack[1];
     
     // If there are any collisions under the player, the player is on the ground
-    return sim.Overlap(sphere, pose, buffer, mask).Any();
+    foreach (var item in sim.Overlap(sphere, pose, buffer, mask))
+        return true;
+
+    return false;
 }
 ```
