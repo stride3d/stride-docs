@@ -118,54 +118,29 @@ items:
   - name: Game Studio
     href: game-studio/index.md
     items:
-      - name: Scenes
-        href: game-studio/scenes.md
+      - name: Panels
+        href: game-studio/panels/index.md
         items:
-          - name: Create and open a scene
-            href: game-studio/create-a-scene.md
-          - name: Navigate in the Scene Editor
-            href: game-studio/navigate-in-the-scene-editor.md
-          - name: Manage scenes
-            href: game-studio/manage-scenes.md
-          - name: Load scenes
-            href: game-studio/load-scenes.md
-          - name: Add entities
-            href: game-studio/add-entities.md
-          - name: Manage entities
-            href: game-studio/manage-entities.md
-      - name: Assets
-        href: game-studio/assets.md
+          - name: Asset preview
+            href: game-studio/panels/asset-preview.md
+          - name: Asset view
+            href: game-studio/panels/asset-view.md
+          - name: Edit history
+            href: game-studio/panels/edit-history.md
+          - name: Property grid
+            href: game-studio/panels/property-grid.md
+          - name: References
+            href: game-studio/panels/references.md
+          - name: Solution explorer
+            href: game-studio/panels/solution-explorer.md
+      - name: Dedicated editors
+        href: game-studio/dedicated-editors/index.md
         items:
-          - name: Create assets
-            href: game-studio/create-assets.md
-          - name: Manage assets
-            href: game-studio/manage-assets.md
-          - name: Use assets
-            href: game-studio/use-assets.md
-          - name: Archetypes
-            href: game-studio/archetypes.md
-      - name: Prefabs
-        href: game-studio/prefabs/index.md
-        items:
-          - name: Create a prefab
-            href: game-studio/prefabs/create-a-prefab.md
-          - name: Use prefabs
-            href: game-studio/prefabs/use-prefabs.md
-          - name: Edit prefabs
-            href: game-studio/prefabs/edit-prefabs.md
-          - name: Nested prefabs
-            href: game-studio/prefabs/nested-prefabs.md
-          - name: Override prefab properties
-            href: game-studio/prefabs/override-prefab-properties.md
-          - name: Prefab models
-            href: game-studio/prefabs/prefab-models.md
-      - name: Game settings
-        href: game-studio/game-settings.md
-        items:
-          - name: Splash screen
-            href: game-studio/splash-screen.md
-      - name: World units
-        href: game-studio/world-units.md
+          - name: Scene editor
+            href: game-studio/dedicated-editors/scene-editor/index.md
+            items:
+              - name: Scene view
+                href: game-studio/dedicated-editors/scene-editor/scene-view.md
 
   - name: Graphics
     href: graphics/index.md
