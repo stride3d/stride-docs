@@ -1,4 +1,4 @@
-# Stride 4.4 release notes
+# Stride 4.4 release notes - Draft
 
 July 14th, 2026
 
@@ -10,71 +10,37 @@ A massive thank you to the open-source Stride community for your dedicated contr
 
 ## What's new in this release
 
-Stride 4.4 includes numerous enhancements and improvements. Here’s what to expect:
+Stride 4.4 includes numerous enhancements and improvements. Here's what to expect:
 
-- **Performace Improvements**: Dictionary lookups are now utilising `TryAdd`
- 
-- **CI/CD**: The build process was moved from TeamCity to GitHub Actions, allowing us to have a more transparent and open build process, and to run it on all platforms we support. Many actions are run automatically when a PR is opened.
+### Highlights
+
+- **CI/CD Improvements**: The build pipeline was moved further toward GitHub Actions, improving transparency, automation, and contributor visibility across supported platforms.
+- **Graphics Cleanup**: The obsolete Null graphics backend was removed, simplifying maintenance and reducing legacy surface area.
+- **Rendering & Asset Pipeline**: Vertex and index buffer handling was updated across rendering, import, and asset compilation code to improve correctness and consistency.
+- **Performance Improvements**: Several internal optimizations reduced allocations and improved data processing, including updates to geometric primitive generation and light probe tetrahedralization.
+- **Platform Reliability**: Executable-path handling was improved across desktop/runtime code paths, helping Stride behave more reliably in modern hosting and launch scenarios.
+- **Samples & Templates**: Small fixes were made to sample and template projects, including VR startup adjustments.
+
+### Other improvements
+
+- Rendering and mesh utility cleanup
+- Asset compiler and importer fixes
+- Internal API simplifications
+- Test updates and maintenance work
+- Contributor workflow and repository housekeeping
 
 ### Breaking changes
 
+- **Removed Null graphics backend**: Projects or integrations depending on `STRIDE_GRAPHICS_API_NULL` or related null-backend code paths may require migration.
+
+
 ## What has changed since Stride 4.3
 
-### Bepu physics integration
+### CI/CD and project infrastructure
 
-Adding support for [Bepu Physics](https://github.com/bepu/bepuphysics2), a ridiculously fast physics engine written entirely in C#.
+One of the most significant themes in 2026 was the continued modernization of the project’s infrastructure. The repository moved more of its workflow toward **GitHub Actions**, improving transparency and making CI easier for contributors to follow and reproduce. This is a meaningful project-level improvement because it affects every contributor and every pull request, not just a single engine subsystem.
 
-Having both a game and physics engine in the same ecosystem reduces the cost of maintaining and improving it, the overhead that we may incur when communicating between the two APIs, and the barrier to entry for contributors.
-
-Bullet is still the default physics engine, and we welcome any contribution towards it, but our efforts will be focused on Bepu from now.
-
-The integration is effectively done, with Bepu's feature set now being slightly ahead of Bullet's. Have a look at [this page](https://doc.stride3d.net/latest/en/manual/physics/configuration.html) if you want to migrate to Bepu.
-
-### Vulkan compute shader support
-
-Vulkan graphics backend has been modified to support compute shaders, the shader compiler has also been modified to support computer shader generation for GLSL.
-
-### User-defined Assets
-
-Introducing [Custom Assets](https://doc.stride3d.net/latest/en/manual/scripts/custom-assets.html), a way to define and store data which can be referenced across multiple components, scenes and through other assets.
-
-The asset compiler also gives you the ability to build more complex systems like custom file importers.
-
-### Ongoing efforts to build projects *from* Linux and Apple desktops
-
-Stride can build games under Windows to target the different devices we support, but building directly from those devices was not supported up till now.
-
-We've introduced a couple of changes to improve on that front:
-- Replacing our custom C++/CLI FBX importer with [Assimp](https://github.com/assimp/assimp)
-- Fixing the asset compiler to run on all desktop OSes
-- Many build-system refactors to move toward fully cross-platform development
-- Building VHACD for Linux
-- Adjust FreeImage and DirectXTex for all platforms
-
-Some work is still required on this front, but simpler projects can now be built from those platforms.
-
-### Efficient API to manipulate meshes
-
-Vertex buffers do not have a standardized layout, each mesh may have its own specific layout and data type it uses for its vertices. Some have blend weights, or tangents, while others only have positions - they may also use different data types, for example Half4 positions, 4byte color ...
-
-We added in two helpers in [VertexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.VertexBufferHelper.html) and [IndexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.IndexBufferHelper.html) to provide a standardized way to read and write to those buffers.
-
-### Open project with Rider and VSCode from the GameStudio
-
-While any IDE can open and build Stride projects, the editor button to open said project only had special handling for Visual Studio. [Jklawreszuk](https://github.com/Jklawreszuk) added support for Rider and VSCode.
-
-### Interface processor
-
-Stride has a [component processors](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/usage.html), a user-defined class which can collect and process all components of a given type in the running game. It is also known as the `System` part of the `ECS` acronym.
-
-The new [flexible processing system](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/flexible-processing.html) provides more type safety, and the ability to process components by their interfaces. You could, for example, implement a custom update callback any component could receive through this API.
-
-### And more minor changes
-
-- [HDR Rendering Support for D3d/Windows](https://github.com/stride3d/stride/pull/2711)
-- [User-defined gizmos](https://doc.stride3d.net/latest/en/manual/scripts/gizmos.html)
-- [Haptic feedback integration for VR runtimes](https://github.com/stride3d/stride/pull/2169)
-- [API for OpenXR Passthrough](https://github.com/stride3d/stride/pull/2141)
+This is also one of the most release-worthy changes because it reduces friction for maintenance, makes failures more visible, and supports broader platform validation directly in the open.
 
 ### Fixes
 Although there have been [many fixes](https://github.com/stride3d/stride/pulls?page=2&q=is%3Apr+merged%3A%3E2023-10-10), we'd like to point some of them out:
@@ -99,25 +65,6 @@ We are already hard at work on a bunch of ongoing projects for version 4.4 and b
 ### 🧠 Core
 * chore: Update to dotnet 10 by [Eideren](https://github.com/Eideren) in [#2888](https://github.com/stride3d/stride/pull/2888)
 * refactor: Use CollectionsMarshal.SetCount to resize lists by [azeno](https://github.com/azeno) in [#2945](https://github.com/stride3d/stride/pull/2945)
-### 🔨 Build
-* chore: Move bepu asset compilation to Stride.Assets by [Eideren](https://github.com/Eideren) in [#2963](https://github.com/stride3d/stride/pull/2963)
-* chore: Update dependencies to .Net10 by [Eideren](https://github.com/Eideren) in [#2966](https://github.com/stride3d/stride/pull/2966)
-### 📄 Docs
-* fix: Typo in InstancingEntiyTransform by [Acissathar](https://github.com/Acissathar) in [#2951](https://github.com/stride3d/stride/pull/2951)
-* fix: Update MSBuild path for Visual Studio 2026 by [ModxVoldHunter](https://github.com/ModxVoldHunter) in [#2961](https://github.com/stride3d/stride/pull/2961)
-* chore: Change disk space requirement from 14 GB to 19 GB by [VaclavElias](https://github.com/VaclavElias) in [#2968](https://github.com/stride3d/stride/pull/2968)
-### 🎨 Graphics
-* fix: Rollback regression introduced through #2798 wrt lightprobes by [Eideren](https://github.com/Eideren) in [#2949](https://github.com/stride3d/stride/pull/2949)
-* fix: Regression in mesh bounds calculation introduced through #2858 by [johang88](https://github.com/johang88) in [#2952](https://github.com/stride3d/stride/pull/2952)
-* fix: Ensure cached data is up to date when models are mutated by [Eideren](https://github.com/Eideren) in [#2936](https://github.com/stride3d/stride/pull/2936)
-* feat: Match constructors between Index and VertexBufferHelper and improve documentation by [Eideren](https://github.com/Eideren) in [#2941](https://github.com/stride3d/stride/pull/2941)
-### ⌨️ Input
-* fix: Adds touch support to Winforms based GameForm by [joreg](https://github.com/joreg) in [#1664](https://github.com/stride3d/stride/pull/1664)
-### ⚙️ Physics
-* docs: fix incorrect documentation from pr #2930 by [Eideren](https://github.com/Eideren) in [#2943](https://github.com/stride3d/stride/pull/2943)
-* fix: Removal of self while running OnSimulationUpdate by [Eideren](https://github.com/Eideren) in [#2954](https://github.com/stride3d/stride/pull/2954)
-### 🔄 Serialization
-* fix: Instantiate() behavior for Prefab and Entity references by [Eideren](https://github.com/Eideren) in [#2914](https://github.com/stride3d/stride/pull/2914)
 
 ## Contributors
 
@@ -130,7 +77,6 @@ We are especially excited to welcome the following new contributors to Stride wi
 ### New contributors since 4.3
 
 * [C0dingSteve](https://github.com/C0dingSteve) in [#2847](https://github.com/stride3d/stride/pull/2847)
-
 
 ## Acknowledgements
 We extend our heartfelt gratitude for all the hard work and donations we have received. Your generous contributions significantly aid in the continuous development and enhancement of the Stride community and projects. Thank you for your support and belief in our collective efforts.
