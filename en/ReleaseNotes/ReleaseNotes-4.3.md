@@ -1,24 +1,21 @@
-# Stride 4.4 release notes
+# Stride 4.3 release notes
 
-July 14th, 2026
+November 14th, 2025
 
-Stride contributors are thrilled to announce the release of Stride 4.4, this release is special, we stay fully compatible with .NET 10, leveraging C# 14 and bringing numerous significant enhancements in performance, stability, and developer experience.
+Stride contributors are thrilled to announce the release of Stride 4.3, now fully compatible with .NET 10 and leveraging the latest enhancements in C# 14. This release brings significant improvements in performance, stability, and developer experience.
 
-Read the full blog post here: [Announcing Stride 4.4](https://www.stride3d.net/blog/announcing-stride-4-4-in-dotnet-10/)
+Read the full blog post here: [Announcing Stride 4.3](https://www.stride3d.net/blog/announcing-stride-4-3-in-dotnet-10/)
 
 A massive thank you to the open-source Stride community for your dedicated contributions.
 
 ## What's new in this release
+Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
 
-Stride 4.4 includes numerous enhancements and improvements. Here’s what to expect:
-
-- **Performace Improvements**: Dictionary lookups are now utilising `TryAdd`
+- **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
  
-- **CI/CD**: The build process was moved from TeamCity to GitHub Actions, allowing us to have a more transparent and open build process, and to run it on all platforms we support. Many actions are run automatically when a PR is opened.
+- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://devblogs.microsoft.com/dotnet/introducing-csharp-14/)
 
-### Breaking changes
-
-## What has changed since Stride 4.3
+## What has changed since Stride 4.2
 
 ### Bepu physics integration
 
@@ -127,10 +124,40 @@ A heartfelt thank you to all the contributors who have played a significant role
 
 We are especially excited to welcome the following new contributors to Stride with the 4.3 release. Your contributions are greatly appreciated!
 
-### New contributors since 4.3
+* [ModxVoldHunter](https://github.com/ModxVoldHunter) in [#2961](https://github.com/stride3d/stride/pull/2961)
+
+### New contributors since 4.2
 
 * [C0dingSteve](https://github.com/C0dingSteve) in [#2847](https://github.com/stride3d/stride/pull/2847)
-
+* [MEEMexe](https://github.com/MEEMexe) in [#2871](https://github.com/stride3d/stride/pull/2871)
+* [ferafiks](https://github.com/ferafiks) in [#2845](https://github.com/stride3d/stride/pull/2845)
+* [Kreblc3428](https://github.com/Kreblc3428) in [#2873](https://github.com/stride3d/stride/pull/2873)
+* [Acissathar](https://github.com/Acissathar) in [#2902](https://github.com/stride3d/stride/pull/2902)
+* [rmtttt](https://github.com/rmtttt) in [#2925](https://github.com/stride3d/stride/pull/2925)
+* [laske185](https://github.com/laske185) in [#2674](https://github.com/stride3d/stride/pull/2674)
+* [MikhailArsentevTheSecond](https://github.com/MikhailArsentevTheSecond) in [#2728](https://github.com/stride3d/stride/pull/2728)
+* [hoelzl](https://github.com/hoelzl) in [#2755](https://github.com/stride3d/stride/pull/2755)
+* [kutal10](https://github.com/kutal10) in [#2792](https://github.com/stride3d/stride/pull/2792)
+* [ClamEater14](https://github.com/ClamEater14) in [#2593](https://github.com/stride3d/stride/pull/2593)
+* [net2cn](https://github.com/net2cn) in [#2598](https://github.com/stride3d/stride/pull/2598)
+* [Nicogo1705](https://github.com/Nicogo1705) in [#2571](https://github.com/stride3d/stride/pull/2571)
+* [ourabigdev](https://github.com/ourabigdev) in [#2582](https://github.com/stride3d/stride/pull/2582)
+* [kopffarben](https://github.com/kopffarben) in [#2482](https://github.com/stride3d/stride/pull/2482)
+* [Feralnex](https://github.com/Feralnex) in [#2494](https://github.com/stride3d/stride/pull/2494)
+* [TranquilAbyss](https://github.com/TranquilAbyss) in [#2518](https://github.com/stride3d/stride/pull/2518)
+* [levifmorais](https://github.com/levifmorais) in [#2546](https://github.com/stride3d/stride/pull/2546)
+* [tymokvo](https://github.com/tymokvo) in [#2339](https://github.com/stride3d/stride/pull/2339)
+* [Arc-huangjingtong](https://github.com/Arc-huangjingtong) in [#2357](https://github.com/stride3d/stride/pull/2357)
+* [minktusk](https://github.com/minktusk) in [#2345](https://github.com/stride3d/stride/pull/2345)
+* [timcassell](https://github.com/timcassell) in [#2373](https://github.com/stride3d/stride/pull/2373)
+* [dloe](https://github.com/dloe) in [#2257](https://github.com/stride3d/stride/pull/2257)
+* [wrshield](https://github.com/wrshield) in [#2272](https://github.com/stride3d/stride/pull/2272)
+* [soorMSWE](https://github.com/soorMSWE) in [#2280](https://github.com/stride3d/stride/pull/2280)
+* [MechWarrior99](https://github.com/MechWarrior99) in [#2258](https://github.com/stride3d/stride/pull/2258)
+* [kristian15959](https://github.com/kristian15959) in [#2294](https://github.com/stride3d/stride/pull/2294)
+* [YerkoAndrei](https://github.com/YerkoAndrei) in [#2307](https://github.com/stride3d/stride/pull/2307)
+* [ComputerSmoke](https://github.com/ComputerSmoke) in [#2169](https://github.com/stride3d/stride/pull/2169)
+* [timconner](https://github.com/timconner) in [#2183](https://github.com/stride3d/stride/pull/2183)
 
 ## Acknowledgements
 We extend our heartfelt gratitude for all the hard work and donations we have received. Your generous contributions significantly aid in the continuous development and enhancement of the Stride community and projects. Thank you for your support and belief in our collective efforts.
