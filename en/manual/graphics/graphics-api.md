@@ -41,7 +41,6 @@ Stride supports the following values:
 * Direct3D11
 * Direct3D12
 * Vulkan
-* Null
 
 ## Checking the API at runtime
 
