@@ -13,7 +13,7 @@ To open the Prefab editor from the **Asset view**, double click the prefab, or r
 
 To open the Prefab Editor from the **Scene editor**, right-click any child of a prefab instance and select **Open prefab in editor**.
 
-![](media/edit-prefab-from-selection.png)
+![](media/prefab-editor.png)
 
 ## Use the Prefab editor
 

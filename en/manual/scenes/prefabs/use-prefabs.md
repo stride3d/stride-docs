@@ -26,7 +26,7 @@ In this case, a parent entity is unnecessary. Instead, you can create several in
 
 | Relative positions maintained | Relative positions ignored |
 | :-- | :-- |
-| ![Boxes duplicated](media/boxes-duplicated.jpg) | ![Boxes duplicated](media/boxes-random.jpg) |
+| ![Boxes duplicated](media/boxes-duplicated.png) | ![Boxes duplicated](media/boxes-random.png) |
 
 ## Break link to prefab
 
@@ -79,6 +79,6 @@ private void InstantiateBulletPrefab()
 ```
 
 > [!NOTE]
-> At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include new changes.
+> At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to `Instantiate(Prefab)` include new changes.
 > 
 > For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at runtime. The script won't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs will have the new color, but existing prefabs won't.

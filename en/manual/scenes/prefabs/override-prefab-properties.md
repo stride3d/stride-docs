@@ -40,7 +40,7 @@ To reset an overridden property to the value in the parent prefab, right-click t
 
 In this example, we have a prefab of a futuristic lamppost.
 
-![](media/lamppost-prefab.jpg)
+![](media/lamppost-prefab.png)
 
 The lamppost prefab is composed of three entities: a column, a pillar, and a spot light. These are listed in the Entity tree in the Prefab editor.
 
@@ -64,4 +64,4 @@ Now let's see what happens when we go back to the Prefab Editor and change the c
 
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
 
-![Changed colors](media/lamppost-prefab-instances-with-override.jpg)
+![Changed colors](media/lamppost-prefab-instances-with-override.png)
