@@ -33,6 +33,11 @@ Stride 4.4 includes numerous enhancements and improvements. Here's what to expec
 
 - **Removed Null graphics backend**: Projects or integrations depending on `STRIDE_GRAPHICS_API_NULL` or related null-backend code paths may require migration.
 
+**WIP**
+- https://github.com/stride3d/stride/pull/3169
+- Some shader namespace have been removed
+- bepu hull
+- bepu characters (if merged https://github.com/stride3d/stride/pull/3195)
 
 ## What has changed since Stride 4.3
 
