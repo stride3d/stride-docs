@@ -31,13 +31,13 @@ TODO: IMAGE
 > [!TIP]
 > All scene view keybinds can be changed in the settings.
 
-## Transforming objects
+## Move, rotate and skale entities
 
-The scene view has 3 types of gizmos, that can be used to change the transform of an entity.
+The scene view allows you to switch between 3 different transformation modes, that can be used to move, rotate and skale an entity.
 
 | | Shortcut | Gizmo | Description |
 | :-: | :-: | :-- | :-- |
-| | `W` | Translation gizmo | Allow you to change an entity's position in an axis or plane. |
+| | `W` | Translation gizmo | Allows you to change an entity's position in an axis or plane. |
 | | `E` | Rotation gizmo | Allows you to change an entity's rotation in an axis. |
 | | `R` | Scale gizmo | Allows you to change an entity's scale in a single or all axes. |
 
@@ -70,3 +70,17 @@ TODO: IMAGE
 
 > [!NOTE]
 > The icon changes based on the selected gizmo.
+
+Keep in mind these additional keyboard shortcuts:
+
+| Shortcut | Description |
+| `Shift` | Temporarily toggles snap when held down. |
+| `N` | Snaps the object to the grid. |
+
+> [!TIP]
+> These shortcuts can be changed in the settings.
+
+## Miscalenious features
+
+* Toggle material selection - allows you to select a material asset by clicking on it on a selected model.
+* Show or hide selection mask - when enabled, the selection wireframe will fade out a few seconds after selecting an entity.
