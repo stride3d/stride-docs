@@ -52,3 +52,4 @@ Filters can be selected in the **Specific Filter** property of a configuration o
 ## See also
 
 * [regex101.com](https://regex101.com/)
+* [Configurations](configurations.md)

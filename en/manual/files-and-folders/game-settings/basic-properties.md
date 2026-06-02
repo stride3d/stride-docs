@@ -11,3 +11,8 @@ The **default scene** is the scene that Stride will load when the game is starte
 ## Graphics compositor
 
 The graphics compositor determines how the game is rendered at runtime and in **Game Studio**. Stride cannot render the game without it.
+
+## See also
+
+* [Graphics compositor](../../graphics/graphics-compositor/index.md)
+* [Configurations](configurations.md)

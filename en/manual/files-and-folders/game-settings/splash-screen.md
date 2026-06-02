@@ -28,3 +28,7 @@ In your project's **game settings**, navigate to the **splash screen section** (
 Stride won't show the splash screen if there is nothing assigned to the **texture** property.
 
 ![](media/splash-screen-off.webp)
+
+## See also
+
+* [Building the game](../building-the-game/index.md)
