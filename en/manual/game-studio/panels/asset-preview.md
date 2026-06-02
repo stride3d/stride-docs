@@ -4,6 +4,6 @@ The **Asset preview** panel allows you to quickly glance at how a model or mater
 
 TODO: IMAGE
 
-When viewing a material, it gets placed on a simple model, like a sphere. You can chose from one of the available models using the buttons at the top of the window.
+By default when viewing a material, it's displayed as a sphere. You can change this by selecting from one of the shapes at the top of the panel.
 
 TODO: IMAGE

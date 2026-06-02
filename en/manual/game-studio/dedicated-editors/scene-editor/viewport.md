@@ -1,12 +1,12 @@
-# Scene view
+# Viewport
 
-The **scene view** allows you to view and navigate your game's world.
+The **viewport** allows you to view and navigate your game's world.
 
 TODO: IMAGE
 
 ## Navigating the world
 
-You can navigate the scene view by zooming and panning the camera. You are also able to quickly focus an object, making the camera teleport itself to it.
+You can navigate the viewport by zooming and panning the camera. You are also able to quickly focus an object, making the camera teleport itself to it.
 
 | | Key | Description |
 | :-: | :-: | :-- |
@@ -29,11 +29,11 @@ TODO: IMAGE
 | `Shift` | Increase speed |
 
 > [!TIP]
-> All scene view keybinds can be changed in the settings.
+> All viewport keybinds can be changed in the settings.
 
 ## Move, rotate and skale entities
 
-The scene view allows you to switch between 3 different transformation modes, that can be used to move, rotate and skale an entity.
+The viewport allows you to switch between 3 different transformation modes, that can be used to move, rotate and skale an entity.
 
 | | Shortcut | Gizmo | Description |
 | :-: | :-: | :-- | :-- |

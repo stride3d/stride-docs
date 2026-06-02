@@ -139,8 +139,14 @@ items:
           - name: Scene editor
             href: game-studio/dedicated-editors/scene-editor/index.md
             items:
-              - name: Scene view
-                href: game-studio/dedicated-editors/scene-editor/scene-view.md
+              - name: Viewport
+                href: game-studio/dedicated-editors/scene-editor/viewport.md
+              - name: Entity tree
+                href: game-studio/dedicated-editors/scene-editor/entity-tree.md
+          - name: Prefab editor
+            href: game-studio/dedicated-editors/prefab-editor/index.md
+      - name: Settings
+        href: game-studio/settings.md
 
   - name: Graphics
     href: graphics/index.md
