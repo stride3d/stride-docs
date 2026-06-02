@@ -77,7 +77,7 @@ To show or hide collider shapes at runtime with a keyboard shortcut, use the **D
 
 3. In the Game Studio toolbar, click **Reload assemblies and update scripts**.
 
-    ![Reload assemblies](../platforms/media/reload-assemblies.png)
+    ![Reload assemblies](media/reload-assemblies.png)
 
 4. Add the **Debug physics shapes** script as a component to an entity in the scene. It doesn't matter which entity.
 

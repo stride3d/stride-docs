@@ -539,7 +539,7 @@ In Godot, you use methods like `_Ready()` for initialization and `_Process(delta
 
 After you create a script, you may have to reload the assemblies manually. To do this, click **Reload assemblies** in the Game Studio toolbar.
 
-![Reload assemblies](../platforms/media/reload-assemblies.png)
+![Reload assemblies](media/reload-assemblies.png)
 
 #### Godot
 

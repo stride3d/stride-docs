@@ -2,51 +2,52 @@
 
 ![Platforms](media/game-engine-system-requirements-intro-pic.png)
 
-Stride is cross-platform game engine. This means you can create your game once, then compile and deploy it on all the platforms Stride supports. The engine converts C# and shaders to the different native languages, and abstracts the concepts that differ between platforms, so you don't have to adapt your code for each platform.
+Stride is a cross-platform engine, which means that you can create a single game and publish it on multiple platforms.
 
-## Supported platforms
+## Supported development platforms
 
-* Windows 7, 8, 10
-* Windows Universal Platform (UWP)
-* [Linux](linux/index.md)
-* Android 2.3 and later
-* [iOS 8.0 and later](ios.md)
+| Name | Overall status | Editor | Building (without the editor) | [Code-only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html) |
+| :-- | :-- | :-: | :-: | :-: |
+| [Windows](windows/index.md) 10, 11 | Full support | 🟩 | 🟩 | 🟩 |
+| [Linux](linux/index.md) | Partial support, read more [here](linux/index.md#development-support) | 🟥 | 🟩 | 🟩 |
+| [MacOS](macos/index.md) | Partial support, read more [here](macos/index.md#development-support) | 🟥 | 🟩 | 🟩 |
 
-> [!TIP]
-> To check which platform your project uses, add a break point to your code (eg in a script), run the project, and check the [Platform.Type](xref:Stride.Core.Platform.Type) variable.
+> [!NOTE]
+> **Game Studio** (the editor) is being rewritten to be cross-platform. Currently however, it's not possible to use it outside of **Windows**.
 
-## Supported graphics platforms
+## Supported target platforms
 
-* Direct3D 9 (limited support), 10, 11, 12
-* OpenGL 3, 4
-* OpenGL ES 2 (limited support), 3
-* Vulkan
+* [Windows](windows/index.md) 10, 11
+* [Linux](linux/index.md) (experimental)
+* [MacOS](macos/index.md) (experimental)
+* [Android](android/index.md) (experimental)
+* [iOS](ios/index.md) (experimental)
 
->[!Note]
->Stride only supports MSAA (multisample anti-aliasing) for Direct3D 11 and later.
->Depending on your device's OpenGL shader compiler, Stride might not run with OpenGL ES2.
+## Platform specific code
 
->[!Warning]
->Direct3D 9 doesn't support HDR textures. Using HDR textures with DirextX 9 will crash your game.
+Each platform has it's own [project package](../files-and-folders/project-packages/index.md) that contains the [entry point](../files-and-folders/project-packages/index.md#entry-point) and other code exclusive for that platform.
 
-## Set the graphics platform
+Alternatively, you can check the current platform using [Platform.Type](xref:Stride.Core.Platform.Type).
 
-You set the graphics platform in the **Game settings** asset under **Rendering settings > Target graphics platform**.
+```csharp
+if (Platform.Type == PlatformType.Android)
+{
+    // This code will only be executed on Android
+}
+```
 
-![Select graphics platform](media/change-graphics-platform.png)
-
-For more information, see [Set the graphics platform](set-the-graphics-platform.md).
-
-## Preprocessor variables
-
-Stride defines preprocessor variables if you want to write code that compiles only under a specific platform. For more information, see [Preprocessor variables](../scripts/preprocessor-variables.md).
+> [!WARNING]
+> Stride also sets [preprocessor variables](../scripts/preprocessor-variables.md) for some platforms, however, it's generally advised to avoid using them.
 
 ## In this section
 
-* [Linux](linux/index.md)
+* [Windows](windows/index.md)
 * [UWP](uwp/index.md)
-    * [Xbox Live](uwp/xbox-live.md)
-* [iOS](ios.md)
+  * [Xbox Live](uwp/xbox-live.md)
+* [Linux](linux/index.md)
+  * [Setup and requirements](linux/setup-and-requirements.md)
+* [MacOS](macos/index.md)
+* [Android](android/index.md)
+* [iOS](ios/index.md)
+  * [Build guide](ios/build-guide.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
-* [Set the graphics platform](set-the-graphics-platform.md)
-* [Game settings](../game-studio/game-settings.md)
