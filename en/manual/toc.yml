@@ -529,8 +529,6 @@ items:
             href: files-and-folders/game-settings/overrides-and-filters.md
           - name: Splash screen
             href: files-and-folders/game-settings/splash-screen.md
-          - name: Accessing in code
-            href: files-and-folders/game-settings/accessing-in-code.md
       - name: Version control
         href: files-and-folders/version-control.md
       - name: Cached files

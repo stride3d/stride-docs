@@ -7,13 +7,13 @@ The **splash screen** is an image (usually a logo) displayed when your game star
 
 By default, Stride games use the Stride engine logo as a splash screen.
 
-TODO: IMAGE
+![](media/splash-screen-texture.webp)
 
 ## Customize the splash screen
 
-In your project's **game settings**, navigate to the **splash screen section** (it's at the bottom of the property grid). This is where you can modify a splash screen's properties.
+In your project's **game settings**, navigate to the **splash screen section** (it's at the bottom of the **Property grid**). This is where you can modify a splash screen's properties.
 
-TODO: IMAGE
+![](media/splash-screen-settings.webp)
 
 | Property | Description |
 | :-- | :-- |
@@ -27,4 +27,4 @@ TODO: IMAGE
 
 Stride won't show the splash screen if there is nothing assigned to the **texture** property.
 
-TODO: IMAGE
+![](media/splash-screen-off.webp)

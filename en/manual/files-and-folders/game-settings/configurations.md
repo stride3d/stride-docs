@@ -20,13 +20,25 @@ You can then add the configuration to your **game settings**.
 > [!NOTE]
 > You might have to reload **Game Studio** in order for the configuration to become available in the **Property grid**.
 
+## Access a configuration in code
+
+To access a configuration in code, use [`GameSettings.Configurations.Get<T>`](xref:Stride.Data.PlatformConfigurations.Get*), where `T` is the type of configuration that you want to get ahold of.
+
+```csharp
+var gameSettings = ((Game)Game).Settings;
+var audioConfiguration = gameSettings.Configurations.Get<AudioConfiguration>();
+```
+
+> [!NOTE]
+> If a configuration doesn't exist (hasn't been added to the list in **Game Studio**), the method will return a new instance of that class.
+
 ## Built-in configurations
 
 Here's a quick overview of the configurations that are included with Stride. For detailed information, consider visiting the corresponding system's section in the manual.
 
 ### Audio
 
-TODO: IMAGE
+![](media/built-in-configuration-audio.webp)
 
 | Property | Description |
 | :-- | :-- |
@@ -51,7 +63,7 @@ The **editor** settings control how Game Studio displays entities in the Scene e
 > [!NOTE]
 > How **Game Studio** displays entities is also affected by the **Color space** setting under **Rendering**.
 
-TODO: IMAGE
+![](media/built-in-configuration-editor.webp)
 
 | Property | Description |
 | :-- | :-- |
@@ -60,7 +72,7 @@ TODO: IMAGE
 
 ### Navigation
 
-TODO: IMAGE
+![](media/built-in-configuration-navigation.webp)
 
 #### Dynamic navigation mesh properties
 
@@ -86,7 +98,7 @@ For more details, see [Navigation](../../navigation/index.md).
 
 ### Physics
 
-TODO: IMAGE
+![](media/built-in-configuration-physics.webp)
 
 > [!NOTE]
 > This configuration is for [Bullet physics](../../physics-bullet/index.md), which is being phazed out. We recommend switching to the new [Bepu physics](../../physics/index.md).
@@ -100,7 +112,7 @@ TODO: IMAGE
 
 ### Rendering
 
-TODO: IMAGE
+![](media/built-in-configuration-rendering.webp)
 
 | Property | Description |
 | :-- | :-- |
@@ -113,7 +125,7 @@ TODO: IMAGE
 
 ### Streaming
 
-TODO: IMAGE
+![](media/built-in-configuration-streaming.webp)
 
 | Property | Description |
 | :-- | :-- |
@@ -130,8 +142,8 @@ For more details, see [Streaming](../../graphics/textures/streaming.md).
 
 ### Textures
 
-TODO: IMAGE
+![](media/built-in-configuration-textures.webp)
 
 | Property | Description |
 | :-- | :-- |
-| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. **Higher** settings might result in slower builds, depending on the target platform. |
+| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. **Best** might result in slower builds, depending on the target platform. |

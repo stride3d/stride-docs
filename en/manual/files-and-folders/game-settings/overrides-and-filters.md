@@ -4,13 +4,13 @@ It's possible to use different configurations based on the platform and GPU of a
 
 ## Create an override
 
-Overrides are stored in the game settings asset under the **Overrides** category. That's where you can add and remove your overrides.
+Overrides are stored in the game settings asset under the **Overrides** category.
 
-TODO: IMAGE
+![](media/overrides-category.webp)
 
 After creating a new override, select the platforms you want to target and add a configuration.
 
-TODO: IMAGE
+![](media/overrides-add-configuration.webp)
 
 ## Specific filters
 
@@ -22,11 +22,11 @@ Configuration overrides can use specific filters from a list located in the **ga
 
 1. Press **➕ Add a Platform Filter** at the bottom of the **Platform Filters** category.
     
-    TODO: IMAGE
+    ![](media/platform-filters.webp)
 
 2. Write your filter using [regular expression](https://en.wikipedia.org/wiki/Regular_expression).
 
-    TODO: IMAGE
+    ![](media/platform-filters-new.webp)
 
 3. Save the game settings asset for the filter to become usable.
 
@@ -34,7 +34,7 @@ Configuration overrides can use specific filters from a list located in the **ga
 
 Filters can be selected in the **Specific Filter** property of a configuration override.
 
-TODO: IMAGE
+![](media/overrides-specific-filter.webp)
 
 ### Delete a filter
 
@@ -43,14 +43,12 @@ TODO: IMAGE
 
 1. Remove the filter from all configuration overrides.
 
-    TODO: IMAGE
-
 2. Save the game settings asset.
 
-3. Press the ➖ button next to the filter in **Platform Filters**.
+3. Press the ❌ button next to the filter in **Platform Filters**.
     
-    TODO: IMAGE
+    ![](media/platform-filters-remove.webp)
 
-## See more
+## See also
 
 * [regex101.com](https://regex101.com/)
