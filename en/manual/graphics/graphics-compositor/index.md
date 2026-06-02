@@ -31,7 +31,7 @@ You can choose one of two presets:
 
 ## Set the graphics compositor
 
-You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Stride uses the graphics compositor you specify in [Game Settings](../../game-studio/game-settings.md).
+You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Stride uses the graphics compositor you specify in [Game Settings](../../files-and-folders/game-settings/basic-properties.md#graphics-compositor).
 
 ![Set default scene](../../game-studio/media/game-settings-graphics-compositor.png)
 

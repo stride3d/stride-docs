@@ -29,7 +29,7 @@ In most situations, the process is very quick. We recommend you enable mipmaps f
 
 Streaming is enabled by default for all textures. You might want to disable streaming on important textures you always want to display immediately and in high quality, such as:
 
-* [splash screens](../../game-studio/splash-screen.md)
+* [splash screens](../../files-and-folders/game-settings/splash-screen.md)
 
 * textures on player models
 
@@ -49,7 +49,7 @@ Streaming is enabled by default for all textures. You might want to disable stre
 
 You can access the global streaming settings in the Game Settings asset. These settings apply to all textures that have streaming enabled.
 
-For instructions about how to access the global streaming settings, see the [Game Settings](../../game-studio/game-settings.md) page.
+For instructions about how to access the global streaming settings, see the [Game Settings - Configurations](../../files-and-folders/game-settings/configurations.md) page.
 
 ### Properties
 
@@ -114,4 +114,4 @@ Streaming.SetResourceStreamingOptions(myTexture, myNewOptions);
 * [StreamingManager API](xref:Stride.Streaming.StreamingManager)
 * [Textures index](index.md)
 * [Texture compression](compression.md)
-* [Game Settings](../../game-studio/game-settings.md)
+* [Game Settings](../../files-and-folders/game-settings/index.md)

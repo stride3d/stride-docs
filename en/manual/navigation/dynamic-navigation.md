@@ -11,7 +11,7 @@ If you enable **dynamic navigation**, entities with navigation components don't 
 
 ## Enable dynamic navigation
 
-You can enable and disable dynamic navigation in the global [game settings](../game-studio/game-settings.md) asset.
+You can enable and disable dynamic navigation in the global [game settings](../files-and-folders/game-settings/configurations.md#navigation) asset.
 
 1. On the entities you want to navigate dynamically, under the navigation component properties, next to **Navigation mesh**, make sure no navigation mesh is selected.
 

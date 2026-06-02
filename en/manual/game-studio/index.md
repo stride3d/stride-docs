@@ -40,7 +40,6 @@ You can show and hide different parts of the Game Studio in the View menu. You c
     * [Create assets](create-assets.md)
     * [Use assets](use-assets.md)
     * [Archetypes](archetypes.md)
-    * [Game settings](game-settings.md) 
 * [Prefabs](prefabs/index.md)
     * [Create a prefab](prefabs/create-a-prefab.md)
     * [Use prefabs](prefabs/use-prefabs.md)

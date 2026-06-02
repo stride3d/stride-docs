@@ -41,7 +41,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 2. In the **Property Grid** (on the right by default), in the **Camera** component properties, under **Slot**, select the slot you want to bind the camera to.
 
     > [!Note]
-    > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../game-studio/game-settings.md).
+    > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../files-and-folders/game-settings/index.md).
 
     ![media/graphics-compositor-overview-2.png](../graphics-compositor/media/graphics-compositor-overview-2.png)
 
@@ -69,5 +69,5 @@ To change the camera at runtime, toggle the ``Enabled`` property.
 
 * [Cameras](index.md)
 * [Graphics compositor](../graphics-compositor/index.md)
-* [Game Studio — Game settings](../../game-studio/game-settings.md)
+* [Game settings](../../files-and-folders/game-settings/index.md)
 * [Game Studio — Manage scenes](../../game-studio/manage-scenes.md)
