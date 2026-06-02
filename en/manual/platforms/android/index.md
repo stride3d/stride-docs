@@ -4,4 +4,4 @@
 
 ## General support
 
-All of Stride's core features **should** work on Android.
+Stride's Android support is in an experimental state. You might encounter problems that may not be easily solvable without modifications to the engine.

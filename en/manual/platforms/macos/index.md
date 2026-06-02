@@ -14,4 +14,4 @@ Alternatively, it is possible to create Stride games on MacOS using a [code-only
 
 ## General support
 
-All of Stride's features are fully supported on MacOS. Games can only be built for the arm architecture, that's used on newer apple devices.
+Stride's MacOS support is in an experimental state. You might encounter problems that may not be easily solvable without modifications to the engine.
