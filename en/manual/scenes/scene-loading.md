@@ -1,6 +1,6 @@
 # Scene loading
 
-Scenes loading is managed by the **content system**. Loaded scenes need to be added as a sub-scene of another scene.
+Scenes loading is managed by the **content system**. Loaded scenes need to be added as a sub-scene of another scene or replace the root scene.
 
 ## Load a scene
 
