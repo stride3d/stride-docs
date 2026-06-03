@@ -55,13 +55,13 @@ public override void Update()
 
 ## Building the engine with a different API
 
-When building the engine from source code, it will be built with support only for the default API for your OS. You can change that by setting `StrideGraphicsApiDependentBuildAll` to `true` in build parameters.
+When building the engine from source code, it will only contain support for your OS's default graphics API. To build all APIs, set `StrideGraphicsApiDependentBuildAll` to `true` in build parameters.
 
 ```bash
 msbuild -p:StrideGraphicsApiDependentBuildAll=true ./build/Stride.sln
 ```
 
-To only build selected api's, set the `StrideGraphicsApis` property to your desired value.
+To only build selected APIs, set the `StrideGraphicsApis` property to your desired values.
 
 ### [Powershell](#tab/powershell)
 
