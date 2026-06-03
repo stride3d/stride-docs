@@ -34,13 +34,32 @@ To change the graphics API used by your project, add the following line to the `
 <StrideGraphicsApi>NameOfGraphicsAPIHere</StrideGraphicsApi>
 ```
 
-![](media/graphics-api-xml-property.webp)
-
-Stride supports the following values:
+The following values are supported:
 
 * Direct3D11
 * Direct3D12
 * Vulkan
+
+Here's an example of how this would look like:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+        <ApplicationIcon>Resources/Icon.ico</ApplicationIcon>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>MyGame</RootNamespace>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        
+        <StrideGraphicsApi>Vulkan</StrideGraphicsApi>
+    </PropertyGroup>
+
+    ...
+    
+</Project>
+```
 
 ## Checking the API at runtime
 
