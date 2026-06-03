@@ -1,25 +1,103 @@
 ﻿# Graphics API
-To run your projects through a different API than the default one, add the following line to the `PropertyGroup` of your executable's `.csproj` file:
 
-`<StrideGraphicsApi>Vulkan</StrideGraphicsApi>`
+<span class="badge text-bg-primary">Intermediate</span>
 
-![image](https://user-images.githubusercontent.com/5742236/155832596-48165499-51ac-4026-9140-30b35dfa4f0b.png)
+**Graphics APIs** are responsible for performing basic rendering operations. They differ in platform availability and have their own benefits and drawbacks.
 
-Supported values are as follows:
+## Supported graphics APIs
+
+Stride has support for the following APIs:
+
+### Direct3D11
+
+**Available on platforms:** Windows
+
+Direct3D is a graphics API developed by Microsoft. Stride's implementation for version 11 is the most mature, which is why it's used as the default on Windows.
+
+### Direct3D12
+
+**Available on platforms:** Windows
+
+Version 12 of Direct3D is the newest release of the API. Currently, Stride's implementation for it isn't as stable as the one for 11, which is why it isn't used by default.
+
+### Vulkan
+
+**Available on platforms:** Windows, Linux, MacOS, Android, iOS
+
+Vulkan is a modern graphics API that provides great performance benefits and control over how rendering is performed. It's used as the default on non-Windows platforms.
+
+## Changing the graphics API
+
+To change the graphics API used by your project, add the following line to the `PropertyGroup` of a [platform package's](../files-and-folders/project-packages/index.md#platform-packages) `.csproj` file:
+
+```xml
+<StrideGraphicsApi>NameOfGraphicsAPIHere</StrideGraphicsApi>
 ```
-Null
-Direct3D11
-Direct3D12
-OpenGL
-OpenGLES
-Vulkan
+
+The following values are supported:
+
+* Direct3D11
+* Direct3D12
+* Vulkan
+
+Here's an example of how this would look like:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+        <ApplicationIcon>Resources/Icon.ico</ApplicationIcon>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>MyGame</RootNamespace>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        
+        <StrideGraphicsApi>Vulkan</StrideGraphicsApi>
+    </PropertyGroup>
+
+    ...
+    
+</Project>
 ```
 
-You *may* also have to add `<PackageReference Include="Stride.Shaders.Compiler" Version="x.x.x.x" />` to your *main* `.csproj`, and don't forget to replace `Version` appropriately.
+## Checking the API at runtime
 
-![image](https://github.com/stride3d/stride/assets/5742236/fbe35875-fb07-4f2f-ae8a-e9ea34eed471)
+You can check which API your project is using from [`GraphicsDevice.Platform`](xref:Stride.Graphics.GraphicsDevice.Platform).
 
-## Engine
-If you are using a local build of the engine you should run the build again with the following command:
+```csharp
+public override void Update()
+{
+    DebugText.Print($"Graphics API: {GraphicsDevice.Platform}", new(50, 50));
+}
+```
 
-`msbuild /t:Build /p:StrideGraphicsApiDependentBuildAll=true Stride.sln`
+## Building the engine with a different API
+
+When building the engine from source code, it will only contain support for your OS's default graphics API. To build all APIs, set `StrideGraphicsApiDependentBuildAll` to `true` in build parameters.
+
+```bash
+msbuild -p:StrideGraphicsApiDependentBuildAll=true ./build/Stride.sln
+```
+
+To only build selected APIs, set the `StrideGraphicsApis` property to your desired values.
+
+### [Powershell](#tab/powershell)
+
+```powershell
+msbuild -p:StrideGraphicsApis=`"Api1`;Api2`" ./build/Stride.sln
+```
+
+### [Bash](#tab/bash)
+
+```bash
+msbuild -p:StrideGraphicsApis=\"Api1\;Api2\" ./build/Stride.sln
+```
+
+---
+
+## See also
+
+* [Platforms](../platforms/index.md)
+* [Project structure](../files-and-folders/project-structure.md)
+* [Project packages](../files-and-folders/project-packages/index.md)
