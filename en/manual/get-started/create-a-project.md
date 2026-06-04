@@ -83,3 +83,53 @@ To create a project from a sample or template:
  5. Select the platforms you want your game to support and click **OK**.
 
 Stride creates the project and opens it in Game Studio.
+
+## Create a project without Game Studio
+
+Stride allows you to create new projects from the command line using the `dotnet` command.
+
+1. Before starting, make sure to install the project templates from nuget.
+
+    ```bash
+    dotnet new install Stride.Templates.Games
+    ```
+
+2. Find the template you want to use. The default project template is named `stride-game`. For a list of all stride templates, use this command:
+
+    ```bash
+    dotnet new list --tag stride
+    ```
+
+3. Create the project
+
+    ```bash
+    dotnet new stride-game -n NameOfGame
+    ```
+
+All Stride templates can take additional parameters to change how they are created. Here's a list of the most commonly used ones:
+
+| Parameter | Values | Description |
+| :-- | :-- | :-- |
+| `-n` | text | Name of the project. |
+| `--platform` | `host` (the current os), `window`, `linux`, `macos`, `android`, `ios` | Platform(s) the project should target, separated by the `|` character. |
+| `--HDR` | `true`, `false` | Determines if the project uses HDR (required graphics profile >= 10.0). |
+| `--graphics-profile` | `9.0`, `10.0`, `11.0` | The graphics profile to use. This can be changed later. |
+| `--orientation` | `Default`, `LandscapeLeft`, `LandscapeRight`, `Portrait` | The game's orientation on mobile devices. This can be changed later. |
+
+For a list of all available parameters in a template, use `dotnet new NameOfTemplate --help`.
+
+Example command:
+
+### [Powershell (Windows)](#tab/powershell)
+
+```powershell
+dotnet new stride-game -n ProjectX --HDR true --platform windows`|linux
+```
+
+### [Bash (Linux)](#tab/bash)
+
+```bash
+dotnet new stride-game -n ProjectX --HDR true --platform windows\|linux
+```
+
+---
