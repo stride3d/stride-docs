@@ -26,7 +26,7 @@ As some platforms can't compile shaders at runtime (eg iOS, Android, etc), effec
 
 ## Target everything
 
-Stride shaders are converted automatically to the target graphics platform — either plain HLSL for Direct3D or `SPIR-V` for Vulkan platforms.
+Stride shaders are converted automatically to the target graphics platform — either plain `HLSL` for Direct3D or `SPIR-V` for Vulkan platforms.
 
 For mobile platforms, shaders are optimized by a GLSL optimizer to improve performance.
 

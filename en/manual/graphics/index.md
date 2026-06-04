@@ -12,7 +12,7 @@ Shaders are authored in the [Stride's shading language](effects-and-shaders/shad
 
 ## Target everything
 
-Stride shaders are converted automatically to the target graphics platform, either plain HLSL for Direct3D or `SPIR-V` for Vulkan platforms.
+Stride shaders are converted automatically to the target graphics platform, either plain `HLSL` for Direct3D or `SPIR-V` for Vulkan platforms.
 
 ## Advanced graphics
 
