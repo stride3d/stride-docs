@@ -539,6 +539,9 @@ items:
         items:
           - name: Setup
             href: files-and-folders/building-the-game/setup.md
+            items:
+              - name: Native AOT
+                href: files-and-folders/building-the-game/native-aot.md
           - name: Building
             href: files-and-folders/building-the-game/building.md
           - name: Cleaning up
