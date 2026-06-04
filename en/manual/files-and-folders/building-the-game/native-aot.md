@@ -1,17 +1,17 @@
 # Native AOT
 
-C# and other languages from the .NET ecosystem are compiled into **Common Intermediate Language** (CIL), which can't be executed by a computer directly. Instead, it requires an additional piece of software called the **.NET Runtime** which uses a **Just-In-Time** (JIT) compiler to turn it into native machine code.
+C# and other languages from the .NET ecosystem are compiled into **Common Intermediate Language** (CIL), which can't be executed by a computer directly. Instead, it requires an additional piece of software called the **.NET Runtime**, which uses a **Just-In-Time** (JIT) compiler to turn it into native machine code.
 
 This approach has it's benefits and drawbacks:
 
 * 🟩 Your code can run on any platform supported by the **.NET Runtime**
-* 🟩 Support for high-level features
-* 🟩 Reduced disk size
+* 🟩 You can use high-level language features
+* 🟩 Compiled projects take up less disk space
 * 🟥 Some platforms do not support it (mainly iOS and consoles)
-* 🟥 Requires additional overhead, slightly decreasing performance
-* 🟥 Requires a user to install additional software (unless the app is made to be self contained)
+* 🟥 Creates additional overhead, slightly decreasing performance
+* 🟥 Requires a user to install additional software (unless the app is made to be [self contained](setup.md#self-contained))
 
-However, it is possible to use Native **Ahead-Of-Time** (AOT) compilation to skip the CIL entirely, creating a native application. Doing this can increase startup time and overall performance, but comes at the cost of every benefit of a standard JIT compiled .NET application.
+An alternative to this is to use **Native Ahead-Of-Time** (AOT) compilation to skip the CIL entirely, creating a native application. Doing this can decrease startup time and improve overall performance, but comes at the cost of every benefit of a standard JIT compiled .NET application.
 
 ## Preparation
 

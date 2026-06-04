@@ -126,6 +126,22 @@ In the `.csproj` file, add `<PublishSingleFile>true</PublishSingleFile>` and `<I
 
 ---
 
+## Native AOT
+
+Stride supports building games using **Native AOT**. For more information, read [Native AOT](native-aot.md).
+
+### [Visual Studio](#tab/visual-studio)
+
+To enable **Native AOT**, double click on the platform package and add `<NativeAot>true</NativeAot>` to the `<Property Group>`.
+
+![](media/visual-studio-csproj.webp)
+
+### [Manual](#tab/manual)
+
+In the `.csproj` file, add `<NativeAot>true</NativeAot>` to the `<Property Group>`.
+
+---
+
 ## The output directory
 
 There are two paths which can be configured:
