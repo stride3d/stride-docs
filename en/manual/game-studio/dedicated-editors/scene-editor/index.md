@@ -6,5 +6,5 @@ TODO: IMAGE
 
 It consists of two parts:
 
-* **Scene view** - a 3D display of the world environment, that can be also moved for transforming entities and navigating the scene.
-* **Entity tree** - a tree showing all of scene's entities, their children and sub-scenes.
+* [**Scene view**](scene-view.md) - a 3D display of the world environment, that can be also moved for transforming entities and navigating the scene.
+* [**Entity tree**](entity-tree.md) - a tree showing all of scene's entities, their children and sub-scenes.

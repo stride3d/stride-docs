@@ -56,7 +56,7 @@ Coordinate systems determine the direction of axes for the gizmos.
 | | Local | Axes are oriented in the same direction as the selected entity. |
 | | Camera | Axes are oriented in the same direction as the camera. |
 
-### Snapping to a grid
+### Snap to grid
 
 When moving entities, you can snap them to a grid for better precision.
 
