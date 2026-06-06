@@ -74,6 +74,7 @@ TODO: IMAGE
 Keep in mind these additional keyboard shortcuts:
 
 | Shortcut | Description |
+| :-: | :-- |
 | `Shift` | Temporarily toggles snap when held down. |
 | `N` | Snaps the object to the grid. |
 
