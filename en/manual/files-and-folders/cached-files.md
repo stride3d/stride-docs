@@ -42,13 +42,13 @@ To clean the cache:
 1. Delete `bin` and `obj` directories in all packages.
 2. Delete the `Bin` directory in the project root.
 
+---
+
 ## Cleaning the asset cache
 
 In order to speed up build times, **Stride reuses previously compiled assets**, unless there is a need to recompile them. This can sometimes cause issues when replacing assets.
 
 To delete the asset cache, **go to the output directory in `Bin`** containing the executable and **delete the `data` folder**.
-
----
 
 ## See also
 

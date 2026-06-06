@@ -11,3 +11,4 @@ The Stride editor is installed with a separate application, the **Stride Launche
 * [Requirements](requirements.md)
 * [Install Stride](install-stride.md)
 * [Update Stride](update-stride.md)
+* [Manage versions](manage-versions.md)

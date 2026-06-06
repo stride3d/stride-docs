@@ -43,7 +43,7 @@ Cache/
 
 ## Large files
 
-Some version control systems have special mechanisms for handling large files that can improve performance of those systems in large projects. In Stride, **these are most commonly the resource files**. For more information, visit the [project structure page](project-structure.md).
+Some version control systems have special mechanisms for handling large files that can improve performance of those systems in large projects. In Stride, **these are most commonly the resource files**. For more information, visit [Project structure](project-structure.md).
 
 ## Content creation files
 

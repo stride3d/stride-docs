@@ -2,8 +2,6 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-## Introduction
-
 If you want to **create games using Stride**, this guide provides the installation steps you'll need to follow.
 
 If you're interested in **building the Stride engine from source** or **contributing to its development**, please visit the [Stride GitHub repository](https://github.com/stride3d/stride) for instructions on how to build from source and contribute to the project.
@@ -39,14 +37,15 @@ If you're interested in **building the Stride engine from source** or **contribu
 
 ## Installation location
 
-The engine and it's editor Game Studio are a [NuGet package](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
+The engine and it's editor Game Studio are packaged with [NuGet](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
 
 Changing the installation location is possible, but this is outside of the scope of this page.
 
 ## Stride Extension
 
-Stride has an optional extension that's avaliable for some IDEs.
-- **🟩 What it does**: let's you write shaders directly in Visual Studio.
+Stride has an optional extension that's available for some IDEs.
+
+- **🟩 What it does**: let's you write shaders directly in an IDE.
 - **🟥 What it doesn't do**: provide C# syntax highlighting for Stride (that works without the extension).
 
 The extension can be installed for Visual Studio via the launcher, by navigating to the **Visual Studio extension** section. For other IDEs, visit the [Stride Extension page](../get-started/visual-studio-extension.md).

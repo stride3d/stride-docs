@@ -10,13 +10,13 @@
 
 ![An image showing a scene being edited in the Asset Editor.](media/asset-editor.webp)
 
-The **asset editor** is a dedicated editor for certain assets. It's most commonly used for editing scenes and their entities.
+The **Asset editor** is a dedicated editor for certain assets. It's most commonly used for editing scenes and their entities.
 
 ## Property Grid
 
 ![An image showing an entity names "Ground" in the property grid with a single component.](media/property-grid.webp)
 
-The **property grid** displays a list of properties of selected assets and entities.
+The **Property grid** displays a list of properties of selected assets and entities.
 
 This is where you can assign [components](key-concepts.md#components) to entities and edit their properties.
 
@@ -28,7 +28,7 @@ The **solution explorer** displays the hierarchy of elements in the C# solution 
 
 In a new project, there are 2 or more items under the solution: **NameOfMyProject** and **NameOfMyProject.NameOfPlatform** (there could be one or more of these).
 * **NameOfProject** - contains files for the game.
-* **NameOfProject.NameOfPlatform** - contains files specific to that platform (mostly, the `NameOfProjectApp`.cs file from which the game starts and the window icon).
+* **NameOfProject.NameOfPlatform** - contains files specific to that platform (mostly, the `NameOfProjectApp.cs` file from which the game starts and the window icon).
 
 Under each of those elements, there are 2 folders: **Assets** and **Code**.
 * **Assets** - contains all assets of that element.
@@ -38,12 +38,12 @@ Under each of those elements, there are 2 folders: **Assets** and **Code**.
 
 ![An image of the asset view.](media/asset-view.webp)
 
-The **asset view** displays contents of a selected folder in the **[solution explorer](#solution-explorer)**.
+The **Asset view** displays contents of a selected folder in the **[Solution explorer](#solution-explorer)**.
 
-Items from the **asset view** can be dragged into other editors (for example: dragging a prefab into the scene in the **[Asset Editor](#asset-editor)**).
+Items from the **Asset view** can be dragged into other editors (for example: dragging a prefab into the scene in the **[Asset editor](#asset-editor)**).
 
-To create a new asset, click the **Add asset** button in the top left corner.
+To create a new asset, click the **➕ Add asset** button in the top left corner.
 
 ## Further reading
 
-For more information, visit the [Game Studio](../game-studio/index.md) page.
+For more information, visit the [Game Studio](../game-studio/index.md) section.
