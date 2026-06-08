@@ -6,13 +6,13 @@
 
 ![An image showing the Game Studio.](media/game-studio.webp)
 
-## Asset Editor
+## Asset editor
 
-![An image showing a scene being edited in the Asset Editor.](media/asset-editor.webp)
+![](media/asset-editor.webp)
 
-The **Asset editor** is a dedicated editor for certain assets. It's most commonly used for editing scenes and their entities.
+Certain assets have their own dedicated editor. The most notable example of this is the **Scene editor**, which let's you view a scene in 3D.
 
-## Property Grid
+## Property grid
 
 ![An image showing an entity names "Ground" in the property grid with a single component.](media/property-grid.webp)
 
@@ -20,7 +20,7 @@ The **Property grid** displays a list of properties of selected assets and entit
 
 This is where you can assign [components](key-concepts.md#components) to entities and edit their properties.
 
-## Solution Explorer
+## Solution explorer
 
 ![An image of the solution explorer.](media/solution-explorer.webp)
 
@@ -34,13 +34,13 @@ Under each of those elements, there are 2 folders: **Assets** and **Code**.
 * **Assets** - contains all assets of that element.
 * **Code** - contains all code of that element.
 
-## Asset View
+## Asset view
 
 ![An image of the asset view.](media/asset-view.webp)
 
 The **Asset view** displays contents of a selected folder in the **[Solution explorer](#solution-explorer)**.
 
-Items from the **Asset view** can be dragged into other editors (for example: dragging a prefab into the scene in the **[Asset editor](#asset-editor)**).
+Items from the **Asset view** can be dragged into other editors (for example: dragging a prefab into a scene in the **[Scene editor](#asset-editor)**).
 
 To create a new asset, click the **➕ Add asset** button in the top left corner.
 

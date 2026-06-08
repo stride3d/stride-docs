@@ -12,10 +12,10 @@ If you're interested in **building the Stride engine from source** or **contribu
  
 2. Run the installer by double-clicking the **StrideSetup.exe** file and follow the on screen instructions until the **Stride Launcher** is installed. Make sure to accept the privacy policy.
 
-  > [!WARNING]
-  > If the .NET SDK has never been installed on your machine, the .NET SDK installation window **might appear below** the Stride installation window.
-  > 
-  > ![Image of the .NET installation window](media/install-dotnet-SDK.webp)
+    > [!WARNING]
+    > If the .NET SDK has never been installed on your machine, the .NET SDK installation window **might appear below** the Stride installation window.
+    > 
+    > ![Image of the .NET installation window](media/install-dotnet-SDK.webp)
 
 3. Open the launcher.
 
@@ -37,9 +37,9 @@ If you're interested in **building the Stride engine from source** or **contribu
 
 ## Installation location
 
-The engine and it's editor Game Studio are packaged with [NuGet](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
+The engine and it's editor Game Studio are packaged using [NuGet](https://learn.microsoft.com/en-us/nuget/what-is-nuget), which is the packaging format used in C# projects. This means that **Stride's installation location is managed by the NuGet package manager** and **can't be easily changed by the user**.
 
-Changing the installation location is possible, but this is outside of the scope of this page.
+Changing the installation location is possible, but explaining this is outside of the scope of this page.
 
 ## Stride Extension
 
