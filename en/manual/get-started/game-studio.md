@@ -10,7 +10,7 @@
 
 ![](media/asset-editor.webp)
 
-Certain assets have their own dedicated editor. The most notable example of this is the **Scene editor**, which let's you view a scene in 3D.
+Certain assets have their own dedicated editor. The most notable example of this is the **Scene editor**, which let's you view and edit a scene in 3D.
 
 ## Property grid
 
