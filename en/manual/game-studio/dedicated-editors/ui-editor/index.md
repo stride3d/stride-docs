@@ -37,3 +37,7 @@ TODO: IMAGE
 ## UI Properties
 
 In the top left corner of the editor there is a **UI Properties** button. Clicking it will display the general properties of the asset in the **Property grid**.
+
+## Further reading
+
+For more information about how to create UI, visit [UI](../../ui/index.md).
