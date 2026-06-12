@@ -12,10 +12,30 @@ The @'Stride.Graphics.SpriteFont' class is a convenient way to draw text. It wor
 
 After a font asset is compiled it can be loaded as a @'Stride.Graphics.SpriteFont' instance using the @'Stride.Core.Serialization.Contents.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc).
 
-**Code:** Load a SpriteFont
+**Code:** Load a SpriteFont as Asset
 
 ```cs
 var myFont = Content.Load<SpriteFont>("MyFont");
+```
+
+**Code:** Load a system Font
+
+```cs
+SpriteFont myFont;
+protected override void InitializeCore()
+{
+    base.InitializeCore();
+    //register system font in FontSystem as Arial
+    if(myFont is null) myFont = InitializeFont();    
+}
+
+private SpriteFont InitializeFont()
+{
+    var _fontSystem = Services.GetService<FontSystem>();
+    _fontSystem?.RuntimeFonts.RegisterFont("Arial", Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf"));
+    return _fontSystem?.LoadRuntimeFont("Arial", defaultSize: 12f);
+}
 ```
 
 ## Write text on screen
