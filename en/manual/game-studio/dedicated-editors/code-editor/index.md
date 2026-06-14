@@ -8,4 +8,4 @@ Generally, it's recommended to use an IDE such as **Visual Studio** for programm
 
 ## Further reading
 
-For more information about how to write scripts, visit [Scripts](../../scripts/index.md).
+For more information about how to write scripts, visit [Scripts](../../../scripts/index.md).

@@ -8,4 +8,4 @@ The **Sprite editor** allows you to create and manage those smaller parts.
 
 ## Further reading
 
-For more information about how to edit sprite sheets, visit [Sprites — Edit sprites](../../sprites/edit-sprites.md).
+For more information about how to edit sprite sheets, visit [Sprites — Edit sprites](../../../sprites/edit-sprites.md).

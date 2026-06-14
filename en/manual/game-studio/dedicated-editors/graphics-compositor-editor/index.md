@@ -10,7 +10,7 @@ The node graph displays the correlation between different parts of the composito
 
 TODO: IMAGE
 
-You can select nodes, which will display their properties in the **Property grid**.
+You can select nodes to display their properties in the **Property grid**.
 
 TODO: IMAGE
 
@@ -19,4 +19,4 @@ TODO: IMAGE
 
 ## Further reading
 
-For more information about how to edit the **Graphics Compositor** asset, visit [Graphics — Graphics Compositor](../../graphics/graphics-compositor.md).
+For more information about how to edit the **Graphics Compositor** asset, visit [Graphics — Graphics Compositor](../../../graphics/graphics-compositor/index.md).

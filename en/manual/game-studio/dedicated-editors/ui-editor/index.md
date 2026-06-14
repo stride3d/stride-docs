@@ -40,4 +40,4 @@ In the top left corner of the editor there is a **UI Properties** button. Clicki
 
 ## Further reading
 
-For more information about how to create UI, visit [UI](../../ui/index.md).
+For more information about how to create UI, visit [UI](../../../ui/index.md).
