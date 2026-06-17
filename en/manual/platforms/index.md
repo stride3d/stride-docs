@@ -18,10 +18,10 @@ Stride is a cross-platform engine, which means that you can create a single game
 ## Supported target platforms
 
 * [Windows](windows/index.md) 10, 11
-* [Linux](linux/index.md) (experimental)
-* [MacOS](macos/index.md) (experimental)
-* [Android](android/index.md) (experimental)
-* [iOS](ios/index.md) (experimental)
+* [Linux](linux/index.md)
+* [MacOS](macos/index.md)
+* [Android](android/index.md)
+* [iOS](ios/index.md)
 
 ## Platform specific code
 
