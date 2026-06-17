@@ -22,9 +22,9 @@ Starting with 4.4, Linux is no longer in an experimental state. **All engine fea
 
 ## Wayland
 
-Wayland is a communication protocol between a display server and it's applications, that has gained popularity among many Linux desktop environments. Many apps however are still yet to adopt it, relying on the outdated X windowing system. They work with wayland compositors thanks to a compatibility layer "xWayland", but can't utilize modern wayland features (such as fractional scalling).
+Wayland is a communication protocol between a display server and it's applications, that has gained popularity among many Linux desktop environments. Many apps however are still yet to adopt it, relying on the outdated X Windowing System (X11). They can work on Wayland compositors thanks to a compatibility layer "Xwayland", but can't utilize modern features that aren't present on X11 (such as fractional scalling).
 
-Currently, **games made with Stride can only run using the X windowing system**.
+Currently, **games made with Stride can only run using the X windowing system**, which is a standard among many games.
 
 ## In this section
 

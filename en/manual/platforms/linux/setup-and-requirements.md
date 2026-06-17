@@ -4,7 +4,7 @@ This page describes how to setup your Linux machine in order to develop and play
 
 ## Setup
 
-In order to run games made for Linux, you'll need a Linux PC with a graphics card that supports Vulkan, along with the following packages:
+In order to run games made for Linux, you'll need a Linux PC with a graphics card that supports **Vulkan**, along with the following packages:
 
 * [FreeType](#freetype)
 * [OpenAL](#openal)

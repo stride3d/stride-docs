@@ -27,7 +27,7 @@ Stride is a cross-platform engine, which means that you can create a single game
 
 Each platform has it's own [project package](../files-and-folders/project-packages/index.md) that contains the [entry point](../files-and-folders/project-packages/index.md#entry-point) and other code exclusive for that platform.
 
-Alternatively, you can check the current platform using [Platform.Type](xref:Stride.Core.Platform.Type).
+You can also check the current platform using [Platform.Type](xref:Stride.Core.Platform.Type).
 
 ```csharp
 if (Platform.Type == PlatformType.Android)
