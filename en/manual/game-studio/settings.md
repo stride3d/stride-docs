@@ -59,7 +59,7 @@ TODO: IMAGE
 | Default snap distance for translation | The default snap distance for translation used when opening a project for the first time. |
 | Default snap factor for scale | The default snap factor for scale used when opening a project for the first time. |
 | Display direction names instead of XYZ components | When enabled, the direction cube in the top right corner of the viewport will display direction names instead of "X", "Y" and "Z". |
-| Use linear movement for the rotation gizmo | IDK |
+| Use linear movement for the rotation gizmo | When enabled, rotating an entity along an axis using the rotation gizmo will be controlled by the distance of the mouse from it's initial position. The default behaviour for this is to use the angle between the mouse and the entity.  |
 
 ## Script editor
 
