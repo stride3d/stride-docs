@@ -6,7 +6,7 @@ Game Studio's settings can be customized by going to **Edit > Settings**.
 
 TODO: IMAGE
 
-This category allows you to customize which external applications are used by Game Studio by default.
+This category allows you to customize which external applications are used in Game Studio by default. <- change this
 
 | Setting | Description |
 | :-- | :-- |
@@ -34,6 +34,10 @@ This section contains settings related to the editor interface and toggles for c
 | Usage Analytics | When enable, Game Studio will send anonymous analytics. |
 
 ## Remote
+
+TODO: IMAGE
+
+This section contains settings for building games for remote machines running different operating systems.
 
 ## Scene editor
 
@@ -85,4 +89,4 @@ TODO: IMAGE
 
 | Setting | Description |
 | :-- | :-- |
-| Use effect compiler server for mobile platforms | When enabled, Game Studio will use the stride effect compiler server. |
+| Use effect compiler server for mobile platforms | When enabled, Game Studio will use the Stride effect compiler server. |
