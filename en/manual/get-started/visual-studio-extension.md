@@ -32,7 +32,7 @@ The extension can be installed from [open-vsx](https://open-vsx.org/extension/te
 
 ## Opening Game Studio from your IDE
 
-You can open your project in Game Studio from **Visual Studio** by going to Extensions > Stride > Open with Game Studio.
+You can open your project in Game Studio from **Visual Studio** by going to **Extensions > Stride > Open with Game Studio**.
 
 ![A picture showing the "Open in Game Studio" button in Visual Studio.](media/extension-open-game-studio.webp)
 

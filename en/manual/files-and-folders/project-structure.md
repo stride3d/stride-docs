@@ -11,7 +11,7 @@ A Stride project is a **standard C# solution**, consisting of a single [solution
 ![](media/file-structure.webp)
 
 * **Bin** - folder containing build files. For more information visit [this section](#project-bin-folder).
-* **NameOfGame**, **NameOfGame.PlatformName** - package folders.
+* **NameOfGame**, **NameOfGame.PlatformName** - project package folders.
 * **`.sln` file** - the solution file used by C# and Game Studio for opening the project.
 
 ## Project packages
@@ -38,16 +38,16 @@ A project package may contain:
 Every project package has `bin` and `obj` folders which are automatically created when opening or running the project. They store cached data used by Stride.
 
 > [!NOTE]
-> These folders **can be safely deleted without affecting the rest of the project**. For more information, visit the [cached files page](cached-files.md).
+> These folders **can be safely deleted without affecting the rest of the project**. For more information, visit [Cached files](cached-files.md).
 
 ## Project Bin folder
 
 In the root of the project directory, there is a `Bin` folder that contains game builds for each platform. Every time the game is launched from Game Studio or from an IDE, a debug version is built and placed in that folder.
 
-The location of this folder can be changed by going to the `.csproj` file of a platform's package and changing the value of `<OutputPath>`. For more information, read the [building setup page](building-the-game/setup.md).
+The location of this folder can be changed by going to the `.csproj` file of a platform package and changing the value of `<OutputPath>`. For more information, read [Building the game — Setup](building-the-game/setup.md).
 
 > [!NOTE]
-> To build the **release version** of the game, visit the [building the game section](building-the-game/index.md).
+> To build the **release version** of the game, visit [Building the game](building-the-game/index.md).
 
 ## See also
 

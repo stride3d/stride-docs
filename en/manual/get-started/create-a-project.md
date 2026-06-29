@@ -39,18 +39,17 @@ To create an empty project:
 
 6. Under **Platforms**, select the platforms you want your game to support.  
 
-    >[!NOTE]
-    >To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio).
-    >If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
+    > [!NOTE]
+    > To support iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank">Xamarin</a> (free if you have Visual Studio). If your development system is missing prerequisites for any of the platforms you select, Stride displays a warning.
 
 7. Under **Asset Packs**, you can select additional assets to include in your project. These include assets such as animations and materials. The asset packs are fun to play with when you're learning how to use Stride, but they're not necessary.
 
 8. Under **Rendering**, select the options you want.  
     
-    **Graphics API:** The graphics features you can use in your project depend on the API you select. For advanced graphics features, select the latest version of the graphics APIs.
+    **Graphics Profile:** The graphics features you can use in your project depend on the profile you select. For advanced graphics features, select the latest version of the graphics profiles.
     
     > [!WARNING]
-    > Some graphics cards don't support the latest APIs. For some mobile devices, only **Level 9.3** and **Level 10.0** graphics profiles are available.
+    > Some graphics cards don't support the latest graphics profiles. For some mobile devices, only **Level 9.3** and **Level 10.0** are available.
 
     **High or Low Dynamic Range (HDR / LDR):** This defines how color is computed in your project. In LDR mode, colors range from 0 to 1. In HDR mode colors can take any float value. HDR provides more advanced and realistic rendering but requires more processing power and profile **Level 10.0** or later.
 
@@ -100,7 +99,7 @@ Stride allows you to create new projects from the command line using the `dotnet
     dotnet new list --tag stride
     ```
 
-3. Create the project
+3. Create the project.
 
     ```bash
     dotnet new stride-game -n NameOfGame
