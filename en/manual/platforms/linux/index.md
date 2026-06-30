@@ -18,7 +18,7 @@ Alternatively, it is possible to create Stride games on Linux using a [code-only
 
 Starting with 4.4, Linux is no longer in an experimental state. **All engine features are fully supported on it**.
 
-**Aside from Windows, Linux is one of the most actively maintained platforms**, due to many contributors using it on a daily basis. Still, if you want to make sure that all engine features continue being supported on Linux, **consider becoming a contributor**.
+**Aside from Windows, Linux is one of the most actively maintained platforms**, due to many contributors using it on a daily basis. Still, if you want to make sure that all engine features continue being supported on Linux, consider [becoming a contributor](../../../contributors/index.md).
 
 ## Wayland
 
