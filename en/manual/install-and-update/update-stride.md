@@ -44,7 +44,31 @@ Make sure you are using the latest version of your IDE of choice to ensure compa
 
     ![](media/update-stride-save-project.webp)
 
-By following these steps, you can smoothly transition to the latest version of Stride, taking full advantage of the new features and improvements it offers. Remember, these procedures are designed to provide a hassle-free update experience and safeguard your project against potential issues.
+## Updating your project with Stride CLI
+
+Project updates can also be performed from the terminal with [Stride CLI](../get-started/stride-cli.md).
+
+1. Close **Game Studio** to make sure it doesn't override anything.
+
+2. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert to the previous state in case something goes wrong.
+
+3. Run the following command in order to update your project to the latest version of Stride:
+
+    ```bash
+    stride upgrade path/to/your/project
+    ```
+
+    If you want to update to a specific version of the engine, you can define it with the `--version` flag.
+
+    ```bash
+    stride upgrade --version 4.2 path/to/your/project
+    ```
+
+    To view a list of all available flags and parameters, run the following command:
+
+    ```bash
+    stride upgrade --help
+    ```
 
 ## Reverting a project update
 
