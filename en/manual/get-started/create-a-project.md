@@ -71,28 +71,16 @@ The Stride CLI tool provides a way of creating new projects without the need for
 
     The blank template is called **game**.
 
-3. Display a list of additional parameters for the template or sample:
-
-    ```bash
-    stride new TemplateNameHere --help
-    ```
-
-4. Create the project.
+5. Create the project.
 
     ```bash
     stride new TemplateNameHere -n ProjectNameHere
     ```
 
-5. Enter the newly created project folder.
-
-    ```bash
-    cd ./ProjectNameHere
-    ```
-
 6. Open the project in **Game Studio**.
 
     ````bash
-    stride studio
+    stride studio ./ProjectNameHere
     ````
 
 ## Create a project with dotnet templates
@@ -108,22 +96,16 @@ An alternative way of creating a project from the command line without the need 
 2. Find the template you want to use. The default project template is named `stride-game`. For a list of all stride templates, use this command:
 
     ```bash
-    dotnet new list --tag stride
+    dotnet new list stride
     ```
 
-3. Display a list of additional parameters for the template or sample:
-
-    ```bash
-    dotnet new TemplateNameHere --help
-    ```
-
-4. Create the project.
+3. Create the project.
 
     ```bash
     dotnet new TemplateNameHere -n ProjectNameHere
     ```
 
-5. Open **Game Studio** manually.
+4. Open **Game Studio** manually.
 
 ## Command line template parameters
 
@@ -137,7 +119,7 @@ All Stride templates can take additional parameters to change how they are creat
 | `--graphics-profile` | `9.0`, `10.0`, `11.0` | The graphics profile to use. This can be changed later. |
 | `--orientation` | `Default`, `LandscapeLeft`, `LandscapeRight`, `Portrait` | The game's orientation on mobile devices. This can be changed later. |
 
-For a list of all available parameters in a template, use `dotnet new NameOfTemplate --help`.
+For a list of all available parameters in a template, use the `--help` flag.
 
 Example command:
 
