@@ -37,6 +37,19 @@ To remove a specific installed version of the engine:
 
 ![Picture of the uninstall button](media/stride-launcher-delete.webp)
 
-## Managing versions through the command line
+## Managing versions with Stride CLI
 
-The **Stride CLI** let's you install, uninstall and manage versions of the engine directly through the command line. For more information, read [Stride CLI — Manage versions](../get-started/stride-cli.md#manage-versions).
+The **Stride CLI** let's you install, uninstall and update versions of the engine directly through the command line. For steps on how to install it, read [Stride CLI](../get-started/stride-cli.md).
+
+| Command | Description |
+| :-- | :-- |
+| `stride sdk install` | Installs the latest version of the engine. |
+| `stride sdk install VERSION` | Installs a specific version of the engine. Version patch number is optional. |
+| `stride sdk list` | List all installed versions. |
+| `stride sdk update` | Update all installed versions of the engine to the latest patch. |
+| `stride sdk update VERSION` | Update a specific installed version of the engine to the latest patch. Version patch number is optional. |
+| `stride sdk uninstall VERSION` | Uninstall a specific version of the engine. |
+| `stride studio` | Launch Game Studio. |
+
+> [!NOTE]
+> For many commands, the patch version can be skipped (e.g. `4.3`).

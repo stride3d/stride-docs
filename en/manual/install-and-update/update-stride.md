@@ -22,7 +22,7 @@ Alternatively, you can update the engine from the terminal using the [Stride CLI
 stride update
 
 # Update a specific engine version
-stride update 4.2
+stride update 4.3
 ```
   
 ## Updating your IDE
@@ -61,7 +61,7 @@ Project updates can also be performed from the terminal with [Stride CLI](../get
     If you want to update to a specific version of the engine, you can define it with the `--version` flag.
 
     ```bash
-    stride upgrade --version 4.2 path/to/your/project
+    stride upgrade --version 4.3 path/to/your/project
     ```
 
     To view a list of all available flags and parameters, run the following command:
