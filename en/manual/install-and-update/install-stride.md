@@ -45,12 +45,12 @@ Changing the installation location is possible, but explaining this is outside o
 
 Stride has an optional extension that's available for some IDEs.
 
-- **🟩 What it does**: let's you write shaders directly in an IDE.
+- **🟩 What it does**: provides a few useful utilities related to the engine.
 - **🟥 What it doesn't do**: provide C# syntax highlighting for Stride (that works without the extension).
 
 The extension can be installed for Visual Studio via the launcher, by navigating to the **Visual Studio extension** section. For other IDEs, visit the [Stride Extension page](../get-started/visual-studio-extension.md).
 
-![Image of the "Visual Studio extension" section in the Stride Launcher.](media/vs-extension.webp)
+![](media/vs-extension.webp)
 
 > [!NOTE]
 > The "Visual Studio 2022: Install" button will also work for Visual Studio 2026.

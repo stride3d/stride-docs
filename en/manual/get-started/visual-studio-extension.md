@@ -2,7 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-The **Stride extension** is an **optional** extension for IDEs that lets you [edit shaders directly from your IDE](../graphics/effects-and-shaders/custom-shaders.md).
+The **Stride extension** is an **optional** extension for IDEs that provides a few utilities for working with Stride.
 
 It isn't needed for syntax highlighting in C#.
 

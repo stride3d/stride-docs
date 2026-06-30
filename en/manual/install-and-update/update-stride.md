@@ -63,7 +63,7 @@ If your project is using version control, it can be easily reverted to a previou
 
 3. Change the engine version in the **Stride Launcher** to the previous version. For more information on how to do this, visit [Manage versions](manage-versions.md).
 
-4. Open your project and verify that everything is working correctly.
+4. Open your project and verify that there are no issues.
 
 ### Reverting without version control
 
@@ -79,7 +79,7 @@ If your project is not using version control, but you have selected the option t
 
 5. Change the engine version in the **Stride Launcher** to the previous version. For more information on how to do this, visit [Manage versions](manage-versions.md).
 
-6. Open your project and verify that everything is working correctly.
+6. Open your project and verify that there are no issues.
 
 ### Reverting without version control or backups
 
@@ -100,4 +100,4 @@ If your project isn't using version control and you haven't selected the option 
 
 6. Change the engine version in the **Stride Launcher** to the previous version. For more information on how to do this, visit [Manage versions](manage-versions.md).
 
-7. Open your project and verify that everything is working correctly.
+7. Open your project and verify that there are no issues.
