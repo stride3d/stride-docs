@@ -2,7 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-The **Stride extension** is an **optional** extension for IDEs that provides a few utilities for working with Stride.
+The **Stride extension** is an **optional** extension for IDEs that provides utilities for working with Stride.
 
 It isn't needed for syntax highlighting in C#.
 
@@ -29,6 +29,16 @@ The extension can be installed from the [Visual Studio Marketplace](https://mark
 The extension can be installed from [open-vsx](https://open-vsx.org/extension/tebjan/sdsl) which works with other Visual Studio Code compatible editors, including VSCodium. 
 
 ---
+
+## Visual Studio vs Visual Studio Code extensions
+
+The Stride Extension for Visual Studio Code / VSCodium is a community project that provides **different functionality** compared to the official Visual Studio extension. 
+
+| Visual Studio | Visual Studio Code / VSCodium |
+| :-- | :-- |
+| Official | Community project |
+| Provides Stride-related utilities | Provides tools for shader development |
+| Open Source ([repository link](https://github.com/stride3d/stride)) | Open Source ([repository link](https://github.com/tebjan/Stride.ShaderExplorer)) |
 
 ## Opening Game Studio from your IDE
 
