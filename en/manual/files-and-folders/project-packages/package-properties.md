@@ -20,13 +20,13 @@ Every project package contains it's own set of properties, that can be customize
 
 ## Example
 
-Here is an example `.sdpkg` file for the library "MyGame" that has two asset folders "Assets" and "Effects" and a single resource folder "Resources".
+Here is an example `.sdpkg` file for the library "MyGame.Game" that has two asset folders "Assets" and "Effects" and a single resource folder "Resources".
 
 ```yaml
 !Package
 SerializedVersion: {Assets: 3.1.0.0}
 Meta:
-    Name: MyGame
+    Name: MyGame.Game
     Version: 1.0.0
     Authors: []
     Owners: []

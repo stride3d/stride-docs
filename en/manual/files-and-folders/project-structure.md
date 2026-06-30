@@ -11,7 +11,7 @@ A Stride project is a **standard C# solution**, consisting of a single [solution
 ![](media/file-structure.webp)
 
 * **Bin** - folder containing build files. For more information visit [this section](#project-bin-folder).
-* **NameOfGame**, **NameOfGame.PlatformName** - project package folders.
+* **NameOfGame.Game**, **NameOfGame.PlatformName** - project package folders.
 * **`.slnx`/`.sln` file** - the solution file used by C# and Game Studio for opening the project.
 
 ## Project packages
@@ -21,7 +21,7 @@ At the root, a Stride project is comprised of multiple [project packages](projec
 **For .NET developers:** a Stride project package is a standard C# project.
 
 By default, there are at least 2 project packages in a Stride project:
-* **NameOfGame** - contains most code, assets and resources for the game.
+* **NameOfGame.Game** - contains most code, assets and resources for the game.
 * **NameOfGame.PlatformName** (e.g. NameOfGame.Windows) - dedicated package for a given platform, contains the [**entry point**](project-packages/index.md#entry-point) and other files specific to the platform (such as the window icon).
 
 A project package may contain:
