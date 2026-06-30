@@ -90,5 +90,5 @@ stride studio
 | Command | Description |
 | :-- | :-- |
 | `stride version` | Displays the version of the CLI tool + the version of the resolved project. |
-| `stride asset build ./NameOfGame.sln` | Runs the Asset Compiler (all arguments are forwarded). |
+| `stride asset build ./NameOfGame.slnx` | Runs the Asset Compiler (all arguments are forwarded). |
 | `stride self update` | Updates the CLI tool to the latest version via `dotnet tool update` |

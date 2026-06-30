@@ -37,7 +37,7 @@ Cache/
 ```
 
 > [!WARNING]
-> This file should be placed at the root of the Stride project, next to the `.sln` file. If your git repository isn't initialized at the root, the `.gitignore` file will still be detected.
+> This file should be placed at the root of the Stride project, next to the `.slnx`/`.sln` file. If your git repository isn't initialized at the root, the `.gitignore` file will still be detected.
 >
 > ![](media/version-control-gitignore-location.webp)
 

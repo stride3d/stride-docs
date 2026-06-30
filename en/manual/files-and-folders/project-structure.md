@@ -6,13 +6,13 @@ This page explains in detail how a Stride project's files are structured.
 
 ## Overview
 
-A Stride project is a **standard C# solution**, consisting of a single [solution file](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file) (`.sln`) and multiple [project package](#project-packages) folders, which contain code, assets and resources.
+A Stride project is a **standard C# solution**, consisting of a single [solution file](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file) (`.slnx`/`.sln`) and multiple [project package](#project-packages) folders, which contain code, assets and resources.
 
 ![](media/file-structure.webp)
 
 * **Bin** - folder containing build files. For more information visit [this section](#project-bin-folder).
 * **NameOfGame**, **NameOfGame.PlatformName** - project package folders.
-* **`.sln` file** - the solution file used by C# and Game Studio for opening the project.
+* **`.slnx`/`.sln` file** - the solution file used by C# and Game Studio for opening the project.
 
 ## Project packages
 
