@@ -31,7 +31,7 @@ Make sure you are using the latest version of your IDE of choice to ensure compa
 
 ## Updating your project
 
-1. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert to the previous state in case something goes wrong.
+1. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
 
 2. Open your project with the newer version of the engine. You will be prompted if you want to upgrade a package. Make sure to select to do this for every package in the solution and press **Upgrade**.
 
@@ -50,7 +50,7 @@ Project updates can also be performed from the terminal with [Stride CLI](../get
 
 1. Close **Game Studio** to make sure it doesn't override anything.
 
-2. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert to the previous state in case something goes wrong.
+2. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
 
 3. Run the following command in order to update your project to the latest version of Stride:
 
@@ -72,10 +72,10 @@ Project updates can also be performed from the terminal with [Stride CLI](../get
 
 ## Reverting a project update
 
-In case something went wrong while updating your project to a newer version of Stride or a newer version has a bug that prevents your game from working properly, you can revert it back to the previous version of the engine.
+In case something went wrong while updating your project or a newer version of Stride has a bug that prevents your game from working properly, you can revert it back to the previous version of the engine.
 
 > [!TIP]
-> Before reverting, try to identify what happened and [open an issue on Stride's Github page](https://github.com/stride3d/stride/issues) that describes your problem, so that it can be resolved in a future version of the engine.
+> Before reverting, try to identify what happened and [open an issue on Stride's Github page](https://github.com/stride3d/stride/issues) that describes your problem, so that it can be resolved in a future update.
 
 ### Reverting with version control
 
