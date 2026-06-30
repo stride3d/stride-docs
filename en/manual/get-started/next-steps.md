@@ -2,7 +2,7 @@
 
 Congratulations, by this point you should have everything to get yourself started with Stride!
 
-The best way of learning more about the engine is to **just start making something**. Alternatively, you can check out one of the [built-in examples](create-a-project.md#create-a-project-from-a-sample-or-template) or those provided [by the community](../../community-resources/example-projects.md).
+The best way of learning more about the engine is to **just start making something**. Alternatively, you can check out one of the [built-in examples](create-a-project.md) or those provided [by the community](../../community-resources/example-projects.md).
 
 In case you **get confused by certain terminology**, you can check out the [glossary](../glossary/index.md), which contains a list of all terms used in the documentation and the engine. 
 

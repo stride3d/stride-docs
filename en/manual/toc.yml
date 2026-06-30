@@ -29,6 +29,8 @@ items:
         href: get-started/game-studio.md
       - name: Stride Extension
         href: get-started/visual-studio-extension.md
+      - name: Stride CLI
+        href: get-started/stride-cli.md
       - name: Assets
         href: get-started/assets.md
       - name: Launch a game

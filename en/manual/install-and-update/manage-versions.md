@@ -36,3 +36,7 @@ To remove a specific installed version of the engine:
 2. Click the uninstall button.
 
 ![Picture of the uninstall button](media/stride-launcher-delete.webp)
+
+## Managing versions through the command line
+
+The **Stride CLI** let's you install, uninstall and manage versions of the engine directly through the command line. For more information, read [Stride CLI — Manage versions](../get-started/stride-cli.md#manage-versions).
