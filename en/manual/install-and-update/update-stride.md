@@ -31,16 +31,18 @@ Make sure you are using the latest version of your IDE of choice to ensure compa
 
 ## Updating your project
 
-1. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
+1. **Make sure your project can be built.** The upgrade process can modify some of your code, which requires all `.csproj` files to be compilable. 
 
-2. Open your project with the newer version of the engine. You will be prompted if you want to upgrade a package. Make sure to select to do this for every package in the solution and press **Upgrade**.
+2. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
+
+3. Open your project with the newer version of the engine. You will be prompted if you want to upgrade a package. Make sure to select to do this for every package in the solution and press **Upgrade**.
 
     ![](media/update-stride-packages.webp)
 
     > [!TIP]
     > If you are not using version control, it's recommended to **enable the option to backup modified files**. That way, if something goes wrong, you will be able to easily revert the changes.
 
-3. After Stride finishes updating the project, it's crucial to **save it immediately**. This step prevents the project from being in an undefined state and solidifies the changes made during the update.
+4. After Stride finishes updating the project, it's crucial to **save it immediately**. This step prevents the project from being in an undefined state and solidifies the changes made during the update.
 
     ![](media/update-stride-save-project.webp)
 
@@ -48,11 +50,16 @@ Make sure you are using the latest version of your IDE of choice to ensure compa
 
 Project updates can also be performed from the terminal with [Stride CLI](../get-started/stride-cli.md).
 
+> [!NOTE]
+> We recommend using the CLI tool over the `dotnet package update` command, as itt will also update some of your assets and code to ensure it works correctly with the new version.
+
 1. Close **Game Studio** to make sure it doesn't override anything.
 
-2. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
+2. **Make sure your project can be built.** The upgrade process can modify some of your code, which requires all `.csproj` files to be compilable. 
 
-3. Run the following command in order to update your project to the latest version of Stride:
+3. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
+
+4. Run the following command in order to update your project to the latest version of Stride:
 
     ```bash
     stride upgrade path/to/your/project
