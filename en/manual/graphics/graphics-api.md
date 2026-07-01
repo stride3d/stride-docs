@@ -28,7 +28,22 @@ Vulkan is a modern graphics API that provides great performance benefits and con
 
 ## Changing the graphics API
 
-To change the graphics API used by your project, add the following line to the `PropertyGroup` of a [platform package's](../files-and-folders/project-packages/index.md#platform-packages) `.csproj` file:
+> [!NOTE]
+> Currently all non-Windows platforms can only use Vulkan, as Direct3D is Windows-exclusive.
+
+### [Game Studio](#tab/game-studio)
+
+1. In the **Solution explorer** select the Windows [platform package](../files-and-folders/project-packages/index.md#platform-packages) (the one that ends with `.Windows`).
+
+    TODO: IMAGE
+
+2. In the **Property grid** find a property named **Graphics API** and change it to your desired value.
+
+    TODO: IMAGE
+
+### [Manual](#tab/manual)
+
+You can manually change the graphics API by adding the following line to the `PropertyGroup` of the [platform package's](../files-and-folders/project-packages/index.md#platform-packages) `.csproj` file:
 
 ```xml
 <StrideGraphicsApi>NameOfGraphicsAPIHere</StrideGraphicsApi>
@@ -60,6 +75,14 @@ Here's an example of how this would look like:
     
 </Project>
 ```
+
+## Changing the editor API
+
+Game Studio's graphics API is set independently from the game. To change it, go to **Edit > Settings > Environment > Graphics API (editor only)**. The new api will be used after editor restart.
+
+TODO: IMAGE
+
+You can also force the usage of a specific API from the command line by passing the `--graphics-api ApiNameHere` flag or setting the environment variable `STRIDE_GRAPHICS_API` to your desired value.
 
 ## Checking the API at runtime
 
