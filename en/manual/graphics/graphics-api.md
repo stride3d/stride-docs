@@ -55,27 +55,6 @@ The following values are supported:
 * Direct3D12
 * Vulkan
 
-Here's an example of how this would look like:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>net10.0-windows</TargetFramework>
-        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-        <ApplicationIcon>Resources/Icon.ico</ApplicationIcon>
-        <OutputType>WinExe</OutputType>
-        <RootNamespace>MyGame</RootNamespace>
-        <ApplicationManifest>app.manifest</ApplicationManifest>
-        
-        <StrideGraphicsApi>Vulkan</StrideGraphicsApi>
-    </PropertyGroup>
-
-    ...
-    
-</Project>
-```
-
 ## Changing the editor API
 
 Game Studio's graphics API is set independently from the game. To change it, go to **Edit > Settings > Environment > Graphics API (editor only)**. The new api will be used after editor restart.
