@@ -13,7 +13,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 2. Run the installer by double-clicking the **StrideSetup.exe** file and follow the on screen instructions until the **Stride Launcher** is installed. Make sure to accept the privacy policy.
 
     > [!WARNING]
-    > If the .NET SDK has never been installed on your machine, the .NET SDK installation window **might appear below** the Stride installation window.
+    > If the .NET SDK has never been installed on your machine, the .NET SDK installation window **might appear behind** the Stride installation window.
     > 
     > ![Image of the .NET installation window](media/install-dotnet-SDK.webp)
 

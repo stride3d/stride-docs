@@ -17,7 +17,7 @@ You can select a different version of the engine by clicking on one under **Stri
 
 To change the patch number of a version (the last part in a version string), click the dropdown menu next to it.
 
-![Picture of the dropdown menu showing different available patches for the engine.](media/stride-launcher-change-version.webp).
+![](media/stride-launcher-change-version.webp)
 
 ## Installing a version
 
@@ -43,8 +43,8 @@ The **Stride CLI** let's you install, uninstall and update versions of the engin
 
 | Command | Description |
 | :-- | :-- |
-| `stride sdk install` | Installs the latest version of the engine. |
-| `stride sdk install VERSION` | Installs a specific version of the engine. Version patch number is optional. |
+| `stride sdk install` | Install the latest version of the engine. |
+| `stride sdk install VERSION` | Install a specific version of the engine. Version patch number is optional. |
 | `stride sdk list` | List all installed versions. |
 | `stride sdk update` | Update all installed versions of the engine to the latest patch. |
 | `stride sdk update VERSION` | Update a specific installed version of the engine to the latest patch. Version patch number is optional. |

@@ -2,11 +2,9 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-This page explains how to create a new project from a template or sample using multiple ways.
-
-**Templates** are projects that contain just the necessary elements to start working on a game.
-
-**Samples** are complete games, which you can learn from or base a new game on.
+This page explains how to create a new project from a template or sample:
+* **Template** - a project that contain just the necessary elements to start working on a game.
+* **Sample** - a complete game, which you can learn from or base a new game on.
 
 ## Create a new project with Game Studio
 
@@ -20,7 +18,7 @@ To create a new project:
 
     You can also open this dialog in Game Studio from **File > New**. 
     
-2. Select a project template or sample. An empty template can be found in **New project > New Game**.
+2. Select a project template or sample. An empty template can be found in **General > New Game**.
 
 3. In the **Name** and **Location** fields, specify a name for the project and the folder to save it in.
 
@@ -85,15 +83,20 @@ The Stride CLI tool provides a way of creating new projects without the need for
 
 ## Create a project with dotnet templates
 
-An alternative way of creating a project from the command line without the need for Stride CLI is to use dotnet templates.
+An alternative way of creating a project from the command line without the need for Stride CLI is to use **dotnet templates**.
 
-1. Before starting, make sure to install the project templates from nuget.
+1. Before starting, make sure to install the template packages. For more information about what each package contains, read the README on their [nuget.org page](https://www.nuget.org/packages/Stride.Templates.Games).
 
     ```bash
+    # Install the blank stride-game template
     dotnet new install Stride.Templates.Games
+    # Install other templates
+    dotnet new install Stride.Templates.Games.Starters
+    # Install samples (complete games)
+    dotnet new install Stride.Templates.Samples
     ```
 
-2. Find the template you want to use. The default project template is named `stride-game`. For a list of all stride templates, use this command:
+2. Find the template you want to use. The default project template is named `stride-game`. For a list of all Stride templates, use this command:
 
     ```bash
     dotnet new list stride

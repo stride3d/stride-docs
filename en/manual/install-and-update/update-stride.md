@@ -33,9 +33,9 @@ Make sure you are using the latest version of your IDE of choice to ensure compa
 
 1. **Make sure your project can be built.** The upgrade process can modify some of your code, which requires all `.csproj` files to be compilable. 
 
-2. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
+2. (Recommended) **Commit all changes to version control.** This will provide a safety net, allowing you to revert the update in case something goes wrong.
 
-3. Open your project with the newer version of the engine. You will be prompted if you want to upgrade a package. Make sure to select to do this for every package in the solution and press **Upgrade**.
+3. **Open your project with the newer version of the engine.** You will be asked if you want to upgrade a package. Make sure to select to do this for every package in the solution and press **Upgrade**.
 
     ![](media/update-stride-packages.webp)
 
@@ -51,15 +51,15 @@ Make sure you are using the latest version of your IDE of choice to ensure compa
 Project updates can also be performed from the terminal with [Stride CLI](../get-started/stride-cli.md).
 
 > [!NOTE]
-> We recommend using the CLI tool over the `dotnet package update` command, as itt will also update some of your assets and code to ensure it works correctly with the new version.
+> We recommend using the CLI tool over the `dotnet package update` command, as it will also update some of your assets and code to ensure it works correctly with the new version.
 
 1. Close **Game Studio** to make sure it doesn't override anything.
 
 2. **Make sure your project can be built.** The upgrade process can modify some of your code, which requires all `.csproj` files to be compilable. 
 
-3. (Recommended) Commit all changes to **version control**. This will provide a safety net, allowing you to revert the update in case something goes wrong.
+3. (Recommended) **Commit all changes to version control.** This will provide a safety net, allowing you to revert the update in case something goes wrong.
 
-4. Run the following command in order to update your project to the latest version of Stride:
+4. **Run the following command** in order to update your project to the latest version of Stride:
 
     ```bash
     stride upgrade path/to/your/project
@@ -79,7 +79,7 @@ Project updates can also be performed from the terminal with [Stride CLI](../get
 
 ## Reverting a project update
 
-In case something went wrong while updating your project or a newer version of Stride has a bug that prevents your game from working properly, you can revert it back to the previous version of the engine.
+In case something went wrong during the update or a newer version of Stride has a bug that prevents your game from working properly, you can revert your project back to the previous version of the engine.
 
 > [!TIP]
 > Before reverting, try to identify what happened and [open an issue on Stride's Github page](https://github.com/stride3d/stride/issues) that describes your problem, so that it can be resolved in a future update.
@@ -92,7 +92,7 @@ If your project is using version control, it can be easily reverted to a previou
 
 2. Use your version control software to restore all changed files.
 
-3. Change the engine version in the **Stride Launcher** to the previous version. For more information on how to do this, visit [Manage versions](manage-versions.md).
+3. Change the engine version in the **Stride Launcher** to the one your project was previously using. For more information on how to do this, visit [Manage versions](manage-versions.md).
 
 4. Open your project and verify that there are no issues.
 
@@ -129,6 +129,6 @@ If your project isn't using version control and you haven't selected the option 
 
 5. (Recommended) Start tracking your project using version control software such as [git](https://git-scm.com/) in case something breaks again in the future.
 
-6. Change the engine version in the **Stride Launcher** to the previous version. For more information on how to do this, visit [Manage versions](manage-versions.md).
+6. Change the engine version in the **Stride Launcher** to the one you were previously using. For more information on how to do this, visit [Manage versions](manage-versions.md).
 
 7. Open your project and verify that there are no issues.
