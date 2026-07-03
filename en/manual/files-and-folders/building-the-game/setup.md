@@ -76,6 +76,9 @@ In the `.csproj` file, change the value of `<ApplicationIcon>Resources\Icon.ico<
 
 ---
 
+> [!WARNING]
+> After changing the icon, you will have to delete `/bin` in the platform package's directory for it to update.
+
 ## Self contained
 
 Making an application **self contained** removes the requirement for a user to have the **.NET runtime** installed on their machine.

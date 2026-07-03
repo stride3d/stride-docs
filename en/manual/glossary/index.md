@@ -3,7 +3,7 @@
 - [Stride](https://www.stride3d.net/): A C# game engine for creating 2D/3D games and visualizations.
 - [Stride Community Toolkit](https://stride3d.github.io/stride-community-toolkit/index.html): A collection of extensions and helpers for the Stride engine.
 - [Code-Only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html): A feature of the toolkit that allows you to create a game without using the Game Studio.
-- [Game Studio](../game-studio/index.md): An editor application for working on Stride projects.
+- [Game Studio](../game-studio/index.md): An editor application for Stride projects.
 - [Stride CLI](../get-started/stride-cli.md): A command-line tool that provides utilities for working with Stride directly from a terminal.
 
 ## Animation terms
@@ -117,7 +117,7 @@
 - [Stride project](../files-and-folders/project-structure.md) (in .NET: solution): Contains code and assets used for creating a Stride game.
 - [Project package](../files-and-folders/project-packages/index.md) (in .NET: C# project): A separated portion of a project's code and assets, used for organization.
 - [Platform package](../files-and-folders/project-packages/index.md#platform-packages): A special type of project package that represents a specific platform (e.g. Windows or Linux).
-- [External package](../files-and-folders/external-packages/index.md): An external project package that a project can reference in order to use it's code and assets.
+- [External package](../files-and-folders/external-packages/index.md): An external project package that can be referenced in order to use it's code and assets.
 - [Entry point](../files-and-folders/project-packages/index.md#entry-point): The place in code where a game's execution starts from.
 - [Building](../files-and-folders/building-the-game/index.md): Process of converting raw project files into a playable game.
 - [Publishing](../files-and-folders/building-the-game/index.md#what-is-publishing): Building the final version of the game that can be distributed.
