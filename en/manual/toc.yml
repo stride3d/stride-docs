@@ -532,6 +532,47 @@ items:
           - name: Distributing
             href: files-and-folders/building-the-game/distributing.md
 
+  - name: Scenes
+    href: scenes/index.md
+    items:
+      - name: Create a scene
+        href: scenes/create-a-scene.md
+      - name: Sub-scenes
+        href: scenes/sub-scenes.md
+      - name: Structuring scenes
+        href: scenes/structuring-scenes.md
+      - name: Scene loading
+        href: scenes/scene-loading.md
+      - name: Entities
+        href: scenes/entities/index.md
+        items:
+          - name: Components
+            href: scenes/entities/components.md
+          - name: Transform
+            href: scenes/entities/transform/index.md
+            items:
+              - name: Types of rotation
+                href: scenes/entities/transform/types-of-rotation.md
+              - name: Matrixes
+                href: scenes/entities/transform/matrixes.md
+              - name: World units
+                href: scenes/entities/transform/world-units.md
+      - name: Prefabs
+        href: scenes/prefabs/index.md
+        items:
+          - name: Create a prefab
+            href: scenes/prefabs/create-a-prefab.md
+          - name: Use prefabs
+            href: scenes/prefabs/use-prefabs.md
+          - name: Edit prefabs
+            href: scenes/prefabs/edit-prefabs.md
+          - name: Nested prefabs
+            href: scenes/prefabs/nested-prefabs.md
+          - name: Override prefab properties
+            href: scenes/prefabs/override-prefab-properties.md
+          - name: Prefab models
+            href: scenes/prefabs/prefab-models.md
+
   - name: Scripts
     href: scripts/index.md
     items:

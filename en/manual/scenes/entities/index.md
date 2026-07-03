@@ -1,0 +1,67 @@
+# Entities
+
+Entities are blank elements containing a collection of components that define what they are and how they behave (e.g. [model component](xref:Stride.Engine.ModelComponent)).
+
+Entities can have **child entities** with their own components.
+
+TODO: VISUALIZATION
+
+Every entity has a [transform component](xref:Stride.Engine.TransformComponent) that defines how it's positioned in relation to it's parent.
+
+## Create an entity in Game Studio
+
+You can open the entity creation menu by pressing the ➕ icon at the top of the hierarchy or right clicking anywhere in the hierarchy or scene view.
+
+TODO: IMAGE
+
+Here, you can select one of the entity templates or create an empty entity.
+
+TODO: IMAGE
+
+## Entities in code
+
+Entities can be instantiated from a prefab, or created at runtime from scratch like so:
+
+```csharp
+// Create a blank entity
+var myNewEntity = new Entity("Entity name");
+
+// Create an entity with components
+var myNewEntity = new Entity("Entity name")
+{
+    new LightComponent(),
+    new MyScript()
+}
+```
+
+These entities exist **outside of the game world** in an inactive state: none of their scripts are doing anything. To change this, they have to be either:
+
+* Assigned a scene:
+
+    ```csharp
+    myNewEntity.Scene = MyScene;
+    ```
+
+* Added as a child of a scene:
+
+    ```csharp
+    MyScene.Children.Add(myNewEntity);
+    ```
+
+* Assigned a parent:
+
+    ```csharp
+    myNewEntity.Transform.Parent = myParent;
+    ```
+
+* Added as a child of an entity:
+
+    ```csharp
+    MyEntity.Transform.Children.Add(myNewEntity);
+    ```
+
+To remove an entity, simply set their scene to `null`.
+
+```csharp
+entityToRemove.Scene = null;
+```
