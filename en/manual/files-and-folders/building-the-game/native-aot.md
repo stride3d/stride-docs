@@ -1,5 +1,7 @@
 # Native AOT
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 C# and other languages from the .NET ecosystem are compiled into **Common Intermediate Language** (CIL), which can't be executed by a computer directly. Instead, it requires an additional piece of software called the **.NET Runtime**, which uses a **Just-In-Time** (JIT) compiler to translate it into native machine code.
 
 This approach has it's benefits and drawbacks:
