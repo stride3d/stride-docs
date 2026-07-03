@@ -55,6 +55,8 @@ The following values are supported:
 * Direct3D12
 * Vulkan
 
+---
+
 ## Changing the editor API
 
 Game Studio's graphics API is set independently from the game. To change it, go to **Edit > Settings > Environment > Graphics API (editor only)**. The new api will be used after editor restart.

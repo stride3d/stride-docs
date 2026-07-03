@@ -9,12 +9,12 @@ Stride CLI features:
 * Manage different versions of the engine
 * Create new projects
 * Update projects
-* Launch Game Studio without the launcher
+* Launch Game Studio
 * Run the asset compiler
 * Can be a replacement for the Stride Launcher
 
 > [!WARNING]
-> Even though the CLI tool removes the need for the launcher, it is still recommended to [install it](../install-and-update/install-stride.md), as it also includes prerequisites for the engine.
+> Even though the CLI tool can be a replacement for the launcher, it is still recommended to [install it](../install-and-update/install-stride.md), as it also includes prerequisites for the engine.
 
 ## Installing Stride CLI
 
@@ -35,7 +35,7 @@ stride --version
 
 ## Using Stride CLI
 
-The CLI consists of many commands that provide different utilities. You can view all of them by running the `stride` command without any arguments.
+The CLI consists of many commands that provide different utilities. You can view all of them by running `stride` without any arguments.
 
 ```bash
 stride
@@ -65,3 +65,9 @@ stride new game -n ProjectX && cd ProjectX # Create a new project and enter it's
 dotnet run --project ProjectX.Windows # Build and run the project
 stride studio # Open Game Studio
 ```
+
+## See also
+
+* [Manage versions](../install-and-update/manage-versions.md)
+* [Update Stride](../install-and-update/update-stride.md)
+* [Create a project](create-a-project.md)
