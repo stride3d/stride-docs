@@ -138,25 +138,31 @@ items:
       - name: Dedicated editors
         href: game-studio/dedicated-editors/index.md
         items:
-          - name: Scene editor
-            href: game-studio/dedicated-editors/scene-editor/index.md
-            items:
-              - name: Viewport
-                href: game-studio/dedicated-editors/scene-editor/viewport.md
-              - name: Entity tree
-                href: game-studio/dedicated-editors/scene-editor/entity-tree.md
-          - name: Prefab editor
-            href: game-studio/dedicated-editors/prefab-editor/index.md
-          - name: Code editor
-            href: game-studio/dedicated-editors/code-editor/index.md
-          - name: Sprite editor
-            href: game-studio/dedicated-editors/sprite-editor/index.md
-          - name: UI editor
-            href: game-studio/dedicated-editors/ui-editor/index.md
-          - name: Graphics Compositor editor
-            href: game-studio/dedicated-editors/graphics-compositor-editor/index.md
-      - name: Settings
-        href: game-studio/settings.md
+          - name: Create assets
+            href: game-studio/create-assets.md
+          - name: Manage assets
+            href: game-studio/manage-assets.md
+          - name: Use assets
+            href: game-studio/use-assets.md
+          - name: Archetypes
+            href: game-studio/archetypes.md
+      - name: Prefabs
+        href: game-studio/prefabs/index.md
+        items:
+          - name: Create a prefab
+            href: game-studio/prefabs/create-a-prefab.md
+          - name: Use prefabs
+            href: game-studio/prefabs/use-prefabs.md
+          - name: Edit prefabs
+            href: game-studio/prefabs/edit-prefabs.md
+          - name: Nested prefabs
+            href: game-studio/prefabs/nested-prefabs.md
+          - name: Override prefab properties
+            href: game-studio/prefabs/override-prefab-properties.md
+          - name: Prefab models
+            href: game-studio/prefabs/prefab-models.md
+      - name: World units
+        href: game-studio/world-units.md
 
   - name: Graphics
     href: graphics/index.md
@@ -514,6 +520,17 @@ items:
             href: files-and-folders/external-packages/using-nuget-packages.md
           - name: Publish a NuGet package
             href: files-and-folders/external-packages/publish-a-nuget-package.md
+      - name: Game Settings
+        href: files-and-folders/game-settings/index.md
+        items:
+          - name: Basic properties
+            href: files-and-folders/game-settings/basic-properties.md
+          - name: Configurations
+            href: files-and-folders/game-settings/configurations.md
+          - name: Overrides and filters
+            href: files-and-folders/game-settings/overrides-and-filters.md
+          - name: Splash screen
+            href: files-and-folders/game-settings/splash-screen.md
       - name: Version control
         href: files-and-folders/version-control.md
       - name: Cached files

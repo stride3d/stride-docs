@@ -54,14 +54,14 @@
 - [Archetypes](../game-studio/archetypes.md): Share default properties across assets.
 - [Asset View](../game-studio/assets.md): Panel used to manage assets in your project.
 - [Create assets](../game-studio/create-assets.md): Create and organize project assets.
-- [Game settings](../game-studio/game-settings.md): Project-wide defaults such as the graphics compositor and rendering options.
+- [Game settings](../files-and-folders/game-settings/index.md): Project-wide defaults such as the graphics compositor and rendering options.
 - [Graphics compositor editor](../graphics/graphics-compositor/index.md): Node-based editor to configure the rendering pipeline.
 - [Manage entities](../game-studio/manage-entities.md): Select, group, and organize entities.
 - [Manage scenes](../game-studio/manage-scenes.md): Open, set defaults, and load/unload scenes.
 - [Navigate the Scene Editor](../game-studio/navigate-in-the-scene-editor.md): Viewport navigation and controls.
 - [Property Grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
 - [Scene Editor](../game-studio/scenes.md): The 3D/2D viewport for arranging entities in a scene.
-- [Splash screen](../game-studio/splash-screen.md): Configure startup visuals.
+- [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
 - [Use assets](../game-studio/use-assets.md): Reference and place assets in scenes.
 - [World units](../game-studio/world-units.md): Scene scale conventions (unit size, conversions).
 
