@@ -12,7 +12,15 @@ This page outlines how to create a new scene in Stride.
 
     TODO: IMAGE
 
-3. Name your scene
+3. Name your scene.
+
+## Edit a scene
+
+Scenes are complex assets, meaning they have a dedicated editor, the **Scene editor**.
+
+TODO: IMAGE
+
+For more information on how to use it, visit it's [Scene editor](../game-studio/dedicated-editor/index.md).
 
 ## Create a blank scene at runtime
 

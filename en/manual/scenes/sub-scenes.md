@@ -1,6 +1,6 @@
 # Sub-scenes
 
-On top of holding entities, scenes can also contain **sub-scenes**. Most commonly, they are used when loading different levels in a game.
+On top of holding entities, scenes can also contain **sub-scenes**. In a recommended configuration, different parts of the game (e.g. levels) would be added as a sub-scene of the main root scene.
 
 TODO: IMAGE OF THE HIERARCHY
 
