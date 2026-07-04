@@ -43,12 +43,13 @@ stride
 
 | Command | Description |
 | :-- | :-- |
-| `stride sdk` | Manage installed Stride versions (list, install, uninstall, update). For more information, read [Manage versions — Managing versions with Stride CLI](../install-and-update/manage-versions.md#managing-versions-with-stride-cli). |
+| `stride sdk` | Manage installed Stride versions (list, available, install, uninstall, update). For more information, read [Manage versions — Managing versions with Stride CLI](../install-and-update/manage-versions.md#managing-versions-with-stride-cli). |
 | `stride new` | Create a project from an installed Stride version's templates. For more information, read [Create a project — Create a project with Stride CLI](create-a-project.md#create-a-project-with-stride-cli). |
 | `stride upgrade` | Upgrade a project to a newer installed Stride version. For more information, read [Update Stride — Updating your project with Stride CLI](../install-and-update/update-stride.md#updating-your-project-with-stride-cli). |
 | `stride studio` | Open Game Studio. |
 | `stride self` | Manage the Stride CLI itself. |
 | `stride version` | Show the Stride CLI version and the resolved Stride version. |
+| `stride legacy` | List commands kept for older (pre-4.4) Stride projects. |
 | `stride asset` | Run the Stride Asset Compiler directly (advanced; arguments are forwarded). |
 
 For more information about how to use a given command, use the `--help` flag. For example:
