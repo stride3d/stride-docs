@@ -104,7 +104,7 @@ Once you've setup your package correctly, you can **pack it** to create a `.nupk
 
 ### [Visual Studio](#tab/packing-visual-studio)
 
-Before starting, change the configuration of your project to **Release mode**.
+Before starting, change the configuration of your project to **Release**.
 
 ![](media/visual-studio-change-configuration.webp)
 

@@ -1,163 +1,199 @@
-# Stride 4.3 release notes
+# Stride 4.4 Release Notes
 
-November 14th, 2025
+Stride 4.4 is one of the largest engine updates in years, with roughly **2,400 commits** since 4.3. The theme of this release is **modernization and reach**: much stronger **Vulkan and Direct3D 12** backends, full platform coverage across **Windows, Linux, macOS, Android and iOS** (all continuously tested on CI), a from-scratch shader compiler, and a real command-line workflow that no longer needs Game Studio.
 
-Stride contributors are thrilled to announce the release of Stride 4.3, now fully compatible with .NET 10 and leveraging the latest enhancements in C# 14. This release brings significant improvements in performance, stability, and developer experience.
+> 📷 *[Hero image, e.g. a Stride scene rendered through the new shader pipeline]*
 
-Read the full blog post here: [Announcing Stride 4.3](https://www.stride3d.net/blog/announcing-stride-4-3-in-dotnet-10/)
+---
 
-A massive thank you to the open-source Stride community for your dedicated contributions.
+## ✨ Highlights
 
-## What's new in this release
-Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
+### 📱 Platforms & cross-platform
 
-- **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
- 
-- **C# 14 Features**: With C# 14, Stride users can write cleaner, more concise code thanks to new language features. These improvements reduce boilerplate and enhance readability. [Discover C# 14](https://devblogs.microsoft.com/dotnet/introducing-csharp-14/)
+Stride 4.4 dramatically widens both where you can **build** games and where they **run**.
 
-## What has changed since Stride 4.2
+**Build anywhere:** the asset compiler and the full engine build now run on **Linux and macOS**, not just Windows.
 
-### Bepu physics integration
+**Run everywhere:** each target was brought back into shape (re-implementing whatever had bit-rotted) and locked down with **per-platform CI**, so it can't silently break again:
 
-Adding support for [Bepu Physics](https://github.com/bepu/bepuphysics2), a ridiculously fast physics engine written entirely in C#.
+- **Windows** — Direct3D 11/12 and Vulkan.
+- **Linux** — full runtime + tooling.
+- **macOS** — `net10.0-macos` runtime, Vulkan via MoltenVK, AVFoundation video and audio.
+- **Android** — building and running reliably again after a round of fixes.
+- **iOS** — builds restored, with platform defines and orientation handled correctly.
 
-Having both a game and physics engine in the same ecosystem reduces the cost of maintaining and improving it, the overhead that we may incur when communicating between the two APIs, and the barrier to entry for contributors.
+![A Stride sample running on a physical iPhone](media/ReleaseNotes-4.4/ios.jpg)
 
-Bullet is still the default physics engine, and we welcome any contribution towards it, but our efforts will be focused on Bepu from now.
+---
 
-The integration is effectively done, with Bepu's feature set now being slightly ahead of Bullet's. Have a look at [this page](https://doc.stride3d.net/latest/en/manual/physics/configuration.html) if you want to migrate to Bepu.
+### ⌨️ A real command-line workflow: the `stride` CLI + `dotnet new` templates
 
-### Vulkan compute shader support
+You can now **create, build and run Stride games entirely from the command line**, with no Game Studio install required.
 
-Vulkan graphics backend has been modified to support compute shaders, the shader compiler has also been modified to support computer shader generation for GLSL.
+**The new `stride` dotnet tool** bundles a full project lifecycle into a single, scriptable, CI-friendly command that effectively replaces the old Launcher:
 
-### User-defined Assets
+| Command | Purpose |
+|---|---|
+| `stride new` | scaffold a project from installed templates (`stride new list` to browse) |
+| `stride build` / `stride asset` | build the project and compile assets |
+| `stride upgrade` | upgrade a project to a newer Stride version |
+| `stride studio` | launch Game Studio for the resolved version |
+| `stride sdk install` / `uninstall` / `update` | manage installed Stride versions |
+| `stride self update` | update the CLI itself |
+| `stride version` | report resolved versions |
 
-Introducing [Custom Assets](https://doc.stride3d.net/latest/en/manual/scripts/custom-assets.html), a way to define and store data which can be referenced across multiple components, scenes and through other assets.
+```bash
+dotnet tool install -g stride.cli --version 1.0.0 # install the Stride CLI
+stride sdk install                                # install the latest Stride
+stride new topdownrpg && cd TopDownRPG            # create a project from a template
+stride studio                                     # open it in Game Studio
+```
 
-The asset compiler also gives you the ability to build more complex systems like custom file importers.
+**`dotnet new` templates** are also available as a lightweight fallback if you'd rather use the standard .NET tooling directly:
 
-### Ongoing efforts to build projects *from* Linux and Apple desktops
+```bash
+dotnet new install Stride.Templates
+dotnet new stride-game -o MyGame
+```
 
-Stride can build games under Windows to target the different devices we support, but building directly from those devices was not supported up till now.
+---
 
-We've introduced a couple of changes to improve on that front:
-- Replacing our custom C++/CLI FBX importer with [Assimp](https://github.com/assimp/assimp)
-- Fixing the asset compiler to run on all desktop OSes
-- Many build-system refactors to move toward fully cross-platform development
-- Building VHACD for Linux
-- Adjust FreeImage and DirectXTex for all platforms
+### 🎮 Vulkan & Direct3D 12
 
-Some work is still required on this front, but simpler projects can now be built from those platforms.
+Both backends got a big **overhaul and stability pass** this cycle and are in much better shape. They're now solid enough that we expect to make a modern backend the **editor default** before long, and **Direct3D 11 is a candidate for removal in the next major release**. GPU crashes are also far easier to track down: Stride can now pinpoint the exact rendering step that caused a device hang.
 
-### Efficient API to manipulate meshes
+If you write custom low-level rendering code, note that D3D12 and Vulkan now use an **explicit barrier/layout model** (and D3D12 requires **Enhanced Barriers** — the legacy path was removed).
 
-Vertex buffers do not have a standardized layout, each mesh may have its own specific layout and data type it uses for its vertices. Some have blend weights, or tangents, while others only have positions - they may also use different data types, for example Half4 positions, 4byte color ...
+You can also pick the graphics API right from the UI now. Game Studio itself can render with a chosen backend via **Settings → Environment → Graphics API (Game Studio only)** — this takes effect after a restart:
 
-We added in two helpers in [VertexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.VertexBufferHelper.html) and [IndexBufferHelper](https://doc.stride3d.net/latest/en/api/Stride.Graphics.IndexBufferHelper.html) to provide a standardized way to read and write to those buffers.
+![Choosing the Game Studio graphics API in Settings → Environment](media/ReleaseNotes-4.4/gamestudio-graphics-api-selector.png)
 
-### Open project with Rider and VSCode from the GameStudio
+And each Windows game project can select its own **Graphics API** from the package build settings in the property grid:
 
-While any IDE can open and build Stride projects, the editor button to open said project only had special handling for Visual Studio. [Jklawreszuk](https://github.com/Jklawreszuk) added support for Rider and VSCode.
+![Selecting a Windows project's graphics API from the property grid](media/ReleaseNotes-4.4/game-graphics-api-selector.png)
 
-### Interface processor
+---
 
-Stride has a [component processors](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/usage.html), a user-defined class which can collect and process all components of a given type in the running game. It is also known as the `System` part of the `ECS` acronym.
+### 🎨 A brand-new SDSL shader compiler
 
-The new [flexible processing system](https://doc.stride3d.net/latest/en/manual/engine/entity-component-system/flexible-processing.html) provides more type safety, and the ability to process components by their interfaces. You could, for example, implement a custom update callback any component could receive through this API.
+The biggest *internal* change in 4.4 is a **complete, from-scratch rewrite of the SDSL shader compiler**, now built around a modern **SPIR-V**-centric pipeline.
 
-### And more minor changes
+Instead of parsing and stitching shaders together as text, Stride now works in **SPIR-V bytecode** end to end:
 
-- [HDR Rendering Support for D3d/Windows](https://github.com/stride3d/stride/pull/2711)
-- [User-defined gizmos](https://doc.stride3d.net/latest/en/manual/scripts/gizmos.html)
-- [Haptic feedback integration for VR runtimes](https://github.com/stride3d/stride/pull/2169)
-- [API for OpenXR Passthrough](https://github.com/stride3d/stride/pull/2141)
+- Each `.sdsl` shader is parsed **once** and compiled into its own **SPIR-S** module (SPIR-Stride, Stride's extended SPIR-V dialect).
+- Effects (`.sdfx`) then **mix and compose** those modules **directly as bytecode**, lowering the result to standard **SPIR-V** for the GPU backend.
+- Crucially, text parsing happens **only at that first step**: recombining a new shader variation from already-compiled SPIR-S needs no re-parsing.
 
-### Fixes
-Although there have been [many fixes](https://github.com/stride3d/stride/pulls?page=2&q=is%3Apr+merged%3A%3E2023-10-10), we'd like to point some of them out:
+What this means for you:
 
-- Major performance improvements, particularly for graphics and UI
-- Multiple fixes improving Vulkan, OpenGL, games under Linux and OpenXR stability
-- And fixes for edge cases when reloading assemblies in the game studio
+- **Much faster shader handling.** Generating the many shader permutations a real game needs no longer touches a text parser; variations are recombined straight from cached bytecode.
+- **Built on mature, standard tooling.** **Vulkan** consumes the SPIR-V natively, while **Direct3D 11/12** and **Metal** reuse **SPIRV-Cross** (to HLSL/MSL), battle-tested components instead of a bespoke translator.
+- **Far better support for advanced features.** Direct3D 12 and Vulkan now handle things like **tessellation and compute shaders** much more reliably.
+- **A future-proof foundation.** With a real SPIR-V pipeline in place, adding modern GPU features such as **ray tracing, mesh shaders/meshlets and wave intrinsics** becomes much easier going forward.
 
-### Also good to know
+> ⚠️ **Heads-up:** Because the entire shader compiler was replaced, custom `.sdsl` shaders may need minor adjustments to compile cleanly. If you maintain shaders, give them a pass on 4.4. See *Upgrade Notes* below.
 
-We are already hard at work on a bunch of ongoing projects for version 4.4 and beyond;
-- Continuing work to allow for building games *from* other platforms
-- Converting our Windows-only GameStudio to cross-platform through Avalonia
-  We welcome anyone willing to contribute to this project over [Here](https://github.com/orgs/stride3d/projects/6) - just have to make sure to add a comment to one of the unassigned issues you want to work on
-- Improvements to shader compilation, reducing in-game hangs while building shader permutations. [Here](https://github.com/stride3d/SDSL)
-- More work on D3d12 and Vulkan as we slowly transition away from D3d11
+![The new SDSL shader pipeline: many .sdsl shaders are parsed once into per-shader SPIR-S bytecode, .sdfx effects mix and compose them into standard SPIR-V, which feeds Vulkan natively and Direct3D and Metal via SPIRV-Cross](media/ReleaseNotes-4.4/sdsl-pipeline.svg)
 
-## Changelog for this release
+*Huge thanks to **Youness Kafia**, whose early prototyping and experimentation laid the foundation for the new SDSL pipeline.*
 
-### 🎉 New features
-* fix: Add mouse wheel delta to virtual button by [Acissathar](https://github.com/Acissathar) in [#2946](https://github.com/stride3d/stride/pull/2946)
-### 🧠 Core
-* chore: Update to dotnet 10 by [Eideren](https://github.com/Eideren) in [#2888](https://github.com/stride3d/stride/pull/2888)
-* refactor: Use CollectionsMarshal.SetCount to resize lists by [azeno](https://github.com/azeno) in [#2945](https://github.com/stride3d/stride/pull/2945)
-### 🔨 Build
-* chore: Move bepu asset compilation to Stride.Assets by [Eideren](https://github.com/Eideren) in [#2963](https://github.com/stride3d/stride/pull/2963)
-* chore: Update dependencies to .Net10 by [Eideren](https://github.com/Eideren) in [#2966](https://github.com/stride3d/stride/pull/2966)
-### 📄 Docs
-* fix: Typo in InstancingEntiyTransform by [Acissathar](https://github.com/Acissathar) in [#2951](https://github.com/stride3d/stride/pull/2951)
-* fix: Update MSBuild path for Visual Studio 2026 by [ModxVoldHunter](https://github.com/ModxVoldHunter) in [#2961](https://github.com/stride3d/stride/pull/2961)
-* chore: Change disk space requirement from 14 GB to 19 GB by [VaclavElias](https://github.com/VaclavElias) in [#2968](https://github.com/stride3d/stride/pull/2968)
-### 🎨 Graphics
-* fix: Rollback regression introduced through #2798 wrt lightprobes by [Eideren](https://github.com/Eideren) in [#2949](https://github.com/stride3d/stride/pull/2949)
-* fix: Regression in mesh bounds calculation introduced through #2858 by [johang88](https://github.com/johang88) in [#2952](https://github.com/stride3d/stride/pull/2952)
-* fix: Ensure cached data is up to date when models are mutated by [Eideren](https://github.com/Eideren) in [#2936](https://github.com/stride3d/stride/pull/2936)
-* feat: Match constructors between Index and VertexBufferHelper and improve documentation by [Eideren](https://github.com/Eideren) in [#2941](https://github.com/stride3d/stride/pull/2941)
-### ⌨️ Input
-* fix: Adds touch support to Winforms based GameForm by [joreg](https://github.com/joreg) in [#1664](https://github.com/stride3d/stride/pull/1664)
-### ⚙️ Physics
-* docs: fix incorrect documentation from pr #2930 by [Eideren](https://github.com/Eideren) in [#2943](https://github.com/stride3d/stride/pull/2943)
-* fix: Removal of self while running OnSimulationUpdate by [Eideren](https://github.com/Eideren) in [#2954](https://github.com/stride3d/stride/pull/2954)
-### 🔄 Serialization
-* fix: Instantiate() behavior for Prefab and Entity references by [Eideren](https://github.com/Eideren) in [#2914](https://github.com/stride3d/stride/pull/2914)
+---
 
-## Contributors
+### ⚡ NativeAOT- and trim-clean engine
 
-A heartfelt thank you to all the contributors who have played a significant role in this release.
+The engine is now **NativeAOT- and trimming-friendly**: a full AOT publish completes with **0 errors**. This unlocks smaller, faster-starting, self-contained game builds.
 
-## New contributors
+---
 
-We are especially excited to welcome the following new contributors to Stride with the 4.3 release. Your contributions are greatly appreciated!
+## 🛠 Engine & Graphics
 
-* [ModxVoldHunter](https://github.com/ModxVoldHunter) in [#2961](https://github.com/stride3d/stride/pull/2961)
+- **Video subsystem rewrite:** a fresh Windows Media Foundation backend, plus a new AVFoundation backend on macOS.
+- **Direct3D 11 stability & correctness fixes.**
+- **Fonts:** upgraded to **FreeType 2.13**.
+- **Model importing:** upgraded to **Assimp 6**.
 
-### New contributors since 4.2
+---
 
-* [C0dingSteve](https://github.com/C0dingSteve) in [#2847](https://github.com/stride3d/stride/pull/2847)
-* [MEEMexe](https://github.com/MEEMexe) in [#2871](https://github.com/stride3d/stride/pull/2871)
-* [ferafiks](https://github.com/ferafiks) in [#2845](https://github.com/stride3d/stride/pull/2845)
-* [Kreblc3428](https://github.com/Kreblc3428) in [#2873](https://github.com/stride3d/stride/pull/2873)
-* [Acissathar](https://github.com/Acissathar) in [#2902](https://github.com/stride3d/stride/pull/2902)
-* [rmtttt](https://github.com/rmtttt) in [#2925](https://github.com/stride3d/stride/pull/2925)
-* [laske185](https://github.com/laske185) in [#2674](https://github.com/stride3d/stride/pull/2674)
-* [MikhailArsentevTheSecond](https://github.com/MikhailArsentevTheSecond) in [#2728](https://github.com/stride3d/stride/pull/2728)
-* [hoelzl](https://github.com/hoelzl) in [#2755](https://github.com/stride3d/stride/pull/2755)
-* [kutal10](https://github.com/kutal10) in [#2792](https://github.com/stride3d/stride/pull/2792)
-* [ClamEater14](https://github.com/ClamEater14) in [#2593](https://github.com/stride3d/stride/pull/2593)
-* [net2cn](https://github.com/net2cn) in [#2598](https://github.com/stride3d/stride/pull/2598)
-* [Nicogo1705](https://github.com/Nicogo1705) in [#2571](https://github.com/stride3d/stride/pull/2571)
-* [ourabigdev](https://github.com/ourabigdev) in [#2582](https://github.com/stride3d/stride/pull/2582)
-* [kopffarben](https://github.com/kopffarben) in [#2482](https://github.com/stride3d/stride/pull/2482)
-* [Feralnex](https://github.com/Feralnex) in [#2494](https://github.com/stride3d/stride/pull/2494)
-* [TranquilAbyss](https://github.com/TranquilAbyss) in [#2518](https://github.com/stride3d/stride/pull/2518)
-* [levifmorais](https://github.com/levifmorais) in [#2546](https://github.com/stride3d/stride/pull/2546)
-* [tymokvo](https://github.com/tymokvo) in [#2339](https://github.com/stride3d/stride/pull/2339)
-* [Arc-huangjingtong](https://github.com/Arc-huangjingtong) in [#2357](https://github.com/stride3d/stride/pull/2357)
-* [minktusk](https://github.com/minktusk) in [#2345](https://github.com/stride3d/stride/pull/2345)
-* [timcassell](https://github.com/timcassell) in [#2373](https://github.com/stride3d/stride/pull/2373)
-* [dloe](https://github.com/dloe) in [#2257](https://github.com/stride3d/stride/pull/2257)
-* [wrshield](https://github.com/wrshield) in [#2272](https://github.com/stride3d/stride/pull/2272)
-* [soorMSWE](https://github.com/soorMSWE) in [#2280](https://github.com/stride3d/stride/pull/2280)
-* [MechWarrior99](https://github.com/MechWarrior99) in [#2258](https://github.com/stride3d/stride/pull/2258)
-* [kristian15959](https://github.com/kristian15959) in [#2294](https://github.com/stride3d/stride/pull/2294)
-* [YerkoAndrei](https://github.com/YerkoAndrei) in [#2307](https://github.com/stride3d/stride/pull/2307)
-* [ComputerSmoke](https://github.com/ComputerSmoke) in [#2169](https://github.com/stride3d/stride/pull/2169)
-* [timconner](https://github.com/timconner) in [#2183](https://github.com/stride3d/stride/pull/2183)
+## 🧰 Build, Tooling & Project System
 
-## Acknowledgements
-We extend our heartfelt gratitude for all the hard work and donations we have received. Your generous contributions significantly aid in the continuous development and enhancement of the Stride community and projects. Thank you for your support and belief in our collective efforts.
+- **Much faster asset builds.** Warm asset compiles drop by around **40%** for a typical game, and up to **10×** for Stride's own tests, thanks to a new asset-build cache.
+- **`.slnx` is the new default solution format** for projects created by Stride. Existing `.sln` solutions still open and save normally.
+
+---
+
+## 🧪 Quality & CI
+
+*Mostly under the hood — but it directly changes how confidently you can contribute back to the engine.*
+
+Stride 4.4 has by far the **most robust CI the project has ever had**. Where earlier versions only exercised a slice of platforms, **every change now runs the entire test matrix** in one pipeline — engine builds, game and Game Studio tests, and end-to-end sample/packaging builds, across all platforms and graphics APIs, including **GPU image-comparison tests** (Windows D3D11/12, Linux Vulkan, macOS, Android, iOS):
+
+![The CI pipeline: a single run building and testing every platform and graphics API (Windows D3D11/D3D12/Vulkan, Linux, macOS, Android, iOS), all green](media/ReleaseNotes-4.4/ci-run.png)
+
+Breakage on any platform or backend is now caught automatically before it reaches a release. For contributors that's the real win: you can open a pull request and **trust CI to prove it works everywhere**, instead of testing each platform by hand — which makes contributing a feature back to the engine far less daunting.
+
+A **gold-image generation workflow** runs **directly on CI**, so you no longer have to regenerate reference images by hand on every platform (or wait for a long test run to fail before noticing) — golds are produced and promoted straight from [the CI workflow](https://github.com/stride3d/stride/actions/workflows/test-gold-gen.yml).
+
+The new **CompareGold** tool makes reviewing these tests painless — visually diff failures against their gold images, promote the ones you accept, and even pull results **directly from any CI run** or fork (see [GPU-TESTING.md](https://github.com/stride3d/stride/blob/master/tests/GPU-TESTING.md)).
+
+![CompareGold reviewing image differences and promoting gold images](media/ReleaseNotes-4.4/compare-gold.png)
+
+---
+
+## 🐛 Notable Fixes
+
+- **Game Studio** no longer hangs with the main window left disabled after a project upgrade.
+- Fixed `EffectEvaluator` for nested composition arrays.
+- Fixed `Plane.Negate` and several null-reference and internal calculation bugs.
+- Fixed D3D12 swapchain creation and a range of D3D11 stability issues.
+- Numerous shader-compiler correctness fixes.
+
+---
+
+## ⬆️ Upgrade Notes
+
+- **.NET 10 SDK** is required to build the engine and games (same as 4.3).
+- The standalone **Launcher** workflow is superseded by the new **`stride` CLI**.
+
+### Breaking changes
+
+- **Custom shaders:** the SDSL compiler was rewritten, so review and recompile custom `.sdsl`/`.sdfx` shaders; some non-standard constructs may need small fixes. If you hit a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
+- **Direct3D 12** now requires **Enhanced Barriers**; the legacy barrier path has been removed.
+- **`Stride.Core.Serialization` no longer depends on MicroThreading** ([#3169](https://github.com/stride3d/stride/pull/3169)): code that relied on this transitive reference must now reference the MicroThreading assembly directly. <!-- TODO: confirm the exact types/namespaces affected and the migration steps. -->
+- **Bepu `CharacterController` was reworked on top of Bepu's own controller** ([#3195](https://github.com/stride3d/stride/pull/3195)): existing character setups may behave differently and need adjustment. <!-- TODO: describe the behavior/API changes and the migration steps. -->
+- **Bepu convex hull behavior changed**: existing convex hull colliders may need review. <!-- TODO: describe what changed and any migration needed. -->
+
+
+---
+
+## 🙏 Contributors
+
+Thanks to everyone who contributed to Stride 4.4:
+
+- Youness Kafia (ykafia)
+- Nicolas Musset (Kryptos-FR / Color-Rise)
+- Mario Guerra
+- Johan Gustafsson
+- Eideren
+- Vaclav Elias
+- Virgile Bello (xen2)
+- Jakub Ławreszuk
+- Feralnex (Tomasz Czech)
+- Nicogo (Nicolas Gomez)
+- Doprez
+- ds5678
+- w0wca7a
+- Basewq
+- D4rkDuck
+- Elias Holzer
+- Peter Laske
+- Will Bentz
+- Henrik Gedionsen
+- Kevin Norris
+- Luca Domenichini
+- MiyaGrace
+- MsEpsilon
+- Rafael Stahl
+- Redwarx008
+- Steve Berdy
+
+…and everyone who reported issues, tested builds and helped on the community channels. 💙

@@ -481,24 +481,29 @@ items:
   - name: Platforms
     href: platforms/index.md
     items:
-      - name: Linux
-        href: platforms/linux/index.md
-        items:
-          - name: Setup and requirements
-            href: platforms/linux/setup-and-requirements.md
-          - name: Create a Linux game
-            href: platforms/linux/create-a-linux-game.md
+      - name: Windows
+        href: platforms/windows/index.md
       - name: UWP
         href: platforms/uwp/index.md
         items:
           - name: Xbox Live
             href: platforms/uwp/xbox-live.md
+      - name: Linux
+        href: platforms/linux/index.md
+        items:
+          - name: Setup and requirements
+            href: platforms/linux/setup-and-requirements.md
+      - name: MacOS
+        href: platforms/macos/index.md
+      - name: Android
+        href: platforms/android/index.md
       - name: iOS
-        href: platforms/ios.md
+        href: platforms/ios/index.md
+        items:
+          - name: Build guide
+            href: platforms/ios/build-guide.md
       - name: Add or remove a platform
         href: platforms/add-or-remove-a-platform.md
-      - name: Set the graphics platform
-        href: platforms/set-the-graphics-platform.md
 
   - name: Project
     href: files-and-folders/index.md

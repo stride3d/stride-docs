@@ -12,7 +12,7 @@ Stride separates project files into **project packages**. This allows for better
 
 Every project contains one or more **platform packages** that represent each platform the game is being developed for. Those packages also contain the [entry point](#entry-point) of the executable.
 
-Platform packages are automatically created when adding a platform. For more information on how to do this, read the [add or remove platform page](../../platforms/add-or-remove-a-platform.md).
+Platform packages are automatically created when adding a platform. For more information on how to do this, read [Add or remove platform](../../platforms/add-or-remove-a-platform.md).
 
 ## Entry point
 

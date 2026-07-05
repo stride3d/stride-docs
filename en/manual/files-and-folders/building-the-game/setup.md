@@ -122,7 +122,7 @@ Now, to enable **publish single file**, go to the profile settings and in the **
 
 ### [Manual](#tab/manual)
 
-In the `.csproj` file, add `<SelfContained>true</SelfContained>` and `<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>` to the `<Property Group>`.
+In the `.csproj` file, add `<PublishSingleFile>true</PublishSingleFile>` and `<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>` to the `<Property Group>`.
 
 ---
 

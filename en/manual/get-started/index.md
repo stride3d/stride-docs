@@ -18,6 +18,7 @@ For video tutorials, have a look at [Tutorials](../../tutorials/index.md).
 * [Create a project](create-a-project.md)
 * [Key Concepts](key-concepts.md)
 * [Game Studio](game-studio.md)
+* [Stride Extension](visual-studio-extension.md)
 * [Assets](assets.md)
 * [Launch your game](launch-a-game.md)
 * [Next steps](next-steps.md)
