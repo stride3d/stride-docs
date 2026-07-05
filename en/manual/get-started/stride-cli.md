@@ -31,7 +31,7 @@ stride --version
 ```
 
 > [!WARNING]
-> If the command is still not working, you might need to update your system's `Path` environment variable to include the directory containing dotnet tools.
+> If the command still isn't working, you might need to update your system's `Path` environment variable to include the directory containing dotnet tools.
 
 ## Using Stride CLI
 
