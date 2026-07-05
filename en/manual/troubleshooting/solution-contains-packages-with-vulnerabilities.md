@@ -27,7 +27,7 @@ Stride depends on **other libraries** in order to work and sometimes, those libr
 This warning **does not impact your ability to develop and build**. You are still able to use the editor, test your game and even release it (see the note below).
 
 > [!NOTE]
-> If you want to release a game with vulnerable packages, make sure to **check how the vulnerability would impact your users** and decide if the warnings can be ignored. If you can't wait, you will have to **build the engine from source**. 
+> If you want to release a game with vulnerable packages, make sure to **check how the vulnerability would impact your users** and decide if the warnings can be ignored. If you can't wait, you will have to **replace the problematic dependencies in the source and rebuild the engine**.
 
 ## See also
 
