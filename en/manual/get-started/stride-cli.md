@@ -6,7 +6,7 @@ The **Stride CLI** is a tool that allows you to work with Stride through the com
 
 Stride CLI features:
 
-* Manage different versions of the engine
+* Manage installed versions of the engine
 * Create new projects
 * Update projects
 * Launch Game Studio
