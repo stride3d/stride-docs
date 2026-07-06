@@ -15,3 +15,4 @@ These pages describe how to fix problems with Stride.
 * [SceneCameraRenderer error](error-a-scenecamerarenderer-in-use-has-no-camera-set.md)
 * [Unable to resolve Stride.GameStudio](unable-to-resolve-stride-game-studio.md)
 * [The Launcher is showing only 3.x version](unable-to-resolve-stride-game-studio.md)
+* [Solution contains packages with vulnerabilities](solution-contains-packages-with-vulnerabilities.md)
