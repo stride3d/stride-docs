@@ -39,18 +39,7 @@ var component = Entity.GetOrCreate<MyComponent>();
 ```
 
 > [!WARNING]
-> We recommend you avoid getting components directly through code and instead create a property to assign them in the **Property grid**.
-> 
-> ```csharp
-> public class Example : StartupScript
-> {
->     public MyComponent ComponentToAssign { get; set; }
-> }
-> ```
-> 
-> TODO: IMAGE OF SCRIPT IN THE PROPERTY GRID
-> 
-> For more information visit [Best practices](../../scripts/best-practice.md).
+> It's recommended to avoid getting components directly through code and instead creating a property to assign them in the **Property grid**. For more information visit [Best practices](../../scripts/best-practice.md).
 
 You can iterate over all components of an entity.
 

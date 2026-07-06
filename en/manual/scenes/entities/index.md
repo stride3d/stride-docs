@@ -10,7 +10,7 @@ Every entity has a [transform component](xref:Stride.Engine.TransformComponent) 
 
 ## Create an entity in Game Studio
 
-You can open the entity creation menu by pressing the ➕ icon at the top of the hierarchy or right clicking anywhere in the hierarchy or scene view.
+You can open the entity creation menu by pressing the ➕ icon at the top of the entity tree or right clicking anywhere in the entity tree or scene view.
 
 TODO: IMAGE
 
@@ -34,7 +34,7 @@ var myNewEntity = new Entity("Entity name")
 }
 ```
 
-These entities exist **outside of the game world** in an inactive state: none of their scripts are doing anything. To change this, they have to be either:
+These entities exist **outside of the game world** in an inactive state — none of their scripts are doing anything. To change this, they have to be either:
 
 * Assigned a scene:
 

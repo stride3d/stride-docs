@@ -1,11 +1,13 @@
 # Matrixes
 
-Matrixes are a powerful tool that Stride provides for advanced transform manipulation. They encompass an entity's position, rotation and scale relative to their parent or their world.
+Matrixes are a powerful tool for advanced transform manipulation. They encompass an entity's position, rotation and scale relative to their parent or their world.
 
 > [!WARNING]
-> This page goes into using matrixes in the transform component and not how to use matrixes in general. Currently, there is no page available with that information.
+> This page goes into using matrixes in the transform component and **not how to use matrixes in general**. For information about matrixes in mathematics, visit [Wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics)).
 
-## Benefits and drawbacks of matrixes
+## Benefits and drawbacks
+
+There are some things to consider when using matrixes over position, rotation and scale.
 
 * 🟩 More control over local and world transformations.
 * 🟩 Already used by many utility methods (e.g. `SetWorld`).
@@ -15,9 +17,9 @@ Matrixes are a powerful tool that Stride provides for advanced transform manipul
 
 ## Updating matrixes
 
-Matrixes are updated by a processor after every update tick. This means that when an entity is first added to a scene, or when it's transform changes, the matrixes contain invalid information.
+Matrixes are updated by a processor after every update tick. This means that when an entity is first added to a scene, or when it's transform changes after an update, the matrixes become out-of-date.
 
-Matrixes can be manually updated using [`UpdateLocalMatrix`](xref:Stride.Engine.TransformComponent.UpdateLocalMatrix) and [`UpdateWorldMatrix`](xref:Stride.Engine.TransformComponent.UpdateWorldMatrix). It's recommended to call these methods before doing anything with matrixes to ensure they provide correct information.
+Matrixes can be manually updated using [`UpdateLocalMatrix`](xref:Stride.Engine.TransformComponent.UpdateLocalMatrix) and [`UpdateWorldMatrix`](xref:Stride.Engine.TransformComponent.UpdateWorldMatrix). It's recommended to call these methods before doing anything with matrixes to ensure they are valid.
 
 ## Matrix properties
 
@@ -30,7 +32,7 @@ var worldPosition = Entity.Transform.WorldMatrix.TranslationVector;
 var worldScale = Entity.Transform.WorldMatrix.ScaleVector;
 ```
 
-A matrix also provides vectors that provide information about different directions of an entity.
+A matrix also provides direction vectors.
 
 ```csharp
 Entity.Transform.UpdateWorldMatrix();
@@ -43,11 +45,11 @@ var up = Entity.Transform.WorldMatrix.Up;
 var down = Entity.Transform.WorldMatrix.Down;
 ```
 
-This is most commonly used with [physics queries](../../../physics/physics-queries/index.md) (e.g. checking if an enemy was hit in the direction the player is looking).
+This is most commonly used with movement (making the player walk forwards) or with [physics queries](../../../physics/physics-queries/index.md) (e.g. checking if an enemy was hit in the direction the player is looking).
 
 ## Decomposing
 
-In order to retrieve quaternion rotation or euler angles from a matrix, it has to be **decomposed**.
+In order to retrieve yaw, pitch and roll or euler angles from a matrix, it has to be **decomposed**.
 
 ```csharp
 Entity.Transform.UpdateWorldMatrix();
@@ -55,8 +57,9 @@ Entity.Transform.UpdateWorldMatrix();
 // Retrieve quaternion rotation
 Entity.Transform.WorldMatrix.Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 position);
 
-// Retrieve euler angles
+// Retrieve yaw pitch roll
 Entity.Transform.WorldMatrix.Decompose(out float yaw, out float pitch, out float yaw);
-// Remember to swap order of yaw and pitch
+
+// Retrieve euler angles from yaw pitch roll
 var eulerAngles = new Vector3(pitch, yaw, roll);
 ```

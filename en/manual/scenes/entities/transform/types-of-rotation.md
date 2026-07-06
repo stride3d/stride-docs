@@ -22,4 +22,4 @@ Rotation is typically the most challenging part of working with transforms. This
 * 🟥 Difficult to understand
 * 🟥 Not readable
 
-**Quaternions** are what is used by Stride during runtime. They are meant to be used indirectly using utility methods.
+**Quaternions** are what is used by Stride during runtime. They can be controlled indirectly using utility methods.

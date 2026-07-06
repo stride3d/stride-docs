@@ -17,4 +17,4 @@ TODO: VISUALIZATION IF YOU'RE BORED (three circles, one showing 1 radian = howev
 You can easily convert degrees to radians and vice-versa using [`MathUtil.DegreesToRadians`](xref:Stride.Core.Mathematics.MathUtil.DegreesToRadians*) and [`MathUtil.RadiansToDegrees`](xref:Stride.Core.Mathematics.MathUtil.RadiansToDegrees*)
 
 > [!NOTE]
-> **Game Studo** displays rotation units as degrees.
+> **Game Studo** displays rotation in degrees.

@@ -20,7 +20,7 @@ Scenes are complex assets, meaning they have a dedicated editor, the **Scene edi
 
 TODO: IMAGE
 
-For more information on how to use it, visit it's [Scene editor](../game-studio/dedicated-editor/index.md).
+For more information on how to use it, visit [Scene editor](../game-studio/dedicated-editors/scene-editor/index.md).
 
 ## Create a blank scene at runtime
 

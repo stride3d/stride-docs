@@ -1,20 +1,20 @@
 # Transform
 
-The [transform component](xref:Stride.Engine.TransformComponent) exists on every entity in Stride. It defines the position, rotation and scale of an entity in the world relative to it's parent.
+The [transform component](xref:Stride.Engine.TransformComponent) exists on every entity in Stride. It defines the position, rotation and scale of an entity in the world, relative to its parent.
 
 ## Local and world
 
-An entity's transform is **relative to it's parent**. This means that the parent transform creates a sort of isolated world for it's children.
+An entity's transform is **relative to its parent**. This means that the parent transform creates a sort of isolated world for its children.
 
 For example: if two entities are 1m apart from each other and the parent's scale is set to 20, those entities will in reality be spaced 20m from each other.
 
 TODO: VISUALIZATION
 
-Transforms relative to their parent are referred to as **local-space** and the "real world" result as **world-space**.
+Values relative to their parent are referred to as **local-space** and the "real world" ones as **world-space**.
 
 Typically, we work with values from the **local-space**, but sometimes, if we need to access entities nested in other entities, we use their **world** values.
 
-## Get or set position, rotation and scale 
+## Get or set position, rotation and scale
 
 Position, rotation, euler angles and scale can be accessed from `Position`, `Rotation`, `RotationXYZ` and `Scale` respectively.
 
@@ -32,9 +32,9 @@ Entity.Transform.EulerAngles = Vector3.Zero;
 Entity.Transform.Scale = Vector3.One;
 ```
 
-## Get or set world position rotation and scale
+## Get or set world position, rotation and scale
 
-There are many utilities for settings and changing world values. Most of them involve the **world matrix**, which needs to be updated before anything is done with it.
+There are many utilities for managing world values. Most of them involve the **world matrix**, which needs to be updated before anything is done with it.
 
 To get the world transformation, you can use `GetWorldTransformation`.
 

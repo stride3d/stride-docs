@@ -4,4 +4,4 @@
 
 TODO: EXAMPLE IMAGE OF STARBREACH MAYBE
 
-Scenes are populated by [entities](entities/index.md) with [components](entities/components.md) that define how the world looks and behaves.
+Scenes are populated by [entities](entities/index.md) that along with their [components](entities/components.md) define how the world looks and behaves.
