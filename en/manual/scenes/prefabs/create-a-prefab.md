@@ -15,7 +15,7 @@ TODO: IMAGE
 
 You can also create a prefab from an existing entity or entities.
 
-1. In the **Scene editor**, select the entity or entities you want to create a prefab from.
+1. In the **scene editor**, select the entity or entities you want to create a prefab from.
 
     > [!TIP]
     > Hold Ctrl to select multiple items.

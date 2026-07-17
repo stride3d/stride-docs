@@ -20,7 +20,7 @@ If you don't want to create a parent entity with the prefab, hold **Alt** when y
 
 After you add a prefab instance, you can break the link between the prefab and any of its child entities. This means the child entity is no longer affected by changes you make to the prefab.
 
-To do this, in the **Scene Editor**, right-click a child entity or entities and select **Break link to prefab**.
+To do this, in the **scene editor**, right-click a child entity or entities and select **Break link to prefab**.
 
 TODO: IMAGE
 

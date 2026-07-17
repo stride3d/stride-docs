@@ -26,7 +26,7 @@ In the **Property grid**, you can see which properties of the prefab instance di
 
     TODO: IMAGE
 
-* **Identical** properties are **gray**:
+* **Non-overridden** properties are **gray**:
 
     TODO: IMAGE
 
@@ -42,7 +42,7 @@ In this example, we have a prefab of a futuristic lamppost.
 
 ![](media/lamppost-prefab.png)
 
-The lamppost prefab is composed of three entities: a column, a pillar, and a spot light. These are listed in the Entity tree in the Prefab editor.
+The lamppost prefab is composed of three entities: a column, a pillar, and a spot light. These are listed in the Entity tree in the prefab editor.
 
 TODO: IMAGE
 
@@ -50,7 +50,7 @@ Let's add five instances of the lamppost prefab to our scene.
 
 ![](media/lamppost-prefab-instances.png)
 
-Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Property Grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the **scene editor**, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Property Grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
 
 TODO: IMAGE
 
@@ -58,7 +58,7 @@ We can see this in the scene view.
 
 ![](media/lamppost-prefab-pink.png)
 
-Now let's see what happens when we go back to the Prefab Editor and change the color of the spot light in the prefab to green.
+Now let's see what happens when we go back to the prefab editor and change the color of the spot light in the prefab to green.
 
 TODO: IMAGE
 
