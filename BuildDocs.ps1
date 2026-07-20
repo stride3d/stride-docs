@@ -117,9 +117,28 @@ function Ask-UseExistingAPI {
     return ($answer -ieq "y" -or $answer -eq "")
 }
 
+function Ask-ReplaceEngineArchitectureDocs {
+    Write-Host ""
+    Write-Host -ForegroundColor Cyan "Do you want to copy and replace engine architecture docs?"
+    Write-Host ""
+    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
+    Write-Host -ForegroundColor Yellow "  [N] No"
+    Write-Host ""
+
+    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+
+    return ($answer -ieq "y" -or $answer -eq "")
+}
+
 function Copy-ArchitectureDocs {
     Write-Host -ForegroundColor Green "Copying architecture documentation from the main engine repository..."
     $architectureFolder = "en/contributors/engine/architecture"
+
+    # Return if the repository isn't available
+    if (Test-Path "../stride/docs/") {
+        Write-Host -ForegroundColor Yellow "Skipping copying architecture documentation, can't find the main engine repository. Make sure the stride directory is located next to stride-docs."
+        return
+    }
 
     # Remove old files
     if (Test-Path $architectureFolder) {
@@ -584,6 +603,7 @@ if ($BuildAll)
     $isAllLanguages = $true
     $API = -not $SkipApiBuilding
     $ReuseAPI = $false
+    $engineArchitecture = $true
 }
 else {
     $userInput = Get-UserInput
@@ -601,7 +621,7 @@ else {
         [bool]$shouldBuildSelectedLanguage = $true
     }
 
-    # Ask if the user wants to include API
+    # Ask if the user wants to run additional steps
     if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
     {
         if ($SkipApiBuilding)
@@ -623,6 +643,8 @@ else {
                     $ReuseAPI = Ask-UseExistingAPI
                 }
             }
+
+            $engineArchitecture = Ask-ReplaceEngineArchitectureDocs
         }
     } elseif ($isCanceled) {
         Write-Host -ForegroundColor Red "Operation canceled by user."
@@ -655,8 +677,10 @@ if ($ReuseAPI)
 }
 
 # Engine architecture docs
-Copy-ArchitectureDocs
-Generate-ArchitectureDocsToc
+if ($engineArchitecture) {
+    Copy-ArchitectureDocs
+    Generate-ArchitectureDocsToc
+}
 
 Write-Host -ForegroundColor Green "Generating documentation..."
 Write-Host ""
