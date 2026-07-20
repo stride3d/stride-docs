@@ -24,7 +24,7 @@ The above will show up in the **Property grid** like so:
 
 ![Image of the script in the Property grid showing the property with the text "No asset selected", two icons of a hand and an eraser and an empty square with a hand icon.](media/property-grid-direct-reference-example.webp)
 
-Stride will automatically handle loading and unloading. If you want more control over how assets are loaded, consider using a [url reference](#url-reference) instead.
+Stride will automatically handle loading and unloading. If you want more control over how assets are loaded, consider using [url references](#url-reference) instead.
 
 ## Url reference
 
@@ -57,7 +57,8 @@ public override void Cancel()
 }
 ```
 
-[!INCLUDE [content-loading-warning](../../includes/content-loading-warning.md)]
+> [!WARNING]
+> When assets are loaded manually, **they have to be manually unloaded too**, or else Stride will keep the assets **loaded in memory forever**.
 
 ## Loading from path
 
@@ -77,7 +78,8 @@ public override void Cancel()
 }
 ```
 
-[!INCLUDE [content-loading-warning](../../includes/content-loading-warning.md)]
+> [!WARNING]
+> When assets are loaded manually, **they have to be manually unloaded too**, or else Stride will keep the assets **loaded in memory forever**.
 
 ### Missing assets
 

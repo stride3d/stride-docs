@@ -22,11 +22,11 @@ For more information about how assets are compiled, visit [Asset compilation](as
 
 ## Location of assets and resources
 
-In **Game Studio** you can view assets in the **Asset view** by selecting an **assets** folder in the **solution explorer**.
+In **Game Studio** you can view assets in the **Asset view** by selecting an **Assets** folder in the **Solution explorer**.
 
 ![](media/solution-explorer-assets.webp)
 
-As for **resources**, it isn't possible to view them in **Game Studio**. You can browse through them by opening the directory containing your project and going to a resource folder of the target [project package](../files-and-folders/project-packages/index.md).
+As for **resources**, it isn't possible to view them in **Game Studio**. You can browse through them by opening the directory containing your project and going to a resource folder of a [project package](../files-and-folders/project-packages/index.md).
 
 For more information, visit [Project file structure](../files-and-folders/project-structure.md).
 
