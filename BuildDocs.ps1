@@ -134,14 +134,32 @@ function Copy-ArchitectureDocs {
     foreach ($file in $files) {
         $relativePath = Resolve-Path -Path $file.FullName -Relative -RelativeBasePath $architectureFolder
 
-        # Replace relative links to files from the repo with non-relative
+        # Replacing content
         if (!$file.PSIsContainer) {
-            $toReplace = "]($("../" * ([regex]::Matches($relativePath, "/" )).count)"
+            $relativePathSlashes = ([regex]::Matches($relativePath, "/" )).count
+            $wrongRelative = "]($("../" * $relativePathSlashes)"
 
-            (Get-Content $file.FullName).Replace($toReplace, "]($($Settings.EngineRepositoryUrl)/") | Set-Content $file.FullName
+            # Go over all lines in the file
+            $content = Get-Content $file.FullName
+            for ($i = 0; $i -lt $content.Length; $i++) {
+                # Look for links
+                $linkMatches = [regex]::Matches($content[$i], "\[[^\[\]]*?\]\([^\(\)]*?\)")
+                foreach ($match in $linkMatches) {
+                    # Replace relative links to files from the repo with non-relative
+                    $content[$i] = $content[$i].Replace($wrongRelative, "]($($Settings.EngineRepositoryUrl)/")
+
+                    # Replace links to README.md files with index.md
+                    if (!$content[$i].Contains("https://") -and $content[$i].Contains("README")) {
+                        $content[$i] = $content[$i].Replace("README", "index")
+                    }
+                }
+            }
+
+            ## Apply changes to content
+            $content | Set-Content $file.FullName
         }
 
-        # Replace README.md with index.md
+        # Rename README.md files to index.md
         if ($file.ToString().ToLower().Contains("readme.md")) {
             $renamedLocation = "$($file.FullName | Split-Path)/index.md"
             Move-Item $file.FullName $renamedLocation
