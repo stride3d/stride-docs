@@ -49,7 +49,6 @@ items:
     expanded: true
     href: engine/architecture/toc.yml
     topicHref: engine/architecture/index.md
-
 - name: 📖 Contribute to the documentation
   expanded: false
   href: documentation/index.md
