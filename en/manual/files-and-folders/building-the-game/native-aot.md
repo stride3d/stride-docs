@@ -10,10 +10,10 @@ This approach has it's benefits and drawbacks:
 * 🟩 Some high-level language features require it to work (e.g. reflections)
 * 🟩 Compiled projects take up less disk space
 * 🟥 Some platforms do not support it (mainly iOS and consoles)
-* 🟥 Creates additional overhead, slightly decreasing performance
+* 🟥 Creates additional overhead, which can slightly decrease performance in some cases
 * 🟥 Requires a user to install additional software (unless the app is made to be [self contained](setup.md#self-contained))
 
-An alternative to this is to use **Native Ahead-Of-Time** (AOT) compilation to skip the CIL entirely, creating a native application. Doing this can decrease startup time and improve overall performance, but comes at the cost of all previously listed standard JIT compiled .NET application benefits.
+An alternative to this is to use **Native Ahead-Of-Time** (AOT) compilation to skip the CIL entirely, creating a native program. Doing this can decrease startup time and in some cases slightly improve performance, but comes at the cost of all previously listed benefits of a standard JIT compiled .NET application.
 
 ## Preparation
 
