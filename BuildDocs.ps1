@@ -55,6 +55,7 @@ $Settings = [PSCustomObject]@{
     IndexFileName = "index.md"
     ManualFolderName = "manual"
     DocsUrl = "https://doc.stride3d.net"
+    EngineRepositoryUrl = "https://github.com/stride3d/stride/tree/master"
 }
 
 # To Do fix, GitHub references, fix sitemap links to latest/en/
@@ -114,6 +115,113 @@ function Ask-UseExistingAPI {
     $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
 
     return ($answer -ieq "y" -or $answer -eq "")
+}
+
+function Copy-ArchitectureDocs {
+    Write-Host -ForegroundColor Green "Copying architecture documentation from the main engine repository..."
+    $architectureFolder = "en/contributors/engine/architecture"
+
+    # Remove old files
+    if (Test-Path $architectureFolder) {
+        Remove-Item $architectureFolder/* -Recurse -Verbose
+    }
+
+    # Copy files
+    Copy-Item "../stride/docs/*" $architectureFolder -Recurse -Verbose
+
+    # Post-processing files
+    $files = Get-ChildItem $architectureFolder -Recurse -Force
+    foreach ($file in $files) {
+        $relativePath = Resolve-Path -Path $file.FullName -Relative -RelativeBasePath $architectureFolder
+
+        # Replace relative links to files from the repo with non-relative
+        if (!$file.PSIsContainer) {
+            $toReplace = "]($("../" * ([regex]::Matches($relativePath, "/" )).count)"
+
+            (Get-Content $file.FullName).Replace($toReplace, "]($($Settings.EngineRepositoryUrl)/") | Set-Content $file.FullName
+        }
+
+        # Replace README.md with index.md
+        if ($file.ToString().ToLower().Contains("readme.md")) {
+            $renamedLocation = "$($file.FullName | Split-Path)/index.md"
+            Move-Item $file.FullName $renamedLocation
+        }
+    }
+
+    # Copy root index file
+    $sectionIndex = "en/contributors/engine/architecture-index.md"
+    if (Test-Path $sectionIndex) {
+        Copy-Item $sectionIndex "$architectureFolder/index.md"
+    }
+}
+
+function Generate-ArchitectureDocsToc {
+    $architectureFolder = "en/contributors/engine/architecture"
+    $tocLocation = "$architectureFolder/toc.yml"
+
+    Write-Host -ForegroundColor Green "Generating architecture docs toc.yml..."
+
+    # Delete previously generated toc.yml file
+    if (Test-Path $tocLocation) {
+        Remove-Item $tocLocation -Verbose
+    }
+
+    $files = Get-ChildItem $architectureFolder -Recurse -Force | Sort-Object
+    foreach ($file in $files) {
+        # Ignore index pages to avoid duplication
+        if ($file.Name.Contains("index.md")) {
+            continue
+        }
+
+        # If it's not a markdown file or a folder, ignore
+        if (!$file.PSIsContainer -and !$file.Name.EndsWith(".md")) {
+            continue
+        }
+
+        # By default, use the file/folder name as the page's title
+        $title = [System.IO.Path]::GetFileNameWithoutExtension($file.FullName).Replace("-", " ")
+        if ($title.Length -gt 0) {
+            $title = "$($title[0].ToString().ToUpper())$($title.Substring(1))"
+        }
+
+        # If it's a folder, look for the index page
+        $path = $file.FullName
+        if ($file.PSIsContainer) {
+            $path = "$path/index.md"
+        }
+
+        # Try reading the page name from the markdown header (line starting with a single #)
+        if (Test-Path $path) {
+            $selectResult = Select-String -Encoding UTF8 -Path $path -Pattern "^# .*?($|-|—)"
+            if ($selectResult.Matches.Count -gt 0) {
+                $title = $selectResult.Matches[0].Value.TrimStart("# ").TrimEnd("-", "—").Replace("&amp;", "&")
+            }
+        }
+
+        # Get relative path to the toc.yml/architecture folder
+        $relativePath = [System.IO.Path]::GetRelativePath($architectureFolder, $path).TrimStart("./")
+
+        # Calculate indent for the item in toc.yml
+        $indentCount = ([regex]::Matches($relativePath, "/" )).count
+        if ($relativePath.EndsWith("index.md")) {
+            $indentCount -= 1
+        }
+
+        $indent = "$("  " * $indentCount)"
+
+        # Write name to the toc.yml file
+        "$($indent)- name: $($title)" | Out-File -Encoding UTF8 -Append -FilePath $tocLocation
+
+        # Write href (if it exists) to the toc.yml file
+        if (Test-Path $path) {
+            "$($indent)  href: $($relativePath)" | Out-File -Append -FilePath $tocLocation
+        }
+
+        # Start writing items (if it's a folder) to the toc.yml file
+        if ($file.PSIsContainer) {
+            "$($indent)  items:" | Out-File -Append -FilePath $tocLocation
+        }
+    }
 }
 
 function Copy-ExtraItems {
@@ -527,6 +635,10 @@ if ($ReuseAPI)
 } else {
     Remove-APIDoc
 }
+
+# Engine architecture docs
+Copy-ArchitectureDocs
+Generate-ArchitectureDocsToc
 
 Write-Host -ForegroundColor Green "Generating documentation..."
 Write-Host ""
