@@ -58,7 +58,7 @@ Assets do not contain resource data. Instead, they reference a resource. For exa
 A Stride project is separated into multiple [project packages](../files-and-folders/project-packages/index.md), which contain their own code, assets and resources.
 
 For example, a new project consists of:
-* **MyGame** - contains content for the game.
+* **MyGame.Game** - contains content for the game.
 * **MyGame.NameOfPlatform** (such as MyGame.Windows) - contains content specific to the version of the game for a specific platform (like the window icon).
 
 For more information, read [Project structure](../files-and-folders/project-structure.md).

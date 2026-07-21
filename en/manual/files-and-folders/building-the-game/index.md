@@ -24,6 +24,7 @@ When you launch a game from **Game Studio** or your **IDE**, it gets built in th
 ## In this section
 
 * [Setup](setup.md)
+  * [Native AOT](native-aot.md)
 * [Building](building.md)
 * [Cleaning up](cleaning-up.md)
 * [Build file structure](build-file-structure.md)

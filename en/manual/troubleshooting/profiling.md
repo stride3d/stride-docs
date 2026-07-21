@@ -158,7 +158,7 @@ Instead of using the Stride Game Profiler, you can use external profiling tools 
 
 Visual Studio has powerful in-built profiling tools that can identify common performance issues.
 
-1. In Visual Studio, open your project solution (`.sln`) file.
+1. In Visual Studio, open your project solution (`.slnx`/`.sln`) file.
 
 2. To open the profiler, press **Alt + F2**, or in the task bar click **Analyze > Performance Profiler**.
 

@@ -29,6 +29,8 @@ items:
         href: get-started/game-studio.md
       - name: Stride Extension
         href: get-started/visual-studio-extension.md
+      - name: Stride CLI
+        href: get-started/stride-cli.md
       - name: Assets
         href: get-started/assets.md
       - name: Launch a game
@@ -537,6 +539,9 @@ items:
         items:
           - name: Setup
             href: files-and-folders/building-the-game/setup.md
+            items:
+              - name: Native AOT
+                href: files-and-folders/building-the-game/native-aot.md
           - name: Building
             href: files-and-folders/building-the-game/building.md
           - name: Cleaning up
