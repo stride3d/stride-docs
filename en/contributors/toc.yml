@@ -4,10 +4,15 @@ items:
 - name: 🌟 Ways to Contribute
   href: index.md
   expanded: true
+  items:
+    - name: Donate
+      href: ways-to-contribute/donate.md
+    - name: Contribute code
+      href: ways-to-contribute/code.md
+    - name: Contribute content
+      href: ways-to-contribute/content.md
 - name: 🛣️ Roadmap
   href: roadmap.md
-- name: 💸 Donate
-  href: donate.md
 - name: 🧑‍💻 Core Team
   href: core-team.md
 - name: ⚙️ Major Release Workflow
