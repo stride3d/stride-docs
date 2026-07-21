@@ -120,6 +120,8 @@ The engine is now **NativeAOT and trimming-friendly**. This unlocks smaller, fas
 
 - **Much faster asset builds.** Warm asset compiles drop by around **40%** for a typical game, and up to **10×** for Stride's own tests, thanks to a new asset-build cache.
 - **`.slnx` is the new default solution format** for projects created by Stride. Existing `.sln` solutions still open and save normally.
+- **Per-package asset URLs & namespacing.** Assets now live under a rooted, per-package path (e.g. `/MyGame/UI/Title`), so plugins and libraries can ship assets without name collisions. Games stay bare by default and opt in via `StrideAssetNamespace`, so existing projects keep working unchanged.
+- **Typed asset URL constants.** Projects now generate an `Assets` class of strongly-typed constants (e.g. `Assets.Scenes.MainScene`), so you can reference content by an IDE-completed symbol instead of a magic string. Renames then become compile errors instead of a runtime "content not found".
 
 ---
 
