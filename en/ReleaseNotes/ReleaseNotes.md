@@ -49,7 +49,7 @@ stride studio                                     # open it in Game Studio
 
 ```bash
 dotnet new install Stride.Templates
-dotnet new stride-game -o MyGame
+dotnet new stride-game -n MyGame
 ```
 
 ---
