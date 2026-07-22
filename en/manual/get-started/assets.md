@@ -6,11 +6,7 @@ An asset is a representation of an element of your game, such as texture, animat
 
 ## Create an asset
 
-<<<<<<< HEAD
 To create an asset, click the **➕ Add asset** button in the  **Asset view** and select the type of asset you want to create.
-=======
-To create an asset, click the **➕ Add assets** button in the **Asset view** and select the type of asset you want to create.
->>>>>>> cd14d866 (Updated asset info in the get-started pages)
 
 ![](../assets/media/asset-view-create-new.webp)
 
