@@ -14,7 +14,7 @@ In short:
 
 Stride only compiles assets which are used in the game. This means that if an asset isn't referenced by another asset that is determined as needed, it will be ignored.
 
-TODO: VISUALIZATION
+![](media/asset-reference-visualization.webp)
 
 [!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
 
