@@ -2,8 +2,8 @@
 
 Stride 4.4 is one of the largest engine updates in years, with roughly **2,400 commits** since 4.3.
 
-The theme of this release is **modernization and reach**: much more stable **Vulkan and Direct3D 12** backends, 
-full platform coverage across **Windows, Linux, macOS, Android and iOS** (all continuously tested on CI), 
+The theme of this release is **modernization and reach**: much more stable **Vulkan and Direct3D 12** backends,
+full platform coverage across **Windows, Linux, macOS, Android and iOS** (all continuously tested on CI),
 an improved shader compiler, and a command-line workflow as an alternative to the Game Studio.
 
 ---
@@ -16,7 +16,7 @@ Stride 4.4 widens both where you can *build* games and where they *run*.
 
 **Build anywhere:** with changes to the asset compiler, projects can now be built on **Linux and macOS**, not just Windows.
 
-**Run everywhere:** non-windows platform were brought back into shape, while the suite of test for them was expanded to ensure they are kept that way.
+**Run everywhere:** non-Windows platforms were brought back into shape, while the test suite for them was expanded to ensure they are kept that way.
 
 ![A Stride sample running on a physical iPhone](media/ReleaseNotes-4.4/ios.jpg)
 
@@ -31,12 +31,12 @@ You can now create, build and run Stride games entirely from the command line, w
 | `stride new`                                  | instantiate a project from installed templates in this directory (`stride new list` to browse) |
 | `stride build` / `stride asset`               | build the project and compile assets                                                           |
 | `stride upgrade`                              | upgrade a project to a newer Stride version                                                    |
-| `stride studio`                               | launch the Game Studio associated with the stride version you use for this project             |
+| `stride studio`                               | launch the Game Studio associated with the Stride version you use for this project             |
 | `stride sdk install` / `uninstall` / `update` | manage installed Stride versions                                                               |
 | `stride self update`                          | update the CLI itself                                                                          |
-| `stride version`                              | print the CLI's version, as well as the stride version for this project                        |
+| `stride version`                              | print the CLI's version, as well as the Stride version for this project                        |
 
-You'll need to install the stride CLI through `dotnet tool` if you want to use this new feature:
+You'll need to install the Stride CLI through `dotnet tool` if you want to use this new feature:
 
 ```bash
 dotnet tool install -g stride.cli                 # install the Stride CLI
@@ -56,15 +56,15 @@ dotnet new stride-game -o MyGame
 
 ### 🎮 Vulkan & Direct3D 12
 
-Both backends got a big **overhaul and stability pass** this cycle and are in much better shape. 
-They're now solid enough that we expect to make a modern backend the editor default before long, 
-and **Direct3D 11 is a candidate for removal in the next major release**. 
+Both backends got a big **overhaul and stability pass** this cycle and are in much better shape.
+They're now solid enough that we expect to make a modern backend the editor default before long,
+and **Direct3D 11 is a candidate for removal in the next major release**.
 GPU crashes are also far easier to track down: Stride can now pinpoint the exact rendering step that caused a device hang.
 
-If you write custom low-level rendering code, 
+If you write custom low-level rendering code,
 note that D3D12 and Vulkan now use an **explicit barrier/layout model** (and D3D12 requires **Enhanced Barriers** — the legacy path was removed).
 
-You can also pick the graphics API right from the UI now. 
+You can also pick the graphics API right from the UI now.
 Game Studio itself can render with a chosen backend via **Settings → Environment → Graphics API (Game Studio only)** — this takes effect after a restart:
 
 ![Choosing the Game Studio graphics API in Settings → Environment](media/ReleaseNotes-4.4/gamestudio-graphics-api-selector.png)
@@ -129,21 +129,21 @@ The engine is now **NativeAOT and trimming-friendly**. This unlocks smaller, fas
 
 *Mostly under the hood — but it directly changes how confidently you can contribute back to the engine.*
 
-Stride 4.4 suite of test has been greatly expanded. Where earlier versions only exercised a slice of platforms, 
-**every change now runs the entire test matrix** in one pipeline — engine builds, game and Game Studio tests, 
-and end-to-end sample/packaging builds, across all platforms and graphics APIs, 
+Stride 4.4's test suite has been greatly expanded. Where earlier versions only exercised a slice of platforms,
+**every change now runs the entire test matrix** in one pipeline — engine builds, game and Game Studio tests,
+and end-to-end sample/packaging builds, across all platforms and graphics APIs,
 including **GPU image-comparison tests** (Windows D3D11/12, Linux Vulkan, macOS, Android, iOS):
 
 ![The CI pipeline: a single run building and testing every platform and graphics API (Windows D3D11/D3D12/Vulkan, Linux, macOS, Android, iOS), all green](media/ReleaseNotes-4.4/ci-run.png)
 
 Breakage on any platform or backend is now caught automatically before it reaches a release.
-For contributors that's the real win: you can open a pull request and **trust CI to prove it works everywhere**, 
+For contributors, that's the real win: you can open a pull request and **trust CI to prove it works everywhere**,
 instead of testing each platform by hand — which makes contributing a feature back to the engine far less daunting.
 
 A **gold-image generation workflow** runs **directly on CI**, so you no longer have to regenerate reference images by hand on every platform.
 Golds are produced and promoted straight from [the CI workflow](https://github.com/stride3d/stride/actions/workflows/test-gold-gen.yml).
 
-The new **CompareGold** tool makes reviewing these tests painless — visually diff failures against their gold images, 
+The new **CompareGold** tool makes reviewing these tests painless — visually diff failures against their gold images,
 promote the ones you accept, and even pull results **directly from any CI run** or fork (see [GPU-TESTING.md](https://github.com/stride3d/stride/blob/master/tests/GPU-TESTING.md)).
 
 ![CompareGold reviewing image differences and promoting gold images](media/ReleaseNotes-4.4/compare-gold.png)
@@ -152,25 +152,25 @@ promote the ones you accept, and even pull results **directly from any CI run** 
 
 ## ⚙️ Physics Character
 
-While our integration of the Bepu physics engine is definitely mature enough by now, 
-the CharacterComponent we introduced was not as well put as it aught to have been.
+While our integration of the Bepu physics engine is definitely mature enough by now,
+the `CharacterComponent` we introduced was not as well put together as it ought to have been.
 
 - The gravity you may set would be mutated internally to prevent the body from sliding down slopes.
 - Moving surfaces would not carry the character along with them.
 - Moving past a slope would cause the character to fly off.
 - Forces applied to bodies, and especially constraints, required unintuitive tweaks to work.
 
-We looked at Bepu's own character example to solve these issues, unfortunately we could not avoid introducing a fair amount of breaking changes.
-Fortunately, we added a couple sections in [Characters](../manual/physics/characters.md) to describe the new features and properties.
+We looked at Bepu's own character example to solve these issues; unfortunately, we could not avoid introducing a fair amount of breaking changes.
+Fortunately, we added a couple of sections in [Characters](../manual/physics/characters.md) to describe the new features and properties.
 
 ---
 
 ### Breaking changes
 
-- **Custom shaders:** the SDSL compiler was rewritten, you might want to review how your custom shaders render. If you hit a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
+- **Custom shaders:** the SDSL compiler was rewritten; you might want to review how your custom shaders render. If you hit a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 - **Direct3D 12** now requires **Enhanced Barriers**; the legacy barrier path has been removed.
-- **Convex hulls**: The library we use to generate convex hulls, V-HACD, was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters, you may want to validate them for accuracy.
-- **Bepu `CharacterController` was reworked**: existing character setups will behave differently and need adjustment. See [Physics Character](#-physics-character)
+- **Convex hulls**: The library we use to generate convex hulls, V-HACD, was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters; you may want to validate them for accuracy.
+- **Bepu `CharacterController` was reworked**: existing character setups will behave differently and need adjustment. See [Physics Character](#-physics-character).
 
 ---
 
