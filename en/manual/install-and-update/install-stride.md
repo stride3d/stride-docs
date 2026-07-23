@@ -13,7 +13,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 2. Run the installer by double-clicking the **StrideSetup.exe** file and follow the on screen instructions until the **Stride Launcher** is installed. Make sure to accept the privacy policy.
 
     > [!WARNING]
-    > If the .NET SDK has never been installed on your machine, the .NET SDK installation window **might appear below** the Stride installation window.
+    > If the .NET SDK has never been installed on your machine, the .NET SDK installation window **might appear behind** the Stride installation window.
     > 
     > ![Image of the .NET installation window](media/install-dotnet-SDK.webp)
 
@@ -45,12 +45,12 @@ Changing the installation location is possible, but explaining this is outside o
 
 Stride has an optional extension that's available for some IDEs.
 
-- **🟩 What it does**: let's you write shaders directly in an IDE.
+- **🟩 What it does**: provides useful utilities related to the engine.
 - **🟥 What it doesn't do**: provide C# syntax highlighting for Stride (that works without the extension).
 
 The extension can be installed for Visual Studio via the launcher, by navigating to the **Visual Studio extension** section. For other IDEs, visit the [Stride Extension page](../get-started/visual-studio-extension.md).
 
-![Image of the "Visual Studio extension" section in the Stride Launcher.](media/vs-extension.webp)
+![](media/vs-extension.webp)
 
 > [!NOTE]
 > The "Visual Studio 2022: Install" button will also work for Visual Studio 2026.

@@ -2,30 +2,23 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-This page explains how to:
+This page explains how to create a new project from a template or sample:
+* **Template** - a project that contain just the necessary elements to start working on a game.
+* **Sample** - a complete game, which you can learn from or base a new game on.
 
-* create a new empty project 
-* create a project based on a template or sample 
+## Create a new project with Game Studio
 
-**Templates** are projects that contain just the necessary elements to start working on a game.
-
-**Samples** are complete games, which you can learn from or base a new game on.
-
-## Create an empty project
-
-An **empty project** is project that contains only the bare minimum to make a game: a simple scene with a light, camera, and script to move the camera, plus a preconfigured rendering pipeline. This is good when you want to start your game from scratch without elements you don't need. 
-
-To create an empty project:
+To create a new project:
 
 1. In the **Stride Launcher**, click **Start** to start Game Studio. 
 
     The **New/open project** dialog opens.
     
-    ![New Project dialog](media/create-project-new-open-project-window.webp)
+    ![](media/create-project-new-open-project-window.webp)
 
-    You can also open a new project in Game Studio from **File > New**. 
+    You can also open this dialog in Game Studio from **File > New**. 
     
-2. Select **New Game**.
+2. Select a project template or sample. An empty template can be found in **General > New Game**.
 
 3. In the **Name** and **Location** fields, specify a name for the project and the folder to save it in.
 
@@ -33,7 +26,10 @@ To create an empty project:
 
     The **Create a new game** dialog opens.
 
-    ![Create a new game dialog](media/create-project-create-new-game.webp)
+    ![](media/create-project-create-new-game.webp)
+
+    > [!NOTE]
+    > The list of available options can differ depending on the template or sample.
 
 5. In the **Namespace** field, specify the namespace you want to use. If you don't know what your namespace should be, leave it as default.
 
@@ -59,51 +55,62 @@ To create an empty project:
 
 Stride creates the project and opens it in Game Studio. For more information, see [Game Studio](../game-studio/index.md).
 
-## Create a project from a sample or template
+## Create a project with Stride CLI
 
-Stride includes several sample projects demonstrating each part of the engine (2D, 3D, sprites, fonts, UI, audio, input, etc). It also includes template games to help you make your own game. 
-    
-To create a project from a sample or template:
+The Stride CLI tool provides a way of creating new projects without the need for a GUI.
 
- 1. Open the **New Project** dialog.
-    
- 2.	On the left, navigate to **New project > Samples**.
- 
- 3. **Select the sample** you want to create a project from.
-    
-   ![New Project window — samples](media/create-project-new-open-project-samples.webp)
-
- 4. Click **Select**.
-
-    The **Select Platforms** window opens.
-
-    ![Select Platforms window](media/create-project-select-platform.webp)
-    	
- 5. Select the platforms you want your game to support and click **OK**.
-
-Stride creates the project and opens it in Game Studio.
-
-## Create a project without Game Studio
-
-Stride allows you to create new projects from the command line using the `dotnet` command.
-
-1. Before starting, make sure to install the project templates from nuget.
-
-    ```bash
-    dotnet new install Stride.Templates.Games
-    ```
+1. Before starting, make sure to install the Stride CLI. For instructions on how to do this, visit the [Stride CLI page](stride-cli.md).
 
 2. Find the template you want to use. The default project template is named `stride-game`. For a list of all stride templates, use this command:
 
     ```bash
-    dotnet new list --tag stride
+    stride new list
+    ```
+
+    The blank template is called **game**.
+
+5. Create the project.
+
+    ```bash
+    stride new TemplateNameHere -n ProjectNameHere
+    ```
+
+6. Open the project in **Game Studio**.
+
+    ````bash
+    stride studio ./ProjectNameHere
+    ````
+
+## Create a project with dotnet templates
+
+An alternative way of creating a project from the command line without the need for Stride CLI is to use **dotnet templates**.
+
+1. Before starting, make sure to install the template packages. For more information about what each package contains, read the README on their [nuget.org page](https://www.nuget.org/packages/Stride.Templates.Games).
+
+    ```bash
+    # Install the blank stride-game template
+    dotnet new install Stride.Templates.Games
+    # Install other templates
+    dotnet new install Stride.Templates.Games.Starters
+    # Install samples (complete games)
+    dotnet new install Stride.Templates.Samples
+    ```
+
+2. Find the template you want to use. The default project template is named `stride-game`. For a list of all Stride templates, use this command:
+
+    ```bash
+    dotnet new list stride
     ```
 
 3. Create the project.
 
     ```bash
-    dotnet new stride-game -n NameOfGame
+    dotnet new TemplateNameHere -n ProjectNameHere
     ```
+
+4. Open **Game Studio** manually.
+
+## Command line template parameters
 
 All Stride templates can take additional parameters to change how they are created. Here's a list of the most commonly used ones:
 
@@ -115,20 +122,20 @@ All Stride templates can take additional parameters to change how they are creat
 | `--graphics-profile` | `9.0`, `10.0`, `11.0` | The graphics profile to use. This can be changed later. |
 | `--orientation` | `Default`, `LandscapeLeft`, `LandscapeRight`, `Portrait` | The game's orientation on mobile devices. This can be changed later. |
 
-For a list of all available parameters in a template, use `dotnet new NameOfTemplate --help`.
+For a list of all available parameters in a template, use the `--help` flag.
 
 Example command:
 
 ### [Powershell (Windows)](#tab/powershell)
 
 ```powershell
-dotnet new stride-game -n ProjectX --HDR true --platform windows`|linux
+stride new game -n ProjectX --HDR true --platform windows`|linux
 ```
 
 ### [Bash (Linux)](#tab/bash)
 
 ```bash
-dotnet new stride-game -n ProjectX --HDR true --platform windows\|linux
+stride new game -n ProjectX --HDR true --platform windows\|linux
 ```
 
 ---

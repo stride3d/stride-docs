@@ -8,7 +8,7 @@ This is a guide on how to use external NuGet packages with Stride.
 
 An external NuGet package can be added **as a dependency of another project package** (for .NET developers: as a dependency of another C# project). 
 
-In most cases, you would add this to the **main non-platform project package** (e.g. **MyGame**, not **MyGame.Windows**), which contains the majority of code and assets.
+In most cases, you would add this to the **main non-platform project package** (e.g. **MyGame.Game**, not **MyGame.Windows**), which contains the majority of code and assets.
 
 ## Finding NuGet packages
 

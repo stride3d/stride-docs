@@ -76,6 +76,9 @@ In the `.csproj` file, change the value of `<ApplicationIcon>Resources\Icon.ico<
 
 ---
 
+> [!WARNING]
+> After changing the icon, you will have to delete `/bin` in the platform package's directory for it to update.
+
 ## Self contained
 
 Making an application **self contained** removes the requirement for a user to have the **.NET runtime** installed on their machine.
@@ -123,6 +126,22 @@ Now, to enable **publish single file**, go to the profile settings and in the **
 ### [Manual](#tab/manual)
 
 In the `.csproj` file, add `<PublishSingleFile>true</PublishSingleFile>` and `<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>` to the `<Property Group>`.
+
+---
+
+## Native AOT
+
+Stride supports building games using **Native AOT**. For more information, read [Native AOT](native-aot.md).
+
+### [Visual Studio](#tab/visual-studio)
+
+To enable **Native AOT**, double click on the platform package and add `<NativeAot>true</NativeAot>` to the `<Property Group>`.
+
+![](media/visual-studio-csproj.webp)
+
+### [Manual](#tab/manual)
+
+In the `.csproj` file, add `<NativeAot>true</NativeAot>` to the `<Property Group>`.
 
 ---
 

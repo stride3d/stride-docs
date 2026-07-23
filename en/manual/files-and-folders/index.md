@@ -19,6 +19,7 @@ This section explains how a Stride project is structured, how it works and how t
 * [Cached files](cached-files.md)
 * [Building the game](building-the-game/index.md)
   * [Setup](building-the-game/setup.md)
+    * [Native AOT](building-the-game/native-aot.md)
   * [Building](building-the-game/building.md)
   * [Cleaning up](building-the-game/cleaning-up.md)
   * [Build file structure](building-the-game/build-file-structure.md)
