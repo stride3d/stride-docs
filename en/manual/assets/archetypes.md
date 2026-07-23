@@ -29,13 +29,14 @@ Overridden properties will not be updated when they are changed on the archetype
 
 ## Reverting overrides
 
-In case you want to revert a property override to use the same values as the archetype, right click on it in the **Property grid** and select **Reset to base value**.
+Reverting a property override will cause it to again use the same value as the archetype. To do that, right click on the property in the **Property grid** and select **Reset to base value**.
+
+![](media/property-grid-reset-to-base.webp)
 
 ## Unlink from archetype
 
 If you want to turn a derived asset into a normal one (unlinking it from the archetype), in the **Asset view** right click on it and select **Clear archetype**.
 
-![](media/property-grid-reset-to-base.webp)
 
 Now, the asset will no longer follow changes done to the archetype.
 

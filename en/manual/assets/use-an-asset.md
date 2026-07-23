@@ -32,7 +32,7 @@ This will show up in the **Property grid** like so:
 
 ![](media/property-grid-direct-reference-example.webp)
 
-This way, the asset will be loaded automatically. Stride also provides a way of **managing loading manually**. For more information, visit [Use an asset in code](use-an-asset-in-code.md).
+Using this method, the asset will be loaded and assigned automatically. Stride also provides a way of **managing loading manually**. For more information, visit [Use an asset in code](use-an-asset-in-code.md).
 
 ## See also
 

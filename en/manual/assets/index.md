@@ -7,7 +7,7 @@
 **Resources** on the other hand are the files containing actual data (such as images or music), which can be used by assets.
 
 In short:
-* **Resources** - raw data files (`.png`, `.wav`, `.fbx`)
+* **Resources** - raw data files (`.png`, `.wav`, `.fbx`).
 * **Assets** - usable elements in the game. They can use resource files and contain additional properties.
 
 ## Blue, green and gray dots
@@ -18,7 +18,7 @@ Stride only compiles assets which are used in the game. This means that if an as
 
 [!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
 
-For more information about how assets are compiled, visit [Asset compilation](asset-compilation.md)
+For more information about how assets are compiled, visit [Asset compilation](asset-compilation.md).
 
 ## Location of assets and resources
 

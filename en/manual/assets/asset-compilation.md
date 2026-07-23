@@ -2,7 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-Assets are compiled into **bundles**.
+In order to optimize on file space and speed up loading times, Stride converts project assets into bundles. This is something that many game engines do, however **Stride has a unique approach to determining which assets get included**. It's a fairly simple process, but **it's important to familiarize yourself with it** to avoid confusion.
 
 ## Which assets are compiled
 
@@ -30,7 +30,7 @@ You can mark an asset as root by right clicking on it in the **Asset view** and 
 ![](media/asset-view-include-root.webp)
 
 > [!WARNING]
-> Marking an asset as root in **Game Studio** will only mark it **for the selected platform**. Make sure to either:
+> **For project created before Stride 4.4:** Marking an asset as root in **Game Studio** will only mark it for the selected platform. Make sure to either:
 > * Mark the asset as root for every platform your project targets
 > * Edit the main [project package](../files-and-folders/project-packages/index.md)'s `.sdpkg` file manually. For more information, visit the [package properties page](../files-and-folders/project-packages/package-properties.md).
 

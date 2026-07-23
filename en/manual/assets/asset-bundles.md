@@ -12,7 +12,7 @@ When the game starts, Stride only loads the `default` bundle. Other bundles need
 > [!NOTE]
 > Currently, this has to be done manually.
 
-In order to create new asset bundles, you'll have to modify the `.sdpkg` file of a project package. For more information about project package properties visit [this page](../files-and-folders/project-packages/package-properties.md).
+In order to create new asset bundles, you'll have to modify the `.sdpkg` file of a project package. For more information, visit [Project package properties](../files-and-folders/project-packages/package-properties.md).
 
 Bundles are defined under the `Bundle` property. Each bundle has a `Name`, a list of `Dependencies` on other bundles and a list of `Selectors` that specify which assets belong to the bundle.
 
@@ -63,7 +63,7 @@ Stride tries to place assets in the most appropriate bundle.
 
 1. Assets not defined in `Bundles` are placed in the **default** bundle, which is loaded automatically when the game starts.
 2. If an asset is selected by **BundleA** and **BundleB**, but **BundleB** has a dependency on **BundleA**, that asset is placed only in **BundleA**.
-3. If an asset is selected by **BundleA** and **BundleB** and both of them aren't dependent on each other, that asset is placed in both of them.
+3. If an asset is selected by **BundleA** and **BundleB** and neither of them are dependent on each other, that asset is placed in both of them.
 
 > [!NOTE]
 > Loading two bundles with the same asset won't result in a duplicate.
@@ -79,13 +79,13 @@ await Content.FileProvider.ObjectDatabase.LoadBundle("NameOfBundle");
 > [!NOTE]
 > When loading a bundle, it's dependencies are loaded automatically.
 
-Assets can then be loaded via the **content system**. For more information, visit the [use an asset in code page](use-an-asset-in-code.md).
+Assets can then be loaded via the **content system**. For more information, visit [Use an asset in code](use-an-asset-in-code.md).
 
 ## Bundle location
 
 Bundles are located in `data/db/bundles` next to the built executable. You can recognize them by their name.
 
-For more information about the build location, visit the [build file structure page](../files-and-folders/building-the-game/build-file-structure.md).
+For more information about the build location, visit [Build file structure](../files-and-folders/building-the-game/build-file-structure.md).
 
 ![](media/asset-bundle-location.webp)
 

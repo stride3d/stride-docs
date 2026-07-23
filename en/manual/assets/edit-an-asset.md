@@ -19,9 +19,9 @@ Your changes will be reflected in the **Asset preview** in real time.
 
 ## Editing using a dedicated editor
 
-Certain assets require the use of a dedicated editor. The most notable example of this are **Scenes**.
+Certain assets require the use of a dedicated editor. The most prominent example of this are **Scenes**.
 
-Currently, the assets that have a dedicated editor are:
+Currently, the assets that have a dedicated editor include:
 
 * Graphics compositor
 * Prefabs
