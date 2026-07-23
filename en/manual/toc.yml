@@ -75,6 +75,8 @@ items:
         href: assets/tags.md
       - name: Archetypes
         href: assets/archetypes.md
+      - name: Replacement assets
+        href: assets/replacement-assets.md
       - name: Asset compilation
         href: assets/asset-compilation.md
       - name: Asset bundles

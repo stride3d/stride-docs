@@ -38,5 +38,6 @@ For more information, visit [Project file structure](../files-and-folders/projec
 * [Use an asset in code](use-an-asset-in-code.md)
 * [Tags](tags.md)
 * [Archetypes](archetypes.md)
+* [Replacement assets](replacement-assets.md)
 * [Asset compilation](asset-compilation.md)
 * [Asset bundles](asset-bundles.md)
