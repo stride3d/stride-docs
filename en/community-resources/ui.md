@@ -6,6 +6,7 @@
 - [Stridelonia](https://github.com/TheKeyblader/Stridelonia) - Plugin embedding the Avalonia UI framework inside a running Stride game
 - [StrideCommunity.ImGuiDebug](https://github.com/Eideren/StrideCommunity.ImGuiDebug) - Bare-bones Dear ImGui integration for Stride with several built-in debug overlay tools
 - [Empty Keys UI for Xenko (legacy)](https://github.com/EmptyKeys/UI_Engines) - Xenko-era UI engine port from the Empty Keys framework
+- [Doprez Avalonia UI for Stride](https://github.com/Doprez/Doprez.Stride.Avalonia) - Bridging Avalonia’s Skia renderer to send bitmaps to Stride for 2D and 3D world-space UI elements.
 
 ## Examples and Snippets
 
