@@ -225,4 +225,4 @@ For more information, see [Splash screen](/splash-screen.md).
 
 ## See also
 
-* [Assets](../game-studio/assets.md)
+* [Assets](../assets/index.md)

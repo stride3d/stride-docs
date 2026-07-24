@@ -18,7 +18,7 @@
 
 ## 1. Add a video asset
 
-Before you can use a video in your game, you need to import it as an [asset](../game-studio/assets.md). 
+Before you can use a video in your game, you need to import it as an [asset](../assets/index.md). 
 
 1. Drag the video file from **Explorer** into the **Asset View**.
 

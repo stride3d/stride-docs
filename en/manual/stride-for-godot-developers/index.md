@@ -202,7 +202,7 @@ Like Godot, Stride supports file formats including:
 | Fonts                         | .ttf, .otf |
 | Video                         | .mp4
 
-For more information about assets, see [Assets](../game-studio/assets.md).
+For more information about assets, see [Assets](../assets/index.md).
 
 ## Prefab inheritance
 
