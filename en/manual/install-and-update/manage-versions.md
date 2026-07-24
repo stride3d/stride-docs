@@ -43,7 +43,7 @@ The **Stride CLI** let's you install, uninstall and update versions of the engin
 
 | Command | Description |
 | :-- | :-- |
-| `stride sdk install` | Install the latest version of the engine. |
+| `stride sdk install` | Install the latest version of the engine or the resolved project's version located in the current directory. |
 | `stride sdk install VERSION` | Install a specific version of the engine. Version patch number is optional. |
 | `stride sdk available` | List available versions of the engine. |
 | `stride sdk list` | List all installed versions. |
