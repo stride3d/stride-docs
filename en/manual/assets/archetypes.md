@@ -37,6 +37,7 @@ Reverting a property override will cause it to again use the same value as the a
 
 If you want to turn a derived asset into a normal one (unlinking it from the archetype), in the **Asset view** right click on it and select **Clear archetype**.
 
+![](media/asset-view-clear-archetype.webp)
 
 Now, the asset will no longer follow changes done to the archetype.
 
