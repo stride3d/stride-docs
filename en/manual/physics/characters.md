@@ -53,17 +53,17 @@ Which is why `MoveVector` is projected from the Character's `Orientation`, trans
 You can take a look at how the arrow Gizmo looks in the editor to get a more intuitive idea of how this is laid out.
 
 If you want to re-orient this direction, you can transform the vector before you pass it to `MoveVector`, change the character's `Orientation`, 
-preferably through [SetTargetPose(Quaternion targetOrientation)](xref:Stride.BepuPhysics.CharacterComponent.SetTargetPose\(Stride.Core.Mathematics.Quaternion\)),
+preferably through [SetTargetPose(Quaternion targetOrientation)](xref:Stride.BepuPhysics.BodyComponent.SetTargetPose(Stride.Core.Mathematics.Quaternion)),
 or [customize the Character Component](#custom-character-controllers)
 
 ### Ice skating: taking too long to start moving and come to a stop
 Controlling this potentially unwanted behavior is done by tweaking the character collider's `Mass`, 
 its `MaximumHorizontalForce` and sometimes the surface's friction coefficient.
 - The friction coefficient defines how rough the surface is; 0 would be a perfectly smooth surface keeping the momentum of your character going, while a value of 1 would be the opposite.
-- Mass and MaximumHorizontalForce is described [over here](#mass-and-maximumHorizontalForce)
+- Mass and MaximumHorizontalForce is described [over here](#mass-and-maximumhorizontalforce)
 
 ### Too slow regardless of `Speed`
-See [Mass and MaximumHorizontalForce](#mass-and-maximumHorizontalForce)
+See [Mass and MaximumHorizontalForce](#mass-and-maximumhorizontalforce)
 
 ## Custom Character Controllers
 
