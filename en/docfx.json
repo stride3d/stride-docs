@@ -99,6 +99,9 @@
           "diagnostics/**/*.md",
           "community-resources/toc.yml",
           "community-resources/**/*.md"
+        ],
+        "exclude": [
+          "contributors/engine/architecture-index.md"
         ]
       },
       {
