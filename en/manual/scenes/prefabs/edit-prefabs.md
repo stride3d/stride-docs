@@ -3,22 +3,24 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-You can edit prefabs in the dedicated [prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md).
+Prefabs can be edited in their [dedicated editor](../../game-studio/dedicated-editors/prefab-editor/index.md), which works similarly to the [scene editor](../../game-studio/dedicated-editors/scene-editor/index.md).
+
+TODO: IMAGE
 
 ## Open the prefab editor
 
-To open the prefab editor from the **Asset view**, double click the prefab or right-click and select **Edit asset**:
+To open the prefab editor, in the **Asset view** double click a prefab or right-click and select **Edit asset**.
 
 TODO: IMAGE
 
-To open the prefab editor from the **Asset view**, right-click any child of a prefab instance and select **Open prefab in editor**.
+Alternatively, you can open the prefab from the scene editor by right-clicking any child of a prefab instance and selecting **Open prefab in editor**.
+
+TODO: IMAGE
 
 ## Use the prefab editor
 
-The [prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) works almost identically to the [scene editor](../../game-studio/dedicated-editors/scene-editor/index.md), with the exception of not being able to use scenes.
+The [prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) works almost identically to the [scene editor](../../game-studio/dedicated-editors/scene-editor/index.md), with a few exceptions. Navigation and entity management are exactly the same.
 
 TODO: IMAGE
 
-When you edit a prefab in the prefab Editor, the changes are applied to the instances of the prefab in the scene in **real time**.
-
-TODO: GIF OR VIDEO
+When you edit a prefab in the prefab editor, the changes are applied to the instances of the prefab in other scenes in **real time**.

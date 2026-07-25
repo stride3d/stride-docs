@@ -9,8 +9,8 @@ TODO: VISUALIZATION
 
 ## Drawbacks
 
-* **Prefab models are only models** - they do not inherit things such as lights, colliders or components. For example, if you have a prefab comprising two models with physics components, the prefab model creates a single model from the two models and ignores the physics components. If you need to add components to a prefab model, add them to the prefab model itself.
-* **Prefab models don't expose materials** - this means you can't view or edit them in the prefab model asset, or in model components that use the prefab model.
+* **Prefab models can only be a model** - they do not inherit things such as lights, colliders or components.
+* **Prefab models don't expose materials** - this means you can't view or edit them in a scene.
 
 ## Create a prefab model
 

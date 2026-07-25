@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Programmer</span>
 <span class="badge text-bg-success">Designer</span>
 
-Prefab instances can be added to a scene in **Game Studio** or a prefab can be manually instantiated at runtime through code.
+Prefab instances can be added to a scene in **Game Studio** or instantiated through code at runtime.
 
 ## Add a prefab to a scene in Game Studio
 
@@ -14,11 +14,12 @@ By default, Game Studio **creates an empty parent entity with the prefab's entit
 
 TODO: IMAGE
 
-If you don't want to create a parent entity with the prefab, hold **Alt** when you drop the prefab into the scene.
+> [!TIP]
+> If you don't want to create a parent entity for the prefab, hold **Alt** when dropping it into the scene.
 
-## Break link to prefab in Game Studio
+## Break link to prefab
 
-After you add a prefab instance, you can break the link between the prefab and any of its child entities. This means the child entity is no longer affected by changes you make to the prefab.
+After adding a prefab instance to a scene, you can break the link between the prefab and any of its child entities. This means the child entity will no longer be affected by changes you make to the prefab.
 
 To do this, in the **scene editor**, right-click a child entity or entities and select **Break link to prefab**.
 

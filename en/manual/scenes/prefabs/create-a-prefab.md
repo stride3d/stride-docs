@@ -5,7 +5,7 @@
 
 Stride provides you a lot of ways to create a prefab for your convenience.
 
-## Create a prefab from asset view
+## Create a prefab in Asset view
 
 In the **Asset view**, click **➕ Add asset** and select **Prefabs > Prefab**. This will create an empty prefab asset which you can then edit and add entities to.
 
@@ -20,7 +20,7 @@ You can also create a prefab from an existing entity or entities.
     > [!TIP]
     > Hold Ctrl to select multiple items.
 
-2. Right-click the selection and select **Create prefab from selection**:
+2. Right-click the selection and select **Create prefab from selection**.
 
     TODO: IMAGE
 
