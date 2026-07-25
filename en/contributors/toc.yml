@@ -47,14 +47,8 @@ items:
     href: engine/static-analysis.md
   - name: 🏗️ Architecture
     expanded: true
-    href: engine/architecture/index.md
-    items:
-    - name: Build details
-      href: engine/architecture/build-details.md
-    - name: Dependency graph
-      href: engine/architecture/dependency-graph.md
-    - name: Copy and paste
-      href: engine/architecture/copy-paste.md
+    href: engine/architecture/toc.yml
+    topicHref: engine/architecture/index.md
 - name: 📖 Contribute to the documentation
   expanded: false
   href: documentation/index.md
