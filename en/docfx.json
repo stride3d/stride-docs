@@ -75,6 +75,9 @@
         "diagnostics/**/*.md": "Stride diagnostics",
         "contributors/**/*.md": "Stride contributors",
         "community-resources/**/*.md": "Stride Community resources"
+      },
+      "_disableContribution": {
+        "contributors/engine/architecture/**/*.md": "true"
       }
     },
     "sitemap": {
