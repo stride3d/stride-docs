@@ -168,7 +168,7 @@ The core team is composed of members who make frequent contributions to the proj
       <td><strong>Jkao</strong></td>
       <td>
         <img src="https://github.com/jklawreszuk.png?size=40" width="40" height="40" class="rounded-circle me-2" alt="jklawreszuk">
-        <a href="https://github.com/jklawreszuk">jklawreszuk</a>
+        <a href="https://github.com/jklawreszuk">Jklawreszuk</a>
       </td>
       <td>Poland</td>
       <td>
