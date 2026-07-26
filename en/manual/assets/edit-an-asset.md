@@ -39,3 +39,4 @@ To open a dedicated editor for an asset either **double click it**, right click 
 
 * [Use an asset](use-an-asset.md)
 * [Use an asset in code](use-an-asset-in-code.md)
+* [Create custom assets](../scripts/custom-assets.md)

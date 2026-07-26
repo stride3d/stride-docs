@@ -25,7 +25,7 @@ When changing a property of a derived asset in the **Property grid**, it will be
 
 ![](media/property-grid-overriden-property.webp)
 
-Overridden properties will not be updated when they are changed on the archetype.
+Overridden properties will remain unchanged when corresponding properties on the archetype get modified. This means that their values are independent and cannot be influenced by changes done to the archetype.
 
 ## Reverting overrides
 
