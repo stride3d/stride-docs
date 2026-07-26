@@ -154,7 +154,7 @@ Fortunately, we added a couple of sections in [Characters](../manual/physics/cha
 
 ## 🙏 Contributors
 
-Thanks to everyone who contributed to Stride 4.4:
+Thanks to everyone who contributed to this release:
 
 - [Acissathar](https://github.com/Acissathar)
 - [allcontributors[bot]](https://github.com/apps/allcontributors)
@@ -186,17 +186,17 @@ Thanks to everyone who contributed to Stride 4.4:
 - [xen2](https://github.com/xen2)
 - [ykafia](https://github.com/ykafia)
 
-Welcome new contributors:
+Welcome to our new contributors, who made their first contribution to the [stride3d/stride](https://github.com/stride3d/stride) repository in this release:
 
-- @JeroMiya made their first contribution in https://github.com/stride3d/stride/pull/3022
-- @D4rkDuck made their first contribution in https://github.com/stride3d/stride/pull/3011
-- @ds5678 made their first contribution in https://github.com/stride3d/stride/pull/3075
-- @rafzi made their first contribution in https://github.com/stride3d/stride/pull/3087
-- @MsEpsilon made their first contribution in https://github.com/stride3d/stride/pull/3098
-- @Redwarx008 made their first contribution in https://github.com/stride3d/stride/pull/3093
-- @kjnorris1205 made their first contribution in https://github.com/stride3d/stride/pull/3118
-- @luca-domenichini made their first contribution in https://github.com/stride3d/stride/pull/3089
-- @steveberdy made their first contribution in https://github.com/stride3d/stride/pull/3079
-- @Henr1k80 made their first contribution in https://github.com/stride3d/stride/pull/3156
+- [JeroMiya](https://github.com/JeroMiya) made their first contribution in https://github.com/stride3d/stride/pull/3022
+- [D4rkDuck](https://github.com/D4rkDuck) made their first contribution in https://github.com/stride3d/stride/pull/3011
+- [ds5678](https://github.com/ds5678) made their first contribution in https://github.com/stride3d/stride/pull/3075
+- [rafzi](https://github.com/rafzi) made their first contribution in https://github.com/stride3d/stride/pull/3087
+- [MsEpsilon](https://github.com/MsEpsilon) made their first contribution in https://github.com/stride3d/stride/pull/3098
+- [Redwarx008](https://github.com/Redwarx008) made their first contribution in https://github.com/stride3d/stride/pull/3093
+- [kjnorris1205](https://github.com/kjnorris1205) made their first contribution in https://github.com/stride3d/stride/pull/3118
+- [luca-domenichini](https://github.com/luca-domenichini) made their first contribution in https://github.com/stride3d/stride/pull/3089
+- [steveberdy](https://github.com/steveberdy) made their first contribution in https://github.com/stride3d/stride/pull/3079
+- [Henr1k80](https://github.com/Henr1k80) made their first contribution in https://github.com/stride3d/stride/pull/3156
 
 ..and everyone who reported issues, tested builds and helped on the community channels. 💙
