@@ -8,14 +8,17 @@ This is useful when trying to **modify an asset from an [external package](../fi
 
 ## Create a replacement asset
 
-To create a replacement asset, right clicking on the asset you want to replace and select **Create replacing asset**.
+To create a replacement asset, right click on the asset you want to replace and select **Create replacing asset**.
 
 ![](media/asset-view-create-replacement.webp)
 
 This will create a [derived asset](archetypes.md) that is set to replace the original.
 
-> [!NOTE]
-> The replacement asset **will still work** if it's marked as **⚫ not included in build**.
+![](media/asset-view-replacement-asset.webp)
+
+The asset that is being replaced will now have a new property named **Replaced by**. You can use the button next to it to quickly jump to the replacement asset.
+
+![](media/property-grid-replaced-by.webp)
 
 ## See also
 
