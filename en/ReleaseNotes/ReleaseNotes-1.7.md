@@ -273,7 +273,7 @@ Release date: 2016/07/09
 #### Enhancements
 
 - Error messages added when fonts fail to load.
-- Add new identification scheme for Linux deployement
+- Add new identification scheme for Linux deployment
 - Slightly faster initialization of projects in the Game Studio
 
 #### Issues fixed
@@ -327,7 +327,7 @@ Release date: 2016/07/21
 
 Release date: 2016/07/22
 
-#### New fatures
+#### New features
 
 - In the Sprite component, you can now choose the sampler between linear, point (nearest) and anisotropic ([#409](https://github.com/SiliconStudio/xenko/issues/409))
 
@@ -378,7 +378,7 @@ Release date: 2016/08/05
 - Fixed a crash when creating new packages
 - D3D12: pipeline state was not properly reset on ClearState & CommandList resets
 - D3D12: rewrote texture and buffer initial data upload, which was failing on AMD hardware
-- D3D12: optimizations to avoid calling unecessary state changes
+- D3D12: optimizations to avoid calling unnecessary state changes
 
 ### Version 1.7.9-Beta
 

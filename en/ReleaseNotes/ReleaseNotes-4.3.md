@@ -29,7 +29,7 @@ The integration is effectively done, with Bepu's feature set now being slightly 
 
 ### Vulkan compute shader support
 
-Vulkan graphics backend has been modified to support compute shaders, the shader compiler has also been modified to support computer shader generation for GLSL.
+Vulkan graphics backend has been modified to support compute shaders, the shader compiler has also been modified to support compute shader generation for GLSL.
 
 ### User-defined Assets
 

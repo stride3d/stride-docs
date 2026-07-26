@@ -74,7 +74,7 @@ For example, if you copy/paste a model with its dependencies, you will get a cop
 #### Border and Center support in sprite sheet editor
 For ‘Sprite2D’ sprites, you can move the position of the center by selecting the <img src="media/ReleaseNotes-1.5/SpriteCenterIcon.png" style="display: inline"/> icon in the toolbar of the sprite editor. Grab and move the cross to the desired position.
 
-For ‘UI’ sprites, you can change the borders by selecting the <img src="media/ReleaseNotes-1.5/SpriteBorderIcon.png" style="display: inline" /> icon in the toolbar of the sprite editor. You can then resize each border (left, top, right and bottom) separately in the same way as the texture region, by grabbing and moving one of them. Note that the <img src="media/ReleaseNotes-1.5/SpriteBorderLockIcon.png" style="display: inline" /> icon lets you ‘lock’or ‘unlock’ the sprite borders while resizing the texture region.
+For ‘UI’ sprites, you can change the borders by selecting the <img src="media/ReleaseNotes-1.5/SpriteBorderIcon.png" style="display: inline" /> icon in the toolbar of the sprite editor. You can then resize each border (left, top, right and bottom) separately in the same way as the texture region, by grabbing and moving one of them. Note that the <img src="media/ReleaseNotes-1.5/SpriteBorderLockIcon.png" style="display: inline" /> icon lets you ‘lock’ or ‘unlock’ the sprite borders while resizing the texture region.
 
 #### New built-in scripts
 We added a few more built-in scripts with this release such as an FPS camera script and First player controller script. To use them, just click on “New Asset”, “Script source code”, select the desired script and attach it to an adequate entity.
@@ -185,7 +185,7 @@ Release date: 2015/12/17
 ###### Games
 
 - Use the application icons as window icon on windows
-- Use AssamblyProductAttribute.Product as window title on windows
+- Use AssemblyProductAttribute.Product as window title on windows
 
 ###### Graphics
 
@@ -197,7 +197,7 @@ Release date: 2015/12/17
 ###### Engine
 
 - Use Color4 instead of Color in sprite components.
-- Add support for toot motion on the TransformComponent
+- Add support for root motion on the TransformComponent
 - Expose AnimationComponent.PlayingAnimations to the editor to be able to set entity initial animation easily.
 - Make connection to editor for shader compilation fail if there is no connection back within 5 seconds
 

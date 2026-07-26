@@ -97,7 +97,7 @@ Each tutorial has a video tutorial accompanying it, which can be found on Stride
 
 The transition to .NET6 unfortunately broke the help tooltips and the code completion of integrated C# code editor. But we decided to accept it for now, as everyone is using a proper C# editor anyways, such as Visual Studio, Rider or Visual Studio Code.
 
-The reason for the error is that [RoslynPad](https://github.com/roslynpad/roslynpad), the underlaying library, also needs an update or fix. We'll adress this in one of the upcoming minor version releases.
+The reason for the error is that [RoslynPad](https://github.com/roslynpad/roslynpad), the underlaying library, also needs an update or fix. We'll address this in one of the upcoming minor version releases.
 
 ![](https://i.imgur.com/Gn2i6Js.png)
 

@@ -33,7 +33,7 @@ The `ChildSceneComponent` has been removed. We encourage all entities to be mana
 
 Enabling VR is now as simple as a single click!
 
-Xenko's clustered forward rendering, with its multisample anti-aliasing, makes it ideal for VR. Xenko uses a single API for every device, with native support for Oculus and HTV Vive (more devices coming very soon).
+Xenko's clustered forward rendering, with its multisample anti-aliasing, makes it ideal for VR. Xenko uses a single API for every device, with native support for Oculus and HTC Vive (more devices coming very soon).
 
 Xenko comes with a VR game sample that shows you how to implement VR gameplay, including environment interaction and teleportation:
 
@@ -122,7 +122,7 @@ When upgrading a project from earlier version, in its `.csproj` file, set `Tools
 
 ### Navigation
 
-All compontents related to navigation have been moved to their own `SiliconStudio.Xenko.Navigation` assembly and namespace.
+All components related to navigation have been moved to their own `SiliconStudio.Xenko.Navigation` assembly and namespace.
 
 ### Graphics Compositor
 
@@ -309,7 +309,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 ##### Game Studio
 
 * Visual Studio version picker now shows the installation nickname to easily differentiate when multiple instances are installed side by side
-* Add the concept of _active scene_ in the scene editor. Dropping an asset to the scene view will an entity add to the currently active scene instead of the root scene
+* Add the concept of _active scene_ in the scene editor. Dropping an asset to the scene view will add an entity to the currently active scene instead of the root scene
 
 ##### Graphics
 
