@@ -1,4 +1,4 @@
-# Xenko 2.0 release notes 
+# Xenko 2.0 release notes
 
 ## Highlights
 

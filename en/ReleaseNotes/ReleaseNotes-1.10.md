@@ -1,4 +1,3 @@
-
 # Xenko 1.10 release notes
 
 ## Highlights

@@ -1,4 +1,4 @@
-# Xenko release notes 1.7
+# Xenko 1.7 release notes
 
 ## Highlights
 

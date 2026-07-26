@@ -8,7 +8,7 @@ Read the full blog post here: [Announcing Stride 4.3](https://www.stride3d.net/b
 
 A massive thank you to the open-source Stride community for your dedicated contributions.
 
-## What's new in this release
+## What's new
 Stride 4.3 includes numerous enhancements and improvements. Here’s what to expect:
 
 - **.NET 10 Integration**: Stride 4.3 is now fully aligned with .NET 10, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
