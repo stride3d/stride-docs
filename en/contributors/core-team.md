@@ -203,7 +203,7 @@ The core team is composed of members who make frequent contributions to the proj
         <img src="https://github.com/Ethereal77.png?size=40" width="40" height="40" class="rounded-circle me-2" alt="Ethereal77">
         <a href="https://github.com/Ethereal77">Ethereal77</a>
       </td>
-      <td>France</td>
+      <td>Spain</td>
       <td>
           <ul class="mb-0">
               <li>C# in general</li>
