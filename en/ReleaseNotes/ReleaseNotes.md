@@ -145,7 +145,7 @@ the `CharacterComponent` we introduced was not as well put together as it ought 
 We looked at Bepu's own character example to solve these issues; unfortunately, we could not avoid introducing a fair amount of breaking changes.
 Fortunately, we added a couple of sections in [Characters](../manual/physics/characters.md) to describe the new features and properties.
 
-### Breaking changes
+## 💥 Breaking changes
 
 - **Custom shaders:** the SDSL compiler was rewritten; you might want to review how your custom shaders render. If you hit a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 - **Direct3D 12** now requires **Enhanced Barriers**; the legacy barrier path has been removed.
