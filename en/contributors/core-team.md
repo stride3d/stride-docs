@@ -5,7 +5,7 @@ The core team is a small group of volunteer developers, each with expertise in d
 The core team is composed of members who make frequent contributions to the project, whether in code, documentation, or community management.
 
 <div class="table-responsive">
-<table class="table table-striped table-hover table-sm align-middle">
+<table class="table table-striped table-hover table-sm">
   <thead>
     <tr>
       <th scope="col">Discord</th>
@@ -14,7 +14,7 @@ The core team is composed of members who make frequent contributions to the proj
       <th scope="col">Focus / Expertise</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="align-top">
     <tr>
       <td>
         <strong>xen2</strong>
