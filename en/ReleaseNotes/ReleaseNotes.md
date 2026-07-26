@@ -156,31 +156,47 @@ Fortunately, we added a couple of sections in [Characters](../manual/physics/cha
 
 Thanks to everyone who contributed to Stride 4.4:
 
-- Youness Kafia (ykafia)
-- Nicolas Musset (Kryptos-FR / Color-Rise)
-- Mario Guerra
-- Johan Gustafsson
-- Eideren
-- Vaclav Elias
-- Virgile Bello (xen2)
-- Jakub Ławreszuk
-- Feralnex (Tomasz Czech)
-- Nicogo (Nicolas Gomez)
-- Doprez
-- ds5678
-- w0wca7a
-- Basewq
-- D4rkDuck
-- Elias Holzer
-- Peter Laske
-- Will Bentz
-- Henrik Gedionsen
-- Kevin Norris
-- Luca Domenichini
-- MiyaGrace
-- MsEpsilon
-- Rafael Stahl
-- Redwarx008
-- Steve Berdy
+- [Acissathar](https://github.com/Acissathar)
+- [allcontributors[bot]](https://github.com/apps/allcontributors)
+- [azeno](https://github.com/azeno)
+- [Basewq](https://github.com/Basewq)
+- [D4rkDuck](https://github.com/D4rkDuck)
+- [Doprez](https://github.com/Doprez)
+- [ds5678](https://github.com/ds5678)
+- [Eideren](https://github.com/Eideren)
+- [Ethereal77](https://github.com/Ethereal77)
+- [Feralnex](https://github.com/Feralnex)
+- [Henr1k80](https://github.com/Henr1k80)
+- [JeroMiya](https://github.com/JeroMiya)
+- [Jklawreszuk](https://github.com/Jklawreszuk)
+- [johang88](https://github.com/johang88)
+- [kjnorris1205](https://github.com/kjnorris1205)
+- [Kryptos-FR](https://github.com/Kryptos-FR)
+- [laske185](https://github.com/laske185)
+- [luca-domenichini](https://github.com/luca-domenichini)
+- [MsEpsilon](https://github.com/MsEpsilon)
+- [Nicogo1705](https://github.com/Nicogo1705)
+- [rafzi](https://github.com/rafzi)
+- [Redwarx008](https://github.com/Redwarx008)
+- [sasvdw](https://github.com/sasvdw)
+- [Spajker7](https://github.com/Spajker7)
+- [steveberdy](https://github.com/steveberdy)
+- [VaclavElias](https://github.com/VaclavElias)
+- [w0wca7a](https://github.com/w0wca7a)
+- [xen2](https://github.com/xen2)
+- [ykafia](https://github.com/ykafia)
 
-…and everyone who reported issues, tested builds and helped on the community channels. 💙
+Welcome new contributors:
+
+- @JeroMiya made their first contribution in https://github.com/stride3d/stride/pull/3022
+- @D4rkDuck made their first contribution in https://github.com/stride3d/stride/pull/3011
+- @ds5678 made their first contribution in https://github.com/stride3d/stride/pull/3075
+- @rafzi made their first contribution in https://github.com/stride3d/stride/pull/3087
+- @MsEpsilon made their first contribution in https://github.com/stride3d/stride/pull/3098
+- @Redwarx008 made their first contribution in https://github.com/stride3d/stride/pull/3093
+- @kjnorris1205 made their first contribution in https://github.com/stride3d/stride/pull/3118
+- @luca-domenichini made their first contribution in https://github.com/stride3d/stride/pull/3089
+- @steveberdy made their first contribution in https://github.com/stride3d/stride/pull/3079
+- @Henr1k80 made their first contribution in https://github.com/stride3d/stride/pull/3156
+
+..and everyone who reported issues, tested builds and helped on the community channels. 💙
