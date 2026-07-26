@@ -180,7 +180,7 @@ The documentation is now available in Japanese. To switch languages, use the **L
 ## Known issues
 
 * On Linux, when switching the underlying graphics platform, rendering doesn't occur or fail. To fix the problem, delete the cache, local, and roaming folders on the Linux host and restart the game
-* * On iOS, if `Enable device-specific builds` is on (set in the project properties), it's not possible to debug game code. To speed up development, manually select the architecture of your device from the Advanced tab
+* On iOS, if `Enable device-specific builds` is on (set in the project properties), it's not possible to debug game code. To speed up development, manually select the architecture of your device from the Advanced tab
 * Performance issues on mobile (being worked on)
 * Live scripting has been temporarily disabled
 
@@ -249,7 +249,7 @@ The documentation is now available in Japanese. To switch languages, use the **L
 
 ##### Input
 
-* Added `AbsoluteMousePosition` information to the `InputManger`.
+* Added `AbsoluteMousePosition` information to the `InputManager`.
 * Improved gamepad support (new devices supported, improved API, runtime detection, etc.)
 * Add interpreted key and IME input support
 
@@ -276,7 +276,7 @@ The documentation is now available in Japanese. To switch languages, use the **L
 * Fixed lots of issues with copy and paste (and replace). Notably it is now possible to copy entities from a scene and child scene at the same time.
 * Fixed issues with "Create library from selection" in the UI editor
 * Made the GameStudio crash in some rare cases where exceptions could leave a project in a corrupted state
-* Fixed various isues in the UI editor when moving elements in the hierarchy
+* Fixed various issues in the UI editor when moving elements in the hierarchy
 * Fixed issues with thumbnails generation
 * Fixed issues with the anchor of a child scene
 

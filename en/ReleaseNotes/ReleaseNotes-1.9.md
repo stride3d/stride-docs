@@ -37,7 +37,7 @@ In fact, expect:
    <source src="media/ReleaseNotes-1.9/script_editor/code_completion.mp4" type="video/mp4">
 </video>
 
-We had some help from Microsoft’s .NET compiler, [Roslyn](https://github.com/dotnet/roslyn), so Xenko users will also receive the full benefit of all the latest features of .NET. Adding a Rosyln-based Script Editor makes it easier to keep up with the latest C# updates.
+We had some help from Microsoft’s .NET compiler, [Roslyn](https://github.com/dotnet/roslyn), so Xenko users will also receive the full benefit of all the latest features of .NET. Adding a Roslyn-based Script Editor makes it easier to keep up with the latest C# updates.
 
 Using the Xenko Script Editor is fairly straightforward. Just follow these steps:
 
@@ -55,7 +55,7 @@ C# scripts saved on Visual Studio side (or any text editor, for that matter) wil
    <source src="media/ReleaseNotes-1.9/script_editor/external_changes.mp4" type="video/mp4">
 </video>
 
-Under the hood, [Rosyln](https://github.com/dotnet/roslyn) is the underlying technology that can process your Xenko source code. But we didn’t stop there! We were fortunate to find [AvalonEdit](http://avalonedit.net/), which provided us what we wanted for the visual appearance of the UI aspect of the Xenko script editor. We also integrated [RoslynPad](https://roslynpad.net/), which connects Roslyn and AvalonEdit together.
+Under the hood, [Roslyn](https://github.com/dotnet/roslyn) is the underlying technology that can process your Xenko source code. But we didn’t stop there! We were fortunate to find [AvalonEdit](http://avalonedit.net/), which provided us what we wanted for the visual appearance of the UI aspect of the Xenko script editor. We also integrated [RoslynPad](https://roslynpad.net/), which connects Roslyn and AvalonEdit together.
 
 ### Navigation Meshes
 
@@ -152,7 +152,7 @@ This includes renderers, material features, and will soon be extensively used in
 ### Windows Phone and Windows Store Removed
 
 Windows Phone and Windows Store platforms are both removed.
-Please use the newer `Universal Windows Apps (UWP)` instead. This platform was previously known as `Windows 10`.
+Please use the newer `Universal Windows Platform (UWP)` instead. This platform was previously known as `Windows 10`.
 Projects will be automatically upgraded to reflect this change.
 
 Also, we renamed preprocessor definition `SILICONSTUDIO_PLATFORM_WINDOWS_RUNTIME` into `SILICONSTUDIO_PLATFORM_UWP`.
@@ -169,7 +169,7 @@ The switch to .NET Standard for newly created projects implies that:
 
 ### Asset Serialization
 
-We changed how we serialize asset in YAML. We introduced new concepts that improve how we can track overrides between an archetype or a prefab and assets/entities inheriting from it. Although everything happens "under the hood", this is a actually a heavy change that might impact the upgrading of your project.
+We changed how we serialize asset in YAML. We introduced new concepts that improve how we can track overrides between an archetype or a prefab and assets/entities inheriting from it. Although everything happens "under the hood", this is actually a heavy change that might impact the upgrading of your project.
 
 We removed asset upgrading for projects made with version 1.3 and below (released more than a year ago). It is possible that you experience some issues when upgrading a project made with versions 1.4 to 1.7, but you should properly be able to upgrade any project that uses version 1.8. However a few cases are not supported:
 * Dependency Properties of UI elements that are overridden from an UI library will be reset during upgrade. Therefore, properties such as Grid Column and Row will have to be manually restored.
@@ -291,7 +291,7 @@ Release date 2016/11/29
 
 #### Game Studio
 
-* Moving or renaming an asset that has overridden properties (eg. a scene using prefabs) was loosing override information once saved.
+* Moving or renaming an asset that has overridden properties (eg. a scene using prefabs) was losing override information once saved.
 
 ##### Engine
 
@@ -322,7 +322,7 @@ Release date 2016/12/13
 * Adding a new or existing package to a solution was causing a crash.
 * Fix hashing of source files to detect if an source file has changed.
 * Adding a component that requires unicity to a prefab when one of the instance already had an instance of this prefab was crashing.
-* Fix a crash that could occurs when removing an animation or a sound from an Animation Component or an Audio Emitter Component while the Game Studio was still compiling the asset.
+* Fix a crash that could occur when removing an animation or a sound from an Animation Component or an Audio Emitter Component while the Game Studio was still compiling the asset.
 * Render stages are now properly re-evaluated when a property affecting rendering is modified (eg. casting shadows, adding transparency to a material...)
 * Fix insert position when dropping multiple assets into a scene at the same time
 * Fix opening a scene from a package project that is not a game was crashing.

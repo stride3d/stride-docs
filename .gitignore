@@ -365,3 +365,4 @@ FodyWeavers.xsd
 _site
 jp_tmp/*
 .idea
+/en/contributors/engine/architecture

@@ -1,4 +1,4 @@
-# Stride 4.2 Release notes
+# Stride 4.2 release notes
 
 February 6th, 2024
 
@@ -20,7 +20,7 @@ A massive thank you to the open-source Stride community for your dedicated contr
 - [4.2.0.2188](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2188): June 2024
 - [4.2.0.2122](https://github.com/stride3d/stride/releases/tag/releases%2F4.2.0.2122): March 2024
 
-## What's new in Stride 4.2
+## What's new
 Stride 4.2 includes numerous enhancements and improvements. Here’s what to expect:
 
 - **.NET 8 Integration**: Stride 4.2 is now fully aligned with .NET 8, harnessing its performance improvements and efficiency gains for game development. This means faster execution times, reduced memory footprint, and access to the latest C# features, making your development smoother and more efficient. [Learn more](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
@@ -47,7 +47,7 @@ Stride 4.2 includes numerous enhancements and improvements. Here’s what to exp
 
   - **Automatic Asset Copying to Resources Directory**: To streamline asset management, the editor can now automatically copy imported assets to the project's Resources directory, ensuring your assets are always where they need to be. [See how it works](https://github.com/stride3d/stride/pull/1827)
 
-## What's Changed in Details
+## What's changed in details
 
 * Fixed Exception Caused By Privacy Policy URL in Crash Reporter by @MeharDT in https://github.com/stride3d/stride/pull/1878
 * docs: add acastrodev as a contributor for code by @allcontributors in https://github.com/stride3d/stride/pull/1886
@@ -155,7 +155,7 @@ A heartfelt thank you to all the contributors who have played a significant role
 - [@WojciechNagorski](https://github.com/WojciechNagorski)
 - [@manio143](https://github.com/manio143)
 
-## New Contributors
+## New contributors
 
 We are especially excited to welcome the following new contributors to Stride with the 4.2 release. Your contributions are greatly appreciated!
 
