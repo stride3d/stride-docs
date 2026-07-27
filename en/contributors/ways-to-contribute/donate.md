@@ -12,7 +12,4 @@ We gather funding through a website called [OpenCollective](https://opencollecti
 
 Stride's Open Collective hosts different [Projects](https://opencollective.com/stride3d/projects), think of them as funding goals for specific features or contributions. Each project typically has a related GitHub ticket for more details on what's required for its development.
 
-If you're interested in working on or contributing to a particular feature, you can let us know by either replying:
-
- - In each projects related GitHub thread and mention @stride3d/stride-contributors 
- - In the Stride [Contributors channel on Discord](https://discord.gg/bDhMhGVHvD)
+If you're interested in working on or contributing to a particular feature, check out [🛠️ Contribute to the engine — Paid work](../engine/bug-bounties.md).

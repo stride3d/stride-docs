@@ -8,7 +8,7 @@ Our documentation is built using [docfx](https://dotnet.github.io/docfx/). All p
 
 Depending on the type of contribution, **you might not even have to download the repository in order to submit changes**. GitHub's file editor can suffice when fixing spelling errors, or adding a note to an existing page.
 
-For more information, visit our [📖 Contribute to the documentation](../documentation/index.md) section, which contains resources on how to create new pages, build the documentation and more.
+For more information, visit our [📖 Contribute to the documentation](../documentation/index.md) section, which contains resources on how to create new pages, build the documentation website and more.
 
 > [!TIP]
 > If you **don't know where to start**, try finding an [open issue labeled "good first issue"](https://github.com/stride3d/stride-docs/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
@@ -19,7 +19,7 @@ The Stride website is the landing place for all new users that would like to lea
 
 The website is built using [11ty](https://www.11ty.dev/) and [bootstrap](https://getbootstrap.com/). We keep our dependencies as minimal as possible to make it easier for other people to submit their own changes.
 
-For more information, visit out [🌐️ Contribute to the website](../website/index.md) section, which contains resources on how build the website, create new content and more.
+For more information, visit our [🌐️ Contribute to the website](../website/index.md) section, which contains resources on how build the website, create new content and more.
 
 > [!TIP]
 > If you **don't know where to start**, try finding an [open issue labeled "good first issue"](https://github.com/stride3d/stride-website/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).

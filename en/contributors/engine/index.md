@@ -22,14 +22,14 @@ These pages provide information about how to contribute to the engine as well as
 
 ### Paid work 💵
 
-We also have funded [Open Collective Projects](https://opencollective.com/stride3d/projects/) in case you want to earn a little extra. These are either bug bounties, requests for new features or other tasks that are deemed as important. We can also create a new project for you in case you are working on something large that the community would like to see.
+We also have funded [Open Collective Projects](https://opencollective.com/stride3d/projects/) in case **you want to earn a little extra**. These are either bug bounties, requests for new features or other tasks that are deemed important enough. **We can also create a new project for you** in case you are working on something large that the community would like to see.
 
 For more information, visit [Paid work](bug-bounties.md).
 
 ## Coding style
 
-Please use and follow the coding style outlined in the `.editorconfig` file in the root of the repository ([link](https://github.com/stride3d/stride/blob/master/.editorconfig)). Your IDE of choice should be able to use it in order to automatically enforce the rules that are outlined in it.
+Please use and follow the coding style outlined in **the `.editorconfig` file** in the root of the repository ([link](https://github.com/stride3d/stride/blob/master/.editorconfig)). Your IDE of choice should be able to use it in order to automatically enforce its rules.
 
 ## Architecture documentation
 
-We store architecture documentation in the main engine repository under `docs/`. They are automatically copied when building the documentation website to the [🏗️ Architecture](architecture/index.md) section for easier viewing.
+We store architecture documentation in the main engine repository under `docs/`. They are **automatically copied** when building the documentation website to the [🏗️ Architecture](architecture/index.md) section for easier viewing.
