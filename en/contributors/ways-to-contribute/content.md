@@ -2,8 +2,6 @@
 
 There is a lot that goes into making an engine and code is only a part of it. Being an open source project, Stride's website and documentation source code is also available on GitHub under their respective repositories.
 
-TODO: IMAGE
-
 ## Contributing to the documentation
 
 Our documentation is built using [docfx](https://dotnet.github.io/docfx/). All pages are written in [Markdown](https://en.wikipedia.org/wiki/Markdown), which is a file format **designed to be intuitive** even for people **not familiar with html and web development**.

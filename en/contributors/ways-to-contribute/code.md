@@ -4,9 +4,7 @@ Stride is an open source project, meaning that **anyone can view and contribute 
 
 ## How to start contributing
 
-It's important to keep in mind when suggesting changes that Stride is a community project, meaning that **modifying crucial components to your liking may not be what others want**.
-
-When starting out, make sure to first **familiarize yourself with the architecture**. The best way to do that is to try tackling issues labeled [good first issue](https://github.com/stride3d/stride/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
+Stride is a very large project, which can make working with its code quite overwhelming when starting out. It's a lot easier to first try tackling issues labeled [good first issue](https://github.com/stride3d/stride/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22), which will help you **familiarize yourself with the engine's architecture**.
 
 ![](media/stride-repo-good-first-issue.webp)
 
@@ -16,7 +14,7 @@ If you are a developer with solid experience in C#, rendering techniques, or gam
 
 ![](media/open-collective.webp)
 
-For more information on how to get assigned to a project, how to fulfil a task and how to get paid, visit [🛠️ Contribute to the engine — Bug bounties](../engine/bug-bounties.md).
+For more information on how to get assigned to a project, how to fulfil a task and how to get paid, visit [🛠️ Contribute to the engine — Paid work](../engine/bug-bounties.md).
 
 ## Important resources
 
