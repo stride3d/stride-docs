@@ -1,4 +1,5 @@
-﻿# Bug bounties
+﻿# Paid work
+
 If you are a developer with solid experience in C#, rendering techniques, or game development, we want to hire you! We have allocated funds from supporters on [OpenCollective](https://opencollective.com/stride3d) and will pay you for your work on certain issues.
 
 ## What you can work on

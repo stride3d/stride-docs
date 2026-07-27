@@ -3,7 +3,6 @@ pdfFileName: contributing-in-stride.pdf
 items:
 - name: 🌟 Ways to contribute
   href: index.md
-  expanded: true
   items:
     - name: Donate
       href: ways-to-contribute/donate.md
@@ -29,9 +28,7 @@ items:
   expanded: false
   href: engine/index.md
   items:
-  - name: Contribute to code
-    href: engine/contribute-code.md
-  - name: Bug bounties
+  - name: Paid work
     href: engine/bug-bounties.md
   - name: Building source on Windows
     href: engine/building-source-windows.md
