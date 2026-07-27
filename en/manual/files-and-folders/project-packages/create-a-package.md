@@ -10,7 +10,7 @@ In this guide, we will dive into how to create custom project packages.
 
 ![](media/platform-packages.webp)
 
-Platform packages are created when adding a platform to the project. Steps on how to do that are located in the [add or remove a platform page](../../platforms/add-or-remove-a-platform.md).
+Platform packages are created when adding a platform to the project. Steps on how to do that are located in [Add or remove a platform](../../platforms/add-or-remove-a-platform.md).
 
 ## Create a standard package
 
@@ -135,7 +135,7 @@ By default, all code and assets in a newly created project package won't be acce
 
 To change that, you'll have to add it as a dependency to the package(s) that you want to use it.
 
-For more information, visit the [dependencies page](dependencies.md#add-a-dependency).
+For more information, visit [Dependencies](dependencies.md#add-a-dependency).
 
 ## See also
 

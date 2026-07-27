@@ -2,7 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-An asset is a representation of an element of your game inside Game Studio, such as texture, animation or model.
+An asset is a representation of an element of your game, such as texture, animation or model.
 
 ## Create an asset
 
@@ -41,4 +41,4 @@ Stride doesn't include assets which aren't used anywhere, meaning that **they ca
 
 ## Further reading
 
-For more information, visit [Assets](../game-studio/assets.md).
+For more information, visit the [Assets](../game-studio/assets.md) section.

@@ -55,6 +55,7 @@ $Settings = [PSCustomObject]@{
     IndexFileName = "index.md"
     ManualFolderName = "manual"
     DocsUrl = "https://doc.stride3d.net"
+    EngineRepositoryUrl = "https://github.com/stride3d/stride/tree/master"
 }
 
 # To Do fix, GitHub references, fix sitemap links to latest/en/
@@ -116,6 +117,166 @@ function Ask-UseExistingAPI {
     return ($answer -ieq "y" -or $answer -eq "")
 }
 
+function Ask-ReplaceEngineArchitectureDocs {
+    Write-Host ""
+    Write-Host -ForegroundColor Cyan "Do you want to copy and replace engine architecture docs?"
+    Write-Host ""
+    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
+    Write-Host -ForegroundColor Yellow "  [N] No"
+    Write-Host ""
+
+    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
+
+    return ($answer -ieq "y" -or $answer -eq "")
+}
+
+function Get-RelativePath {
+    param (
+        [string]$BasePath,
+        [string]$Path
+    )
+    $baseUri = [Uri]((Resolve-Path $BasePath).Path.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar)
+    $pathUri = [Uri](Resolve-Path $Path).Path
+    return [Uri]::UnescapeDataString($baseUri.MakeRelativeUri($pathUri).ToString())
+}
+function Copy-ArchitectureDocs {
+    Write-Host -ForegroundColor Green "Copying architecture documentation from the main engine repository..."
+    $architectureFolder = "en/contributors/engine/architecture"
+    $engineDocsFolder = Join-Path $PSScriptRoot "..\stride\docs"
+
+    # Return if the repository isn't available
+    if (-not (Test-Path $engineDocsFolder)) {
+        Write-Host -ForegroundColor Yellow "Skipping copying architecture documentation, can't find the main engine repository. Make sure the stride directory is located next to stride-docs."
+        return
+    }
+
+    # Remove old files
+    if (Test-Path $architectureFolder) {
+        Remove-Item $architectureFolder/* -Recurse -Verbose
+    }
+
+    # Copy files
+    Get-ChildItem $engineDocsFolder -Force | ForEach-Object {
+        Copy-Item $_.FullName (Join-Path $architectureFolder $_.Name) -Recurse -Verbose
+    }
+
+    # Post-processing files
+    $files = Get-ChildItem $architectureFolder -Recurse -Force
+    foreach ($file in $files) {
+        $relativePath = Get-RelativePath $architectureFolder $file.FullName
+
+        # Replacing content
+        if (!$file.PSIsContainer) {
+            $relativePathSlashes = ([regex]::Matches($relativePath, "/" )).count
+            $wrongRelative = "]($("../" * $relativePathSlashes)"
+
+            # Go over all lines in the file
+            $content = Get-Content $file.FullName
+            for ($i = 0; $i -lt $content.Length; $i++) {
+                # Look for links
+                $linkMatches = [regex]::Matches($content[$i], "\[[^\[\]]*?\]\([^\(\)]*?\)")
+                foreach ($match in $linkMatches) {
+                    # Replace relative links to files from the repo with non-relative
+                    $content[$i] = $content[$i].Replace($wrongRelative, "]($($Settings.EngineRepositoryUrl)/")
+
+                    # Replace links to README.md files with index.md
+                    if (!$content[$i].Contains("https://") -and $content[$i].Contains("README")) {
+                        $content[$i] = $content[$i].Replace("README", "index")
+                    }
+                }
+            }
+
+            ## Apply changes to content
+            $content | Set-Content $file.FullName
+        }
+
+        # Rename README.md files to index.md
+        if ($file.ToString().ToLower().Contains("readme.md")) {
+            $renamedLocation = "$($file.FullName | Split-Path)/index.md"
+            Move-Item $file.FullName $renamedLocation
+        }
+    }
+
+    # Copy root index file
+    $sectionIndex = "en/contributors/engine/architecture-index.md"
+    if (Test-Path $sectionIndex) {
+        Copy-Item $sectionIndex "$architectureFolder/index.md"
+    }
+}
+
+function Get-ArchitectureDocsTocChildren {
+
+
+    param ([string]$Directory)
+
+    return @(Get-ChildItem -LiteralPath $Directory -Force |
+        Where-Object { $_.PSIsContainer -or $_.Extension -ieq ".md" } |
+        Where-Object { $_.Name -ine "index.md" -and $_.Name -ine "toc.yml" } |
+        Sort-Object @{ Expression = { if ($_.PSIsContainer) { 0 } else { 1 } } }, Name)
+        }
+
+function Get-ArchitectureDocsTocTitle {
+    param ([System.IO.FileSystemInfo]$Item)
+
+    $title = [System.IO.Path]::GetFileNameWithoutExtension($Item.Name).Replace("-", " ")
+        if ($title.Length -gt 0) {
+            $title = "$($title[0].ToString().ToUpper())$($title.Substring(1))"
+        }
+
+    $titleSource = $Item.FullName
+    if ($Item.PSIsContainer) {
+        $titleSource = Join-Path $Item.FullName "index.md"
+        }
+
+    if (Test-Path $titleSource) {
+        $heading = Select-String -LiteralPath $titleSource -Encoding UTF8 -Pattern '^# (.+?)(?:\s[-\u2014]\s.*)?$' | Select-Object -First 1
+        if ($null -ne $heading) {
+            $title = $heading.Matches[0].Groups[1].Value.Trim().Replace("&amp;", "&")
+            }
+        }
+
+    return $title.Replace("'", "''")
+
+        }
+
+function Add-ArchitectureDocsTocItems {
+    param (
+        [string]$Directory,
+        [string]$RootDirectory,
+        [int]$IndentLevel,
+        [System.Collections.Generic.List[string]]$Lines
+    )
+
+    foreach ($item in Get-ArchitectureDocsTocChildren $Directory) {
+        $indent = "  " * $IndentLevel
+        $title = Get-ArchitectureDocsTocTitle $item
+        $Lines.Add("$indent- name: '$title'")
+        if ($item.PSIsContainer) {
+            $indexPath = Join-Path $item.FullName "index.md"
+            if (Test-Path $indexPath) {
+                $Lines.Add("$indent  href: $(Get-RelativePath $RootDirectory $indexPath)")
+        }
+
+            $children = Get-ArchitectureDocsTocChildren $item.FullName
+            if ($children.Count -gt 0) {
+                $Lines.Add("$indent  items:")
+                Add-ArchitectureDocsTocItems $item.FullName $RootDirectory ($IndentLevel + 1) $Lines
+            }
+        }
+        else {
+            $Lines.Add("$indent  href: $(Get-RelativePath $RootDirectory $item.FullName)")
+        }
+    }
+}
+
+function Generate-ArchitectureDocsToc {
+    $architectureFolder = "en/contributors/engine/architecture"
+    $tocLocation = Join-Path $architectureFolder "toc.yml"
+    Write-Host -ForegroundColor Green "Generating architecture docs toc.yml..."
+    $lines = [System.Collections.Generic.List[string]]::new()
+    Add-ArchitectureDocsTocItems $architectureFolder $architectureFolder 0 $lines
+    [System.IO.File]::WriteAllLines((Join-Path $PSScriptRoot $tocLocation), $lines, [System.Text.UTF8Encoding]::new($false))
+}
 function Copy-ExtraItems {
 
     Write-Host -ForegroundColor Yellow "Copying versions.json into $($Settings.WebDirectory)/"
@@ -458,6 +619,7 @@ if ($BuildAll)
     $isAllLanguages = $true
     $API = -not $SkipApiBuilding
     $ReuseAPI = $false
+    $engineArchitecture = $true
 }
 else {
     $userInput = Get-UserInput
@@ -475,7 +637,7 @@ else {
         [bool]$shouldBuildSelectedLanguage = $true
     }
 
-    # Ask if the user wants to include API
+    # Ask if the user wants to run additional steps
     if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
     {
         if ($SkipApiBuilding)
@@ -497,6 +659,8 @@ else {
                     $ReuseAPI = Ask-UseExistingAPI
                 }
             }
+
+            $engineArchitecture = Ask-ReplaceEngineArchitectureDocs
         }
     } elseif ($isCanceled) {
         Write-Host -ForegroundColor Red "Operation canceled by user."
@@ -526,6 +690,12 @@ if ($ReuseAPI)
     }
 } else {
     Remove-APIDoc
+}
+
+# Engine architecture docs
+if ($engineArchitecture) {
+    Copy-ArchitectureDocs
+    Generate-ArchitectureDocsToc
 }
 
 Write-Host -ForegroundColor Green "Generating documentation..."

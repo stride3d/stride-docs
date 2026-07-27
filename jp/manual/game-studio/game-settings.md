@@ -159,7 +159,7 @@ Graphics Compositor を設定するには:
 
 1. ［GameSettings］アセットを選択し、［Property grid］の［Overrides］で ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (［Add a new item to the list］) をクリックします。
 
-    ![Select graphics platform](../platforms/media/add-override.png)
+    ![Select graphics platform](media/add-override.png)
 
     オーバーライドが追加されます。
 

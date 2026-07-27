@@ -84,7 +84,7 @@ If you select **GPU** as the display mode, the profiler displays:
 ![GPU profiling](media/fps-gpu.png)
 
 * `Device`: the graphics device (manufacturer's description)
-* `Platform`: the currently used backend (eg DirectX, OpenGL, Vulkan, etc)
+* `Platform`: the currently used backend (Direct3D or Vulkan)
 * `Profile`: the feature level for your game, set in **Game Settings > Rendering** (see [Game settings](../files-and-folders/game-settings/configurations.md#rendering))
 * `Resolution`: the game resolution
 * `Drawn triangles`: the number of triangles drawn per frame
@@ -158,7 +158,7 @@ Instead of using the Stride Game Profiler, you can use external profiling tools 
 
 Visual Studio has powerful in-built profiling tools that can identify common performance issues.
 
-1. In Visual Studio, open your project solution (`.sln`) file.
+1. In Visual Studio, open your project solution (`.slnx`/`.sln`) file.
 
 2. To open the profiler, press **Alt + F2**, or in the task bar click **Analyze > Performance Profiler**.
 

@@ -25,11 +25,3 @@ Learn how to do source debugging.
 
 ## [Visual studio plugin](visual-studio-plugin.md)
 Learn about the Visual studio plugin for shader development.
-
-## Architecture 🧬
-
-### [Build details](architecture/build-details.md)
-Details on the building process of the Stride engine.
-
-### [Dependency graph](architecture/dependency-graph.md)
-A graphical overview of Stride's Assemblies, NameSpaces and Core methods.

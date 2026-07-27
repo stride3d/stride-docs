@@ -3,7 +3,8 @@
 ## Project Examples
 
 - [Stride in Ultralight Blazor](https://github.com/lionfire/LionFire.Stride.Ultralight) - Embeds Stride rendering inside an Ultralight-powered Blazor desktop app
-- [Stride in WinForms](https://github.com/windpiper/-StrideGameNet5WinFormsDemo) - Demo project running a Stride game inside a .NET 5 WinForms window
+- [Stride in WinForms](https://github.com/windperson/-StrideGameNet5WinFormsDemo) - Demo project running a Stride game inside a .NET 5 WinForms window
+- [Stride in Windows Forms and WPF](https://github.com/luca-domenichini/StrideEmbedding) - Stride Game Engine embedding in .NET 8 Windows Forms and WPF
 
 ## Code Snippets
 

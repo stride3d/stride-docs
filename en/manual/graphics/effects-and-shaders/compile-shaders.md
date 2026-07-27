@@ -8,9 +8,7 @@ Stride converts Stride shaders (`sdsl` and `.sdfx` files) into the shader langua
 | Platform | Shader language |
 |----------|-----------------|
 | Direct3D | HLSL            |
-| OpenGL   | GLSL            |
 | Vulkan   | SPIR-V          |
-| iOS      | OpenGL ES       |
 
 Stride can convert the shaders at runtime (when the game is running) or at build time (when the editor builds the game assets). When Stride generates shaders at runtime, rendering stops until the shader is compiled. This is usually something you want to avoid in your release build — especially on mobile platforms, which have less CPU, so the pause can be more noticable.
 

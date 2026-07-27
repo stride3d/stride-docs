@@ -6,19 +6,19 @@ This article highlights most important concepts that are used in the engine.
 
 ## Scenes
 
-A scene is a collection of entities that can be loaded and unloaded on demand. Most often, scenes contain different levels of a game or menus.
+A scene is a collection of entities that can be loaded and unloaded on demand. Most often, they contain different levels of a game or menus.
 
-In Stride, Scenes can contain sub-scenes that can be loaded and unloaded on demand.
+In Stride, scenes can contain sub-scenes that can be managed separately from each other.
 
 ![An image showing a scene structure with multiple subscenes containing entities.](media/scene-nesting.webp)
 
 ## Entities
 
-Entities represent different objects in a scene, like the player, enemies, walls, etc. These entities contain components that dictate how they behave.
+Entities represent different objects in a scene, like the player, enemies, walls, etc. They contain components that dictate how they look and behave.
 
 ## Components
 
-Components dictate how entities which they are attached to behave. For example: a player movement component that makes an entity move, when keyboard buttons are pressed.
+Components are customizable pieces of code that can be added to entities in order to bring new functionality to them. For example: a player movement component that makes an entity move, when keyboard buttons are pressed.
 
 In code, a component is a class that inherits [`StartupScript`](xref:Stride.Engine.StartupScript), [`SyncScript`](xref:Stride.Engine.SyncScript) or [`AsyncScript`](xref:Stride.Engine.AsyncScript).
 
@@ -58,7 +58,7 @@ Assets do not contain resource data. Instead, they reference a resource. For exa
 A Stride project is separated into multiple [project packages](../files-and-folders/project-packages/index.md), which contain their own code, assets and resources.
 
 For example, a new project consists of:
-* **MyGame** - contains content for the game.
+* **MyGame.Game** - contains content for the game.
 * **MyGame.NameOfPlatform** (such as MyGame.Windows) - contains content specific to the version of the game for a specific platform (like the window icon).
 
 For more information, read [Project structure](../files-and-folders/project-structure.md).

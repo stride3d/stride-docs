@@ -33,7 +33,7 @@ Unity® and Stride use mostly common terms, with a few differences:
 
 Like Unity®, Stride projects are stored in a directory that contains:
 
-* The project `.sln` solution file, which you can open with Game Studio or any IDE such as Visual Studio
+* The project `.slnx` solution file, which you can open with Game Studio or any IDE such as Visual Studio
 * A **MyGame.Game** folder with project source files, dependencies, resources, configurations, and binaries 
 
 ![Package folder structure](../files-and-folders/media/file-structure.webp)
@@ -612,7 +612,7 @@ If you want your script to be a startup or asynchronous, use the corresponding s
 
 After you create a script, you may have to reload the assemblies manually. To do this, click **Reload assemblies** in the Game Studio toolbar.
 
-![Reload assemblies](../platforms/media/reload-assemblies.png)
+![Reload assemblies](media/reload-assemblies.png)
 
 ### Add scripts to entities
 
