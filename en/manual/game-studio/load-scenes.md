@@ -32,7 +32,7 @@ myChildScene1.Add(myChildScene2);
 
 >To include a scene in the build, in the **Asset View**, right-click the scene asset and select **Include in build as root asset**.
 
->For more information about including assets in the build, see [Manage assets](manage-assets.md).
+>For more information about including assets in the build, see [Asset compilation](../assets/asset-compilation.md).
 
 For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
 
