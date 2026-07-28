@@ -12,7 +12,7 @@ Filters allow you to toggle visibility of certain assets based on some criteria 
 
 TODO: VIDEO MAYBE
 
-You can add tags using the **Add a filter...** field at the top of the toolbar.
+You can add filters using the **Add a filter...** field at the top of the toolbar.
 
 TODO: IMAGE
 
@@ -20,6 +20,6 @@ TODO: IMAGE
 * **tag:** - filters assets based on their tag.
 * **type:** - filters assets based on their type.
 
-Tags can be toggled temporarily by clicking on them.
+Filters can be toggled by clicking on them.
 
 TODO: IMAGE

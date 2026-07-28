@@ -157,23 +157,8 @@ items:
             href: game-studio/dedicated-editors/ui-editor/index.md
           - name: Graphics Compositor editor
             href: game-studio/dedicated-editors/graphics-compositor-editor/index.md
-      - name: Prefabs
-        href: game-studio/prefabs/index.md
-        items:
-          - name: Create a prefab
-            href: game-studio/prefabs/create-a-prefab.md
-          - name: Use prefabs
-            href: game-studio/prefabs/use-prefabs.md
-          - name: Edit prefabs
-            href: game-studio/prefabs/edit-prefabs.md
-          - name: Nested prefabs
-            href: game-studio/prefabs/nested-prefabs.md
-          - name: Override prefab properties
-            href: game-studio/prefabs/override-prefab-properties.md
-          - name: Prefab models
-            href: game-studio/prefabs/prefab-models.md
-      - name: World units
-        href: game-studio/world-units.md
+      - name: Settings
+        href: game-studio/settings.md
 
   - name: Graphics
     href: graphics/index.md

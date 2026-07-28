@@ -6,9 +6,17 @@ Some assets may also have their own [dedicated editor](dedicated-editors/index.m
 
 ## Default layout
 
+The default layout contains all built-in panels, with some being hidden behind tabs.
+
 TODO: IMAGE
 
 ## Changing the layout
+
+You can rearrange all panels in Game Studio by grabbing their titlebar or tab and dragging. It works similarly to **Visual Studio**.
+
+TODO: IMAGE
+
+Panels can be dragged out into new windows, allowing you to take advantage of multi-monitor setups.
 
 ## Resetting the layout
 
@@ -18,4 +26,14 @@ TODO: IMAGE
 
 ## Tabs
 
+Tabs allow you to keep multiple panels in the same space and switch between them on demand.
+
+TODO: IMAGE
+
+You can create tabs by dragging a panel onto the square icon of another panel.
+
+TODO: IMAGE
+
 ## Pinning panels
+
+Pinned panels stay hidden, until you click on them. You can enable pinning by clicking the **📌 pin icon** next to the panel title.

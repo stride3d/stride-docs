@@ -4,9 +4,9 @@ The **entity tree** shows the structure of a scene in a tree-like structure.
 
 TODO: IMAGE
 
-You can rearrange elements using drag & drop.
+You can use it to rearrange elements using drag & drop.
 
-TODO: VIDEO
+TODO: IMAGE
 
 ## Expand or collapse all
 

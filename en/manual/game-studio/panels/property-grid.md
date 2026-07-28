@@ -1,6 +1,6 @@
 # Property grid
 
-The **Property grid** is an essential tool when working on a game. It shows a list of properties of the selected asset, entity or any other object.
+The **Property grid** is an essential tool when working on a game. It shows a list of properties of the selected asset, entity or any other item that exposes modifiable values.
 
 TODO: IMAGE
 
