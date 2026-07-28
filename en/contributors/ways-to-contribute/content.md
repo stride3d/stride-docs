@@ -17,7 +17,7 @@ For more information, visit our [📖 Contribute to the documentation](../docume
 
 The Stride website is the landing place for all new users that would like to learn more about the engine. It's important to keep it functional and up-to-date, as to not make a bad first impression.
 
-The website is built using [11ty](https://www.11ty.dev/) and [bootstrap](https://getbootstrap.com/). We keep our dependencies as minimal as possible to make it easier for other people to submit their own changes.
+The website is built using [11ty](https://www.11ty.dev/) and [Bootstrap](https://getbootstrap.com/). We keep our dependencies as minimal as possible to make it easier for other people to submit their own changes.
 
 For more information, visit our [🌐️ Contribute to the website](../website/index.md) section, which contains resources on how build the website, create new content and more.
 

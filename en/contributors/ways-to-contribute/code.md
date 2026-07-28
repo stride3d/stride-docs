@@ -18,8 +18,8 @@ For more information on how to get assigned to a project, how to fulfil a task a
 
 ## Important resources
 
-* **[🛠️ Contribute to the engine](../engine/index.md)** - contains all resources for contributing to the engine
-* **[🛠️ Contribute to the engine — 🏗️ Architecture](../engine/architecture/index.md)** - documentation related to the project architecture. It is also available in the [engine's repository](https://github.com/stride3d/stride/tree/master/docs) 
+* [🛠️ Contribute to the engine](../engine/index.md) - contains all resources for contributing to the engine
+* [🛠️ Contribute to the engine — 🏗️ Architecture](../engine/architecture/index.md) - documentation related to the project architecture. It is also available in the [engine's repository](https://github.com/stride3d/stride/tree/master/docs) 
 
 ## Community toolkit
 
