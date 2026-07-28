@@ -44,7 +44,7 @@ stride
 | Command | Description |
 | :-- | :-- |
 | `stride sdk` | Manage installed Stride versions (list, available, install, uninstall, update). For more information, visit the [Manage versions](#manage-versions) section. |
-| `stride new` | Create a project from an installed Stride version's templates. For more information, read [Create a project — Create a project with Stride CLI](create-a-project.md#create-a-project-with-stride-cli). |
+| `stride new` | Create a project from an installed Stride version's templates. For more information, visit the [Create a new project](#create-a-new-project) section. |
 | `stride upgrade` | Upgrade a project to a newer installed Stride version. For more information, read [Update Stride — Updating your project with Stride CLI](../install-and-update/update-stride.md#updating-your-project-with-stride-cli). |
 | `stride studio` | Open Game Studio. |
 | `stride self` | Manage the Stride CLI itself. |
@@ -69,7 +69,9 @@ dotnet run --project ProjectX.Windows # Build and run the project
 stride studio # Open Game Studio
 ```
 
-For more information, visit [Create a project — Create a project with Stride CLI](create-a-project.md#create-a-project-with-stride-cli).
+[!INCLUDE [cli-new-project-parameters](../../includes/cli-new-project-parameters.md)]
+
+For more detailed instructions, visit [Create a project — Create a project with Stride CLI](create-a-project.md#create-a-project-with-stride-cli).
 
 ### Manage versions
 
