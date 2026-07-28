@@ -43,8 +43,8 @@ stride
 
 | Command | Description |
 | :-- | :-- |
-| `stride sdk` | Manage installed Stride versions (list, available, install, uninstall, update). For more information, read [Manage versions — Managing versions with Stride CLI](../install-and-update/manage-versions.md#managing-versions-with-stride-cli). |
-| `stride new` | Create a project from an installed Stride version's templates. For more information, read [Create a project — Create a project with Stride CLI](create-a-project.md#create-a-project-with-stride-cli). |
+| `stride sdk` | Manage installed Stride versions (list, available, install, uninstall, update). For more information, visit the [Manage versions](#manage-versions) section. |
+| `stride new` | Create a project from an installed Stride version's templates. For more information, visit the [Create a new project](#create-a-new-project) section. |
 | `stride upgrade` | Upgrade a project to a newer installed Stride version. For more information, read [Update Stride — Updating your project with Stride CLI](../install-and-update/update-stride.md#updating-your-project-with-stride-cli). |
 | `stride studio` | Open Game Studio. |
 | `stride self` | Manage the Stride CLI itself. |
@@ -58,7 +58,9 @@ For more information about how to use a given command, use the `--help` flag. Fo
 stride sdk --help
 ```
 
-## Example usage
+### Create a new project
+
+Here's an example on how to create a new project on the latest version of the engine using the CLI.
 
 ```bash
 stride sdk install # Install the latest version
@@ -66,6 +68,28 @@ stride new game -n ProjectX && cd ProjectX # Create a new project and enter it's
 dotnet run --project ProjectX.Windows # Build and run the project
 stride studio # Open Game Studio
 ```
+
+[!INCLUDE [cli-new-project-parameters](../../includes/cli-new-project-parameters.md)]
+
+For more detailed instructions, visit [Create a project — Create a project with Stride CLI](create-a-project.md#create-a-project-with-stride-cli).
+
+### Manage versions
+
+As mentioned previously, Stride CLI let's you do everything you could do with the launcher directly through the command line.
+
+[!INCLUDE [cli-manage-versions-command](../../includes/cli-manage-versions-commands.md)]
+
+### Upgrade project to a newer version
+
+The CLI can upgrade projects similarly to Game Studio. On top of changing the engine version, it will use additional utilities to modify assets and code, to ensure everything works properly.
+
+```bash
+stride upgrade # Upgrade the project to the latest version
+stride upgrade --prerelease # Consider beta versions
+stride upgrade 4.3 # Upgrade the project to 4.3
+```
+
+For more information visit [Update Stride — Updating your project with Stride CLI](../install-and-update/update-stride.md#updating-your-project-with-stride-cli).
 
 ## See also
 

@@ -81,6 +81,10 @@ The Stride CLI tool provides a way of creating new projects without the need for
     stride studio ./ProjectNameHere
     ````
 
+### Template parameters
+
+[!INCLUDE [cli-new-project-parameters](../../includes/cli-new-project-parameters.md)]
+
 ## Create a project with dotnet templates
 
 An alternative way of creating a project from the command line without the need for Stride CLI is to use **dotnet templates**.
@@ -110,32 +114,5 @@ An alternative way of creating a project from the command line without the need 
 
 4. Open **Game Studio** manually.
 
-## Command line template parameters
-
-All Stride templates can take additional parameters to change how they are created. Here's a list of the most commonly used ones:
-
-| Parameter | Values | Description |
-| :-- | :-- | :-- |
-| `-n` | text | Name of the project. |
-| `--platform` | `host` (the current os), `window`, `linux`, `macos`, `android`, `ios` | Platform(s) the project should target, separated by the `|` character. |
-| `--HDR` | `true`, `false` | Determines if the project uses HDR (required graphics profile >= 10.0). |
-| `--graphics-profile` | `9.0`, `10.0`, `11.0` | The graphics profile to use. This can be changed later. |
-| `--orientation` | `Default`, `LandscapeLeft`, `LandscapeRight`, `Portrait` | The game's orientation on mobile devices. This can be changed later. |
-
-For a list of all available parameters in a template, use the `--help` flag.
-
-Example command:
-
-### [Powershell (Windows)](#tab/powershell)
-
-```powershell
-stride new game -n ProjectX --HDR true --platform windows`|linux
-```
-
-### [Bash (Linux)](#tab/bash)
-
-```bash
-stride new game -n ProjectX --HDR true --platform windows\|linux
-```
-
----
+> [!WARNING]
+> Due to their size, most examples and templates are only updated with minor and major releases. This means that **you will have to upgrade them manually to ensure they are on the latest version**. This is automatically handled when opening the project via the launcher.
