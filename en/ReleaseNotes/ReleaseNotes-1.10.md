@@ -1,4 +1,3 @@
-
 # Xenko 1.10 release notes
 
 ## Highlights
@@ -43,7 +42,7 @@ Release date 2017/3/9
 * Asset compilation should have better startup time and be faster when spawning sub-processes (used by FBX)
 * FBX import for meshes with lots of triangles was extremely slow due to unoptimized access to edge data
 * FBX asset compilation would sometimes fail because the data limit on WCF was too low
-* Removed unecessary hashing of assemblies when building assets
+* Removed unnecessary hashing of assemblies when building assets
 * Assets (YAML) now supports multiline strings properly
 
 ##### Game Studio
@@ -94,7 +93,7 @@ Release date 2017/3/9
 * Assets that contain multiple identifiable objects with the same `Id` now go through a fixup pass at load to re-generate unique ids
 * Make sure we generate new Ids for such objects after manipulations such as copy/pasting, duplicating, etc
 * When a property of an asset was overridden (from the archetype or from a prefab) to a value equivalent to the default value of the property, the override information was lost after reloading
-* The deserialization of some types from an asset file could fail due to impropert type and assembly resolving
+* The deserialization of some types from an asset file could fail due to improper type and assembly resolving
 * Animations wouldn't import when the skeleton used for the animation had missing or extra bones
 * Some texture compression pairs which failed before now attempt a two-step conversion to create the target output format
 * FBX importer now ignores empty string names during mesh importing

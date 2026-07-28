@@ -223,7 +223,7 @@ Like Unity®, Stride supports file formats including:
 | Fonts                         | `.ttf`, `.otf`                                                                   |
 | Video                         | `.mp4`                                                                           |
 
-For more information about assets, see [Assets](../game-studio/assets.md).
+For more information about assets, see [Assets](../assets/index.md).
 
 ## Prefabs
 
@@ -255,7 +255,7 @@ Archetype
         Derived asset
 ```
 
-For more information about archetypes, see [Archetypes](../game-studio/archetypes.md).
+For more information about archetypes, see [Archetypes](../assets/archetypes.md).
 
 ## Object lifetime
 

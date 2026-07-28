@@ -1,12 +1,10 @@
-# Stride 4.4 Release Notes
+# Stride 4.4 release notes
 
 Stride 4.4 is one of the largest engine updates in years, with roughly **2,400 commits** since 4.3.
 
 The theme of this release is **modernization and reach**: much more stable **Vulkan and Direct3D 12** backends,
 full platform coverage across **Windows, Linux, macOS, Android and iOS** (all continuously tested on CI),
 an improved shader compiler, and a command-line workflow as an alternative to the Game Studio.
-
----
 
 ## ✨ Highlights
 
@@ -19,8 +17,6 @@ Stride 4.4 widens both where you can *build* games and where they *run*.
 **Run everywhere:** non-Windows platforms were brought back into shape, while the test suite for them was expanded to ensure they are kept that way.
 
 ![A Stride sample running on a physical iPhone](media/ReleaseNotes-4.4/ios.jpg)
-
----
 
 ### ⌨️ A command-line workflow: the `stride` CLI + `dotnet new` templates
 
@@ -52,8 +48,6 @@ dotnet new install Stride.Templates
 dotnet new stride-game -n MyGame
 ```
 
----
-
 ### 🎮 Vulkan & Direct3D 12
 
 Both backends got a big **overhaul and stability pass** this cycle and are in much better shape.
@@ -72,8 +66,6 @@ Game Studio itself can render with a chosen backend via **Settings → Environme
 And each Windows game project can select its own **Graphics API** from the package build settings in the property grid:
 
 ![Selecting a Windows project's graphics API from the property grid](media/ReleaseNotes-4.4/game-graphics-api-selector.png)
-
----
 
 ### 🎨 A brand-new SDSL shader compiler
 
@@ -99,13 +91,9 @@ What this means for you:
 
 *Huge thanks to **[Youness Kafia](https://github.com/ykafia)**, whose early prototyping and experimentation laid the foundation for the new SDSL pipeline.*
 
----
-
 ### ⚡ NativeAOT & Trimming Support
 
 The engine is now **NativeAOT and trimming-friendly**. This unlocks smaller, faster-starting, self-contained game builds.
-
----
 
 ## 🛠 Engine & Graphics
 
@@ -114,16 +102,12 @@ The engine is now **NativeAOT and trimming-friendly**. This unlocks smaller, fas
 - **Fonts:** upgraded to **FreeType 2.13**.
 - **Model importing:** upgraded to **Assimp 6**.
 
----
-
 ## 🧰 Build, Tooling & Project System
 
 - **Much faster asset builds.** Warm asset compiles drop by around **40%** for a typical game, and up to **10×** for Stride's own tests, thanks to a new asset-build cache.
 - **`.slnx` is the new default solution format** for projects created by Stride. Existing `.sln` solutions still open and save normally.
 - **Per-package asset URLs & namespacing.** Assets now live under a rooted, per-package path (e.g. `/MyGame/UI/Title`), so plugins and libraries can ship assets without name collisions. Games stay bare by default and opt in via `StrideAssetNamespace`, so existing projects keep working unchanged.
 - **Typed asset URL constants.** Projects now generate an `Assets` class of strongly-typed constants (e.g. `Assets.Scenes.MainScene`), so you can reference content by an IDE-completed symbol instead of a magic string. Renames then become compile errors instead of a runtime "content not found".
-
----
 
 ## 🧪 Quality & CI
 
@@ -148,8 +132,6 @@ promote the ones you accept, and even pull results **directly from any CI run** 
 
 ![CompareGold reviewing image differences and promoting gold images](media/ReleaseNotes-4.4/compare-gold.png)
 
----
-
 ## ⚙️ Physics Character
 
 While our integration of the Bepu physics engine is definitely mature enough by now,
@@ -163,46 +145,58 @@ the `CharacterComponent` we introduced was not as well put together as it ought 
 We looked at Bepu's own character example to solve these issues; unfortunately, we could not avoid introducing a fair amount of breaking changes.
 Fortunately, we added a couple of sections in [Characters](../manual/physics/characters.md) to describe the new features and properties.
 
----
-
-### Breaking changes
+## 💥 Breaking changes
 
 - **Custom shaders:** the SDSL compiler was rewritten; you might want to review how your custom shaders render. If you hit a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 - **Direct3D 12** now requires **Enhanced Barriers**; the legacy barrier path has been removed.
 - **Convex hulls**: The library we use to generate convex hulls, V-HACD, was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters; you may want to validate them for accuracy.
 - **Bepu `CharacterController` was reworked**: existing character setups will behave differently and need adjustment. See [Physics Character](#-physics-character).
 
----
-
 ## 🙏 Contributors
 
-Thanks to everyone who contributed to Stride 4.4:
+Thanks to everyone who contributed to this release:
 
-- Youness Kafia (ykafia)
-- Nicolas Musset (Kryptos-FR / Color-Rise)
-- Mario Guerra
-- Johan Gustafsson
-- Eideren
-- Vaclav Elias
-- Virgile Bello (xen2)
-- Jakub Ławreszuk
-- Feralnex (Tomasz Czech)
-- Nicogo (Nicolas Gomez)
-- Doprez
-- ds5678
-- w0wca7a
-- Basewq
-- D4rkDuck
-- Elias Holzer
-- Peter Laske
-- Will Bentz
-- Henrik Gedionsen
-- Kevin Norris
-- Luca Domenichini
-- MiyaGrace
-- MsEpsilon
-- Rafael Stahl
-- Redwarx008
-- Steve Berdy
+- [Acissathar](https://github.com/Acissathar)
+- [allcontributors[bot]](https://github.com/apps/allcontributors)
+- [azeno](https://github.com/azeno)
+- [Basewq](https://github.com/Basewq)
+- [D4rkDuck](https://github.com/D4rkDuck)
+- [Doprez](https://github.com/Doprez)
+- [ds5678](https://github.com/ds5678)
+- [Eideren](https://github.com/Eideren)
+- [Ethereal77](https://github.com/Ethereal77)
+- [Feralnex](https://github.com/Feralnex)
+- [Henr1k80](https://github.com/Henr1k80)
+- [JeroMiya](https://github.com/JeroMiya)
+- [Jklawreszuk](https://github.com/Jklawreszuk)
+- [johang88](https://github.com/johang88)
+- [kjnorris1205](https://github.com/kjnorris1205)
+- [Kryptos-FR](https://github.com/Kryptos-FR)
+- [laske185](https://github.com/laske185)
+- [luca-domenichini](https://github.com/luca-domenichini)
+- [MsEpsilon](https://github.com/MsEpsilon)
+- [Nicogo1705](https://github.com/Nicogo1705)
+- [rafzi](https://github.com/rafzi)
+- [Redwarx008](https://github.com/Redwarx008)
+- [sasvdw](https://github.com/sasvdw)
+- [Spajker7](https://github.com/Spajker7)
+- [steveberdy](https://github.com/steveberdy)
+- [VaclavElias](https://github.com/VaclavElias)
+- [w0wca7a](https://github.com/w0wca7a)
+- [xen2](https://github.com/xen2)
+- [ykafia](https://github.com/ykafia)
 
-…and everyone who reported issues, tested builds and helped on the community channels. 💙
+Welcome to our new contributors, who made their first contribution to the [stride3d/stride](https://github.com/stride3d/stride) repository in this release:
+
+- [JeroMiya](https://github.com/JeroMiya) made their first contribution in https://github.com/stride3d/stride/pull/3022
+- [D4rkDuck](https://github.com/D4rkDuck) made their first contribution in https://github.com/stride3d/stride/pull/3011
+- [ds5678](https://github.com/ds5678) made their first contribution in https://github.com/stride3d/stride/pull/3075
+- [rafzi](https://github.com/rafzi) made their first contribution in https://github.com/stride3d/stride/pull/3087
+- [MsEpsilon](https://github.com/MsEpsilon) made their first contribution in https://github.com/stride3d/stride/pull/3098
+- [Redwarx008](https://github.com/Redwarx008) made their first contribution in https://github.com/stride3d/stride/pull/3093
+- [kjnorris1205](https://github.com/kjnorris1205) made their first contribution in https://github.com/stride3d/stride/pull/3118
+- [luca-domenichini](https://github.com/luca-domenichini) made their first contribution in https://github.com/stride3d/stride/pull/3089
+- [steveberdy](https://github.com/steveberdy) made their first contribution in https://github.com/stride3d/stride/pull/3079
+- [Henr1k80](https://github.com/Henr1k80) made their first contribution in https://github.com/stride3d/stride/pull/3156
+
+..and everyone who reported issues, tested builds and helped on the community channels. 💙

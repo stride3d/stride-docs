@@ -1,4 +1,4 @@
-# Stride 4.0 Release notes
+# Stride 4.0 release notes
 
 February 1st, 2021
 
@@ -32,7 +32,7 @@ Here's the original [forum post](https://forums.stride3d.net/t/voxel-gi-implemen
 
 Stride editor and toolchain is now running with .NET 5! Runtime has been working with .NET Core for a few versions already.
 
-This allows us to have scripts and custom assets in a project targetting `.NET Standard 2.1` or `.NET 5`.
+This allows us to have scripts and custom assets in a project targeting `.NET Standard 2.1` or `.NET 5`.
 
 If you have scripts or custom assets in a .NET Framework project rather than a .NET Standard project, you can still choose between `.NET 5` and `.NET Framework` within the launcher:
 

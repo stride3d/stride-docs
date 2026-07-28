@@ -39,7 +39,7 @@ The particle engine supports many features out of the box:
 
 #### Modular system
 
-All aspects of particle systems are broken down into individuals modules like spawners, initializers and updaters, and each of these modules is easily tweakable and customizable. Check out the samples and the Xenko documentation for a detailed walk-through.
+All aspects of particle systems are broken down into individual modules like spawners, initializers and updaters, and each of these modules is easily tweakable and customizable. Check out the samples and the Xenko documentation for a detailed walk-through.
 
 #### Curve Editor
 
@@ -106,7 +106,7 @@ Release date: 2016/06/09
 ### Enhancements
 
 #### Game Studio
-- Don't wait for editor initialization before showing the editor window. This should prevent editor layouts from suddendly switching without notice, especially when opening a big scene.
+- Don't wait for editor initialization before showing the editor window. This should prevent editor layouts from suddenly switching without notice, especially when opening a big scene.
 - Save the list of opened editors more often (everytime a new editor is opened). Before it was only saved when editing the Game Studio properly and thus the list would not be saved when a crash occurred.
 
 ### Issues fixed
@@ -125,7 +125,7 @@ Release date: 2016/06/09
 - Added missing XenkoDefaultFont root asset in default package, this makes the profiler system work again out of the box.
 
 #### Game Studio
-- Fix a crash that could occurs when loading a project that contains broken paths to resource files
+- Fix a crash that could occur when loading a project that contains broken paths to resource files
 - Prevent the Game Studio process to keep running when a fatal problem occurs during the loading
 
 #### Particles
@@ -211,7 +211,7 @@ Release date: 2016/04/27
 
 - Some manipulations with a multi-selection of entities are now faster.
 - Improve prefab thumbnails
-- Display an helper message in the curve editor on how to add a keyframe when the curve is empty
+- Display a helper message in the curve editor on how to add a keyframe when the curve is empty
 - Improved crash report so that we have more information about previous exceptions when GPU fails
 
 #### Android
