@@ -77,12 +77,6 @@ For more detailed instructions, visit [Create a project — Create a project wit
 
 As mentioned previously, Stride CLI let's you do everything you could do with the launcher directly through the command line.
 
-```bash
-stride sdk install # Install the latest version
-stride sdk update # Update all installed versions to the latest patch.
-stride sdk uninstall 4.3 # Unintall Stride 4.3
-```
-
 [!INCLUDE [cli-manage-versions-command](../../includes/cli-manage-versions-commands.md)]
 
 ### Upgrade project to a newer version

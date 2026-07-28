@@ -1,3 +1,10 @@
+```bash
+stride sdk available --prerelease # List all available versions, including betas
+stride sdk install # Install the latest version
+stride sdk update # Update all installed versions to the latest patch.
+stride sdk uninstall 4.3 # Unintall Stride 4.3
+```
+
 | Command | Description |
 | :-- | :-- |
 | `stride sdk install` | Install the latest version of the engine or the resolved project's version located in the current directory. |

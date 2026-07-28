@@ -41,10 +41,4 @@ To remove a specific installed version of the engine:
 
 The **Stride CLI** let's you install, uninstall and update versions of the engine directly through the command line. For steps on how to install it, read [Stride CLI](../get-started/stride-cli.md).
 
-```bash
-stride sdk install # Install the latest version
-stride sdk update # Update all installed versions to the latest patch.
-stride sdk uninstall 4.3 # Unintall Stride 4.3
-```
-
 [!INCLUDE [cli-manage-versions-command](../../includes/cli-manage-versions-commands.md)]
