@@ -8,6 +8,8 @@ a new CLI tool providing an alternative to some of Game Studio's functions.
 
 ## ✨ Highlights
 
+Here are a few of the stand-out changes:
+
 ### 📱 Platform support
 
 Stride 4.4 widens both where you can *build* games and where they *run*.
