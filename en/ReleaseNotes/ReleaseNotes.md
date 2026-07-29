@@ -26,7 +26,7 @@ You can now create, build and run Stride games entirely from the command line, w
 
 ```bash
 dotnet tool install -g stride.cli      # install the Stride CLI
-stride sdk install                     # install the latest Stride
+stride sdk install                     # install the latest version of Stride
 stride new topdownrpg && cd TopDownRPG # create a project from a template
 stride studio                          # open it in Game Studio
 ```
