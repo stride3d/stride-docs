@@ -20,3 +20,22 @@ TODO: IMAGE
 
 > [!NOTE]
 > This does not impact how the scenes are loaded at runtime.
+
+## Sub-scenes at runtime
+
+In order to use sub-scenes while the game is running, you will have to **manually load and add them**.
+
+```csharp
+public class Example : StartupScript
+{
+    public UrlReference<Scene> SceneToLoad { get; set; }
+
+    public override void Start()
+    {
+        var scene = Content.Load(SceneToLoad);
+        Entity.Scene.Children.Add(scene);
+    }
+}
+```
+
+For more information on how to load scenes, visit [Scene loading](scene-loading.md).

@@ -21,8 +21,6 @@ public class Example : StartupScript
 
 The above will load a scene specified in `SceneToLoad` and add it as a sub-scene of the scene the entity is attached to.
 
-TODO: VISUZALITAION
-
 ## Unload a scene
 
 To unload a scene, remove it from it's parent and unload it using `Content.Unload` to properly release it from memory.

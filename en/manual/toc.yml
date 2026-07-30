@@ -558,6 +558,8 @@ items:
     items:
       - name: Create a scene
         href: scenes/create-a-scene.md
+      - name: Edit a scene
+        href: scenes/edit-a-scene.md
       - name: Sub-scenes
         href: scenes/sub-scenes.md
       - name: Structuring scenes
