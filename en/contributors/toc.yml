@@ -92,6 +92,8 @@ items:
       href: website/eleventy.md
     - name: Deployment
       href: website/deployment-azure.md
+    - name: GitHub Actions
+      href: website/github-actions.md
     - name: Major Release Workflow
       href: website/major-release-workflow.md
     - name: Troubleshooting and FAQ
