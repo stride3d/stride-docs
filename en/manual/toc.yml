@@ -149,8 +149,8 @@ items:
                 href: game-studio/dedicated-editors/scene-editor/entity-tree.md
           - name: Prefab editor
             href: game-studio/dedicated-editors/prefab-editor/index.md
-          - name: Code editor
-            href: game-studio/dedicated-editors/code-editor/index.md
+          - name: Script editor
+            href: game-studio/dedicated-editors/script-editor/index.md
           - name: Sprite editor
             href: game-studio/dedicated-editors/sprite-editor/index.md
           - name: UI editor
