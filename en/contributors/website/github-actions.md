@@ -33,6 +33,27 @@ flowchart LR
 
 `master` is the default branch and the target for pull requests. **Nothing is deployed from `master` automatically.** A deployment happens only when work is merged from `master` into `staging` or `release`, which is what makes those two branches the release control points.
 
+## Who can run these workflows
+
+On the [stride3d/stride-website](https://github.com/stride3d/stride-website) repository, running a workflow requires write access, so in practice **only maintainers can trigger a deployment**. If you don't have write access you can watch the runs, read the logs and download the build artifacts, but the **Run workflow** button won't be available to you.
+
+Opening a pull request doesn't deploy anything either. None of the workflows declare a `pull_request` trigger, so your PR is reviewed from the diff and from whatever preview you provide yourself.
+
+That is where your own fork comes in. All three workflow files are copied along with the fork, but they are not equally usable:
+
+| Workflow | In your fork | What it needs |
+| --- | --- | --- |
+| `stride-website-github.yml` | ✅ Works | One repository setting, then **Run workflow** |
+| `stride-website-release-azure.yml` | ❌ Fails at deploy | Your own Azure Web App, App Service Plan and publish profile secret |
+| `stride-website-staging-azure.yml` | ❌ Fails at deploy | Your own Azure Web App, App Service Plan and publish profile secret |
+
+The Azure workflows reference publish profile secrets that exist only in the Stride repository. In a fork those secrets are empty, so the `build` job still succeeds but the `deploy` job fails with an authentication error. Making them work means standing up your own Azure infrastructure and paying for it, which is described in [Setting up a new Azure Web App](deployment-azure.md#setting-up-a-new-azure-web-app).
+
+> [!TIP]
+> **Deploying to GitHub Pages is by far the easier route** and is what we recommend for showing off a change. It is free, needs no Azure account, and the only setup is switching **Settings** → **Actions** → **General** → **Workflow permissions** to **Read and write permissions** before you run the workflow. Follow [Deployment to GitHub Pages](deployment-azure.md#deployment-to-github-pages) and share the resulting link in your pull request.
+
+Note that GitHub disables Actions on newly forked repositories by default. The first time you open the **Actions** tab in your fork you'll need to confirm that you want to enable them before any **Run workflow** button appears.
+
 ## The shared build
 
 Both Azure workflows run an identical `build` job on `ubuntu-latest`:
