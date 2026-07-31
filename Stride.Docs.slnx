@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/stride-docs-github.yml" />
+    <File Path=".github/workflows/stride-docs-release-azure.yml" />
+    <File Path=".github/workflows/stride-docs-release-fast-track-azure.yml" />
+    <File Path=".github/workflows/stride-docs-staging-azure.yml" />
+    <File Path=".github/workflows/stride-docs-staging-fast-track-azure.yml" />
+    <File Path=".github/workflows/stride-docs-test-build.yml" />
+    <File Path=".github/workflows/stride-docs-wiki.yml" />
+  </Folder>
+  <Project Path="Stride.Docs.csproj" />
+</Solution>
