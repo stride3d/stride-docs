@@ -69,6 +69,8 @@ items:
     href: documentation/docfx.md
   - name: Deployment
     href: documentation/deployment-azure.md
+  - name: GitHub Actions
+    href: documentation/github-actions.md
   - name: Major Release Workflow
     href: documentation/major-release-workflow.md
   - name: Troubleshooting and FAQ
