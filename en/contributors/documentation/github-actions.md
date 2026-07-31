@@ -116,9 +116,6 @@ Every workflow that can be dispatched manually offers the same three inputs:
 
 Both skip options default to `true` because they are the slowest parts of the build. Leave them on for a quick content preview; turn them off when you specifically need to check the API reference or the PDF output.
 
-> [!NOTE]
-> In `stride-docs-github.yml` the branch input is currently declared as `stride-branch` but read as `inputs.strideBranch`, so the value you type is not passed through and the build always uses the default branch of `stride3d/stride`. This only affects the GitHub Pages workflow; the other workflows wire the input through correctly.
-
 ## Azure workflows
 
 The four Azure workflows all deploy to the same Azure Web App, `stride-doc`, and differ in the slot they target and whether they hand the build off through an artifact.
