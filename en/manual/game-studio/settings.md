@@ -2,11 +2,19 @@
 
 Game Studio's settings can be customized by going to **Edit > Settings**.
 
+## Environment
+
+TODO: IMAGE
+
+| Setting | Description |
+| :-- | :-- |
+| Graphics API (Game Studio only) | The Graphics API used by the editor. Takes effect after a restart. |
+
 ## External tools
 
 TODO: IMAGE
 
-This category allows you to customize which external applications are used in Game Studio by default. <- change this
+This category contains settings related to external applications that are used by Game Studio.
 
 | Setting | Description |
 | :-- | :-- |
@@ -18,7 +26,7 @@ This category allows you to customize which external applications are used in Ga
 
 TODO: IMAGE
 
-This section contains settings related to the editor interface and toggles for certain hidden dialogues.
+This category contains settings related to the editor interface and toggles for certain hidden dialogues.
 
 | Setting | Description |
 | :-- | :-- |
@@ -31,13 +39,13 @@ This section contains settings related to the editor interface and toggles for c
 | Default session to load | Path to the solution file to open automatically when Game Studio is started. |
 | Language | The display language of Game Studio. |
 | Reset Game Studio layout | This button will reset the panel layout. |
-| Usage Analytics | When enable, Game Studio will send anonymous analytics. |
+| Usage Analytics | When enabled, Game Studio will send anonymous analytics. |
 
 ## Remote
 
 TODO: IMAGE
 
-This section contains settings for building games for remote machines running different operating systems.
+This category contains settings for building games for remote machines running different operating systems.
 
 ## Scene editor
 
@@ -51,7 +59,7 @@ TODO: IMAGE
 
 TODO: IMAGE
 
-This section allows you to change the keybinds used in the **Scene editor**.
+This category allows you to change the keybinds used in the **Scene editor**.
 
 ### Viewport settings
 
@@ -73,7 +81,7 @@ This category contains settings for the built-in script editor.
 
 | Setting | Description |
 | :-- | :-- |
-| Font size | The font sized used by the code. |
+| Font size | The font size of the code. |
 
 ## Themes
 

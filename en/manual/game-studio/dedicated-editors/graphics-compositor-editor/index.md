@@ -1,6 +1,6 @@
 # Graphics Compositor editor
 
-The Graphics Compositor is one of the most advanced features of Stride, giving you control over every step in the rendering pipeline. Thus, it requires a use of a dedicated editor.
+The **graphics compositor** is one of the most advanced features of Stride, giving you control over every step in the rendering pipeline. Due to this, the **graphics compositor asset** requires a use of a **dedicated editor**.
 
 TODO: IMAGE
 

@@ -1,8 +1,8 @@
 # Layout
 
-Game Studio consists of multiple panels, serving distinct functions. A lot of them react to changes made in other panels. When developing games with Game Studio, it's important to familiarize yourself with them. One of the most important panels are the [Property grid](panels/property-grid.md), [Asset view](panels/asset-view.md) and [Solution explorer](panels/solution-explorer.md).
+Game Studio consists of multiple panels, serving distinct functions. A lot of them react to changes made in others. When developing games with Game Studio, it's important to familiarize yourself with them.
 
-Some assets may also have their own [dedicated editor](dedicated-editors/index.md) for editing them. The most notable example of this are **scenes** and the [scene editor](dedicated-editors/scene-editor/index.md), which is where you will spent the majority of your time while working with Game Studio.
+Additionally, some assets may also have their own [dedicated editor](dedicated-editors/index.md). The most notable example of this are **scenes** and the [scene editor](dedicated-editors/scene-editor/index.md), which is where you will spent the majority of your time while working with Game Studio.
 
 ## Default layout
 
@@ -12,11 +12,13 @@ TODO: IMAGE
 
 ## Changing the layout
 
-You can rearrange all panels in Game Studio by grabbing their titlebar or tab and dragging. It works similarly to **Visual Studio**.
+You can rearrange all panels in Game Studio by grabbing their titlebar or tab and dragging. It works similarly to **Visual Studio**, where panels needs to be dragged onto one of the elements that appear in the middle in order to be docked.
 
 TODO: IMAGE
 
-Panels can be dragged out into new windows, allowing you to take advantage of multi-monitor setups.
+Panels can be dragged out into new windows, allowing you to take advantage of multi-monitor setups or simply having another window to switch between.
+
+TODO: IMAGE OF FLOATING WINDOW
 
 ## Resetting the layout
 
@@ -36,4 +38,4 @@ TODO: IMAGE
 
 ## Pinning panels
 
-Pinned panels stay hidden, until you click on them. You can enable pinning by clicking the **📌 pin icon** next to the panel title.
+Pinned panels stay hidden, until you click on them. You can pin a panel by clicking the **📌 pin icon** next to its title.
