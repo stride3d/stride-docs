@@ -167,6 +167,7 @@ Pushes to `release` and `staging` are ignored when they only touch documentation
 paths-ignore:
   - 'README.md'
   - 'Stride.Docs.sln'
+  - 'Stride.Docs.slnx'
   - 'BuildDocs.ps1'
   - 'wiki/**'
   - .gitignore

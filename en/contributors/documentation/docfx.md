@@ -68,13 +68,13 @@ The folder structure plays a vital role in the documentation generation process,
 - `run.bat`: Batch file to run `BuildDocs.ps1` in interactive mode.
 - `run-fix.bat`: Temporary batch file to run `OldDocsFix.ps1`.
 - `Stride.Docs.csproj`: ASP.NET Core project file.
-- `Stride.Docs.sln`: ASP.NET Core solution file.
+- `Stride.Docs.slnx`: ASP.NET Core solution file.
 - `Stride.Docs.csproj.user`: User-specific ASP.NET Core project file.
 - `versions.json`: Configuration file managing versions of Stride documentation.
 - `web.config`: Configuration file for IIS deployment.
 
 > [!NOTE]
-> This project includes the Visual Studio solution `Stride.Docs.sln`, allowing you to edit the files using the Visual Studio IDE.
+> This project includes the Visual Studio solution `Stride.Docs.slnx`, allowing you to edit the files using the Visual Studio IDE.
 
 ## Layouts
 

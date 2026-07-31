@@ -75,7 +75,7 @@ We've created a PowerShell script [BuildDocs.ps1](https://github.com/stride3d/st
    - Select `[n]` for no API build
 1. 🖥️ If you select `[r]`, the documentation site will open automatically in your browser `http://localhost:8080/en/index.html`
      - If you built the documentation in a language other than English, you'll need to manually change the language in the URL
-1. 💻 Open the project in Visual Studio by opening the `Stride.Docs.sln` solution file, or use the IDE of your choice 
+1. 💻 Open the project in Visual Studio by opening the `Stride.Docs.slnx` solution file, or use the IDE of your choice 
 1. 🔄 After saving the updated file, you will need to rebuild the documentation by running the script again
 1. 😃 Happy coding!
 
