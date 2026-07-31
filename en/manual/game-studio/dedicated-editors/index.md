@@ -6,7 +6,7 @@ TODO: IMAGE OF SCENE EDITOR
 
 The list of assets that have a dedicated editor include:
 
-[!INCLUDE [assets-with-dedicated-editors-list](../../includes/assets-with-dedicated-editors.md)]
+[!INCLUDE [assets-with-dedicated-editors-list](../../../includes/assets-with-dedicated-editors-list.md)]
 
 You can open an asset's dedicated editor by either **double clicking it**, right clicking an selecting **🖉 Edit asset** or selecting it and pressing **Ctrl + Enter**.
 
