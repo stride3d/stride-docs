@@ -15,6 +15,7 @@ on:
     paths-ignore:
       - 'README.md'
       - 'Stride.Docs.sln'
+      - 'Stride.Docs.slnx'
       - 'BuildDocs.ps1'
       - 'wiki/**'
       - .gitignore

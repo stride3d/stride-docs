@@ -84,7 +84,8 @@ The previous step will have added a GitHub Action to your repository, which migh
 - `stride-website-github.yml`: Facilitates manual deployment to GitHub Pages in the forked repository, primarily used for showcasing updates
 - `stride-website-release-azure.yml`: Automates deployment to production upon merging changes into `release` branch, with a manual trigger option also available
 - `stride-website-staging-azure.yml`: Enables automatic deployment to [staging](https://stride-website-staging.azurewebsites.net/) upon merging changes into `staging` branch, along with an option for manual triggering
-- `stride-website-wiki.yml`: Automatically deploys to the GitHub Wiki when changes are pushed to the `wiki` folder in the `master` branch, also includes a manual trigger feature
+
+For a detailed breakdown of the jobs, triggers and secrets these workflows use, see [GitHub Actions](github-actions.md).
 
 ## Deployment to GitHub Pages
 
