@@ -31,7 +31,7 @@ flowchart LR
     GH --> URLG[GitHub Pages site]
 ```
 
-`master` is the default branch and the target for pull requests. **Nothing is deployed from `master` automatically.** A deployment happens only when work is merged from `master` into `staging` or `release`, which is what makes those two branches the release control points.
+`master` is the default branch and the target for pull requests. **Nothing is deployed from `master` automatically.** A deployment happens only when work is merged from `master` into `staging` or `release`, which is what makes those two branches the release control points. Optionally, a maintainer can run any of the workflows manually from the **Actions** tab.
 
 ## Who can run these workflows
 
@@ -50,7 +50,7 @@ That is where your own fork comes in. All three workflow files are copied along 
 The Azure workflows reference publish profile secrets that exist only in the Stride repository. In a fork those secrets are empty, so the `build` job still succeeds but the `deploy` job fails with an authentication error. Making them work means standing up your own Azure infrastructure and paying for it, which is described in [Setting up a new Azure Web App](deployment-azure.md#setting-up-a-new-azure-web-app).
 
 > [!TIP]
-> **Deploying to GitHub Pages is by far the easier route** and is what we recommend for showing off a change. It is free, needs no Azure account, and the only setup is switching **Settings** → **Actions** → **General** → **Workflow permissions** to **Read and write permissions** before you run the workflow. Follow [Deployment to GitHub Pages](deployment-azure.md#deployment-to-github-pages) and share the resulting link in your pull request.
+> **Deploying to GitHub Pages is by far the easier route** and is what we recommend for showing off a change. It is free, needs no Azure account, and the only setup is switching **Settings** → **Actions** → **General** → **Workflow permissions** to **Read and write permissions** before you run the workflow. Follow [Deployment to GitHub Pages](deployment-azure.md#deployment-to-github-pages) and share the resulting link in your pull request. Optionally, run it locally, using [Installation](installation.md) and share screenshots of the local preview.
 
 Note that GitHub disables Actions on newly forked repositories by default. The first time you open the **Actions** tab in your fork you'll need to confirm that you want to enable them before any **Run workflow** button appears.
 
