@@ -30,4 +30,4 @@ You can import sprite sheets (image files containing sprites) just like any othe
 
 * [Edit sprites](edit-sprites.md)
 * [Use sprites](use-sprites.md)
-* [Assets](../game-studio/assets.md)
+* [Assets](../assets/index.md)

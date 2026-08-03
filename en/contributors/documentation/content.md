@@ -6,7 +6,7 @@ If you want to contribute and update the website, please follow the instructions
 
 Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](installation.md) section.
 
-You can use any text editor to make changes. If you are using **Visual Studio**, you can open `Stride.Docs.sln` solution file in the root of the repository and start making your updates directly from this IDE.
+You can use any text editor to make changes. If you are using **Visual Studio**, you can open `Stride.Docs.slnx` solution file in the root of the repository and start making your updates directly from this IDE.
 
 You are always welcome to [create an issue](https://github.com/stride3d/stride-docs/issues) to discuss your changes before you start working on them. 
 

@@ -40,7 +40,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
     ![Include in build as root asset](media/create-model-from-code-include-in-build-as-root-asset.png)
 
-    This makes sure the asset is available for the script to use at runtime. For more information, see [Manage assets](../game-studio/manage-assets.md).
+    This makes sure the asset is available for the script to use at runtime. For more information, see [Asset compilation](../assets/asset-compilation.md).
 
 ## Create a procedural model
 
@@ -137,7 +137,7 @@ Finally, you need to give the model one or more materials. There are two ways to
 
     ![Include in build as root asset](media/create-model-from-code-include-material-in-build-as-root-asset.png)
 
-    This makes sure the asset is available for the script to use at runtime. For more information, see [Manage assets](../game-studio/manage-assets.md).
+    This makes sure the asset is available for the script to use at runtime. For more information, see the [Use an asset in code](../assets/use-an-asset-in-code.md).
 
 ### Option 2: Create new materials in code
 
