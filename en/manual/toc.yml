@@ -125,12 +125,16 @@ items:
       - name: Panels
         href: game-studio/panels/index.md
         items:
+          - name: Asset errors
+            href: game-studio/panels/asset-errors.md
           - name: Asset preview
             href: game-studio/panels/asset-preview.md
           - name: Asset view
             href: game-studio/panels/asset-view.md
           - name: Edit history
             href: game-studio/panels/edit-history.md
+          - name: Output
+            href: game-studio/panels/output.md
           - name: Property grid
             href: game-studio/panels/property-grid.md
           - name: References
@@ -159,6 +163,8 @@ items:
             href: game-studio/dedicated-editors/graphics-compositor-editor/index.md
       - name: Settings
         href: game-studio/settings.md
+      - name: Themes
+        href: game-studio/themes.md
 
   - name: Graphics
     href: graphics/index.md

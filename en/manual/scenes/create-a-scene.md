@@ -4,7 +4,7 @@ This page outlines how to create a new scene in Stride.
 
 ## Create a scene in Game Studio
 
-1. Select an asset folder in the **Solution explorer**. Typically, this will be the folder located under your main [project package](../files-and-folders/project-packages/index.md) (the one that's not ending with `.Windows` or `.Linux`).
+1. Select an asset folder in the **Solution explorer**. In a standard project, it will be the folder located under your main [project package](../files-and-folders/project-packages/index.md) (the one ending with `.Game`).
 
     TODO: IMAGE
 
@@ -13,14 +13,6 @@ This page outlines how to create a new scene in Stride.
     TODO: IMAGE
 
 3. Name your scene.
-
-## Edit a scene
-
-Scenes are complex assets, meaning they have a dedicated editor, the **scene editor**.
-
-TODO: IMAGE
-
-For more information on how to use it, visit [scene editor](../game-studio/dedicated-editors/scene-editor/index.md).
 
 ## Create a blank scene at runtime
 

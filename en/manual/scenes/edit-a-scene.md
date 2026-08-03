@@ -44,7 +44,7 @@ For more information about other features of the Entity tree, read [Entity tree]
 
 ### Viewport
 
-The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a 2D/3D preview of the scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
+The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a 2D or 3D preview of a scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
 
 TODO: IMAGE
 
@@ -61,7 +61,7 @@ For more information on how to use the viewport, read [Viewport](../game-studio/
 The entity tree supports drag & drop, meaning that you can easily rearrange entities with your mouse.
 
 > [!NOTE]
-> Keep in mind that dropping the selection between two elements will move it between them, while dropping the selection onto an element will move it inside of it.
+> Keep in mind that dropping the selection between two elements will move it between them, while dropping onto an element will move the selection inside of it.
 >
 > TODO: IMAGE
 

@@ -1,4 +1,4 @@
-You can navigate the viewport by zooming and panning the camera. There is also a shortcut that quickly focuses an object, making the camera teleport itself to it.
+You can navigate the viewport by zooming and panning the camera. There is also a shortcut to quickly focus on an object, making the camera teleport itself to it.
 
 | | Key | Description |
 | :-: | :-: | :-- |
