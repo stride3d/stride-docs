@@ -91,7 +91,7 @@ To set the default scene:
     The **Select an asset** window opens.
 2. Select the default scene and click **OK**.
 
-For more information about scenes, see [Scenes](../game-studio/scenes.md).
+For more information about scenes, see [Scenes](../scenes/index.md).
 
 ## Entities vs GameObjects
 
@@ -235,7 +235,7 @@ Just like with Unity®, in Stride, you can add prefabs to other prefabs. These a
 
 For example, imagine you create a *Vehicle* prefab with acceleration, braking, steering, and so on. Then you nest the *Vehicle* prefab inside prefabs of different types of vehicles: a taxi, bus, truck, etc. If you adjust a property in the *Vehicle* prefab, the changes are inherited by all other prefabs. For example, if you increase the Acceleration property in the *Vehicle* prefab, the acceleration property in the taxi, bus, and truck prefabs also increase.
 
-For more information about using prefabs in Stride, see [Prefabs](../game-studio/prefabs/index.md).
+For more information about using prefabs in Stride, see [Prefabs](../scenes/prefabs/index.md).
 
 ## Archetypes
 

@@ -26,4 +26,4 @@ This scene isn't loadable, meaning that it can't be unloaded using the **content
 
 Using empty scenes in code holds no benefit over entities. It can only be useful for replacing the root scene, which isn't the recommended way of structuring your game.
 
-Blank scenes are used by the [splash screen](../game-studio/splash-screen.md) for showing different content before loading the main scene.
+Blank scenes are used by the [splash screen](../files-and-folders/game-settings/splash-screen.md) for showing different content before loading the main scene.

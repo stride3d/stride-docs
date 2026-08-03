@@ -29,7 +29,7 @@
 - Asset URL: The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`. See [Create a model from code](../scripts/create-a-model-from-code.md) and [Create a script](../scripts/create-a-script.md).
 - [Asset compilation](../assets/asset-compilation.md): Compiles assets into runtime-ready formats.
 - [Asset bundles](../assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
-- [Prefab](../game-studio/prefabs/index.md): A reusable entity hierarchy that can be instantiated at design time or runtime.
+- [Prefab](../scenes/prefabs/index.md): A reusable entity hierarchy that can be instantiated at design time or runtime.
 - [Root asset](../assets/asset-compilation.md#root-assets): An asset included in the build so it is available at runtime.
 
 ## Audio terms
@@ -51,26 +51,16 @@
  
 ## Editor terms
 
-- [Add entities](../game-studio/add-entities.md): Create new entities in a scene.
-=======
 - [Archetypes](../assets/archetypes.md): Share default properties across assets.
 - [Asset View](../assets/index.md): Panel used to manage assets in your project.
 - [Create assets](../assets/create-an-asset.md): Create and organize project assets.
 - [Game settings](../files-and-folders/game-settings/index.md): Project-wide defaults such as the graphics compositor and rendering options.
 - [Graphics compositor editor](../graphics/graphics-compositor/index.md): Node-based editor to configure the rendering pipeline.
-- [Manage entities](../game-studio/manage-entities.md): Select, group, and organize entities.
-- [Manage scenes](../game-studio/manage-scenes.md): Open, set defaults, and load/unload scenes.
-- [Navigate the Scene Editor](../game-studio/navigate-in-the-scene-editor.md): Viewport navigation and controls.
-- [Property Grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
-- [Scene Editor](../game-studio/scenes.md): The 3D/2D viewport for arranging entities in a scene.
-<<<<<<< HEAD
+- [Property Grid](../game-studio/panels/property-grid.md): Panel used to view and edit properties of selected entities/components.
+- [Scene Editor](../game-studio/dedicated-editors/scene-editor/index.md): The 3D/2D viewport for arranging entities in a scene.
 - [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
-- [Use assets](../game-studio/use-assets.md): Reference and place assets in scenes.
-=======
-- [Splash screen](../game-studio/splash-screen.md): Configure startup visuals.
 - [Use assets](../assets/use-an-asset.md): Reference and place assets in scenes.
->>>>>>> master
-- [World units](../game-studio/world-units.md): Scene scale conventions (unit size, conversions).
+- [World units](../scenes/entities/transform/world-units.md): Scene scale conventions (unit size, conversions).
 
 ## General terms
 
@@ -79,7 +69,7 @@
 - [Entity component](../engine/entity-component-system/index.md): A piece of data/behavior attached to an entity (for example Transform, Model, Light).
 - [Game](https://doc.stride3d.net/latest/en/api/Stride.Engine.Game.html): A Stride application or interactive experience running the game loop.
 - [Game loop](https://en.wikipedia.org/wiki/Video_game_programming#Game_structure): The main loop that updates and renders the game each frame.
-- [Scene](../game-studio/scenes.md): The container for entities, defining the game world or environment.
+- [Scene](../scenes/index.md): The container for entities, defining the game world or environment.
 - [Transform](../../tutorials/csharpbeginner/transform-position.md): Defines an entity's position, rotation, and scale in the scene.
  
 ## Graphics terms

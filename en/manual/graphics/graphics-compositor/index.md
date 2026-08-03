@@ -6,7 +6,7 @@
 >[!Note]
 >This page requires a basic understanding of graphics pipelines.
 
-The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
+The **graphics compositor** organizes how [scenes](../../scenes/index.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
 - use one or multiple [cameras](../cameras/index.md)
 - filter entities
