@@ -2,9 +2,9 @@
 
 Game Studio's settings can be customized by going to **Edit > Settings**.
 
-## Environment
+![](media/open-settings.webp)
 
-TODO: IMAGE
+## Environment
 
 | Setting | Description |
 | :-- | :-- |
@@ -12,19 +12,15 @@ TODO: IMAGE
 
 ## External tools
 
-TODO: IMAGE
-
 This category contains settings related to external applications that are used by Game Studio.
 
 | Setting | Description |
 | :-- | :-- |
 | Default IDE | Default IDE used when pressing the **open solution** button. |
 | Default text editor | Default applications for editing text files. |
-| Shader editor | Default applications for editing shader files. |
+| Shader editor | Default application for editing shader files. |
 
 ## Interface
-
-TODO: IMAGE
 
 This category contains settings related to the editor interface and toggles for certain hidden dialogues.
 
@@ -34,22 +30,18 @@ This category contains settings related to the editor interface and toggles for 
 | Ask before reloading assemblies | When enabled, Game Studio will ask you if you want to reload assemblies when the code is changed. |
 | Ask before saving new scripts | When enabled, Game Studio will ask you before saving a newly created script. |
 | Automatically reload assemblies | When enabled, Game Studio will automatically attempt to reload assemblies when it detects a change. |
-| Automatically reload last session at startup | When enabled, Game Studio will automatically open the previously closed at startup. |
+| Automatically reload last session at startup | When enabled, Game Studio will automatically open the previously closed project at startup. |
 | Crash report email | Legacy field for setting your email for sending crash reports. This no longer does anything. |
 | Default session to load | Path to the solution file to open automatically when Game Studio is started. |
 | Language | The display language of Game Studio. |
 | Reset Game Studio layout | This button will reset the panel layout. |
-| Usage Analytics | When enabled, Game Studio will send anonymous analytics. |
+| Usage Analytics | Legacy toggle for sending anonymous usage analytics. This no longer does anything. |
 
 ## Remote
-
-TODO: IMAGE
 
 This category contains settings for building games for remote machines running different operating systems.
 
 ## Scene editor
-
-TODO: IMAGE
 
 | Settings | Description |
 | :-- | :-- |
@@ -57,13 +49,9 @@ TODO: IMAGE
 
 ### Key bindings
 
-TODO: IMAGE
-
 This category allows you to change the keybinds used in the **Scene editor**.
 
 ### Viewport settings
-
-TODO: IMAGE
 
 | Setting | Description |
 | :-- | :-- |
@@ -75,8 +63,6 @@ TODO: IMAGE
 
 ## Script editor
 
-TODO: IMAGE
-
 This category contains settings for the built-in script editor.
 
 | Setting | Description |
@@ -85,15 +71,13 @@ This category contains settings for the built-in script editor.
 
 ## Themes
 
-TODO: IMAGE
-
 | Setting | Description |
 | :-- | :-- |
 | Theme Name | Theme used by the editor. |
 
-## Tools
+For more information about the available themes, visit [Themes](themes.md).
 
-TODO: IMAGE
+## Tools
 
 | Setting | Description |
 | :-- | :-- |
