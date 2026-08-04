@@ -18,7 +18,6 @@ This section explains how a Stride project is structured, how it works and how t
 * [Game Settings](game-settings/index.md)
   * [Basic properties](game-settings/basic-properties.md)
   * [Configurations](game-settings/configurations.md)
-  * [Overrides and filters](game-settings/overrides-and-filters.md)
   * [Splash screen](game-settings/splash-screen.md)
 * [Version control](version-control.md)
 * [Cached files](cached-files.md)

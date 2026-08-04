@@ -147,7 +147,3 @@ For more details, see [Streaming](../../graphics/textures/streaming.md).
 | Property | Description |
 | :-- | :-- |
 | Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. **Best** might result in slower builds, depending on the target platform. |
-
-## See also
-
-* [Overrides and filters](overrides-and-filters.md)

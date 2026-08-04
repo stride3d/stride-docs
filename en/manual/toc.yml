@@ -549,8 +549,6 @@ items:
             href: files-and-folders/game-settings/basic-properties.md
           - name: Configurations
             href: files-and-folders/game-settings/configurations.md
-          - name: Overrides and filters
-            href: files-and-folders/game-settings/overrides-and-filters.md
           - name: Splash screen
             href: files-and-folders/game-settings/splash-screen.md
       - name: Version control
