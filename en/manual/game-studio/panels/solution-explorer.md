@@ -4,7 +4,7 @@ The **Solution explorer** panel shows the structure of your project. It features
 
 Selecting folders in the solution explorer also selects them in the **Asset view** panel.
 
-TODO: IMAGE
+![](media/solution-explorer.webp)
 
 ## Further reading
 

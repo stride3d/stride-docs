@@ -2,7 +2,7 @@
 
 The **references** panel shows information about references of the selected asset. It's a useful tool when trying to debug why an asset is/isn't being compiled.
 
-TODO: IMAGE
+![](media/references.webp)
 
 It has two modes, which can be switched using the buttons at the top:
 

@@ -2,17 +2,13 @@
 
 The **Property grid** is an essential tool when working on a game. It shows a list of properties of the selected asset, entity or any other item that exposes modifiable values.
 
-TODO: IMAGE
-
-## Editing properties
-
-The **Property grid** lists all editable properties of an object.
+![](media/property-grid.webp)
 
 ## Search
 
 At the top of the **Property grid**, you can use the search box to filter properties based on their name.
 
-TODO: IMAGE
+![](media/property-grid-search.webp)
 
 ## Customizing the look of a property
 
@@ -32,4 +28,4 @@ public class Example : StartupScript
 }
 ```
 
-TODO: IMAGE
+![](media/property-grid-example.webp)

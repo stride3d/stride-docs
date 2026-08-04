@@ -10,4 +10,4 @@ The list of assets that have a dedicated editor include:
 
 You can open an asset's dedicated editor by either **double clicking it**, right clicking an selecting **🖉 Edit asset** or selecting it and pressing **Ctrl + Enter**.
 
-TODO: IMAGE
+![](../../assets/media/asset-view-edit-asset.webp)
