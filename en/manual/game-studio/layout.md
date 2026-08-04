@@ -14,28 +14,30 @@ TODO: IMAGE
 
 You can rearrange all panels in Game Studio by grabbing their titlebar or tab and dragging. It works similarly to **Visual Studio**, where panels needs to be dragged onto one of the elements that appear in the middle in order to be docked.
 
-TODO: IMAGE
+![](media/layout-docking.webp)
 
 Panels can be dragged out into new windows, allowing you to take advantage of multi-monitor setups or simply having another window to switch between.
 
-TODO: IMAGE OF FLOATING WINDOW
+![](media/layout-floating-window.webp)
 
 ## Resetting the layout
 
 You can reset the layout of Game Studio by going to **Edit > Settings > Interface > Reset Game Studio layout** and pressing the **Reset** button.
 
-TODO: IMAGE
+![](media/layout-reset.webp)
 
 ## Tabs
 
 Tabs allow you to keep multiple panels in the same space and switch between them on demand.
 
-TODO: IMAGE
+![](media/layout-tabs.webp)
 
-You can create tabs by dragging a panel onto the square icon of another panel.
+You can create tabs by dragging a panel onto the full-sized square icon of another panel.
 
-TODO: IMAGE
+![](media/layout-new-tab.webp)
 
-## Pinning panels
+## Pinning panels (auto hide)
 
 Pinned panels stay hidden, until you click on them. You can pin a panel by clicking the **📌 pin icon** next to its title.
+
+![](media/layout-pinning.webp)
