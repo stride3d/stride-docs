@@ -30,13 +30,13 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     For more information about scenes, see [Scenes](../scenes/index.md).
 
-3. Under **Selected groups**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+3. Under **Selected groups**, click ➕ (**Add**).
 
     Game Studio adds a new item to the list of groups.
 
     ![Add navigation group to navigation mesh](media/add-navigation-group-to-navigation-mesh.png)
 
-4. Click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose a group from the drop-down menu.
+4. Click the arrow button (**Replace**) and choose a group from the drop-down menu.
 
     ![Choose navigation group](media/choose-navigation-group-in-navigation-mesh.png)
 

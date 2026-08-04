@@ -23,7 +23,7 @@ The shadows are much softer in the second image, as more light passes through th
 
 1. Select the material you want to use subsurface shading.
 
-2. In the Property Grid, under **Shading**, next to **Subsurface scattering**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose **Subsurface scattering**.
+2. In the Property Grid, under **Shading**, next to **Subsurface scattering**, click the arrow button (**Replace**) and choose **Subsurface scattering**.
 
     ![Enable subsurface scattering](media/enable-subsurface-scattering.png)
 

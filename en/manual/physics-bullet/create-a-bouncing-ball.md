@@ -28,7 +28,7 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property Grid**, expand the **Static Collider component** to view its properties.
 
-4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Infinite Plane**.
+4. Next to **Collider Shapes**, click ➕ (**Add**) and select **Infinite Plane**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
@@ -46,7 +46,7 @@ Next, we'll add a [rigidbody](rigid-bodies.md) component to the sphere. A rigidb
 
 3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property Grid**, expand the **Rigidbody component** to view its properties.
 
-4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Sphere**.
+4. Next to **Collider Shapes**, click ➕ (**Add**) and select **Sphere**.
 
      ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-rigitbody-shape.png)
 
