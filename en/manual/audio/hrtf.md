@@ -23,15 +23,15 @@ To use HRTF, first enable it globally in the **Game Settings** asset, then enabl
 
 1. In **Solution explorer** (the bottom-left pane by default), select the **Assets folder**.
 
-    ![Select Assets folder asset](../game-studio/media/select-asset-folder.png)
+    ![Select Assets folder asset](media/select-asset-folder.png)
 
 2. In the **Asset View** (the bottom pane by default), select the **GameSettings** asset.
 
-    ![Select Game Settings asset](../game-studio/media/select-game-settings-asset.png)
+    ![Select Game Settings asset](media/select-game-settings-asset.png)
 
 3. In the **Property Grid** (the right-hand pane by default), under **Audio settings**, select **HRTF support**.
 
-    ![Audio settings](../game-studio/media/audio-settings.png)
+    ![Audio settings](../files-and-folders/game-settings/media/built-in-configuration-audio.webp)
 
 For more information about the Game Settings asset, see [Game settings](../files-and-folders/game-settings/index.md).
 
