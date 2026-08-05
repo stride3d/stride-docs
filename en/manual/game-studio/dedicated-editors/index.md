@@ -2,7 +2,7 @@
 
 Some assets are too complex to be comfortably editable via the **Property grid**, so instead they have their own dedicated editors which are made specifically for them. An example of this would be the **scene asset** and the **Scene editor**.
 
-TODO: IMAGE OF SCENE EDITOR
+![](scene-editor/media/scene-editor.webp)
 
 The list of assets that have a dedicated editor include:
 

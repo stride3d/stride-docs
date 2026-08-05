@@ -2,7 +2,7 @@
 
 The **Scene editor** is one of the most important dedicated editors in Game Studio, where you will spent the most time in.
 
-TODO: IMAGE
+![](media/scene-editor.webp)
 
 It consists of two parts:
 

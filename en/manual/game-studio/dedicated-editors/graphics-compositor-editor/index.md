@@ -2,17 +2,17 @@
 
 The **graphics compositor** is one of the most advanced features of Stride, giving you control over every step in the rendering pipeline. Due to this, the **graphics compositor asset** requires a use of a **dedicated editor**.
 
-TODO: IMAGE
+![](media/graphics-compositor-editor.webp)
 
 ## Node Graph
 
 The node graph displays the correlation between different parts of the compositor. Everything starts from the **Entry Points** node.
 
-TODO: IMAGE
+![](media/entry-points.webp)
 
 You can select nodes to display their properties in the **Property grid**.
 
-TODO: IMAGE
+![](media/node-properties.webp)
 
 > [!NOTE]
 > Stride doesn't save positions of nodes, only the correlations between them.
