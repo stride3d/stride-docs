@@ -179,7 +179,7 @@ items:
       - name: Settings
         href: game-studio/settings.md
       - name: Themes
-        href: game-studio/themes.md
+        href: game-studio/themes/index.md
 
   - name: Graphics
     href: graphics/index.md

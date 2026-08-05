@@ -9,7 +9,7 @@ Game Studio's appearance can be customized in its settings, by changing the them
 
 1. Open the settings by going to **Edit > Settings**.
 
-    ![](media/open-settings.webp)
+    ![](../media/open-settings.webp)
 
 2. Change the theme in **Themes > Theme Name**.
 
@@ -21,9 +21,9 @@ Game Studio's appearance can be customized in its settings, by changing the them
 
 Here's a list of all built-in themes:
 
-### Expression Dark (Default)
+### Expression Dark
 
-**Expression Dark** is Game Studio's default theme, resembling the apperance of Visual Studio 2019.
+**Expression Dark** is Game Studio's default theme, resembling the appearance of Visual Studio 2019.
 
 ![](media/theme-expression-dark.webp)
 
@@ -35,7 +35,7 @@ Here's a list of all built-in themes:
 
 ### Divided
 
-The **Divided** theme is meant to resemble the Unity® editor to help ease-in users comming from that engine.
+The **Divided** theme is meant to resemble the Unity® editor to help ease-in users coming from that engine.
 
 ![](media/theme-divided.webp)
 
