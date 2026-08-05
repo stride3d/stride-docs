@@ -49,13 +49,16 @@ For example, the following code:
 * plays the audio
 
 ```cs
+private Sound musicSound;
+private SoundInstance music;
+
 public override async Task Execute()
 {
     // Load the sound
-    Sound musicSound = Content.Load<Sound>("MySound");
+    musicSound = Content.Load<Sound>("MySound");
             
     // Create a sound instance
-    SoundInstance music = musicSound.CreateInstance();
+    music = musicSound.CreateInstance();
             
     // Loop
     music.IsLooping = true;
@@ -65,6 +68,24 @@ public override async Task Execute()
 
     // Play the music
     music.Play();
+
+    // Wait until the music finished playing
+    await Task.Delay(musicSound.TotalLength);
+    
+    // Release the memory associated with this instance
+    music.Dispose();
+    
+    // Release the memory held by the music
+    Content.Unload(musicSound);
+}
+
+public override void Cancel()
+{
+    // Release the memory associated with the playing instance, and stop playing the music
+    music.Dispose();
+
+    // Release the memory held by the music
+    Content.Unload(musicSound);
 }
 ```
 
@@ -85,6 +106,12 @@ public class MySoundScript : SyncScript
     public override void Start()
     {
         musicInstance = MyMusic.CreateInstance();
+    }
+
+    public override void Cancel()
+    {
+        // Release the memory associated with the playing instance, and stop playing the music
+        musicInstance.Dispose();
     }
 
     public override void Update()
