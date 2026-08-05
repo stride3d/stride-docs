@@ -68,15 +68,6 @@ public override async Task Execute()
 
     // Play the music
     music.Play();
-
-    // Wait until the music finished playing
-    await Task.Delay(musicSound.TotalLength);
-    
-    // Release the memory associated with this instance
-    music.Dispose();
-    
-    // Release the memory held by the music
-    Content.Unload(musicSound);
 }
 
 public override void Cancel()
