@@ -75,7 +75,7 @@ This category contains settings for the built-in script editor.
 | :-- | :-- |
 | Theme Name | Theme used by the editor. |
 
-For more information about the available themes, visit [Themes](themes.md).
+For more information about the available themes, visit [Themes](themes/index.md).
 
 ## Tools
 
