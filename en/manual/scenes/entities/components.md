@@ -12,7 +12,7 @@ Stride allows you to create your own components with scripts. For more informati
     
     TODO: IMAGE
 
-2. Press the **➕ Add component** button located at the top and select your component.
+2. Press the **➕ Add component** button located at the top and select a component.
     
     TODO: IMAGE
 

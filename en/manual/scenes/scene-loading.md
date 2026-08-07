@@ -4,7 +4,7 @@ Scene loading is managed by the **content system**. Loaded scenes need to be add
 
 ## Load a scene
 
-To load a scene, use [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync<T>`](xref:Stride.Engine.ContentManagerAsyncExtensions.LoadAsync``1(Stride.Core.Serialization.Contents.IContentManager,Stride.Core.Serialization.UrlReference{``0},Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and add it as a sub-scene of another scene.
+To load a scene, use [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync`](xref:Stride.Engine.ContentManagerAsyncExtensions.LoadAsync``1(Stride.Core.Serialization.Contents.IContentManager,Stride.Core.Serialization.UrlReference{``0},Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and add it as a sub-scene of another scene.
 
 ```csharp
 public class Example : StartupScript

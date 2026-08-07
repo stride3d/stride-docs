@@ -6,11 +6,12 @@ TODO: IMAGE OF THE HIERARCHY
 
 ## Adding a sub-scene in Game Studio
 
-Sub-scenes added in Game Studio won't affect how they are loaded at runtime. Adding them here is only done **for organization purposes**.
-
 To add a sub scene, **drag and drop** a scene asset onto the **Entity tree**.
 
 TODO: IMAGE
+
+> [!NOTE]
+> Sub-scenes added in Game Studio won't affect how they are loaded at runtime. Adding them here is only done **for organization purposes**.
 
 ## Toggling sub-scenes in Game Studio
 
@@ -23,7 +24,7 @@ TODO: IMAGE
 
 ## Sub-scenes at runtime
 
-In order to use sub-scenes in the built game, you will have to **manually load and add them**.
+In order to use sub-scenes in the built game, you will have to **manually load and add them in code**.
 
 ```csharp
 public class Example : StartupScript

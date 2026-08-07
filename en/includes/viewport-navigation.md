@@ -5,6 +5,7 @@ You can navigate the viewport by zooming and panning the camera. There is also a
 | | `Right mouse button` | Pan the camera |
 | | `Scroll` | Zoom |
 | | `F` | Focus on an object |
+| | `Alt + Left mouse button` | Orbit around a focused object | 
 
 You can also move your camera around similarly to a video game by holding down the **Right mouse button** and pressing other keys.
 

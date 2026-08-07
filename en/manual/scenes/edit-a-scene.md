@@ -20,7 +20,7 @@ TODO: IMAGE
 
 
 > [!TIP]
-> You can have multiple opened scene editors and switch between them by using tabs.
+> You can have multiple scene editors opened and switch between them by using tabs.
 >
 > TODO: IMAGE
 
@@ -36,7 +36,7 @@ The [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md) 
 
 TODO: IMAGE
 
-Selecting an elements will make the **Property grid** display its properties, if it has any.
+Selecting an elements will make the **Property grid** display its properties.
 
 TODO: IMAGE
 
@@ -61,19 +61,9 @@ For more information on how to use the Viewport, read [Viewport](../game-studio/
 The entity tree supports drag & drop, meaning that you can easily rearrange entities with your mouse.
 
 > [!NOTE]
-> Keep in mind that dropping the selection between two elements will move it between them, while dropping onto an element will move the selection inside of it.
+> Keep in mind that dropping the selection between two elements will move it there, while dropping onto an element will move the selection inside of it.
 >
 > TODO: VISUALIZATION
-
-## Transforming entities
-
-The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a transformation gizmo next to selected entities. You can use it to move, rotate and scale objects in a visual way by clicking on a part of the gizmo and dragging it.
-
-TODO: IMAGE
-
-You can also set explicit values by editing properties of the transform component of an entity in the **Property grid**.
-
-For more information about how to use the Viewport, visit [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
 
 ## Editing entities
 
@@ -82,3 +72,15 @@ The **Property grid** displays a list of properties of the selected entities. It
 TODO: IMAGE
 
 For more information about components, visit [Components](entities/components.md).
+
+## Transforming entities
+
+The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a transformation gizmo next to selected entities. You can use it to move, rotate and scale objects in a visual way by clicking on a part of the gizmo and dragging it.
+
+TODO: IMAGE
+
+You can also set explicit values by editing properties of an entity's transform component in the **Property grid**.
+
+TODO: IMAGE
+
+For more information about how to use the Viewport, visit [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).

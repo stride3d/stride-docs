@@ -1,6 +1,6 @@
 # Create a scene
 
-This page outlines how to create a new scene in Stride in the editor and during runtime.
+This page outlines how to create a new scene in the editor and during runtime.
 
 ## Create a scene in Game Studio
 
@@ -18,7 +18,7 @@ This page outlines how to create a new scene in Stride in the editor and during 
 
 ## Create a blank scene at runtime
 
-In Stride, it's possible to create a blank scene while your game is running using the following code:
+In Stride, it's possible to create a blank scene through code while your game is running:
 
 ```csharp
 var scene = new Scene();
