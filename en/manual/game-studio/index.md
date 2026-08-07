@@ -2,7 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-**Game Studio** is the central tool for game and application production in Stride. It allows for: creating and arranging scenes, creating and editing assets, organization and building.
+**Game Studio** is the central tool for game and application production in Stride. It allows for creating and arranging scenes, creating and editing assets as well as general organization and building.
 
 ![](media/game-studio.webp)
 

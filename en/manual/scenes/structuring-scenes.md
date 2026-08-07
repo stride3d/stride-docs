@@ -22,7 +22,7 @@ Scene folders are used for organizing entities in Game Studio. Unlike entities, 
 
 TODO: IMAGE
 
-Folders do not exist at runtime — during compilation their contents are placed in their parent (outside of the folder).
+Folders do not exist at runtime — during compilation, their contents are placed in their parent (outside of the folder).
 
 To create a new folder, right click in the **Entity tree** and select **Create > New folder**.
 

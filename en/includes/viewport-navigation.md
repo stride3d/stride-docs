@@ -2,17 +2,15 @@ You can navigate the viewport by zooming and panning the camera. There is also a
 
 | | Key | Description |
 | :-: | :-: | :-- |
-| | `Right mouse click` | Pan the camera |
+| | `Right mouse button` | Pan the camera |
 | | `Scroll` | Zoom |
 | | `F` | Focus on an object |
 
-You can also move your camera around similarly to a video game.
-
-TODO: IMAGE
+You can also move your camera around similarly to a video game by holding down the **Right mouse button** and pressing other keys.
 
 | Key | Description |
 | :-: | :-- |
-| `W/A/S/D` | Move forwards/left/backwards/right |
+| `W/A/S/D` or arrow keys | Move forwards/left/backwards/right |
 | `Q/E` | Move down/up |
 | `Shift` | Increase speed |
 

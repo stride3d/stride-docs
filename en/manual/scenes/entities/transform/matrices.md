@@ -49,7 +49,7 @@ This is most commonly used with movement (making the player walk forwards) or wi
 
 ## Decomposing
 
-In order to retrieve yaw, pitch and roll or euler angles from a matrix, it has to be **decomposed**.
+In order to retrieve certain values from a matrix, it has to be **decomposed**.
 
 ```csharp
 Entity.Transform.UpdateWorldMatrix();

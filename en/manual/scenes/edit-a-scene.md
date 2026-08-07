@@ -54,7 +54,7 @@ Entities can be selected from the viewport by just clicking on them.
 
 TODO: IMAGE
 
-For more information on how to use the viewport, read [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
+For more information on how to use the Viewport, read [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
 
 ## Modifying the scene structure
 
@@ -63,7 +63,7 @@ The entity tree supports drag & drop, meaning that you can easily rearrange enti
 > [!NOTE]
 > Keep in mind that dropping the selection between two elements will move it between them, while dropping onto an element will move the selection inside of it.
 >
-> TODO: IMAGE
+> TODO: VISUALIZATION
 
 ## Transforming entities
 
@@ -73,7 +73,7 @@ TODO: IMAGE
 
 You can also set explicit values by editing properties of the transform component of an entity in the **Property grid**.
 
-For more information about how to use the viewport, visit [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
+For more information about how to use the Viewport, visit [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
 
 ## Editing entities
 

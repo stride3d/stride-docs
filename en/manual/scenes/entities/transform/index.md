@@ -41,7 +41,16 @@ To get the world transformation, you can use `GetWorldTransformation`.
 ```csharp
 Entity.Transform.UpdateWorldMatrix();
 Entity.Transform.GetWorldTransformation(out var position, out var rotation, out var scale);
+
+// Get yaw pitch roll
+rotation.YawPitchRoll(out var yaw, out var pitch, out var yaw);
+
+// Get euler angles (notice the order)
+var eulerAngles = new Vector3(pitch, yaw, roll);
 ```
+
+> [!WARNING]
+> The world scale may be inaccurate due to the nature of how it's represented.
 
 To set the world position and/or rotation, you can use `SetWorld`.
 
@@ -53,17 +62,21 @@ Entity.Transform.UpdateWorldMatrix();
 Entity.Transform.SetWorld(worldPosition, worldRotation);
 ```
 
-To set the world scale, you can set the local scale to your desired world scale demodulated by the parent world scale.
+As mentioned previously, the world scale may not be what you expect it to be. In certain configurations of rotations and uneven scales you can achieve scale modifications which are impossible to represent in a standard Vector3.
+
+TODO: IMAGE
+
+However **if you're using even scales** (meaning that `X`, `Y` and `Z` are set to the same value) for the entity and its parents, then you can set the world scale by modifying the local scale to your desired value demodulated by the parent world scale.
 
 ```csharp
-var worldScale = new Vector3(1f, 1f, 1f);
+var lossyWorldScale = new Vector3(1f, 1f, 1f);
 
 // Updating your own world matrix will also update all parents
 Entity.Transform.UpdateWorldMatrix();
 
 if (Entity.Transform.Parent == null)
 {
-    // Local scale is world scale if there are no parents
+    // Local scale is world scale if the entity has no parents
     Entity.Transform.Scale = worldScale;
 }
 else

@@ -8,7 +8,7 @@ Stride allows you to create your own components with scripts. For more informati
 
 ## Add a component in Game Studio
 
-1. Select an entity in the **scene editor hierarchy**. This will make your entity's components show up in the **Property grid**.
+1. Select an entity in the **Entity tree**. This will make your entity's components show up in the **Property grid**.
     
     TODO: IMAGE
 

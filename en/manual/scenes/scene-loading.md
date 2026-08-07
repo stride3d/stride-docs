@@ -1,10 +1,10 @@
 # Scene loading
 
-Scenes loading is managed by the **content system**. Loaded scenes need to be added as a sub-scene of another scene or replace the root scene.
+Scene loading is managed by the **content system**. Loaded scenes need to be added as a sub-scene of another scene or replace the root scene in order to become a part of the game.
 
 ## Load a scene
 
-To load a scene, use `Content.Load` or `Content.LoadAsync` and add it as a sub-scene of another scene.
+To load a scene, use [`Content.Load`](xref:Stride.Core.Serialization.UrlReferenceContentManagerExtenstions.Load*) or [`Content.LoadAsync<T>`](xref:Stride.Engine.ContentManagerAsyncExtensions.LoadAsync``1(Stride.Core.Serialization.Contents.IContentManager,Stride.Core.Serialization.UrlReference{``0},Stride.Core.Serialization.Contents.ContentManagerLoaderSettings)) and add it as a sub-scene of another scene.
 
 ```csharp
 public class Example : StartupScript
@@ -21,9 +21,11 @@ public class Example : StartupScript
 
 The above will load a scene specified in `SceneToLoad` and add it as a sub-scene of the scene the entity is attached to.
 
+For more information about loading scenes or other assets, visit [Use an asset in code](../assets/use-an-asset-in-code.md).
+
 ## Unload a scene
 
-To unload a scene, remove it from it's parent and unload it using `Content.Unload` to properly release it from memory.
+To unload a scene, remove it from it's parent and unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*) to properly release it from memory.
 
 ```csharp
 public void UnloadScene(Scene scene)

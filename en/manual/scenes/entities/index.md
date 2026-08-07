@@ -1,6 +1,6 @@
 # Entities
 
-Entities are blank elements containing a collection of components that define what they are and how they behave (e.g. [model component](xref:Stride.Engine.ModelComponent)).
+Entities are game elements containing a collection of components that define what they are and how they behave (e.g. [model component](xref:Stride.Engine.ModelComponent)).
 
 Entities can have **child entities** with their own components.
 
@@ -10,7 +10,7 @@ Every entity has a [transform component](xref:Stride.Engine.TransformComponent) 
 
 ## Create an entity in Game Studio
 
-You can open the entity creation menu by pressing the ➕ icon at the top of the entity tree or right clicking anywhere in the entity tree or scene view.
+You can open the entity creation menu by pressing the ➕ icon at the top of the entity tree or right clicking anywhere in the **Entity tree** or the **Viewport**.
 
 TODO: IMAGE
 
@@ -20,14 +20,14 @@ TODO: IMAGE
 
 ## Entities in code
 
-Entities can be instantiated from a prefab, or created at runtime from scratch like so:
+Entities can be instantiated from a [prefab](../prefabs/index.md), or created at runtime from scratch like so:
 
 ```csharp
 // Create a blank entity
 var myNewEntity = new Entity("Entity name");
 
 // Create an entity with components
-var myNewEntity = new Entity("Entity name")
+var myNewLightEntity = new Entity("Entity name")
 {
     new LightComponent(),
     new MyScript()

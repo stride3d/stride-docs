@@ -25,7 +25,7 @@ You can add filters using the **Add a filter...** field at the top of the toolba
 While typing, you will get suggestions that begin with a prefix:
 
 * **name:** - filters assets based on their name.
-* **tag:** - filters assets based on their tag.
+* **tag:** - filters assets based on their [tag](../../assets/tags.md).
 * **type:** - filters assets based on their type.
 
 Filters can be toggled by clicking on them.
