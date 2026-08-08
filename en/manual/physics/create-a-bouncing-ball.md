@@ -23,7 +23,7 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property Grid**, expand the **Static Component** to view its properties.
 
-4. Next to **Colliders**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Box Collider**.
+4. Next to **Colliders**, click ➕ (**Add**) and select **Box Collider**.
 
     ![Add Static collider component](media/compound-types.png)
 
@@ -43,7 +43,7 @@ Next, we'll add a [body](rigid-bodies.md) component to the sphere. A body is a p
 
 3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property Grid**, expand the **Body Component** to view its properties.
 
-4. Next to **Colliders**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Sphere**.
+4. Next to **Colliders**, click ➕ (**Add**) and select **Sphere**.
 
      ![Add Static collider component](media/compound-types.png)
 

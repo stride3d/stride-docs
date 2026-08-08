@@ -21,7 +21,7 @@ After you [import animation assets](import-animations.md), you need add them to 
 
     Game Studio adds an animation component to the entity.
 
-3. In the animation component properties, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) to add a new animation to the library.
+3. In the animation component properties, next to **Animations**, click ➕ (**Add**) to add a new animation to the library.
 
 4. Type a name for the animation and press Enter.
 
@@ -30,7 +30,7 @@ After you [import animation assets](import-animations.md), you need add them to 
     >[!Tip]
     >When you play animations using scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
     
-5. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+5. Click 👆 (**Select an asset**).
 
     ![Pick asset up](media/pick-asset-up.png)
 

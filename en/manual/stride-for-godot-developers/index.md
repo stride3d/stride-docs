@@ -88,14 +88,14 @@ You can have multiple scenes in your project. The scene that loads as soon as yo
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+1. In the **GameSettings** properties, next to **Default Scene**, click 👆 (**Select an asset**).
 
     ![Set default scene](../stride-for-unity-developers/media/stride-vs-unity-game-settings-default-scene.png)
 
     The **Select an asset** window opens.
 2. Select the default scene and click **OK**.
 
-For more information about scenes, see [Scenes](../game-studio/scenes.md).
+For more information about scenes, see [Scenes](../scenes/index.md).
 
 
 ## Entities vs Nodes

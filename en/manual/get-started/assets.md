@@ -26,6 +26,12 @@ Finally, you will be asked if you want to **move it to the default location**. A
 
 ## Blue, green and gray dots
 
+In the **Asset view**, you can see a dot in the top left corner of every asset that signifies how it will be compiled.
+
+![](../assets/media/asset-view-indicators.webp)
+
+Each color represents something:
+
 [!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
 
 Stride doesn't include assets which aren't used anywhere, meaning that **they cannot be accessed when running the game**. In order to ensure, that an asset will always be included in the build, right click on it and select **🔵 Include in build as root asset**.
