@@ -2,43 +2,43 @@
 
 Scenes are a complex asset, meaning that they require the use of a dedicated editor — the [scene editor](../game-studio/dedicated-editors/scene-editor/index.md).
 
-TODO: IMAGE
+![](../game-studio/dedicated-editors/scene-editor/media/scene-editor.webp)
 
 ## Opening the scene editor
 
 1. Locate the scene asset in the **Asset view**.
 
-    TODO: IMAGE
+    ![](media/asset-view-locate-scene.webp)
 
 2. Double click the scene or right click and select **Edit asset...**
 
-    TODO: IMAGE
+    ![](media/asset-view-open-scene.webp)
 
 3. The scene editor should now appear.
 
-    TODO: IMAGE
+    ![](media/scene-editor-empty.webp)
 
 
 > [!TIP]
 > You can have multiple scene editors opened and switch between them by using tabs.
 >
-> TODO: IMAGE
+> ![](media/scene-editor-tabs.webp)
 
 ## Navigating the scene editor
 
 The scene editor consists of two components: the [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md) and the [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
 
-TODO: IMAGE
+![](../game-studio/dedicated-editors/scene-editor/media/scene-editor-layout.webp)
 
 ### Entity tree
 
 The [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md) shows the contents of a scene in a tree-like structure. It allows you to change the order of entities and their parents, as well as quickly find specific elements.
 
-TODO: IMAGE
+![](../game-studio/dedicated-editors/scene-editor/media/entity-tree.webp)
 
 Selecting an elements will make the **Property grid** display its properties.
 
-TODO: IMAGE
+![](media/entity-tree-select.webp)
 
 For more information about other features of the Entity tree, read [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md).
 
@@ -46,13 +46,13 @@ For more information about other features of the Entity tree, read [Entity tree]
 
 The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a 2D or 3D preview of a scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
 
-TODO: IMAGE
+![](../game-studio/dedicated-editors/scene-editor/media/viewport.webp)
 
 [!INCLUDE [viewport-navigation](../../includes/viewport-navigation.md)]
 
-Entities can be selected from the viewport by just clicking on them.
+Entities can be selected from the Viewport by just clicking on them.
 
-TODO: IMAGE
+![](media/viewport-select.webp)
 
 For more information on how to use the Viewport, read [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
 
@@ -69,7 +69,7 @@ The entity tree supports drag & drop, meaning that you can easily rearrange enti
 
 The **Property grid** displays a list of properties of the selected entities. It let's you add new components and manage their values.
 
-TODO: IMAGE
+![](../game-studio/panels/media/property-grid.webp)
 
 For more information about components, visit [Components](entities/components.md).
 
@@ -77,10 +77,10 @@ For more information about components, visit [Components](entities/components.md
 
 The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a transformation gizmo next to selected entities. You can use it to move, rotate and scale objects in a visual way by clicking on a part of the gizmo and dragging it.
 
-TODO: IMAGE
+![](media/viewport-transform-entities.webp)
 
 You can also set explicit values by editing properties of an entity's transform component in the **Property grid**.
 
-TODO: IMAGE
+![](media/property-grid-change-transform.webp)
 
 For more information about how to use the Viewport, visit [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).

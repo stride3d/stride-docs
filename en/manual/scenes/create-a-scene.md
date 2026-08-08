@@ -6,19 +6,19 @@ This page outlines how to create a new scene in the editor and during runtime.
 
 1. Select an asset folder in the **Solution explorer**. In a standard project, it will be the folder located under your main [project package](../files-and-folders/project-packages/index.md) (the one ending with `.Game`).
 
-    TODO: IMAGE
+    ![](media/solution-explorer-main-project-package-assets.webp)
 
-2. In the **Asset view**, press the **➕ Add item** button and select **Scene**.
+2. In the **Asset view**, press the **➕ Add item** button and select **Scene > Scene**.
 
-    TODO: IMAGE
+    ![](media/asset-view-add-scene.webp)
 
-3. Name your scene and save it by pressing **Ctrl + S**.
+3. Press **F2** or right click and select **Rename** to change the name of your scene and save it by pressing **Ctrl + S**.
 
-    TODO: IMAGE
+    ![](media/asset-view-name-scene.webp)
 
 ## Create a blank scene at runtime
 
-In Stride, it's possible to create a blank scene through code while your game is running:
+In Stride, it is possible to create a blank scene through code while your game is running:
 
 ```csharp
 var scene = new Scene();

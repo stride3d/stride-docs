@@ -10,11 +10,11 @@ Stride allows you to create your own components with scripts. For more informati
 
 1. Select an entity in the **Entity tree**. This will make your entity's components show up in the **Property grid**.
     
-    TODO: IMAGE
+    ![](media/view-components.webp)
 
 2. Press the **➕ Add component** button located at the top and select a component.
     
-    TODO: IMAGE
+    ![](media/add-component.webp)
 
 ## Manage components in code
 

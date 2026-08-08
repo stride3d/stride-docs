@@ -8,7 +8,7 @@ Additionally, some assets may also have their own [dedicated editor](dedicated-e
 
 The default layout contains all built-in panels, with some being hidden behind tabs.
 
-TODO: IMAGE
+![](media/layout-default.webp)
 
 ## Changing the layout
 

@@ -4,19 +4,15 @@ Entities are game elements containing a collection of components that define wha
 
 Entities can have **child entities** with their own components.
 
-TODO: VISUALIZATION
+![](media/nesting-entities.webp)
 
 Every entity has a [transform component](xref:Stride.Engine.TransformComponent) that defines how it's positioned in relation to it's parent.
 
 ## Create an entity in Game Studio
 
-You can open the entity creation menu by pressing the ➕ icon at the top of the entity tree or right clicking anywhere in the **Entity tree** or the **Viewport**.
+You can open the entity creation menu by pressing the ➕ icon at the top of the entity tree or right clicking anywhere in the **Entity tree** or the **Viewport**. Here, you can select from one of the entity templates or create an empty entity.
 
-TODO: IMAGE
-
-Here, you can select one of the entity templates or create an empty entity.
-
-TODO: IMAGE
+![](media/create-an-entity.webp)
 
 ## Entities in code
 

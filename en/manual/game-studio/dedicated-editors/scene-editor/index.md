@@ -8,3 +8,5 @@ It consists of two parts:
 
 * [**Viewport**](viewport.md) - a 3D display of the world environment, that can be also moved for transforming entities and navigating the scene.
 * [**Entity tree**](entity-tree.md) - a tree showing all of scene's entities, their children and sub-scenes.
+
+![](media/scene-editor-layout.webp)

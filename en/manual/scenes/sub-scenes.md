@@ -2,13 +2,13 @@
 
 On top of holding entities, scenes can also contain **sub-scenes**. In a recommended configuration, different parts of the game (e.g. levels) would be added as a sub-scene of the main root scene.
 
-TODO: IMAGE OF THE HIERARCHY
+![](entity-tree-sub-scenes.webp)
 
 ## Adding a sub-scene in Game Studio
 
 To add a sub scene, **drag and drop** a scene asset onto the **Entity tree**.
 
-TODO: IMAGE
+![](entity-tree-sub-scenes-drag-and-drop.webp)
 
 > [!NOTE]
 > Sub-scenes added in Game Studio won't affect how they are loaded at runtime. Adding them here is only done **for organization purposes**.
@@ -17,7 +17,7 @@ TODO: IMAGE
 
 Sub scenes can be toggled by clicking the **eye symbol** next to them in the **Entity tree**.
 
-TODO: IMAGE
+![](media/entity-tree-sub-scene-toggle.webp)
 
 > [!NOTE]
 > This does not impact how the scenes are loaded at runtime.
