@@ -64,7 +64,7 @@ Entity.Transform.SetWorld(worldPosition, worldRotation);
 
 As mentioned previously, the world scale may not be what you expect it to be. In certain configurations of rotations and uneven scales you can achieve scale modifications which are impossible to represent in a standard Vector3.
 
-TODO: IMAGE
+![](media/impossible-world-scale.webp)
 
 However **if you're using even scales** (meaning that `X`, `Y` and `Z` are set to the same value) for the entity and its parents, then you can set the world scale by modifying the local scale to your desired value demodulated by the parent world scale.
 

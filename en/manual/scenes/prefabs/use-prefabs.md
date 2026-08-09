@@ -10,11 +10,11 @@ Prefab instances can be added to a scene in **Game Studio** or instantiated thro
 
 To instantiate a prefab, drag and drop it from the **Asset view** to the scene.
 
-TODO: IMAGE
+![](media/scene-editor-drag-and-drop-prefab.webp)
 
-By default, Game Studio **creates an empty parent entity with the prefab's entities** as its children. The **Entity tree** displays the prefab parent name in green next to the child entities.
+By default, Game Studio **creates an empty parent entity with the prefab's entities** as its children. The **Entity tree** displays the prefab parent name in green, next to the child entities.
 
-TODO: IMAGE
+![](media/scene-editor-prefab-green-text.webp)
 
 > [!TIP]
 > If you don't want to create a parent entity for the prefab, hold **Alt** when dropping it into the scene.
@@ -25,7 +25,7 @@ After adding a prefab instance to a scene, you can break the link between the pr
 
 To do this, in the **scene editor**, right-click a child entity or entities and select **Break link to prefab**.
 
-TODO: IMAGE
+![](media/scene-editor-break-link-to-prefab.webp)
 
 ## Instantiate prefabs at runtime
 
