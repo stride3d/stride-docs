@@ -12,7 +12,7 @@ If you modify a nested prefab, all the dependent prefabs inherit the change auto
 This video demonstrates an example of nested prefabs:
 
 <div class="ratio ratio-16x9 mb-3">
-<video autoplay loop class="responsive-video" poster="media/create-nested-prefab.jpg">
+<video autoplay loop class="responsive-video" poster="media/create-nested-prefab.webp">
    <source src="media/create-nested-prefab.mp4" type="video/mp4">
 </video>
 </div>
