@@ -6,13 +6,10 @@
 You can import **video files** and use them in your scenes.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/video-thumbnail.jpg">
+<video autoplay loop class="responsive-video ratio ratio-16x9 mb-3" poster="media/video-thumbnail.jpg">
    <source src="media/video-in-game.mp4" type="video/mp4">
 </video>
 </p>
-
->[!Note]
->Currently, Stride doesn't support video on iOS platforms.
 
 ## In this section
 
