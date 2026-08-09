@@ -5,16 +5,13 @@
 <span class="badge text-bg-success">Designer</span>
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/video-thumbnail.jpg">
+<video autoplay loop class="responsive-video ratio ratio-16x9 mb-3" poster="media/video-thumbnail.jpg">
    <source src="media/video-in-game.mp4" type="video/mp4">
 </video>
 </p>
 
 >[!Note]
 >Stride supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Stride doesn't have to convert them.
-
->[!Note]
->Currently, Stride doesn't support video on iOS platforms.
 
 ## 1. Add a video asset
 
