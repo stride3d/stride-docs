@@ -1,6 +1,6 @@
 # Entity tree
 
-The **entity tree** shows the structure of a scene in a tree-like structure.
+The **entity tree** shows the contents of a scene in a tree-like structure.
 
 ![](media/entity-tree.webp)
 

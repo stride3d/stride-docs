@@ -10,6 +10,8 @@ Prefab instances can be added to a scene in **Game Studio** or instantiated thro
 
 To instantiate a prefab, drag and drop it from the **Asset view** to the scene.
 
+TODO: IMAGE
+
 By default, Game Studio **creates an empty parent entity with the prefab's entities** as its children. The **Entity tree** displays the prefab parent name in green next to the child entities.
 
 TODO: IMAGE
@@ -25,7 +27,7 @@ To do this, in the **scene editor**, right-click a child entity or entities and 
 
 TODO: IMAGE
 
-## Instantiate and add prefabs at runtime
+## Instantiate prefabs at runtime
 
 To use prefabs at runtime, you need to **instantiate them** and then **add them to the scene** in code.
 
