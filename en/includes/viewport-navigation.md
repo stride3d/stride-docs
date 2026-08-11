@@ -16,9 +16,9 @@ You can also move your camera around similarly to a video game by holding down t
 | `Q/E` | Move down/up |
 | `Shift` | Increase speed |
 
-You can change the camera speed in the 🎥 menu.
-
-![You can find the camera menu on the right side of the top toolbar](../manual/game-studio/dedicated-editors/scene-editor/media/viewport-change-camera-speed.webp)
-
 > [!TIP]
 > All viewport keybinds can be changed in the settings.
+
+You can change the **camera speed** in the 🎥 menu.
+
+![You can find the camera menu on the right side of the top toolbar](../manual/game-studio/dedicated-editors/scene-editor/media/viewport-change-camera-speed.webp)

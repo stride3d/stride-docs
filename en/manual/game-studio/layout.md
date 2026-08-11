@@ -1,18 +1,18 @@
 # Layout
 
-Game Studio consists of multiple panels, serving distinct functions. A lot of them react to changes made in others. When developing games with Game Studio, it's important to familiarize yourself with them.
+Game Studio consists of multiple panels, serving distinct functions. A lot of them react to changes made in others. When developing games with **Game Studio**, it's important to familiarize yourself with them.
 
-Additionally, some assets may also have their own [dedicated editor](dedicated-editors/index.md). The most notable example of this are **scenes** and the [scene editor](dedicated-editors/scene-editor/index.md), which is where you will spent the majority of your time while working with Game Studio.
+Additionally, **some assets may also have their own [dedicated editor](dedicated-editors/index.md)**. The most notable example of this are **scenes** and the [Scene editor](dedicated-editors/scene-editor/index.md), which is where you will spent the majority of your time while working with Game Studio.
 
 ## Default layout
 
-The default layout contains all built-in panels, with some being hidden behind tabs.
+The default layout contains all built-in panels, with some being hidden behind [tabs](#tabs).
 
 ![](media/layout-default.webp)
 
 ## Changing the layout
 
-You can rearrange all panels in Game Studio by grabbing their titlebar or tab and dragging. It works similarly to **Visual Studio**, where panels needs to be dragged onto one of the elements that appear in the middle in order to be docked.
+You can rearrange all panels in Game Studio by **grabbing their titlebar or tab and dragging**. It works similarly to **Visual Studio**, where panels needs to be dragged onto one of the elements that appear in the middle in order to be docked.
 
 ![](media/layout-docking.webp)
 

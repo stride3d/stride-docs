@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-Stride provides you a lot of ways to create a prefab for your convenience.
+Stride provides multiple ways to create a prefab for your convenience.
 
 ## Create a blank prefab
 
@@ -27,6 +27,8 @@ You can also create a prefab from an existing entity or entities.
     ![](media/scene-editor-create-prefab-from-selection.webp)
 
 Game Studio creates a prefab asset from the entity or entities you selected. You can access the new prefab from the **Asset view**.
+
+TODO: IMAGE
 
 > [!NOTE]
 > After you create a prefab from a selection, the original selection itself **becomes a prefab**.

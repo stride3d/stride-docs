@@ -6,11 +6,11 @@ Entities can have **child entities** with their own components.
 
 ![](media/nesting-entities.webp)
 
-Every entity has a [transform component](xref:Stride.Engine.TransformComponent) that defines how it's positioned in relation to it's parent.
+Every entity has a [transform component](xref:Stride.Engine.TransformComponent) that defines how it's positioned in relation to its parent.
 
 ## Create an entity in Game Studio
 
-You can open the entity creation menu by pressing the ➕ icon at the top of the entity tree or right clicking anywhere in the **Entity tree** or the **Viewport**. Here, you can select from one of the entity templates or create an empty entity.
+You can open the entity creation menu by pressing the ➕ icon at the top of the **Entity tree** or right clicking anywhere in the **Scene editor**. Here, you can select from one of the entity templates or create an empty entity.
 
 ![](media/create-an-entity.webp)
 

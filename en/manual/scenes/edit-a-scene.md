@@ -18,7 +18,6 @@ Scenes are a complex asset, meaning that they require the use of a dedicated edi
 
     ![](media/scene-editor-empty.webp)
 
-
 > [!TIP]
 > You can have multiple scene editors opened and switch between them by using tabs.
 >
@@ -36,7 +35,7 @@ The [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md) 
 
 ![](../game-studio/dedicated-editors/scene-editor/media/entity-tree.webp)
 
-Selecting an elements will make the **Property grid** display its properties.
+Selecting an element will make the **Property grid** display its properties.
 
 ![](media/entity-tree-select.webp)
 
@@ -58,7 +57,7 @@ For more information on how to use the Viewport, read [Viewport](../game-studio/
 
 ## Modifying the scene structure
 
-The entity tree supports drag & drop, meaning that you can easily rearrange entities with your mouse.
+The [Entity tree](../game-studio/dedicated-editors/scene-editor/viewport.md) supports drag & drop, meaning that you can easily rearrange entities with your mouse.
 
 > [!NOTE]
 > Keep in mind that dropping the selection between two elements will move it there, while dropping onto an element will move the selection inside of it.

@@ -6,7 +6,7 @@ The **graphics compositor** is one of the most advanced features of Stride, givi
 
 ## Node Graph
 
-The node graph displays the correlation between different parts of the compositor. Everything starts from the **Entry Points** node.
+The node graph displays the correlation between different parts of the compositor. Everything starts from the **Entry points** node.
 
 ![](media/entry-points.webp)
 

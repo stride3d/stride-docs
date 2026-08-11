@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-Prefabs can be edited in their [dedicated editor](../../game-studio/dedicated-editors/prefab-editor/index.md), which works similarly to the [scene editor](../../game-studio/dedicated-editors/scene-editor/index.md).
+Prefabs can be edited in their [dedicated editor](../../game-studio/dedicated-editors/prefab-editor/index.md), which works similarly to the [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md).
 
 ## Open the prefab editor
 
@@ -11,14 +11,14 @@ To open the prefab editor, in the **Asset view** double click a prefab or right-
 
 ![](media/asset-view-open-prefab.webp)
 
-Alternatively, you can open the prefab from the scene editor by right-clicking any child of a prefab instance and selecting **Open prefab in editor**.
+Alternatively, you can open the prefab from the Scene editor by right-clicking any child of a prefab instance and selecting **Open prefab in editor**.
 
 ![](media/scene-editor-open-prefab.webp)
 
 ## Use the prefab editor
 
-The [prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) works almost identically to the [scene editor](../../game-studio/dedicated-editors/scene-editor/index.md). Navigation and entity management are exactly the same.
+The [Prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) works almost identically to the [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md). Navigation and entity management are exactly the same.
 
 ![](../../game-studio/dedicated-editors/prefab-editor/media/prefab-editor.webp)
 
-When you edit a prefab in the prefab editor, the changes are applied to the instances of the prefab in other scenes in **real time**.
+When you edit a prefab in the Prefab editor, the changes are applied to the instances of the prefab in other scenes in **real time**.

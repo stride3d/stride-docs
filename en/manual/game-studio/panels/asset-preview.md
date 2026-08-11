@@ -1,9 +1,9 @@
 # Asset preview
 
-The **Asset preview** panel allows you to quickly glance at how a model or material looks like in 3D space, without having to open it.
+The **Asset preview** panel allows you to quickly glance at how an asset looks like, without having to open it.
 
 ![](media/asset-preview.webp)
 
-By default when viewing a material, it's displayed as a sphere. You can change this by selecting from one of the shapes at the top of the panel.
+Some assets may provide additional controls for viewing their contents. For example: when selecting a material, you will be given a list of alternative shapes to test it on.
 
 ![](media/asset-preview-shape.webp)

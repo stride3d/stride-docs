@@ -6,7 +6,7 @@ The **UI editor** is used for editing UI pages and libraries.
 
 ## Preview
 
-The majority of the UI editor is taken up by the **preview**. You can use it to view your UI, select individual elements and move them around.
+The majority of the UI editor is taken up by the **Preview**. You can use it to view your UI, select individual elements and move them around.
 
 ![](media/preview.webp)
 
@@ -24,7 +24,7 @@ You can change colors of the selection gizmo by pressing the **👁️ eye** ico
 
 ## UI library
 
-This list shows all available ui element templates. You can drag them into the **preview** or **visual tree** in order to add them to your UI page or library.
+This list shows all available ui element templates. You can drag them into the **Preview** or **Visual tree** in order to add them to your UI page or library.
 
 ![](media/ui-library.webp)
 

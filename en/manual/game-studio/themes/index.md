@@ -3,11 +3,11 @@
 Game Studio's appearance can be customized in its settings, by changing the theme.
 
 > [!NOTE]
-> Currently Game Studio does not support external themes. The only way of creating your own theme is by modifying the source code.
+> Currently, **Game Studio does not support external themes**. The only way of creating your own theme is by modifying the source code.
 
 ## Changing the theme
 
-1. Open the settings by going to **Edit > Settings**.
+1. Open settings by going to **Edit > Settings**.
 
     ![](../media/open-settings.webp)
 
@@ -29,7 +29,7 @@ Here's a list of all built-in themes:
 
 ### Dark Steel
 
-**Dark Steel** is a slightly lighter version of **Expression Dark**, resembling the color style that was used in the older versions of Stride.
+**Dark Steel** is a slightly lighter version of **Expression Dark**, resembling the color style that was used in older versions of Stride.
 
 ![](media/theme-dark-steel.webp)
 

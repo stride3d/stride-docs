@@ -1,6 +1,6 @@
 # Types of rotation
 
-Rotation is typically the most challenging part of working with transforms. This is due to one major problem: how do you define a rotation?
+Rotation is typically the most challenging part of working with transforms. This is due to one major problem: how do you define rotation?
 
 ## Ways of defining rotation
 
@@ -27,7 +27,7 @@ Here's a summary of all the different ways of defining rotation, their benefits 
 
 ### Euler angles
 
-**Euler angles** are also quite simple to explain. The idea is to store the rotation in 3 axes: `X`, `Y` and `Z`. This approach has its benefits and drawbacks
+**Euler angles** are also quite simple to explain. The idea is to store the rotation in 3 axes: `X`, `Y` and `Z`. This approach shares similar benefits and drawbacks with [yaw pitch roll](#yaw-pitch-roll):
 
 * 🟩 More human-readable
 * 🟩 Easy to understand

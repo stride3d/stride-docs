@@ -12,7 +12,7 @@ TODO: VISUALIZATION
 
 Values relative to their parent are referred to as **local-space** and the "real world" ones as **world-space**.
 
-Typically, we work with values from the **local-space**, but sometimes, if we need to access entities nested in other entities, we use their **world** values.
+Typically, we work with values from the **local-space**, but sometimes, when accessing entities nested in other entities, we might have to use their **world** values.
 
 ## Get or set position, rotation and scale
 

@@ -12,10 +12,10 @@
 
 ## Create a prefab model
 
-1. In the **Asset view**, select **Add asset > Model > Prefab model**.
+1. In the **Asset view**, select **➕ Add asset > Model > Prefab model**.
 
     ![](media/asset-view-create-prefab-model.webp)
 
-2. In the **Property grid**, assign the prefab to the **Prefab** property by clicking the **👆 Hand icon**.
+2. In the **Property grid**, assign the prefab to the **Prefab** property by clicking the **🤚 Hand icon**.
 
     ![](media/property-grid-prefab-model-assign.webp)

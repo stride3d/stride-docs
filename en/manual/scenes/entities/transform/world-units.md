@@ -10,7 +10,7 @@ TODO: VISUALIZATION IF YOU'RE BORED
 
 ## Rotation
 
-In Stride, 1 unit of rotation in an axis is **1 radian**. In case you're unfamiliar with radians: `2π radians = 360 degrees`.
+In Stride, 1 unit of rotation is **1 radian**. In case you're unfamiliar with radians: `2π radians = 360 degrees`.
 
 TODO: VISUALIZATION IF YOU'RE BORED (three circles, one showing 1 radian = howevermany degrees, one showing pi radians = 180 degrees and the last one showing 2 radians = 360 degrees)
 

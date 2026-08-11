@@ -1,6 +1,6 @@
 # Viewport
 
-The **viewport** allows you to view and navigate your game's world.
+The **Viewport** allows you to view and navigate your game's world.
 
 ![](media/viewport.webp)
 
@@ -10,13 +10,13 @@ The **viewport** allows you to view and navigate your game's world.
 
 ## Move, rotate and skale entities
 
-The viewport allows you to switch between 3 different transformation modes, that can be used to move, rotate and skale an entity.
+The Viewport allows you to switch between 3 different **transformation modes**, that can be used to move, rotate and scale an entity.
 
 | | Shortcut | Gizmo | Description |
 | :-: | :-: | :-- | :-- |
 | ![](media/transform-gizmo-translation.webp) | `W` | Translation gizmo | Allows you to change an entity's position in an axis or plane. |
 | ![](media/transform-gizmo-rotation.webp) | `E` | Rotation gizmo | Allows you to change an entity's rotation in an axis. |
-| ![](media/transform-gizmo-scale.webp) | `R` | Scale gizmo | Allows you to change an entity's scale in a single or all axes. |
+| ![](media/transform-gizmo-scale.webp) | `R` | Scale gizmo | Allows you to change an entity's scale in one, two or three axes. |
 
 You can also switch between these gizmo modes by pressing `Space`.
 
@@ -25,7 +25,9 @@ You can also switch between these gizmo modes by pressing `Space`.
 
 ### Gizmo coordinate system
 
-Coordinate systems determine the direction of axes for the gizmos.
+The coordinate system determines the direction of axes for the gizmos. They can be changed in the toolbar:
+
+TODO: IMAGE
 
 | | Coordinate system | Description |
 | :-: | :-- | :-- |
@@ -58,7 +60,7 @@ Keep in mind these additional keyboard shortcuts:
 
 ## Duplicating entities
 
-You can easily create a duplicate of an entity in the viewport by moving it using the **translation gizmo** while holding down **Ctrl**.
+You can easily create a duplicate of an entity in the Viewport by moving it using the **translation gizmo** while holding down **Ctrl**.
 
 ![](media/duplicating-entities.webp)
 
@@ -67,5 +69,5 @@ You can easily create a duplicate of an entity in the viewport by moving it usin
 
 ## Miscalenious features
 
-* **Toggle material selection** - allows you to select a material asset by clicking on it on a selected model.
-* **Show or hide selection mask** - when enabled, the selection wireframe will fade out a few seconds after selecting an entity.
+* **Toggle material selection** (togglable in the toolbar) - allows you to select a material asset by clicking on it on a selected model.
+* **Show or hide selection mask** (togglable in the toolbar) - when enabled, the selection wireframe will fade out a few seconds after selecting an entity.

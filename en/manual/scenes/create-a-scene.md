@@ -4,7 +4,7 @@ This page outlines how to create a new scene in the editor and during runtime.
 
 ## Create a scene in Game Studio
 
-1. Select an asset folder in the **Solution explorer**. In a standard project, it will be the folder located under your main [project package](../files-and-folders/project-packages/index.md) (the one ending with `.Game`).
+1. Select an **assets** folder in the **Solution explorer**. In a standard project, it will be the folder located under your main [project package](../files-and-folders/project-packages/index.md) (the one ending with `.Game`).
 
     ![](media/solution-explorer-main-project-package-assets.webp)
 

@@ -1,6 +1,6 @@
 # Matrices
 
-Matrices are a powerful tool for advanced transform manipulation. They encompass an entity's position, rotation and scale relative to their parent or their world.
+**Matrices** are a powerful tool for advanced transform manipulation. They encompass an entity's position, rotation and scale relative to their parent or their world.
 
 > [!WARNING]
 > This page goes into using matrices in the transform component and **not how to use matrices in general**. For information about matrices in mathematics, visit [Wikipedia](https://en.wikipedia.org/wiki/Matrix_(mathematics)).
@@ -12,14 +12,14 @@ There are some things to consider when using matrices over position, rotation an
 * 🟩 More control over local and world transformations.
 * 🟩 Already used by many utility methods (e.g. `SetWorld`).
 * 🟩 Easier access to world values.
-* 🟥 To ensure correct values, matrices need to be [manually updated](#updating-matrices) first.
+* 🟥 To ensure correct values, **matrices need to be [manually updated](#updating-matrices) first**.
 * 🟥 Matrix values are read-only.
 
 ## Updating matrices
 
-Matrices are updated by a processor after every update tick. This means that when an entity is first added to a scene, or when it's transform changes after an update, the matrices become out-of-date.
+Matrices are **updated by a processor after every update tick**. This means that when an entity is first added to a scene, or when it's transform changes after an update, the matrices become out-of-date.
 
-Matrices can be manually updated using [`UpdateLocalMatrix`](xref:Stride.Engine.TransformComponent.UpdateLocalMatrix) and [`UpdateWorldMatrix`](xref:Stride.Engine.TransformComponent.UpdateWorldMatrix). It's recommended to call these methods before doing anything with matrices to ensure they are valid.
+Matrices can be manually updated using [`UpdateLocalMatrix`](xref:Stride.Engine.TransformComponent.UpdateLocalMatrix) and [`UpdateWorldMatrix`](xref:Stride.Engine.TransformComponent.UpdateWorldMatrix). **It's recommended to call these methods before doing anything with matrices** to ensure they are valid.
 
 ## Matrix properties
 

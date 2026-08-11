@@ -42,7 +42,7 @@ In this example, we have a prefab of a futuristic lamppost.
 
 ![](media/lamppost-prefab.webp)
 
-The lamppost prefab is composed of three entities: a column, a pillar, and a spot light. These are listed in the Entity tree in the prefab editor.
+The lamppost prefab is composed of three entities: a column, a pillar, and a spot light. These are listed in the Entity tree in the Prefab editor.
 
 ![](media/lamppost-prefab-entity-tree.webp)
 
@@ -50,7 +50,7 @@ Let's add five instances of the lamppost prefab to our scene.
 
 ![](media/lamppost-prefab-instances.webp)
 
-Now we'll modify one of the instances. In the **scene editor**, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Property Grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the **Scene editor**, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Property grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
 
 ![](media/lamppost-override-instance.webp)
 
@@ -58,10 +58,10 @@ We can see this in the scene view.
 
 ![](media/lamppost-prefab-pink.webp)
 
-Now let's see what happens when we go back to the prefab editor and change the color of the spot light in the prefab to green.
+Now let's see what happens when we go back to the Prefab editor and change the color of the spot light in the prefab to green.
 
 ![](media/lamppost-change-prefab.webp)
 
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
 
-![Changed colors](media/lamppost-prefab-instances-with-override.webp)
+![](media/lamppost-prefab-instances-with-override.webp)

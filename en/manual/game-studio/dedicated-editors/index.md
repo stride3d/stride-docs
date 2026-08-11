@@ -1,6 +1,6 @@
 # Dedicated editors
 
-Some assets are too complex to be comfortably editable via the **Property grid**, so instead they have their own dedicated editors which are made specifically for them. An example of this would be the **scene asset** and the **Scene editor**.
+Some assets are too complex to be comfortably editable via the **Property grid**, so instead they have their own **dedicated editors** which are made specifically for them. An example of this would be the **scene asset** and the **Scene editor**.
 
 ![](scene-editor/media/scene-editor.webp)
 

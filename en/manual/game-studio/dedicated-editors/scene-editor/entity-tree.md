@@ -1,6 +1,6 @@
 # Entity tree
 
-The **entity tree** shows the contents of a scene in a tree-like structure.
+The **Entity tree** shows the contents of a scene in a tree-like structure.
 
 ![](media/entity-tree.webp)
 
@@ -13,6 +13,6 @@ You can use it to rearrange elements using drag & drop.
 
 ## Expand or collapse all
 
-In the toolbar at the top, there are two icons, which allow you to expand and collapse and expand every item in the entity tree.
+In the toolbar at the top, there are two icons, which allow you to expand or collapse every item in the Entity tree.
 
 ![](media/entity-tree-collapse-all.webp)

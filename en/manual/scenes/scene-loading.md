@@ -21,11 +21,11 @@ public class Example : StartupScript
 
 The above will load a scene specified in `SceneToLoad` and add it as a sub-scene of the scene the entity is attached to.
 
-For more information about loading scenes or other assets, visit [Use an asset in code](../assets/use-an-asset-in-code.md).
+For more information about how to generally handle asset loading, visit [Use an asset in code](../assets/use-an-asset-in-code.md).
 
 ## Unload a scene
 
-To unload a scene, remove it from it's parent and unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*) to properly release it from memory.
+To unload a scene, remove it from its parent and unload it using [`Content.Unload`](xref:Stride.Core.Serialization.Contents.ContentManager.Unload*) to properly release it from memory.
 
 ```csharp
 public void UnloadScene(Scene scene)

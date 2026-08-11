@@ -6,7 +6,7 @@ The **Asset view** panel allows you to explore the contents of a folder. It's ty
 
 ## View asset compilation status
 
-Every asset has a small colored dot in the top left corner. It displays its [asset compilation status](../../assets/asset-compilation.md) (if it will be included in the build or not).
+Every asset has a small colored dot in the top left corner. It displays its [asset compilation status](../../assets/asset-compilation.md) (in other words: if it will be included in the build or not).
 
 ![](../../assets/media/asset-view-indicators.webp)
 
@@ -27,6 +27,9 @@ While typing, you will get suggestions that begin with a prefix:
 * **name:** - filters assets based on their name.
 * **tag:** - filters assets based on their [tag](../../assets/tags.md).
 * **type:** - filters assets based on their type.
+
+> [!NOTE]
+> Typing the prefixes in the filed **won't activate them**.
 
 Filters can be toggled by clicking on them.
 
