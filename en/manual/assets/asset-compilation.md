@@ -18,7 +18,7 @@ In the **Asset view**, you can see a dot in the top left corner of every asset t
 
 Each color represents something:
 
-[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+[!INCLUDE [status-dots](../../includes/assets/status-dots.md)]
 
 ## Root assets
 

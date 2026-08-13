@@ -21,4 +21,4 @@ You can also move your camera around similarly to a video game by holding down t
 
 You can change the **camera speed** in the 🎥 menu.
 
-![You can find the camera menu on the right side of the top toolbar](../manual/game-studio/dedicated-editors/scene-editor/media/viewport-change-camera-speed.webp)
+![You can find the camera menu on the right side of the top toolbar](media/viewport-change-camera-speed.webp)

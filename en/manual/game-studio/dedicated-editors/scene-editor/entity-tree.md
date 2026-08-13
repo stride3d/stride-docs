@@ -6,10 +6,7 @@ The **Entity tree** shows the contents of a scene in a tree-like structure.
 
 You can use it to rearrange elements using drag & drop.
 
-> [!NOTE]
-> Keep in mind that dropping the selection between two elements will move it between them, while dropping onto an element will move the selection inside of it.
->
-> TODO: VISUALIZATION
+[!INCLUDE [drag-and-drop-behavior-note](../../../../includes/scenes/drag-and-drop-behavior-note.md)]
 
 ## Expand or collapse all
 

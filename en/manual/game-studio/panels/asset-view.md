@@ -12,7 +12,7 @@ Every asset has a small colored dot in the top left corner. It displays its [ass
 
 Each color has a different meaning:
 
-[!INCLUDE [asset-status-dots](../../../includes/asset-status-dots.md)]
+[!INCLUDE [status-dots](../../../includes/assets/status-dots.md)]
 
 ## Filter assets
 

@@ -47,7 +47,7 @@ The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displa
 
 ![](../game-studio/dedicated-editors/scene-editor/media/viewport.webp)
 
-[!INCLUDE [viewport-navigation](../../includes/viewport-navigation.md)]
+[!INCLUDE [viewport-navigation](../../includes/scenes/viewport-navigation.md)]
 
 Entities can be selected from the Viewport by just clicking on them.
 
@@ -59,10 +59,7 @@ For more information on how to use the Viewport, read [Viewport](../game-studio/
 
 The [Entity tree](../game-studio/dedicated-editors/scene-editor/viewport.md) supports drag & drop, meaning that you can easily rearrange entities with your mouse.
 
-> [!NOTE]
-> Keep in mind that dropping the selection between two elements will move it there, while dropping onto an element will move the selection inside of it.
->
-> TODO: VISUALIZATION
+[!INCLUDE [drag-and-drop-behavior-note](../../includes/scenes/drag-and-drop-behavior-note.md)]
 
 ## Editing entities
 

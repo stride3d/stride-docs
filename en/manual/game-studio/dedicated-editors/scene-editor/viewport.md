@@ -6,7 +6,7 @@ The **Viewport** allows you to view and navigate your game's world.
 
 ## Navigating the world
 
-[!INCLUDE [viewport-navigation](../../../../includes/viewport-navigation.md)]
+[!INCLUDE [viewport-navigation](../../../../includes/scenes/viewport-navigation.md)]
 
 ## Move, rotate and skale entities
 
