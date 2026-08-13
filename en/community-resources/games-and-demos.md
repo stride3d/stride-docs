@@ -94,6 +94,19 @@
             <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/3454920/Banpos_Bridge_Wondrous_Worlds/">Steam Link</a></p>
         </div>
     </div>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/pistonica/pistonica-header.webp" class="card-img-top" alt="Pistonica Header">
+            <img src="media/pistonica/pistonica-gameplay.webp" class="card-img-bottom-disabled" alt="Pistonica Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">Pistonica</h5>
+                <p class="card-text">
+                    Pistonica invites you into a calm, open world where steam and machines meet. In this first-person steam automation game, you build and automate a refined factory, explore an island, research tech, and trade goods - all because of a strange radio signal.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/4018480/Pistonica/">Steam Link</a></p>
+        </div>
+    </div>
 </div>
 
 ## Open-Source Games and Prototypes
