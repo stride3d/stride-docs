@@ -1,27 +1,35 @@
 # Contribute to Stride engine
-Here you can find various pages describing building the source locally for different systems. You can also find information about Stride's architecture.
 
-## [Contribute code](contribute-code.md)
-Want to help out fixing bugs or making new features? Check out how you can do so.
+Welcome to the engine contributing documentation!
 
-## [Bug bounties](bug-bounties.md)
-Here you can learn about the process on our bug bounty process.
+These pages provide information about how to contribute to the engine as well as resources related to how Stride works and its architecture.
 
-## [Building on Windows](building-source-windows.md)
-Building and running the Stride engine locally on Windows using [Visual Studio](building-source-windows.md) or other [IDEs](building-source-windows-other-ide.md).
+## How to contribute
 
-[//]: # (### [Building on Linux]&#40;building-source-linux.md&#41;)
+1. **Find something you would like to work on.** If you are just getting started with Stride, issues marked with ['good first issue'](https://github.com/stride3d/stride/labels/good%20first%20issue) can be a good entry point.
 
-[//]: # (Building the Stride engine locally on Linux)
+2. **Notify other users.** Leave a message on the appropriate issue or create one if none exists.
 
-## [Localization](localization.md)
-Learn how manage translations for the engine.
+    > [!WARNING]
+    > This step is important to **ensure no one else is working on that same issue** and **allow other contributors and users to chime in**, so that your changes are properly architectured and fit well with the rest of the project.
 
-## [Hot reloading shaders](hot-reloading-shaders.md)
-Learn about hot reloading shaders.
+3. **Push your changes to a specific branch in your fork.**
 
-## [Source debugging](source-debugging.md)
-Learn how to do source debugging.
+4. **Submit a pull request and address reviews.** Other contributors and users may require you to make changes to make sure everything is working correctly and to ensure consistency.
 
-## [Visual studio plugin](visual-studio-plugin.md)
-Learn about the Visual studio plugin for shader development.
+    > [!NOTE]
+    > After creating that pull request and if it's your first time contributing a [CLA assistant](https://cla-assistant.io/) will ask you to sign the [.NET Foundation Contribution License Agreement](https://dotnetfoundation.org/docs/default-source/default-document-library/contribution-license-agreement.pdf?sfvrsn=40626e42_3).
+
+### Paid work 💵
+
+We also have funded [Open Collective Projects](https://opencollective.com/stride3d/projects/) in case **you want to earn a little extra**. These are either bug bounties, requests for new features or other tasks that are deemed important enough. **We can also create a new project for you** in case you are working on something large that the community would like to see.
+
+For more information, visit [Paid work](bug-bounties.md).
+
+## Coding style
+
+Please use and follow the coding style outlined in **the `.editorconfig` file** in the root of the repository ([link](https://github.com/stride3d/stride/blob/master/.editorconfig)). Your IDE of choice should be able to use it in order to automatically enforce its rules.
+
+## Architecture documentation
+
+We store architecture documentation in the main engine repository under `docs/`. They are **automatically copied** when building the documentation website to the [🏗️ Architecture](architecture/index.md) section for easier viewing.
