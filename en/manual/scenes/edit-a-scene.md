@@ -1,10 +1,10 @@
 # Edit a scene
 
-Scenes are a complex asset, meaning that they require the use of a dedicated editor — the [scene editor](../game-studio/dedicated-editors/scene-editor/index.md).
+Scenes are a complex asset, meaning that they require the use of a dedicated editor — the [Scene editor](../game-studio/dedicated-editors/scene-editor/index.md).
 
 ![](../game-studio/dedicated-editors/scene-editor/media/scene-editor.webp)
 
-## Opening the scene editor
+## Opening the Scene editor
 
 1. Locate the scene asset in the **Asset view**.
 
@@ -14,18 +14,18 @@ Scenes are a complex asset, meaning that they require the use of a dedicated edi
 
     ![](media/asset-view-open-scene.webp)
 
-3. The scene editor should now appear.
+3. The Scene editor should now appear.
 
     ![](media/scene-editor-empty.webp)
 
 > [!TIP]
-> You can have multiple scene editors opened and switch between them by using tabs.
+> You can have multiple Scene editors opened and switch between them by using tabs.
 >
 > ![](media/scene-editor-tabs.webp)
 
-## Navigating the scene editor
+## Navigating the Scene editor
 
-The scene editor consists of two components: the [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md) and the [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
+The Scene editor consists of two components: the [Entity tree](../game-studio/dedicated-editors/scene-editor/entity-tree.md) and the [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
 
 ![](../game-studio/dedicated-editors/scene-editor/media/scene-editor-layout.webp)
 

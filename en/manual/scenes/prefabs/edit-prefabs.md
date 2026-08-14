@@ -5,9 +5,9 @@
 
 Prefabs can be edited in their [dedicated editor](../../game-studio/dedicated-editors/prefab-editor/index.md), which works similarly to the [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md).
 
-## Open the prefab editor
+## Open the Prefab editor
 
-To open the prefab editor, in the **Asset view** double click a prefab or right-click and select **Edit asset**.
+To open the Prefab editor, in the **Asset view** double click a prefab or right-click and select **Edit asset**.
 
 ![](media/asset-view-open-prefab.webp)
 
@@ -15,7 +15,7 @@ Alternatively, you can open the prefab from the Scene editor by right-clicking a
 
 ![](media/scene-editor-open-prefab.webp)
 
-## Use the prefab editor
+## Use the Prefab editor
 
 The [Prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) works almost identically to the [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md). Navigation and entity management are exactly the same.
 
