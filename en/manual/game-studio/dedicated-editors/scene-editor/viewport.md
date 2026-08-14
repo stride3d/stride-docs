@@ -31,15 +31,15 @@ TODO: IMAGE
 
 | | Coordinate system | Description |
 | :-: | :-- | :-- |
-| ![](media/coordinate-space-world.webp) | World | Matches the world's coordinates. All axes are the same for every entity. |
-| ![](media/coordinate-space-local.webp) | Local | Axes are oriented in the same direction as the selected entity. |
-| ![](media/coordinate-space-camera.webp) | Camera | Axes are oriented in the same direction as the camera. |
+| ![](media/coordinate-space-world.webp) | 🌐 World | Matches the world's coordinates. All axes are the same for every entity. |
+| ![](media/coordinate-space-local.webp) | 📦 Local | Axes are oriented in the same direction as the selected entity. |
+| ![](media/coordinate-space-camera.webp) | 👁️ Camera | Axes are oriented in the same direction as the camera. |
 
 ### Snap to grid
 
 When moving entities, you can snap them to a grid for better precision.
 
-TODO: VISUALIZATION
+![](media/snap-to-grid.webp)
 
 Snap can be enabled by pressing the icon next to the transformation gizmos.
 
