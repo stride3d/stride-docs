@@ -4,7 +4,7 @@ Prefabs are reusable entity templates that can be used to create copies of the s
 
 **In the editor**, prefabs instances remain synchronized, meaning that when you make a change to the original prefab, all other instances are updated.
 
-TODO: VISUALIZATION
+![](media/prefab-sync.webp)
 
 **During runtime**, prefabs can be used to create new instances of premade objects on demand, letting you easily create entities without having to manually recreate them in code.
 

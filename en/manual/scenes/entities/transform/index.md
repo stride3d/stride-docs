@@ -8,7 +8,7 @@ An entity's transform is **relative to its parent**. This means that the parent 
 
 For example: if two entities are 1m apart from each other and the parent's scale is set to 20, those entities will in reality be spaced 20m from each other.
 
-TODO: VISUALIZATION
+![](media/local-and-world.webp)
 
 Values relative to their parent are referred to as **local-space** and the "real world" ones as **world-space**.
 
