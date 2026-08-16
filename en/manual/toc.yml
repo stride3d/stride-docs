@@ -595,8 +595,8 @@ items:
             items:
               - name: Types of rotation
                 href: scenes/entities/transform/types-of-rotation.md
-              - name: Matrices
-                href: scenes/entities/transform/matrices.md
+              - name: Local and world matrix
+                href: scenes/entities/transform/local-and-world-matrix.md
               - name: World units
                 href: scenes/entities/transform/world-units.md
       - name: Prefabs

@@ -54,7 +54,7 @@ Now we'll modify one of the instances. In the **Scene editor**, we select one **
 
 ![](media/lamppost-override-instance.webp)
 
-We can see this in the scene view.
+We can see this in the Scene editor.
 
 ![](media/lamppost-prefab-pink.webp)
 

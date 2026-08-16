@@ -1,12 +1,12 @@
 # Graphics Compositor editor
 
-The **graphics compositor** is one of the most advanced features of Stride, giving you control over every step in the rendering pipeline. Due to this, the **graphics compositor asset** requires a use of a **dedicated editor**.
+The [graphics compositor](../../../graphics/graphics-compositor/index.md) is one of the most advanced features of Stride, giving you control over every step in the rendering pipeline. Due to this, the **graphics compositor asset** requires a use of a **dedicated editor**.
 
 ![](media/graphics-compositor-editor.webp)
 
 ## Node Graph
 
-The node graph displays the correlation between different parts of the compositor. Everything starts from the **Entry points** node.
+The node graph displays the correlations between different parts of the compositor. Everything starts from the **Entry points** node.
 
 ![](media/entry-points.webp)
 

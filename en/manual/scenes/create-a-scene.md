@@ -8,7 +8,7 @@ This page outlines how to create a new scene in the editor and during runtime.
 
     ![](media/solution-explorer-main-project-package-assets.webp)
 
-2. In the **Asset view**, press the **➕ Add item** button and select **Scene > Scene**.
+2. In the **Asset view**, press the **➕ Add asset** button and select **Scene > Scene**.
 
     ![](media/asset-view-add-scene.webp)
 
@@ -26,6 +26,6 @@ var scene = new Scene();
 
 This scene isn't loadable, meaning that it can't be unloaded using the **content system**.
 
-Scenes created in code hold no benefit over entities. They can only be useful for replacing the root scene, which isn't the recommended way of structuring your game.
+Scenes created in code hold no benefit over entities. They can only be useful for replacing the root scene, which [isn't the recommended way of structuring your game](structuring-scenes.md).
 
 Blank scenes are used by the [splash screen](../files-and-folders/game-settings/splash-screen.md) for showing different content before loading the main scene.

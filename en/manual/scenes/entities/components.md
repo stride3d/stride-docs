@@ -39,7 +39,7 @@ var component = Entity.GetOrCreate<MyComponent>();
 ```
 
 > [!WARNING]
-> It's recommended to avoid getting components directly through code and instead creating a property to assign them in the **Property grid**. For more information visit [Best practices](../../scripts/best-practice.md).
+> It's recommended to avoid getting components directly through code and instead, creating a property to assign them in the **Property grid**. For more information, visit [Best practices](../../scripts/best-practice.md).
 
 You can iterate over all components of an entity.
 

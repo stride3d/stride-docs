@@ -1,4 +1,4 @@
-# Matrices
+# Local and world matrix
 
 **Matrices** are a powerful tool for advanced transform manipulation. They encompass an entity's position, rotation and scale relative to their parent or their world.
 
@@ -7,7 +7,7 @@
 
 ## Benefits and drawbacks
 
-There are some things to consider when using matrices over position, rotation and scale.
+There are some things to consider when using matrices over position, rotation and scale:
 
 * 🟩 More control over local and world transformations.
 * 🟩 Already used by many utility methods (e.g. `SetWorld`).
@@ -17,7 +17,7 @@ There are some things to consider when using matrices over position, rotation an
 
 ## Updating matrices
 
-Matrices are **updated by a processor after every update tick**. This means that when an entity is first added to a scene, or when it's transform changes after an update, the matrices become out-of-date.
+Matrices are **updated by a processor after every update tick**. This means that when an entity is first added to a scene, or when it's transform changes after an update, the matrices become **out-of-date**.
 
 Matrices can be manually updated using [`UpdateLocalMatrix`](xref:Stride.Engine.TransformComponent.UpdateLocalMatrix) and [`UpdateWorldMatrix`](xref:Stride.Engine.TransformComponent.UpdateWorldMatrix). **It's recommended to call these methods before doing anything with matrices** to ensure they are valid.
 
@@ -45,7 +45,7 @@ var up = Entity.Transform.WorldMatrix.Up;
 var down = Entity.Transform.WorldMatrix.Down;
 ```
 
-This is most commonly used with movement (making the player walk forwards) or with [physics queries](../../../physics/physics-queries/index.md) (e.g. checking if an enemy was hit in the direction the player is looking).
+This is most commonly used with movement (e.g. making the player walk forwards) or with [physics queries](../../../physics/physics-queries/index.md) (e.g. checking if an enemy was hit in the direction the player is looking).
 
 ## Decomposing
 

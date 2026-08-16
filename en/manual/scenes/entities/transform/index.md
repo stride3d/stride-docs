@@ -1,6 +1,6 @@
 # Transform
 
-The [transform component](xref:Stride.Engine.TransformComponent) exists on every entity in Stride. It defines the position, rotation and scale of an entity in the world, relative to its parent.
+The [transform component](xref:Stride.Engine.TransformComponent) exists on every entity in Stride. It defines the **position**, **rotation** and **scale** of an entity in the world, relative to its parent.
 
 ## Local and world
 
@@ -12,7 +12,7 @@ For example: if two entities are 1m apart from each other and the parent's scale
 
 Values relative to their parent are referred to as **local-space** and the "real world" ones as **world-space**.
 
-Typically, we work with values from the **local-space**, but sometimes, when accessing entities nested in other entities, we might have to use their **world** values.
+Typically, **we work with values from the local-space**, but sometimes, when accessing entities nested in other entities, we might have to use their **world** values.
 
 ## Get or set position, rotation and scale
 
@@ -50,7 +50,7 @@ var eulerAngles = new Vector3(pitch, yaw, roll);
 ```
 
 > [!WARNING]
-> The world scale may be inaccurate due to the nature of how it's represented.
+> The world scale may be inaccurate due to the nature of how it's represented (more about that later).
 
 To set the world position and/or rotation, you can use `SetWorld`.
 
@@ -62,11 +62,11 @@ Entity.Transform.UpdateWorldMatrix();
 Entity.Transform.SetWorld(worldPosition, worldRotation);
 ```
 
-As mentioned previously, the world scale may not be what you expect it to be. In certain configurations of rotations and uneven scales you can achieve scale modifications which are impossible to represent in a standard Vector3.
+As mentioned previously, the world scale may not be what you expect it to be. In certain configurations of rotations and uneven scales, you can achieve scale modifications which are **impossible to represent in a standard `Vector3`**.
 
 ![](media/impossible-world-scale.webp)
 
-However **if you're using even scales** (meaning that `X`, `Y` and `Z` are set to the same value) for the entity and its parents, then you can set the world scale by modifying the local scale to your desired value demodulated by the parent world scale.
+However **if you're using even scales** (meaning that `X`, `Y` and `Z` are set to the same value) for the entity and its parents, then you can set the world scale by modifying the local scale to your desired value, demodulated by the parent world scale.
 
 ```csharp
 var lossyWorldScale = new Vector3(1f, 1f, 1f);

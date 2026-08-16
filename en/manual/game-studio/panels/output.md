@@ -1,6 +1,6 @@
 # Output
 
-The **output** panels displays messages created while building your game or from loading the project.
+The **Output** panel displays messages created while building the game or from loading the project.
 
 ![](media/output.webp)
 
@@ -10,6 +10,6 @@ You can use the 🗑️ icon to clear old logs.
 
 ## Toggling log visibility
 
-At the top of the panel there are many buttons for toggling logs based on their type. You can see what they do by hovering your mouse over them.
+At the top of the panel, there are many buttons for toggling logs based on their type. You can see what they do by hovering your mouse over them.
 
 ![](media/output-toggle-logs.webp)

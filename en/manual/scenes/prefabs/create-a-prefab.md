@@ -20,13 +20,13 @@ You can also create a prefab from an existing entity or entities.
     ![](media/scene-editor-select-entities.webp)
 
     > [!TIP]
-    > Hold Ctrl to select multiple items.
+    > Hold **Ctrl** to select multiple items.
 
 2. Right-click the selection and select **Create prefab from selection**.
 
     ![](media/scene-editor-create-prefab-from-selection.webp)
 
-Game Studio creates a prefab asset from the entity or entities you selected. You can access the new prefab from the **Asset view**.
+Game Studio will then create a prefab asset from the entity or entities you selected. You can access the new prefab from the **Asset view**.
 
 ![](media/asset-view-new-prefab.webp)
 

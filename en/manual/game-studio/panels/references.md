@@ -1,6 +1,6 @@
 # References
 
-The **references** panel shows information of the selected asset about references. It's a useful tool when trying to debug why an asset is/isn't being compiled.
+The **References** panel shows the relation between other assets and the selection. It's a useful tool when trying to debug why an asset is/isn't being compiled.
 
 ![](media/references.webp)
 

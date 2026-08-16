@@ -12,7 +12,7 @@ At the top of the **Property grid**, you can use the search box to filter proper
 
 ## Customizing the look of a property
 
-Stride allows you to customize how your properties appear in the **Property grid** using the [Display](xref:Stride.Core.DisplayAttribute) attribute. It allows you to change the display name and category.
+Stride allows you to **customize how your properties appear in the Property grid** using the [Display](xref:Stride.Core.DisplayAttribute) attribute. You can use it to change the display name and category.
 
 ```csharp
 public class Example : StartupScript

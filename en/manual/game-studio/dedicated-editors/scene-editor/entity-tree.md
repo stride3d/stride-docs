@@ -4,7 +4,7 @@ The **Entity tree** shows the contents of a scene in a tree-like structure.
 
 ![](media/entity-tree.webp)
 
-You can use it to rearrange elements using drag & drop.
+You can use it to rearrange elements with **drag & drop**.
 
 [!INCLUDE [drag-and-drop-behavior-note](../../../../includes/scenes/drag-and-drop-behavior-note.md)]
 

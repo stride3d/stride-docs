@@ -6,11 +6,11 @@ Scenes are a complex asset, meaning that they require the use of a dedicated edi
 
 ## Opening the Scene editor
 
-1. Locate the scene asset in the **Asset view**.
+1. Locate your scene asset in the **Asset view**.
 
     ![](media/asset-view-locate-scene.webp)
 
-2. Double click the scene or right click and select **Edit asset...**
+2. Double click the scene or right click and select **🖉 Edit asset...**
 
     ![](media/asset-view-open-scene.webp)
 
@@ -19,7 +19,7 @@ Scenes are a complex asset, meaning that they require the use of a dedicated edi
     ![](media/scene-editor-empty.webp)
 
 > [!TIP]
-> You can have multiple Scene editors opened and switch between them by using tabs.
+> You can have multiple Scene editors opened and switch between them using tabs.
 >
 > ![](media/scene-editor-tabs.webp)
 
@@ -43,13 +43,13 @@ For more information about other features of the Entity tree, read [Entity tree]
 
 ### Viewport
 
-The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a 2D or 3D preview of a scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
+The [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md) displays a 3D or 2D preview of a scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
 
 ![](../game-studio/dedicated-editors/scene-editor/media/viewport.webp)
 
 [!INCLUDE [viewport-navigation](../../includes/scenes/viewport-navigation.md)]
 
-Entities can be selected from the Viewport by just clicking on them.
+Entities can be selected from the **Viewport** by just clicking on them.
 
 ![](media/viewport-select.webp)
 
@@ -57,7 +57,7 @@ For more information on how to use the Viewport, read [Viewport](../game-studio/
 
 ## Modifying the scene structure
 
-The [Entity tree](../game-studio/dedicated-editors/scene-editor/viewport.md) supports drag & drop, meaning that you can easily rearrange entities with your mouse.
+The [Entity tree](../game-studio/dedicated-editors/scene-editor/viewport.md) supports **drag & drop**, meaning that you can **easily rearrange entities with your mouse**.
 
 [!INCLUDE [drag-and-drop-behavior-note](../../includes/scenes/drag-and-drop-behavior-note.md)]
 

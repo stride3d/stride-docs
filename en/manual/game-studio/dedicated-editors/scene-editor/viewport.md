@@ -1,6 +1,6 @@
 # Viewport
 
-The **Viewport** allows you to view and navigate your game's world.
+The **Viewport** displays a 3D or 2D preview of a scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
 
 ![](media/viewport.webp)
 
@@ -25,7 +25,7 @@ You can also switch between these gizmo modes by pressing `Space`.
 
 ### Gizmo coordinate system
 
-The coordinate system determines the direction of axes for the gizmos. They can be changed in the toolbar:
+The **coordinate system** determines the direction of axes for the gizmos. It can be changed in the toolbar:
 
 ![](media/coordinate-space-change.webp)
 
@@ -54,9 +54,6 @@ Keep in mind these additional keyboard shortcuts:
 | :-: | :-- |
 | `Shift` | Temporarily toggles snap when held down. |
 | `N` | Snaps the object to the grid. |
-
-> [!TIP]
-> These shortcuts can be changed in the settings.
 
 ## Duplicating entities
 

@@ -3,6 +3,6 @@
 >
 > ![](media/drag-and-drop-behavior-difference.webp)
 >
-> You can see a detailed preview of where the selection will end up in the tooltip next to your mouse.
+> You can see a **detailed preview** of where the selection will end up in the **tooltip next to your mouse**.
 >
 > ![](media/drag-and-drop-tooltip.webp)

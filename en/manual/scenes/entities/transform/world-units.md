@@ -1,8 +1,8 @@
 # World units
 
-This page describes the units used by Stride for transforming entities.
+This page describes the units used in Stride.
 
-## Position
+## Translation
 
 In Stride, 1 unit of translation is **1 meter**.
 

@@ -1,6 +1,6 @@
 # Configurations
 
-Systems in Stride separate their settings into **configurations**. Most need to be added to the game settings asset manually. If a configuration doesn't exist in game settings while the game is running, Stride will create a blank one.
+Systems in Stride separate their settings into **configurations**. Most need to be added to the game settings asset manually. If a **configuration doesn't exist** while the game is running, Stride will **create a blank one and add it**.
 
 You can add a configuration by pressing **➕ Add configuration** and selecting the type of configuration which you want to add.
 
@@ -15,22 +15,20 @@ public class ProjectConfiguration : Configuration
 }
 ```
 
-You can then add the configuration to your **game settings**.
-
 > [!NOTE]
-> You might have to reload **Game Studio** in order for the configuration to become available in the **Property grid**.
+> You may have to reload **Game Studio** in order for the configuration to become available in the **Property grid**.
 
 ## Access a configuration in code
 
-To access a configuration in code, use [`GameSettings.Configurations.Get<T>`](xref:Stride.Data.PlatformConfigurations.Get*), where `T` is the type of configuration that you want to get ahold of.
+To access a configuration in code, use [`GameSettings.GetOrCreateConfiguration<T>`](xref:Stride.Engine.Design.GameSettings.GetOrCreateConfiguration*), where `T` is the type of configuration that you want to get ahold of.
 
 ```csharp
-var gameSettings = ((Game)Game).Settings;
-var audioConfiguration = gameSettings.Configurations.Get<AudioConfiguration>();
+var gameSettings = Services.GetService<IGameSettingsService>().Settings;
+var audioConfiguration = gameSettings.GetOrCreateConfiguration<AudioConfiguration>();
 ```
 
 > [!NOTE]
-> If a configuration doesn't exist (hasn't been added to the list in **Game Studio**), the method will return a new instance of that class.
+> If a configuration doesn't exist (hasn't been added in **Game Studio**), the method will add a new instance of it to the list and return it.
 
 ## Built-in configurations
 
@@ -54,14 +52,14 @@ For more information about audio, visit [Audio](../../audio/index.md).
 | :-- | :-- |
 | Simulations | A list of simulations used by the physics engine. For more information about simulations, visit [Simulation](../../physics/simulation.md). |
 
-For more information about bepu physics, visit [Physics](../../physics/index.md).
+For more information about Bepu physics, visit [Physics](../../physics/index.md).
 
 ### Editor
 
-The **editor** settings control how Game Studio displays entities in the Scene editor. These settings have no effect on your game.
+The **editor** configuration controls how Game Studio displays entities in the **Scene editor**. These settings have no effect on your game.
 
 > [!NOTE]
-> How **Game Studio** displays entities is also affected by the **Color space** setting under **Rendering**.
+> How **Game Studio** displays entities is also affected by the **Color space** setting under [Rendering](#rendering).
 
 ![](media/built-in-configuration-editor.webp)
 

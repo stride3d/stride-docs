@@ -21,15 +21,15 @@ By default, Game Studio **creates an empty parent entity with the prefab's entit
 
 ## Break link to prefab
 
-After adding a prefab instance to a scene, you can break the link between the prefab and any of its child entities. This means the child entity will no longer be affected by changes you make to the prefab.
+After adding a prefab instance to a scene, you are able to break the link between the prefab and any of its child entities. This means the child entity will no longer be affected by changes you make to the prefab.
 
 To do this, in the **Scene editor**, right-click a child entity or entities and select **Break link to prefab**.
 
 ![](media/scene-editor-break-link-to-prefab.webp)
 
-## Instantiate prefabs at runtime
+## Instantiate a prefab at runtime
 
-To use prefabs at runtime, you need to **instantiate them** and then **add them to a scene or parent** in code.
+To use a prefab at runtime, you'll need to **instantiate it** and then **add the newly created entities to a scene or parent** in code.
 
 ```csharp
 public class Example : StartupScript

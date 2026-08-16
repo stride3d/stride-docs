@@ -10,3 +10,7 @@ It consists of two parts:
 * [Entity tree](entity-tree.md) - a tree showing every element that belongs to a scene.
 
 ![](media/scene-editor-layout.webp)
+
+## Further reading
+
+For more information about how to edit scenes, visit [Scenes — Edit a scene](../../../scenes/edit-a-scene.md).

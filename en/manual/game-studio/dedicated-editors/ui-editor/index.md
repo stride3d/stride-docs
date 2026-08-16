@@ -18,7 +18,7 @@ When moving elements around, they are snapped to a grid (1 unit by default). You
 
 ### Change tool colors
 
-You can change colors of the selection gizmo by pressing the **👁️ eye** icon in the toolbar.
+You can change colors of gizmos by pressing the **👁️ eye** icon in the toolbar.
 
 ![](media/colors.webp)
 

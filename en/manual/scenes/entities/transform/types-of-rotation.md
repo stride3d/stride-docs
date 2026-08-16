@@ -1,6 +1,6 @@
 # Types of rotation
 
-Rotation is typically the most challenging part of working with transforms. This is due to one major problem: how do you define rotation?
+Rotation is typically the most challenging part of working with transforms. This is due to one major problem: **how do you define rotation?**
 
 ## Ways of defining rotation
 
@@ -31,7 +31,7 @@ Here's a summary of all the different ways of defining rotation, their benefits 
 
 * 🟩 More human-readable
 * 🟩 Easy to understand
-* 🟩 Easy to store (can be contained in a `Vector3`)
+* 🟩 Easy to store (requires a single `Vector3`)
 * 🟥 Difficult to compute
 * 🟥 Prone to [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
