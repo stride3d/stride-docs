@@ -2,11 +2,11 @@ You can navigate the viewport by zooming and panning the camera. There is also a
 
 | | Key | Description |
 | :-: | :-: | :-- |
-| | `Right mouse button` | Pan the camera |
-| | `Scroll` | Zoom |
-| | `F` | Focus on an object |
-| | `Alt + Left mouse button` | Orbit around a focused object |
-| | `Middle + Left mouse button` | Walk |
+| ![](media/viewport-pan.webp) | `Right mouse button` | Pan the camera |
+| ![](media/viewport-zoom.webp) | `Scroll` | Zoom |
+| ![](media/viewport-focus.webp) | `F` | Focus on an object |
+| ![](media/viewport-orbit.webp) | `Alt + Left mouse button` | Orbit around a focused object |
+| ![](media/viewport-walk.webp) | `Middle + Left mouse button` | Walk |
 
 You can also move your camera around similarly to a video game by holding down the **Right mouse button** and pressing other keys.
 
