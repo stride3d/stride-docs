@@ -27,7 +27,7 @@ You can also switch between these gizmo modes by pressing `Space`.
 
 The coordinate system determines the direction of axes for the gizmos. They can be changed in the toolbar:
 
-TODO: IMAGE
+![](media/coordinate-space-change.webp)
 
 | | Coordinate system | Description |
 | :-: | :-- | :-- |

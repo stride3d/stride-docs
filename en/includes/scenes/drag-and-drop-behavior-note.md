@@ -5,4 +5,4 @@
 >
 > You can see a detailed preview of where the selection will end up in the tooltip next to your mouse.
 >
-> TODO: IMAGE
+> ![](media/drag-and-drop-tooltip.webp)
