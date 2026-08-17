@@ -70,3 +70,8 @@ var pitch = eulerAngles.X;
 var yaw = eulerAngles.Y;
 var roll = eulerAngles.Z;
 ```
+
+## See also
+
+* [Wikipedia — Gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock)
+* [Wikipedia — Quaternion](https://en.wikipedia.org/wiki/Quaternion)

@@ -19,3 +19,7 @@
 2. In the **Property grid**, assign the prefab to the **Prefab** property by clicking the **🤚 Hand icon**.
 
     ![](media/property-grid-prefab-model-assign.webp)
+
+## See also
+
+* [Create a prefab](create-a-prefab.md)

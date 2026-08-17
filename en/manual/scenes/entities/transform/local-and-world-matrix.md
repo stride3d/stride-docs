@@ -66,3 +66,8 @@ Entity.Transform.WorldMatrix.Decompose(out float yaw, out float pitch, out float
 // Retrieve euler angles from yaw pitch roll
 var eulerAngles = new Vector3(pitch, yaw, roll);
 ```
+
+## See also
+
+* [Transform](index.md)
+* [Wikipedia — Matrix (mathematics)](https://en.wikipedia.org/wiki/Matrix_(mathematics))

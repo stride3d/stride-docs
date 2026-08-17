@@ -18,4 +18,5 @@ The graphics compositor determines **how the game is rendered at runtime and in 
 ## See also
 
 * [Graphics compositor](../../graphics/graphics-compositor/index.md)
+* [Scenes](../../scenes/index.md)
 * [Configurations](configurations.md)

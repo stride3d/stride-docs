@@ -24,3 +24,7 @@ You can easily convert degrees to radians and vice-versa using [`MathUtil.Degree
 ```csharp
 var lookBehind = Quaternion.RotationY(MathUtil.DegreesToRadians(180f));
 ```
+
+## See also
+
+* [Types of rotation](types-of-rotation.md)

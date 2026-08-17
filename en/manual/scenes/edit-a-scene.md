@@ -83,3 +83,7 @@ You can also set explicit values by editing properties of an entity's transform 
 ![](media/property-grid-change-transform.webp)
 
 For more information about how to use the Viewport, visit [Viewport](../game-studio/dedicated-editors/scene-editor/viewport.md).
+
+## See also
+
+* [Scene editor](../game-studio/dedicated-editors/scene-editor/index.md)

@@ -22,3 +22,9 @@ The [Prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) 
 ![](../../game-studio/dedicated-editors/prefab-editor/media/prefab-editor.webp)
 
 When you edit a prefab in the **Prefab editor**, the changes are applied to the instances of the prefab in other scenes in **real time**.
+
+## See also
+
+* [Prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md)
+* [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md)
+* [Entities](../entities/index.md)

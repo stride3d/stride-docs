@@ -24,3 +24,12 @@ Entity.Scene.Entities.AddRange(entities);
 ```
 
 The most common use for prefabs is to create a small piece of your scene (like a car, NPC, or item of furniture) and duplicate it as many times as you need. When you need to modify it (e.g. if you want to replace its model), you can change it in one place and apply the change everywhere at once.
+
+## In this section
+
+* [Create a prefab](create-a-prefab.md)
+* [Use prefabs](use-prefabs.md)
+* [Edit prefabs](edit-prefabs.md)
+* [Nested prefabs](nested-prefabs.md)
+* [Override prefab properties](override-prefab-properties.md)
+* [Prefab models](prefab-models.md)

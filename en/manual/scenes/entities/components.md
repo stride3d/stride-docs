@@ -74,3 +74,8 @@ Entity.Remove<MyComponent>();
 // Remove all component of type
 Entity.RemoveAll<MyComponent>();
 ```
+
+## See also
+
+* [Scripts](../../scripts/index.md).
+* [Property grid](../../game-studio/panels/property-grid.md)

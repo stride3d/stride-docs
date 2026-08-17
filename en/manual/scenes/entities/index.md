@@ -65,3 +65,11 @@ To remove an entity, simply set their scene to `null`.
 ```csharp
 entityToRemove.Scene = null;
 ```
+
+## In this section
+
+* [Components](components.md)
+* [Transform](transform/index.md)
+  * [Types of rotation](transform/types-of-rotation.md)
+  * [Local and world matrix](transform/local-and-world-matrix.md)
+  * [World units](transform/world-units.md)

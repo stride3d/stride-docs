@@ -31,3 +31,8 @@ This scene isn't loadable, meaning that it can't be unloaded using the **content
 Scenes created in code hold no benefit over entities. They can only be useful for replacing the root scene, which [isn't the recommended way of structuring your game](structuring-scenes.md).
 
 Blank scenes are used by the [splash screen](../files-and-folders/game-settings/splash-screen.md) for showing different content before loading the main scene.
+
+## See also
+
+* [Edit a scene](edit-a-scene.md)
+* [Create an asset](../assets/create-an-asset.md)

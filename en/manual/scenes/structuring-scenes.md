@@ -31,3 +31,7 @@ The **default scene** is defined in the [Game Settings asset](../files-and-folde
 To create a new folder, right click in the **Scene editor** and select **Create > Folder**.
 
 ![](media/entity-tree-create-folder.webp)
+
+## See also
+
+* [Sub-scenes](sub-scenes.md)

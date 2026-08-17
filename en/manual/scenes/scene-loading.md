@@ -58,3 +58,8 @@ public void ReloadScene(Scene scene, UrlReference<Scene> sceneUrl)
     parent.Children.Add(scene);
 }
 ```
+
+## See also
+
+* [Use an asset in code](../assets/use-an-asset-in-code.md)
+* [Entities](entities/index.md)

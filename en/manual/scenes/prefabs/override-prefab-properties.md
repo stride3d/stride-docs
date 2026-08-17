@@ -64,3 +64,8 @@ Now let's see what happens when we go back to the Prefab editor and change the c
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
 
 ![](media/lamppost-prefab-instances-with-override.webp)
+
+## See also
+
+* [Property grid](../../game-studio/panels/property-grid.md)
+* [Use prefabs](use-prefabs.md)

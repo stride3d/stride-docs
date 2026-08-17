@@ -32,3 +32,8 @@ Game Studio will then create a prefab asset from the entity or entities you sele
 
 > [!NOTE]
 > After you create a prefab from a selection, the original selection itself **becomes a prefab**.
+
+## See also
+
+* [Create an asset](../../assets/create-an-asset.md)
+* [Use prefabs](use-prefabs.md)

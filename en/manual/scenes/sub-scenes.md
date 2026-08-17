@@ -44,3 +44,8 @@ public class Example : StartupScript
 ```
 
 For more information on how to load scenes, visit [Scene loading](scene-loading.md).
+
+## See also
+
+* [Scene loading](scene-loading.md)
+* [Structuring scenes](structuring-scenes.md)

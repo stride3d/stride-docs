@@ -46,7 +46,12 @@ public class Example : StartupScript
 }
 ```
 
-For more information about using entities in code, visit [Entities](../entities/index.md#entities-in-code).
+For more information about using entities in code, visit [Entities — Entities in code](../entities/index.md#entities-in-code).
 
 > [!NOTE]
 > Changes made to instantiated entities from a prefab at runtime **do not affect the base prefab.**
+
+## See also
+
+* [Create a prefab](create-a-prefab.md)
+* [Entities — Entities in code](../entities/index.md#entities-in-code)

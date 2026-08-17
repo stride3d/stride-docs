@@ -88,3 +88,8 @@ else
     Entity.Transform.Scale = Vector3.Demodulate(worldScale, Entity.Transform.Parent.WorldMatrix.ScaleVector);
 }
 ```
+
+## See also
+
+* [Entities](../index.md)
+* [Local and world matrix](local-and-world-matrix.md)
