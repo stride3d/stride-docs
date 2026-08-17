@@ -1,5 +1,8 @@
 # Local and world matrix
 
+<span class="badge text-bg-primary">Advanced</span>
+<span class="badge text-bg-success">Programmer</span>
+
 **Matrices** are a powerful tool for advanced transform manipulation. They encompass an entity's position, rotation and scale relative to their parent or their world.
 
 > [!WARNING]

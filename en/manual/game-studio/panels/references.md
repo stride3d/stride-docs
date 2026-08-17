@@ -1,5 +1,7 @@
 # References
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 The **References** panel shows the relation between other assets and the selection. It's a useful tool when trying to debug why an asset is/isn't being compiled.
 
 ![](media/references.webp)

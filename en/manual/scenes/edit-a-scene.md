@@ -1,5 +1,8 @@
 # Edit a scene
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+
 Scenes are a complex asset, meaning that they require the use of a dedicated editor — the [Scene editor](../game-studio/dedicated-editors/scene-editor/index.md).
 
 ![](../game-studio/dedicated-editors/scene-editor/media/scene-editor.webp)

@@ -1,5 +1,8 @@
 # Scene editor
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+
 The **Scene editor** is one of the most important dedicated editors in Game Studio — it's where you will spent most of your time visually working on a game.
 
 ![](media/scene-editor.webp)

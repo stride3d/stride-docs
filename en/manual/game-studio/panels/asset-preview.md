@@ -1,5 +1,7 @@
 # Asset preview
 
+<span class="badge text-bg-primary">Beginner</span>
+
 The **Asset preview** panel allows you to quickly glance at how an asset looks like, without having to open it.
 
 ![](media/asset-preview.webp)

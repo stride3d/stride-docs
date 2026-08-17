@@ -1,5 +1,8 @@
 # Entity tree
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+
 The **Entity tree** shows the contents of a scene in a tree-like structure.
 
 ![](media/entity-tree.webp)

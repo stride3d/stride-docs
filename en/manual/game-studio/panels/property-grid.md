@@ -1,5 +1,7 @@
 # Property grid
 
+<span class="badge text-bg-primary">Beginner</span>
+
 The **Property grid** is an essential tool when working on a game. It shows a list of properties of the selected asset, entity or any other item that exposes modifiable values.
 
 ![](media/property-grid.webp)

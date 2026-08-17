@@ -1,5 +1,9 @@
 # Prefabs
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 **Prefabs** are reusable entity templates that can be used to create copies of the same object.
 
 **In the editor**, prefabs instances remain synchronized, meaning that when you make a change to the original prefab, all other instances are updated.

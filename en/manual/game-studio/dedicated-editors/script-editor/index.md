@@ -1,5 +1,8 @@
 # Script editor
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Stride allows you to edit code directly through **Game Studio** using the built-in **Script editor**.
 
 ![](media/script-editor.webp)

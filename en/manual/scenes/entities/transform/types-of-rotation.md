@@ -1,5 +1,8 @@
 # Types of rotation
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Rotation is typically the most challenging part of working with transforms. This is due to one major problem: **how do you define rotation?**
 
 ## Ways of defining rotation

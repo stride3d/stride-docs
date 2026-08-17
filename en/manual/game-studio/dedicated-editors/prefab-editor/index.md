@@ -1,5 +1,7 @@
 # Prefab editor
 
+<span class="badge text-bg-primary">Beginner</span>
+
 The **Prefab editor** allows you to edit [prefabs](../../../scenes/prefabs/index.md) similarly to how you would edit entities in a scene.
 
 ![](media/prefab-editor.webp)

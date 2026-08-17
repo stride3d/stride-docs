@@ -1,5 +1,7 @@
 # World units
 
+<span class="badge text-bg-primary">Beginner</span>
+
 This page describes the units used in Stride.
 
 ## Translation

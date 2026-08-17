@@ -1,5 +1,7 @@
 # Asset view
 
+<span class="badge text-bg-primary">Beginner</span>
+
 The **Asset view** panel allows you to explore the contents of a folder. It's typically used in conjunction with the **Solution explorer**.
 
 ![](media/asset-view.webp)

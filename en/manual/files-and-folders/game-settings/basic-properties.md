@@ -1,5 +1,8 @@
 # Basic properties
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+
 Here's a list of basic properties that are found in **game settings**:
 
 ![](media/basic-properties.webp)

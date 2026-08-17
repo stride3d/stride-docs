@@ -1,8 +1,8 @@
 # Use prefabs
 
 <span class="badge text-bg-primary">Intermediate</span>
-<span class="badge text-bg-success">Programmer</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
 
 Prefab instances can be added to a scene in **Game Studio** or instantiated through code at runtime.
 

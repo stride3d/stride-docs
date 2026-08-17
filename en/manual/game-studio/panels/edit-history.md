@@ -1,5 +1,7 @@
 # Edit history
 
+<span class="badge text-bg-primary">Intermediate</span>
+
 The **Edit history** panel displays the undo history — a list of actions that modified something in the project files and that can be undone using **Ctrl + Z** and redone using **Ctrl + Y**.
 
 Latest changes appear at the bottom.

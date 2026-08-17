@@ -1,5 +1,9 @@
 # Components
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Every entity has a list of **components** that define what the entity is, how it looks and how it behaves.
 
 ## Create a new component

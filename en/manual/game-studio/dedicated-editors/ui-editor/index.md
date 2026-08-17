@@ -1,5 +1,8 @@
 # UI editor
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+
 The **UI editor** is used for editing UI pages and libraries.
 
 ![](media/ui-editor.webp)

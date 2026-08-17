@@ -1,7 +1,6 @@
 # Override prefab properties
 
 <span class="badge text-bg-primary">Intermediate</span>
-<span class="badge text-bg-success">Programmer</span>
 <span class="badge text-bg-success">Designer</span>
 
 If you modify a property in a prefab instance, the instance no longer inherits changes from the prefab for that property. This is called an **override**.

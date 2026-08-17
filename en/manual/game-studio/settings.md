@@ -1,5 +1,7 @@
 # Settings
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Game Studio's settings can be customized by going to **Edit > Settings**.
 
 ![](media/open-settings.webp)

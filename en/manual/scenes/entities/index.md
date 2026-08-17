@@ -1,5 +1,9 @@
 # Entities
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 **Entities** are game elements containing a collection of [components](components.md) that define what they are and how they behave (e.g. [model component](xref:Stride.Engine.ModelComponent)).
 
 Entities can have **child entities** with their own components.

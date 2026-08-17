@@ -1,5 +1,8 @@
 # Scene loading
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Scene loading is managed by the **content system**. Loaded scenes need to be added as a [sub-scene](sub-scenes.md) of another scene or replace the root scene in order to become a part of the game.
 
 ## Load a scene

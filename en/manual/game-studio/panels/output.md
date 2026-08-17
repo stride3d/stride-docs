@@ -1,5 +1,7 @@
 # Output
 
+<span class="badge text-bg-primary">Beginner</span>
+
 The **Output** panel displays messages created while building the game or from loading the project.
 
 ![](media/output.webp)

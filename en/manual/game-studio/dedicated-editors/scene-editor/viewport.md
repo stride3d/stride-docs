@@ -1,5 +1,8 @@
 # Viewport
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+
 The **Viewport** displays a 3D or 2D preview of a scene, without running the game. It allows you to look at the environment from different angles and change the transform of entities in an intuitive and visual way.
 
 ![](media/viewport.webp)

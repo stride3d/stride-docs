@@ -1,5 +1,9 @@
 # Configurations
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 Systems in Stride separate their settings into **configurations**. Most need to be added to the game settings asset manually. If a **configuration doesn't exist** while the game is running, Stride will **create a blank one and add it**.
 
 You can add a configuration by pressing **➕ Add configuration** and selecting the type of configuration which you want to add.

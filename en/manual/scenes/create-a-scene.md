@@ -1,5 +1,7 @@
 # Create a scene
 
+<span class="badge text-bg-primary">Beginner</span>
+
 This page outlines how to create a new scene in the editor and during runtime.
 
 ## Create a scene in Game Studio

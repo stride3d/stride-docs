@@ -1,5 +1,7 @@
 # Themes
 
+<span class="badge text-bg-primary">Beginner</span>
+
 Game Studio's appearance can be customized in its settings, by changing the theme.
 
 > [!NOTE]

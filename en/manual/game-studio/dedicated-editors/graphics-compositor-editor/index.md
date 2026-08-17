@@ -1,5 +1,9 @@
 # Graphics Compositor editor
 
+<span class="badge text-bg-primary">Intermediate</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Artist</span>
+
 The [graphics compositor](../../../graphics/graphics-compositor/index.md) is one of the most advanced features of Stride, giving you control over every step in the rendering pipeline. Due to this, the **graphics compositor asset** requires a use of a **dedicated editor**.
 
 ![](media/graphics-compositor-editor.webp)

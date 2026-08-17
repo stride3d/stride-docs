@@ -1,5 +1,9 @@
 # Transform
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 The [transform component](xref:Stride.Engine.TransformComponent) exists on every entity in Stride. It defines the **position**, **rotation** and **scale** of an entity in the world, relative to its parent.
 
 ## Local and world

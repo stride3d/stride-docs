@@ -1,5 +1,7 @@
 # Layout
 
+<span class="badge text-bg-primary">Beginner</span>
+
 **Game Studio** consists of multiple panels, serving distinct functions. A lot of them react to changes made in others. When developing games with **Game Studio**, it's important to familiarize yourself with them.
 
 Additionally, **some assets may also have their own [dedicated editor](dedicated-editors/index.md)**. The most notable example of this are [scenes](../scenes/index.md) and the [Scene editor](dedicated-editors/scene-editor/index.md), which is where you will spent the majority of your time while using Game Studio.

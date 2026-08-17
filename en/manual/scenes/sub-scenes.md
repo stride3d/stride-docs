@@ -1,5 +1,9 @@
 # Sub-scenes
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+<span class="badge text-bg-success">Programer</span>
+
 On top of holding entities, scenes can also contain **sub-scenes**. In a recommended configuration, different parts of the game (e.g. levels) would be added as a sub-scene of the main root scene.
 
 ![](media/entity-tree-sub-scenes.webp)

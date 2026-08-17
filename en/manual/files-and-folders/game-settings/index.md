@@ -1,5 +1,9 @@
 # Game settings
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 You can configure the global settings of your game in the **game settings** asset. It stores the configurations of Stride systems and additional properties.
 
 ![](media/property-grid-game-settings.webp)

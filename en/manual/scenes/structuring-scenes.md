@@ -1,5 +1,9 @@
 # Structuring scenes
 
+<span class="badge text-bg-primary">Beginner</span>
+<span class="badge text-bg-success">Level designer</span>
+<span class="badge text-bg-success">Programmer</span>
+
 This page contains **information about features** and **tips** that can help you **properly structure your scenes** and organize them.
 
 ## Recommended scene structure
