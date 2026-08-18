@@ -499,6 +499,8 @@ items:
         items:
           - name: Setup and requirements
             href: platforms/linux/setup-and-requirements.md
+          - name: Install Stride (wine)
+            href: platforms/linux/install-stride-wine.md
       - name: MacOS
         href: platforms/macos/index.md
       - name: Android
