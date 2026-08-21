@@ -98,10 +98,10 @@ blockquote {
 li:has(.positive)::marker {
     content: '＋ ';
     font-weight: bold;
-    color: green;
+    color: var(--bs-success);
 }
 
 li:has(.negative)::marker {
     content: '－ ';
-    color: red;
+    color: var(--bs-danger);
 }
