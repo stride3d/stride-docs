@@ -72,24 +72,24 @@ blockquote {
 }
 
 /* Adjust content font-size and margins */
-.content {
-    article > * {
+.content > article {
+    > * {
         margin-left: 0.4rem;
     }
 
-    h1, h2, p:has(span.badge) {
+    > h1, > h2, > p:has(span.badge) {
         margin-left: 0rem;
     }
 
-    h1 {
+    > h1 {
         font-size: 2.7rem;
     }
 
-    h2 {
+    > h2 {
         font-size: 2.2rem;
     }
 
-    h3 {
+    > h3 {
         font-size: 1.7rem;
     }
 }
