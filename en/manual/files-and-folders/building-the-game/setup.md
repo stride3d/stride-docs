@@ -92,7 +92,7 @@ There are benefits and drawbacks to making a game **self contained**:
 
 * <span class="positive"/> **Benefits:** the game will work even if a user doesn't have the runtime installed.
 * <span class="negative"/> **Drawbacks:** the game's size will be larger.
-`
+
 ### [Visual Studio](#tab/visual-studio)
 
 In the profile settings, change the **Deployment mode** option to **Self-contained**.
