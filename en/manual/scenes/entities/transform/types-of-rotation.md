@@ -20,11 +20,11 @@ Here's a summary of all the different ways of defining rotation, their benefits 
 
 **Yaw pitch roll** is the easiest to explain. The idea is to store the rotation in 3 easily identifiable variables: `yaw`, `pitch` and `roll`. This approach has its benefits and drawbacks:
 
-* 🟩 More human-readable
-* 🟩 Easiest to understand
-* 🟥 Difficult to store (requires 3 separate values)
-* 🟥 Difficult to compute
-* 🟥 Prone to [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
+* <span class="positive"/> More human-readable
+* <span class="positive"/> Easiest to understand
+* <span class="negative"/> Difficult to store (requires 3 separate values)
+* <span class="negative"/> Difficult to compute
+* <span class="negative"/> Prone to [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
 **Yaw pitch roll** is available in many places during runtime as an alternative to the far-more complex [quaternions](#quaternions).
 
@@ -32,11 +32,11 @@ Here's a summary of all the different ways of defining rotation, their benefits 
 
 **Euler angles** are also quite simple to explain. The idea is to store the rotation in 3 axes: `X`, `Y` and `Z`. This approach shares similar benefits and drawbacks with [yaw pitch roll](#yaw-pitch-roll):
 
-* 🟩 More human-readable
-* 🟩 Easy to understand
-* 🟩 Easy to store (requires a single `Vector3`)
-* 🟥 Difficult to compute
-* 🟥 Prone to [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
+* <span class="positive"/> More human-readable
+* <span class="positive"/> Easy to understand
+* <span class="positive"/> Easy to store (requires a single `Vector3`)
+* <span class="negative"/> Difficult to compute
+* <span class="negative"/> Prone to [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
 **Euler angles** are best used for setting an entity's initial rotation and serialization, which is why they are used in **Game Studio**.
 
@@ -44,10 +44,10 @@ Here's a summary of all the different ways of defining rotation, their benefits 
 
 Unlike the previous two, **Quaternions** are almost impossible to explain without going deep into mathematics. They have their own benefits and drawbacks:
 
-* 🟩 Easier to compute
-* 🟩 Have less ambiguity
-* 🟥 Difficult to understand
-* 🟥 Not readable
+* <span class="positive"/> Easier to compute
+* <span class="positive"/> Have less ambiguity
+* <span class="negative"/> Difficult to understand
+* <span class="negative"/> Not readable
 
 **Quaternions** are what is used by Stride during runtime. They can be controlled indirectly using utility methods.
 

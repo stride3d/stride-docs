@@ -12,11 +12,11 @@
 
 There are some things to consider when using matrices over position, rotation and scale:
 
-* 🟩 More control over local and world transformations.
-* 🟩 Already used by many utility methods (e.g. `SetWorld`).
-* 🟩 Easier access to world values.
-* 🟥 To ensure correct values, **matrices need to be [manually updated](#updating-matrices) first**.
-* 🟥 Matrix values are read-only.
+* <span class="positive"/> More control over local and world transformations.
+* <span class="positive"/> Already used by many utility methods (e.g. `SetWorld`).
+* <span class="positive"/> Easier access to world values.
+* <span class="negative"/> To ensure correct values, **matrices need to be [manually updated](#updating-matrices) first**.
+* <span class="negative"/> Matrix values are read-only.
 
 ## Updating matrices
 
