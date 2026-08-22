@@ -6,6 +6,9 @@ If you want to **create games using Stride**, this guide provides the installati
 
 If you're interested in **building the Stride engine from source** or **contributing to its development**, please visit the [Stride GitHub repository](https://github.com/stride3d/stride) for instructions on how to build from source and contribute to the project.
 
+> [!NOTE]
+> This guide is for **Windows users only**. For Linux instructions, visit [Install the editor using Wine](../platforms/linux/install-the-editor-using-wine.md).
+
 ## Installation steps
 
 1. Download the Stride Installer from the [Stride website](http://stride3d.net/download/).

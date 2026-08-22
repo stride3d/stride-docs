@@ -9,21 +9,23 @@ Stride is a cross-platform engine, which means that you can create a single game
 | Name | Overall status | Editor | Building (without the editor) | [Code-only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html) |
 | :-- | :-- | :-: | :-: | :-: |
 | [Windows](windows/index.md) 10, 11 | Full support | 🟩 | 🟩 | 🟩 |
-| [Linux](linux/index.md) | Partial support, read more [here](linux/index.md#development-support) | 🟥 | 🟩 | 🟩 |
+| [Linux](linux/index.md) | Partial support, read more [here](linux/index.md#development-support) | 🟨<sup>*</sup> | 🟩 | 🟩 |
 | [MacOS](macos/index.md) | Partial support, read more [here](macos/index.md#development-support) | 🟥 | 🟩 | 🟩 |
 
+<sup>*</sup> Despite not supporting Linux, it is possible to run the editor using a compatibility layer. See [Install the editor using Wine](linux/install-the-editor-using-wine.md).
+
 > [!NOTE]
-> **Game Studio** (the editor) is being rewritten to be cross-platform. Currently however, it's not possible to use it outside of **Windows**.
+> **Game Studio** (the editor) is being rewritten to be cross-platform. Currently however, it's not possible to use it natively outside of **Windows**.
 
 ## Supported target platforms
 
 * [Windows](windows/index.md) 10, 11
 * [Linux](linux/index.md)
-* [MacOS](macos/index.md)*
-* [Android](android/index.md)*
-* [iOS](ios/index.md)*
+* [MacOS](macos/index.md)<sup>*</sup>
+* [Android](android/index.md)<sup>*</sup>
+* [iOS](ios/index.md)<sup>*</sup>
 
-\* There are some things to keep in mind when targeting this platform. For more information, visit its dedicated page.
+<sup>*</sup> There are some things to keep in mind when targeting this platform. For more information, visit its dedicated page.
 
 ## Platform specific code
 
@@ -48,6 +50,7 @@ if (Platform.Type == PlatformType.Android)
   * [Xbox Live](uwp/xbox-live.md)
 * [Linux](linux/index.md)
   * [Setup and requirements](linux/setup-and-requirements.md)
+  * [Install the editor using Wine](linux/install-the-editor-using-wine.md)
 * [MacOS](macos/index.md)
 * [Android](android/index.md)
 * [iOS](ios/index.md)
