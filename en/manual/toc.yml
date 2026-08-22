@@ -135,43 +135,51 @@ items:
   - name: Game Studio
     href: game-studio/index.md
     items:
-      - name: Scenes
-        href: game-studio/scenes.md
+      - name: Layout
+        href: game-studio/layout.md
+      - name: Panels
+        href: game-studio/panels/index.md
         items:
-          - name: Create and open a scene
-            href: game-studio/create-a-scene.md
-          - name: Navigate in the Scene Editor
-            href: game-studio/navigate-in-the-scene-editor.md
-          - name: Manage scenes
-            href: game-studio/manage-scenes.md
-          - name: Load scenes
-            href: game-studio/load-scenes.md
-          - name: Add entities
-            href: game-studio/add-entities.md
-          - name: Manage entities
-            href: game-studio/manage-entities.md
-      - name: Prefabs
-        href: game-studio/prefabs/index.md
+          - name: Asset errors
+            href: game-studio/panels/asset-errors.md
+          - name: Asset preview
+            href: game-studio/panels/asset-preview.md
+          - name: Asset view
+            href: game-studio/panels/asset-view.md
+          - name: Edit history
+            href: game-studio/panels/edit-history.md
+          - name: Output
+            href: game-studio/panels/output.md
+          - name: Property grid
+            href: game-studio/panels/property-grid.md
+          - name: References
+            href: game-studio/panels/references.md
+          - name: Solution explorer
+            href: game-studio/panels/solution-explorer.md
+      - name: Dedicated editors
+        href: game-studio/dedicated-editors/index.md
         items:
-          - name: Create a prefab
-            href: game-studio/prefabs/create-a-prefab.md
-          - name: Use prefabs
-            href: game-studio/prefabs/use-prefabs.md
-          - name: Edit prefabs
-            href: game-studio/prefabs/edit-prefabs.md
-          - name: Nested prefabs
-            href: game-studio/prefabs/nested-prefabs.md
-          - name: Override prefab properties
-            href: game-studio/prefabs/override-prefab-properties.md
-          - name: Prefab models
-            href: game-studio/prefabs/prefab-models.md
-      - name: Game settings
-        href: game-studio/game-settings.md
-        items:
-          - name: Splash screen
-            href: game-studio/splash-screen.md
-      - name: World units
-        href: game-studio/world-units.md
+          - name: Scene editor
+            href: game-studio/dedicated-editors/scene-editor/index.md
+            items:
+              - name: Viewport
+                href: game-studio/dedicated-editors/scene-editor/viewport.md
+              - name: Entity tree
+                href: game-studio/dedicated-editors/scene-editor/entity-tree.md
+          - name: Prefab editor
+            href: game-studio/dedicated-editors/prefab-editor/index.md
+          - name: Script editor
+            href: game-studio/dedicated-editors/script-editor/index.md
+          - name: Sprite editor
+            href: game-studio/dedicated-editors/sprite-editor/index.md
+          - name: UI editor
+            href: game-studio/dedicated-editors/ui-editor/index.md
+          - name: Graphics Compositor editor
+            href: game-studio/dedicated-editors/graphics-compositor-editor/index.md
+      - name: Settings
+        href: game-studio/settings.md
+      - name: Themes
+        href: game-studio/themes/index.md
 
   - name: Graphics
     href: graphics/index.md
@@ -534,6 +542,15 @@ items:
             href: files-and-folders/external-packages/using-nuget-packages.md
           - name: Publish a NuGet package
             href: files-and-folders/external-packages/publish-a-nuget-package.md
+      - name: Game Settings
+        href: files-and-folders/game-settings/index.md
+        items:
+          - name: Basic properties
+            href: files-and-folders/game-settings/basic-properties.md
+          - name: Configurations
+            href: files-and-folders/game-settings/configurations.md
+          - name: Splash screen
+            href: files-and-folders/game-settings/splash-screen.md
       - name: Version control
         href: files-and-folders/version-control.md
       - name: Cached files
@@ -554,6 +571,49 @@ items:
             href: files-and-folders/building-the-game/build-file-structure.md
           - name: Distributing
             href: files-and-folders/building-the-game/distributing.md
+
+  - name: Scenes
+    href: scenes/index.md
+    items:
+      - name: Create a scene
+        href: scenes/create-a-scene.md
+      - name: Edit a scene
+        href: scenes/edit-a-scene.md
+      - name: Sub-scenes
+        href: scenes/sub-scenes.md
+      - name: Structuring scenes
+        href: scenes/structuring-scenes.md
+      - name: Scene loading
+        href: scenes/scene-loading.md
+      - name: Entities
+        href: scenes/entities/index.md
+        items:
+          - name: Components
+            href: scenes/entities/components.md
+          - name: Transform
+            href: scenes/entities/transform/index.md
+            items:
+              - name: Types of rotation
+                href: scenes/entities/transform/types-of-rotation.md
+              - name: Local and world matrix
+                href: scenes/entities/transform/local-and-world-matrix.md
+              - name: World units
+                href: scenes/entities/transform/world-units.md
+      - name: Prefabs
+        href: scenes/prefabs/index.md
+        items:
+          - name: Create a prefab
+            href: scenes/prefabs/create-a-prefab.md
+          - name: Use prefabs
+            href: scenes/prefabs/use-prefabs.md
+          - name: Edit prefabs
+            href: scenes/prefabs/edit-prefabs.md
+          - name: Nested prefabs
+            href: scenes/prefabs/nested-prefabs.md
+          - name: Override prefab properties
+            href: scenes/prefabs/override-prefab-properties.md
+          - name: Prefab models
+            href: scenes/prefabs/prefab-models.md
 
   - name: Scripts
     href: scripts/index.md

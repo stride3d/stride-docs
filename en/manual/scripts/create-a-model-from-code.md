@@ -7,7 +7,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
 * creating a model from an asset
 * creating a procedural model using built-in geometric primitives (eg a sphere or cube)
-* instantiating a prefab that contains a model (see [Use prefabs](../game-studio/prefabs/use-prefabs.md))
+* instantiating a prefab that contains a model (see [Use prefabs](../scenes/prefabs/use-prefabs.md))
 
 ## Create a model from an asset
 
@@ -162,4 +162,4 @@ model.Materials.Add(0, material);
 
 * [Create a script](create-a-script.md)
 * [Use a script](use-a-script.md)
-* [Use prefabs](../game-studio/prefabs/use-prefabs.md)
+* [Use prefabs](../scenes/prefabs/use-prefabs.md)
