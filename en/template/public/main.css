@@ -51,6 +51,7 @@ footer .link-danger {
     color: var(--stride-red-web);
 }
 
+/* Blockquote and alert style */
 blockquote {
     border-width: 0 0 0 4px;
     border-color: var(--stride-red-web);
@@ -61,4 +62,46 @@ blockquote {
 [data-bs-theme=dark] blockquote {
     border-color: var(--stride-red-web);
     background: #33383c;
+}
+
+.alert.TIP {
+    --bs-alert-color: var(--bs-success-text-emphasis);
+    --bs-alert-bg: var(--bs-success-bg-subtle);
+    --bs-alert-border-color: var(--bs-success-border-subtle);
+    --bs-alert-link-color: var(--bs-success-text-emphasis);
+}
+
+/* Adjust content font-size and margins */
+.content > article {
+    > * {
+        margin-left: 0.4rem;
+    }
+
+    > h1, > h2, > p:has(span.badge) {
+        margin-left: 0rem;
+    }
+
+    > h1 {
+        font-size: 2.7rem;
+    }
+
+    > h2 {
+        font-size: 2.2rem;
+    }
+
+    > h3 {
+        font-size: 1.7rem;
+    }
+}
+
+/* +/- bullet points */
+li:has(.positive)::marker {
+    content: '＋ ';
+    font-weight: bold;
+    color: var(--bs-success);
+}
+
+li:has(.negative)::marker {
+    content: '－ ';
+    color: var(--bs-danger);
 }

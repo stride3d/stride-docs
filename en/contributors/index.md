@@ -40,5 +40,5 @@ In order to thrive, Stride requires help from other community members. There are
 
 * **🎮 Creating games, tutorials and blogs** - you are massively helping us with spreading the word about the engine just by using it. You can showcase your projects in our [Community resources](../community-resources/index.md).
 * **🗣️ Community activity** - we don't have a big marketing budget and rely on the community to grow. You can get involved in discussions on our [Discord](https://discord.gg/f6aerfE) and [GitHub Discussions](https://github.com/stride3d/stride/discussions).
-* **🐞 Submit bug reports** - Stride doesn't use telemetry, so the only way to let us know that something is broken is by [creating an issue on GitHub](https://github.com/stride3d/stride/issues).
+* **🐞 Submit bug reports** - the only way to let us know that something needs to be fixed is by [creating an issue on GitHub](https://github.com/stride3d/stride/issues).
 * **🔍 PR reviews** - going over pull requests to the engine, docs and website takes a lot of time, so having an extra pair of eyes to look over these changes can speed up this process.
