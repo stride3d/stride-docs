@@ -287,11 +287,13 @@ items:
             href: graphics/graphics-compositor/render-textures.md
           - name: Render group and masks
             href: graphics/graphics-compositor/render-groups-and-masks.md
-      - name: Effects and shaders
+      - name: Shaders and effects
         href: graphics/effects-and-shaders/index.md
         items:
-          - name: Effect language
-            href: graphics/effects-and-shaders/effect-language.md
+          - name: What are shaders?
+            href: graphics/effects-and-shaders/what-are-shaders.md
+          - name: Create a shader
+            href: graphics/effects-and-shaders/create-a-shader-or-effect.md
           - name: Shading language
             href: graphics/effects-and-shaders/shading-language/index.md
             items:
@@ -305,10 +307,10 @@ items:
                 href: graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md
               - name: Shader stages
                 href: graphics/effects-and-shaders/shading-language/shader-stages.md
-          - name: Custom shaders
-            href: graphics/effects-and-shaders/custom-shaders.md
-          - name: Shader development with Visual Studio Code
-            href: graphics/effects-and-shaders/shader-development-vscode.md
+          - name: Effects (.sdfx)
+            href: graphics/effects-and-shaders/effects/index.md
+          - name: Use a shader
+            href: graphics/effects-and-shaders/use-a-shader-or-effect.md
           - name: Compile shaders
             href: graphics/effects-and-shaders/compile-shaders.md
       - name: Low-level API

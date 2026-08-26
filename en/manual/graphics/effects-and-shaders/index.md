@@ -1,43 +1,30 @@
-# Effects and shaders
+# Shaders and effects
 
-Stride uses a programmable shading pipeline. You can write [custom shaders](custom-shaders.md), create @'Stride.Graphics.Effect's from them, and use them for drawing. The @'Stride.Rendering.EffectSystem' class provides an easy way to load an effect.
+In every computer there are two types of components that process instructions:
 
-## Load an effect
+* **Central processing unit (CPU)** - this is where most logic is executed, including your own **C# scripts**.
+* **Graphics processing unit (GPU)** - mostly responsible for graphics calculations, which are done using **shaders**.
 
-Use:
+Shaders are a fundamental tool for the graphics of a game. Stride contains a lot of built-in shaders to take care of the basics, but in order to create advanced visuals, you'll have to create **custom shaders**.
 
-```cs
-var myEffect = EffectSystem.LoadEffect("MyEffect").WaitForResult();
+## Stride's approach to shaders
+
+Stride uses its own shading language called **SDSL**. Unlike a lot of the alternatives, it allows you to write **reusable code** that can be shared across multiple shaders.
+
+```sdsl
+shader MyShader : ComputeColor, Texturing, MyOtherShader
+{
+    override float4 Compute()
+    {
+        var pos = streams.
+    }
+};
 ```
 
-You can then bind the effect as [pipeline state](../low-level-api/pipeline-state.md).
+## What are effects?
 
-An effect also often defines a set of parameters. To set these, you need to [bind resources](../low-level-api/resources.md) before drawing.
+**Effects** are a way of creating new versions of shaders from existing ones. You can think of **shaders** as small **building blocks** and an **effect** as the thing that **joins them together**.
 
-## Shaders
+The most notable example of an effect are [materials](../materials/index.md), which combine multiple shaders (e.g. diffuse, specular, emission) into one.
 
-Shaders are authored in the [Stride's shading language](shading-language/index.md), which is an extension of `HLSL`. They provide true composition of modular shaders via [inheritance](shading-language/shader-classes-mixins-and-inheritance.md), shader [mixins](shading-language/composition.md) and [automatic weaving of shader in-out attributes](shading-language/automatic-shader-stage-input-output.md).
-
-## Effects
-
-[Effects](effect-language.md) in Stride use C#-like syntax to further combine shaders. They provide conditional composition of shaders to generate effect permutations.
-
-As some platforms can't compile shaders at runtime (eg iOS, Android, etc), effect permutation files (`.sdeffectlog`) are used to enumerate all permutations ahead of time.
-
-## Target everything
-
-Stride shaders are converted automatically to the target graphics platform — either plain `HLSL` for Direct3D or `SPIR-V` for Vulkan platforms.
-
-For mobile platforms, shaders are optimized by a GLSL optimizer to improve performance.
-
-## In this section
-
-* [Effect language](effect-language.md)
-* [Shading language](shading-language/index.md)
-    - [Shader classes, mixins and inheritance](shading-language/shader-classes-mixins-and-inheritance.md)
-    - [Composition](shading-language/composition.md)
-    - [Compile shaders](compile-shaders.md)
-    - [Templates](shading-language/templates.md)
-    - [Shader stage input/output automatic management](shading-language/automatic-shader-stage-input-output.md)
-* [Custom shaders](custom-shaders.md)
-* [Shader development with Visual Studio Code](shader-development-vscode.md)
+TODO: VISUALIZATION
