@@ -1,4 +1,4 @@
-# Shaders and effects
+# Shaders
 
 In every computer there are two types of components that process instructions:
 

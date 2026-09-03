@@ -287,32 +287,29 @@ items:
             href: graphics/graphics-compositor/render-textures.md
           - name: Render group and masks
             href: graphics/graphics-compositor/render-groups-and-masks.md
-      - name: Shaders and effects
+      - name: Shaders
         href: graphics/effects-and-shaders/index.md
         items:
           - name: What are shaders?
             href: graphics/effects-and-shaders/what-are-shaders.md
           - name: Create a shader
-            href: graphics/effects-and-shaders/create-a-shader-or-effect.md
+            href: graphics/effects-and-shaders/create-a-shader.md
+          - name: Types of shaders
+            href: graphics/effects-and-shaders/types-of-shaders/index.md
+            items:
+              - name: Compute color
+                href: graphics/effects-and-shaders/types-of-shaders/compute-color.md
           - name: Shading language
             href: graphics/effects-and-shaders/shading-language/index.md
             items:
-              - name: Classes, mixins and inheritance
-                href: graphics/effects-and-shaders/shading-language/shader-classes-mixins-and-inheritance.md
-              - name: Composition
-                href: graphics/effects-and-shaders/shading-language/composition.md
-              - name: Templates
-                href: graphics/effects-and-shaders/shading-language/templates.md
-              - name: Automatic shader stage input/output
-                href: graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md
-              - name: Shader stages
-                href: graphics/effects-and-shaders/shading-language/shader-stages.md
-          - name: Effects (.sdfx)
-            href: graphics/effects-and-shaders/effects/index.md
+              - name: Variables
+                href: graphics/effects-and-shaders/shading-language/variables.md
           - name: Use a shader
-            href: graphics/effects-and-shaders/use-a-shader-or-effect.md
+            href: graphics/effects-and-shaders/use-a-shader.md
           - name: Compile shaders
             href: graphics/effects-and-shaders/compile-shaders.md
+          - name: Effects (.sdfx)
+            href: graphics/effects-and-shaders/effects/index.md
       - name: Low-level API
         href: graphics/low-level-api/index.md
         items:

@@ -14,22 +14,20 @@ const SDSL_NUMBER_MODE = {
 
 export default function(hljs) {
 
-  let matrixBases =
-    'bool double float half int uint ';
+  let baseVariables =
+    'float half byte sbyte short ushort int uint long double bool min10float min16float min12int min16int min16uint';
 
   let matrixSuffixes = [
     '',
-    '1', '2', '3', '4',
-    '1x1', '1x2', '1x3', '1x4',
-    '2x1', '2x2', '2x3', '2x4',
-    '3x1', '3x2', '3x3', '3x4',
-    '4x1', '4x2', '4x3', '4x4'];
+    '2x2', '2x3', '2x4',
+    '3x2', '3x3', '3x4',
+    '4x2', '4x3', '4x4'];
 
-  let matrixTypes = [];
+  let variableTypes = [];
 
-  for (let base of matrixBases.split(' ')) {
+  for (let base of baseVariables.split(' ')) {
     for (let suffix of matrixSuffixes) {
-      matrixTypes.push(base + suffix);
+      variableTypes.push(base + suffix);
     }
   }
 
@@ -57,11 +55,14 @@ export default function(hljs) {
     name: 'SDSL',
     keywords: {
       keyword:
-        'abstract asm break case cbuffer centroid child class clone column_major compile compose const continue default discard do effect else enum extern false for foreach groupshared if in inline inout interface internal line lineadj linear macro matrix mixin namespace nointerpolation noperspective operator out override packoffset params partial pass patchstream point precise register remove return rgroup row_major sample sampler sampler_state sampler1D sampler2D sampler3D samplerCUBE shader shared snorm stage static stream string string struct switch tbuffer technique technique10 technique11 texture texture1D texture1DArray texture2D texture2DArray texture3D textureCube triangle triangleadj true typedef uniform unorm unsigned using var vector void volatile while',
+        // Taken from https://github.com/stride3d/stride/blob/master/sources/shaders/Stride.Shaders.Parsers/Parsing/SDSL/Parsers/LiteralParsers/Reserved.cs
+        variableTypes.join(' ') + ' asm asm_fragment bool break case cbuffer centroid class column_major compile compile_fragment compose const continue default discard do double dword else export extern false float for foreach fxgroup groupshared half if in inline inout int interface line lineadj linear matrix min16float min10float min16int min12int min16uint namespace nointerpolation noperspective out packoffset pass pixelfragment point precise return register rgroup row_major sample sampler shader shared snorm stateblock stateblock_state static stream string struct switch tbuffer technique technique10 technique11 texture true typedef triangle triangleadj uint uniform unorm unsigned var vector vertexfragment void volatile while',
 
       type:
-        // Data Types
-        matrixTypes.join(' ') + 'LineStream, LinkType, MemberName, Output, InputPatch, OutputPatch, Pass, PointStream, BlendState, RasterizerState, DepthStencilState, SamplerComparisonState, SamplerState, RWTexture1D, RWTexture1DArray, RWTexture2D, RWTexture2DArray, RWTexture3D, Semantic, StreamOutputObject , Streams, Buffer, RWBuffer, ByteAddressBuffer, RWByteAddressBuffer, StructuredBuffer, RWStructuredBuffer, AppendStructuredBuffer, ConsumeStructuredBuffer, Technique, Technique10, Technique11, Texture1D , Texture1DArray, Texture2D, Texture2DArray, Texture2DMS, Texture2DMSArray, Texture3D, TextureCube, TriangleStream Constants, Input, Input2',
+        // Taken from https://github.com/stride3d/stride/blob/master/sources/shaders/Stride.Shaders.Parsers/Parsing/SDSL/Parsers/LiteralParsers/Reserved.cs
+        'AppendStructuredBuffer BlendState Buffer ByteAddressBuffer CompileShader ComputeShader ConsumeStructuredBuffer DepthStencilState DepthStencilView DomainShader GeometryShader Hullshader InputPatch LineStream NULL OutputPatch PixelShader PointStream RasterizerState RenderTargetView RWBuffer RWByteAddressBuffer RWStructuredBuffer RWTexture1D RWTexture1DArray RWTexture2D RWTexture2DArray RWTexture3D SamplerState SamplerComparisonState StructuredBuffer Texture1D Texture1DArray Texture2D Texture2DArray Texture2DMS Texture2DMSArray Texture3D TextureCube TextureCubeArray TriangleStream VertexShader ' +
+        // Other important classes
+        'ComputeColor Texturing Global ShaderBase',
 
       built_in:
         // Semantics
