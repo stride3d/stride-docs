@@ -1,10 +1,10 @@
 # Stride 4.4 release notes
 
-Stride 4.4 is one of the largest engine updates in years, with roughly **2400 commits** since 4.3.
+Stride 4.4 is one of the largest updates the engine has received in years, with roughly **2700 commits** since the previous version!
 
-The focus of this release is on **modernization and reach**, with much more stable **Vulkan** and **Direct3D 12** backends,
-full platform coverage across **Windows**, **Linux**, **macOS**, **Android** and **iOS** (all continuously tested on CI), an improved shader compiler and
-a new CLI tool providing an alternative to some of Game Studio's functions.
+The main focus of this release was on **modernization and reach**, which includes much more stable **Vulkan** and **Direct3D 12** backends, support for **non-Windows platforms** no longer being experimental and an overhaul of the shader compiler.
+
+This update also includes many exciting new features, such as a **CLI tool**, ability to **replace read-only assets** and much more.
 
 ## ✨ Highlights
 
@@ -12,26 +12,35 @@ Here are a few of the stand-out changes:
 
 ### 📱 Platform support
 
-Stride 4.4 widens both where you can *build* games and where they *run*.
+Up to this point, Stride was a mostly-Windows engine, forcing you to create and release your games on it for the best experience. This update changes that.
 
-**Build anywhere:** with changes to the asset compiler, projects can now be built on **Linux** and **macOS**, not just Windows.
+**All platforms have been brought back into shape** and the test suite for them has been expanded to make sure they won't fall behind again.
 
-**Run everywhere:** non-Windows platforms were brought back into shape, while the test suite for them was expanded to ensure they are kept that way.
+Additionally, with changes to the asset compiler, **building projects on Linux and macOS** now works the same **as it does on Windows**. 
 
-![A Stride sample running on a physical iPhone](media/ReleaseNotes-4.4/ios.webp)
+![A Stride sample running on a physical iPhone.](media/ReleaseNotes-4.4/ios.webp)
 
-### ⌨️ A command-line workflow: Stride CLI + `dotnet new` templates
+For Linux users: this release removed some legacy code which made it now possible to **use Game Studio on Linux via Proton/Wine**. The experience isn't as great as on the native Windows version, but it's still a bit step-forward for Linux compatibility. If you'd like to try it out, we have created a dedicated tutorial
 
-You can now create, build and run Stride games entirely from the command line, with no Game Studio install required thanks to our new cli tool. For more information on how to install and use it, visit the [Stride CLI](../manual/get-started/stride-cli.md) page of our documentation.
+![Game Studio running on Linux.](media/ReleaseNotes-4.4/stride-proton.webp)
+
+> [!NOTE]
+> **Game Studio** is being rewritten to be cross-platform.
+
+### ⌨️ The new `stride` CLI tool
+
+Some tasks that previously required the use of **Game Studio** or the **launcher** can now be done directly **from the command-line!** By using the CLI tool you can install and manage versions of Stride, create new projects and launch Game Studio with simple commands.
+
+For more information, visit the [Stride CLI](../manual/get-started/stride-cli.md) page of our documentation.
 
 ```bash
-dotnet tool install -g stride.cli      # install the Stride CLI
-stride sdk install                     # install the latest version of Stride
-stride new topdownrpg && cd TopDownRPG # create a project from a template
-stride studio                          # open it in Game Studio
+dotnet tool install -g stride.cli      # Install Stride CLI
+stride sdk install                     # Install the latest version of Stride
+stride new topdownrpg && cd TopDownRPG # Create a project from a template
+stride studio                          # Open it in Game Studio
 ```
 
-`dotnet new` templates are also available as a lightweight fallback if you'd rather use the standard .NET tooling directly:
+`dotnet new` templates are also available if you'd rather use the standard .NET tooling directly:
 
 ```bash
 dotnet new install Stride.Templates
@@ -40,10 +49,12 @@ dotnet new stride-game -n MyGame
 
 ### 🎮 Vulkan & Direct3D 12
 
-Both backends got a big **overhaul and stability pass** and are in a much better shape. They're now solid enough that we expect to make a modern backend the editor default before long and **Direct3D 11 is a candidate for removal in the next major release**. GPU crashes are also far easier to track down: Stride can now pinpoint the exact rendering step that caused a device hang.
+Both APIs have **received a large overhaul**. They're now solid enough that **we have plans** to make one of them **the editor default** and potentially **remove Direct3D 11** in the next major release. 
+
+GPU crashes are also far easier to track down now. Stride can now pinpoint the exact rendering step that caused a device hang.
 
 > [!NOTE]
-> If you write custom low-level rendering code, note that D3D12 and Vulkan now use an **explicit barrier/layout model** (and D3D12 requires **Enhanced Barriers** — the legacy path was removed).
+> If you write custom low-level rendering code, note that D3D12 and Vulkan now use an **explicit barrier/layout model**. D3D12 also requires **Enhanced Barriers**.
 
 Also, you can now pick the graphics API right from the UI for both your project and the editor. Game Studio can be configured in **Settings > Environment > Graphics API** (takes effect after a restart) and the game in the properties of the Windows package.
 
@@ -61,8 +72,8 @@ Instead of parsing and stitching shaders together as text, Stride now works in *
 
 What this means for you:
 
-* **Much faster shader handling.** Generating the many shader permutations a real game needs no longer touches a text parser (variations are recombined straight from cached bytecode).
-* **Built on mature, standard tooling.** **Vulkan** consumes **SPIR-V** natively, while **Direct3D 11/12** and **Metal** reuse **SPIRV-Cross** (which converts SPIR-V to HLSL/MSL). These components are battle-tested and less likely to cause issues.
+* **Much faster shader handling.** Generating the many shader permutations a game needs now works directly with byte-code, without a need to re-parse any text.
+* **Improved stability.** Stride now uses battle-tested tools in order to handle conversion between different Graphics APIs.
 * **Far better support for advanced features.** Direct3D 12 and Vulkan now handle things like **tessellation** and **compute shaders** much more reliably.
 * **A future-proof foundation.** With a real SPIR-V pipeline in place, adding modern GPU features such as **ray tracing**, **mesh shaders/meshlets** and **wave intrinsics** becomes much easier going forward.
 
@@ -75,7 +86,7 @@ What this means for you:
 
 ### ⚡ NativeAOT & trimming support
 
-The engine is now **NativeAOT and trimming-friendly**. This unlocks smaller, faster-starting, self-contained game builds. For more information on how to use this, visit our [documentation](../manual/files-and-folders/building-the-game/native-aot.md).
+The engine is now **NativeAOT and trimming-friendly**. This unlocks smaller, faster-starting, self-contained game builds. For more information on how to use this, visit the [documentation](../manual/files-and-folders/building-the-game/native-aot.md).
 
 ### 📦 Improved assets and content workflow
 
@@ -93,12 +104,12 @@ var playerModel = Content.Load(Assets.Models.Player);
 
 Additionally, Stride now allows you to create **replacement assets**, which can be used to override assets from external packages or even the engine itself. For more information, visit their dedicated page in the [documentation](../manual/assets/replacement-assets.md).
 
-![Replacement assets can be used to override the default font used by Stride](media/ReleaseNotes-4.4/replacement-assets.webp)
+![Replacement assets can be used to override the default font used by Stride.](media/ReleaseNotes-4.4/replacement-assets.webp)
 
 ### 🧰 Build, tooling & project system
 
 * **Much faster asset builds.** Assets compile **2x** faster for a typical game, and up to **10×** faster for Stride's own tests, thanks to a new asset-build cache.
-* **`.slnx` is the new default solution format** for projects created by Stride. Existing `.sln` solutions still open and save normally.
+* **`.slnx` is the new default solution format.** Existing `.sln` solutions still open and save normally.
 * **Dropped support for 32-bit.** The engine now only targets modern 64-bit systems.
 
 ### ⚙️ Changes to the physics `CharacterComponent`
@@ -147,8 +158,12 @@ The new **CompareGold** tool makes reviewing these tests painless: visualize dif
 
 * **Custom shaders:** the SDSL compiler was rewritten, so you might want to review how your custom shaders render. If you have a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 * **Low-level graphics:** **Direct3D 12** now requires **Enhanced Barriers**. The legacy barrier path has been removed.
+* **Vulkan updated to 1.3:** this might break support for older devices and users with outdated drivers.
 * **Convex hulls:** the library we use to generate convex hulls (V-HACD) was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters, so you may want to validate them for accuracy.
 * **Bepu `CharacterController` was reworked:** existing character setups will behave differently and need adjustment. See [⚙️ Changes to the physics `CharacterComponent`](#-changes-to-the-physics-charactercomponent).
+* **Removed the ability to override Game Settings:** the feature was partially broken and not really that useful, which is why it was decided to remove it altogether. If you want to change settings depending on a user's platform/device, consider creating a **custom Game class**.
+* **`GameSettings.Configuration.Get<T>()` is now `GameSettings.GetOrCreateConfiguration<T>()`:** this was caused by other changes to Game Settings (see previous point).
+* **`ScrollViewer::ScrollOfInternal` is no private:** the property was mistakenly made public, which as its name suggests, shouldn't have been the case.
 * Dropped support for **32-bit** systems.
 
 ## 🙏 Contributors
