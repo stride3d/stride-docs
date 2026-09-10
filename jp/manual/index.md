@@ -6,9 +6,9 @@ _navRel: ../toc.html
 _tocTitle: 'Manual'
 ---
 
-# Stride 4.0 マニュアル
+# Stride マニュアル
 <!--
-# Stride 4.0 manual
+# Stride manual
 -->
 
 ![マニュアル](get-started/media/game-editor-scene.jpg)
@@ -18,51 +18,12 @@ _tocTitle: 'Manual'
 These pages contain information about how to use Stride, an open-source C# game engine.
 -->
 
->[!Note]
->Stride のマニュアルは現在作成中であり、定期的に新しい内容に更新されています。ドキュメントの更新については、[Twitter の Stride アカウント](https://twitter.com/stridedotnet)をフォローしてください。
-<!--
->[!Note]
->The Stride manual is under construction and updated regularly with new content. Follow [Stride on Twitter](https://twitter.com/stridedotnet?lang=en) for documentation updates.
--->
-
 ## 最新のドキュメント
 <!--
 ## Latest documentation
 -->
 
-* <span class="label label-doc-highlight">New</span> [パッケージング（NuGet）](nuget/index.md)
-
-* <span class="label label-doc-highlight">New</span> [ビデオ](video/index.md)
-
-* <span class="label label-doc-highlight">New</span> [キャッシュされたファイル](files-and-folders/cached-files.md)
-
-* <span class="label label-doc-highlight">New</span> [iOS](platforms/ios.md)
-
-* <span class="label label-doc-highlight">New</span> [シェーダーのコンパイル](graphics/effects-and-shaders/compile-shaders.md)
-
-* <span class="label label-doc-highlight">Updated</span> [スカイボックスと背景](graphics/textures/skyboxes-and-backgrounds.md)
-
-* <span class="label label-doc-highlight">Updated</span> [モデルファイルを使ったカメラのアニメーション](graphics/cameras/animate-a-camera-with-a-model-file.md)
-
-* <span class="label label-doc-highlight">Updated</span> [マテリアル スロット](graphics/materials/material-slots.md)
-
-<!--
-* <span class="label label-doc-highlight">New</span> [NuGet](nuget/index.md)
-
-* <span class="label label-doc-highlight">New</span> [Video](video/index.md)
-
-* <span class="label label-doc-highlight">New</span> [Cached files](files-and-folders/cached-files.md)
-
-* <span class="label label-doc-highlight">New</span> [iOS](platforms/ios.md)
-
-* <span class="label label-doc-highlight">New</span> [Compile shaders](graphics/effects-and-shaders/compile-shaders.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Skyboxes and backgrounds](graphics/textures/skyboxes-and-backgrounds.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Animate a camera with a model file](graphics/cameras/animate-a-camera-with-a-model-file.md)
-
-* <span class="label label-doc-highlight">Updated</span> [Material slots](graphics/materials/material-slots.md)
--->
+[!INCLUDE [docs-changes-recent](../includes/docs-changes-recent.md)]
 
 ## ドキュメントの改善について
 <!--
