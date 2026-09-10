@@ -1,6 +1,6 @@
 # Stride 4.4 release notes
 
-Stride 4.4 is one of the largest updates the engine has received in years, with roughly **2700 commits** since the previous version!
+Stride 4.4 is one of the largest updates the engine has received in years, with roughly **2800 commits** since the previous version!
 
 The main focus of this release was on **modernization and reach**, which includes much more stable **Vulkan** and **Direct3D 12** backends, support for **non-Windows platforms** no longer being experimental and an overhaul of the shader compiler.
 
@@ -12,22 +12,20 @@ Here are a few of the stand-out changes:
 
 ### 📱 Platform support
 
-Up to this point, Stride was a mostly-Windows engine, forcing you to create and release your games on it for the best experience. This update changes that.
+So far, Stride has mostly been a Windows-first engine. Other platforms were supported, but creating and running games on them would often lead to many problems. This update changes that.
 
-**All platforms have been brought back into shape** and the test suite for them has been expanded to make sure they won't fall behind again.
-
-Additionally, with changes to the asset compiler, **building projects on Linux and macOS** now works the same **as it does on Windows**. 
+**All platforms have been brought back into shape** and the test suite for them has been expanded to make sure they won't fall behind again. Additionally, with changes to the asset compiler, **building projects on Linux and macOS** now works the same **as it does on Windows**.
 
 ![A Stride sample running on a physical iPhone.](media/ReleaseNotes-4.4/ios.webp)
 
-For Linux users: this release removed some legacy code which made it now possible to **use Game Studio on Linux via Proton/Wine**. The experience isn't as great as on the native Windows version, but it's still a bit step-forward for Linux compatibility. If you'd like to try it out, we have created a dedicated tutorial
+**For Linux users:** this release removed some legacy code which now makes it possible to **use Game Studio on Linux via Proton/Wine**. The experience isn't as solid as on the native Windows version, but it's still a big step forward for Linux development. If you'd like to try it out, we have created a guide that's available in the documentation TODO: ADD LINK.
 
 ![Game Studio running on Linux.](media/ReleaseNotes-4.4/stride-proton.webp)
 
 > [!NOTE]
 > **Game Studio** is being rewritten to be cross-platform.
 
-### ⌨️ The new `stride` CLI tool
+### ⌨️ New `stride` CLI tool
 
 Some tasks that previously required the use of **Game Studio** or the **launcher** can now be done directly **from the command-line!** By using the CLI tool you can install and manage versions of Stride, create new projects and launch Game Studio with simple commands.
 
@@ -49,26 +47,26 @@ dotnet new stride-game -n MyGame
 
 ### 🎮 Vulkan & Direct3D 12
 
-Both APIs have **received a large overhaul**. They're now solid enough that **we have plans** to make one of them **the editor default** and potentially **remove Direct3D 11** in the next major release. 
+Both APIs have **received a large overhaul**. They're now solid enough that **we plan** to make one of them **the editor default** and potentially **remove Direct3D 11** in the next major release. 
 
-GPU crashes are also far easier to track down now. Stride can now pinpoint the exact rendering step that caused a device hang.
+This overhaul also made it far easier to track down GPU crashes, as Stride can now pinpoint the exact rendering step that caused a device hang.
 
 > [!NOTE]
-> If you write custom low-level rendering code, note that D3D12 and Vulkan now use an **explicit barrier/layout model**. D3D12 also requires **Enhanced Barriers**.
+> If you write custom low-level rendering code, note that Direct3D 12 and Vulkan now use an **explicit barrier/layout model**. Direct3D 12 also requires **Enhanced Barriers**.
 
-Also, you can now pick the graphics API right from the UI for both your project and the editor. Game Studio can be configured in **Settings > Environment > Graphics API** (takes effect after a restart) and the game in the properties of the Windows package.
+You can now pick the graphics API right from the UI for both your project and the editor. Game Studio can be configured in **Settings > Environment > Graphics API** (takes effect after a restart) and the game in the properties of the Windows package.
 
 ![Selecting a Windows project package's graphics API from the Property grid](media/ReleaseNotes-4.4/game-graphics-api-selector.webp)
 
 ### 🎨 A brand-new SDSL shader compiler
 
-The biggest internal change in 4.4 is a **complete rewrite of the SDSL shader compiler**, now built around a modern **SPIR-V**-centric pipeline.
+The biggest internal change in 4.4 is a **complete rewrite of the SDSL shader compiler**, now built around a modern [SPIR-V](https://www.khronos.org/spirv/)-centric pipeline.
 
 Instead of parsing and stitching shaders together as text, Stride now works in **SPIR-V bytecode** end to end:
 
 * Each `.sdsl` shader is parsed **once** and compiled into its own **SPIR-S** module (SPIR-Stride, Stride's extended SPIR-V dialect).
 * Effects (`.sdfx`) then **mix and compose** those modules **directly as bytecode**, converting the result to standard **SPIR-V** for the GPU backend.
-* Crucially, text parsing happens **only at that first step**: recombining a new shader variation from already-compiled SPIR-S needs no re-parsing.
+* Crucially, text parsing happens **only at that first step:** recombining a new shader variation from already-compiled SPIR-S needs no re-parsing.
 
 What this means for you:
 
@@ -106,22 +104,31 @@ Additionally, Stride now allows you to create **replacement assets**, which can 
 
 ![Replacement assets can be used to override the default font used by Stride.](media/ReleaseNotes-4.4/replacement-assets.webp)
 
-### 🧰 Build, tooling & project system
+### 🚀 Launcher update
+
+Along with 4.4, we also released an **update to the launcher**. On the surface, **everything is mostly the same**, aside from a minor face-lift. The real change comes under-the-hood with the launcher now using **Avalonia** as its UI framework, which will make it possible to target **Linux** and **macOS** in the future.
+
+TODO: IMAGE
+
+The new launcher is a part of the ongoing **cross-platform editor rewrite**. This is an enormous effort that will take a lot of time and effort, so if you are willing to help, **check out the [white paper](https://docs.google.com/document/d/1q2nPnmrSfSJ9Njn8yxFPVeQSsJo7T0rvC7b4Q7ddmVY/edit?usp=sharing) and the [Avalonia Editor Rewrite project](https://github.com/orgs/stride3d/projects/6/) on GitHub.**
+
+### 🧰 Building and engine architecture
 
 * **Much faster asset builds.** Assets compile **2x** faster for a typical game, and up to **10×** faster for Stride's own tests, thanks to a new asset-build cache.
 * **`.slnx` is the new default solution format.** Existing `.sln` solutions still open and save normally.
+* **Support for file-based apps.** You can now create a Stride game using a single C# file. For more information, check out the [community toolkit](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/file-based-app.html).
 * **Dropped support for 32-bit.** The engine now only targets modern 64-bit systems.
 
 ### ⚙️ Changes to the physics `CharacterComponent`
 
-While our integration of the Bepu physics engine is definitely mature enough by now, the `CharacterComponent` we introduced was not as well put together as it ought to have been.
+While our integration of the **Bepu** physics engine is definitely mature enough by now, the `CharacterComponent` we introduced was not as well put together as it ought to have been.
 
 * The gravity you may set would be mutated internally to prevent the body from sliding down slopes.
 * Moving surfaces would not carry the character along with them.
 * Moving past a slope would cause the character to fly off.
 * Forces applied to bodies, and especially constraints, required unintuitive tweaks to work.
 
-We looked at Bepu's own character example to solve these issues. Unfortunately, we could not avoid introducing a fair amount of breaking changes. *Fortunately*, we added a couple of sections in [Characters](../manual/physics/characters.md) to describe the new features and properties.
+We looked at **Bepu's own character example** to solve these issues. Unfortunately, we could not avoid **introducing a fair amount of breaking changes**. *Fortunately*, we added a couple of sections in [Characters](../manual/physics/characters.md) to describe the new features and properties.
 
 ### 📖 Documentation
 
@@ -138,21 +145,38 @@ Since 4.3, our documentation has received a lot of changes. This is a part of an
 
 We have also started documenting parts of Stride's internal architecture in the main [engine repository](https://github.com/stride3d/stride/tree/master/docs) to help other contributors navigate this large codebase. A copy of these pages is available on the [documentation website](../contributors/engine/architecture/index.md).
 
+### 📈 Metrics and crash reports
+
+**Game Studio is now telemetry-free!** We removed legacy metrics code, as it was mostly broken and the data collected with it didn't see much use. However, we are looking into **reintroducing it in a future update as an opt-in system.**
+
+The **crash reporter** has been overhauled from the ground-up. It now runs **independently** from Game Studio and the launcher, which should make it **much more stable** compared to the old version.
+
+![](media/ReleaseNotes-4.4/crash-reporter.webp)
+
+**Crash reports can now be sent with a single button** via [Sentry](https://sentry.io/welcome/). This should make it easier for us to fix common errors and **improve engine stability**. For full transparency, here are some notes about **how crash data is collected and reported:**
+
+* **You are in control.** You can customize and view crash reports before they are sent.
+* **No automatic telemetry.** Crash reports cannot be sent automatically without your consent. Note that failed uploads will be kept and sent later.
+* **All reports are private.** Only certain core-contributors have access to the Sentry dashboard, which is the only place where crash reports can be viewed.
+* **Anonymity.** The crash reporter masks user names, device timezone and other information that could be used to retrace your data back to you.
+
 ### 🧪 Quality & CI
 
-*Mostly under the hood, but it directly changes how confidently you can contribute back to the engine.*
+*These changes don't affect the engine directly, but they impact how confidently you can contribute back to its code.*
 
-Stride 4.4's test suite has been greatly expanded. Where earlier versions used to only be invoked on a slice of possible configurations, **every change now runs the entire test matrix across all platforms and graphics APIs in one pipeline:** engine builds, game and Game Studio tests, end-to-end sample/packaging builds and **GPU image-comparison**.
+Stride 4.4's test suite has been greatly expanded. Instead of being occasionally invoked for a few specific configurations, the CI (Continuous Integration) now **runs the entire test matrix across all platforms and graphics APIs.**
 
-![The CI pipeline: a single run building and testing every platform and graphics API (Windows D3D11/D3D12/Vulkan, Linux, macOS, Android, iOS), all green](media/ReleaseNotes-4.4/ci-run.webp)
+Regressions on any platform or backend is now caught automatically before any change gets merged. This means that you can now confidently open a pull request and **trust the CI to prove it works everywhere**.
 
-Breakage on any platform or backend is now caught automatically before any change gets merged. **For contributors, that's the real win**: you can open a pull request and **trust CI to prove it works everywhere**, instead of testing each platform by hand, which makes contributing a feature back to the engine far less daunting.
+![The GitHub dashboard shows all tests across multiple platforms and graphics APIs.](media/ReleaseNotes-4.4/ci-run.webp)
 
-A **gold-image generation workflow** runs **directly on CI**, so you no longer have to regenerate reference images by hand on every platform. Golds are produced and promoted straight from [the CI workflow](https://github.com/stride3d/stride/actions/workflows/test-gold-gen.yml).
+Our **gold-image workflow** has also received many improvements. For those unaware, Stride uses **pre-taken screenshots** (gold images) and compares them to new ones in order to test **if its rendering capabilities work as intended**. Of course, there are always **small couple-pixel differences**, even when comparing the same version, which is why it's important to have proper tooling.
 
-The new **CompareGold** tool makes reviewing these tests painless: visualize difference failures against their gold images, promote the ones you accept, and even pull results **directly from any CI run** or fork. For more information, check out [GPU Regression Testing](https://github.com/stride3d/stride/blob/master/tests/GPU-TESTING.md) in the engine repository docs.
+The new **CompareGold** tool helps **visualize differences between images** and determine if something is wrong. It also makes it easier to **promote images** (replacing old gold images with new screenshots) and even pull results **directly from any CI run or fork**. For more information, check out [GPU Regression Testing](https://github.com/stride3d/stride/blob/master/tests/GPU-TESTING.md) in the engine repository.
 
 ![CompareGold reviewing differences between pre-rendered and newly created images.](media/ReleaseNotes-4.4/compare-gold.webp)
+
+The CI can also now **automatically generate gold images for every platform**. This means that you no longer have to waste time retaking screenshots by hand, as the [Test Gold Generation workflow](https://github.com/stride3d/stride/actions/workflows/test-gold-gen.yml) will do it for you.
 
 ## 💥 Breaking changes
 
@@ -163,12 +187,12 @@ The new **CompareGold** tool makes reviewing these tests painless: visualize dif
 * **Bepu `CharacterController` was reworked:** existing character setups will behave differently and need adjustment. See [⚙️ Changes to the physics `CharacterComponent`](#-changes-to-the-physics-charactercomponent).
 * **Removed the ability to override Game Settings:** the feature was partially broken and not really that useful, which is why it was decided to remove it altogether. If you want to change settings depending on a user's platform/device, consider creating a **custom Game class**.
 * **`GameSettings.Configuration.Get<T>()` is now `GameSettings.GetOrCreateConfiguration<T>()`:** this was caused by other changes to Game Settings (see previous point).
-* **`ScrollViewer::ScrollOfInternal` is no private:** the property was mistakenly made public, which as its name suggests, shouldn't have been the case.
+* **`ScrollViewer.ScrollOfInternal` is now private:** the property was mistakenly made public, which as its name suggests, shouldn't have been the case.
 * Dropped support for **32-bit** systems.
 
-## 🙏 Contributors
+## 🙏 Acknowledgements
 
-Thanks to everyone who contributed to this release:
+We'd like to thank everyone who contributed to 4.4:
 
 - [Acissathar](https://github.com/Acissathar)
 - [azeno](https://github.com/azeno)
@@ -199,7 +223,7 @@ Thanks to everyone who contributed to this release:
 - [xen2](https://github.com/xen2)
 - [ykafia](https://github.com/ykafia)
 
-Welcome to our new contributors, who made their first contribution to the [stride3d/stride](https://github.com/stride3d/stride) repository in this release:
+We'd also like to welcome new contributors who created their first PRs int this release:
 
 - [JeroMiya](https://github.com/JeroMiya) made their first contribution in https://github.com/stride3d/stride/pull/3022
 - [D4rkDuck](https://github.com/D4rkDuck) made their first contribution in https://github.com/stride3d/stride/pull/3011
@@ -212,4 +236,4 @@ Welcome to our new contributors, who made their first contribution to the [strid
 - [steveberdy](https://github.com/steveberdy) made their first contribution in https://github.com/stride3d/stride/pull/3079
 - [Henr1k80](https://github.com/Henr1k80) made their first contribution in https://github.com/stride3d/stride/pull/3156
 
-...and everyone who reported issues, tested builds and helped on the community channels. 💙
+And finally, we'd like to thank the rest of the Stride community for donating, testing builds, providing feedback and helping us shape this update. ❤️
