@@ -223,7 +223,7 @@ We'd like to thank everyone who contributed to 4.4:
 - [xen2](https://github.com/xen2)
 - [ykafia](https://github.com/ykafia)
 
-We'd also like to welcome new contributors who created their first PRs int this release:
+We'd also like to welcome new contributors who created their first PRs in this release:
 
 - [JeroMiya](https://github.com/JeroMiya) made their first contribution in https://github.com/stride3d/stride/pull/3022
 - [D4rkDuck](https://github.com/D4rkDuck) made their first contribution in https://github.com/stride3d/stride/pull/3011
