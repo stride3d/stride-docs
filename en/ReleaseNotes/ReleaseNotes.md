@@ -18,7 +18,7 @@ So far, Stride has mostly been a Windows-first engine. Other platforms were supp
 
 ![A Stride sample running on a physical iPhone.](media/ReleaseNotes-4.4/ios.webp)
 
-**For Linux users:** this release removed some legacy code which now makes it possible to **use Game Studio on Linux via Proton/Wine**. The experience isn't as solid as on the native Windows version, but it's still a big step forward for Linux development. If you'd like to try it out, we have created a guide that's available in the documentation TODO: ADD LINK.
+**For Linux users:** this release removed some legacy code which now makes it possible to **use Game Studio on Linux via Proton/Wine**. The experience isn't as solid as on the native Windows version, but it's still a big step forward for Linux development. If you'd like to try it out, we have created a guide that's [available in the documentation](../manual/platforms/linux/install-the-editor-using-wine.md).
 
 ![Game Studio running on Linux.](media/ReleaseNotes-4.4/stride-proton.webp)
 
