@@ -23,7 +23,7 @@ The shadows are much softer in the second image, as more light passes through th
 
 1. Select the material you want to use subsurface shading.
 
-2. In the Property Grid, under **Shading**, next to **Subsurface scattering**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose **Subsurface scattering**.
+2. In the Property Grid, under **Shading**, next to **Subsurface scattering**, click the arrow button (**Replace**) and choose **Subsurface scattering**.
 
     ![Enable subsurface scattering](media/enable-subsurface-scattering.png)
 
@@ -33,7 +33,7 @@ The shadows are much softer in the second image, as more light passes through th
 
 | Property           | Function
 |--------------------|--------------------
-| Scattering width   | How far the light scatters in [world units](../../game-studio/world-units.md)
+| Scattering width   | How far the light scatters in [world units](../../scenes/entities/transform/world-units.md)
 | Translucency       | How much light pentrates the material. `0.0` is no translucency; `1.0` is max.
 | Translucency map   | Specify a [grayscale map](material-maps.md) to control how translucent different regions of the material are. Brighter values produce more scattering. For example, ears should scatter more light than the top of the head, because they're thinner and therefore light passes through them more easily. The texture is multiplied by the **Translucency** parameter.
 | Scattering profile | The scattering profile to use during the forward render pass. <p><br>**Skin:** A preconfigured shader for rendering skin <p><br>**Custom (skin-based):** A profile based on the Skin profile you can customize yourself

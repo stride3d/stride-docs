@@ -30,7 +30,7 @@ Alternatively, to set clear-coat properties yourself:
 
 1. Select the material you want to use clear-coat shading.
 
-2. In the Property Grid, under the **Misc** properties, next to **Clear coat**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose **Clear coat**.
+2. In the Property Grid, under the **Misc** properties, next to **Clear coat**, click the arrow button (**Replace**) and choose **Clear coat**.
 
     ![Select clear coat](media/select-clear-coat.png)
 

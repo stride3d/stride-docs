@@ -25,7 +25,7 @@ You can change the materials a model uses in two places:
     >[!Note]
     >This affects every instance of this model.
  
-* In the **model component** of an entity or [prefab](../../game-studio/prefabs/index.md):
+* In the **model component** of an entity or [prefab](../../scenes/prefabs/index.md):
 
     ![Model materials on entity](media/model-materials-in-entity.png)
 

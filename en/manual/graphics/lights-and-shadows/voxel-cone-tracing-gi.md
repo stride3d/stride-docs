@@ -25,7 +25,7 @@ Voxel Cone Tracing requires several changes to the graphics compositor.
 
 To make this easier, we prepared a graphics compositor ready to use with Voxel GI in the asset templates:
 
-1. In the **Asset View**, click ![](../../game-studio/media/create-and-add-assets-add-new-asset-button.png)
+1. In the **Asset View**, click **➕ Add asset**.
 
 2. Start to type `Voxel` in the search bar
 
@@ -39,9 +39,9 @@ To make this easier, we prepared a graphics compositor ready to use with Voxel G
 
 ### Setup scene: Volume and Light
 
-1. In the scene explorer, above the **Entity Tree**, click the ![Plus](../../game-studio/media/add-entities-to-a-scene-plus-icon.png) icon and select `Lights` then `Voxel volume`
+1. In the scene explorer, above the **Entity Tree**, click the ➕ icon and select `Lights` then `Voxel volume`
 
-2. Click the ![Plus](../../game-studio/media/add-entities-to-a-scene-plus-icon.png) icon again and select `Lights` then `Voxel light`
+2. Click the ➕ icon again and select `Lights` then `Voxel light`
 
    At that point, the scene rendering will likely crash due to the light not being setup correctly (with error `No Voxel Volume Component selected for voxel light.`), but that's expected.
 

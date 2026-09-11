@@ -136,7 +136,7 @@ Game Studio creates a collider shape asset from the model.
 
     ![Select collider shape asset](media/select-collider-shape-asset.png)
 
-    To do this, drag the asset from the **Asset View** to the **Shape** field in the Property Grid. Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**) and browse to the asset.
+    To do this, drag the asset from the **Asset View** to the **Shape** field in the Property Grid. Alternatively, click 👆 (**Select an asset**) and browse to the asset.
 
 ## See also
 

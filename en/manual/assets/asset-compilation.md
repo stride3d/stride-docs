@@ -12,7 +12,13 @@ Stride only compiles assets which are used in the game. This means that if an as
 
 ## Blue, green and gray dots
 
-[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+In the **Asset view**, you can see a dot in the top left corner of every asset that signifies how it will be compiled.
+
+![](media/asset-view-indicators.webp)
+
+Each color represents something:
+
+[!INCLUDE [status-dots](../../includes/assets/status-dots.md)]
 
 ## Root assets
 

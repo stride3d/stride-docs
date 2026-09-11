@@ -50,7 +50,7 @@ To do this, you need the following assets in your project:
 
     ![Animation component](media/animation-component-added-to-camera.png)
 
-5. Next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and type a name.
+5. Next to **Animations**, click ➕ (**Add**) and type a name.
 
     ![Add animation](media/animation-name.png)
 
@@ -58,7 +58,7 @@ To do this, you need the following assets in your project:
 
     ![Animation added](media/animation-added.png)
 
-6. Next to the animation you added, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+6. Next to the animation you added, click 👆 (**Select an asset**).
 
     The **Select an asset** window opens.
 
@@ -75,11 +75,11 @@ To do this, you need the following assets in your project:
     >[!Note]
     >For instructions about how to add animation scripts, see [Animation scripts](../../animation/animation-scripts.md).
 
-9. Under the script component, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+9. Under the script component, next to **Animations**, click ➕ (**Add**).
 
     ![Add animation to the list](../../animation/media/add-animation-to-list.png)
 
-10. Next to **Clip**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+10. Next to **Clip**, click 👆 (**Select an asset**).
 
     The **Select an asset** window opens.
 
@@ -122,7 +122,7 @@ To do this, you need the following assets in your project:
 
     ![Model node link component](../../animation/media/model-node-component.png)
 
-4. Next to **Target**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) and select the entity that has the model you want to link the camera to.
+4. Next to **Target**, click 👆 and select the entity that has the model you want to link the camera to.
 
     ![Select an entity](../../animation/media/select-an-entity-window.png)
 
