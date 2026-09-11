@@ -499,6 +499,8 @@ items:
         items:
           - name: Setup and requirements
             href: platforms/linux/setup-and-requirements.md
+          - name: Install the editor using Wine
+            href: platforms/linux/install-the-editor-using-wine.md
       - name: MacOS
         href: platforms/macos/index.md
       - name: Android
