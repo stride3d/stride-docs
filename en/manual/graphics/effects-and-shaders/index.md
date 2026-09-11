@@ -23,8 +23,8 @@ shader MyShader : ComputeColor, Texturing, MyOtherShader
 
 ## What are effects?
 
-**Effects** are a way of creating new versions of shaders from existing ones. You can think of **shaders** as small **building blocks** and an **effect** as the thing that **joins them together**.
-
-The most notable example of an effect are [materials](../materials/index.md), which combine multiple shaders (e.g. diffuse, specular, emission) into one.
+**Effects** are a way of creating new shaders from mixing existing ones. You can think of **shaders** as small **building blocks** and an **effect** as the thing that **joins them together**.
 
 TODO: VISUALIZATION
+
+Effects aren't shader code by themselves, they only specify how to generate a new shader.

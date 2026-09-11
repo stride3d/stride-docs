@@ -2,16 +2,16 @@
 
 In addition to the inheritance system, SDSL introduces the concept of **composition**. A composition is a member whose type is another shader class. It's defined the same way as variables.
 
-You can compose with an instance of the desired shader class or an instance of a shader class that inherits from the desired one.
+You can compose with an instance of the desired shader class or an instance of a shader class that inherits from it.
 
 ```sdsl
-shader Example : ComputeColor
+shader Example
 {
     compose ComputeColor shaderA;
     compose ComputeColor shaderB;
     float t;
 
-    public override float4 Compute()
+    public override float4 BlendComputeColors)
     {
         float4 valA = shaderA.Compute();
         float4 ValB = shaderB.Compute();
@@ -52,26 +52,9 @@ If you are using your shader on a material, you can set their compositions using
 
 TODO: FIGURE THAT OUT
 
-## The `clone` keyword
-
-TODO: CHECK THIS IN STRIDE
-
-By default, if you assign the same shader type to two `compose` variables, they are going to share the same instance of a shader between each other.
-
-For example: if compositionA and compositionB are set to use an instance of MyCustomShader, the values of `compositionA.myValue` and `compositionB.myValue` will always be the same.
-
-TODO: VISUALIZATION
-
-To stop this, you can use the `clone` modifier, which will make sure the two compositions use separate instances with separate states.
-
-```sdsl
-clone compose ComputeColor compositionA;
-clone compose ComputeColor compositionB;
-```
-
 ## Example code
 
-```cs
+```sdsl
 shader CompositionBase
 {
     float4 Compute()
