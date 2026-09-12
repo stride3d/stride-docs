@@ -132,13 +132,18 @@ shader Example : ComputeColor
 
 For more information, visit [Streaming](streaming.md).
 
-### The `cbuffer` keyword
+### The `cbuffer` and `tbuffer` keywords
 
-Variables defined outside of methods are put in a **constant buffer**. Despite what their name might suggest, variables from constant buffer can be adjusted, but only through C# scripts.
+Variables defined outside of methods are labeled as **shader constnats**. Despite what their name might suggest, it is possible to change their values, but only through C# scripts.
 
-Shaders can use multiple constant buffers, which can be used differently depending on the context (e.g. [compute colors](../types-of-shaders/compute-color.md) require variables to be stored in a `PerMaterial` constant buffer to be modifiable through code). If no buffer is specified, the default one is used.
+Shader constnats are put into **buffers**. A single shader can define multiple buffers, that can be used differently depending on the context (e.g. [compute colors](../types-of-shaders/compute-color.md) require variables to be stored in a `PerMaterial` buffer to be modifiable through code). If no buffer is specified, the default one is used.
 
-You can use a different constant buffer by wrapping your variables `cbuffer`
+There are two types of buffers:
+
+* Constant buffer (`cbuffer`) - intended for standard variables (e.g. `float4`, `half`). They have a limited size and are split into 32-bit chunks.
+* Texture buffer (`tbuffer`) - intended for textures and matrices (e.g. `Texture2D<float4>`).
+
+To create a buffer, simply wrap your members in a `cbuffer` or `tbuffer` block:
 
 ```sdsl
 shader Example : ShaderBase
@@ -152,8 +157,18 @@ shader Example : ShaderBase
         float4 MyCustomBufferColor;
         bool IsOnCustomBuffer;
     }
+
+    tbuffer MyCustomTextureBuffer
+    {
+        Texture2D<float4> MyTexture;
+    }
 };
 ```
+
+> [!TIP]
+> Depending on the order of members, a constant buffer may take up less memory. For more information, check out [HLSL Constant Buffer Layout Visualizer](https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/).
+
+For more information about shader constnats, visit the [hlsl documentation](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-constants).
 
 ## Exposing variable keys to C#
 
