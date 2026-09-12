@@ -6,11 +6,11 @@ These pages contain information about how to use Stride, an open-source C# game 
 
 ## Stride community toolkit
 
-Check out our [Stride community toolkit](https://stride3d.github.io/stride-community-toolkit/index.html) for additional helpers and extensions.
+If you'd like to use Stride in a code-only project, or you are looking for additional code utilities, check out our [Stride community toolkit](https://stride3d.github.io/stride-community-toolkit/index.html). 
 
 ## Improve this documentation
 
-The Stride documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/stride3d/stride-docs).
+The Stride documentation is open source, so anyone can edit it. If you find a mistake, you can correct it or report it on our [GitHub repository](https://github.com/stride3d/stride-docs).
 
 To edit any page of this manual, click the **Edit this page** link at the bottom. Please make sure to follow the [writing guidelines](../contributors/documentation/index.md).
 
