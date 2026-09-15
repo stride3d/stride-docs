@@ -5,6 +5,9 @@
     The script allows the user to build documentation in English or any other available language specified in the languages.json file. It provides options to build documentation in all available languages, run a local website for the documentation, or cancel the operation. If the user chooses to build the documentation, the script also prompts whether API documentation should be included unless API building is explicitly skipped.
 .NOTES
     The documentation files are expected to be in Markdown format (.md). The script uses the DocFX tool to build the documentation and optionally includes API documentation. The script generates the API documentation from C# source files using DocFX metadata and can run a local website using the DocFX serve command. This script can also be run from GitHub Actions.
+
+    The build steps live in the build/ folder and are dot-sourced below. Each of those files is
+    scoped to become one class when this script is eventually ported to C#.
 .LINK
     https://github.com/stride3d/stride-docs
 .LINK
@@ -35,700 +38,143 @@
 param (
     [switch]$BuildAll,
     [switch]$SkipApiBuilding,
+    [switch]$SkipPdfBuilding,
     [ArgumentCompleter({
         [OutputType([System.Management.Automation.CompletionResult])]
         param([string] $CommandName,[string] $ParameterName,[string] $WordToComplete,[System.Management.Automation.Language.CommandAst] $CommandAst,[System.Collections.IDictionary] $FakeBoundParameters)
         return (Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions
     })]
-    [switch]$SkipPdfBuilding,
-    $Version = $((Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions | Sort-Object -Descending | Select-Object -First 1)
+    [string]$Version = $((Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions | Sort-Object -Property { [version]$_ } -Descending | Select-Object -First 1)
 )
 
-$Settings = [PSCustomObject]@{
-    Version = $Version
-    SiteDirectory = "_site/$Version"
-    LocalTestHostUrl = "http://localhost:8080/$Version/en/index.html"
-    LanguageJsonPath = "en\languages.json"
-    LogPath = ".\build.log"
-    TempDirectory = "_tmp"
-    WebDirectory = "_site"
-    IndexFileName = "index.md"
-    ManualFolderName = "manual"
-    DocsUrl = "https://doc.stride3d.net"
-    EngineRepositoryUrl = "https://github.com/stride3d/stride/tree/master"
-}
+# Almost every path below is relative to the repository root, so anchor the working directory
+# rather than depending on where the script was invoked from.
+Push-Location $PSScriptRoot
 
-# To Do fix, GitHub references, fix sitemap links to latest/en/
+try {
+    . "$PSScriptRoot\build\Settings.ps1"
+    . "$PSScriptRoot\build\Languages.ps1"
+    . "$PSScriptRoot\build\Console.ps1"
+    . "$PSScriptRoot\build\FileUtility.ps1"
+    . "$PSScriptRoot\build\DocFx.ps1"
+    . "$PSScriptRoot\build\ArchitectureDocs.ps1"
+    . "$PSScriptRoot\build\PostProcessing.ps1"
+    . "$PSScriptRoot\build\Build.ps1"
 
-function Read-LanguageConfigurations {
-    return Get-Content $Settings.LanguageJsonPath -Encoding UTF8 | ConvertFrom-Json
-}
+    $Settings = New-BuildSettings -Version $Version -RootPath $PSScriptRoot
+    $languages = Read-LanguageConfiguration -Settings $Settings
 
-function Get-UserInput {
-    Write-Host ""
-    Write-Host -ForegroundColor Cyan "Please select an option:"
-    Write-Host ""
-    Write-Host -ForegroundColor Yellow "  [en] Build English documentation"
-    foreach ($lang in $languages) {
-        if ($lang.Enabled -and -not $lang.IsPrimary) {
-            Write-Host -ForegroundColor Yellow "  [$($lang.Code)] Build $($lang.Name) documentation"
-        }
-    }
-    Write-Host -ForegroundColor Yellow "  [all] Build documentation in all available languages"
-    Write-Host -ForegroundColor Yellow "  [r] Run local website"
-    Write-Host -ForegroundColor Yellow "  [c] Cancel"
-    Write-Host ""
-    $validOptions = @('all', 'r', 'c') + $($languages | Select-Object -ExpandProperty Code)
+    $primaryLanguage = $languages | Where-Object { $_.Code -eq $Settings.PrimaryLanguageCode } | Select-Object -First 1
 
-    while($true)
-    {
-        $userChoice = Read-Host -Prompt "Your choice"
-        if($validOptions -contains $userChoice)
-        {
-            return $userChoice.ToLower()
-        }
-    }
-    Write-Error "No valid Choice was given."
-}
+    # Running unattended (CI) means never blocking on a prompt
+    $isInteractive = -not $BuildAll
 
-function Ask-IncludeAPI {
-    Write-Host ""
-    Write-Host -ForegroundColor Cyan "Do you want to include API?"
-    Write-Host ""
-    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
-    Write-Host -ForegroundColor Yellow "  [N] No"
-    Write-Host ""
+    Start-Transcript -Path $Settings.LogPath
 
-    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
-
-    return ($answer -ieq "y" -or $answer -eq "")
-}
-
-function Ask-UseExistingAPI {
-    Write-Host ""
-    Write-Host -ForegroundColor Cyan "Do you want to use already generated API metadata?"
-    Write-Host ""
-    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
-    Write-Host -ForegroundColor Yellow "  [N] No"
-    Write-Host ""
-
-    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
-
-    return ($answer -ieq "y" -or $answer -eq "")
-}
-
-function Ask-ReplaceEngineArchitectureDocs {
-    Write-Host ""
-    Write-Host -ForegroundColor Cyan "Do you want to copy and replace engine architecture docs?"
-    Write-Host ""
-    Write-Host -ForegroundColor Yellow "  [Y] Yes or ENTER"
-    Write-Host -ForegroundColor Yellow "  [N] No"
-    Write-Host ""
-
-    $answer = Read-Host -Prompt "Your choice [Y, N, or ENTER (default is Y)]"
-
-    return ($answer -ieq "y" -or $answer -eq "")
-}
-
-function Get-RelativePath {
-    param (
-        [string]$BasePath,
-        [string]$Path
-    )
-    $baseUri = [Uri]((Resolve-Path $BasePath).Path.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar)
-    $pathUri = [Uri](Resolve-Path $Path).Path
-    return [Uri]::UnescapeDataString($baseUri.MakeRelativeUri($pathUri).ToString())
-}
-function Copy-ArchitectureDocs {
-    Write-Host -ForegroundColor Green "Copying architecture documentation from the main engine repository..."
-    $architectureFolder = "en/contributors/engine/architecture"
-    $engineDocsFolder = Join-Path $PSScriptRoot "..\stride\docs"
-
-    # Return if the repository isn't available
-    if (-not (Test-Path $engineDocsFolder)) {
-        Write-Host -ForegroundColor Yellow "Skipping copying architecture documentation, can't find the main engine repository. Make sure the stride directory is located next to stride-docs."
-        return
+    if (-not $primaryLanguage) {
+        Exit-WithError -Message "No language with code '$($Settings.PrimaryLanguageCode)' found in $($Settings.LanguageJsonPath)." -Interactive:$isInteractive
     }
 
-    # Remove old files
-    if (Test-Path $architectureFolder) {
-        Remove-Item $architectureFolder/* -Recurse -Verbose
+    # Decide what to build
+    if ($BuildAll) {
+        $isAllLanguages = $true
+        $isPrimaryLanguage = $false
+        $selectedLanguage = $null
+        $buildApi = -not $SkipApiBuilding
+        $reuseApi = $false
+        $buildArchitecture = $true
     }
+    else {
+        $userInput = Read-BuildOption -Language $languages
 
-    # Copy files
-    Get-ChildItem $engineDocsFolder -Force | ForEach-Object {
-        Copy-Item $_.FullName (Join-Path $architectureFolder $_.Name) -Recurse -Verbose
-    }
-
-    # Post-processing files
-    $files = Get-ChildItem $architectureFolder -Recurse -Force
-    foreach ($file in $files) {
-        $relativePath = Get-RelativePath $architectureFolder $file.FullName
-
-        # Replacing content
-        if (!$file.PSIsContainer) {
-            $relativePathSlashes = ([regex]::Matches($relativePath, "/" )).count
-            $wrongRelative = "]($("../" * $relativePathSlashes)"
-
-            # Go over all lines in the file
-            $content = Get-Content $file.FullName
-            for ($i = 0; $i -lt $content.Length; $i++) {
-                # Look for links
-                $linkMatches = [regex]::Matches($content[$i], "\[[^\[\]]*?\]\([^\(\)]*?\)")
-                foreach ($match in $linkMatches) {
-                    # Replace relative links to files from the repo with non-relative
-                    $content[$i] = $content[$i].Replace($wrongRelative, "]($($Settings.EngineRepositoryUrl)/")
-
-                    # Replace links to README.md files with index.md
-                    if (!$content[$i].Contains("https://") -and $content[$i].Contains("README")) {
-                        $content[$i] = $content[$i].Replace("README", "index")
-                    }
-                }
-            }
-
-            ## Apply changes to content
-            $content | Set-Content $file.FullName
+        if ($userInput -eq 'c') {
+            Write-Host -ForegroundColor Red "Operation canceled by user."
+            Stop-BuildTranscript
+            Wait-ForUserExit -Interactive:$isInteractive
+            return
         }
 
-        # Rename README.md files to index.md
-        if ($file.ToString().ToLower().Contains("readme.md")) {
-            $renamedLocation = "$($file.FullName | Split-Path)/index.md"
-            Move-Item $file.FullName $renamedLocation
-        }
-    }
-
-    # Copy root index file
-    $sectionIndex = "en/contributors/engine/architecture-index.md"
-    if (Test-Path $sectionIndex) {
-        Copy-Item $sectionIndex "$architectureFolder/index.md"
-    }
-}
-
-function Get-ArchitectureDocsTocChildren {
-
-
-    param ([string]$Directory)
-
-    return @(Get-ChildItem -LiteralPath $Directory -Force |
-        Where-Object { $_.PSIsContainer -or $_.Extension -ieq ".md" } |
-        Where-Object { $_.Name -ine "index.md" -and $_.Name -ine "toc.yml" } |
-        Sort-Object @{ Expression = { if ($_.PSIsContainer) { 0 } else { 1 } } }, Name)
+        if ($userInput -eq 'r') {
+            Start-LocalWebsite -Settings $Settings
+            return
         }
 
-function Get-ArchitectureDocsTocTitle {
-    param ([System.IO.FileSystemInfo]$Item)
+        # Read-BuildOption only returns 'all' or an enabled language code at this point
+        $isAllLanguages = $userInput -eq 'all'
+        $isPrimaryLanguage = $userInput -eq $Settings.PrimaryLanguageCode
+        $selectedLanguage = Find-TranslatableLanguage -Language $languages -Code $userInput
 
-    $title = [System.IO.Path]::GetFileNameWithoutExtension($Item.Name).Replace("-", " ")
-        if ($title.Length -gt 0) {
-            $title = "$($title[0].ToString().ToUpper())$($title.Substring(1))"
-        }
-
-    $titleSource = $Item.FullName
-    if ($Item.PSIsContainer) {
-        $titleSource = Join-Path $Item.FullName "index.md"
-        }
-
-    if (Test-Path $titleSource) {
-        $heading = Select-String -LiteralPath $titleSource -Encoding UTF8 -Pattern '^# (.+?)(?:\s[-\u2014]\s.*)?$' | Select-Object -First 1
-        if ($null -ne $heading) {
-            $title = $heading.Matches[0].Groups[1].Value.Trim().Replace("&amp;", "&")
-            }
-        }
-
-    return $title.Replace("'", "''")
-
-        }
-
-function Add-ArchitectureDocsTocItems {
-    param (
-        [string]$Directory,
-        [string]$RootDirectory,
-        [int]$IndentLevel,
-        [System.Collections.Generic.List[string]]$Lines
-    )
-
-    foreach ($item in Get-ArchitectureDocsTocChildren $Directory) {
-        $indent = "  " * $IndentLevel
-        $title = Get-ArchitectureDocsTocTitle $item
-        $Lines.Add("$indent- name: '$title'")
-        if ($item.PSIsContainer) {
-            $indexPath = Join-Path $item.FullName "index.md"
-            if (Test-Path $indexPath) {
-                $Lines.Add("$indent  href: $(Get-RelativePath $RootDirectory $indexPath)")
-        }
-
-            $children = Get-ArchitectureDocsTocChildren $item.FullName
-            if ($children.Count -gt 0) {
-                $Lines.Add("$indent  items:")
-                Add-ArchitectureDocsTocItems $item.FullName $RootDirectory ($IndentLevel + 1) $Lines
-            }
+        if ($SkipApiBuilding) {
+            $buildApi = $false
+            $reuseApi = $false
         }
         else {
-            $Lines.Add("$indent  href: $(Get-RelativePath $RootDirectory $item.FullName)")
-        }
-    }
-}
-
-function Generate-ArchitectureDocsToc {
-    $architectureFolder = "en/contributors/engine/architecture"
-    $tocLocation = Join-Path $architectureFolder "toc.yml"
-    Write-Host -ForegroundColor Green "Generating architecture docs toc.yml..."
-    $lines = [System.Collections.Generic.List[string]]::new()
-    Add-ArchitectureDocsTocItems $architectureFolder $architectureFolder 0 $lines
-    [System.IO.File]::WriteAllLines((Join-Path $PSScriptRoot $tocLocation), $lines, [System.Text.UTF8Encoding]::new($false))
-}
-function Copy-ExtraItems {
-
-    Write-Host -ForegroundColor Yellow "Copying versions.json into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item versions.json "$($Settings.WebDirectory)/"
-
-    Write-Host -ForegroundColor Yellow "Copying web.config into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item web.config "$($Settings.WebDirectory)/"
-
-    Write-Host -ForegroundColor Yellow "Updating web.config"
-    Write-Host ""
-
-    $webConfig = "$($Settings.WebDirectory)/web.config"
-
-    $content = Get-Content $webConfig -Encoding UTF8
-
-    $content = $content -replace "%deployment_version%", $Settings.Version
-
-    $content | Set-Content -Encoding UTF8 $webConfig
-
-    Write-Host -ForegroundColor Green "Updating web.config completed."
-    Write-Host ""
-
-    # This is needed for Stride Launcher, which loads Release Notes
-    Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
-    Write-Host ""
-    Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
-
-    Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item robots.txt "$($Settings.WebDirectory)/"
-}
-
-function Start-LocalWebsite {
-    Write-Host -ForegroundColor Green "Running local website..."
-    Write-Host -ForegroundColor Green "Navigate manually to non English website, if you didn't build English documentation."
-    Stop-Transcript
-
-    New-Item -ItemType Directory -Verbose -Force -Path $Settings.WebDirectory | Out-Null
-
-    Set-Location $Settings.WebDirectory
-
-    Start-Process -FilePath $Settings.LocalTestHostUrl
-
-    docfx serve
-
-    Set-Location ..
-}
-
-function Generate-APIDoc {
-    Write-Host -ForegroundColor Green "Generating API documentation..."
-
-    Write-Host ""
-
-    # Build metadata from C# source, docfx runs dotnet restore
-    docfx metadata en/docfx.json | Write-Host
-
-    return $LastExitCode
-}
-
-function Remove-APIDoc {
-    Write-Host ""
-    Write-Host -ForegroundColor Green "Erasing API documentation..."
-    $APIDocPath = "en/api/.manifest"
-    if (Test-Path $APIDocPath) {
-        Remove-Item en/api/*yml -recurse -Verbose
-        Remove-Item $APIDocPath -Verbose
-    } else{
-        Write-Warning "Could not delete APIDoc. The Path $APIDocPath does not exist or is not valid."
-    }
-}
-
-function Build-EnglishDoc {
-
-    $outputDirectory = "$($Settings.SiteDirectory)/en"
-
-    Write-Host -ForegroundColor Yellow "Start building English documentation. Output: $($outputDirectory)"
-
-    Write-Host ""
-
-    # Output to both build.log and console
-    docfx build en/docfx.json -o $outputDirectory | Write-Host
-
-    Build-EnglishPdf -SkipBuilding $SkipPdfBuilding
-
-    return $LastExitCode
-}
-
-function Build-EnglishPdf
-{
-    param (
-        $SkipBuilding
-    )
-    if(!$SkipBuilding)
-    {
-        # Build pdf files
-        docfx pdf en/docfx.json -o $outputDirectory | Write-Host
-    }
-}
-
-function Build-NonEnglishDoc {
-    param (
-        $SelectedLanguage
-    )
-
-    if ($SelectedLanguage -and $SelectedLanguage.Code -ne 'en') {
-
-        Write-Host "-------------------------------------------------------------------------------"
-        Write-Host ""
-        Write-Host -ForegroundColor Yellow "Start building $($SelectedLanguage.Name) documentation."
-        Write-Host ""
-
-        $langFolder = "$($SelectedLanguage.Code)$($Settings.TempDirectory)"
-
-        if (Test-Path $langFolder) {
-            Remove-Item $langFolder/* -recurse -Verbose
-        }
-        else {
-            $discard = New-Item -Path $langFolder -ItemType Directory -Verbose
+            $buildApi = Confirm-Choice "Do you want to include API?"
+            $reuseApi = $buildApi -and (Test-ApiMetadata -Settings $Settings) -and (Confirm-Choice "Do you want to use already generated API metadata?")
         }
 
-        # Copy all files from en folder to the selected language folder, this way we can keep en files that are not translated
-        Copy-Item en/* -Recurse $langFolder -Force
-
-        # Get all previously copied en files from the selected language folder
-        $files = Get-ChildItem "$langFolder/$($Settings.ManualFolderName)/*.md" -Recurse -Force
-
-        Write-Host "Start write files:"
-
-        # Mark files as not translated if they are not a toc.md file
-        foreach ($file in $files)
-        {
-            if($file.ToString().Contains("toc.md")) {
-                continue;
-            }
-
-            $data = Get-Content $file -Encoding UTF8
-            for ($i = 0; $i -lt $data.Length; $i++)
-            {
-                $line = $data[$i];
-                if ($line.length -le 0)
-                {
-                    Write-Host $file
-
-                    $data[$i]="> [!WARNING]`r`n> " + $SelectedLanguage.NotTranslatedMessage + "`r`n"
-
-                    $data | Out-File -Encoding UTF8 $file
-
-                    break
-                }
-            }
-        }
-
-        Write-Host "End write files"
-        $indexFile = $Settings.IndexFileName
-
-        # overwrite en manual page with translated manual page
-        if (Test-Path ($SelectedLanguage.Code + "/" + $indexFile)) {
-            Copy-Item ($SelectedLanguage.Code + "/" + $indexFile) $langFolder -Force
-        }
-        else {
-            Write-Warning "$($SelectedLanguage.Code)/"+ $indexFile +" not found. English version will be used."
-        }
-
-        # overwrite en manual pages with translated manual pages
-        if (Test-Path ($SelectedLanguage.Code + "/" + $Settings.ManualFolderName)) {
-            Copy-Item ($SelectedLanguage.Code + "/" + $Settings.ManualFolderName) -Recurse -Destination $langFolder -Force
-        }
-        else {
-            Write-Warning "$($SelectedLanguage.Code)/$($Settings.ManualFolderName) not found."
-        }
-
-        # we copy the docfx.json file from en folder to the selected language folder, so we can keep the same settings and maitain just one docfx.json file
-        Copy-Item en/docfx.json $langFolder -Force
-
-        $SiteDir = $Settings.SiteDirectory
-
-        # we replace the en folder with the selected language folder in the docfx.json file
-        (Get-Content $langFolder/docfx.json) -replace "$SiteDir/en","$SiteDir/$($SelectedLanguage.Code)" | Set-Content -Encoding UTF8 $langFolder/docfx.json
-
-        $outputDirectory = "$($Settings.SiteDirectory)/$($SelectedLanguage.Code)"
-
-        docfx build $langFolder/docfx.json -o $outputDirectory | Write-Host
-
-        if (!$BuildAll) {
-            Remove-Item $langFolder -Recurse -Verbose
-        }
-
-        PostProcessing-DocFxDocUrl -SelectedLanguage $SelectedLanguage
-
-        Write-Host -ForegroundColor Green "$($SelectedLanguage.Name) documentation built."
-
-        return $LastExitCode
-    }
-}
-
-function Build-AllLanguagesDocs {
-    param (
-        [array]$Languages
-    )
-
-    foreach ($lang in $Languages) {
-        if ($lang.Enabled -and -not $lang.IsPrimary) {
-
-            Build-NonEnglishDoc -SelectedLanguage $lang
-
-            if ($exitCode -ne 0)
-            {
-                Write-Error "Failed to build $($SelectedLanguage.Name) documentation. ExitCode: $exitCode"
-                Stop-Transcript
-                return $exitCode
-            }
-        }
-    }
-}
-
-function PostProcessing-DocFxDocUrl {
-<#
-.SYNOPSIS
-    DocFX generates GitHub link based on the temp _tmp folder, which we need to fix to correct GitHub links. This function performs the needed adjustments.
-.DESCRIPTION
-    This function takes a selected language as input and iterates through the relevant HTML and markdown files. It corrects the meta tag "docfx:docurl" and anchor tags to reflect the correct GitHub URL by replacing the temporary folder path.
-.PARAMETER SelectedLanguage
-    The Language to find the relevant HTML and markdown Files
-.NOTES
-    1. This function assumes that the folder structure and naming conventions meet the specified conditions.
-    2. Progress is displayed interactively, and is suppressed in non-interactive sessions such as CI/CD pipelines.
-#>
-    param (
-        $SelectedLanguage
-    )
-
-    $translatedFiles = Get-ChildItem "$($SelectedLanguage.Code)/*.md" -Recurse -Force
-
-    # Get a list of all HTML files in the _site/<language> directory
-    $htmlFiles = Get-ChildItem "$($Settings.SiteDirectory)/$($SelectedLanguage.Code)/*.html" -Recurse
-
-    # Get the relative paths of the translated files
-    $relativeTranslatedFilesPaths = $translatedFiles | ForEach-Object { $_.FullName.Replace((Resolve-Path $SelectedLanguage.Code).Path + '\', '') }
-
-    Write-Host -ForegroundColor Yellow "Post-processing docfx:docurl in $($htmlFiles.Count) files..."
-
-    for ($i = 0; $i -lt $htmlFiles.Count; $i++) {
-        $htmlFile = $htmlFiles[$i]
-        # Get the relative path of the HTML file
-        $relativeHtmlPath = $htmlFile.FullName.Replace((Resolve-Path "$($Settings.SiteDirectory)/$($SelectedLanguage.Code)").Path + '\', '').Replace('.html', '.md')
-
-        # Read the content of the HTML file
-        $content = Get-Content $htmlFile -Encoding UTF8
-
-        # Define a regex pattern to match the meta tag with name="docfx:docurl"
-        $pattern = '(<meta name="docfx:docurl" content=".*?)(/' + $SelectedLanguage.Code + $Settings.TempDirectory+ '/)(.*?">)'
-
-        # Define a regex pattern to match the href attribute in the <a> tags
-        $pattern2 = '(<a href=".*?)(/' + $SelectedLanguage.Code + $Settings.TempDirectory + '/)(.*?">)'
-
-        # Check if the HTML file is from the $translatedFiles collection, if so, we will update the path to the
-        # existing file in GitHub
-        if ($relativeTranslatedFilesPaths -contains $relativeHtmlPath) {
-            # Replace /<language>_tmp/ with /<language>/ in the content
-            $content = $content -replace $pattern, "`${1}/$($SelectedLanguage.Code)/`${3}"
-            $content = $content -replace $pattern2, "`${1}/$($SelectedLanguage.Code)/`${3}"
-        } else {
-            # Replace /<language>_tmp/ with /en/ in the content
-            $content = $content -replace $pattern, '${1}/en/${3}'
-            $content = $content -replace $pattern2, '${1}/en/${3}'
-        }
-
-        # Write the updated content back to the HTML file
-        $content | Set-Content -Encoding UTF8 $htmlFile
-
-        # Check if the script is running in an interactive session before writing progress
-        # We don't want to write progress when running in a non-interactive session, such as in a build pipeline
-        if ($host.UI.RawUI) {
-            Write-Progress -Activity "Processing files" -Status "$i of $($htmlFiles.Count) processed" -PercentComplete (($i / $htmlFiles.Count) * 100)
-        }
+        # Architecture docs are independent of the API, so this is asked either way
+        $buildArchitecture = Confirm-Choice "Do you want to copy and replace engine architecture docs?"
     }
 
-    Write-Host ""
-    Write-Host -ForegroundColor Green "Post-processing completed."
-    Write-Host ""
-}
-
-# we need to update all urls to /latest/en
-function PostProcessing-FixingSitemap {
-    Write-Host -ForegroundColor Yellow "Post-processing sitemap.xml, adding latest/en to url"
-    Write-Host ""
-
-    $sitemapFile = "$($Settings.SiteDirectory)/en/sitemap.xml"
-
-    # Read the content of the sitemap.xml file with UTF8 encoding
-    $content = Get-Content $sitemapFile -Encoding UTF8
-
-    # Replace DocsUrl with DocsUrl + latest/en
-    $content = $content -replace $Settings.DocsUrl, "$($Settings.DocsUrl)/latest/en"
-
-    # Write the updated content back to the sitemap.xml file with UTF8 encoding
-    $content | Set-Content -Encoding UTF8 $sitemapFile
-
-    Write-Host -ForegroundColor Green "Post-processing sitemap.xml completed."
-    Write-Host ""
-}
-
-function PostProcessing-Fixing404AbsolutePath {
-    Write-Host -ForegroundColor Yellow "Post-processing 404.html, adding version/en to url"
-    Write-Host ""
-
-    $file404 = "$($Settings.SiteDirectory)/en/404.html"
-
-    $content = Get-Content $file404 -Encoding UTF8
-
-    $keysToReplace = @("favicon.ico", "public/docfx.min.css", "public/main.css", "toc.html", "media/stride-logo-red.svg")
-
-    foreach ($key in $keysToReplace) {
-        $replacement = "/$($Settings.Version)/en/$key"
-        $content = $content -replace $key, $replacement
+    # Generate API doc
+    if ($reuseApi) {
+        Write-Step "Generating API documentation from existing metadata..."
     }
+    elseif ($buildApi) {
+        $exitCode = New-ApiMetadata -Settings $Settings
 
-    $content = $content -replace "./public/main.js", "/$($Settings.Version)/en/public/main.js"
-    $content = $content -replace "./public/docfx.min.js", "/$($Settings.Version)/en/public/docfx.min.js"
-    $content = $content -replace '<a class="navbar-brand" href="index.html">', '<a class="navbar-brand" href="/">'
-
-    $content | Set-Content -Encoding UTF8 $file404
-
-    Write-Host -ForegroundColor Green "Post-processing 404.html completed."
-    Write-Host ""
-}
-
-# Main script execution starts here
-
-$languages = Read-LanguageConfigurations
-
-Start-Transcript -Path $Settings.LogPath
-
-[bool]$isAllLanguages = $false
-
-if ($BuildAll)
-{
-    $isAllLanguages = $true
-    $API = -not $SkipApiBuilding
-    $ReuseAPI = $false
-    $engineArchitecture = $true
-}
-else {
-    $userInput = Get-UserInput
-
-    [bool]$isEnLanguage = $userInput -ieq "en"
-    [bool]$shouldRunLocalWebsite = $userInput -ieq "r"
-    [bool]$isCanceled = $userInput -ieq "c"
-    $isAllLanguages = $userInput -ieq "all"
-
-    # Check if user input matches any non-English language build
-    $selectedLanguage = $languages | Where-Object { $_.Code -eq $userInput -and $_.Enabled -and -not $_.IsPrimary }
-
-    if ($selectedLanguage)
-    {
-        [bool]$shouldBuildSelectedLanguage = $true
-    }
-
-    # Ask if the user wants to run additional steps
-    if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
-    {
-        if ($SkipApiBuilding)
-        {
-            $API = $false
-            $ReuseAPI = $false
+        if ($exitCode -ne 0) {
+            Exit-WithError -Message "Failed to generate API metadata. ExitCode: $exitCode" -ExitCode $exitCode -Interactive:$isInteractive
         }
-        else
-        {
-            $API = Ask-IncludeAPI
+    }
+    else {
+        Remove-ApiDocumentation -Settings $Settings
+    }
 
-            if ($API)
-            {
-                # Check for .yml files
-                $ymlFiles = Get-ChildItem -Path "en/api/" -Filter "*.yml"
+    # Engine architecture docs
+    if ($buildArchitecture) {
+        Copy-ArchitectureDocs -Settings $Settings
+        New-ArchitectureDocsToc -Settings $Settings
+    }
 
-                if ($ymlFiles.Count -gt 0)
-                {
-                    $ReuseAPI = Ask-UseExistingAPI
-                }
-            }
+    Write-Step "Generating documentation..."
+    Write-Warning "Note that when building docs without API, you will get UidNotFound warnings and invalid references warnings"
+    Write-Host ""
 
-            $engineArchitecture = Ask-ReplaceEngineArchitectureDocs
+    if ($isPrimaryLanguage -or $isAllLanguages) {
+        $exitCode = Build-EnglishDoc -Settings $Settings -PrimaryLanguage $primaryLanguage -SkipPdf:$SkipPdfBuilding
+
+        if ($exitCode -ne 0) {
+            Exit-WithError -Message "Failed to build $($primaryLanguage.Name) documentation. ExitCode: $exitCode" -ExitCode $exitCode -Interactive:$isInteractive
         }
-    } elseif ($isCanceled) {
-        Write-Host -ForegroundColor Red "Operation canceled by user."
-        Stop-Transcript
-        Read-Host -Prompt "Press ENTER key to exit..."
-        return
-    } elseif ($shouldRunLocalWebsite) {
-        Start-LocalWebsite
-        return
+
+        Update-Sitemap -Settings $Settings
+
+        Update-NotFoundPage -Settings $Settings
+
+        Copy-ExtraItem -Settings $Settings
     }
-}
 
-# Generate API doc
-if ($ReuseAPI)
-{
-    Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
-} elseif ($API)
-{
-    $exitCode = Generate-APIDoc
-
-    if($exitCode -ne 0)
-    {
-        Write-Error "Failed to generate API metadata. ExitCode: $exitCode"
-        Stop-Transcript
-        Read-Host -Prompt "Press any ENTER to exit..."
-        return $exitCode
+    # Build non-English language if selected or build all languages if selected
+    if ($isAllLanguages) {
+        $exitCode = Build-AllLanguagesDoc -Settings $Settings -Language $languages -KeepTempFolder:$BuildAll
     }
-} else {
-    Remove-APIDoc
+    elseif ($selectedLanguage) {
+        $exitCode = Build-NonEnglishDoc -Settings $Settings -SelectedLanguage $selectedLanguage -KeepTempFolder:$BuildAll
+    }
+    else {
+        $exitCode = 0
+    }
+
+    if ($exitCode -ne 0) {
+        Exit-WithError -Message "Failed to build translated documentation. ExitCode: $exitCode" -ExitCode $exitCode -Interactive:$isInteractive
+    }
+
+    Stop-BuildTranscript
+
+    Wait-ForUserExit -Interactive:$isInteractive
 }
-
-# Engine architecture docs
-if ($engineArchitecture) {
-    Copy-ArchitectureDocs
-    Generate-ArchitectureDocsToc
+finally {
+    Pop-Location
 }
-
-Write-Host -ForegroundColor Green "Generating documentation..."
-Write-Host ""
-Write-Warning "Note that when building docs without API, you will get UidNotFound warnings and invalid references warnings"
-Write-Host ""
-
-if ($isEnLanguage -or $isAllLanguages)
-{
-   $exitCode = Build-EnglishDoc
-
-   if ($exitCode -ne 0)
-   {
-       Write-Error "Failed to build English documentation. ExitCode: $exitCode"
-       Stop-Transcript
-       Read-Host -Prompt "Press any ENTER to exit..."
-       return $exitCode
-   }
-
-   PostProcessing-FixingSitemap
-
-   PostProcessing-Fixing404AbsolutePath
-
-   Copy-ExtraItems
-}
-
-# Build non-English language if selected or build all languages if selected
-if ($isAllLanguages) {
-    Build-AllLanguagesDocs -Languages $languages
-} elseif ($selectedLanguage) {
-    Build-NonEnglishDoc -SelectedLanguage $selectedLanguage
-}
-
-Stop-Transcript
-
-Read-Host -Prompt "Press any ENTER to exit..."
