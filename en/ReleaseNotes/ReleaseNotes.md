@@ -100,7 +100,11 @@ var playerModel = Content.Load(Assets.Models.Player);
 
 **Asset paths from external packages now begin with a namespace**, to ensure there are no conflicts between different libraries. This won't break your existing projects, as the paths will be **automatically changed in your code during the upgrade**.
 
-Additionally, Stride now allows you to create **replacement assets**, which can be used to override assets from external packages or even the engine itself. For more information, visit their dedicated page in the [documentation](../manual/assets/replacement-assets.md).
+Adding assets to root now defaults to using the **project package that an asset belongs to** instead of the current one (like `MyGame.Windows`). This ensures that your assets work the same across different platforms. Game Studio also now tells you the name of the project package where the asset will be root and allows you to choose from alternatives.
+
+TODO: IMAGE
+
+Finally, Stride now allows you to create **replacement assets**, which can be used to override assets from external packages or even the engine itself. For more information, visit their dedicated page in the [documentation](../manual/assets/replacement-assets.md).
 
 ![Replacement assets can be used to override the default font used by Stride.](media/ReleaseNotes-4.4/replacement-assets.webp)
 
@@ -110,12 +114,13 @@ Along with 4.4, we also released an **update to the launcher**. On the surface, 
 
 TODO: IMAGE
 
-The new launcher is a part of the ongoing **cross-platform editor rewrite**. This is an enormous effort that will take a lot of time and effort, so if you are willing to help, **check out the [white paper](https://docs.google.com/document/d/1q2nPnmrSfSJ9Njn8yxFPVeQSsJo7T0rvC7b4Q7ddmVY/edit?usp=sharing) and the [Avalonia Editor Rewrite project](https://github.com/orgs/stride3d/projects/6/) on GitHub.**
+The new launcher is a part of the ongoing **cross-platform editor rewrite**. This is an enormous endeavour that will take a lot of time and effort, so if you are willing to help, **check out the [white paper](https://docs.google.com/document/d/1q2nPnmrSfSJ9Njn8yxFPVeQSsJo7T0rvC7b4Q7ddmVY/edit?usp=sharing) and the [Avalonia Editor Rewrite project](https://github.com/orgs/stride3d/projects/6/) on GitHub.**
 
 ### 🧰 Building and engine architecture
 
 * **Much faster asset builds.** Assets compile **2x** faster for a typical game, and up to **10×** faster for Stride's own tests, thanks to a new asset-build cache.
 * **`.slnx` is the new default solution format.** Existing `.sln` solutions still open and save normally.
+* **Game Studio can now open projects that use newer versions of .NET.** You can use the newest C# features in your projects without having to update or fork the engine.
 * **Support for file-based apps.** You can now create a Stride game using a single C# file. For more information, check out the [community toolkit](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/file-based-app.html).
 * **Dropped support for 32-bit.** The engine now only targets modern 64-bit systems.
 
@@ -183,12 +188,23 @@ The CI can also now **automatically generate gold images for every platform**. T
 * **Custom shaders:** the SDSL compiler was rewritten, so you might want to review how your custom shaders render. If you have a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 * **Low-level graphics:** **Direct3D 12** now requires **Enhanced Barriers**. The legacy barrier path has been removed.
 * **Vulkan updated to 1.3:** this might break support for older devices and users with outdated drivers.
+* **OpenGL has been removed:** consider changing the graphics API of your project to Vulkan or Direct 3D.
 * **Convex hulls:** the library we use to generate convex hulls (V-HACD) was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters, so you may want to validate them for accuracy.
 * **Bepu `CharacterController` was reworked:** existing character setups will behave differently and need adjustment. See [⚙️ Changes to the physics `CharacterComponent`](#-changes-to-the-physics-charactercomponent).
 * **Removed the ability to override Game Settings:** the feature was partially broken and not really that useful, which is why it was decided to remove it altogether. If you want to change settings depending on a user's platform/device, consider creating a **custom Game class**.
-* **`GameSettings.Configuration.Get<T>()` is now `GameSettings.GetOrCreateConfiguration<T>()`:** this was caused by other changes to Game Settings (see previous point).
-* **`ScrollViewer.ScrollOfInternal` is now private:** the property was mistakenly made public, which as its name suggests, shouldn't have been the case.
 * Dropped support for **32-bit** systems.
+
+Changes to code API (should be automatically resolved during project upgrade):
+
+* `GameSettings.Configuration.Get<T>` is now `GameSettings.GetOrCreateConfiguration<T>`
+* `Utilities.CopyWithAlignmentFallback` is now `MemoryUtilities.CopyWithAlignmentFallback`.
+* `Utilities.Clear` is now `MemoryUtilities.Clear`.
+* `Utilities.AllocateMemory` is now `MemoryUtilities.Allocate`.
+* `Utilities.AllocateClearedMemory` is now `MemoryUtilities.AllocateCleared`.
+* `Utilities.FreeMemory` is now `MemoryUtilities.Free`.
+* `Utilities.IsMemoryAligned` is now `MemoryUtilities.IsAligned`.
+* `Utilities.Swap<T>` is now `MemoryUtilities.Swap<T>`.
+* `ScrollViewer.ScrollOfInternal` is now private.
 
 ## 🙏 Acknowledgements
 
