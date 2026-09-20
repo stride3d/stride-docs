@@ -12,3 +12,5 @@
 - [Regulus.Remote](https://github.com/jiowchern/Regulus.Remote) - Lightweight C# network library using an actor model for client-server messaging
 - [LiteEntitySystem](https://github.com/RevenantX/LiteEntitySystem) - High-performance server-authoritative ECS with built-in rollback and lag compensation
 - [MUD Skeleton for Stride](https://github.com/JoseJohnen/MUD_SKELETON/tree/main) - Skeleton framework for building MUD-style networked games with Stride
+- [StrideNet](https://github.com/Zeon8/StrideNet) - StrideNet is high-level networking library for developing multiplayer games
+- [StrideRiptideInterpolation](https://github.com/MrVogorip/StrideRiptideInterpolationExample) - Basic multiplayer character movement using the Riptide Networking library with simple interpolation on the client side
