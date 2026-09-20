@@ -107,6 +107,19 @@
             <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/4018480/Pistonica/">Steam Link</a></p>
         </div>
     </div>
+    <div class="col-xxl-4 col-md-6">
+        <div class="card h-100">
+            <img src="media/dysector/dysector-header.webp" class="card-img-top" alt="DySector Header">
+            <img src="media/dysector/dysector-gameplay.webp" class="card-img-bottom-disabled" alt="DySector Screenshot">
+            <div class="card-body">
+                <h5 class="card-title">DySector</h5>
+                <p class="card-text">
+                    Run your own tech repair shop in a world where devices are too complex to fix from the outside. So you have to dive in. Once inside, fight the corruption, repair the systems, and complete the job.
+                </p>
+            </div>
+            <p class="px-3 mb-4"><a class="stretched-link-disabled" href="https://store.steampowered.com/app/3881930/DySector/">Steam Link</a></p>
+        </div>
+    </div>
 </div>
 
 ## Open-Source Games and Prototypes
