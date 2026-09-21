@@ -54,6 +54,7 @@ The following values are supported:
 * Direct3D11
 * Direct3D12
 * Vulkan
+* Null
 
 ---
 
