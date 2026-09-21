@@ -10,7 +10,7 @@
 4. **Build using the command line:**
    - Navigate to the `/build` directory in the command prompt and run:
    ```bash
-   msbuild /t:Restore Stride.sln
+   msbuild /t:Restore Stride.slnx
    ```
    - Then run:
    ```bash

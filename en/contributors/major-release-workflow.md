@@ -21,5 +21,5 @@
    - Assuming there is no major breaking changes, simply updating the vsixmanifest so that it can do VS2022, VS2026 and any new versions is enough.
 1. Optional: Update Stride development NuGet packages version in all samples in `https://github.com/stride3d/stride/tree/master/samples`
    - This is especially useful if there are asset upgrader taking a lot of time; otherwise, the default project upgrader will still be run on sample creation
-   - Open `samples\Stride.Samples.sln` with GameStudio. Let upgrade run, and do a "save all" from GameStudio; if there is any error opening the project, fix them and reset files before reopening (do not save incomplete `csproj` changes without asset upgrades)
+   - Open `samples\Stride.Samples.slnx` with GameStudio. Let upgrade run, and do a "save all" from GameStudio; if there is any error opening the project, fix them and reset files before reopening (do not save incomplete `csproj` changes without asset upgrades)
    - Bump versions in `sources\editor\Stride.Samples.Templates\ThisPackageVersion.PackageBuild.cs` and `sources\editor\Stride.Samples.Templates\ThisPackageVersion.DevBuild.cs`

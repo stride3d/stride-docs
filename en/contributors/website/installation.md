@@ -27,7 +27,7 @@ Before updating the Stride website, ensure you are familiar with the following p
 1. 📋 You should see many logs in the command line, indicating the progress and displaying any errors
    - ⚠️ A Windows Security warning may appear on the first run (Allow Node.js JavaScript Runtime to communicate on these networks). Click **Allow access**
 1. 🌐 Open the site in your browser by navigating to `http://localhost:8080/`
-1. 💻 Open the project in Visual Studio by opening the `Stride.Web.sln` solution file, or use the IDE of your choice 
+1. 💻 Open the project in Visual Studio by opening the `Stride.Web.slnx` solution file, or use the IDE of your choice 
 1. 🔄 Once you save the updated file, the website will automatically refresh in the browser
 1. 😃 Happy coding!
 

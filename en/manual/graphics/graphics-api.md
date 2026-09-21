@@ -81,7 +81,7 @@ public override void Update()
 When building the engine from source code, it will only contain support for your OS's default graphics API. To build all APIs, set `StrideGraphicsApiDependentBuildAll` to `true` in build parameters.
 
 ```bash
-msbuild -p:StrideGraphicsApiDependentBuildAll=true ./build/Stride.sln
+msbuild -p:StrideGraphicsApiDependentBuildAll=true ./build/Stride.slnx
 ```
 
 To only build selected APIs, set the `StrideGraphicsApis` property to your desired values.
@@ -89,13 +89,13 @@ To only build selected APIs, set the `StrideGraphicsApis` property to your desir
 ### [Powershell](#tab/powershell)
 
 ```powershell
-msbuild -p:StrideGraphicsApis=`"Api1`;Api2`" ./build/Stride.sln
+msbuild -p:StrideGraphicsApis=`"Api1`;Api2`" ./build/Stride.slnx
 ```
 
 ### [Bash](#tab/bash)
 
 ```bash
-msbuild -p:StrideGraphicsApis=\"Api1\;Api2\" ./build/Stride.sln
+msbuild -p:StrideGraphicsApis=\"Api1\;Api2\" ./build/Stride.slnx
 ```
 
 ---
