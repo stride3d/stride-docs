@@ -47,9 +47,10 @@ stride
 | `stride new` | Create a project from an installed Stride version's templates. For more information, visit the [Create a new project](#create-a-new-project) section. |
 | `stride upgrade` | Upgrade a project to a newer installed Stride version. For more information, read [Update Stride — Updating your project with Stride CLI](../install-and-update/update-stride.md#updating-your-project-with-stride-cli). |
 | `stride studio` | Open Game Studio. |
+| `stride crash` | List, show and send crash reports saved by Stride's headless tools. |
+| `stride legacy` | List commands kept for older (pre-4.4) Stride projects. |
 | `stride self` | Manage the Stride CLI itself. |
 | `stride version` | Show the Stride CLI version and the resolved Stride version. |
-| `stride legacy` | List commands kept for older (pre-4.4) Stride projects. |
 | `stride asset` | Run the Stride Asset Compiler directly (advanced; arguments are forwarded). |
 
 For more information about how to use a given command, use the `--help` flag. For example:
