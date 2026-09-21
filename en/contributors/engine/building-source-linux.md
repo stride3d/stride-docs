@@ -22,8 +22,8 @@ COPY of windows stuff below.....
 
 1. Open a command prompt, point it to a directory and clone Stride to it: `git clone https://github.com/stride3d/stride.git`
     - Note that when you use GitHub -> Code -> Download ZIP, this doesn't support Large File Support ```lfs```, make sure you use the command above or that your git client does it for you
-2. Open `<StrideDir>\build\Stride.sln` with Visual Studio 2022 and build `Stride.GameStudio` in the 60-Editor solution folder (it should be the default startup project) or run it from VS's toolbar.
-    - Optionally, open and build `Stride.Android.sln`, `Stride.iOS.sln`, etc.
+2. Open `<StrideDir>\build\Stride.slnx` with Visual Studio 2022 and build `Stride.GameStudio` in the 60-Editor solution folder (it should be the default startup project) or run it from VS's toolbar.
+    - Optionally, open and build `Stride.Android.slnf`, `Stride.iOS.slnf`, etc.
 
 
 
@@ -36,5 +36,3 @@ COPY of windows stuff below.....
 * Close VS, clear the nuget cache (in your cmd `dotnet nuget locals all --clear`), delete the hidden `.vs` folder inside `\build` and the files inside `bin\packages`, kill any msbuild and other vs processes, build the whole solution then build and run GameStudio.
 
 Do note that test solutions might fail but it should not prevent you from building `Stride.GameStudio`.
-
-
