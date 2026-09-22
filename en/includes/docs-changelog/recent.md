@@ -1,5 +1,5 @@
 * General
-  * <span class="badge text-bg-info">Updated</span> header sizes and margins for better readability.
+  * <span class="badge text-bg-info">Updated</span> header sizes and margins for better readability
 * Manual
   * <span class="badge text-bg-warning">Rewritten</span> [Platforms](../../manual/platforms/index.md) - Overhauled the platforms section
   * <span class="badge text-bg-warning">Rewritten</span> [Graphics — Graphics API](../../manual/graphics/graphics-api.md) - Updated page and added new information for Stride 4.4
