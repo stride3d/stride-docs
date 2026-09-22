@@ -1,4 +1,4 @@
-# Community Resources
+# Community resources
 
 Stride's community has been busy. This section brings together over **230** links across **18** categories, covering everything from released games, shaders, and physics libraries to networking frameworks, AI tools, tutorials, and editor extensions. Whether you are just starting out or looking for a specific solution to a tricky problem, there is a good chance someone in the community has already tackled it.
 
