@@ -56,7 +56,7 @@ This overhaul also made it far easier to track down GPU crashes, as Stride can n
 
 You can now pick the graphics API right from the UI for both your project and the editor. Game Studio can be configured in **Settings > Environment > Graphics API** (takes effect after a restart) and the game in the properties of the Windows package.
 
-![Selecting a Windows project package's graphics API from the Property grid](media/ReleaseNotes-4.4/game-graphics-api-selector.webp)
+![Selecting a Windows project package's graphics API from the Property grid.](media/ReleaseNotes-4.4/game-graphics-api-selector.webp)
 
 ### 🎨 A brand-new SDSL shader compiler
 
@@ -78,7 +78,7 @@ What this means for you:
 > [!WARNING]
 > Because the entire shader compiler was replaced, custom `.sdsl` shaders may need minor adjustments to compile cleanly. If you encounter any problems, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 
-![The new SDSL shader pipeline: many .sdsl shaders are parsed once into per-shader SPIR-S bytecode, .sdfx effects mix and compose them into standard SPIR-V, which feeds Vulkan natively and Direct3D and Metal via SPIRV-Cross](media/ReleaseNotes-4.4/sdsl-pipeline.webp)
+![The new SDSL shader pipeline: many .sdsl shaders are parsed once into per-shader SPIR-S bytecode, .sdfx effects mix and compose them into standard SPIR-V, which feeds Vulkan natively and Direct3D and Metal via SPIRV-Cross.](media/ReleaseNotes-4.4/sdsl-pipeline.webp)
 
 *Huge thanks to **[Youness Kafia](https://github.com/ykafia)**, whose early prototyping and experimentation laid the foundation for the new SDSL pipeline.*
 
@@ -139,11 +139,11 @@ We looked at **Bepu's own character example** to solve these issues. Unfortunate
 
 Since 4.3, our documentation has received a lot of changes. This is a part of an **ongoing effort to bring the documentation up-to-date** and restructure it to provide space for future content.
 
-![Documentation changelog is available in the manual](media/ReleaseNotes-4.4/docs.webp)
+![Documentation changelog is available in the manual.](media/ReleaseNotes-4.4/docs.webp)
 
 * [Get started](../manual/get-started/index.md) and [Platforms](../manual/platforms/index.md) have been **rewritten from scratch**.
 * **New sections:** [Assets](../manual/assets/index.md), [Install and update](../manual/install-and-update/index.md) and [Project](../manual/files-and-folders/index.md).
-* **New pages for new features:** [NativeAOT](../manual/files-and-folders/building-the-game/native-aot.md), [Replacement assets](../manual/assets/replacement-assets.md) and [Stride CLI](../manual/get-started/stride-cli.md?tabs=powershell).
+* **New pages for new features:** [NativeAOT](../manual/files-and-folders/building-the-game/native-aot.md), [Replacement assets](../manual/assets/replacement-assets.md) and [Stride CLI](../manual/get-started/stride-cli.md).
 * Brand new guide on **how to build and publish games** ([link](../manual/files-and-folders/building-the-game/index.md)).
 * Updated instructions on **publishing custom external packages** ([link](../manual/files-and-folders/external-packages/publish-a-nuget-package.md)).
 * Removed outdated sections and pages.
