@@ -3,7 +3,7 @@ _disableToc: false
 ---
 # Stride documentation
 
-Welcome to the Stride documentation. Whether you're a programmer, artist, designer or any other type of user of any skill-level, these pages should help you bring your visions to life using the powerful [Stride game engine](https://www.stride3d.net/).
+Welcome to the Stride documentation. Whether you're a programmer, artist, designer or any other type of user, of any skill-level, these pages should help you bring your visions to life using the powerful [Stride game engine](https://www.stride3d.net/).
 
 ## Dive right in
 
@@ -30,7 +30,7 @@ Welcome to the Stride documentation. Whether you're a programmer, artist, design
         <div class="card h-100">
             <div class="card-body">
                 <h3 class="card-title h5">🎓 Tutorials</h3>
-                <p class="card-text">Explore a wide range video tutorials. From beginner to intermediate with additional quick tips.</p>
+                <p class="card-text">Explore a wide range of video tutorials, from beginner to intermediate, with additional quick tips.</p>
             </div>
             <p class="px-3 mb-4"><a class="stretched-link" href="tutorials/index.md">Browse tutorials</a></p>
         </div>
@@ -44,7 +44,7 @@ Welcome to the Stride documentation. Whether you're a programmer, artist, design
         <div class="card h-100">
             <div class="card-body">
                 <h3 class="card-title h5">📝 Release notes</h3>
-                <p class="card-text">Check out what changed between versions of the engine.</p>
+                <p class="card-text">Learn about new features, improvements and other changes introduced between versions of the engine.</p>
             </div>
             <p class="px-3 mb-4"><a class="stretched-link" href="ReleaseNotes/index.md">Access release notes</a></p>
         </div>
@@ -53,7 +53,7 @@ Welcome to the Stride documentation. Whether you're a programmer, artist, design
         <div class="card h-100">
             <div class="card-body">
                 <h3 class="card-title h5">🌟 Contributing</h3>
-                <p class="card-text">Learn how to contribute to Stride's growth, whether you want to write code, fix a typo in the documentation, or something else.</p>
+                <p class="card-text">Learn how to contribute to Stride's growth, whether you want to donate, write code, fix a typo in the documentation, or something else.</p>
             </div>
             <p class="px-3 mb-4"><a class="stretched-link" href="contributors/index.md">Access contributor documentation</a></p>
         </div>
@@ -80,11 +80,11 @@ Welcome to the Stride documentation. Whether you're a programmer, artist, design
 
 ## 📥 Download PDF Versions
 
-You can download PDF versions of various Stride documentation sections:
+Some sections of this documentation are available in a PDF form for offline viewing:
 
-- [Stride Manual](manual/stride-manual.pdf): (File size: 120MB)
-- [Stride Tutorials](tutorials/stride-tutorials.pdf): (File size: 17MB)
-- [Contributing to Stride](contributors/contributing-in-stride.pdf): (File size: 16MB)
+* [Stride Manual](manual/stride-manual.pdf): (File size: 120MB)
+* [Stride Tutorials](tutorials/stride-tutorials.pdf): (File size: 17MB)
+* [Contributing to Stride](contributors/contributing-in-stride.pdf): (File size: 16MB)
 
 ## Documentation changelog
 
