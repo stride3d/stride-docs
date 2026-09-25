@@ -6,7 +6,7 @@ The main focus of this release was on **modernization and reach**, which include
 
 This update also includes many exciting new features, such as a **CLI tool**, ability to **replace read-only assets** and much more.
 
-## ✨ Highlights
+## Highlights
 
 Here are a few of the stand-out changes:
 
@@ -183,7 +183,7 @@ The new **CompareGold** tool helps **visualize differences between images** and 
 
 The CI can also now **automatically generate gold images for every platform**. This means that you no longer have to waste time retaking screenshots by hand, as the [Test Gold Generation workflow](https://github.com/stride3d/stride/actions/workflows/test-gold-gen.yml) will do it for you.
 
-## 💥 Breaking changes
+## Breaking changes
 
 * **Custom shaders:** the SDSL compiler was rewritten, so you might want to review how your custom shaders render. If you have a shader that no longer compiles or behaves differently, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
 * **Low-level graphics:** **Direct3D 12** now requires **Enhanced Barriers**. The legacy barrier path has been removed.
@@ -206,7 +206,7 @@ Changes to code API (should be automatically resolved during project upgrade):
 * `Utilities.Swap<T>` is now `MemoryUtilities.Swap<T>`.
 * `ScrollViewer.ScrollOfInternal` is now private.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 We'd like to thank everyone who contributed to 4.4:
 
