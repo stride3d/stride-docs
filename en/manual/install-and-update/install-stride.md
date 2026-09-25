@@ -36,7 +36,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 
 6. Stride is now installed and ready to use.
 
-    ![Stride ready to use](media/stride-launcher-ready.webp)
+    ![Stride ready to use](media/stride-launcher.webp)
 
 ## Installation location
 
