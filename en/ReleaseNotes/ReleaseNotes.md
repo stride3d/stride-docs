@@ -60,13 +60,15 @@ You can now pick the graphics API right from the UI for both your project and th
 
 ### 🎨 A brand-new SDSL shader compiler
 
-The biggest internal change in 4.4 is a **complete rewrite of the SDSL shader compiler**, now built around a modern [SPIR-V](https://www.khronos.org/spirv/)-centric pipeline.
+The biggest internal change in 4.4 is a **complete rewrite of the SDSL shader compiler**, now built around a modern [SPIRV](https://www.khronos.org/spirv/)-centric pipeline.
 
 Instead of parsing and stitching shaders together as text, Stride now works in **SPIR-V bytecode** end to end:
 
 * Each `.sdsl` shader is parsed **once** and compiled into its own **SPIR-S** module (SPIR-Stride, Stride's extended SPIR-V dialect).
 * Effects (`.sdfx`) then **mix and compose** those modules **directly as bytecode**, converting the result to standard **SPIR-V** for the GPU backend.
 * Crucially, text parsing happens **only at that first step:** recombining a new shader variation from already-compiled SPIR-S needs no re-parsing.
+
+![The new SDSL shader pipeline: many .sdsl shaders are parsed once into per-shader SPIR-S bytecode, .sdfx effects mix and compose them into standard SPIR-V, which feeds Vulkan natively and Direct3D and Metal via SPIRV-Cross.](media/ReleaseNotes-4.4/sdsl-pipeline.webp)
 
 What this means for you:
 
@@ -77,8 +79,6 @@ What this means for you:
 
 > [!WARNING]
 > Because the entire shader compiler was replaced, custom `.sdsl` shaders may need minor adjustments to compile cleanly. If you encounter any problems, please [open an issue on GitHub](https://github.com/stride3d/stride/issues) so we can fix it.
-
-![The new SDSL shader pipeline: many .sdsl shaders are parsed once into per-shader SPIR-S bytecode, .sdfx effects mix and compose them into standard SPIR-V, which feeds Vulkan natively and Direct3D and Metal via SPIRV-Cross.](media/ReleaseNotes-4.4/sdsl-pipeline.webp)
 
 *Huge thanks to **[Youness Kafia](https://github.com/ykafia)**, whose early prototyping and experimentation laid the foundation for the new SDSL pipeline.*
 
@@ -118,7 +118,7 @@ The new launcher is a part of the ongoing **cross-platform editor rewrite**. Thi
 
 ### 🧰 Building and engine architecture
 
-* **Much faster asset builds.** Assets compile **2x** faster for a typical game, and up to **10×** faster for Stride's own tests, thanks to a new asset-build cache.
+* **Much faster asset builds.** Assets compile **2x** faster for a typical game, and up to **10x** faster for Stride's own tests, thanks to a new asset-build cache.
 * **`.slnx` is the new default solution format.** Existing `.sln` solutions still open and save normally.
 * **Game Studio can now open projects that use newer versions of .NET.** You can use the newest C# features in your projects without having to update or fork the engine.
 * **Support for file-based apps.** You can now create a Stride game using a single C# file. For more information, check out the [community toolkit](https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/file-based-app.html).
@@ -171,7 +171,7 @@ The **crash reporter** has been overhauled from the ground-up. It now runs **ind
 
 Stride 4.4's test suite has been greatly expanded. Instead of being occasionally invoked for a few specific configurations, the CI (Continuous Integration) now **runs the entire test matrix across all platforms and graphics APIs.**
 
-Regressions on any platform or backend is now caught automatically before any change gets merged. This means that you can now confidently open a pull request and **trust the CI to prove it works everywhere**.
+Regressions on any platform or backend are now caught automatically before any change gets merged. This means that you can confidently open a pull request and **trust the CI to prove it works everywhere**.
 
 ![The GitHub dashboard shows all tests across multiple platforms and graphics APIs.](media/ReleaseNotes-4.4/ci-run.webp)
 
@@ -189,10 +189,10 @@ The CI can also now **automatically generate gold images for every platform**. T
 * **Low-level graphics:** **Direct3D 12** now requires **Enhanced Barriers**. The legacy barrier path has been removed.
 * **Vulkan updated to 1.3:** this might break support for older devices and users with outdated drivers.
 * **OpenGL has been removed:** consider changing the graphics API of your project to Vulkan or Direct 3D.
-* **Convex hulls:** the library we use to generate convex hulls (V-HACD) was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters, so you may want to validate them for accuracy.
+* **Convex hull changes:** the library we use to generate convex hulls (V-HACD) was updated. This new version improves on speed and accuracy, but has a wildly different set of configurable parameters, so you may want to validate them for accuracy.
 * **Bepu `CharacterController` was reworked:** existing character setups will behave differently and need adjustment. See [⚙️ Changes to the physics `CharacterComponent`](#-changes-to-the-physics-charactercomponent).
 * **Removed the ability to override Game Settings:** the feature was partially broken and not really that useful, which is why it was decided to remove it altogether. If you want to change settings depending on a user's platform/device, consider creating a **custom Game class**.
-* Dropped support for **32-bit** systems.
+* **Dropped support for 32-bit systems.**
 
 Changes to code API (should be automatically resolved during project upgrade):
 
