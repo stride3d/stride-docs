@@ -102,7 +102,7 @@ var playerModel = Content.Load(Assets.Models.Player);
 
 Adding assets to root now defaults to using the **project package that an asset belongs to** instead of the current one (like `MyGame.Windows`). This ensures that your assets work the same across different platforms. Game Studio also now tells you the name of the project package where the asset will be root and allows you to choose from alternatives.
 
-TODO: IMAGE
+![](media/ReleaseNotes-4.4/new-include-in-root.webp)
 
 Finally, Stride now allows you to create **replacement assets**, which can be used to override assets from external packages or even the engine itself. For more information, visit their dedicated page in the [documentation](../manual/assets/replacement-assets.md).
 
@@ -112,7 +112,7 @@ Finally, Stride now allows you to create **replacement assets**, which can be us
 
 Along with 4.4, we also released an **update to the launcher**. On the surface, **everything is mostly the same**, aside from a minor face-lift. The real change comes under-the-hood with the launcher now using **Avalonia** as its UI framework, which will make it possible to target **Linux** and **macOS** in the future.
 
-TODO: IMAGE
+![](media/ReleaseNotes-4.4/new-launcher.webp)
 
 The new launcher is a part of the ongoing **cross-platform editor rewrite**. This is an enormous endeavour that will take a lot of time and effort, so if you are willing to help, **check out the [white paper](https://docs.google.com/document/d/1q2nPnmrSfSJ9Njn8yxFPVeQSsJo7T0rvC7b4Q7ddmVY/edit?usp=sharing) and the [Avalonia Editor Rewrite project](https://github.com/orgs/stride3d/projects/6/) on GitHub.**
 
