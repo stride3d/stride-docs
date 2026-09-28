@@ -25,6 +25,8 @@ So far, Stride has mostly been a Windows-first engine. Other platforms were supp
 > [!NOTE]
 > **Game Studio** is being rewritten to be cross-platform.
 
+*Credits to [Jklawreszuk](https://github.com/Jklawreszuk) for doing research and creating patches that enabled Proton support.*
+
 ### ⌨️ New `stride` CLI tool
 
 Some tasks that previously required the use of **Game Studio** or the **launcher** can now be done directly **from the command-line!** By using the CLI tool you can install and manage versions of Stride, create new projects and launch Game Studio with simple commands.
@@ -114,7 +116,12 @@ Along with 4.4, we also released an **update to the launcher**. On the surface, 
 
 ![](media/ReleaseNotes-4.4/new-launcher.webp)
 
+> [!NOTE]
+> The launcher's color scheme is synchronized with your system.
+
 The new launcher is a part of the ongoing **cross-platform editor rewrite**. This is an enormous endeavour that will take a lot of time and effort, so if you are willing to help, **check out the [white paper](https://docs.google.com/document/d/1q2nPnmrSfSJ9Njn8yxFPVeQSsJo7T0rvC7b4Q7ddmVY/edit?usp=sharing) and the [Avalonia Editor Rewrite project](https://github.com/orgs/stride3d/projects/6/) on GitHub.**
+
+*Credits to [Kryptos](https://github.com/Kryptos-FR) for leading the avalonia rewrite and doing most of the work on the new launcher.*
 
 ### 🧰 Building and engine architecture
 
