@@ -38,7 +38,7 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <div class="card-body">
                 <h5 class="card-title">🌱 C# Beginner</h5>
                 <p>
-                    <span class="badge text-bg-info">15 lessons</span>
+                    <span class="badge text-bg-info">16 lessons</span>
                     <span class="badge text-bg-warning">2.5 hours</span>
                 </p>
                 <p class="card-text">These tutorials cover the beginner principles of using C# when working with the Stride game engine 🎮.</p>
@@ -53,7 +53,7 @@ New to Stride? Start with these tutorials to get familiar with the basics of the
             <div class="card-body">
                 <h5 class="card-title">📈 C# Intermediate</h5>
                 <p>
-                    <span class="badge text-bg-info">11 lessons</span>
+                    <span class="badge text-bg-info">12 lessons</span>
                     <span class="badge text-bg-warning">4 hours</span>
                 </p>
                 <p class="card-text">These tutorials cover various intermediate principles of using C# when working with the Stride game engine 🎮.</p>
