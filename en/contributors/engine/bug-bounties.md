@@ -13,7 +13,7 @@ If you think that **a bounty isn't satisfactory,** let us know the amount you wo
 If the feature you want to work on doesn't have a bounty, we can open one for you! However, we ask that you **adhere to the following criteria before reaching out:**
 
 * **Only contributors can request bounties.** Consider submitting a few PRs to get acquainted with the project.
-* **We will not open bounties for small bug-fixes, or couple-line solutions.** We have limited funds and would prefer using them for things that would actually aid the project.
+* **We will not open bounties for small bug-fixes, or couple-line solutions.** We have limited funds and we want to use them only for major additions that will aid the engine.
 * **We are not interested in opening bounties that are requested by bots.**
 * **We are not interested in opening bounties for low-quality or fully vibe-coded PRs.**
 
