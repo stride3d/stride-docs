@@ -14,7 +14,7 @@ If the feature you want to work on doesn't have a bounty, we can open one for yo
 
 * **Only contributors can request bounties.** Consider submitting a few PRs to get acquainted with the project.
 * **We will not open bounties for small bug-fixes, or couple-line solutions.** We have limited funds and we want to use them only for major additions that will aid the engine.
-* **We are not interested in opening bounties that are requested by bots.**
+* **We are not interested in opening bounties that are requested by bots or AI agents.**
 * **We are not interested in opening bounties for low-quality or fully vibe-coded PRs.**
 
 You can contact us through an issues's thread on GitHub or through [Discord](https://discord.gg/f6aerfE) in `#github-pr-and-issues`.
