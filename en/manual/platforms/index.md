@@ -46,8 +46,6 @@ if (Platform.Type == PlatformType.Android)
 ## In this section
 
 * [Windows](windows/index.md)
-* [UWP](uwp/index.md)
-  * [Xbox Live](uwp/xbox-live.md)
 * [Linux](linux/index.md)
   * [Setup and requirements](linux/setup-and-requirements.md)
   * [Install the editor using Wine](linux/install-the-editor-using-wine.md)
