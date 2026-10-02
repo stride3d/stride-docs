@@ -28,7 +28,7 @@ items:
   expanded: false
   href: engine/index.md
   items:
-  - name: Paid work
+  - name: Bounties
     href: engine/bug-bounties.md
   - name: Building source on Windows
     href: engine/building-source-windows.md

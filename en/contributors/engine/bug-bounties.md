@@ -1,4 +1,4 @@
-﻿# Paid work
+﻿# Bounties
 
 If you are a developer with solid experience in C#, rendering techniques, or game development, **we want to hire you!** We have allocated funds from supporters on [OpenCollective](https://opencollective.com/stride3d) and will pay you for your work on certain issues.
 
@@ -7,6 +7,12 @@ If you are a developer with solid experience in C#, rendering techniques, or gam
 Some issues on our GitHub repository have bounties associated with them. You can view all of them [here](https://github.com/stride3d/stride/labels/bounty).
 
 If you think that **a bounty isn't satisfactory,** let us know the amount you would want. Feel free to contact us either through an issue's thread or on [Discord](https://discord.gg/f6aerfE) in `#github-pr-and-issues`.
+
+## Who can take on bounties
+
+We welcome anyone who would want to help us enhance Stride, as long as their contributions reach a certain level of quality. Therefore, **we do not allow bots, AI agents or users who heavily rely on AI assistance to claim bounties.**
+
+If we suspect that your contribution will be of low effort based on previous activity from your GitHub account, we reserve a right to decline assigning you to a task.
 
 ## Opening new bounties
 
@@ -22,21 +28,23 @@ You can contact us through an issues's thread on GitHub or through [Discord](htt
 ## Taking a bounty
 
 1. **Find the [issue](https://github.com/stride3d/stride/labels/bounty)** that is associated with your bounty.
-2. **Check if the issue isn't taken.** If someone is already assigned, but hasn't made progress in a while, you can ask us if they can be taken off.
+2. **Check if the issue isn't taken.** If someone is already assigned, but hasn't made progress for more than a month, you can ask us if they can be taken off.
 3. **Reply in the issue's thread** and tag `@stride3d/stride-contributors` with your email or Discord handle.
 4. Once assigned, **create a new pull request** and we'll review it.
 5. After your PR gets merged you will receive 60% of the bounty and the other 40% on the next official release of the engine.
 
 ## Getting paid
 
-As mentioned in the previous section, once a PR is merged, we will give you 60% of the bounty and the other 40% on the next official release of the engine. 
+As mentioned in the previous section, once a PR is merged, we will give you 60% of the bounty and the other 40% on the next official release of the engine.
 
 We utilize the [Open source collective](https://oscollective.org/) as our fiscal host to approve the payments. They process payouts twice-a-week, once they have been approved by the admins of the Collective. They can only make payouts to countries served by PayPal and [Wise](https://documentation.opencollective.com/expenses-and-getting-paid/getting-paid-through-wise).
 
 Our fiscal host resides in the US. You may have to file a tax form depending on the sum of the bounty, see [Tax Information](https://docs.opencollective.com/help/expenses-and-getting-paid/tax-information).
 
+Bounties are paid out in dolars. Currently, we do not support crypto currencies.
+
 You can go to the specific bug bounty on Stride's [Open Collective](https://opencollective.com/stride3d) for payment:
 
-![gettingpaid-bounty](https://user-images.githubusercontent.com/3499539/158011382-732c2448-8368-418f-9eae-7713ea7b349d.gif)
+![Go to Actions > Submit Expense on a bounty's page.](https://user-images.githubusercontent.com/3499539/158011382-732c2448-8368-418f-9eae-7713ea7b349d.gif)
 
 More detail in Open Collective's [documentation](https://documentation.opencollective.com/expenses-and-getting-paid/submitting-expenses).
