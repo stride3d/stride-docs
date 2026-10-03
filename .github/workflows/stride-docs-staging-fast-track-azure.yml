@@ -19,7 +19,7 @@ jobs:
     runs-on: windows-2022
 
     environment:
-      name: 'Production'
+      name: 'Staging'
 
     steps:
     - name: .NET SDK Setup
@@ -66,5 +66,5 @@ jobs:
       with:
         app-name: 'stride-doc'
         slot-name: 'staging'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32FCD402B970463A9143B24C9B225749 }}
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: ./${{ env.DOCS_PATH }}/_site
