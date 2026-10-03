@@ -24,12 +24,12 @@ on:
           - staging
           - production
       skipPdfBuilding:
-        description: Skip PDF building
+        description: Skip PDF building (staging only, production always builds it)
         required: true
         default: true
         type: boolean
       skipApiBuilding:
-        description: Skip API building (staging only, the deploy replaces the whole version folder)
+        description: Skip API building (staging only, production always builds it)
         required: true
         default: false
         type: boolean
@@ -58,13 +58,6 @@ jobs:
 
     steps:
     # The deploy replaces the whole version folder: without the API, it would be removed from the site
-    - name: Check the API is built for production
-      if: inputs.slot == 'production' && inputs.skipApiBuilding
-      shell: bash
-      run: |
-        echo "::error::A production deploy replaces the whole version folder, it must include the API (uncheck Skip API building)"
-        exit 1
-
     # Checkout the Stride Docs repository from the branch the workflow runs from
     - name: Checkout Stride Docs
       uses: actions/checkout@v6
@@ -77,8 +70,9 @@ jobs:
       uses: ./stride-docs/.github/actions/setup-stride
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        skip-pdf-building: ${{ inputs.skipPdfBuilding }}
-        skip-api-building: ${{ inputs.skipApiBuilding }}
+        # A deploy replaces the whole version folder: production always gets everything
+        skip-pdf-building: ${{ inputs.slot != 'production' && inputs.skipPdfBuilding }}
+        skip-api-building: ${{ inputs.slot != 'production' && inputs.skipApiBuilding }}
         stride-branch: ${{ inputs.strideBranch }}
 
     # _site contains the folder of the version that was built, next to the site root files which aren't deployed from here
