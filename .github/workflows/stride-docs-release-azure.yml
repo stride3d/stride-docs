@@ -98,5 +98,5 @@ jobs:
       with:
         app-name: 'stride-doc'
         slot-name: 'Production'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4803638D673FA67D0C8650F34C4FA9D1 }}
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: ./${{ env.DOCS_PATH }}/_site

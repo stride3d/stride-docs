@@ -38,7 +38,7 @@ jobs:
     runs-on: windows-2025-vs2026
 
     environment:
-      name: 'Production'
+      name: 'Staging'
 
     steps:
     # Checkout the Stride Docs repository from the branch that triggered the workflow
@@ -63,5 +63,5 @@ jobs:
       with:
         app-name: 'stride-doc'
         slot-name: 'staging'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32FCD402B970463A9143B24C9B225749 }}
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: ./${{ env.DOCS_PATH }}/_site
