@@ -17,9 +17,9 @@ on:
         default: true
         type: boolean
       strideBranch:
-        description: 'Stride branch to checkout'
-        required: true
-        default: master
+        description: 'Stride branch to checkout (default: master-x.y for a master-x.y branch of stride-docs, master otherwise)'
+        required: false
+        default: ''
         type: string
 
 permissions:
@@ -50,7 +50,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         skip-pdf-building: ${{ inputs.skipPdfBuilding }}
         skip-api-building: ${{ inputs.skipApiBuilding }}
-        stride-branch: ${{ inputs.strideBranch || 'master' }}
+        stride-branch: ${{ inputs.strideBranch }}
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v5
