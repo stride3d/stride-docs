@@ -77,6 +77,10 @@ The folder structure plays a vital role in the documentation generation process,
 > [!NOTE]
 > This project includes the Visual Studio solution `Stride.Docs.slnx`, allowing you to edit the files using the Visual Studio IDE.
 
+## Upgrading Docfx
+
+The 404 page (`en/404.md`) relies on internals of the `modern` template: the `docfx:rel`, `docfx:navrel` and `docfx:tocrel` meta tags, the `docfx.min.js` module (imported once they're set), and the `_disableToc` metadata. `BuildDocs.ps1` also post-processes the generated `404.html` (`PostProcessing-Fixing404AbsolutePath`). After upgrading Docfx, check a missing page in several sections (i.e. `manual/missing.html`, `contributors/missing.html`, `missing.html`): it should show the navbar, the sidebar of the section and suggestions, with a 404 status.
+
 ## Layouts
 
 We utilize the default layout provided by the `modern` template, as specified in `docfx.json`.
