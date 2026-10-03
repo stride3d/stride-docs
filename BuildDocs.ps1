@@ -278,15 +278,41 @@ function Generate-ArchitectureDocsToc {
     Add-ArchitectureDocsTocItems $architectureFolder $architectureFolder 0 $lines
     [System.IO.File]::WriteAllLines((Join-Path $PSScriptRoot $tocLocation), $lines, [System.Text.UTF8Encoding]::new($false))
 }
+function Generate-ReleaseNotesRedirects {
+    # The release notes of each version are in ReleaseNotes-<version>.md,
+    # ReleaseNotes.md and index.md redirect to the ones of the version being built
+    $releaseNotesFolder = "en/ReleaseNotes"
+    $releaseNotesFileName = "ReleaseNotes-$($Settings.Version).md"
+
+    if (-not (Test-Path "$releaseNotesFolder/$releaseNotesFileName")) {
+        throw "$releaseNotesFolder/$releaseNotesFileName is missing, it should contain the release notes of $($Settings.Version), the highest version of versions.json."
+    }
+    if (-not (Select-String -Path "$releaseNotesFolder/toc.yml" -Pattern "href: $([regex]::Escape($releaseNotesFileName))$" -Quiet)) {
+        throw "$releaseNotesFolder/toc.yml doesn't list $releaseNotesFileName."
+    }
+
+    Write-Host -ForegroundColor Green "Generating release notes redirects to $releaseNotesFileName..."
+    Write-Host ""
+
+    $redirect = "---`nredirect_url: $([System.IO.Path]::ChangeExtension($releaseNotesFileName, '.html'))`n---`n"
+    foreach ($fileName in @("ReleaseNotes.md", "index.md")) {
+        [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot "$releaseNotesFolder/$fileName"), $redirect, [System.Text.UTF8Encoding]::new($false))
+    }
+}
+
 function Copy-ExtraItems {
 
     # versions.json, web.config and robots.txt are shared by all versions
     & "$PSScriptRoot/BuildSiteRoot.ps1" -OutputDirectory $Settings.WebDirectory
 
-    # This is needed for Stride Launcher, which loads Release Notes
-    Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
+    # This is needed for Stride Launcher, which loads the release notes markdown from latest/en/ReleaseNotes/ReleaseNotes-<version>.md,
+    # falling back to <version>/en/ReleaseNotes/ReleaseNotes-<version>.md when latest doesn't have it (i.e. a beta).
+    Write-Host -ForegroundColor Yellow "Copying release notes markdown into $($Settings.SiteDirectory)/en/ReleaseNotes/"
     Write-Host ""
-    Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
+    Copy-Item en/ReleaseNotes/ReleaseNotes-*.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
+    # Launchers 5.x and older load <version>/ReleaseNotes/ReleaseNotes.md (see web.config)
+    # Obsolete when: no Stride Launcher 5.x or older is used anymore (together with the release notes rules of web.config for them)
+    Copy-Item "en/ReleaseNotes/ReleaseNotes-$($Settings.Version).md" "$($Settings.SiteDirectory)/en/ReleaseNotes/ReleaseNotes.md"
 }
 
 function Start-LocalWebsite {
@@ -675,6 +701,8 @@ if ($engineArchitecture) {
     Copy-ArchitectureDocs
     Generate-ArchitectureDocsToc
 }
+
+Generate-ReleaseNotesRedirects
 
 Write-Host -ForegroundColor Green "Generating documentation..."
 Write-Host ""

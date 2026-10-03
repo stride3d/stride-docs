@@ -2,8 +2,8 @@ import gdscript from './highlight/gdscript.js'
 
 const app = {
     languageDropdownCreated: false,
-    // Sections that aren't versioned, web.config redirects them from any version to latest
-    crossVersionSections: ['contributors', 'community-resources'],
+    // Sections shared by all versions, web.config redirects them from any version to latest
+    crossVersionSections: ['contributors', 'community-resources', 'ReleaseNotes'],
     iconLinks: [
         {
             icon: 'github',

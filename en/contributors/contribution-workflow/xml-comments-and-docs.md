@@ -21,8 +21,8 @@ Significant changes, such as the introduction of new features or modifications t
 
 It's up to the Stride team, alongside our amazing contributors, to make sure that any new contributions bring along updates to the manual. This teamwork between the contributors and our review team helps keep our documentation a rich and invaluable resource for everyone in our community.
 
-## ReleaseNotesNext.md
+## Release notes
 
-The [ReleaseNotesNext.md](https://doc.stride3d.net/latest/en/ReleaseNotes/ReleaseNotesNext.html) file is a crucial document that should be continuously updated with summaries of important/major PRs that have been merged and are noteworthy for the community, such as new features.
+The release notes of the version in development, `en/ReleaseNotes/ReleaseNotes-<version>.md` in the [stride-docs](https://github.com/stride3d/stride-docs) repository (i.e. `ReleaseNotes-4.5.md` while 4.5 is in development), should be continuously updated with summaries of important/major PRs that have been merged and are noteworthy for the community, such as new features.
 
-This document serves as a running log of all significant changes slated for inclusion in the next release. Keeping this document current is vital for ensuring that the release notes are both accurate and exhaustive, thereby **streamlining the release process**.
+They serve as a running log of all significant changes slated for inclusion in the next release. Keeping them current is vital for ensuring that the release notes are both accurate and exhaustive, thereby **streamlining the release process**.
