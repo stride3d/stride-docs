@@ -78,8 +78,7 @@ flowchart TD
     subgraph B[setup-stride]
       direction TB
       B1[Install .NET 10 SDK] --> B3[Checkout stride3d/stride<br/>with Git LFS]
-      B3 --> B5[Checkout and build<br/>the custom DocFX fork]
-      B5 --> B6[Install DocFX 2.9-stride]
+      B3 --> B6[Install DocFX]
       B6 --> B7["build-all.bat<br/>(runs BuildDocs.ps1)"]
     end
 
@@ -91,7 +90,7 @@ Step by step:
 1. **Checkout Stride Docs** into a `stride-docs` folder, with `lfs: true` so that images and other large assets are fetched rather than left as pointer files
 1. **Install the .NET 10 SDK**
 1. **Checkout [stride3d/stride](https://github.com/stride3d/stride)** into a sibling folder, also with Git LFS. The engine source is needed to generate the API reference
-1. **Build DocFX from a fork**, the build currently uses [VaclavElias/docfx](https://github.com/VaclavElias/docfx) (branch `temp-fix`), packs it as version `2.9-stride` and installs it as a global tool. This is a temporary measure until the required fixes land in an official DocFX release
+1. **Install DocFX** as a global tool, at a specific version (see [Upgrading Docfx](docfx.md#upgrading-docfx))
 1. **Build the documentation** by running `build-all.bat`, which drives `BuildDocs.ps1` in non-interactive mode and writes the result into `_site`
 
 Every build is traceable back to its sources: the footer of each page links to the stride-docs and stride commits it was built from, and `build.json` in the version folder (i.e. [/4.4/build.json](https://doc.stride3d.net/4.4/build.json)) lists them with their branches, the build date and the GitHub Actions run.
