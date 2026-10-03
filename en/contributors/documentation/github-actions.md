@@ -22,16 +22,16 @@ flowchart LR
     master -.->|manual dispatch only| WG[stride-docs-github.yml]
     master -.->|manual dispatch only| WT[stride-docs-test-build.yml]
 
-    WD --> AV["Azure: version folder (4.4/, 4.3/, ...)"]
+    WD --> AV["Azure: version folder (4.4/, 4.3/, ...),<br/>and en/ from master"]
     WR --> AR["Azure: versions.json, web.config, robots.txt"]
     WG --> GH[GitHub Pages]
     WT --> AA[Artifact only, no deployment]
 ```
 
-The site hosts the documentation of several versions, each in its own folder (`4.4/`, `4.3/`, ...), and a few files at its root shared by all versions:
+The site hosts the documentation of several versions, each in its own folder (`4.4/`, `4.3/`, ...), the sections that aren't versioned in `en/` (contributing, community resources and release notes, see `unversioned` in `versions.json`), and a few files at its root shared by all versions:
 
 - `versions.json` lists the versions shown in the version selector and which one is the latest
-- `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules
+- `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules, i.e. from the unversioned sections of every version to `en/`
 - `robots.txt` keeps search engines on `/latest/`
 
 Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a run of the site root workflow, without rebuilding any documentation.
@@ -138,16 +138,18 @@ For how the Azure Web App itself is configured, see [Deployment](deployment-azur
 
 1. Builds the documentation, the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`
 1. Deploys only that folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too. The site root files generated next to it aren't deployed
+1. From `master` only, deploys the unversioned sections (`_site/en`) to `/home/site/wwwroot/en` the same way: they're maintained on `master`, other branches don't deploy them
+1. Checks that `build.json` of each deployed folder has the commit just built, on the Azure Web App itself
 1. For production, creates a **draft** GitHub Release tagged `2.0.0.<run number>`, which is why this workflow requests `contents: write` permission
 
-The documentation of a version not released yet (a beta) can be deployed to production as well: it's available in its own folder, without being the latest. The Stride Launcher and Game Studio load its release notes and getting started links from there.
+The documentation of a version not released yet (a beta) can be deployed to production as well: it's available in its own folder, without being the latest. Game Studio loads its getting started links from there, and the Stride Launcher its release notes from the unversioned sections, which have the release notes of every version.
 
 ### Site root deployment
 
 `stride-docs-site-root-azure.yml` runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master`, and deploys them together as a zip, without cleaning (the version folders are left untouched):
 
 - `versions.json`, as is. The version selector of every version reads it, including old versions that can't be updated anymore, so its format can only gain fields
-- `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`
+- `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`, and `%unversioned_sections%` by its unversioned sections
 - `robots.txt`, with a `Disallow` for each version of `versions.json`
 
 A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`.

@@ -59,14 +59,21 @@ In this part, we elaborate on the individual steps involved in the documentation
 - **Remove-APIDoc**
   - Removes the generated API metadata.
 - **Build-EnglishDoc**
-  - Uses `docfx.exe` to build the English documentation, incorporating the Stride API documentation if metadata is available.
+  - Uses `docfx.exe` to build the versioned English documentation (all sections of `en\docfx.json` but the unversioned ones), incorporating the Stride API documentation if metadata is available.
+- **Build-UnversionedDoc**
+  - Uses `docfx.exe` to build the sections that aren't versioned (`unversioned` in `versions.json`: contributing, community resources and release notes) into `_site/en`, with a navbar generated from `en\toc.yml` (its versioned sections link to `/latest/`, `main.js` adjusts them to the version the reader comes from).
 - **PostProcessing Steps**
   - PostProcessing-FixingSitemap
     - Adjusts the `sitemap.xml` to use '/latest/en' paths, allowing the most current version to maintain a consistent URL.
   - PostProcessing-Fixing404AbsolutePath
-    - Modifies asset (CSS, JS, ) paths in `404.html` to be absolute, as required by IIS for 404 page.
+    - Modifies asset (CSS, JS, ) paths in `404.html` to be absolute, as required by IIS for 404 page (for both builds).
+  - PostProcessing-LinksToUnversionedSections, PostProcessing-LinksToVersionedDocs
+    - Fix the links between both builds, which docfx keeps as they're written: links to unversioned sections stay relative to the version (`web.config` redirects them to `en/`), links of the release notes to the versioned documentation go to the documentation of their version when it's hosted, else to latest.
+  - Merge-SearchIndex
+    - Merges the search indexes of both builds, written to both, so that searching from any page finds all sections.
   - Copy-ExtraItems
-    - Copies the markdown of the release notes (`ReleaseNotes-<version>.md`), loaded by the Stride Launcher, and `ReleaseNotes.md` for the version being built, loaded by launchers 5.x and older.
+    - Copies the markdown of the release notes (`ReleaseNotes-<version>.md`) into `_site/en/ReleaseNotes`, loaded by the Stride Launcher (from `<version>/ReleaseNotes/ReleaseNotes.md`, redirected by `web.config`).
+    - Writes `build.json` into the version folder and `_site/en`.
     - Runs `BuildSiteRoot.ps1`, which generates the files shared by all versions at the root of the site: `versions.json`, `web.config` (with `%latest_version%` replaced by the latest version of `versions.json`) and `robots.txt` (with a `Disallow` for each version of `versions.json`, so that search engines only index `/latest/`).
 - **Build-AllLanguagesDocs**
   - Iterates over all selected languages and triggers the `Build-NonEnglishDoc` function for each.
@@ -98,6 +105,8 @@ graph TB
     H[Remove-APIDoc]
     M{isEnLanguage or isAllLanguages}
     N[Build-EnglishDoc]
+    N1[Build-UnversionedDoc]
+    O2[PostProcessing links + Merge-SearchIndex]
     O[PostProcessing-FixingSitemap]
     O1[PostProcessing-Fixing404AbsolutePath]
     P[Copy-ExtraItems]
@@ -127,7 +136,7 @@ graph TB
     D --> D1{{docfx metadata}} --> M
     M -->|Yes| N
     M -->|No| R
-    N --> DocFX{{docfx build}} --> O --> O1--> P
+    N --> DocFX{{docfx build}} --> N1 --> DocFX2{{docfx build}} --> O --> O1 --> O2 --> P
     P --> R
     R -->|Yes| S
     R -->|No| T

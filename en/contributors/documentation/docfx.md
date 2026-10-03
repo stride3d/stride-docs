@@ -12,6 +12,8 @@ Currently, we are not utilizing any additional packages.
 
 The configuration for Docfx is located in the `en\docfx.json` file. This file contains all the necessary settings for the Docfx build process.
 
+It describes the whole documentation. `BuildDocs.ps1` builds it in two parts, each with a copy of it restricted to their sections (`en\docfx.versioned.json` and `en\docfx.unversioned.json`, generated): the versioned documentation, in the folder of its version (i.e. `4.4/en/`), and the sections that aren't versioned (`unversioned` in `versions.json`: contributing, community resources and release notes), in `en/`, with a navbar generated from `en\toc.yml`. Both share everything else (template, metadata, resources).
+
 Contents of the Configuration File:
 
 - **API Sources**: Specifies the Stride path and selected projects for API documentation generation
@@ -64,6 +66,7 @@ The folder structure plays a vital role in the documentation generation process,
 - `build-all.bat`: Batch file used in GitHub Actions CI/CD to build all documentation using `BuildDocs.ps1`.
 - `BuildDocs.ps1`: PowerShell script responsible for building documentation. Refer to [pipeline](documentation-generation-pipeline.md) for details.
 - `BuildSiteRoot.ps1`: PowerShell script generating the files shared by all versions at the root of the site (`versions.json`, `web.config`, `robots.txt`).
+- `versions.json`: Versions of the documentation (`docs`), the one served by `/latest/` (`latest`), and the sections of `en` that aren't versioned (`unversioned`).
 - `OldDocsFix.ps1`: Temporary PowerShell script for fixing old documentation.
 - `Program.cs`: Startup file for ASP.NET Core.
 - `run.bat`: Batch file to run `BuildDocs.ps1` in interactive mode.
@@ -82,6 +85,11 @@ The folder structure plays a vital role in the documentation generation process,
 The builds of GitHub Actions use a specific version of Docfx, set in the **Install DocFX** step of [`.github/actions/setup-stride/action.yml`](https://github.com/stride3d/stride-docs/blob/master/.github/actions/setup-stride/action.yml). Upgrade it there, after checking the result locally with the same version.
 
 The 404 page (`en/404.md`) relies on internals of the `modern` template: the `docfx:rel`, `docfx:navrel` and `docfx:tocrel` meta tags, the `docfx.min.js` module (imported once they're set), and the `_disableToc` metadata. `BuildDocs.ps1` also post-processes the generated `404.html` (`PostProcessing-Fixing404AbsolutePath`). After upgrading Docfx, check a missing page in several sections (i.e. `manual/missing.html`, `contributors/missing.html`, `missing.html`): it should show the navbar, the sidebar of the section and suggestions, with a 404 status.
+
+Two steps of `BuildDocs.ps1` also rely on how docfx works, for the unversioned sections:
+
+- Links between the versioned and unversioned documentation (i.e. from the manual to contributors, or from release notes to the manual): docfx keeps links to pages outside its build as they're written, `PostProcessing-LinksToUnversionedSections` and `PostProcessing-LinksToVersionedDocs` fix them. Check a few of these links, and the warnings of the build.
+- The search index (`index.json`) is merged between both builds (`Merge-SearchIndex`), which relies on its keys being paths from the root of the build. Check that searching from a manual page finds contributors pages, and the other way around.
 
 ## Layouts
 
