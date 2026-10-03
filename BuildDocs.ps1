@@ -140,10 +140,13 @@ function Copy-ExtraItems {
     Write-Host -ForegroundColor Green "Updating web.config completed."
     Write-Host ""
 
-    # This is needed for Stride Launcher, which loads Release Notes
-    Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
+    # This is needed for Stride Launcher, which loads the release notes markdown from latest/en/ReleaseNotes/ReleaseNotes-<version>.md
+    # (ReleaseNotes.md being the ones of this version), and for launchers 5.x and older, from <version>/ReleaseNotes/ReleaseNotes.md
+    Write-Host -ForegroundColor Yellow "Copying release notes markdown into $($Settings.SiteDirectory)/en/ReleaseNotes/"
     Write-Host ""
+    Copy-Item en/ReleaseNotes/ReleaseNotes-*.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
     Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
+    Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/ReleaseNotes-$($Settings.Version).md"
 
     Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
     Write-Host ""
