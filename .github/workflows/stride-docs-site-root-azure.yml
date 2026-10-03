@@ -60,43 +60,20 @@ jobs:
       run: ./BuildSiteRoot.ps1 -OutputDirectory site-root
       shell: pwsh
 
-    # Each file is deployed on its own, so that nothing else in the site is removed
-    - name: Deploy web.config
-      uses: azure/webapps-deploy@v3
-      with:
-        app-name: 'stride-doc'
-        slot-name: ${{ env.SLOT == 'production' && 'Production' || 'staging' }}
-        # Secret of the environment (Production or Staging), for its slot
-        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-        package: site-root/web.config
-        type: static
-        target-path: /home/site/wwwroot/web.config
-        clean: false
-        restart: false
+    - name: Package site root files
+      run: zip -j site-root.zip site-root/*
 
-    - name: Deploy versions.json
+    # Incremental deploy (clean: false): only these files are replaced, the version folders are left untouched
+    - name: Deploy site root files
       uses: azure/webapps-deploy@v3
       with:
         app-name: 'stride-doc'
         slot-name: ${{ env.SLOT == 'production' && 'Production' || 'staging' }}
         # Secret of the environment (Production or Staging), for its slot
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-        package: site-root/versions.json
-        type: static
-        target-path: /home/site/wwwroot/versions.json
-        clean: false
-        restart: false
-
-    - name: Deploy robots.txt
-      uses: azure/webapps-deploy@v3
-      with:
-        app-name: 'stride-doc'
-        slot-name: ${{ env.SLOT == 'production' && 'Production' || 'staging' }}
-        # Secret of the environment (Production or Staging), for its slot
-        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-        package: site-root/robots.txt
-        type: static
-        target-path: /home/site/wwwroot/robots.txt
+        package: site-root.zip
+        type: zip
+        target-path: /home/site/wwwroot
         clean: false
         restart: false
 

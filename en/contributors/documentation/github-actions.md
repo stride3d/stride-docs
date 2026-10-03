@@ -144,7 +144,7 @@ The documentation of a version not released yet (a beta) can be deployed to prod
 
 ### Site root deployment
 
-`stride-docs-site-root-azure.yml` runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master`, and deploys each of them on its own:
+`stride-docs-site-root-azure.yml` runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master`, and deploys them together as a zip, without cleaning (the version folders are left untouched):
 
 - `versions.json`, as is. The version selector of every version reads it, including old versions that can't be updated anymore, so its format can only gain fields
 - `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`
