@@ -6,10 +6,8 @@ You don't need to touch these workflows to contribute content. This page is here
 
 | Workflow file | Name in the Actions tab | Trigger | Target |
 | --- | --- | --- | --- |
-| [stride-docs-release-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-release-azure.yml) | Build Stride Docs for Azure Web App Release 🚀 | Push to `release`, or manual | Azure Web App `stride-doc`, slot **Production** → [doc.stride3d.net](https://doc.stride3d.net/) |
-| [stride-docs-release-fast-track-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-release-fast-track-azure.yml) | Build Stride Docs (Fast Track) for Azure Web App Release 🚀 | Manual only | Same as above, without the artifact step |
-| [stride-docs-staging-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-staging-azure.yml) | Build Stride Docs for Azure Web App Staging | Push to `staging`, or manual | Azure Web App `stride-doc`, slot **staging** → [stride-doc-staging.azurewebsites.net](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) |
-| [stride-docs-staging-fast-track-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-staging-fast-track-azure.yml) | Build Stride Docs (Fast Track) for Azure Web App Staging | Manual only | Same as above, without the artifact step |
+| [stride-docs-deploy-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-deploy-azure.yml) | Deploy Stride Docs version to Azure Web App 🚀 | Manual only, from the branch of the version | The version folder (i.e. `4.4/`) of the Azure Web App `stride-doc`, slot **staging** or **Production** |
+| [stride-docs-site-root-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-site-root-azure.yml) | Deploy Stride Docs site root to Azure Web App 🚀 | Push to `master` changing the root files (staging), or manual | `versions.json`, `web.config` and `robots.txt` of the Azure Web App `stride-doc`, slot **staging** or **Production** |
 | [stride-docs-github.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-github.yml) | Build Stride Docs for GitHub Staging | Manual only | GitHub Pages in your own fork |
 | [stride-docs-test-build.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-test-build.yml) | Build Stride Docs - Test Build | Manual only | Nothing, build artifact only |
 
@@ -18,26 +16,27 @@ You don't need to touch these workflows to contribute content. This page is here
 ``` mermaid
 flowchart LR
     PR[Pull request] --> master[master branch]
-    master -->|merge| staging[staging branch]
-    master -->|merge| release[release branch]
-
-    staging --> WS[stride-docs-staging-azure.yml]
-    release --> WR[stride-docs-release-azure.yml]
+    master -.->|manual| WD[stride-docs-deploy-azure.yml]
+    old[master-4.3, ... branches] -.->|manual| WD
+    master -->|push changing root files, or manual| WR[stride-docs-site-root-azure.yml]
     master -.->|manual dispatch only| WG[stride-docs-github.yml]
     master -.->|manual dispatch only| WT[stride-docs-test-build.yml]
 
-    WS --> AS[Azure slot: staging]
-    WR --> AP[Azure slot: Production]
+    WD --> AV["Azure: version folder (4.4/, 4.3/, ...)"]
+    WR --> AR["Azure: versions.json, web.config, robots.txt"]
     WG --> GH[GitHub Pages]
-    WT --> AR[Artifact only, no deployment]
-
-    AS --> URLS[stride-doc-staging.azurewebsites.net]
-    AP --> URLP[doc.stride3d.net]
+    WT --> AA[Artifact only, no deployment]
 ```
 
-`master` is the default branch and the target for pull requests. **Nothing is deployed from `master` automatically.** A deployment happens only when work is merged from `master` into `staging` or `release`, which is what makes those two branches the release control points. Optionally, a maintainer can run any of the workflows manually from the **Actions** tab.
+The site hosts the documentation of several versions, each in its own folder (`4.4/`, `4.3/`, ...), and a few files at its root shared by all versions:
 
-The two **Fast Track** workflows are not shown above because they are never triggered by a push, they are manual variants of the release and staging deployments.
+- `versions.json` lists the versions shown in the version selector and which one is the latest
+- `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules
+- `robots.txt`
+
+Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a run of the site root workflow, without rebuilding any documentation.
+
+`master` is the default branch and the target for pull requests. **The documentation isn't deployed from `master` automatically**, a maintainer runs the deployment manually from the **Actions** tab, choosing the branch and the Azure slot (staging or production). Only changes to the root files on `master` are deployed automatically, to staging.
 
 ## Who can run these workflows
 
@@ -45,7 +44,7 @@ On the [stride3d/stride-docs](https://github.com/stride3d/stride-docs) repositor
 
 Opening a pull request doesn't deploy anything either. None of the workflows declare a `pull_request` trigger, so your PR is reviewed from the diff and from whatever preview you provide yourself.
 
-All four Azure workflows guard every job with a repository check:
+Both Azure workflows guard every job with a repository check:
 
 ```yaml
 if: github.repository == 'stride3d/stride-docs'
@@ -59,7 +58,7 @@ The two workflows without that guard, `stride-docs-github.yml` and `stride-docs-
 | --- | --- | --- |
 | `stride-docs-github.yml` | ✅ Publishes to your GitHub Pages | Pages enabled with the **GitHub Actions** source |
 | `stride-docs-test-build.yml` | ✅ Builds and gives you an artifact | Nothing |
-| The four Azure workflows | ⏭️ Jobs are skipped | Your own Azure infrastructure |
+| The two Azure workflows | ⏭️ Jobs are skipped | Your own Azure infrastructure |
 
 > [!TIP]
 > **Deploying to GitHub Pages is by far the easier route** and is what we recommend for showing off a change. It is free, needs no Azure account, and the setup is a one-time repository setting. Follow [Deployment to GitHub Pages](deployment-azure.md#deployment-to-github-pages) and share the resulting link in your pull request. Optionally, run it locally, using [Installation](installation.md) and share screenshots of the local preview.
@@ -68,7 +67,7 @@ Note that GitHub disables Actions on newly forked repositories by default. The f
 
 ## The shared build
 
-Every workflow, all six, performs its build through the same composite action, [`.github/actions/setup-stride`](https://github.com/stride3d/stride-docs/blob/master/.github/actions/setup-stride/action.yml). Keeping the build in one place means the six workflows stay in sync automatically; if you need to change how the documentation is built, that file is almost always the one to edit.
+Every workflow building the documentation (all of them except the site root one) performs its build through the same composite action, [`.github/actions/setup-stride`](https://github.com/stride3d/stride-docs/blob/master/.github/actions/setup-stride/action.yml). Keeping the build in one place means these workflows stay in sync automatically; if you need to change how the documentation is built, that file is almost always the one to edit.
 
 All builds run on a **Windows** runner (`windows-2025-vs2026`). Windows is required because the build compiles the Stride solution to extract the API documentation.
 
@@ -118,66 +117,41 @@ Both skip options default to `true` because they are the slowest parts of the bu
 
 ## Azure workflows
 
-The four Azure workflows all deploy to the same Azure Web App, `stride-doc`, and differ in the slot they target and whether they hand the build off through an artifact.
+Both Azure workflows deploy to the same Azure Web App, `stride-doc`. The **slot** input chooses where:
 
-| | Release | Staging |
+| | Production | Staging |
 | --- | --- | --- |
-| Branch | `release` | `staging` |
 | `app-name` | `stride-doc` | `stride-doc` |
 | `slot-name` | `Production` | `staging` |
 | GitHub environment | `Production` | `Staging` |
 | Publish profile | Secret `AZURE_PUBLISH_PROFILE` of the `Production` environment | Secret `AZURE_PUBLISH_PROFILE` of the `Staging` environment |
+| URL | [doc.stride3d.net](https://doc.stride3d.net/) | [stride-doc-staging.azurewebsites.net](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) |
 
-> [!NOTE]
-> Each publish profile is a secret of its environment, so only jobs running in that environment can use it. Required reviewers and deployment branches can be set on the `Production` environment in the repository settings, so that production deployments wait for an approval.
+Each publish profile is a secret of its environment, so only jobs running in that environment can use it. Required reviewers and deployment branches (i.e. `master` and `master-*`) can be set on the `Production` environment in the repository settings, so that production deployments wait for an approval.
+
+Both use [Azure Web Apps Deploy v3](https://github.com/Azure/webapps-deploy) with a `target-path`, which deploys only into that path of the site. Nothing outside of it is removed, so the other versions and the root files stay untouched.
 
 For how the Azure Web App itself is configured, see [Deployment](deployment-azure.md).
 
-### Standard versus Fast Track
+### Version deployment
 
-``` mermaid
-flowchart TD
-    subgraph Standard["Standard (2 jobs)"]
-      direction TB
-      S1[build job] --> S2[Upload artifact 'DocFX-app']
-      S2 -->|needs: build| S3[deploy job]
-      S3 --> S4[Download artifact]
-      S4 --> S5[Deploy to Azure]
-    end
+`stride-docs-deploy-azure.yml` runs from the branch of the version to deploy, for example `master` for the version in development or `master-4.3` for 4.3:
 
-    subgraph Fast["Fast Track (1 job)"]
-      direction TB
-      F1[build-deploy job] --> F2[Deploy to Azure directly]
-    end
-```
+1. Builds the documentation, the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`
+1. Deploys only that folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too. The site root files generated next to it aren't deployed
+1. For production, creates a **draft** GitHub Release tagged `2.0.0.<run number>`, which is why this workflow requests `contents: write` permission
 
-The **standard** workflows split the work into a `build` job and a `deploy` job, handing the site over as an artifact named `DocFX-app`. The benefit is that the built documentation is retained on the run page, so you can download and inspect exactly what was published.
+The documentation of a version not released yet (a beta) can be deployed to production as well: it's available in its own folder, without being the latest. The Stride Launcher and Game Studio load its release notes and getting started links from there.
 
-The **Fast Track** workflows collapse both into a single `build-deploy` job that deploys straight from the working directory. Compressing, uploading and re-downloading a full documentation build is slow, so skipping it saves a meaningful amount of time, at the cost of leaving no downloadable artifact behind. They are manual-only and exist for when you need a deployment out quickly.
+### Site root deployment
 
-### GitHub Release
+`stride-docs-site-root-azure.yml` runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master`, and deploys each of them on its own:
 
-The release workflow has one extra step that the others don't: after a successful build it creates a **draft** GitHub Release tagged `2.0.0.<run number>`. This is why that workflow requests `contents: write` permission while the rest only need `contents: read`.
+- `versions.json`, as is. The version selector of every version reads it, including old versions that can't be updated anymore, so its format can only gain fields
+- `web.config`, with `%deployment_version%` replaced by the latest version of `versions.json`
+- `robots.txt`
 
-### Which pushes are ignored
-
-Pushes to `release` and `staging` are ignored when they only touch documentation or repository plumbing:
-
-```yaml
-paths-ignore:
-  - 'README.md'
-  - 'Stride.Docs.sln'
-  - 'Stride.Docs.slnx'
-  - 'BuildDocs.ps1'
-  - 'wiki/**'
-  - .gitignore
-  - '.github/**'
-```
-
-So editing a workflow file on `release` will **not** redeploy the production site. If you need a run anyway, start one manually from the Actions tab.
-
-> [!CAUTION]
-> `BuildDocs.ps1` is on that list, so changing the build script alone does not trigger a deployment even though it directly affects the output. After changing it, run the workflow manually.
+A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`.
 
 ## GitHub Pages workflow
 
@@ -204,7 +178,7 @@ Because documentation is published under a version and language folder, your sit
 
 ## Test build workflow
 
-`stride-docs-test-build.yml` is the simplest of the six: a single `build` job that runs the shared setup and uploads the `DocFX-app` artifact. There is no deployment step at all.
+`stride-docs-test-build.yml` is the simplest of the workflows building the documentation: a single `build` job that runs the shared setup and uploads the `DocFX-app` artifact. There is no deployment step at all.
 
 Use it when you want to confirm that a change actually builds, particularly one touching `BuildDocs.ps1`, `docfx.json` or the table of contents, without publishing anything anywhere. Download the artifact from the run page to inspect the generated HTML.
 
@@ -215,7 +189,7 @@ Use it when you want to confirm that a change actually builds, particularly one 
 1. Click **Run workflow**, choose the branch, adjust the inputs if needed, and confirm
 
 > [!CAUTION]
-> For the Azure workflows, choose the branch that matches the target. Running the release workflow from a feature branch would build that branch's content and publish it straight to [doc.stride3d.net](https://doc.stride3d.net/).
+> For the version deployment, choose the branch of the version to deploy. Running it from a feature branch with the **production** slot would build that branch's content and publish it straight to [doc.stride3d.net](https://doc.stride3d.net/), replacing the version folder it documents.
 
 ## Related pages
 

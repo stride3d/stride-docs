@@ -63,6 +63,7 @@ The folder structure plays a vital role in the documentation generation process,
 - `appsettings.Development.json`: Development-specific configuration file for ASP.NET Core.
 - `build-all.bat`: Batch file used in GitHub Actions CI/CD to build all documentation using `BuildDocs.ps1`.
 - `BuildDocs.ps1`: PowerShell script responsible for building documentation. Refer to [pipeline](documentation-generation-pipeline.md) for details.
+- `BuildSiteRoot.ps1`: PowerShell script generating the files shared by all versions at the root of the site (`versions.json`, `web.config`, `robots.txt`).
 - `OldDocsFix.ps1`: Temporary PowerShell script for fixing old documentation.
 - `Program.cs`: Startup file for ASP.NET Core.
 - `run.bat`: Batch file to run `BuildDocs.ps1` in interactive mode.
@@ -70,7 +71,7 @@ The folder structure plays a vital role in the documentation generation process,
 - `Stride.Docs.csproj`: ASP.NET Core project file.
 - `Stride.Docs.slnx`: ASP.NET Core solution file.
 - `Stride.Docs.csproj.user`: User-specific ASP.NET Core project file.
-- `versions.json`: Configuration file managing versions of Stride documentation.
+- `versions.json`: Versions of Stride documentation shown in the version selector (`docs`), and the one served by `/latest/` (`latest`). It's shared by all deployed versions, including old ones that can't be updated anymore, so its format can only gain fields.
 - `web.config`: Configuration file for IIS deployment.
 
 > [!NOTE]

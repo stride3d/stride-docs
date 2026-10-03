@@ -2,6 +2,8 @@
 
 Assuming the transition is from version `4.1` to `4.2`, and that the Stride source code has been updated to the corresponding .NET version, follow these steps. Note that some steps can be executed at a later stage if needed.
 
+Before starting, create the `master-4.1` branch from `master`: it keeps the documentation of `4.1` deployable once `master` documents `4.2`.
+
 1. Update `manual\install-and-update\requirements.md` to reflect the new .NET version references
 1. Create `ReleaseNotes\ReleaseNotes-4.2.md` with the release notes for version `4.2`
    - Use [GitHub Release](https://github.com/stride3d/stride/releases) to generate a list of **What's Changed**, once the new tag is added, following the TeamCity build
@@ -14,20 +16,22 @@ Assuming the transition is from version `4.1` to `4.2`, and that the Stride sour
        - This is now automatically updated in GitHub Action
    - Update `TargetFramework` in two locations to the current framework version being used. Ensure to test this step locally
 1. Edit `versions.json`
-   - Under `versions`, add the new version `4.2`
+   - Under `docs`, add the new version at the top, i.e. `{ "url": "4.2", "name": "4.2 (beta)" }`
+   - Keep `latest` on the released version `4.1` for now
+   - The highest version of `versions.json` is the one built from the branch
 1. For GitHub Actions deployment update `*.yml` files in the `.github\workflows\` folder
    - `dotnet-version:` Update to the related .NET version
-1. Merging `master` to `staging` branch will automatically trigger deployment to our [staging environment](https://stride-doc-staging.azurewebsites.net/latest/en/)
-1. ⚠️ Merging `master` to `release` branch will automatically trigger deployment to our production website
+1. Run **Deploy Stride Docs version to Azure Web App** from `master` with the `staging` slot, and check the [staging environment](https://stride-doc-staging.azurewebsites.net/4.2/en/)
+1. ⚠️ Run it again with the `production` slot. The `4.2` folder is deployed next to the other versions, `latest` still serves `4.1`, and the Stride Launcher can already load the release notes of `4.2`
+1. Run **Deploy Stride Docs site root to Azure Web App** from `master` with the `production` slot, so that `4.2 (beta)` appears in the version selector (pushing `versions.json` to `master` already deployed it to staging)
+
+Once `4.2` is released:
+
+1. Edit `versions.json`: set `latest` to `4.2`, and rename it from `4.2 (beta)` to `4.2`
+1. Run **Deploy Stride Docs site root to Azure Web App** from `master` with the `production` slot. `/latest/` now serves `4.2`, nothing needs to be rebuilt
 1. It might take up to 24 hours for the CDN to refresh. The best approach is to contact the core contributors and request a CDN reset
 
-> [!CAUTION]
-> ⚠️ You must manually rename the existing folder on the server from `4.1` to `4.1-backup`, otherwise, the deployment to production will delete this folder while deploying to the `4.2` folder. Once `4.2` is deployed, it is safe to rename `4.1-backup` back to `4.1`. Any further deployments will affect only the `4.2` folder.
-
-> [!CAUTION]
-> There is a rule `<action type="Rewrite" url="4.3/{R:1}" />` in the root `web.config` that might need adjustment, even though it already points to **4.3**. Changing it to **4.2** will correctly show the 4.2 docs as the default, as expected. After switching it back to **4.3**, if the site still displays **4.2**, try appending `?randomtext` to the end of the URL. This forces an uncached version, which should finally display the **4.3** docs. At that point, the **4.3** rewrite rule is confirmed to work for uncached pages, meaning the CDN needs to be reset.
-
-The `BuildDocs.ps1` script will manage the deployment to the `4.2` folder while maintaining accessibility to previous versions. Note, that the deployment profile must be set to not delete existing items.
+Deploying `4.1` later (from `master-4.1`) only replaces the `4.1` folder, it doesn't change `versions.json`, `web.config` or `/latest/`.
 
 ## Other locations to update
 
