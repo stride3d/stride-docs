@@ -239,14 +239,14 @@ $(function () {
   function loadVersions() {
     $.getJSON('/versions.json', function(data) {
       $("#stride-current-version").empty();
-      data.versions.forEach(function(version) {
-        var url = version;
-        $("#stride-current-version").append('<option value="' + url + '">' + version + '</option>');
+      data.docs.forEach(function(doc) {
+        var url = doc.url;
+        $("#stride-current-version").append('<option value="' + url + '">' + (doc.url === data.latest ? doc.name + ' (latest)' : doc.name) + '</option>');
       });
       var urlSplits = window.location.pathname.split('/');
       var urlVersion = urlSplits[1];
       if (urlVersion == 'latest') {
-        urlVersion = data.versions[0];
+        urlVersion = data.latest;
       }
       $("#stride-current-version").val(urlVersion).change();
       redirectToCurrentDocVersion();
