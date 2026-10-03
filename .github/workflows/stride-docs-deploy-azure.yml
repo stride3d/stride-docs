@@ -92,6 +92,11 @@ jobs:
         "version=$($folders[0].Name)" >> $env:GITHUB_OUTPUT
       shell: pwsh
 
+    # webapps-deploy only zips a folder itself when no type is given
+    - name: Package documentation version
+      run: 7z a -tzip -mx=1 -bso0 -bsp0 "${{ runner.temp }}/docs.zip" "./${{ env.DOCS_PATH }}/_site/${{ steps.version.outputs.version }}/*"
+      shell: pwsh
+
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v3
@@ -100,7 +105,7 @@ jobs:
         slot-name: ${{ inputs.slot == 'production' && 'Production' || 'staging' }}
         # Secret of the environment (Production or Staging), for its slot
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-        package: ./${{ env.DOCS_PATH }}/_site/${{ steps.version.outputs.version }}
+        package: ${{ runner.temp }}/docs.zip
         type: zip
         # Only this version folder is replaced, files removed from the documentation are deleted from it
         target-path: /home/site/wwwroot/${{ steps.version.outputs.version }}
