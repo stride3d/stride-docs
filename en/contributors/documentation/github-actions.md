@@ -32,7 +32,7 @@ The site hosts the documentation of several versions, each in its own folder (`4
 
 - `versions.json` lists the versions shown in the version selector and which one is the latest
 - `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules
-- `robots.txt`
+- `robots.txt` keeps search engines on `/latest/`
 
 Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a run of the site root workflow, without rebuilding any documentation.
 
@@ -149,7 +149,7 @@ The documentation of a version not released yet (a beta) can be deployed to prod
 
 - `versions.json`, as is. The version selector of every version reads it, including old versions that can't be updated anymore, so its format can only gain fields
 - `web.config`, with `%deployment_version%` replaced by the latest version of `versions.json`
-- `robots.txt`
+- `robots.txt`, with a `Disallow` for each version of `versions.json`
 
 A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`.
 
