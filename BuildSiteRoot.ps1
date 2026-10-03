@@ -1,0 +1,54 @@
+<#
+.SYNOPSIS
+    Generates the files shared by all documentation versions at the root of the website: versions.json, web.config and robots.txt.
+.DESCRIPTION
+    These files are owned by the master branch and deployed on their own (see .github/workflows/stride-docs-site-root-azure.yml),
+    so that deploying the documentation of any version (including older ones) never overwrites them.
+
+    - versions.json: the list of documentation versions shown in the version selector, and which one is the latest (checked, then copied as is).
+      The selector of every version reads it, including old versions that can't be updated anymore: only add fields to its format.
+    - web.config: %deployment_version% is replaced by the latest version (target of the /latest/ URLs and of the 404 page).
+    - robots.txt: copied as is.
+.PARAMETER OutputDirectory
+    The directory where the files are generated, the default is _site (the root of the local website).
+.EXAMPLE
+    .\BuildSiteRoot.ps1 -OutputDirectory _site
+#>
+
+param (
+    [string]$OutputDirectory = "_site"
+)
+
+$ErrorActionPreference = 'Stop'
+
+function Write-Utf8File {
+    param ([string]$Path, [string]$Content)
+    # Without BOM, PowerShell 5.1 would add one with -Encoding UTF8
+    [System.IO.File]::WriteAllText($Path, $Content, [System.Text.UTF8Encoding]::new($false))
+}
+
+$versions = Get-Content (Join-Path $PSScriptRoot "versions.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+$urls = @($versions.docs | ForEach-Object { $_.url })
+
+if ($urls -notcontains $versions.latest) {
+    throw "versions.json: latest version '$($versions.latest)' must be one of the docs versions ($($urls -join ', '))."
+}
+
+New-Item -ItemType Directory -Force -Path $OutputDirectory | Out-Null
+$OutputDirectory = (Resolve-Path $OutputDirectory).Path
+
+Write-Host -ForegroundColor Yellow "Copying versions.json into $OutputDirectory (latest: $($versions.latest))"
+
+Copy-Item (Join-Path $PSScriptRoot "versions.json") $OutputDirectory
+
+Write-Host -ForegroundColor Yellow "Generating web.config into $OutputDirectory"
+
+$webConfig = Get-Content (Join-Path $PSScriptRoot "web.config") -Raw -Encoding UTF8
+Write-Utf8File (Join-Path $OutputDirectory "web.config") ($webConfig -replace "%deployment_version%", $versions.latest)
+
+Write-Host -ForegroundColor Yellow "Copying robots.txt into $OutputDirectory"
+
+Copy-Item (Join-Path $PSScriptRoot "robots.txt") $OutputDirectory
+
+Write-Host -ForegroundColor Green "Site root files generated."
+Write-Host ""
