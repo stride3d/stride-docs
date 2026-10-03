@@ -16,7 +16,7 @@
   href: ReleaseNotes/ReleaseNotes.md
 - name: 🌟 Contributing  
   href: contributors/
-  homepage: contributors/ways-to-contribute.md
+  homepage: contributors/index.md
 - name: 🔧 API
   href: api/
   homepage: api/index.md
