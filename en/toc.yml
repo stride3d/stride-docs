@@ -1,3 +1,4 @@
+# Unversioned sections (see versions.json) are built separately: they're linked by their index.html, which web.config redirects to /en/
 - name: 📖 Stride Docs
   href: index.md
 - name: 📚 Manual
@@ -13,10 +14,9 @@
   # - name: 📈 C# Intermediate
   #   href: tutorials/csharpintermediate/index.md
 - name: 📝 Release notes
-  href: ReleaseNotes/ReleaseNotes.md
+  href: ReleaseNotes/index.html
 - name: 🌟 Contributing
-  href: contributors/
-  homepage: contributors/index.md
+  href: contributors/index.html
 - name: 🔧 API
   href: api/
   homepage: api/index.md
@@ -24,5 +24,4 @@
 #   href: diagnostics/
 #   homepage: diagnostics/index.md
 - name: 🏋🏽 Community resources
-  href: community-resources/
-  homepage: community-resources/index.md
+  href: community-resources/index.html
