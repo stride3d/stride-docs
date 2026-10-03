@@ -70,14 +70,6 @@ runs:
       lfs: true
       ref: ${{ steps.stride-branch.outputs.branch }}
 
-  - name: Set up dependency caching for faster builds
-    uses: actions/cache@v5
-    with:
-      path: ~/.nuget/packages
-      key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.props', '**/*.targets', '**/packages.lock.json', '**/NuGet.config') }}
-      restore-keys: |
-        ${{ runner.os }}-nuget-
-
   # Temporary solution till the new docfx is available with Analyzers update
   - name: Checkout DocFX
     uses: actions/checkout@v6
