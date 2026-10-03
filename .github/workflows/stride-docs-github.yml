@@ -1,8 +1,6 @@
 name: Build Stride Docs for GitHub Staging
 
 env:
-  COMMON_SETTINGS_PATH: en/docfx.json
-  VERSION: "2.0.0.${{ github.run_number }}"
   DOCS_PATH: stride-docs
 
 on:

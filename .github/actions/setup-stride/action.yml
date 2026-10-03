@@ -46,13 +46,6 @@ runs:
   #     }
   #   shell: pwsh
 
-  - name: Set Version in docfx.json
-    run: |
-      $settingsContent = Get-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Raw
-      $updatedDocFxJsonContent = $settingsContent -replace '2.0.0.x', "${{ env.VERSION }}"
-      Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
-    shell: pwsh
-
   # Checkout the Stride repository from the default branch
   - name: Checkout Stride (note the LFS)
     uses: actions/checkout@v6

@@ -278,6 +278,68 @@ function Generate-ArchitectureDocsToc {
     Add-ArchitectureDocsTocItems $architectureFolder $architectureFolder 0 $lines
     [System.IO.File]::WriteAllLines((Join-Path $PSScriptRoot $tocLocation), $lines, [System.Text.UTF8Encoding]::new($false))
 }
+function Get-CommitInfo {
+    param ([string]$RepositoryPath, [string]$RepositoryUrl)
+
+    if (-not (Test-Path (Join-Path $RepositoryPath ".git"))) { return $null }
+
+    $commit = git -C $RepositoryPath rev-parse HEAD 2>$null
+    if (-not $commit) { return $null }
+
+    $info = [ordered]@{ commit = "$commit" }
+    $branch = git -C $RepositoryPath rev-parse --abbrev-ref HEAD 2>$null
+    if ($branch -and $branch -ne "HEAD") { $info.branch = "$branch" }
+    # Commits of a local build might not be pushed, so only builds from GitHub Actions link to them
+    if ($RepositoryUrl) { $info.url = "$RepositoryUrl/commit/$commit" }
+    return $info
+}
+
+function Get-BuildInfo {
+    # The stride-docs and stride commits the documentation is built from, shown in the footer and saved in build.json
+    $isCI = $env:GITHUB_ACTIONS -eq "true"
+
+    $info = [ordered]@{
+        version = $Settings.Version
+        date = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+    }
+    if ($isCI) {
+        $info.run = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY/actions/runs/$env:GITHUB_RUN_ID"
+    }
+
+    $info.docs = Get-CommitInfo $PSScriptRoot $(if ($isCI) { "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY" })
+    # Same location as used for the API and the architecture docs
+    $stride = Get-CommitInfo (Join-Path $PSScriptRoot "..\stride") $(if ($isCI) { "https://github.com/stride3d/stride" })
+    if ($stride) { $info.stride = $stride }
+
+    return $info
+}
+
+function Get-FooterMetadata {
+    # _appFooter of docfx.json, with its <!--build-info--> placeholder replaced by the commits the documentation is built from
+    param ($BuildInfo)
+
+    $links = foreach ($name in @("docs", "stride")) {
+        $commit = $BuildInfo[$name]
+        if (-not $commit) { continue }
+
+        $label = if ($name -eq "docs") { "stride-docs" } else { "stride" }
+        $title = if ($commit.branch) { " title='$($commit.branch)'" } else { "" }
+        $shortCommit = $commit.commit.Substring(0, 7)
+        if ($commit.url) {
+            "$label <a href='$($commit.url)'$title>$shortCommit</a>"
+        } else {
+            "$label <span$title>$shortCommit</span>"
+        }
+    }
+
+    $builtFrom = if ($BuildInfo.run) { "Built from" } else { "Built locally from" }
+    $footer = (Get-Content en/docfx.json -Raw -Encoding UTF8 | ConvertFrom-Json).build.globalMetadata._appFooter
+    $footer = $footer.Replace("<!--build-info-->", "$builtFrom $($links -join ' &middot; ')")
+
+    # Double quotes don't survive being passed as a command line argument by Windows PowerShell
+    return "_appFooter=$($footer.Replace('"', "'"))"
+}
+
 function Generate-ReleaseNotesRedirects {
     # The release notes of each version are in ReleaseNotes-<version>.md,
     # ReleaseNotes.md and index.md redirect to the ones of the version being built
@@ -314,6 +376,11 @@ function Copy-ExtraItems {
     # Launchers 5.x and older load <version>/ReleaseNotes/ReleaseNotes.md (see web.config)
     # Obsolete when: no Stride Launcher 5.x or older is used anymore (together with the release notes rules of web.config for them)
     Copy-Item "en/ReleaseNotes/ReleaseNotes-$($Settings.Version).md" "$($Settings.SiteDirectory)/en/ReleaseNotes/ReleaseNotes.md"
+
+    # The commits the documentation is built from, i.e. to check what's deployed: https://doc.stride3d.net/4.4/build.json
+    Write-Host -ForegroundColor Yellow "Writing build.json into $($Settings.SiteDirectory)/"
+    Write-Host ""
+    [System.IO.File]::WriteAllText((Join-Path (Resolve-Path $Settings.SiteDirectory) "build.json"), ($buildInfo | ConvertTo-Json -Depth 5), [System.Text.UTF8Encoding]::new($false))
 }
 
 function Start-LocalWebsite {
@@ -364,7 +431,7 @@ function Build-EnglishDoc {
     Write-Host ""
 
     # Output to both build.log and console
-    docfx build en/docfx.json -o $outputDirectory | Write-Host
+    docfx build en/docfx.json -o $outputDirectory --metadata $footerMetadata | Write-Host
 
     Build-EnglishPdf -SkipBuilding $SkipPdfBuilding
 
@@ -465,7 +532,7 @@ function Build-NonEnglishDoc {
 
         $outputDirectory = "$($Settings.SiteDirectory)/$($SelectedLanguage.Code)"
 
-        docfx build $langFolder/docfx.json -o $outputDirectory | Write-Host
+        docfx build $langFolder/docfx.json -o $outputDirectory --metadata $footerMetadata | Write-Host
 
         if (!$BuildAll) {
             Remove-Item $langFolder -Recurse -Verbose
@@ -701,6 +768,9 @@ if ($engineArchitecture) {
 }
 
 Generate-ReleaseNotesRedirects
+
+$buildInfo = Get-BuildInfo
+$footerMetadata = Get-FooterMetadata $buildInfo
 
 Write-Host -ForegroundColor Green "Generating documentation..."
 Write-Host ""

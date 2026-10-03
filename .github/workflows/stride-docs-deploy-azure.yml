@@ -7,7 +7,7 @@
 name: Deploy Stride Docs version to Azure Web App 🚀
 
 env:
-  COMMON_SETTINGS_PATH: en/docfx.json
+  # Tag of the GitHub release created for production deployments
   VERSION: "2.0.0.${{ github.run_number }}"
   DOCS_PATH: stride-docs
 

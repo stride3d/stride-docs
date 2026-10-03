@@ -59,7 +59,7 @@
       "_enableSearch": true,
       "_appLogoPath": "media/stride-logo-red.svg",
       "_appLogoUrl": "https://www.stride3d.net/",
-      "_appFooter": "<div class=\"d-flex flex-column flex-sm-row justify-content-between pt-1 text-center small\"><p >Supported by the <a href=\"https://dotnetfoundation.org/\" target=\"_blank\" rel=\"noopener\">.NET Foundation</a></p><p>Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></p><p >Stride Docs Website v.2.0.0.x</p><p>&copy; .NET Foundation and Contributors</p></div>",
+      "_appFooter": "<div class=\"d-flex flex-column flex-sm-row justify-content-between gap-1 py-2 text-center small\"><p class=\"m-0\">Supported by the <a href=\"https://dotnetfoundation.org/\" target=\"_blank\" rel=\"noopener\">.NET Foundation</a></p><p class=\"m-0\">Made with <a href=\"https://dotnet.github.io/docfx\">docfx</a></p><p class=\"m-0\"><!--build-info--></p><p class=\"m-0\">&copy; .NET Foundation and Contributors</p></div>",
       "_gitContribute": {
         "repo": "https://github.com/stride3d/stride-docs",
         "branch": "master"
