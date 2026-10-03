@@ -184,18 +184,18 @@ const app = {
                 const selectElement = document.getElementById("stride-current-version");
                 selectElement.innerHTML = '';
 
-                data.versions.forEach(version => {
-                    const url = version;
+                data.docs.forEach(doc => {
+                    const url = doc.url;
                     const option = document.createElement('option');
                     option.value = url;
-                    option.textContent = version;
+                    option.textContent = doc.url === data.latest ? doc.name + ' (latest)' : doc.name;
                     selectElement.appendChild(option);
                 });
 
                 const urlSplits = window.location.pathname.split('/');
                 let urlVersion = urlSplits[1];
                 if (urlVersion === 'latest') {
-                    urlVersion = data.versions[0];
+                    urlVersion = data.latest;
                 }
 
                 selectElement.value = urlVersion;
