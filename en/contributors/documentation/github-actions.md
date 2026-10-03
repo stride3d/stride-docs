@@ -111,7 +111,7 @@ Every workflow that can be dispatched manually offers the same three inputs:
 | --- | --- | --- |
 | **Skip PDF building** | `true` | Passes `-SkipPdfBuilding`, omitting the PDF generation pass |
 | **Skip API building** | `true` | Passes `-SkipApiBuilding`, omitting the Stride API reference |
-| **Stride branch to checkout** | `master` | Which branch of `stride3d/stride` the API reference is generated from |
+| **Stride branch to checkout** | empty | Which branch of `stride3d/stride` the API reference is generated from. When empty, the branch matching the one the workflow runs from: `master-4.3` for `master-4.3` (or e.g. `master-4.3-fix`), `master` otherwise |
 
 Both skip options default to `true` because they are the slowest parts of the build. Leave them on for a quick content preview; turn them off when you specifically need to check the API reference or the PDF output.
 
