@@ -10,7 +10,7 @@ You read that right. **Xenko 3.0** is out now, released under the permissive [MI
 
 From now on, you can use and modify Xenko completely **free** — whether you're a professional, a student, or just looking for a new hobby. This includes the runtime and editor.
 
-![Xenko GitHub](media/ReleaseNotes-3.0/xenko-oss.png)
+![Xenko GitHub](media/ReleaseNotes-3.0/open-source.png)
 
 Silicon Studio no longer supports Xenko, but members of the Xenko team will continue to work on it as part of the community.
 

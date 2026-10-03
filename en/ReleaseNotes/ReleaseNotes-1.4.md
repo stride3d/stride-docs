@@ -6,7 +6,7 @@
 
 The engine has been renamed Xenko. Here is our new logo, be sure to remember it!
 
-<img src="media/ReleaseNotes-1.4/xenko-logo.png" align="center" />
+<img src="media/ReleaseNotes-1.4/logo.png" align="center" />
 
 The following changes have been introduced during the renaming and will be automatically applied to your project when opening it in the Game Studio.
 
