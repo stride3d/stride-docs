@@ -105,7 +105,7 @@ You can use custom shaders in any [material attribute](../materials/material-att
 
 1. In the **Asset View**, select the material you want to use the shader in.
 
-2. In the **Property Grid**, next to the property you want to control with the shader, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Change**) and select **Shader**.
+2. In the **Property Grid**, next to the property you want to control with the shader, click the arrow button (**Change**) and select **Shader**.
 
     ![Select Shader](media/select-shader.png)
 

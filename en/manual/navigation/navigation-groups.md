@@ -22,7 +22,7 @@ You can create different navigation groups for different kinds of entity. For ex
 
    ![Game settings](media/navigation-settings.png)
 
-4. Next to **Groups**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+4. Next to **Groups**, click ➕ (**Add**).
 
     Game Studio adds a new item to the list of navigation groups.
 

@@ -28,7 +28,7 @@ By default, Stride disables light shafts in new projects. To enable them:
 
     ![Select forward renderer](../../virtual-reality/media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select **LightShafts**.
+3. In the **Property Grid** (on the right by default), next to **Light shafts**, click the arrow button (**Replace**) and select **LightShafts**.
 
     ![Select light shafts](media/select-light-shafts.png)
 
@@ -74,11 +74,11 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
     ![Add light shaft bounding volume component](media/add-light-shaft-bounding-volume.png)
 
-6. In the **light shaft bounding volume** component properties, next to **light shaft**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+6. In the **light shaft bounding volume** component properties, next to **light shaft**, click 👆 (**Select an asset**).
 
 7. In the **entity picker**, select the entity with the directional light you want to create light shafts and click **OK**.
 
-8. In the **light shaft bounding volume** component properties, next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+8. In the **light shaft bounding volume** component properties, next to **Model**, click 👆 (**Select an asset**).
 
 9. In the **Select an asset** window, select the model you created and click **OK**.
 

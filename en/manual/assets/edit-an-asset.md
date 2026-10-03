@@ -23,13 +23,7 @@ Certain assets require the use of a dedicated editor. The most prominent example
 
 Currently, the assets that have a dedicated editor include:
 
-* Graphics compositor
-* Prefabs
-* Scenes
-* Sprite sheets
-* Ui pages
-* Ui libraries
-* Scripts
+[!INCLUDE [dedicated-editors-list](../../includes/assets/dedicated-editors-list.md)]
 
 To open a dedicated editor for an asset either **double click it**, right click and select **🖉 Edit asset** or select it and press **Ctrl + Enter**.
 

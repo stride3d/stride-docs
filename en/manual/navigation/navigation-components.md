@@ -16,7 +16,7 @@
 
     Game Studio adds a navigation component to the entity.
 
-3. Under the **Navigation** component properties, next to **Navigation mesh**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
+3. Under the **Navigation** component properties, next to **Navigation mesh**, click 👆 (**Select an asset**):
 
     ![Select an asset](media/open-asset-picker.png)
 

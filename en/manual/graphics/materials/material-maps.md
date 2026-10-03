@@ -17,7 +17,7 @@ Material maps can fetch values using one of several providers:
 * **Shader**: a value provided by a ComputeColor shader. This lets you use procedural values
 * **Texture**: a value sampled from a [texture](../textures/index.md)
 
-To choose the provider, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select it from the drop-down menu:
+To choose the provider, click the arrow button (**Replace**) and select it from the drop-down menu:
 
 ![media/material-colors-1.png](media/material-colors-1.png) 
 
@@ -25,7 +25,7 @@ To choose the provider, click ![Blue arrow button](~/manual/game-studio/media/bl
 
 This provider takes a value from an attribute of the mesh of the model you apply the material to.
 
-It has two modes: **Color Vertex Stream** and **Custom Vertex Stream**. To switch between them, with **Vertex Stream** selected as the provider, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose the mode you want to use.
+It has two modes: **Color Vertex Stream** and **Custom Vertex Stream**. To switch between them, with **Vertex Stream** selected as the provider, click the arrow button (**Replace**) and choose the mode you want to use.
 
 ![Vertex stream mode](media/vertex-stream-mode.png)
 
@@ -51,7 +51,7 @@ Takes a value from the mesh channel you specify.
 
 Perform a binary operation from two color/scalar value providers. You can nest as many material maps inside binary operators as you need (including further binary operators).
 
-To choose how the operation works, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select from the drop-down menu. The operations are similar to options when blending layers in Photoshop.
+To choose how the operation works, click the arrow button (**Replace**) and select from the drop-down menu. The operations are similar to options when blending layers in Photoshop.
 
 ![Operation mode](media/operation-mode.png)
 

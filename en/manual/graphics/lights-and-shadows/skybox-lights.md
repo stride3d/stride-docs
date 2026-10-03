@@ -54,7 +54,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
     ![Light component property](media/light-component-property.png)
 
-7. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
+7. Click 👆 (**Select an asset**):
 
 	![No skybox asset selected](media/no-skybox-asset-selected.png)
 

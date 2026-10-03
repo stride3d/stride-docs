@@ -6,7 +6,7 @@
 There are a few ways of using assets in code:
 
 * [**Referencing**](#referencing-an-asset) - the easiest way, creates an assignable reference in the **Property grid**.
-* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, but let's you handle loading and unloading manually (most commonly used with [scenes](../game-studio/scenes.md)).
+* [**Url reference**](#url-reference) - creates an assignable reference in the **Property grid**, but let's you handle loading and unloading manually (most commonly used with [scenes](../scenes/index.md)).
 * [**Loading directly**](#loading-directly) - a manual way of loading assets without having to assign anything in the **Property grid**.
 
 ## Referencing an asset
