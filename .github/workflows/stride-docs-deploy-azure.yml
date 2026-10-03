@@ -1,0 +1,124 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+# Builds the documentation of the branch it runs from (master, master-4.3, ...) and deploys it into its own version folder (i.e. 4.4/).
+# Other versions and the files at the root of the site (versions.json, web.config, robots.txt) are left untouched,
+# the root files are deployed from master by stride-docs-site-root-azure.yml.
+name: Deploy Stride Docs version to Azure Web App 🚀
+
+env:
+  # Tag of the GitHub release created for production deployments
+  VERSION: "2.0.0.${{ github.run_number }}"
+  DOCS_PATH: stride-docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: Azure slot to deploy to
+        required: true
+        default: staging
+        type: choice
+        options:
+          - staging
+          - production
+      skipPdfBuilding:
+        description: Skip PDF building
+        required: true
+        default: true
+        type: boolean
+      skipApiBuilding:
+        description: Skip API building
+        required: true
+        default: true
+        type: boolean
+      strideBranch:
+        description: Stride branch to checkout
+        required: true
+        default: master
+        type: string
+
+permissions:
+  contents: write  # required to create releases/tags
+
+concurrency:
+  group: azure-${{ inputs.slot }}
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    # Run this job only if the repository is 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs'
+    runs-on: windows-2025-vs2026
+
+    environment:
+      name: ${{ inputs.slot == 'production' && 'Production' || 'Staging' }}
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+    # Checkout the Stride Docs repository from the branch the workflow runs from
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v6
+      with:
+        path: ${{ env.DOCS_PATH }}
+        lfs: true
+
+    - name: Run Global Setup
+      id: setup
+      uses: ./stride-docs/.github/actions/setup-stride
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        skip-pdf-building: ${{ inputs.skipPdfBuilding }}
+        skip-api-building: ${{ inputs.skipApiBuilding }}
+        stride-branch: ${{ inputs.strideBranch }}
+
+    # _site contains the folder of the version that was built, next to the site root files which aren't deployed from here
+    - name: Find documentation version
+      id: version
+      run: |
+        $folders = @(Get-ChildItem -Directory "${{ env.DOCS_PATH }}/_site")
+        if ($folders.Count -ne 1) {
+          throw "Expected a single version folder in _site, found: $($folders.Name -join ', ')"
+        }
+        Write-Host "Documentation version: $($folders[0].Name)"
+        "version=$($folders[0].Name)" >> $env:GITHUB_OUTPUT
+      shell: pwsh
+
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: 'stride-doc'
+        slot-name: ${{ inputs.slot == 'production' && 'Production' || 'staging' }}
+        # Secret of the environment (Production or Staging), for its slot
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: ./${{ env.DOCS_PATH }}/_site/${{ steps.version.outputs.version }}
+        type: zip
+        # Only this version folder is replaced, files removed from the documentation are deleted from it
+        target-path: /home/site/wwwroot/${{ steps.version.outputs.version }}
+        clean: true
+        restart: false
+
+    # From the Azure Web App itself (not through the CDN of doc.stride3d.net): build.json of the version must be the one just built
+    - name: Check the deployed version
+      shell: bash
+      run: |
+        url="https://stride-doc${{ inputs.slot == 'production' && '' || '-staging' }}.azurewebsites.net/${{ steps.version.outputs.version }}/build.json"
+        for attempt in 1 2 3 4 5 6; do
+          commit=$(curl -sf "$url" | jq -r .docs.commit)
+          if [ "$commit" = "$GITHUB_SHA" ]; then
+            echo "$url: $commit"
+            exit 0
+          fi
+          sleep 10
+        done
+        echo "::error::$url doesn't have the commit $GITHUB_SHA (found: $commit)"
+        exit 1
+
+    - name: Create GitHub Release
+      if: inputs.slot == 'production'
+      run: |
+        gh release create ${{ env.VERSION }} --title "v${{ env.VERSION }}" --notes "Documentation ${{ steps.version.outputs.version }} deployed from ${{ github.ref_name }}" --draft
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      working-directory: ${{ env.DOCS_PATH }}
