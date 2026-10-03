@@ -2,6 +2,8 @@ import gdscript from './highlight/gdscript.js'
 
 const app = {
     languageDropdownCreated: false,
+    // Sections that aren't versioned, web.config redirects them from any version to latest
+    crossVersionSections: ['contributors', 'community-resources'],
     iconLinks: [
         {
             icon: 'github',
@@ -242,7 +244,9 @@ const app = {
 
         // Pages without a table of contents have nowhere to put the version selector,
         // and throwing here would stop docfx from rendering the rest of the page (i.e. the navbar)
-        if (document.getElementById("toc")) {
+        // Selecting another version would redirect back to latest in sections that aren't versioned
+        const section = window.location.pathname.split('/')[3];
+        if (document.getElementById("toc") && !this.crossVersionSections.includes(section)) {
             this.addVersionNavigation();
             this.loadVersions();
         }
