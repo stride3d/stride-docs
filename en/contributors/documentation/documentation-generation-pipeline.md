@@ -66,7 +66,8 @@ In this part, we elaborate on the individual steps involved in the documentation
   - PostProcessing-Fixing404AbsolutePath
     - Modifies asset (CSS, JS, ) paths in `404.html` to be absolute, as required by IIS for 404 page.
   - Copy-ExtraItems
-    - Copies additional items like `versions.json`, `web.config`, `ReleaseNotes.md` and `robots.txt`, while also updating the `%deployment_version%` parameter in the `web.config` file.
+    - Copies the markdown of the release notes (`ReleaseNotes-<version>.md`), loaded by the Stride Launcher, and `ReleaseNotes.md` for the version being built, loaded by launchers 5.x and older.
+    - Runs `BuildSiteRoot.ps1`, which generates the files shared by all versions at the root of the site: `versions.json`, `web.config` (with `%deployment_version%` replaced by the latest version of `versions.json`) and `robots.txt`.
 - **Build-AllLanguagesDocs**
   - Iterates over all selected languages and triggers the `Build-NonEnglishDoc` function for each.
 - **Build-NonEnglishDoc**

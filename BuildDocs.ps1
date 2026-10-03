@@ -303,6 +303,7 @@ function Generate-ReleaseNotesRedirects {
 function Copy-ExtraItems {
 
     # versions.json, web.config and robots.txt are shared by all versions
+    # (they're useful locally, but only deployed from master, see stride-docs-site-root-azure.yml)
     & "$PSScriptRoot/BuildSiteRoot.ps1" -OutputDirectory $Settings.WebDirectory
 
     # This is needed for Stride Launcher, which loads the release notes markdown from latest/en/ReleaseNotes/ReleaseNotes-<version>.md,

@@ -6,7 +6,7 @@ Our team has explored various deployment options, ultimately selecting the metho
 
 This guide is crafted for individuals who already have access to the Azure subscription. It provides step-by-step instructions for setting up a new Azure Web App, specifically tailored for staging environments. Note that the process for setting up a production environment is similar, but requires a distinct web app name.
 
-Deployments to Azure Web Apps are automated through GitHub Actions, forming an integral part of our Continuous Integration/Continuous Deployment (CI/CD) process. The CI/CD pipeline is configured to automatically trigger deployments upon merging changes into either the `staging` or `release` branches.
+Deployments to Azure Web Apps are done through GitHub Actions. The documentation of each version is deployed from its own branch into its own folder of the site (i.e. `4.4/`), while the files shared by all versions at the root of the site (`versions.json`, `web.config` and `robots.txt`) are deployed from `master`. See [GitHub Actions](github-actions.md) for details.
 
 > [!NOTE]
 > The deployment process outlined here is already established and running, hosted on Azure and sponsored by the .NET Foundation. This guide serves primarily as a reference for maintainers in the event that a new deployment setup is required.
@@ -47,7 +47,7 @@ Follow these instructions carefully to establish your Azure Web App in a staging
    - The GitHub Action will be added to the repository and run automatically. It will fail at this stage, but this will be resolved in the subsequent steps.
 
 > [!CAUTION]
-> If you have completed the **Deployment Tab** process, ensure that the deployment profile includes the **DeleteExistingFiles** property. This property may need to be set to `False` or `True` depending on the specific requirements of your deployment. For instance, Stride Docs deployment retains files from previous deployments, allowing multiple versions like `4.2`, `4.1`, etc., to be maintained. Adjust this setting based on your deployment needs.
+> If you have completed the **Deployment Tab** process, the generated workflow deploys the whole site. Disable it as described below: Stride Docs deployments only replace the folder of one version (or the root files), so that multiple versions like `4.2`, `4.1`, etc. are maintained.
 
 ### Adjusting the Web App Configuration
 
@@ -75,17 +75,15 @@ The previous step will have added a GitHub Action to your repository, which migh
     #      - staging
         workflow_dispatch:
     ```
-1. Open the `stride-docs-staging-azure.yml` workflow and update it with the values obtained in the previous step. Save your changes.
-1. This workflow might also need to be added to the `master` branch if it is not already present.
-1. Execute the workflow `stride-docs-staging-azure.yml`. Ensure you select the correct branch `staging` and click **Run workflow**. This action will deploy the website to the Azure Web App.
+1. Open the `stride-docs-deploy-azure.yml` and `stride-docs-site-root-azure.yml` workflows and update them with the values obtained in the previous step. Save your changes.
+1. Execute the workflow `stride-docs-site-root-azure.yml` from `master`, selecting the slot, and click **Run workflow**. This deploys the files shared by all versions.
+1. Execute the workflow `stride-docs-deploy-azure.yml` from the branch of each version to host (`master`, `master-4.3`, ...), selecting the slot, and click **Run workflow**. Each run deploys one version folder to the Azure Web App.
 
 ### GitHub Actions
 
 - `stride-docs-github.yml`: Enables manual deployment to GitHub Pages in a forked repository, primarily for showcasing updates.
-- `stride-docs-release-azure.yml`: Automates deployment to production upon merging changes into the `release` branch, with a manual trigger option also available.
-- `stride-docs-release-fast-track-azure.yml`: Provides manual deployment to production, bypassing the creation of artifacts.
-- `stride-docs-staging-azure.yml`: Facilitates automatic deployment to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) when changes are merged into the `staging` branch, and includes a manual trigger option.
-- `stride-docs-staging-fast-track-azure.yml`: Allows for manual deployment to staging, skipping the creation of artifacts.
+- `stride-docs-deploy-azure.yml`: Manually deploys the documentation of the branch it runs from into its version folder, to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) or production.
+- `stride-docs-site-root-azure.yml`: Deploys `versions.json`, `web.config` and `robots.txt` from `master`, automatically to staging when they change, and manually to staging or production.
 - `stride-docs-test-build.yml`: Builds the documentation manually and uploads it as an artifact without deploying anywhere, useful for verifying that a change builds.
 
 For a detailed breakdown of the jobs, triggers, inputs and secrets these workflows use, see [GitHub Actions](github-actions.md).
