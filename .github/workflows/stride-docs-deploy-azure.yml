@@ -74,16 +74,21 @@ jobs:
         skip-api-building: ${{ inputs.slot != 'production' && inputs.skipApiBuilding }}
         stride-branch: ${{ inputs.strideBranch }}
 
-    # _site contains the folder of the version that was built, next to the site root files which aren't deployed from here
+    # _site contains the folder of the version that was built, the unversioned sections (en/, see versions.json),
+    # and the site root files which aren't deployed from here
     - name: Find documentation version
       id: version
       run: |
-        $folders = @(Get-ChildItem -Directory "${{ env.DOCS_PATH }}/_site")
+        $folders = @(Get-ChildItem -Directory "${{ env.DOCS_PATH }}/_site" | Where-Object { $_.Name -match '^\d+\.\d+$' })
         if ($folders.Count -ne 1) {
           throw "Expected a single version folder in _site, found: $($folders.Name -join ', ')"
         }
         Write-Host "Documentation version: $($folders[0].Name)"
         "version=$($folders[0].Name)" >> $env:GITHUB_OUTPUT
+        # The unversioned sections are only deployed from master, where they're maintained
+        $unversioned = (Test-Path "${{ env.DOCS_PATH }}/_site/en") -and ("${{ github.ref_name }}" -eq "master")
+        Write-Host "Unversioned sections deployed: $unversioned"
+        "unversioned=$($unversioned.ToString().ToLower())" >> $env:GITHUB_OUTPUT
       shell: pwsh
 
     # webapps-deploy only zips a folder itself when no type is given
@@ -106,21 +111,44 @@ jobs:
         clean: true
         restart: false
 
-    # From the Azure Web App itself (not through the CDN of doc.stride3d.net): build.json of the version must be the one just built
+    - name: Package unversioned sections
+      if: steps.version.outputs.unversioned == 'true'
+      run: 7z a -tzip -mx=1 -bso0 -bsp0 "${{ runner.temp }}/unversioned.zip" "./${{ env.DOCS_PATH }}/_site/en/*"
+      shell: pwsh
+
+    - name: Deploy unversioned sections to Azure Web App
+      if: steps.version.outputs.unversioned == 'true'
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: 'stride-doc'
+        slot-name: ${{ inputs.slot == 'production' && 'Production' || 'staging' }}
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: ${{ runner.temp }}/unversioned.zip
+        type: zip
+        target-path: /home/site/wwwroot/en
+        clean: true
+        restart: false
+
+    # From the Azure Web App itself (not through the CDN of doc.stride3d.net): build.json of what was deployed must be the one just built
     - name: Check the deployed version
       shell: bash
       run: |
-        url="https://stride-doc${{ inputs.slot != 'production' && '-staging' || '' }}.azurewebsites.net/${{ steps.version.outputs.version }}/build.json"
-        for attempt in 1 2 3 4 5 6; do
-          commit=$(curl -sf "$url" | jq -r .docs.commit)
-          if [ "$commit" = "$GITHUB_SHA" ]; then
-            echo "$url: $commit"
-            exit 0
+        base="https://stride-doc${{ inputs.slot != 'production' && '-staging' || '' }}.azurewebsites.net"
+        folders="${{ steps.version.outputs.version }}"
+        if [ "${{ steps.version.outputs.unversioned }}" = "true" ]; then folders="$folders en"; fi
+        for folder in $folders; do
+          url="$base/$folder/build.json"
+          for attempt in 1 2 3 4 5 6; do
+            commit=$(curl -sf "$url" | jq -r .docs.commit)
+            [ "$commit" = "$GITHUB_SHA" ] && break
+            sleep 10
+          done
+          if [ "$commit" != "$GITHUB_SHA" ]; then
+            echo "::error::$url doesn't have the commit $GITHUB_SHA (found: $commit)"
+            exit 1
           fi
-          sleep 10
+          echo "$url: $commit"
         done
-        echo "::error::$url doesn't have the commit $GITHUB_SHA (found: $commit)"
-        exit 1
 
     - name: Create GitHub Release
       if: inputs.slot == 'production'
