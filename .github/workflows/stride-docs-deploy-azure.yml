@@ -116,7 +116,7 @@ jobs:
     - name: Check the deployed version
       shell: bash
       run: |
-        url="https://stride-doc${{ inputs.slot == 'production' && '' || '-staging' }}.azurewebsites.net/${{ steps.version.outputs.version }}/build.json"
+        url="https://stride-doc${{ inputs.slot != 'production' && '-staging' || '' }}.azurewebsites.net/${{ steps.version.outputs.version }}/build.json"
         for attempt in 1 2 3 4 5 6; do
           commit=$(curl -sf "$url" | jq -r .docs.commit)
           if [ "$commit" = "$GITHUB_SHA" ]; then

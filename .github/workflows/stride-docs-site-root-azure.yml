@@ -82,7 +82,7 @@ jobs:
     - name: Check the deployed site root
       shell: bash
       run: |
-        base="https://stride-doc${{ env.SLOT == 'production' && '' || '-staging' }}.azurewebsites.net"
+        base="https://stride-doc${{ env.SLOT != 'production' && '-staging' || '' }}.azurewebsites.net"
         latest=$(jq -r .latest site-root/versions.json)
         failed=0
         # url, expected status, expected end of the redirection location (optional)
