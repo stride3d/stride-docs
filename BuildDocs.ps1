@@ -35,13 +35,14 @@
 param (
     [switch]$BuildAll,
     [switch]$SkipApiBuilding,
+    [switch]$SkipPdfBuilding,
     [ArgumentCompleter({
         [OutputType([System.Management.Automation.CompletionResult])]
         param([string] $CommandName,[string] $ParameterName,[string] $WordToComplete,[System.Management.Automation.Language.CommandAst] $CommandAst,[System.Collections.IDictionary] $FakeBoundParameters)
-        return (Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions
+        return (Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url }
     })]
-    [switch]$SkipPdfBuilding,
-    $Version = $((Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions | Sort-Object -Descending | Select-Object -First 1)
+    # The highest version of versions.json, which is the one this branch documents
+    $Version = $((Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url } | Sort-Object { [version]$_ } -Descending | Select-Object -First 1)
 )
 
 $Settings = [PSCustomObject]@{
@@ -279,36 +280,13 @@ function Generate-ArchitectureDocsToc {
 }
 function Copy-ExtraItems {
 
-    Write-Host -ForegroundColor Yellow "Copying versions.json into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item versions.json "$($Settings.WebDirectory)/"
-
-    Write-Host -ForegroundColor Yellow "Copying web.config into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item web.config "$($Settings.WebDirectory)/"
-
-    Write-Host -ForegroundColor Yellow "Updating web.config"
-    Write-Host ""
-
-    $webConfig = "$($Settings.WebDirectory)/web.config"
-
-    $content = Get-Content $webConfig -Encoding UTF8
-
-    $content = $content -replace "%deployment_version%", $Settings.Version
-
-    $content | Set-Content -Encoding UTF8 $webConfig
-
-    Write-Host -ForegroundColor Green "Updating web.config completed."
-    Write-Host ""
+    # versions.json, web.config and robots.txt are shared by all versions
+    & "$PSScriptRoot/BuildSiteRoot.ps1" -OutputDirectory $Settings.WebDirectory
 
     # This is needed for Stride Launcher, which loads Release Notes
     Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
     Write-Host ""
     Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
-
-    Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item robots.txt "$($Settings.WebDirectory)/"
 }
 
 function Start-LocalWebsite {
