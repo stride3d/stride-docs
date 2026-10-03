@@ -25,14 +25,13 @@ A few remarks:
 
 ### How to mark an asset as root
 
-You can mark an asset as root by right clicking on it in the **Asset view** and selecting **🔵 Include in build as root asset**.
+You can mark an asset as root by right clicking on it in the **Asset view** and selecting **🔵 Include in build as root asset**. This will add the item to the list of root assets in the project package to which it belongs to.
 
 ![](media/asset-view-include-root.webp)
 
-> [!WARNING]
-> **For project created before Stride 4.4:** Marking an asset as root in **Game Studio** will only mark it for the selected platform. Make sure to either:
-> * Mark the asset as root for every platform your project targets
-> * Edit the main [project package](../files-and-folders/project-packages/index.md)'s `.sdpkg` file manually. For more information, visit the [package properties page](../files-and-folders/project-packages/package-properties.md).
+To do this for a different project package, you can select **🔵 Include in build as root asset in > [name of project package]**.
+
+![](media/asset-view-include-root-specific.webp)
 
 ## Checking assets
 
