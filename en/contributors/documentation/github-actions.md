@@ -125,11 +125,11 @@ The four Azure workflows all deploy to the same Azure Web App, `stride-doc`, and
 | Branch | `release` | `staging` |
 | `app-name` | `stride-doc` | `stride-doc` |
 | `slot-name` | `Production` | `staging` |
-| Publish profile | `AZUREAPPSERVICE_PUBLISHPROFILE_4803638D…` | `AZUREAPPSERVICE_PUBLISHPROFILE_32FCD402…` |
-| GitHub environment | `Production` | `Production` |
+| GitHub environment | `Production` | `Staging` |
+| Publish profile | Secret `AZURE_PUBLISH_PROFILE` of the `Production` environment | Secret `AZURE_PUBLISH_PROFILE` of the `Staging` environment |
 
 > [!NOTE]
-> Both workflows report to a GitHub environment named `Production`, including the staging one. That is only the label shown on the run page, the actual target is determined by `slot-name`, so the staging workflow really does deploy to the staging slot.
+> Each publish profile is a secret of its environment, so only jobs running in that environment can use it. Required reviewers and deployment branches can be set on the `Production` environment in the repository settings, so that production deployments wait for an approval.
 
 For how the Azure Web App itself is configured, see [Deployment](deployment-azure.md).
 
