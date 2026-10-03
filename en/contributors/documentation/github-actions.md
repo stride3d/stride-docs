@@ -115,6 +115,8 @@ Every workflow that can be dispatched manually offers the same three inputs:
 
 Both skip options default to `true` because they are the slowest parts of the build. Leave them on for a quick content preview; turn them off when you specifically need to check the API reference or the PDF output.
 
+The deploy workflow is the exception: **Skip API building** defaults to `false`, and a production deploy fails if it's checked. A deploy replaces the whole version folder, so a version deployed without its API reference would lose it.
+
 ## Azure workflows
 
 Both Azure workflows deploy to the same Azure Web App, `stride-doc`. The **slot** input chooses where:
