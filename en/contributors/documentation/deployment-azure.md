@@ -88,6 +88,38 @@ The previous step will have added a GitHub Action to your repository, which migh
 
 For a detailed breakdown of the jobs, triggers, inputs and secrets these workflows use, see [GitHub Actions](github-actions.md).
 
+### Kudu (Advanced Tools)
+
+Each Azure Web App comes with Kudu, a management site to browse, edit and run commands on the files of the web app, without deploying:
+
+- Production: https://stride-doc.scm.azurewebsites.net
+- Staging: https://stride-doc-staging.scm.azurewebsites.net
+
+It's also reachable from the Azure Portal, in the Web App: **Development Tools** → **Advanced Tools** → **Go**. It requires access to the Azure subscription.
+
+In **Debug console** → **PowerShell**, the site is in `D:\home\site\wwwroot` (a folder per version, and the files shared by all versions at its root), and the logs are in `D:\home\LogFiles`. Files can be edited in the browser, or with commands in the console.
+
+### Old Versions
+
+The documentation of 4.2 and older can't be rebuilt anymore: its toolchain (Docfx version, build scripts) is too outdated, and its branches (`master-3.0` ... `master-4.2`) don't have deployment workflows. It's frozen as deployed, and the rare fixes it needs (e.g. the version selector) are made directly on the server with Kudu.
+
+- Back up a file before editing it (e.g. `main.js.bak`), and prefer an idempotent script when the same change applies to several versions.
+- Commit the same change to the branch of the version, so that the branch keeps matching what's deployed.
+- These versions read `versions.json` from the root of the site, so its format can only gain fields (see the comment in the file).
+
+### Request Logs
+
+Some rules of `web.config` are only needed by old clients (e.g. the Stride Launcher 5.x and older), and say when they become obsolete. To check whether a URL is still requested, enable the web server logs: in the Web App, **Monitoring** → **App Service logs** → **Web server logging**: **File System**, with a quota (e.g. 35 MB) and a retention period (e.g. 30 days).
+
+The IIS logs are then in `D:\home\LogFiles\http\RawLogs`. For instance, to count the requests of launchers 5.x and older for release notes, in the Kudu PowerShell console:
+
+```powershell
+Select-String -Path D:\home\LogFiles\http\RawLogs\*.log -Pattern ' /\d+\.\d+/ReleaseNotes/ReleaseNotes\.md ' | Measure-Object
+```
+
+> [!NOTE]
+> Azure Front Door serves the site from its cache when it can, so the web app only logs part of the requests. The counts are lower than the real traffic, but a URL that doesn't appear in the logs for weeks isn't requested anymore.
+
 ## Deployment to GitHub Pages
 
 To showcase your updates, especially helpful for design changes pending review, you can deploy the docs website either to your infrastructure or to GitHub Pages, a free hosting service. Once deployed, share the link with us for review.
