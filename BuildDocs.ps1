@@ -116,6 +116,42 @@ function Ask-UseExistingAPI {
     return ($answer -ieq "y" -or $answer -eq "")
 }
 
+function Get-CommitInfo {
+    param ([string]$RepositoryPath, [string]$RepositoryUrl)
+
+    if (-not (Test-Path (Join-Path $RepositoryPath ".git"))) { return $null }
+
+    $commit = git -C $RepositoryPath rev-parse HEAD 2>$null
+    if (-not $commit) { return $null }
+
+    $info = [ordered]@{ commit = "$commit" }
+    $branch = git -C $RepositoryPath rev-parse --abbrev-ref HEAD 2>$null
+    if ($branch -and $branch -ne "HEAD") { $info.branch = "$branch" }
+    # Commits of a local build might not be pushed, so only builds from GitHub Actions link to them
+    if ($RepositoryUrl) { $info.url = "$RepositoryUrl/commit/$commit" }
+    return $info
+}
+
+function Get-BuildInfo {
+    # The stride-docs and stride commits the documentation is built from, saved in build.json
+    $isCI = $env:GITHUB_ACTIONS -eq "true"
+
+    $info = [ordered]@{
+        version = $Settings.Version
+        date = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+    }
+    if ($isCI) {
+        $info.run = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY/actions/runs/$env:GITHUB_RUN_ID"
+    }
+
+    $info.docs = Get-CommitInfo $PSScriptRoot $(if ($isCI) { "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY" })
+    # Same location as used for the API and the architecture docs
+    $stride = Get-CommitInfo (Join-Path $PSScriptRoot "..\stride") $(if ($isCI) { "https://github.com/stride3d/stride" })
+    if ($stride) { $info.stride = $stride }
+
+    return $info
+}
+
 function Copy-ExtraItems {
 
     Write-Host -ForegroundColor Yellow "Copying versions.json into $($Settings.WebDirectory)/"
@@ -147,6 +183,11 @@ function Copy-ExtraItems {
     Copy-Item en/ReleaseNotes/ReleaseNotes-*.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
     Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
     Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/ReleaseNotes-$($Settings.Version).md"
+
+    # The commits the documentation is built from, i.e. to check what's deployed: https://doc.stride3d.net/4.3/build.json
+    Write-Host -ForegroundColor Yellow "Writing build.json into $($Settings.SiteDirectory)/"
+    Write-Host ""
+    [System.IO.File]::WriteAllText((Join-Path (Resolve-Path $Settings.SiteDirectory) "build.json"), (Get-BuildInfo | ConvertTo-Json -Depth 5), [System.Text.UTF8Encoding]::new($false))
 
     Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
     Write-Host ""
