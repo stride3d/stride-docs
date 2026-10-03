@@ -168,44 +168,27 @@ $(function () {
     }
   }
   function redirectToCurrentDocVersion() {
-    // Set current doc version at start of page
-    if ($('#xk-current-version').length > 0) {
-      var urlSplits = window.location.pathname.split('/');
-      var urlVersion = urlSplits[1];
-      if ($('#xk-current-version option[value="' + urlVersion + '"]').length <= 0) {
-        $("#xk-current-version").val('latest');
-      } else {
-        $("#xk-current-version").val(urlVersion);
-      }
-
-    }
     $('#xk-current-version').on('change', function () {
       var hostVersion = window.location.host;
       var pathVersion = window.location.pathname;
-      var urlLanguage = window.location.pathname.split('/')[2];
       var targetVersion = $("#xk-current-version").val();
 
-      if (targetVersion == "latest" || targetVersion >= '2') {
-        urlLanguage += '/';
-      } else {
-        urlLanguage = '';
-      }
-
-      var sectionVersion;
-      if (/manual/.test(pathVersion)) {
-        sectionVersion = 'manual'
-      } else if (/api/.test(pathVersion)) {
-        sectionVersion = 'api'
-      } else if (/ReleaseNotes/.test(pathVersion)) {
-        sectionVersion = 'ReleaseNotes'
-      } else if (/tutorials/.test(pathVersion)) {
-        sectionVersion = 'tutorials'
-      }
-      var newAddress = '//' + hostVersion + '/' + targetVersion + '/' + urlLanguage + sectionVersion
-      $(window).attr('location', newAddress);
+      // Generate page URL in other version
+      var newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.substring(pathVersion.indexOf('/', 1) + 1);
+      // Check if address exists
+      $.get(newAddress)
+        .fail(function() {
+          // It didn't work, let's just go to top page of the section (i.e. manual, api, release notes, etc.)
+          newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.split('/')[2];
+          if (pathVersion.split('/').length >= 4)
+            newAddress += '/' + pathVersion.split('/')[3];
+        })
+        .always(function() {
+          // Go to page
+          $(window).attr('location', newAddress);
+        });
     })
   }
-  redirectToCurrentDocVersion();
 
   // Language check function
 
@@ -256,6 +239,24 @@ $(function () {
   $('.maximize_image').magnificPopup({
     type: 'image'
   });
+
+  function loadVersions() {
+    $.getJSON('/versions.json', function(data) {
+      $("#xk-current-version").empty();
+      data.docs.forEach(function(doc) {
+        var url = doc.url;
+        $("#xk-current-version").append('<option value="' + url + '">' + (doc.url === data.latest ? doc.name + ' (latest)' : doc.name) + '</option>');
+      });
+      var urlSplits = window.location.pathname.split('/');
+      var urlVersion = urlSplits[1];
+      if (urlVersion == 'latest') {
+        urlVersion = data.latest;
+      }
+      $("#xk-current-version").val(urlVersion).change();
+      redirectToCurrentDocVersion();
+    });
+  };
+  loadVersions();
 });
 
 function toggleLangDropDown(){
