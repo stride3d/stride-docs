@@ -99,3 +99,29 @@ jobs:
         target-path: /home/site/wwwroot/robots.txt
         clean: false
         restart: false
+
+    # From the Azure Web App itself (not through the CDN of doc.stride3d.net), so that the check sees what was just deployed
+    - name: Check the deployed site root
+      shell: bash
+      run: |
+        base="https://stride-doc${{ env.SLOT == 'production' && '' || '-staging' }}.azurewebsites.net"
+        latest=$(jq -r .latest site-root/versions.json)
+        failed=0
+        # url, expected status, expected end of the redirection location (optional)
+        check() {
+          read -r status location < <(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' "$base$1")
+          if [ "$status" != "$2" ] || [[ -n "$3" && "$location" != *"$3" ]]; then
+            echo "::error::$1 -> $status $location (expected $2 $3)"
+            failed=1
+          else
+            echo "$1 -> $status $location"
+          fi
+        }
+        curl -sf "$base/versions.json" | cmp -s - site-root/versions.json || { echo "::error::The deployed versions.json differs from site-root/versions.json"; failed=1; }
+        check / 302 /latest/en/
+        check /latest/en/index.html 200
+        check /$latest/en/contributors/index.html 302 /latest/en/contributors/index.html
+        # Release notes markdown loaded by the Stride Launcher 5.x and older
+        check /$latest/ReleaseNotes/ReleaseNotes.md 302 /$latest/en/ReleaseNotes/ReleaseNotes.md
+        check /missing-page.html 404
+        exit $failed
