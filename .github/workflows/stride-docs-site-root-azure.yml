@@ -15,6 +15,7 @@ on:
       - 'web.config'
       - 'robots.txt'
       - 'BuildSiteRoot.ps1'
+      - '.github/workflows/stride-docs-site-root-azure.yml'
   workflow_dispatch:
     inputs:
       slot:
@@ -86,7 +87,7 @@ jobs:
         failed=0
         # url, expected status, expected end of the redirection location (optional)
         check() {
-          read -r status location < <(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' "$base$1")
+          read -r status location < <(curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' "$base$1")
           if [ "$status" != "$2" ] || [[ -n "$3" && "$location" != *"$3" ]]; then
             echo "::error::$1 -> $status $location (expected $2 $3)"
             failed=1
