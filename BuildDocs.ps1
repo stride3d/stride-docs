@@ -593,16 +593,13 @@ function PostProcessing-Fixing404AbsolutePath {
 
     $content = Get-Content $file404 -Encoding UTF8
 
-    $keysToReplace = @("favicon.ico", "public/docfx.min.css", "public/main.css", "toc.html", "media/stride-logo-red.svg")
-
-    foreach ($key in $keysToReplace) {
-        $replacement = "/$($Settings.Version)/en/$key"
-        $content = $content -replace $key, $replacement
-    }
-
-    $content = $content -replace "./public/main.js", "/$($Settings.Version)/en/public/main.js"
-    $content = $content -replace "./public/docfx.min.js", "/$($Settings.Version)/en/public/docfx.min.js"
+    # The 404 page is served for any missing url, so its relative urls must be absolute
+    $base = "/$($Settings.Version)/en/"
+    $content = $content -replace '(href|src|content)="(?:\./)?(favicon\.ico|public/[^"]+|media/[^"]+|toc\.html)"', "`$1=""$base`$2"""
     $content = $content -replace '<a class="navbar-brand" href="index.html">', '<a class="navbar-brand" href="/">'
+
+    # The page script loads docfx itself, once it has set the tables of contents of the requested url (see 404.md)
+    $content = $content -replace '<script type="module" src="([^"]+/docfx\.min\.js)"></script>', '<meta name="stride:docfx" content="$1">'
 
     $content | Set-Content -Encoding UTF8 $file404
 
