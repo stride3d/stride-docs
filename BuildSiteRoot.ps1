@@ -7,7 +7,7 @@
 
     - versions.json: the list of documentation versions shown in the version selector, and which one is the latest (checked, then copied as is).
       The selector of every version reads it, including old versions that can't be updated anymore: only add fields to its format.
-    - web.config: %deployment_version% is replaced by the latest version (target of the /latest/ URLs and of the 404 page).
+    - web.config: %latest_version% is replaced by the latest version (target of the /latest/ URLs and of the 404 page).
     - robots.txt: a Disallow is added for each version of versions.json, so that search engines only index /latest/.
 .PARAMETER OutputDirectory
     The directory where the files are generated, the default is _site (the root of the local website).
@@ -44,7 +44,7 @@ Copy-Item (Join-Path $PSScriptRoot "versions.json") $OutputDirectory
 Write-Host -ForegroundColor Yellow "Generating web.config into $OutputDirectory"
 
 $webConfig = Get-Content (Join-Path $PSScriptRoot "web.config") -Raw -Encoding UTF8
-Write-Utf8File (Join-Path $OutputDirectory "web.config") ($webConfig -replace "%deployment_version%", $versions.latest)
+Write-Utf8File (Join-Path $OutputDirectory "web.config") ($webConfig -replace "%latest_version%", $versions.latest)
 
 Write-Host -ForegroundColor Yellow "Generating robots.txt into $OutputDirectory"
 
