@@ -240,8 +240,13 @@ const app = {
     start: function () {
 
         this.waitForNavbarAndAddLanguageNavigation();
-        this.addVersionNavigation();
-        this.loadVersions();
+
+        // Pages without a table of contents have nowhere to put the version selector,
+        // and throwing here would stop docfx from rendering the rest of the page (i.e. the navbar)
+        if (document.getElementById("toc")) {
+            this.addVersionNavigation();
+            this.loadVersions();
+        }
     },
     configureHljs: function (hljs) {
         hljs.registerLanguage('gdscript', gdscript);
