@@ -19,9 +19,9 @@ on:
         default: true
         type: boolean
       strideBranch:
-        description: Stride branch to checkout
-        required: true
-        default: master
+        description: 'Stride branch to checkout (default: master-x.y for a master-x.y branch of stride-docs, master otherwise)'
+        required: false
+        default: ''
         type: string
 
 permissions:

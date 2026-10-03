@@ -14,9 +14,9 @@ inputs:
     required: false
     default: 'false'
   stride-branch:
-    description: 'Stride branch to checkout'
+    description: 'Stride branch to checkout (default: master-x.y for a master-x.y branch of stride-docs, master otherwise)'
     required: false
-    default: 'master'
+    default: ''
 
 runs:
   using: "composite"
@@ -53,7 +53,21 @@ runs:
       Set-Content -Path "${{ env.DOCS_PATH }}/${{ env.COMMON_SETTINGS_PATH }}" -Value $updatedDocFxJsonContent
     shell: pwsh
 
-  # Checkout the Stride repository from the default branch
+  # The documentation of a version (master-4.3, or e.g. master-4.3-fix) documents the API of the matching branch of Stride
+  - name: Select Stride branch
+    id: stride-branch
+    shell: bash
+    env:
+      STRIDE_BRANCH: ${{ inputs.stride-branch }}
+    run: |
+      branch="$STRIDE_BRANCH"
+      if [ -z "$branch" ]; then
+        docs_branch="${GITHUB_BASE_REF:-$GITHUB_REF_NAME}"
+        if [[ "$docs_branch" =~ ^master-[0-9]+\.[0-9]+ ]]; then branch="${BASH_REMATCH[0]}"; else branch=master; fi
+      fi
+      echo "Stride branch: $branch"
+      echo "branch=$branch" >> "$GITHUB_OUTPUT"
+
   - name: Checkout Stride (note the LFS)
     uses: actions/checkout@v6
     with:
@@ -61,7 +75,7 @@ runs:
       token: ${{ inputs.github-token }}
       path: stride
       lfs: true
-      ref: ${{ inputs.stride-branch }}
+      ref: ${{ steps.stride-branch.outputs.branch }}
 
   - name: Set up dependency caching for faster builds
     uses: actions/cache@v5
