@@ -104,6 +104,7 @@ jobs:
         done
         check /latest/en/contributors/index.html 302 /en/contributors/index.html
         check /$latest/en/ReleaseNotes/ 302 "/en/ReleaseNotes/ReleaseNotes-$latest.html?v=$latest"
+        check /latest/en/ReleaseNotes/ReleaseNotes.html 302 "/en/ReleaseNotes/ReleaseNotes-$latest.html"
         # Release notes markdown loaded by the Stride Launcher
         check /$latest/ReleaseNotes/ReleaseNotes.md 302 /en/ReleaseNotes/ReleaseNotes-$latest.md
         check /en/ 302 /latest/en/
