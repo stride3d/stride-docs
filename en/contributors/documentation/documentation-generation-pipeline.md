@@ -72,7 +72,7 @@ In this part, we elaborate on the individual steps involved in the documentation
   - Merge-SearchIndex
     - Merges the search indexes of both builds, written to both, so that searching from any page finds all sections.
   - Copy-ExtraItems
-    - Copies the markdown of the release notes (`ReleaseNotes-<version>.md`) into `_site/en/ReleaseNotes`, loaded by the Stride Launcher (from `<version>/ReleaseNotes/ReleaseNotes.md`, redirected by `web.config`).
+    - Copies the markdown of the release notes (`<version>.md`) into `_site/en/release-notes`, loaded by the Stride Launcher.
     - Writes `build.json` into the version folder and `_site/en`.
     - Runs `BuildSiteRoot.ps1`, which generates the files shared by all versions at the root of the site: `versions.json`, `web.config` (with `%latest_version%` replaced by the latest version of `versions.json`) and `robots.txt` (with a `Disallow` for each version of `versions.json`, so that search engines only index `/latest/`).
 - **Build-AllLanguagesDocs**

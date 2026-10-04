@@ -348,9 +348,9 @@ function Get-FooterMetadata {
 }
 
 function Generate-ReleaseNotesIndex {
-    # The release notes of each version are in ReleaseNotes-<version>.md, index.md lists them (from toc.yml)
-    $releaseNotesFolder = "en/ReleaseNotes"
-    $releaseNotesFileName = "ReleaseNotes-$($Settings.Version).md"
+    # The release notes of each version are in <version>.md, index.md lists them (from toc.yml)
+    $releaseNotesFolder = "en/release-notes"
+    $releaseNotesFileName = "$($Settings.Version).md"
 
     if (-not (Test-Path "$releaseNotesFolder/$releaseNotesFileName")) {
         throw "$releaseNotesFolder/$releaseNotesFileName is missing, it should contain the release notes of $($Settings.Version), the highest version of versions.json."
@@ -476,7 +476,7 @@ function Build-UnversionedDoc {
 }
 
 function Get-VersionedLink {
-    # A link of an unversioned page to a versioned page (i.e. ../manual/index.md from ReleaseNotes/ReleaseNotes-4.2.md):
+    # A link of an unversioned page to a versioned page (i.e. ../manual/index.md from release-notes/4.2.md):
     # absolute, to the version of the release notes when it's hosted, else to latest. $null for other links.
     param ([string]$Page, [string]$Href)
 
@@ -491,7 +491,7 @@ function Get-VersionedLink {
     if ((Test-InUnversionedSection $target) -or (Test-Path (Join-Path $Settings.UnversionedDirectory $target) -PathType Leaf)) { return $null }
 
     $version = "latest"
-    if ($Page -match '^ReleaseNotes/ReleaseNotes-(\d+\.\d+)\.(?:md|html)$' -and $Settings.HostedVersions -contains $Matches[1]) {
+    if ($Page -match '^release-notes/(\d+\.\d+)\.(?:md|html)$' -and $Settings.HostedVersions -contains $Matches[1]) {
         $version = $Matches[1]
     }
     return "/$version/en/$($target -replace '\.md$', '.html')$suffix"
@@ -536,15 +536,15 @@ function PostProcessing-LinksToUnversionedSections {
 }
 
 function Copy-ReleaseNotesMarkdown {
-    # The markdown of the release notes, loaded by the Stride Launcher (<version>/ReleaseNotes/ReleaseNotes.md, redirected by web.config),
+    # The markdown of the release notes, loaded by the Stride Launcher,
     # with their links to the versioned documentation made absolute like in their pages
-    $destination = "$($Settings.UnversionedDirectory)/ReleaseNotes"
+    $destination = "$($Settings.UnversionedDirectory)/release-notes"
 
     Write-Host -ForegroundColor Yellow "Copying release notes markdown into $destination/"
     Write-Host ""
 
-    foreach ($file in Get-ChildItem en/ReleaseNotes -Filter 'ReleaseNotes-*.md') {
-        $page = "ReleaseNotes/$($file.Name)"
+    foreach ($file in Get-ChildItem en/release-notes -Filter *.md | Where-Object Name -match '^\d+\.\d+\.md$') {
+        $page = "release-notes/$($file.Name)"
         $content = [System.IO.File]::ReadAllText($file.FullName)
         $updated = [regex]::Replace($content, '(\]\(\s*<?)([^)\s>]+)', {
             param ($match)

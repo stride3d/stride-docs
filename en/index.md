@@ -46,7 +46,7 @@ Welcome to the Stride documentation. Whether you're a programmer, artist, design
                 <h3 class="card-title h5">📝 Release notes</h3>
                 <p class="card-text">Learn about new features, improvements and other changes introduced between versions of the engine.</p>
             </div>
-            <p class="px-3 mb-4"><a class="stretched-link" href="ReleaseNotes/index.md">Access release notes</a></p>
+            <p class="px-3 mb-4"><a class="stretched-link" href="release-notes/index.md">Access release notes</a></p>
         </div>
     </div>
     <div class="col-md-6">

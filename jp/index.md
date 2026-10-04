@@ -28,7 +28,7 @@ Welcome to the Stride documentation, your gateway to mastering this powerful gam
 				<h2 class="card-title h5">📝 リリースノート</h2>
 				<p class="card-text">Stride の最新版の内容について（古いバージョンも）。</p>
 			</div>
-			<p class="px-3 mb-4"><a class="stretched-link" href="ReleaseNotes/index.md">Find Stride Release Notes</a></p>
+			<p class="px-3 mb-4"><a class="stretched-link" href="release-notes/index.md">Find Stride Release Notes</a></p>
 		</div>
 	</div>
 	<div class="col-md-6">

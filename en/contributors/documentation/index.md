@@ -27,7 +27,7 @@ Various Stride systems rely on content fetched and processed from either the Str
 1. https://doc.stride3d.net/latest/en/index.json
    - This JSON file is crucial for integrating the Stride Docs search functionality with the Stride Website. It ensures that search results are comprehensive, including relevant information from both the Stride website and Stride Docs.
    - It includes the unversioned sections (contributing, community resources, release notes): `BuildDocs.ps1` merges the search indexes of both builds.
-1. https://doc.stride3d.net/en/ReleaseNotes/ReleaseNotes-4.4.md (any version, betas included)
+1. https://doc.stride3d.net/en/release-notes/4.4.md (any version, betas included)
    - The **Stride Launcher** utilizes this file when you click a release notes button. The release notes of every version are built from `master`.
    - Launchers 5.x and older use https://doc.stride3d.net/4.4/ReleaseNotes/ReleaseNotes.md instead (and resolve its images from https://doc.stride3d.net/4.4/ReleaseNotes/), which `web.config` redirects there.
 1. https://doc.stride3d.net/latest/en/diagnostics/index.html

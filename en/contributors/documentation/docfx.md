@@ -44,7 +44,7 @@ The folder structure plays a vital role in the documentation generation process,
 - `en\includes`: Markdown files whose content can be included in multiple `.md` files across the documentation.
 - `en\manual`: Documentation for the manual
 - `en\media`: Main media assets
-- `en\ReleaseNotes`: Documentation for release notes
+- `en\release-notes`: Documentation for release notes
 - `en\template`: Docfx assets for minor template customization, including CSS and JS files
 - `en\tutorials`: Documentation for tutorials
 - `jp`: Japanese language documentation, translated from the English version (currently not updated)
