@@ -241,33 +241,43 @@ const app = {
     // (/latest/... in the navbar, /en/manual/... in search results) go to the version the reader comes from, given as ?v=
     // by the redirects of web.config and remembered while browsing these pages. Without it, they go to latest.
     keepReaderVersion: async function () {
-        const isVersion = version => /^\d+\.\d+$/.test(version || '');
         const url = new URL(window.location.href);
-        let version = url.searchParams.get('v');
-        if (url.searchParams.has('v')) {
+        const requestedVersion = url.searchParams.get('v');
+        if (requestedVersion !== null) {
             // The address of an unversioned page has no version, i.e. when shared
             url.searchParams.delete('v');
             history.replaceState(history.state, '', url);
         }
+        let version = requestedVersion;
         try {
-            if (isVersion(version)) {
-                sessionStorage.setItem(this.readerVersionKey, version);
-            } else if (version === 'latest') {
-                sessionStorage.removeItem(this.readerVersionKey);
-            }
-            version = sessionStorage.getItem(this.readerVersionKey);
+            version ??= sessionStorage.getItem(this.readerVersionKey);
         } catch {
             // Storage can be unavailable (i.e. some private modes)
         }
-        if (!isVersion(version)) return;
+        if (!version) return;
 
-        let unversioned = [];
+        let versions;
         try {
-            unversioned = (await (await fetch('/versions.json')).json()).unversioned || [];
+            versions = await (await fetch('/versions.json')).json();
         } catch (error) {
             console.log('Error loading versions.json:', error);
             return;
         }
+        // Only a hosted version: latest, or an old link to a version that isn't (i.e. /2.0/ReleaseNotes/), go to latest
+        const isHosted = (versions.docs || []).some(doc => doc.url === version);
+        if (requestedVersion !== null) {
+            try {
+                if (isHosted) {
+                    sessionStorage.setItem(this.readerVersionKey, version);
+                } else {
+                    sessionStorage.removeItem(this.readerVersionKey);
+                }
+            } catch {
+                // Storage can be unavailable (i.e. some private modes)
+            }
+        }
+        if (!isHosted) return;
+        const unversioned = versions.unversioned || [];
 
         const versionedHref = href => {
             const url = new URL(href, window.location.href);
