@@ -1,6 +1,6 @@
 # Camera slots
 
-**Camera slots** link the [graphics compositor](../graphics-compositor/index.md) to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../../game-studio/manage-scenes.md) or graphics compositor without having to assign new cameras each time.
+**Camera slots** link the [graphics compositor](../graphics-compositor/index.md) to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../../scenes/structuring-scenes.md) or graphics compositor without having to assign new cameras each time.
 
 You don't have to create a different camera slot for each camera. Instead, you can just change which cameras use each slot. The best practice is to disable the camera components on cameras you don't need.
 
@@ -23,7 +23,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
     For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
 
-2. In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+2. In the graphics compositor editor, on the left, under **Camera slots**, click ➕ (**Add**).
 
     ![Camera slots](../graphics-compositor/media/graphics-compositor-camera-slots.png)
 
@@ -41,7 +41,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 2. In the **Property Grid** (on the right by default), in the **Camera** component properties, under **Slot**, select the slot you want to bind the camera to.
 
     > [!Note]
-    > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../game-studio/game-settings.md).
+    > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../files-and-folders/game-settings/index.md).
 
     ![media/graphics-compositor-overview-2.png](../graphics-compositor/media/graphics-compositor-overview-2.png)
 
@@ -69,5 +69,5 @@ To change the camera at runtime, toggle the ``Enabled`` property.
 
 * [Cameras](index.md)
 * [Graphics compositor](../graphics-compositor/index.md)
-* [Game Studio — Game settings](../../game-studio/game-settings.md)
-* [Game Studio — Manage scenes](../../game-studio/manage-scenes.md)
+* [Game settings](../../files-and-folders/game-settings/index.md)
+* [Structuring scenes](../../scenes/structuring-scenes.md)

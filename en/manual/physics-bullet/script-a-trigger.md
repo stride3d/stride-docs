@@ -54,7 +54,7 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
     This makes the collider a trigger. This means objects can pass through it, but are still detected in the code.
 
-6. We need to give the trigger a shape. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Box**.
+6. We need to give the trigger a shape. Next to **Collider Shapes**, click ➕ (**Add**) and select **Box**.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
@@ -90,7 +90,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     Game Studio adds a model component to the entity.
 
-5. Under **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+5. Under **Model**, click 👆 (**Select an asset**).
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
@@ -98,7 +98,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7. In the **Property Grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+7. In the **Property Grid**, under **Model > Materials**, click 👆 (**Select an asset**).
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 

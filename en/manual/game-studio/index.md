@@ -2,44 +2,35 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-**Game Studio** is the central tool for game and application production in Stride. In Game Studio, you can:
+**Game Studio** is the central tool for game and application production in Stride. It provides a graphical way of interacting with a project, including editing scenes, importing resources, designing UI and much more.
 
-* create and arrange scenes
-* import assets, modify their parameters and see changes in real time in the preview window
-* organize assets by folder, attach tags and get notifications from modified assets on the disk
-* build a game executable and run it directly
+![](media/game-studio.webp)
 
-Game Studio is also integrated with your Visual Studio projects, so you can seamlessly sync and switch between them.
+**Game Studio only works on Windows**. If you're interested in developing Stride games on different platforms, consider using a **code-only** approach with the [community-toolkit](https://stride3d.github.io/stride-community-toolkit/manual/index.html).
 
-## Interface
-
-![Game Studio](media/game-studio-main-interface.webp)
-
-The **asset editor** (1) is used to edit assets and scenes. Some asset types, such as [scenes](create-a-scene.md), have dedicated editors where you can make complex changes to the asset. To open a dedicated editor (when available), double-click the asset or right-click it and select **Edit asset**.
-
-The **Property Grid** (2) displays the properties of the asset or entity you select. You can edit the properties here.
-
-The **Solution Explorer** (3) displays the hierarchy of the elements of your project, such as assets, code files, packages and dependencies. You can create folders and objects, rename them, and move them.
-
-The **Asset View** (4) displays the project assets. You can create new assets using the **New Asset** button or by dragging and dropping resource files into the Asset View. You can also drag and drop assets from the Asset View to the different editors or the Property Grid to Create an instance of the asset or add a reference to it. By default, the Asset View is in the bottom center.
-
-The **Asset Preview** tab (5) displays a preview of the selected asset. The preview changes based on the type of the asset you have selected. For example, you can play animations and sounds. This is a quick way to check changes to an asset when editing it in the Property Grid. By default, the Asset Preview is in the bottom right.
-
-You can show and hide different parts of the Game Studio in the View menu. You can also resize and move parts of the UI.
+> [!NOTE]
+> **Game Studio** is being rewritten to be cross-platform.
 
 ## In this section
 
-* [Scenes](scenes.md)
-    * [Create a scene](create-a-scene.md)
-    * [Navigate in the Scene Editor](navigate-in-the-scene-editor.md)
-    * [Manage scenes](manage-scenes.md)
-    * [Load scenes](load-scenes.md)
-    * [Add entities](add-entities.md)
-    * [Manage entities](manage-entities.md)
-* [Prefabs](prefabs/index.md)
-    * [Create a prefab](prefabs/create-a-prefab.md)
-    * [Use prefabs](prefabs/use-prefabs.md)
-    * [Edit prefabs](prefabs/edit-prefabs.md)
-    * [Nested prefabs](prefabs/nested-prefabs.md)
-    * [Override prefab properties](prefabs/override-prefab-properties.md)
-* [World units](world-units.md)
+* [Layout](layout.md)
+* [Panels](panels/index.md)
+  * [Asset errors](panels/asset-errors.md)
+  * [Asset preview](panels/asset-preview.md)
+  * [Asset view](panels/asset-view.md)
+  * [Edit history](panels/edit-history.md)
+  * [Output](panels/output.md)
+  * [Property grid](panels/property-grid.md)
+  * [References](panels/references.md)
+  * [Solution explorer](panels/solution-explorer.md)
+* [Dedicated editors](dedicated-editors/index.md)
+  * [Scene editor](dedicated-editors/scene-editor/index.md)
+    * [Viewport](dedicated-editors/scene-editor/viewport.md)
+    * [Entity tree](dedicated-editors/scene-editor/entity-tree.md)
+  * [Prefab editor](dedicated-editors/prefab-editor/index.md)
+  * [Script editor](dedicated-editors/script-editor/index.md)
+  * [Sprite editor](dedicated-editors/sprite-editor/index.md)
+  * [UI editor](dedicated-editors/ui-editor/index.md)
+  * [Graphics compositor editor](dedicated-editors/graphics-compositor-editor/index.md)
+* [Settings](settings.md)
+* [Themes](themes/index.md)

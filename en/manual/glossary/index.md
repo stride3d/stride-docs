@@ -3,6 +3,10 @@
 - [Stride](https://www.stride3d.net/): A C# game engine for creating 2D/3D games and visualizations.
 - [Stride Community Toolkit](https://stride3d.github.io/stride-community-toolkit/index.html): A collection of extensions and helpers for the Stride engine.
 - [Code-Only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html): A feature of the toolkit that allows you to create a game without using the Game Studio.
+
+## Software
+
+- [Stride Launcher](../install-and-update/index.md): An application used for managing Stride installations and opening Game Studio.
 - [Game Studio](../game-studio/index.md): An editor application for Stride projects.
 - [Stride CLI](../get-started/stride-cli.md): A command-line tool that provides utilities for working with Stride directly from a terminal.
 
@@ -24,13 +28,12 @@
 
 ## Asset terms
 
-- [Archetype](../assets/archetypes.md): A template for asset properties that other assets can inherit from.
 - [Asset](../assets/index.md): Content used by the game (models, textures, materials, scripts, etc.) managed by the asset pipeline.
-- Asset URL: The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`. See [Create a model from code](../scripts/create-a-model-from-code.md) and [Create a script](../scripts/create-a-script.md).
+- [Root asset](../assets/asset-compilation.md#root-assets): An asset that will always be included in the build, serving as a starting point for detecting other assets that are needed by the game.
+- [Asset URL](../assets/use-an-asset-in-code.md): The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`.
+- [Archetype](../assets/archetypes.md): A template for asset properties that other assets can inherit from.
 - [Asset compilation](../assets/asset-compilation.md): Compiles assets into runtime-ready formats.
 - [Asset bundles](../assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
-- [Prefab](../game-studio/prefabs/index.md): A reusable entity hierarchy that can be instantiated at design time or runtime.
-- [Root asset](../assets/asset-compilation.md#root-assets): An asset included in the build so it is available at runtime.
 
 ## Audio terms
 
@@ -49,32 +52,20 @@
 - [GameTime](https://doc.stride3d.net/latest/en/api/Stride.Games.GameTime.html): Time information passed to the game loop.
 - [Vector3](https://doc.stride3d.net/latest/en/api/Stride.Core.Mathematics.Vector3.html): A 3D vector representing a point or direction.
  
-## Editor terms
+## Game Studio terms
 
-- [Add entities](../game-studio/add-entities.md): Create new entities in a scene.
-- [Archetypes](../assets/archetypes.md): Share default properties across assets.
-- [Asset View](../assets/index.md): Panel used to manage assets in your project.
-- [Create assets](../assets/create-an-asset.md): Create and organize project assets.
-- [Game settings](../game-studio/game-settings.md): Project-wide defaults such as the graphics compositor and rendering options.
-- [Graphics compositor editor](../graphics/graphics-compositor/index.md): Node-based editor to configure the rendering pipeline.
-- [Manage entities](../game-studio/manage-entities.md): Select, group, and organize entities.
-- [Manage scenes](../game-studio/manage-scenes.md): Open, set defaults, and load/unload scenes.
-- [Navigate the Scene Editor](../game-studio/navigate-in-the-scene-editor.md): Viewport navigation and controls.
-- [Property Grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
-- [Scene Editor](../game-studio/scenes.md): The 3D/2D viewport for arranging entities in a scene.
-- [Splash screen](../game-studio/splash-screen.md): Configure startup visuals.
-- [Use assets](../assets/use-an-asset.md): Reference and place assets in scenes.
-- [World units](../game-studio/world-units.md): Scene scale conventions (unit size, conversions).
+- [Panel](../game-studio/panels/index.md): A rearrangeable part of the editor UI that serves a distinct purpose.
+- [Asset View](../game-studio/panels/asset-view.md): Panel used to manage assets in your project.
+- [Property Grid](../game-studio/panels/property-grid.md): Panel used to view and edit properties of selected elements.
+- [Solution explorer](../game-studio/panels/solution-explorer.md): Panel used to view and edit the structure of a Stride project.
+- [Dedicated editor](../game-studio/dedicated-editors/index.md): A dedicated editor panel used to edit a complex asset.
+- [Scene Editor](../game-studio/dedicated-editors/scene-editor/index.md): A dedicated editor consisting of a 2D/3D viewport and an entity tree used for editing scenes.
 
 ## General terms
 
 - [ECS (Entity Component System)](../engine/entity-component-system/index.md): The architecture where entities host components and systems process them.
-- [Entity](../engine/entity-component-system/index.md): An object in the scene that can represent anything from a 3D model to a camera or light and aggregates multiple components.
-- [Entity component](../engine/entity-component-system/index.md): A piece of data/behavior attached to an entity (for example Transform, Model, Light).
 - [Game](https://doc.stride3d.net/latest/en/api/Stride.Engine.Game.html): A Stride application or interactive experience running the game loop.
 - [Game loop](https://en.wikipedia.org/wiki/Video_game_programming#Game_structure): The main loop that updates and renders the game each frame.
-- [Scene](../game-studio/scenes.md): The container for entities, defining the game world or environment.
-- [Transform](../../tutorials/csharpbeginner/transform-position.md): Defines an entity's position, rotation, and scale in the scene.
  
 ## Graphics terms
 
@@ -110,16 +101,6 @@
 - [Light streaks](../graphics/post-effects/light-streaks.md): Streaking effect from bright lights.
 - [Local reflections](../graphics/post-effects/local-reflections.md): Screen-space reflections for shiny surfaces.
 - [Tone mapping](../graphics/post-effects/color-transforms/tonemap.md): Map HDR values to displayable range.
-
-## Project structure terms
-
-- [Stride project](../files-and-folders/project-structure.md) (in .NET: solution): Contains code and assets used for creating a Stride game.
-- [Project package](../files-and-folders/project-packages/index.md) (in .NET: C# project): A separated portion of a project's code and assets, used for organization.
-- [Platform package](../files-and-folders/project-packages/index.md#platform-packages): A special type of project package that represents a specific platform (e.g. Windows or Linux).
-- [External package](../files-and-folders/external-packages/index.md): An external project package that can be referenced in order to use it's code and assets.
-- [Entry point](../files-and-folders/project-packages/index.md#entry-point): The place in code where a game's execution starts from.
-- [Building](../files-and-folders/building-the-game/index.md): Process of converting raw project files into a playable game.
-- [Publishing](../files-and-folders/building-the-game/index.md#what-is-publishing): Building the final version of the game that can be distributed.
 
 ## Input terms
 
@@ -184,6 +165,29 @@
 - [Rigid body](../physics/rigid-bodies.md): Dynamic colliders affected by forces (gravity, collisions).
 - [Static](../physics/static-colliders.md): Non-moving colliders (terrain, walls) that other objects collide with.
 - [Trigger](../physics/triggers.md): A collider that raises events when other objects overlap without blocking them.
+
+## Project structure terms
+
+- [Stride project](../files-and-folders/project-structure.md) (in .NET: solution): Contains code and assets used for creating a Stride game.
+- [Project package](../files-and-folders/project-packages/index.md) (in .NET: C# project): A separated portion of a project's code and assets, used for organization.
+- [Platform package](../files-and-folders/project-packages/index.md#platform-packages): A special type of project package that represents a specific platform (e.g. Windows or Linux).
+- [External package](../files-and-folders/external-packages/index.md): An external project package that can be referenced in order to use it's code and assets.
+- [Entry point](../files-and-folders/project-packages/index.md#entry-point): The place in code where a game's execution starts from.
+- [Building](../files-and-folders/building-the-game/index.md): Process of converting raw project files into a playable game.
+- [Publishing](../files-and-folders/building-the-game/index.md#what-is-publishing): Building the final version of the game that can be distributed.
+- [Game settings](../files-and-folders/game-settings/index.md): Project-wide defaults such as the graphics compositor and rendering options.
+- [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
+
+## Scene terms
+
+- [Scene](../scenes/index.md): A loadable portion of a game containing world data (e.g. models, lights, character controllers).
+- [Sub-scene](../scenes/sub-scenes.md): A scene that is a child of a different scene.
+- [Entity](../scenes/entities/index.md): An element of a scene containing components which are used to define what it is, how it looks and what it does.
+- [Component](../scenes/entities/components.md): A piece of code that can be attached to an entity. Components contain their own data, can execute their own code or be used by other components or processors.
+- [Transform](../scenes/entities/transform/index.md): A component that defines an entity's position, rotation and scale.
+- [Prefab](../scenes/prefabs/index.md): A reusable entity template that can be used for creating elements of a game that keep in-sync with the original or used for instantiating at runtime.
+- [Nested prefab](../scenes/prefabs/nested-prefabs.md): A prefab which is added as a child entity of another prefab.
+- [Prefab models](../scenes/prefabs/prefab-models.md): A model created from a prefab.
 
 ## Scripting terms
 

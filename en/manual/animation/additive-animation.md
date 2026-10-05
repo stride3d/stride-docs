@@ -105,7 +105,7 @@ You can use additive animations with animations that use the same skeleton and s
 
     The script lets you customize a list of animations to be loaded into your entity.
 
-7. In the **Animation Start** properties, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+7. In the **Animation Start** properties, next to **Animations**, click ➕ (**Add**).
 
     ![Add animation to the list](media/add-animation-to-list.png)
 
@@ -113,7 +113,7 @@ You can use additive animations with animations that use the same skeleton and s
 
     ![Specify source](media/specify-clip-1.png)
 
-9. Next to **Add to Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+9. Next to **Add to Animations**, click ➕ (**Add**).
 
 10. Expand the animation properties. Next to **Clip**, specify the **reference** animation you set in the difference clip.
 

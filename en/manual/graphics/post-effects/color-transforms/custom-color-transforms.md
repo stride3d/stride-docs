@@ -130,7 +130,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 2. Select the **Post-processing effects** node.
 
-3. In the **Property Grid**, under **Color transforms**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Change**) and select your color transform (eg **MyColorTransform**).
+3. In the **Property Grid**, under **Color transforms**, click ➕ (**Change**) and select your color transform (eg **MyColorTransform**).
 
     ![Add script](media/add-script-in-properties.png)
 
