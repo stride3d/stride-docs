@@ -154,59 +154,6 @@ For more details, see [Streaming](../graphics/textures/streaming.md).
 |-----------------|--------------
 | Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. 
 
-## Overrides
-
-You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
-
-1. With the **GameSettings** asset selected, in the **Property Grid**, under **Overrides**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
-
-    ![Select graphics platform](/media/add-override.png)
-
-    Game Studio adds an override.
-
-2. In the new override, next to **Platforms**, select the platforms you want the override to apply to. You can select as many as you need.
-
-    ![Select graphics platform override](/media/select-override-platform.png)
-
-3. **Optional**: If you want this override to apply only to a specific GPU platform, choose it from the **Specific filter** drop-down list.
-
-    ![Specific filter](media/specific-filter.png)
-
-    You can add GPU platforms to this list under **Platform filters** (see **Add a platform filter** below).
-
-4. In the **Configuration** drop-down menu, select the kind of setting you want to override (**Editor**, **Texture**, **Rendering** or **Physics**).
-
-    ![Select graphics platform override](media/select-override-configuration.png)
-
-5. Set the options you want to override.
-
-### Add a platform filter
-
-You can choose items in the **Platform Filters** list as a specific platform filter when you set an override (see above).
-
-![Specific filter](media/specific-filter.png)
-
-1. With the **GameSettings** asset selected, in the **Property Grid**, expand **Platform Filters**.
-
-    The Property Grid displays a list of platform filters you can use.
-
-    ![List of platform filters](media/list-of-platform-filters.png)
-
-2. At the bottom of the list, click **Add to Platform Filters**.
-
-    Game Studio adds a new empty item.
-
-3. In the item field, type the GPU filter you want to add.
-
-    ![Type platform filter](media/add-platform-filter-name.png)
-
-After you add a platform filter, you can select it under **Override > Specific filter**.
-
-![Override](media/new-GPU-in-override-list.png)
-
->[!Note]
->If the new filter isn't listed, remove the override and re-add it.
-
 ## Splash screen
 
 The **splash screen** is displayed when your game starts. The default is the Stride splash screen.

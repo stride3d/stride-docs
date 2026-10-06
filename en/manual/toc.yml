@@ -489,11 +489,6 @@ items:
     items:
       - name: Windows
         href: platforms/windows/index.md
-      - name: UWP
-        href: platforms/uwp/index.md
-        items:
-          - name: Xbox Live
-            href: platforms/uwp/xbox-live.md
       - name: Linux
         href: platforms/linux/index.md
         items:
