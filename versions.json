@@ -1,9 +1,9 @@
 {
   "_comment": "Deployed at the root of the site and read by the version selector of every documentation version, including old ones that can't be updated anymore. Only add fields: never rename or remove latest, docs, docs[].url or docs[].name. unversioned: the sections of en/ that aren't versioned, built from master into /en/ by BuildDocs.ps1 and redirected there from every version by web.config.",
-  "latest": "4.3",
+  "latest": "4.4",
   "unversioned": [ "contributors", "community-resources", "release-notes" ],
   "docs": [
-    { "url": "4.4", "name": "4.4 (beta)" },
+    { "url": "4.4", "name": "4.4" },
     { "url": "4.3", "name": "4.3" },
     { "url": "4.2", "name": "4.2" },
     { "url": "4.1", "name": "4.1" },
