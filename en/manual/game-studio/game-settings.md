@@ -168,7 +168,7 @@ The **splash screen** is displayed when your game starts. The default is the Str
 | Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *StrideDefaultSplashScreen*. 
 | Color    | The color the splash screen fades in on top of. By default, this is black  (*#FF000000*).
 
-For more information, see [Splash screen](/splash-screen.md).
+For more information, see [Splash screen](splash-screen.md).
 
 ## See also
 
