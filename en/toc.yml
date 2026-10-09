@@ -14,9 +14,9 @@
   # - name: 📈 C# Intermediate
   #   href: tutorials/csharpintermediate/index.md
 - name: 📝 Release notes
-  href: release-notes/index.html
+  href: release-notes/index.md
 - name: 🌟 Contributing
-  href: contributors/index.html
+  href: contributors/index.md
 - name: 🔧 API
   href: api/
   homepage: api/index.md
@@ -24,4 +24,4 @@
 #   href: diagnostics/
 #   homepage: diagnostics/index.md
 - name: 🏋🏽 Community resources
-  href: community-resources/index.html
+  href: community-resources/index.md
