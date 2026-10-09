@@ -22,7 +22,7 @@ Shaders are ordinary text files with the `.sdsl` extension. They are stored in t
 
     TODO: IMAGE
 
-From there, you can start writing your own custom shader code. Here's an example:
+Now you can start writing your own custom shader code. Here's an example:
 
 ```sdsl
 shader MyShader<float Speed> : ComputeColor

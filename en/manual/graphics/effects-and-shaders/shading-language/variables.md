@@ -130,7 +130,7 @@ shader Example : ComputeColor
 };
 ```
 
-For more information, visit [Streaming](streaming.md).
+For more information, visit [Streams](streams.md).
 
 ### The `cbuffer` and `tbuffer` keywords
 
@@ -172,7 +172,7 @@ For more information about shader constnats, visit the [hlsl documentation](http
 
 ## Exposing variable keys to C#
 
-All variables defined in a shader outside of methods (that aren't [streamable](streaming.md)) are exposed to C# in the form of keys. They are automatically generated when saving a `.sdsl` file and can be used directly through code.
+All variables defined in a shader outside of methods (that aren't [streamable](streams.md)) are exposed to C# in the form of keys. They are automatically generated when saving a `.sdsl` file and can be used directly through code.
 
 > [!NOTE]
 > Even though there is no `.cs` file, the class should be generated and available through code.

@@ -302,6 +302,16 @@ items:
           - name: Shading language
             href: graphics/effects-and-shaders/shading-language/index.md
             items:
+              - name: Composition
+                href: graphics/effects-and-shaders/shading-language/composition.md
+              - name: Semantics
+                href: graphics/effects-and-shaders/shading-language/semantics.md
+              - name: Shader stages
+                href: graphics/effects-and-shaders/shading-language/shader-stages.md
+              - name: Streams
+                href: graphics/effects-and-shaders/shading-language/streams.md
+              - name: Templates
+                href: graphics/effects-and-shaders/shading-language/templates.md
               - name: Variables
                 href: graphics/effects-and-shaders/shading-language/variables.md
           - name: Use a shader

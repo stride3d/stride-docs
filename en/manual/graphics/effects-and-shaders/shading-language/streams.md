@@ -6,8 +6,8 @@ TODO: IMAGE
 
 ## The two keywords
 
-* `stream` - used to declare variables that are available in `streams`
-* `streams` - used to get and set declared variables.
+* `stream` - used to declare streams that are available in the `streams` keyword.
+* `streams` - used to get and set declared streams.
 
 ```sdsl
 shader Example : ShaderBase
@@ -42,7 +42,3 @@ Values from streams can be shared between different [stages](shader-stages.md).
 Of course, different stages use different data (e.g. vertex uses vertices, shading uses pixels), which makes it impossible to use stream values directly. Instead, SDSL automatically interpolates them to guarantee that your methods will work correctly.
 
 TODO: VISUALIZATION
-
-## Built-in streams
-
-Depending on which classes your shader inherits, it can have access to different streams. For more information about base shaders and their streams, visit [Inheritance](shader-classes-mixins-and-inheritance.md).
