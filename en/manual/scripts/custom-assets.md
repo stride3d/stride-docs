@@ -7,24 +7,27 @@ Here's how it looks like in a default game project:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Stride.Engine" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Video" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Physics" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Navigation" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Particles" Version="4.2.0.1" />
-    <PackageReference Include="Stride.UI" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.1" IncludeAssets="build;buildTransitive" />
+    <PackageReference Include="Stride.Engine" Version="4.4.0" />
+    <PackageReference Include="Stride.Video" Version="4.4.0" />
+    <PackageReference Include="Stride.Physics" Version="4.4.0" />
+    <PackageReference Include="Stride.Navigation" Version="4.4.0" />
+    <PackageReference Include="Stride.Particles" Version="4.4.0" />
+    <PackageReference Include="Stride.UI" Version="4.4.0" />
+    <PackageReference Include="Stride.AssetCompiler" Version="4.4.0" IncludeAssets="build;buildTransitive" />
 
-    <PackageReference Include="Stride.Core.Assets" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Core.Assets" Version="4.4.0" />
   </ItemGroup>
 </Project>
 ```
 > [!Warning]
-> Make sure that the `TargetFrameworks` and all package versions match your current Stride version. The example above shows version 4.2.0.1 for reference.
+> Make sure that the `TargetFramework` and all package versions match your current Stride version. The example above shows version 4.4.0 for reference.
+
+> [!Note]
+> For Stride 4.3 and earlier, use the `Stride.Core.Assets.CompilerApp` package instead.
 
 Inside the same project, create a new csharp file and replace its content with the following:
 ```cs
