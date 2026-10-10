@@ -1,6 +1,6 @@
 # Compute Color
 
-Compute Color shaders are most often used with [Materials](../../materials/index.md).
+Compute Color shaders are used in [Materials](../../materials/index.md) for different attributes (like diffusion or emission). Think of it as a replacement for textures — instead of using predetermined images, compute color shaders create the individual pixels on the fly.
 
 ```sdsl
 shader Example : ComputeColor

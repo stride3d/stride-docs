@@ -1,6 +1,6 @@
 # What are shaders?
 
-Many people think of shaders as custom-made effects that can be applied to materials or used for other visuals. In reality, shaders can be used to do much more (e.g. world generation), however their most common use-case is in fact graphics-related.
+Many people think of shaders as custom-made effects that can be applied to materials or used for other visuals. In reality, shaders can be used to do much more (e.g. world generation), however their most common use-case is in fact graphics.
 
 ## The fundamental idea
 

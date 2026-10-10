@@ -27,4 +27,4 @@ shader MyShader : ComputeColor, Texturing, MyOtherShader
 
 TODO: VISUALIZATION
 
-Effects aren't shader code by themselves, they only specify how to generate a new shader.
+Effects aren't shaders by themselves, they only specify how to generate a new shader.
