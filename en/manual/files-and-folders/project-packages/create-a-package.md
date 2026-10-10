@@ -75,6 +75,8 @@ Give the package a name and then continue through the steps until the package is
 > ```xml
 > <PackageReference Include="Stride.AssetCompiler" Version="ENGINE VERSION HERE" IncludeAssets="build;buildTransitive" />
 > ```
+> 
+> Starting with Stride 4.5, the package is build-only by itself, so `IncludeAssets` can be left out. For Stride 4.3 and earlier, use the `Stride.Core.Assets.CompilerApp` package instead.
 
 ### [Command line](#tab/command-line)
 
@@ -124,6 +126,8 @@ dotnet sln add MyGame.MyLibrary
 > ```xml
 > <PackageReference Include="Stride.AssetCompiler" Version="ENGINE VERSION HERE" IncludeAssets="build;buildTransitive" />
 > ```
+> 
+> Starting with Stride 4.5, the package is build-only by itself, so `IncludeAssets` can be left out. For Stride 4.3 and earlier, use the `Stride.Core.Assets.CompilerApp` package instead.
 
 ---
 
