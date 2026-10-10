@@ -201,40 +201,46 @@ const app = {
                 selectElement.value = urlVersion;
                 selectElement.dispatchEvent(new Event('change'));
                 this.redirectToCurrentDocVersion();
+
+                if (urlVersion != 'latest' && urlVersion != data.latest) {
+                    let isBeta = data.betas.includes(urlVersion);
+                    this.createSwitchToLatestNotification(isBeta, data.latest);
+                }
+
             }).catch(error => {
                 console.log('Error loading or processing versions.json:', error);
             });
+    },
+    changeUrlVersion: async function (targetVersion) {
+        const hostVersion = window.location.host;
+        const pathVersion = window.location.pathname;
+
+        // Generate page URL in other version
+        let newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.substring(pathVersion.indexOf('/', 1) + 1);
+
+        // Check if address exists
+        await fetch(newAddress, { method: 'HEAD' })
+            .then(response => {
+                if (!response.ok) {
+                    // It didn't work, let's just go to the top page of the section (i.e. manual, api, release notes, etc.)
+                    newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.split('/')[2];
+                    if (pathVersion.split('/').length >= 4) {
+                        newAddress += '/' + pathVersion.split('/')[3];
+                    }
+                }
+            })
+            .catch(error => {
+                console.log('Error checking URL:', error);
+            });
+
+        return newAddress;
     },
     redirectToCurrentDocVersion: function () {
 
         const selectElement = document.getElementById('stride-current-version');
 
-        selectElement.addEventListener('change', () => {
-            const hostVersion = window.location.host;
-            const pathVersion = window.location.pathname;
-            const targetVersion = selectElement.value;
-
-            // Generate page URL in other version
-            let newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.substring(pathVersion.indexOf('/', 1) + 1);
-
-            // Check if address exists
-            fetch(newAddress, { method: 'HEAD' })
-                .then(response => {
-                    if (!response.ok) {
-                        // It didn't work, let's just go to the top page of the section (i.e. manual, api, release notes, etc.)
-                        newAddress = '//' + hostVersion + '/' + targetVersion + '/' + pathVersion.split('/')[2];
-                        if (pathVersion.split('/').length >= 4) {
-                            newAddress += '/' + pathVersion.split('/')[3];
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.log('Error checking URL:', error);
-                })
-                .finally(() => {
-                    // Go to page
-                    window.location.href = newAddress;
-                });
+        selectElement.addEventListener('change', async () => {
+            window.location.href = await this.changeUrlVersion(selectElement.value);
         });
     },
     // Unversioned pages (/en/..., see versions.json) are shared by all versions: their links to the versioned documentation
@@ -295,8 +301,33 @@ const app = {
         document.addEventListener('click', updateLink, true);
         document.addEventListener('auxclick', updateLink, true);
     },
-    start: function () {
+    createSwitchToLatestNotification: async function (isBeta, latestVersion) {
+        const target = document.querySelector("main");
 
+        const alertType = isBeta ? "alert-secondary" : "alert-danger";
+        const latestLink = await this.changeUrlVersion(latestVersion);
+        const description = isBeta ?
+            "You are viewing documentation for a beta version of Stride." :
+            "You are viewing documentation for an older version of Stride.";
+
+        const html = `
+            <div class="col-lg-4 m-4 position-fixed bottom-0 end-0 g-0">
+                <div class="alert ${alertType} d-flex">
+                    <div class="pe-2">
+                        <i class="bi bi-exclamation-circle fs-5"></i>
+                    </div>
+                    <div>
+                        <span>${description}</span>
+                        <a href="${latestLink}">Switch to latest</a>
+                    </div>
+                    <button type="button" class="btn-close ps-2" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+            `
+
+        target.insertAdjacentHTML("afterend", html);
+    },
+    start: function () {
         // i.e. /en/contributors/index.html, as opposed to /4.4/en/manual/index.html
         const isUnversioned = /^[a-z]{2}$/.test(window.location.pathname.split('/')[1]);
         if (isUnversioned) {
