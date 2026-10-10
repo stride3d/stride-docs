@@ -27,7 +27,7 @@ Here's how it looks like in a default game project:
 > Make sure that the `TargetFramework` and all package versions match your current Stride version. The example above shows version 4.4.0 for reference.
 
 > [!Note]
-> For Stride 4.3 and earlier, use the `Stride.Core.Assets.CompilerApp` package instead.
+> Starting with Stride 4.5, the `Stride.AssetCompiler` package is build-only by itself, so `IncludeAssets` can be left out. For Stride 4.3 and earlier, use the `Stride.Core.Assets.CompilerApp` package instead.
 
 Inside the same project, create a new csharp file and replace its content with the following:
 ```cs
