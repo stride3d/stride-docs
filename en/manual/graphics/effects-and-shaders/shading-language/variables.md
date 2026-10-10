@@ -107,7 +107,7 @@ shader Example : ShaderBase
 ```
 
 > [!NOTE]
-> Depending on the context, variables might need to be differently defined to be modifiable via C#. For more infofmration, find the script which you are trying to write in [Types of shaders](../types-of-shaders/index.md).
+> Depending on the context, variables might need to be differently defined to be modifiable via C#. For more infofmration, find the script which you are trying to write in [Types of shaders](../types-of-shader/index.md).
 
 The reason why shaders cannot modify normal variables, is because they are executed on multiple threads at once for different values (e.g. different texture positions). Having them fight over which one gets to set the value it wants is probably not what you want your shader to do.
 
@@ -136,7 +136,7 @@ For more information, visit [Streams](streams.md).
 
 Variables defined outside of methods are labeled as **shader constnats**. Despite what their name might suggest, it is possible to change their values, but only through C# scripts.
 
-Shader constnats are put into **buffers**. A single shader can define multiple buffers, that can be used differently depending on the context (e.g. [compute colors](../types-of-shaders/compute-color.md) require variables to be stored in a `PerMaterial` buffer to be modifiable through code). If no buffer is specified, the default one is used.
+Shader constnats are put into **buffers**. A single shader can define multiple buffers, that can be used differently depending on the context (e.g. [compute colors](../types-of-shader/compute-color.md) require variables to be stored in a `PerMaterial` buffer to be modifiable through code). If no buffer is specified, the default one is used.
 
 There are two types of buffers:
 
@@ -192,7 +192,7 @@ float intensityKey = ExampleKeys.Intensity;
 Vector2 targetPositionKey = ExampleKeys.TargetPosition;
 ```
 
-These keys can then be used to reference and change these variables. Ways of how to do that can differ depending on the shader type, so check out [Types of shaders](../types-of-shaders/index.md) for more detailed information.
+These keys can then be used to reference and change these variables. Ways of how to do that can differ depending on the shader type, so check out [Types of shaders](../types-of-shader/index.md) for more detailed information.
 
 ### Annotations
 
