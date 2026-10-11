@@ -205,13 +205,13 @@ Annotations allow you to specify additional metadata for variables. Here are the
 ```sdsl
 shader Example : ShaderBase
 {
-	[Color] float4 myColor;
- 
-	[Link("ProjectKeys.MyTextureKey")]
-	[RenameLink]
-	Texture2D texture;
- 
-	[Map("Texturing.Texture0")]
-	Texture2D defaultTexture;
+    [Color] float4 myColor;
+    
+    [Link("ProjectKeys.MyTextureKey")]
+    [RenameLink]
+    Texture2D texture;
+    
+    [Map("Texturing.Texture0")]
+    Texture2D defaultTexture;
 };
 ```
