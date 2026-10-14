@@ -8,6 +8,7 @@
 ## Surface and Post-Process Shaders
 
 - [Glass Shader](https://github.com/stride3d/stride/discussions/1011) - Community discussion and implementation of a physically-plausible glass material shader
+- [Occlusion Silhouette](https://github.com/Golden-Border/StrideExtensions/blob/main/StrideOcclusionSilhouette/Readme.md) - Renders a flat-colored silhouette for entities that are hidden behind other geometry
 - [Stride-Awesome-Shaders](https://github.com/ykafia/Stride-Awesome-Shaders) - Curated collection of community-contributed shaders covering many visual effects
 - [StrideMeshOutlineRenderFeature](https://github.com/herocrab/StrideMeshOutlineRenderFeature) - Two-pass stencil-based mesh outline render feature for highlighting objects
 - [StrideWireframeShader](https://github.com/jeske/StrideWireframeShader) - Single-pass geometry shader rendering solid meshes with a wireframe overlay
