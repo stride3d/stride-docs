@@ -51,6 +51,8 @@ items:
         href: animation/preview-animations.md
       - name: Animation scripts
         href: animation/animation-scripts.md
+      - name: Morph targets
+        href: animation/morph-targets.md
       - name: Additive animation
         href: animation/additive-animation.md
       - name: Procedural animation
