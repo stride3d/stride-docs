@@ -62,10 +62,6 @@ This is useful, for example, to animate entities that don't require skeletons, s
 > [!NOTE]
 > The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
 
-## Import custom attributes
-
-If you have custom attribute in the animation file...
-
 ## See also
 
 * [Animation index](index.md)
