@@ -1,6 +1,6 @@
 # Default value changes ignored at runtime
   
-When you add a script to your project as a component, Game Studio lists its public variables in the Property Grid. These are the values used at runtime.
+When you add a script to your project as a component, Game Studio lists its public variables in the Property grid. These are the values used at runtime.
 
 However, if you then change the default value in the script, Game Studio doesn't update the component with the new value.
 
@@ -24,4 +24,4 @@ public float SpeedFactor { get; set; } = 6.0f;
 When you change the value, update both the `SpeedFactor` and the `DefaultValue` to the same value.
 
 > [!Note]
-> This doesn't work in both directions. If you set a value other than the `DefaultValue` in the Property Grid, Game Studio saves the value in the asset and overrides the default value at runtime.
+> This doesn't work in both directions. If you set a value other than the `DefaultValue` in the Property grid, Game Studio saves the value in the asset and overrides the default value at runtime.

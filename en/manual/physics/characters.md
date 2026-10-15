@@ -7,9 +7,9 @@
 
 ## Add a Character Component to an Entity
 
-1. In the **Scene Editor**, select the entity you want to add the component to.
+1. In the **Scene editor**, select the entity you want to add the component to.
 
-2. In the **Property Grid**, click `Add component`, hover `Physics - Bepu` and select `CharacterComponent`.
+2. In the **Property grid**, click `Add component`, hover `Physics - Bepu` and select `CharacterComponent`.
 
     ![Add character component](media/add-character-component.png)
 

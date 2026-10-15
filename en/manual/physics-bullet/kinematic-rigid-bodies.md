@@ -12,7 +12,7 @@ Although kinematic rigidbodies aren't moved by physics, other objects can still 
 
 1. Select the entity you want to be a kinematic rigidbody.
 
-2. In the **Property Grid**, under the **Rigidbody** component properties, select **Is kinematic**.
+2. In the **Property grid**, under the **Rigidbody** component properties, select **Is kinematic**.
 
     ![Check 'Is kinematic'](media/rigid-bodies-is-kinematic-checkbox.png)
 

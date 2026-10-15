@@ -5,11 +5,11 @@
 
 After you [import a sprite sheet](import-sprite-sheets.md), you can use the dedicated **Sprite Editor** to select sprites within the sprite sheet.
 
-You can also edit sprite properties in the **Property Grid** like any other asset.
+You can also edit sprite properties in the **Property grid** like any other asset.
 
 ## Open the Sprite Editor
 
-To open the Sprite Editor, in the **Asset View**, double-click the sprite sheet asset.
+To open the Sprite Editor, in the **Asset view**, double-click the sprite sheet asset.
 
 The sprite sheet opens in the Sprite Editor.
 
@@ -29,7 +29,7 @@ You can set whether the sprite sheet contains gameplay sprites (**Sprite2D**) or
 
     Game Studio adds a empty sprite to the list.
 
-2. In the **Property Grid** on the right, in the **Source** field, specify the sprite sheet that contains the sprite.
+2. In the **Property grid** on the right, in the **Source** field, specify the sprite sheet that contains the sprite.
 
 > [!TIP]
 > If you want to create a new sprite from the same sprite sheet as other sprites in the list, it's often faster to duplicate an existing sprite. To duplicate a sprite, select it and click **Duplicate selected sprites** or press **Ctrl + D**.
@@ -82,11 +82,11 @@ You can drag the edges of the texture region and reposition the region manually.
     </video>
 </p>
 
-#### Set the texture region in the Property Grid
+#### Set the texture region in the Property grid
 
-You can define the pixel coordinates of the texture region in **Property Grid** under **Texture Region**. X is the left edge, Y is the top, Z is the right, and W is the bottom.
+You can define the pixel coordinates of the texture region in **Property grid** under **Texture Region**. X is the left edge, Y is the top, Z is the right, and W is the bottom.
 
-![Set texture region in Property Grid](media/set-texture-region-in-property-grid.png)
+![Set texture region in Property grid](media/set-texture-region-in-property-grid.png)
 
 #### Use entire sprite sheet for the sprite
 
@@ -106,7 +106,7 @@ You can also use the **color picker** tool to select a color from the sprite she
 
 ## Sprite properties
 
-You can set the properties of individual sprites in the **Property Grid**.
+You can set the properties of individual sprites in the **Property grid**.
 
 ![Adjust frame properties](media/adjust-frame-properties.png)
 
@@ -125,7 +125,7 @@ You can set the properties of individual sprites in the **Property Grid**.
 
 You can also set the properties for the entire sprite sheet asset. To access the properties:
 
-* select the sprite sheet asset in the **Asset View** and set the properties in the **Property Grid**, or
+* select the sprite sheet asset in the **Asset view** and set the properties in the **Property grid**, or
 * in the Sprite Editor, click **Sprite sheet properties**.
 
     ![Sprite sheet properties button](media/sprite-sheet-properties-button.png)

@@ -8,7 +8,7 @@ To add a light to a scene, add a [light component](xref:Stride.Engine.LightCompo
 
 1. Select the entity you want to be a light.
 
-2. In the Property Grid (on the right by default), click **Add component** and select **Light**.
+2. In the Property grid (on the right by default), click **Add component** and select **Light**.
 
     ![Add light component](media/add-light-component.png)
 

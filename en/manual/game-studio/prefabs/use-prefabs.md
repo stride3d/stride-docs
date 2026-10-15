@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Programmer</span>
 <span class="badge text-bg-success">Designer</span>
 
-To instantiate a prefab, drag and drop it from the **Asset View** to the scene.
+To instantiate a prefab, drag and drop it from the **Asset view** to the scene.
 
 You can re-arrange entities in the prefab instance just like you do with other entities:
 
@@ -32,7 +32,7 @@ In this case, a parent entity is unnecessary. Instead, you can create several in
 
 After you add a prefab instance, you can break the link between the prefab and any of its child entities. This means the child entity is no longer affected by changes you make to the prefab.
 
-To do this, in the **Scene Editor**, right-click a child entity or entities and select **Break link to prefab**.
+To do this, in the **Scene editor**, right-click a child entity or entities and select **Break link to prefab**.
 
 ![Break link between child and prefab](media/use-prefabs-break-link-to-prefab.gif)
 

@@ -16,7 +16,7 @@ The trigger detects when colliders enter it, which you can use to script events.
 
 1. Create a [collider](colliders.md).
 
-2. In the **Property Grid**, under the collider component properties, select **Is Trigger**.
+2. In the **Property grid**, under the collider component properties, select **Is Trigger**.
 
 ![Select 'Is trigger'](media/triggers-select-is-trigger-checkbox.png)
 

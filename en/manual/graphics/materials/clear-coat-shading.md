@@ -22,7 +22,7 @@ Clear-coat shading has several advantages over creating the effect manually with
 
 ## Add a clear-coat material
 
-Stride includes a clear-coat material template. To add it, in the **Asset View**, click **Add asset** and select **Material > PBR material: clear coat**.
+Stride includes a clear-coat material template. To add it, in the **Asset view**, click **Add asset** and select **Material > PBR material: clear coat**.
 
 ![Add clear coat](media/add-clear-coat.png)
 
@@ -30,14 +30,14 @@ Alternatively, to set clear-coat properties yourself:
 
 1. Select the material you want to use clear-coat shading.
 
-2. In the Property Grid, under the **Misc** properties, next to **Clear coat**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose **Clear coat**.
+2. In the Property grid, under the **Misc** properties, next to **Clear coat**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and choose **Clear coat**.
 
     ![Select clear coat](media/select-clear-coat.png)
 
-    >[!Note]
-    >For clear-coat shading to work correctly, make sure you enable **Diffuse**, **Specular** and **Specular model** under the material **Shading** properties.
-    
-    >![Shading options](media/enable-shading-options.png)
+    > [!NOTE]
+    > For clear-coat shading to work correctly, make sure you enable **Diffuse**, **Specular** and **Specular model** under the material **Shading** properties.
+    > 
+    > ![Shading options](media/enable-shading-options.png)
 
 ## Properties
 

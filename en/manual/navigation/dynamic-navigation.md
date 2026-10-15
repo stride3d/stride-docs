@@ -23,11 +23,11 @@ You can enable and disable dynamic navigation in the global [game settings](../g
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-3. In the **Asset View** (the bottom pane by default), select the **Game Settings** asset.
+3. In the **Asset view** (the bottom pane by default), select the **Game Settings** asset.
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-4. In the **Property Grid** (the right-hand pane by default), under **Navigation Settings**, expand **Dynamic navigation mesh**.
+4. In the **Property grid** (the right-hand pane by default), under **Navigation Settings**, expand **Dynamic navigation mesh**.
 
    ![Game settings](media/expand-dynamic-navigation-mesh.png)
 

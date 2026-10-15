@@ -16,7 +16,7 @@ This project contains different scenes that demonstrate different ways to use pa
 
 There are three particle entities in the scene: **ConeEmitter15**, **ConeEmitter30**, and **ConeEmitter45**.
 
-Select one of the particle entities. In the Property Grid, navigate to its source particle system and expand the emitter.
+Select one of the particle entities. In the Property grid, navigate to its source particle system and expand the emitter.
 
 ![media/particles-samples-custom-1.png](media/particles-samples-custom-1.png)
 
@@ -40,17 +40,17 @@ We'll create a spawner which emits particles per second **and** in bursts every 
     public sealed class CustomParticleSpawner : ParticleSpawner
     {
         [DataMemberIgnore]
-        private float carryOver;    // Private members do not appear on the Property Grid
+        private float carryOver;    // Private members do not appear on the Property grid
 
         [DataMember(100)]                // When data is serialized, this attribute decides its priority
-        [Display("Number of particles")] // This is the name which will be displayed on the Property Grid
+        [Display("Number of particles")] // This is the name which will be displayed on the Property grid
         public float SpawnCount { get; set; }
 
         [DataMemberIgnore]
-        private float burstTimer;    // Private members do not appear on the Property Grid
+        private float burstTimer;    // Private members do not appear on the Property grid
 
         [DataMember(200)]                // When data is serialized, this attribute decides its priority
-        [Display("Burst particles")]     // This is the name which will be displayed on the Property Grid
+        [Display("Burst particles")]     // This is the name which will be displayed on the Property grid
         public float BurstCount {get;set;}
 
 		...

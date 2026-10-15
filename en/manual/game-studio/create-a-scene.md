@@ -5,11 +5,11 @@
 
 When you create a new project, Game Studio creates an initial scene and populates it with basic entities such as a light, a camera, and a skybox.
 
-You can create scenes like any other asset. As they are complex assets, they have a dedicated editor, the **Scene Editor**.
+You can create scenes like any other asset. As they are complex assets, they have a dedicated editor, the **Scene editor**.
 
 ## Create a scene
 
-1. In the **Asset View** (by default in the bottom pane), click **Add asset** and select **Scenes**.
+1. In the **Asset view** (by default in the bottom pane), click **Add asset** and select **Scenes**.
 
     ![Add a scene](media/add-scene.png)
 
@@ -21,11 +21,11 @@ You can create scenes like any other asset. As they are complex assets, they hav
     Scene with HDR pipeline | A scene containing basic entities and preconfigured for HDR rendering
     Scene with LDR pipeline | A scene containing basic entities and preconfigured for LDR rendering
 
-## Open a scene in the Scene Editor
+## Open a scene in the Scene editor
 
-In the **Asset View**:
+In the **Asset view**:
 
-![Select a scene in the Asset View](media/open-scene-from-asset-view.png)
+![Select a scene in the Asset view](media/open-scene-from-asset-view.png)
 
 * double-click the scene asset, or
 * right-click the asset and select **Edit asset**, or 
@@ -34,21 +34,21 @@ In the **Asset View**:
 > [!TIP]
 > You can have several scenes open simultaneously.
 
-## Use the Scene Editor
+## Use the Scene editor
 
-![Scene Editor](media/create-a-scene-default-scene-editor.png)
+![Scene editor](media/create-a-scene-default-scene-editor.png)
 
-The **Scene Editor tabs** (A) display the open scenes. You can switch between open scenes using the tabs.
+The **Scene editor tabs** (A) display the open scenes. You can switch between open scenes using the tabs.
 
 The **Entity Tree** (B) shows the hierarchy of the entities included in the scene. The same entity hierarchy is applied at runtime. You can use the Entity Tree to browse, select, rename, and reorganize your entities.
 
-You can use the **tool bar** (C) to modify entities and change the Scene Editor display.
+You can use the **tool bar** (C) to modify entities and change the Scene editor display.
 
 The **main window** (D) shows a simplified representation of your scene, with your entities positioned inside it. For entities that have no shape (E), Game Studio represents them with **2D gizmos**; for example, cameras are represented with camera icons.
 
 ## See also
 
-* [Navigate in the Scene Editor](navigate-in-the-scene-editor.md)
+* [Navigate in the Scene editor](navigate-in-the-scene-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)

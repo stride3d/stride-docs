@@ -31,11 +31,11 @@ Spatialized audio is widely used for sound effects in platform, desktop, and VR 
 
 When you [import your audio](import-audio.md), select *Spatialized Sound* as the asset type.
 
-You can also set audio to spatialized in the asset's **Property Grid**:
+You can also set audio to spatialized in the asset's **Property grid**:
 
-1. In **Asset View**, select _Audio Asset_.
+1. In **Asset view**, select _Audio Asset_.
 
-2. In the **Property Grid**, select the **Spatialized** checkbox:
+2. In the **Property grid**, select the **Spatialized** checkbox:
 
     ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
 

@@ -17,9 +17,9 @@ Alternatively, Stride can buffer audio and stream it in sequences. As soon as th
 
 To stream an audio asset:
 
-1. In the **Asset View**, select the audio asset.
+1. In the **Asset view**, select the audio asset.
 
-2. In the **Property Grid**, select **Stream From Disk**:
+2. In the **Property grid**, select **Stream From Disk**:
 
     ![Audio asset properties](media/audio-asset-properties-property-grid.png)
 

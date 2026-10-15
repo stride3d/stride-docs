@@ -13,11 +13,11 @@ The pitch and volume of the sound changes as the [audio listener](audio-listener
 
 ## 1. Set up an audio emitter asset
 
-1. In the **Scene view**, select an entity you want to be an audio emitter.
+1. In the **Scene editor**, select an entity you want to be an audio emitter.
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click **Add component** and select **Audio Emitter**.
+2. In the **Property grid**, click **Add component** and select **Audio Emitter**.
 
     ![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
 
@@ -27,7 +27,7 @@ The pitch and volume of the sound changes as the [audio listener](audio-listener
 
     ![Add new sound entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
-4. From the **Asset View**, drag and drop an audio asset to the audio you just added:
+4. From the **Asset view**, drag and drop an audio asset to the audio you just added:
 
     ![Drag and drop an audio asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
@@ -93,7 +93,7 @@ This sound will loop at double the original pitch and half the original volume. 
 
 Game Studio lists the script as a component under **Add component**. Add the script to the audio emitter entity.
 
-1. In the **Scene view**, select an entity you want to be an audio emitter.
+1. In the **Scene editor**, select an entity you want to be an audio emitter.
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 

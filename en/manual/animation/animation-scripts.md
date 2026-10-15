@@ -28,7 +28,7 @@ Stride includes a pre-built **AnimationStart** script. You can use this script a
 
 To use the **AnimationStart** script:
 
-1. In the **Asset View** (bottom pane by default), click **Add asset**.
+1. In the **Asset view** (bottom pane by default), click **Add asset**.
 
 2. Choose **Add asset > Scripts > Animation start**.
 

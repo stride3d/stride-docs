@@ -30,7 +30,7 @@ Notice how the skybox texture colors are reflected.
 
 To use a skybox as a light, you need to add a skybox asset, then select it in a [Light component](xref:Stride.Engine.LightComponent).
 
-1. In the **Asset View**, click ![Add asset](media/engine-skybox-add-new-asset-button.png)
+1. In the **Asset view**, click ![Add asset](media/engine-skybox-add-new-asset-button.png)
 
 2. Select **Miscellaneous** > **Skybox**.
 
@@ -46,7 +46,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
 4. Select the entity you want to be the skybox light.
 
-5. In the **Property Grid** (on the right by default), click **Add component** and select [Light](xref:Stride.Engine.LightComponent).
+5. In the **Property grid** (on the right by default), click **Add component** and select [Light](xref:Stride.Engine.LightComponent).
 
     ![Background component properties](media/skybox-add-light-component.png)
 

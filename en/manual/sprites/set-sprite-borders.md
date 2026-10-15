@@ -17,8 +17,8 @@
 
     ![Choose UI](media/select-type-UI.png)
 
-    >[!Note]
-    >This has no effect on how the sprite is rendered at runtime, but lets you set slightly different properties, including sprite borders.
+    > [!NOTE]
+    > This has no effect on how the sprite is rendered at runtime, but lets you set slightly different properties, including sprite borders.
 
 2. From the **Sprites** list, select the sprite you want to add sprite borders to.
 
@@ -46,7 +46,7 @@
 
 > [!TIP]
 >
-> For fine-tune control over the sprite borders, adjusting one-by-one in the **Property Grid**
+> For fine-tune control over the sprite borders, adjusting one-by-one in the **Property grid**
 >
 > ![Adjust sprite borders from Property grid](media/adjust-sprite-border-from-property-grid.png)
 

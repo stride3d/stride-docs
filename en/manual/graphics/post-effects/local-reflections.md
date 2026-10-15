@@ -4,8 +4,8 @@
 <span class="badge text-bg-success">Artist</span>
 <span class="badge text-bg-success">Programmer</span>
 
->[!Warning]
->Currently, local reflections aren't compatible with mobile platforms and cause crashes.
+> [!WARNING]
+> Currently, local reflections aren't compatible with mobile platforms and cause crashes.
 
 > [!NOTE]
 > As with other depth-aware post effects, enabling local reflections nullifies MSAA (multisample anti-aliasing).
@@ -40,7 +40,7 @@ Stride processes local reflections in four passes:
 
 To use local reflections, enable the effect in the **graphics compositor**.
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -55,7 +55,7 @@ To use local reflections, enable the effect in the **graphics compositor**.
     >
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **Property Grid** (on the right by default), enable **Local reflections**.
+3. In the **Property grid** (on the right by default), enable **Local reflections**.
 
     ![Enable local reflections](media/enable-local-reflections.png)
 

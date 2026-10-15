@@ -38,9 +38,9 @@ Colliders interact according to the table below.
 
 For example, rigidbody colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers; collisions are detected in the code, but objects simply pass through.
 
-## Show colliders in the Scene Editor
+## Show colliders in the Scene editor
 
-By default, colliders are invisible in the Scene Editor. To show them:
+By default, colliders are invisible in the Scene editor. To show them:
 
 1. In the Game Studio toolbar, in the top right, click the **Display gizmo options** icon.
 
@@ -50,7 +50,7 @@ By default, colliders are invisible in the Scene Editor. To show them:
 
     ![Display physics option](media/display-physics-option.png)
 
-The Scene Editor displays collider shapes.
+The Scene editor displays collider shapes.
 
 ![Display physics](media/display-physics.png)
 
@@ -69,7 +69,7 @@ this.GetSimulation().ColliderShapesRendering = true;
 
 To show or hide collider shapes at runtime with a keyboard shortcut, use the **Debug physics shapes** script.
 
-1. In the **Asset View**, click **Add asset**.
+1. In the **Asset view**, click **Add asset**.
 
 2. Select **Scripts** > **Debug physics shapes**.
 

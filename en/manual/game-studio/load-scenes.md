@@ -26,11 +26,11 @@ myChildScene1.Add(myChildScene2);
 ```
 
 > [!NOTE]
-> If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset View**).
+> If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset view**).
 > 
 >![Scenes included in root](media/scenes-included-in-root.png)
 
->To include a scene in the build, in the **Asset View**, right-click the scene asset and select **Include in build as root asset**.
+>To include a scene in the build, in the **Asset view**, right-click the scene asset and select **Include in build as root asset**.
 
 >For more information about including assets in the build, see [Asset compilation](../assets/asset-compilation.md).
 
@@ -62,7 +62,7 @@ Stride also includes a scene streaming script that uses a [trigger](../physics/t
 
 ### Add a scene streaming script
 
-To add a scene streaming script, in the **Asset View** (bottom pane by default), click **Add asset** and select **Scripts > Scene streaming**.
+To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streaming**.
 
 ![Scene streaming script](media/scene-streaming-script.png)
 
@@ -76,12 +76,12 @@ Game Studio adds a scene streaming script to your project assets.
 
 2. Create an entity and position it where you want the scene to load.
 
-3. With the entity selected, in the **Property Grid** (on the righy by default), click **Add component** and select the **scene streaming** script.
+3. With the entity selected, in the **Property grid** (on the righy by default), click **Add component** and select the **scene streaming** script.
 
     ![Add script](media/add-scene-streaming-script.png)
 
-    >[!Note]
-    >If the scene streaming script doesn't appear in the list of components, reload the assemblies.
+    > [!NOTE]
+    > If the scene streaming script doesn't appear in the list of components, reload the assemblies.
 
     Game Studio adds the script to the entity as a component.
 
@@ -107,7 +107,7 @@ At runtime, when the trigger you created in step 1 is triggered, Stride loads th
 * [Colliders](../physics/colliders.md)
 * [Triggers](../physics/triggers.md)
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the Scene Editor](navigate-in-the-scene-editor.md)
+* [Navigate in the Scene editor](navigate-in-the-scene-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Add entities](add-entities.md)
 * [Manage entities](manage-entities.md)

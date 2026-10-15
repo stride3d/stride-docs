@@ -28,7 +28,7 @@ You can create models in scripts at runtime. You can do this in several differen
     ```
   
     > [!Tip]
-    > To find the model's asset URL, in the **Asset View**, move the mouse over the model.
+    > To find the model's asset URL, in the **Asset view**, move the mouse over the model.
     >
     > ![(Get asset URL](media/get-asset-url.png)
 
@@ -36,7 +36,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
     ![Add script component to entity](media/create-model-from-code-add-script-component.png)
 
-4. In the **Asset View**, right-click the model you want to create at runtime and select **Include in build as root asset**.
+4. In the **Asset view**, right-click the model you want to create at runtime and select **Include in build as root asset**.
 
     ![Include in build as root asset](media/create-model-from-code-include-in-build-as-root-asset.png)
 
@@ -74,8 +74,8 @@ You can create models in scripts at runtime. You can do this in several differen
     model.Meshes.Add(mesh);
     ```
 
-    >[!Note]
-    >To use the code above, make sure you add `using Stride.Extensions` to the top of your script.
+    > [!NOTE]
+    > To use the code above, make sure you add `using Stride.Extensions` to the top of your script.
 
     Alternatively, create a mesh using your own vertex and index buffers. For example:
 
@@ -133,7 +133,7 @@ Finally, you need to give the model one or more materials. There are two ways to
     model.Materials.Add(material);
     ```
 
-2. In the **Asset View**, right-click every material asset your script uses and select `Include in build as root asset`.
+2. In the **Asset view**, right-click every material asset your script uses and select `Include in build as root asset`.
 
     ![Include in build as root asset](media/create-model-from-code-include-material-in-build-as-root-asset.png)
 

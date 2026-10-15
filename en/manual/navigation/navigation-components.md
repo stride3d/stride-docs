@@ -10,7 +10,7 @@
 
 1. Select an entity you want to use navigation.
 
-2. In the **Property Grid**, click **Add component** and select **Navigation**.
+2. In the **Property grid**, click **Add component** and select **Navigation**.
 
     ![Add navigation component](media/add-navigation-component.png)
 

@@ -20,7 +20,7 @@ Priorities aren't set in the scripts themselves. Instead, they're set in the scr
 
 1. Attach the script to an entity. For information about how to do this, see [Use a script](use-a-script.md).
 
-2. With the entity selected, in the **Property Grid**, under the **script component properties**, set the **Priority** you want the script to have.
+2. With the entity selected, in the **Property grid**, under the **script component properties**, set the **Priority** you want the script to have.
 
     ![Set script priority](media/set-script-priority.png)
 

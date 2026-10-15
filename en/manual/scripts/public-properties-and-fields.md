@@ -26,7 +26,7 @@ public class SampleSyncScript : StartupScript
 
 Game Studio shows the `DelayTimeOut` property in the script component properties:
 
-![Public property appears in the Property Grid](media/scripts-in-stride-change-value-public-property.png)
+![Public property appears in the Property grid](media/scripts-in-stride-change-value-public-property.png)
 
 > [!NOTE]
 > As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
@@ -52,9 +52,9 @@ public class SampleSyncScript : StartupScript
 
 If you want to include code like this in a property or field, hide it so Game Studio doesn't display it (see below). 
 
-## Hide properties or fields in the Property Grid
+## Hide properties or fields in the Property grid
 
-If you don't want Game Studio to show a property in the Property Grid, you can:
+If you don't want Game Studio to show a property in the Property grid, you can:
 
 * declare your member internal or private, or
 * use the [DataMemberIgnore](xref:Stride.Core.DataMemberIgnoreAttribute) attribute like this:
@@ -98,7 +98,7 @@ Enable documentation file generation:
 
 On next reload, the Game Studio should display the documentation:
 
-![The description now shows in the Property Grid](media/userdoc-example.png)
+![The description now shows in the Property grid](media/userdoc-example.png)
 
 ## MemberRequiredAttribute
 The [`MemberRequiredAttribute`](xref:Stride.Core.Annotations.MemberRequiredAttribute) is used to specify if a field or property should not be left null in the editor. If no values are set for this member, a warning or error will be logged when building your game.

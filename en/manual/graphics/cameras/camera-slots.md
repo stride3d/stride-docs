@@ -13,7 +13,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
 ## Create a camera slot
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -38,7 +38,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
 1. In your scene, select the **entity** with the camera component you want to bind.
 
-2. In the **Property Grid** (on the right by default), in the **Camera** component properties, under **Slot**, select the slot you want to bind the camera to.
+2. In the **Property grid** (on the right by default), in the **Camera** component properties, under **Slot**, select the slot you want to bind the camera to.
 
     > [!Note]
     > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../game-studio/game-settings.md).

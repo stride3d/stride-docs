@@ -10,7 +10,7 @@ To preview your scene in your VR device, connect the editor to a [VR-enabled](en
 
 To do this:
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -22,7 +22,7 @@ To do this:
 
     ![Node connections](media/node-connections.png)
 
-3. With the forward renderer node selected, in the **Property Grid**, enable **VRRendererSettings**.
+3. With the forward renderer node selected, in the **Property grid**, enable **VRRendererSettings**.
 
     ![Select editor renderer](media/enable-vr.png)
 
@@ -35,7 +35,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 > [!NOTE]
 > If your editor and game nodes already use separate renderers (as in the VR sample project), you don't need to follow these instructions.
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -51,7 +51,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 
     ![Entry points node](media/entry-points-node.png)
 
-4. In the **Property Grid**, next to **Editor renderer**, select the forward renderer you created.
+4. In the **Property grid**, next to **Editor renderer**, select the forward renderer you created.
 
     ![Select forward renderer](media/select-editor-forward-renderer.png)
 

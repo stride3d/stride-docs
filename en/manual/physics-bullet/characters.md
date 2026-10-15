@@ -9,9 +9,9 @@
 
 ## Add a character component to an entity
 
-1. In the **Scene Editor**, select the entity you want to add the component to.
+1. In the **Scene editor**, select the entity you want to add the component to.
 
-2. In the **Property Grid**, click **Add component** and select **Character**.
+2. In the **Property grid**, click **Add component** and select **Character**.
 
     ![Add character component](media/add-character-component.png)
 
@@ -20,7 +20,7 @@
 
 ## Component properties
 
-You can adjust the character component properties in the **Property Grid**.
+You can adjust the character component properties in the **Property grid**.
 
 Property              |   Description
 ----------------------|-----------------------

@@ -13,11 +13,11 @@ Stride supports the following model file types: `.3ds`, `.blend`, `.dae`,`dxf`, 
 
 ## Import a model, skeleton, or animation from a model file
 
-1. Drag the model file from Explorer to the **Asset View** (in the bottom pane by default).
+1. Drag the model file from Explorer to the **Asset view** (in the bottom pane by default).
 
     ![Choose asset type](media/create-and-add-assets-drag-and-drop-model.png)
 
-    Alternatively, in the **Asset View**:
+    Alternatively, in the **Asset view**:
 
     1a. Click ![Add asset](media/create-and-add-assets-add-new-asset-button.png) and select **Import directly from files**.
     
@@ -37,11 +37,11 @@ Stride supports the following model file types: `.3ds`, `.blend`, `.dae`,`dxf`, 
 
     * If you choose **Animation**, Stride imports only the animation from the model file. This is sufficient for regular animations; for additive information, there are some extra steps. For details, see [Additive animation](additive-animation.md).
 
-After you import the assets, Game Studio adds them to the **Asset View**.
+After you import the assets, Game Studio adds them to the **Asset view**.
 
-![Assets in Asset View](media/assets-in-asset-view1.png)
+![Assets in Asset view](media/assets-in-asset-view1.png)
 
-You can view and edit their properties in the **Property Grid** (on the right by default). For more information, see [Animation properties](animation-properties.md).
+You can view and edit their properties in the **Property grid** (on the right by default). For more information, see [Animation properties](animation-properties.md).
 
 ![Properties](media/animations-properties.png)
 

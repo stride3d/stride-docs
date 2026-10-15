@@ -9,7 +9,7 @@ These instructions assume you already have a UI that you want to display in the 
 
 ## 1. Create a render target texture
 
-In the **Asset View**, click **Add asset** and select **Texture** > **Render target**.
+In the **Asset view**, click **Add asset** and select **Texture** > **Render target**.
 
 ![Add render target](../graphics/graphics-compositor/media/add-render-target.png)
 
@@ -21,7 +21,7 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
 ## 2. Add a VR overlay
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -31,7 +31,7 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), expand **VR Settings**.
+3. In the **Property grid** (on the right by default), expand **VR Settings**.
 
     ![VR settings](media/vr-settings.png)
 
@@ -55,7 +55,7 @@ In the following steps, we'll render the UI to this texture, then display it in 
 
     ![Select UI render feature](media/select-UI-render-feature.png)
 
-2. In the Property Grid, make sure **SimpleGroupToRenderStageSelector** is selected.
+2. In the Property grid, make sure **SimpleGroupToRenderStageSelector** is selected.
 
     ![Select SimpleGroupToRenderStageSelector.png](media/select-SimpleGroupToRenderStageSelector.png)
 
@@ -81,7 +81,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
     ![Entry points node](../graphics/graphics-compositor/media/entry-points-node.png)
 
-2. In the **Property Grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select **None** to delete your existing renderers.
+2. In the **Property grid** on the right, next to **Game renderer**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select **None** to delete your existing renderers.
 
     ![Cleared game renderers](../graphics/graphics-compositor/media/game-renderers-cleared.png)
 

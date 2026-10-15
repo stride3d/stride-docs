@@ -7,18 +7,18 @@ To add a sprite to a scene, add a **sprite component** to an entity. Afterwards,
 
 ## Add a sprite component
 
-1. In the **Scene Editor**, select the entity you want to add a sprite to.
+1. In the **Scene editor**, select the entity you want to add a sprite to.
 
-    >[!Tip]
-    >To create an entity, right-click the scene or Entity Tree and select **Empty entity**.
+    > [!TIP]
+    > To create an entity, right-click the scene or Entity Tree and select **Empty entity**.
 
-2. In the **Property Grid**, click **Add component** and select **Sprite**.
+2. In the **Property grid**, click **Add component** and select **Sprite**.
 
     ![Sprite sheet](media/SpriteEntity.png)
 
     Game Studio adds a Sprite component to the entity.
 
-3. From the **Asset View**, drag the sprite sheet to the **Source** field in the Sprite component:
+3. From the **Asset view**, drag the sprite sheet to the **Source** field in the Sprite component:
 
     <div class="ratio ratio-16x9 mb-3">
         <video autoplay loop class="responsive-video" poster="media\drag-sprite-sheet-to-asset-picker.png">
@@ -38,7 +38,7 @@ Game Studio adds the sprite to the entity.
 
 ### Sprite component properties
 
-You can access the sprite component properties in the **Property Grid**.
+You can access the sprite component properties in the **Property grid**.
 
 ![Sprite component properties](media/sprite-component-properties.png)
 

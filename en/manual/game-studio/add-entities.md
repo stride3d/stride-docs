@@ -5,13 +5,13 @@
 
 After you create a scene, you need to add entities to your scene to build your level.
 
-## Create an entity from the Scene Editor
+## Create an entity from the Scene editor
 
 1. Above the **Entity Tree**, click the ![Plus](media/add-entities-to-a-scene-plus-icon.png) icon.
 
     The **Create** menu opens:
 
-   ![Scene Editor Create menu](media/add-entities-to-a-scene-context-menu.png)
+   ![Scene editor Create menu](media/add-entities-to-a-scene-context-menu.png)
 
    Alternatively, right-click the **Entity Tree** or anywhere in the **scene**. If you create an entity in the scene, Game Studio adds an entity in the location you click.
 
@@ -32,7 +32,7 @@ After you create a scene, you need to add entities to your scene to build your l
 
 ## Create an entity from an asset
 
-You can add an entity by dragging and dropping an asset from the **Asset View** to the scene.
+You can add an entity by dragging and dropping an asset from the **Asset view** to the scene.
 
 <video controls autoplay loop height="360" width="480">
    <source src="media/add-entities-to-scene-drag-and-place-entity.mp4" type="video/mp4">
@@ -51,13 +51,13 @@ To add a component to an entity:
 
 1. Select the entity.
 
-2. In the Property Grid, click **Add component**, and add component you want.
+2. In the Property grid, click **Add component**, and add component you want.
 
-   ![Add a component in the Property Grid](media/add-entities-to-a-scene-add-model-component.png)
+   ![Add a component in the Property grid](media/add-entities-to-a-scene-add-model-component.png)
 
    Game Studio adds the component.
 
-   ![New component in Property Grid](media/add-entities-to-a-scene-add-model-component-added.png)
+   ![New component in Property grid](media/add-entities-to-a-scene-add-model-component-added.png)
 
 3. **Set the properties** of your new component.
 

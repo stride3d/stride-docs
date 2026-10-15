@@ -14,11 +14,11 @@
 
 1. Select the entity you want to be a rigidbody collider.
 
-2. In the **Property Grid**, click **Add component** and select **Rigidbody**.
+2. In the **Property grid**, click **Add component** and select **Rigidbody**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
-3. Set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property Grid**, expand the **Rigidbody component** to view its properties.
+3. Set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property grid**, expand the **Rigidbody component** to view its properties.
 
 4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select the shape you want.
 
@@ -26,7 +26,7 @@
 
 ## Component properties
 
-You can adjust the rigidbody properties in the **Property Grid**.
+You can adjust the rigidbody properties in the **Property grid**.
 
 ![Rigidbody properties](media/rigid-body-properties.png)
 

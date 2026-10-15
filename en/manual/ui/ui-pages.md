@@ -8,17 +8,17 @@ A **UI page** is a collection of UI elements, such as buttons and grids, that fo
 
 ![UI page](media/ui-page.png)
 
-In terms of organization, a UI page is equivalent to a scene in the Scene Editor, and UI elements are equivalent to entities in a scene. Just like entities, elements can have parents and children.
+In terms of organization, a UI page is equivalent to a scene in the Scene editor, and UI elements are equivalent to entities in a scene. Just like entities, elements can have parents and children.
 
 Each UI scene opens in its own tab in the UI editor. For information about how to edit UI pages, see the [UI editor](ui-editor.md) page.
 
 ## Create a UI page
 
-In the **Asset View**, click **Add asset > UI > UI page**.
+In the **Asset view**, click **Add asset > UI > UI page**.
 
 ![Add UI page](media/add-ui-page.png)
 
-Game Studio adds the UI page to the Asset View.
+Game Studio adds the UI page to the Asset view.
 
 ![Added UI page](media/added-ui-page.png)
 
@@ -34,7 +34,7 @@ Game Studio creates a page with a copy of the elements you selected.
 
 ## Open a UI page
 
-In the **Asset View**, double-click the **UI page**.
+In the **Asset view**, double-click the **UI page**.
 
 ![Added UI page](media/added-ui-page.png)
 

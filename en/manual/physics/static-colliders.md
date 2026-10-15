@@ -9,9 +9,9 @@
 
 ## Add a Static Component to an Entity
 
-1. In the **Scene Editor**, select the entity you want to add the component to.
+1. In the **Scene editor**, select the entity you want to add the component to.
 
-2. In the **Property Grid**, click `Add component`, hover `Physics - Bepu` and select `StaticComponent`.
+2. In the **Property grid**, click `Add component`, hover `Physics - Bepu` and select `StaticComponent`.
 
    ![Add static component](media/add-static-component.png)
 

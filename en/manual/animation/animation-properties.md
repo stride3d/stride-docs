@@ -3,9 +3,9 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-After you [import an animation](import-animations.md), you can select it in the **Asset View** (in the bottom pane by default) and view and edit its properties in the **Property Grid** (on the right by default).
+After you [import an animation](import-animations.md), you can select it in the **Asset view** (in the bottom pane by default) and view and edit its properties in the **Property grid** (on the right by default).
 
-![Assets in Asset View](media/assets-in-asset-view1.png)
+![Assets in Asset view](media/assets-in-asset-view1.png)
 
 ![Properties](media/animations-properties.png)
 

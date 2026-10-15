@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Designer</span>
 
-After you [import an animation](import-animations.md), you can preview it in the **Asset Preview**.
+After you [import an animation](import-animations.md), you can preview it in the **Asset preview**.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media\animations-import-animations-animation-preview.jpg">
@@ -11,9 +11,9 @@ After you [import an animation](import-animations.md), you can preview it in the
 </video>
 </p>
 
-By default, the Asset Preview is in the bottom-right under the **Asset Preview** tab.
+By default, the Asset preview is in the bottom-right under the **Asset preview** tab.
 
-![Asset Preview tab](media/animations-import-animations-asset-preview-tab.png)
+![Asset preview tab](media/animations-import-animations-asset-preview-tab.png)
 
 > [!TIP]
 > To rotate the animation, click and drag the mouse.  
@@ -22,11 +22,11 @@ The animation preview uses the model selected in the **preview model** in the **
 
 ## Set the preview model
 
-1. In the **Asset View** (at the bottom by default), select the animation asset.
+1. In the **Asset view** (at the bottom by default), select the animation asset.
 
     ![Select asset](media/select-asset.png)
 
-2. In the **Property Grid** (on the right by default), under **Preview model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+2. In the **Property grid** (on the right by default), under **Preview model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     ![Select an asset](media/pick-an-asset-up.png)
 
@@ -34,8 +34,8 @@ The animation preview uses the model selected in the **preview model** in the **
 
 3. Select the model you want to use to preview the animation.
 
-    >[!Note]
-    >Make sure the model and the animation share identical skeletons.
+    > [!NOTE]
+    > Make sure the model and the animation share identical skeletons.
 
 ## See also
 

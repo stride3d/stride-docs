@@ -18,8 +18,8 @@ For example, imagine you have two models: a knight, and a sword. The character h
 
 ## Set up a model node link component
 
-1. In the **Scene Editor**, select the entity you want to link to a node in another entity.
-2. In the **Property Grid**, click **Add component** and select **Model node link**.
+1. In the **Scene editor**, select the entity you want to link to a node in another entity.
+2. In the **Property grid**, click **Add component** and select **Model node link**.
 
     ![Add component](../particles/tutorials/media/add-model-node-link.png)
 

@@ -15,7 +15,7 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 2. Make sure the audio asset is a **root asset**. Root assets are assets that Stride includes in the build so they can be used at runtime.
 
-    In the **Asset View**, right-click the asset and select **Include in build as root asset**:
+    In the **Asset view**, right-click the asset and select **Include in build as root asset**:
 
     ![Include in build as root asset](media/audio-include-in-build-as-root-asset.png)
 
@@ -123,11 +123,11 @@ public class MySoundScript : SyncScript
 ```
 ## Add the script to the entity
 
-1. In the **Scene view**, select the entity you want to add the script to:
+1. In the **Scene editor**, select the entity you want to add the script to:
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click **Add component** and select your script:
+2. In the **Property grid**, click **Add component** and select your script:
  
     ![Click Add component](media/audio-emitters-add-script-component.png)
 
@@ -135,7 +135,7 @@ public class MySoundScript : SyncScript
 
 3. If you added **public variables** to the script, you need to tie them to audio assets.
 
-    Drag and drop an asset from the **Asset View** to each variable:
+    Drag and drop an asset from the **Asset view** to each variable:
 
     ![Drag and drop an audio asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 

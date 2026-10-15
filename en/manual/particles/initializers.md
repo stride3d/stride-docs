@@ -19,7 +19,7 @@ Several properties are common across many initializers.
 
 | Property                    | Description
 |-----------------------------|-------------
-| Debug draw                  | Draws a debug wireframe in the scene to show the boundaries of the initializer. This is only visible in the Scene Editor, not at runtime.
+| Debug draw                  | Draws a debug wireframe in the scene to show the boundaries of the initializer. This is only visible in the Scene editor, not at runtime.
 | Position inheritance        | Inherit the particle system component position, as defined in the particle entity's Transform component
 | Position offset             | Additional translation of the module. If it inherits the parent position, this is applied on top of the inherited position.
 | Rotation inheritance        | Inherit the particle system component's rotation, as defined in the Transform component

@@ -10,8 +10,8 @@ If your script isn't producing the expected result at runtime, you can debug it 
 
 1. Open the script in Visual Studio.
 
-    >[!Tip]
-    >To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](media/launch-your-game-IDE-icon.png) (**Open in IDE**).
+    > [!TIP]
+    > To open your project in Visual Studio from Game Studio, in the Game Studio toolbar, click ![Open in IDE](media/launch-your-game-IDE-icon.png) (**Open in IDE**).
 
 2. Press **F9** to add a break point at the required places.
 

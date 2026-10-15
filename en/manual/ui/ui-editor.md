@@ -6,7 +6,7 @@
 
 You can edit [UI pages](ui-pages.md) and [UI libraries](ui-libraries.md) with the **UI editor**.
 
-To open the editor, in the **Asset View**, double-click a **UI page** or **[UI library](ui-libraries.md)**.
+To open the editor, in the **Asset view**, double-click a **UI page** or **[UI library](ui-libraries.md)**.
 
 ![Open UI editor](media/open-UI-editor.png)
 
@@ -22,11 +22,11 @@ The UI editor comprises:
 
 * a preview of the UI page as it appears in the game (**C**)
 
-* a Property Grid (**D**) to edit the properties of your UI elements
+* a Property grid (**D**) to edit the properties of your UI elements
 
 ## UI libraries
 
-A **UI library** contains **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your UI pages. They work similarly to [prefabs](../game-studio/prefabs/index.md) in the Scene Editor.
+A **UI library** contains **UI elements** (such as grids, buttons, sliders and so on) that you can use and re-use in your UI pages. They work similarly to [prefabs](../game-studio/prefabs/index.md) in the Scene editor.
 
 ![UI library](media/UI-library.png)
 
@@ -34,7 +34,7 @@ For more information, see [UI libraries](ui-libraries.md).
 
 ## Visual tree
 
-The **visual tree** shows the elements in the UI page and their hierarchy. This is similar to the **Entity Tree** in the Scene Editor.
+The **visual tree** shows the elements in the UI page and their hierarchy. This is similar to the **Entity Tree** in the Scene editor.
 
 ![UI asset properties](media/ui-editor-visual-tree.png)
 
@@ -93,9 +93,9 @@ To add an element (such as a grid or button), drag it from the **UI library** to
 
 ## Properties
 
-You can view and edit element properties in the **Property Grid**.
+You can view and edit element properties in the **Property grid**.
 
-![Property Grid!](media/element-property-grid.png)
+![Property grid!](media/element-property-grid.png)
 
 Properties are sorted by **Appearance**, **Behavior**, **Layout** and **Misc**.
 

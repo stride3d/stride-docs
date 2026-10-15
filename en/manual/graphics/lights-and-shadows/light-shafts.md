@@ -18,7 +18,7 @@ To create light shafts, use three components together: **lights**, **light shaft
 
 By default, Stride disables light shafts in new projects. To enable them:
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -28,7 +28,7 @@ By default, Stride disables light shafts in new projects. To enable them:
 
     ![Select forward renderer](../../virtual-reality/media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select **LightShafts**.
+3. In the **Property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Replace**) and select **LightShafts**.
 
     ![Select light shafts](media/select-light-shafts.png)
 
@@ -42,7 +42,7 @@ By default, Stride disables light shafts in new projects. To enable them:
 
 1. In your scene, select the entity with the **light** you want to create light shafts. This must be a light that casts shadows (ie a [point light](point-lights.md), [directional light](directional-lights.md), or [spot light](spot-lights.md)).
 
-2. In the **Property Grid**, in the **Light** component properties, make sure the **Shadow** checkbox is selected.
+2. In the **Property grid**, in the **Light** component properties, make sure the **Shadow** checkbox is selected.
 
     ![Enable light shafts](media/light-shafts-enable-shadows.png)
 
@@ -56,7 +56,7 @@ By default, Stride disables light shafts in new projects. To enable them:
 
 The **light shaft bounding volume** defines the area in which light shafts are created. You can add the bounding volume to the same entity that has the directional light, but it's usually simpler to add it to a separate entity.
 
-1. In the **Asset View**, click **Add asset**.
+1. In the **Asset view**, click **Add asset**.
 
 2. Under **Models**, select a model in the shape you want the volume to be. For example, if you use a cube, light shafts will be created in a cube-shaped area.
 
@@ -70,7 +70,7 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 4. In the scene, create an empty **entity**. For now, it doesn't matter where you put it; you can reposition it later.
 
-5. With the entity selected, in the **Property Grid**, click **Add component** and select **light shaft bounding volume**.
+5. With the entity selected, in the **Property grid**, click **Add component** and select **light shaft bounding volume**.
 
     ![Add light shaft bounding volume component](media/add-light-shaft-bounding-volume.png)
 
@@ -88,8 +88,8 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 10. Using the **transform** component, position and scale the entity to cover the area where you want to create light shafts.
 
-    >[!Tip]
-    >To show or hide navigation light shaft bounding volumes in the Scene Editor, in the **Scene Editor toolbar**, open the **gizmo options** menu and use the **Light shaft bounding volumes** checkbox.
+    > [!TIP]
+    > To show or hide navigation light shaft bounding volumes in the Scene editor, in the **Scene editor toolbar**, open the **gizmo options** menu and use the **Light shaft bounding volumes** checkbox.
     
     ![Show light shaft bounding volumes](media/show-or-hide-light-shaft-bounding-volume.png)
 

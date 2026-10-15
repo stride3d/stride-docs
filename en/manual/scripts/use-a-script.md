@@ -43,7 +43,7 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 
 ### Add the script in the property grid
 
-1. In the **scene editor**, select the entity you want to add the script to.
+1. In the **Scene editor**, select the entity you want to add the script to.
 
     ![Select an entity](media/select-entity.png)
 

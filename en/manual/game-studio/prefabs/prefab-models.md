@@ -13,11 +13,11 @@ Prefab models don't expose materials. This means you can't view or edit them in 
 
 ## Create a prefab model
 
-1. In the **Asset View**, select **Add asset > Model > Prefab model**.
+1. In the **Asset view**, select **Add asset > Model > Prefab model**.
 
     ![Add prefab model](media/add-prefab-model.png)
 
-2. In the Property Grid (on the right by default), next to **Prefab**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select asset**).
+2. In the Property grid (on the right by default), next to **Prefab**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select asset**).
 
     ![Prefab properties](media/prefab-model-properties.png)
 
@@ -27,7 +27,7 @@ Prefab models don't expose materials. This means you can't view or edit them in 
 
 3. Select the prefab you want to create a model from and click **OK**.
 
-    Game Studio adds the prefab model to the Asset View.
+    Game Studio adds the prefab model to the Asset view.
 
     ![Prefab model added](media/prefab-model-added.png)
 

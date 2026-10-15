@@ -12,11 +12,11 @@ Currently, you can only import custom **animated** attributes. Attributes that a
 
 1. Import the animation. For instructions, see [Import animations](import-animations.md).
 
-2. In the **Asset View**, select the animation asset.
+2. In the **Asset view**, select the animation asset.
 
-    ![Assets in Asset View](media/assets-in-asset-view1.png)
+    ![Assets in Asset view](media/assets-in-asset-view1.png)
 
-2. In the **Property Grid**, select **Import custom attributes**.
+2. In the **Property grid**, select **Import custom attributes**.
 
     ![Custom attributes](media/import-custom-attributes.png)
 

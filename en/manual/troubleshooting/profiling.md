@@ -15,7 +15,7 @@ The **Game Profiler** script shows how performance costs change at runtime. This
 
 To use the script:
 
-1. In the **Asset View**, click ![Add new asset button](media/profiling-add-new-asset-button.png) and select **Scripts > Game Profiler**.
+1. In the **Asset view**, click ![Add new asset button](media/profiling-add-new-asset-button.png) and select **Scripts > Game Profiler**.
 
     ![Add Game Profiler script](media/profiling-add-game-profiler-script.png)
 
@@ -29,23 +29,23 @@ To use the script:
 
 4. Select the entity that contains the **GameProfiler**.
 
-5. In the **Property Grid** (on the right by default), enable the **Game Profiler** component.
+5. In the **Property grid** (on the right by default), enable the **Game Profiler** component.
 
     ![Enable component](media/enable-profiler-component.png)
 
-    >[!Tip]
-    >You can also enable and disable the profiler at runtime with **Left Ctrl + Left Shift + P**.
+    > [!TIP]
+    > You can also enable and disable the profiler at runtime with **Left Ctrl + Left Shift + P**.
 
 6. Run the game.
 
     The Game Profiler shows profiling results as your game runs.
 
-    >[!Note]
-    >Game Profiler disables VSync. This gives you the true profiling values, ignoring sync time.
+    > [!NOTE]
+    > Game Profiler disables VSync. This gives you the true profiling values, ignoring sync time.
 
 ### Game Profiler properties
 
-To change the Game Profiler properties, select the **GameProfiler** entity and use the **Property Grid**.
+To change the Game Profiler properties, select the **GameProfiler** entity and use the **Property grid**.
 
 ![Profiler properties](media/profiler-properties.png)
 
@@ -191,8 +191,8 @@ RenderDoc is a free MIT licensed stand-alone graphics debugger that allows quick
    ```cs
    game.GraphicsDeviceManager.DeviceCreationFlags |= DeviceCreationFlags.Debug;
    ```
-   >[!Note]
-   >If you have a `SharpDXException` of type `DXGI_ERROR_SDK_COMPONENT_MISSING`, please follow the instructions from https://docs.microsoft.com/en-us/windows/uwp/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features
+   > [!NOTE]
+   > If you have a `SharpDXException` of type `DXGI_ERROR_SDK_COMPONENT_MISSING`, please follow the instructions from https://docs.microsoft.com/en-us/windows/uwp/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features
 
    2.2. Also, make sure profiler is enabled by calling this code from any of your game script:
 

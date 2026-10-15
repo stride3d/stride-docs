@@ -22,28 +22,28 @@ To do this, you need the following assets in your project:
 * an [animation](../../animation/import-animations.md), to animate the camera (exported separately in your modeling tool)
 * an [animation script](../../animation/animation-scripts.md), to play the animation
 
-1. In the **Asset View**, select the animation asset you want to use to animate the camera.
+1. In the **Asset view**, select the animation asset you want to use to animate the camera.
 
     ![Select animation asset](media/select-animation1.png)
 
-    >[!Note]
-    >For instructions about how import animations, see [Import animations](../../animation/import-animations.md).
+    > [!NOTE]
+    > For instructions about how import animations, see [Import animations](../../animation/import-animations.md).
 
-2. In the **Property Grid**, enable **Root motion**.
+2. In the **Property grid**, enable **Root motion**.
 
     ![Enable root motion](media/enable-root-motion.png)
 
     When root motion is enabled, Stride applies the **root node animation** to the [TransformComponent](xref:Stride.Engine.TransformComponent) of the entity you add the animation to, instead of applying it to the skeleton.
 
-    >[!Note]
-    >If there is no skeleton specified in **Skeleton**, Stride always applies the animation to [TransformComponent](xref:Stride.Engine.TransformComponent), even if **root motion** is disabled.
+    > [!NOTE]
+    > If there is no skeleton specified in **Skeleton**, Stride always applies the animation to [TransformComponent](xref:Stride.Engine.TransformComponent), even if **root motion** is disabled.
 
-3. In the **Scene Editor**, select the entity that contains the camera you want to animate.
+3. In the **Scene editor**, select the entity that contains the camera you want to animate.
 
-    >[!Note]
-    >For instructions about how add cameras, see [Cameras](index.md).
+    > [!NOTE]
+    > For instructions about how add cameras, see [Cameras](index.md).
 
-4. In the **Property Grid**, click **Add component** and select **Animations**.
+4. In the **Property grid**, click **Add component** and select **Animations**.
 
     ![Select an entity](media/add-animations-component-to-camera.png)
 
@@ -73,8 +73,8 @@ To do this, you need the following assets in your project:
 
     Game Studio adds the script to the entity as a component.
 
-    >[!Note]
-    >For instructions about how to add animation scripts, see [Animation scripts](../../animation/animation-scripts.md).
+    > [!NOTE]
+    > For instructions about how to add animation scripts, see [Animation scripts](../../animation/animation-scripts.md).
 
 9. Under the script component, next to **Animations**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
@@ -105,19 +105,19 @@ To do this, you need the following assets in your project:
 > [!NOTE]
 > FOV and near or far plane animations are ignored if you use this method.
 
-1. In the **Asset View**, select the model you want to link the camera to. Next to **Skeleton**, make sure a skeleton is specified that matches the model.
+1. In the **Asset view**, select the model you want to link the camera to. Next to **Skeleton**, make sure a skeleton is specified that matches the model.
 
 2. Make sure the entity you want to attach the camera to has the model, animation clip, and animation script components needed to animate it.
 
-    >[!Note]
-    >For instructions about how to add these, see [Animation](../../animation/index.md).
+    > [!NOTE]
+    > For instructions about how to add these, see [Animation](../../animation/index.md).
 
-3. With the camera entity selected, in the **Property Grid**, click **Add component** and select **Model node link**.
+3. With the camera entity selected, in the **Property grid**, click **Add component** and select **Model node link**.
 
     ![Add component](../../particles/tutorials/media/add-model-node-link.png)
 
-    >[!Note]
-    >The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
+    > [!NOTE]
+    > The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
 
     Game Studio adds a model link component to the entity.
 
@@ -135,8 +135,8 @@ To do this, you need the following assets in your project:
 
     ![Node link](media/select-node.png)
 
-    >[!Note]
-    >The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
+    > [!NOTE]
+    > The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
 At runtime, the camera uses the animation.
 

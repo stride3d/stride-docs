@@ -33,22 +33,22 @@ You can use the following file types as textures:
 
 ## Add a texture
 
-In the **Asset View**, click **Add asset** > **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
+In the **Asset view**, click **Add asset** > **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
 
 ![Add texture](media/add-texture.png)
 
 > [!Note]
 > Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras/index.md). For more information, see [Render targets](../graphics-compositor/render-textures.md).
 
-Alternatively, drag the texture file from Explorer to the Asset View:
+Alternatively, drag the texture file from Explorer to the Asset view:
 
-![Drap and drop a resource file to the Asset View](media/create-assets-drop-resource.png)
+![Drap and drop a resource file to the Asset view](media/create-assets-drop-resource.png)
 
 Then select a texture template (**color**, **grayscale** or **normal map**):
    
 ![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
-Game Studio adds the texture to the Asset View:
+Game Studio adds the texture to the Asset view:
 
 ![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 

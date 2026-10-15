@@ -14,11 +14,11 @@ You can create different navigation groups for different kinds of entity. For ex
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2. In the **Asset View** (the bottom pane by default), select the **Game Settings** asset.
+2. In the **Asset view** (the bottom pane by default), select the **Game Settings** asset.
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3. In the **Property Grid** (the right-hand pane by default), expand **Navigation Settings**.
+3. In the **Property grid** (the right-hand pane by default), expand **Navigation Settings**.
 
    ![Game settings](media/navigation-settings.png)
 

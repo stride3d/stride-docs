@@ -5,7 +5,7 @@
 
 This page explains how to add support for the Oculus Rift and Vive devices to your game. Stride doesn't support other VR devices yet.
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -15,7 +15,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), expand **VR Settings**.
+3. In the **Property grid** (on the right by default), expand **VR Settings**.
 
     ![VR settings](media/vr-settings.png)
 
@@ -33,7 +33,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     |--------| --------
     | Oculus | Supports Oculus Rift devices (best support for Oculus Rift) 
     | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
-    | Dummy  | Displays the game on the screen with two cameras (one per eye), instead of in the VR device. This is mainly useful for development. To display the dummy view in the Game Studio Scene Editor, make sure the editor is connected to the forward renderer.
+    | Dummy  | Displays the game on the screen with two cameras (one per eye), instead of in the VR device. This is mainly useful for development. To display the dummy view in the Game Studio Scene editor, make sure the editor is connected to the forward renderer.
 
 6. Repeat steps 4 and 5 to add as many APIs as you need.
 
@@ -41,14 +41,13 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
     To change the order, change the selected VR device in each item.
 
-    >[!Tip]
-    >Although the OpenVR API supports both Vive and Oculus Rift devices, the Oculus API provides better support for Oculus Rift. For this reason, we recommend the following list order for most situations:
+    > [!TIP]
+    > Although the OpenVR API supports both Vive and Oculus Rift devices, the Oculus API provides better support for Oculus Rift. For this reason, we recommend the following list order for most situations:
     >
-    >* Item 0: Oculus
+    > * Item 0: Oculus
+    > * Item 1: OpenVR
     >
-    >* Item 1: OpenVR
-    >
-    >This means your game uses the Oculus API if an Oculus Rift device is connected, and the OpenVR API if another device (eg a Vive) is connected.
+    > This means your game uses the Oculus API if an Oculus Rift device is connected, and the OpenVR API if another device (eg a Vive) is connected.
 
 8. Enable **VRRendererSettings**.
 

@@ -7,12 +7,12 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 
 ## Create a script in Game Studio
 
-1. In the **Asset View**, click **Add asset > Scripts** and select a script type.
+1. In the **Asset view**, click **Add asset > Scripts** and select a script type.
 
 	![Select script type window](media/create-a-script-script-asset-selection.png)
 
-	>[!Note]
-	>For information about different types of script, see [Types of script](types-of-script/index.md).
+	> [!NOTE]
+	> For information about different types of script, see [Types of script](types-of-script/index.md).
 
 	The **New script** dialog opens.
 
@@ -22,14 +22,14 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 
 3. To use the script, you need to save it. By default, Game Studio prompts you to save the script now.
 
-After you save the script, you can see it in the **Asset View**.
+After you save the script, you can see it in the **Asset view**.
 
 > [!NOTE]
 > Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
   
 You can also see the new script in Visual Studio.
 
-![New script on Asset View tab](media/create-a-script-new-script-asset-view.png)
+![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
 
 > [!Tip]
 > To open your solution in Visual Studio from Game Studio, click the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
@@ -118,9 +118,9 @@ namespace MyGame
 
 	Click **Yes**.
 
-You can see the script in the **Asset View**.
+You can see the script in the **Asset view**.
 
-![New script on Asset View tab](media/create-a-script-new-script-asset-view.png)
+![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
 
 > [!NOTE]
 >  Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).

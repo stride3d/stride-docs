@@ -12,13 +12,13 @@
 </video>
 </p>
 
-The screenshot below shows a [point light](point-lights.md) surrounded by light probes in the Scene Editor. The probes form 3D areas (shown in the Scene Editor by the yellow wireframe connecting the probes).
+The screenshot below shows a [point light](point-lights.md) surrounded by light probes in the Scene editor. The probes form 3D areas (shown in the Scene editor by the yellow wireframe connecting the probes).
 
 ![Cornell box](media/light-probes-cornell.png)
 
 Stride colors pixels within a light probe area to simulate the effect of light bouncing from nearby surfaces. To find a color for a given pixel, Stride interpolates from the lighting captured by the four surrounding light probes.
 
-For example, in the screenshot below, notice how the red of the wall is reflected on the other objects. In the Scene Editor, this is also visible on the surface of the light probes themselves.
+For example, in the screenshot below, notice how the red of the wall is reflected on the other objects. In the Scene editor, this is also visible on the surface of the light probes themselves.
 
 ![Light probes — more reflection](media/light-probes-illumination.png)
 
@@ -28,7 +28,7 @@ Light probes affect all objects in the area they cover, including static and dyn
 
 Stride enables light probes by default in new projects. To make sure light probes are enabled:
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -38,7 +38,7 @@ Stride enables light probes by default in new projects. To make sure light probe
 
 2. Select the **forward renderer** node.
 
-3. In the **Property Grid** (on the right by default), make sure the **Light probes** checkbox is selected.
+3. In the **Property grid** (on the right by default), make sure the **Light probes** checkbox is selected.
 
     ![Enable light probes](media/enable-light-probes.png)
 
@@ -50,11 +50,11 @@ Right-click the scene or Entity Tree and select **Light > Light probe**.
 
 ![Add light probe](media/add-light-probe.png)
 
-Alternatively, create an empty entity and add a **Light probe component** in the Property Grid.
+Alternatively, create an empty entity and add a **Light probe component** in the Property grid.
 
 ![Add light probe component](media/add-light-probe-component.png)
 
-Light probes appear as spheres in the Scene Editor. Before you capture a light bounce for the first time, they have a completely black surface.
+Light probes appear as spheres in the Scene editor. Before you capture a light bounce for the first time, they have a completely black surface.
 
 ![Light](media/light-probes-black.jpg)
 
@@ -81,7 +81,7 @@ A typical method is to place light probes in a grid across your scene covering a
 
 ## 4. Capture lighting
 
-1. In the Scene Editor toolbar, click the **lighting options** button to open the lighting options menu.
+1. In the Scene editor toolbar, click the **lighting options** button to open the lighting options menu.
 
     ![Lighting options](media/lighting-options-menu.png)
 
@@ -91,7 +91,7 @@ A typical method is to place light probes in a grid across your scene covering a
 
 3. To capture the lighting, click **Compute**.
 
-    You can see the lighting on the surface of the light probes in the Scene Editor.
+    You can see the lighting on the surface of the light probes in the Scene editor.
 
     ![Light probe surface](media/light-probes-illumination-on-surface.png)
 
@@ -101,15 +101,15 @@ To reset the light probes, in the **lighting options** menu, click **Reset**. Th
 
 ![Reset light probes](media/reset-light-probes.png)
 
-## Show and hide light probes in the Scene Editor
+## Show and hide light probes in the Scene editor
 
-Under the **gizmo options** in the Scene Editor toolbar, use the **Light probes** checkbox.
+Under the **gizmo options** in the Scene editor toolbar, use the **Light probes** checkbox.
 
 ![Hide light probes](media/light-probes-checkbox.png)
 
-## Show and hide light probe volumes in the Scene Editor
+## Show and hide light probe volumes in the Scene editor
 
-Under the **gizmo options** in the Scene Editor toolbar, use the **Light probe volumes** checkbox.
+Under the **gizmo options** in the Scene editor toolbar, use the **Light probe volumes** checkbox.
 
 ![Hide light probe volumes](media/light-probe-volumes-checkbox.png)
 

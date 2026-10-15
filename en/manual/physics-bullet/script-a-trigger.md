@@ -20,13 +20,13 @@ For this tutorial, we'll set the restitution of both the ground and the sphere t
 
 1. Select the **Sphere** entity.
 
-2. In the **Property Grid**, under **Rigidbody**, set the **Restitution** to *0.9*.
+2. In the **Property grid**, under **Rigidbody**, set the **Restitution** to *0.9*.
 
     ![Set restitution for a sphere](media/physics-tutorials-rigidbody-restitution.png)
 
 3. Select the **Ground** entity.
 
-4. In the **Property Grid**, under **Static Collider**, set the **Restitution** to *0.9*.
+4. In the **Property grid**, under **Static Collider**, set the **Restitution** to *0.9*.
 
     ![Set restitution for the ground](media/physics-tutorials-static-collider-restitution.png)
 
@@ -34,7 +34,7 @@ For this tutorial, we'll set the restitution of both the ground and the sphere t
 
 Now we'll add a trigger between the ball and the ground, so the ball passes through it.
 
-1. In the **Scene Editor**, click the white plus button (**Create new entity**) and select **Empty entity**.
+1. In the **Scene editor**, click the white plus button (**Create new entity**) and select **Empty entity**.
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 
@@ -42,11 +42,11 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
 2. This entity will be our trigger, so rename it *Trigger* to make it easy to identify.
 
-3. Since we don't need the trigger to move, we'll make it a static collider. In the **Property Grid**, click **Add component** and select **Static Collider**.
+3. Since we don't need the trigger to move, we'll make it a static collider. In the **Property grid**, click **Add component** and select **Static Collider**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
-4. In the **Property Grid**, expand the **Static Collider component** to view its properties.
+4. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
 5. Select the **Is Trigger** checkbox.
 
@@ -62,7 +62,7 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
     ![Added trigger](media/physics-tutorials-added-trigger-area.png)
 
-7. Let's make the trigger a larger area. In the **Property Grid**, under the **Transform** component properties, set the **scale** to: *X:2, Y:2, Z:2*
+7. Let's make the trigger a larger area. In the **Property grid**, under the **Transform** component properties, set the **scale** to: *X:2, Y:2, Z:2*
 
     ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
 
@@ -74,17 +74,17 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
 Right now, the trigger is invisible at runtime. To better show how the trigger works, we'll make it a transparent box. This has no effect on how the trigger works; it just means we can easily see where it is at runtime.
 
-1. Create a new procedural model asset. To do this, in the **Asset View**, click **Add asset**, and select **Models > Cube**.
+1. Create a new procedural model asset. To do this, in the **Asset view**, click **Add asset**, and select **Models > Cube**.
 
     ![Add a model asset](media/physics-tutorials-create-a-trigger-add-a-model.png)
 
-2. Create a new empty material asset. To do this, in the **Asset View**, click **Add asset**, and select **Materials > Material**.
+2. Create a new empty material asset. To do this, in the **Asset view**, click **Add asset**, and select **Materials > Material**.
 
     ![Add a material asset](media/physics-tutorials-create-a-trigger-add-a-material-asset.png)
 
 3. Let's rename the material to make it easy to identify. To do this, right-click, select **Rename**, and type a new name (eg *Transparent*).
 
-4. Select the **Trigger** entity. In the **Property Grid**, click **Add component** and select **Model**.
+4. Select the **Trigger** entity. In the **Property grid**, click **Add component** and select **Model**.
 
     ![Add a model component](media/physics-tutorials-create-a-trigger-add-a-model-component.png)
 
@@ -98,7 +98,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7. In the **Property Grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+7. In the **Property grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
@@ -106,11 +106,11 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select material](media/physics-tutorials-select-transparent-material.png)
 
-9. In the **Asset View**, select the **Transparent** material asset.
+9. In the **Asset view**, select the **Transparent** material asset.
 
-    ![Select material in Asset View](media/physics-tutorials-select-material-asset.png)
+    ![Select material in Asset view](media/physics-tutorials-select-material-asset.png)
 
-10. In the **Property Grid**, under **Misc > Transparency**, select **Blend**.
+10. In the **Property grid**, under **Misc > Transparency**, select **Blend**.
 
     ![Select Blend](media/physics-tutorials-set-blend.png)
 
@@ -124,7 +124,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
 We need to position the trigger between the ground and the sphere, so the ball falls through it.
     
-In the **Property Grid**, under **Transform**, set the **Position** to: *X:0, Y:3, Z:0*
+In the **Property grid**, under **Transform**, set the **Position** to: *X:0, Y:3, Z:0*
 
 Now the trigger entity is between the ground and the sphere:
 
@@ -145,7 +145,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 > [!NOTE]
 > For more information about scripts, see [Scripts](../scripts/index.md).
 
-1. In the **Asset View**, click **Add asset** and select **Scripts** > **Async Script**.
+1. In the **Asset view**, click **Add asset** and select **Scripts** > **Async Script**.
 
     ![Use a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
@@ -204,7 +204,7 @@ Finally, let's add this script to the trigger entity as a component.
 
 1. In **Game Studio**, select the **Trigger** entity.
 
-2. In the **Property Grid**, click **Add component** and select the **Trigger** script.
+2. In the **Property grid**, click **Add component** and select the **Trigger** script.
 
     ![Add script component to entity](media/physics-tutorials-create-a-trigger-add-script-component-to-entity.png)
 

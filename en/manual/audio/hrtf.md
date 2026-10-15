@@ -25,11 +25,11 @@ To use HRTF, first enable it globally in the **Game Settings** asset, then enabl
 
     ![Select Assets folder asset](../game-studio/media/select-asset-folder.png)
 
-2. In the **Asset View** (the bottom pane by default), select the **GameSettings** asset.
+2. In the **Asset view** (the bottom pane by default), select the **GameSettings** asset.
 
     ![Select Game Settings asset](../game-studio/media/select-game-settings-asset.png)
 
-3. In the **Property Grid** (the right-hand pane by default), under **Audio settings**, select **HRTF support**.
+3. In the **Property grid** (the right-hand pane by default), under **Audio settings**, select **HRTF support**.
 
     ![Audio settings](../game-studio/media/audio-settings.png)
 
@@ -39,14 +39,14 @@ For more information about the Game Settings asset, see [Game settings](../game-
 
 1. Select the entity with the [audio emitter](audio-emitters.md) that contains the sound you want to enable for HRTF.
 
-2. In the **Property Grid** (on the right by default), under **Audio emitter**, select **Use HRTF**.
+2. In the **Property grid** (on the right by default), under **Audio emitter**, select **Use HRTF**.
 
     ![Audio emitter properties](media/audio-emitter-properties.png)
 
     Sounds emitted from this entity will use HRTF.
 
-    >[!Note]
-    >The HRTF option applies to every sound emitted from this audio emitter.
+    > [!NOTE]
+    > The HRTF option applies to every sound emitted from this audio emitter.
     
 For more information about audio emitters, including the properties you can change, see [Audio emitters](audio-emitters.md).
 

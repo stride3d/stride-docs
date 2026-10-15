@@ -9,7 +9,7 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
 ## Add an overlay
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -21,7 +21,7 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), expand **VR Settings**.
+3. In the **Property grid** (on the right by default), expand **VR Settings**.
 
     ![VR settings](media/vr-settings.png)
 

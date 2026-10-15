@@ -21,7 +21,7 @@ Stride provides several predefined post effects. You can also [extend the system
 
 You add and edit post effects in the [graphics compositor](../graphics-compositor/index.md).
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -35,7 +35,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
     > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **Property Grid** (on the right by default), enable the post effects you want to use and configure their properties.
+3. In the **Property grid** (on the right by default), enable the post effects you want to use and configure their properties.
 
     ![Post effect properties](media/post-effect-properties.png)
 
