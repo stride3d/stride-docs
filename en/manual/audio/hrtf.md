@@ -13,7 +13,7 @@ This video demonstrates the effect of HRTF audio:
 </p>
 
 > [!NOTE]
-> For now, you can only use HRTF on Windows 10.
+> HRTF may not be available on all platforms.
 
 ## Enable HRTF
 
