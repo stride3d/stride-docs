@@ -1,40 +1,63 @@
 # Templates
 
-Shader templating is available in SDSL. Unlike many templating systems, sdsl requires strong typed templates. The available types are:
+Shader templates let you create variations of the same shader with different base values.
 
-- value types from HLSL (float, int, float2, float3, float4)
-- 2D textures
-- sampler states
-- semantics (used to replace semantics on variables)
-- link types (used to replace link annotations)
+```sdsl
+shader Example<float Speed> : ComputeColor
+{
+    override float4 Compute()
+    {
+        return float4(float3(1 * Speed * Global.Time), 1);
+    }
+};
+```
 
-An instantiated shader behaves the same way as any other shader. The value, texture and sampler template parameters are accessible like any other variable. However, it's impossible to modify their value; attempting to do so results in a compilation error. If a template variable is incorrectly used (eg using a sampler as a semantic), it should result in a compilation error. However, the behavior is officially unknown.
+## Difference between templates and parameters
 
-**Code:** Templating
+The most important difference is that shaders created from different template values are treated distinctly from each other, meaning that they have to be individually compiled and loaded. Think of it as having multiple `.sdsl` files containing almost identical code, aside from a few values.
 
-```cs
+TODO: VISUALIZATION
+
+On top of that, there are other differences:
+
+| Capability | Template values | Parameters |
+| :-- | :-: | :-: |
+| Can be set in Property Grid | Yes | No |
+| Can be changed at runtime | No | Yes |
+| Can be used to set semantics | Yes | No |
+| Can be used to set links | Yes | No |
+
+## What can be a template
+
+* HLSL types (bool, int, float3, etc.)
+* 2D textures
+* sampler states
+* Semantics
+* Link types
+
+## Example
+
+```sdsl
 shader TemplateShader<float speed, Texture2D myTexture, SamplerState mySampler, Semantic mySemantic, LinkType myLink>
 {
     [Color]
-    [Link("myLink")]
+    [Link(myLink)]
     float4 myColor;
- 
+    
     stream float2 texcoord : mySemantic;
- 
+    
     float4 GetValue()
     {
         return speed * myColor * myTexture.Sample(mySampler, streams.texcoord);
     }
 };
- 
-// To instantiate the shader, use:
-TemplateShader<1.0f, Texturing.Texture0, Texturing.Sampler0, TEXCOORD0, MyColorLink>
 ```
 
-## See also
+This shader could then be used in a `.sdfx` file like so:
 
-* [Effect language](../effect-language.md)
-* [Shading language index](index.md)
-    - [Shader classes, mixins, and inheritance](shader-classes-mixins-and-inheritance.md)
-    - [Composition](composition.md)
-    - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
+```sdsl
+effect Example
+{
+    mixin TemplateShader<1.0f, Texturing.Texture0, Texturing.Sampler0, TEXCOORD0, MyColorLink>
+}
+```
