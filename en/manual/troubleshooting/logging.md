@@ -7,8 +7,8 @@ You can **log** information about your game while it runs using [Log](xref:Strid
 
 Unlike [profiling](profiling.md), which retrieves information automatically, it's up to you to create your own log messages and define when they're triggered. For example, you can create a log message that triggers when a character performs a certain action. This is useful to investigate how your game is performing.
 
->[!Note]
->Logging is disabled when you build the game in release mode.
+> [!NOTE]
+> Logging is disabled when you build the game in release mode.
 
 When you use logging and run your game in debug mode, Stride opens a console in a second window to display logging information. The messages are color-coded by level. 
 The name of the module (such as the script containing the log message) is displayed in brackets. This is followed by the log level (eg **Warning**, **Error**, etc), then the log message.
@@ -56,8 +56,8 @@ You can set a minimum log level to display. For example, if you only want to see
 Log.ActivateLog(LogMessageType.Warning);
 ```
 
->[!Note]
->This isn't a global setting. The log level you set only applies to the script you set it in.
+> [!NOTE]
+> This isn't a global setting. The log level you set only applies to the script you set it in.
 
 ### Change the log level at runtime
 

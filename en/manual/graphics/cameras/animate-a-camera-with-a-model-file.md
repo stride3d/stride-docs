@@ -5,9 +5,10 @@
 
 Like other entities, you can [animate](../../animation/index.md) cameras using animations imported from 3D model files such as `.3ds`, `.fbx`, and `.obj`.
 
->[!Note]
->To animate a camera using a model file, you first need to bake the animation using your modeling tool (eg Maya, 3ds Max or Blender).
->Stride doesn't support cameras animated using target cameras.
+> [!NOTE]
+> To animate a camera using a model file, you first need to bake the animation using your modeling tool (eg Maya, 3ds Max or Blender).
+> 
+> Stride doesn't support cameras animated using target cameras.
 
 If the camera moves independently, the simplest method is to export the camera animation as a separate file, enable the **root motion** option on the animation, then add the camera, animation, and animation script to the same entity. If the animations include FOV or near or far plane animations, the Stride camera updates accordingly. With this method, you don't need a model or a skeleton.
 
@@ -101,8 +102,8 @@ To do this, you need the following assets in your project:
 * an [animation](../../animation/index.md), to animate the model
 * an [animation script](../../animation/animation-scripts.md), to play the animation
 
->[!Note]
->FOV and near or far plane animations are ignored if you use this method.
+> [!NOTE]
+> FOV and near or far plane animations are ignored if you use this method.
 
 1. In the **Asset View**, select the model you want to link the camera to. Next to **Skeleton**, make sure a skeleton is specified that matches the model.
 

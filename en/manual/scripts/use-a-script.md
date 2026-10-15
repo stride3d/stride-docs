@@ -53,8 +53,8 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 
     Game Studio adds the script to the entity.
 
->[!Note]
->You can customize where scripts appear in the dropdown using the `ComponentCategoryAttribute`:
+> [!NOTE]
+> You can customize where scripts appear in the dropdown using the `ComponentCategoryAttribute`:
 
 ```cs
 [ComponentCategory("My Startup Scripts")]

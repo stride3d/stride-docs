@@ -80,8 +80,8 @@ The metal flakes in the metal flake normal map included in the Stride assets pac
 
     ![Use random texture coordinates](media/use-random-texture-coordinates.png)
 
->[!Note]
->The **Use random texture coordinates** option is costly, so we don't recommend you use it for mobile platforms.
+> [!NOTE]
+> The **Use random texture coordinates** option is costly, so we don't recommend you use it for mobile platforms.
 
 Alternatively, use a normal map with a higher density of smaller metal flakes.
 

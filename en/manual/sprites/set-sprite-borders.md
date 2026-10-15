@@ -38,11 +38,11 @@
     </video>
 </p>
 
->[!Note]
->By default, the sprite borders match the sprite texture region.
+> [!NOTE]
+> By default, the sprite borders match the sprite texture region.
 
->[!TIP]
->You can zoom in and out using **Ctrl + mousewheel** to make precise selections.
+> [!TIP]
+> You can zoom in and out using **Ctrl + mousewheel** to make precise selections.
 
 > [!TIP]
 >
@@ -56,8 +56,8 @@ By default, sprite borders move as you resize the texture region. To stop this f
 
 ![Lock icon](media/lock-icon.png)
 
->[!Note]
->Sprite borders always stay inside the texture region.
+> [!NOTE]
+> Sprite borders always stay inside the texture region.
 
 ## See also
 

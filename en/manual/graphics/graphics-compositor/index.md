@@ -3,8 +3,8 @@
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
 
->[!Note]
->This page requires a basic understanding of graphics pipelines.
+> [!NOTE]
+> This page requires a basic understanding of graphics pipelines.
 
 The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
@@ -41,8 +41,8 @@ You can also change the graphics compositor at runtime in a script.
 
 You customize the graphics compositor in the **graphics compositor editor**.
 
->[!Note]
->The graphics compositor editor is an experimental feature.
+> [!NOTE]
+> The graphics compositor editor is an experimental feature.
 
 In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 

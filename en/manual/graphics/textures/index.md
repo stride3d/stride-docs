@@ -98,9 +98,9 @@ For more information about normal maps, see the [Normal maps](normal-maps.md) pa
 
 Grayscale texture use only the R channel of the image (finalRGBA = originalRRRR).
 
->[!Note]
->If you add a texture to a scene (as a sprite component), and set the texture type to grayscale, it appears red, not monochrome. This is because the image uses the R (red) channel.
-
+> [!NOTE]
+> If you add a texture to a scene (as a sprite component), and set the texture type to grayscale, it appears red, not monochrome. This is because the image uses the R (red) channel.
+>
 > To make the channel monochrome, in the **Sprite** component properties, set the **Type** as **Grayscale**. For more information about the sprite component properties, see [Use sprites](../../sprites/use-sprites.md).
 
 You can use grayscale textures to provide values in [material maps](../materials/material-maps.md). For example, you can use a texture as a **blend map** to blend two material layers:

@@ -76,8 +76,8 @@ A typical method is to place light probes in a grid across your scene covering a
 
 ![Light probes in the editor](media/light-probes-in-editor.jpg)
 
->[!Tip]
->You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold **Ctrl**, and move it with the mouse.
+> [!TIP]
+> You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold **Ctrl**, and move it with the mouse.
 
 ## 4. Capture lighting
 

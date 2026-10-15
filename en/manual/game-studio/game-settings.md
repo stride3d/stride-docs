@@ -66,8 +66,8 @@ For more details about audio, see [Audio](../audio/index.md).
 
 The **editor** settings control how Game Studio displays entities in the Scene Editor. These settings have no effect on your game.
 
->[!Note]
->How Game Studio displays entities is also affected by the **Color space** setting under **Rendering**.
+> [!NOTE]
+> How Game Studio displays entities is also affected by the **Color space** setting under **Rendering**.
 
 ![Editor settings](media/editor-settings.png)
 
@@ -141,8 +141,8 @@ For more details, see [Navigation](../navigation/index.md).
 | Resource timeout (ms)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
 | Memory budget (in MB) | When the memory used by streaming exceeds this budget, Stride unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
->[!Note]
->Currently, only textures can be streamed.
+> [!NOTE]
+> Currently, only textures can be streamed.
 
 For more details, see [Streaming](../graphics/textures/streaming.md).
 

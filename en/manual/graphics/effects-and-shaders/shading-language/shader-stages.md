@@ -102,8 +102,8 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 
 `Input` and `Input2` both behave like streams.
 
->[!Note]
->Don't forget to assign `output` to `streams` at the end of your stage.
+> [!NOTE]
+> Don't forget to assign `output` to `streams` at the end of your stage.
 
 ## Compute shader
 

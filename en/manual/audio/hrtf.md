@@ -12,8 +12,8 @@ This video demonstrates the effect of HRTF audio:
 </video>
 </p>
 
->[!Note]
->For now, you can only use HRTF on Windows 10.
+> [!NOTE]
+> For now, you can only use HRTF on Windows 10.
 
 ## Enable HRTF
 

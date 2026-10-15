@@ -4,8 +4,8 @@
 
 ![Properties](media/anti-aliasing-closeup-comparison.png)
 
->[!Note]
->Currently, the anti-aliasing post-effect doesn't work correctly on Android devices.
+> [!NOTE]
+> Currently, the anti-aliasing post-effect doesn't work correctly on Android devices.
 
 Stride also includes **MSAA** (multisample anti-aliasing), but this isn't a post effect. You can enable MSAA in the **forward renderer** properties.
 

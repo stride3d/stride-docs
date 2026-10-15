@@ -15,8 +15,8 @@ By default, the Asset Preview is in the bottom-right under the **Asset Preview**
 
 ![Asset Preview tab](media/animations-import-animations-asset-preview-tab.png)
 
->[!Tip]
->To rotate the animation, click and drag the mouse.  
+> [!TIP]
+> To rotate the animation, click and drag the mouse.  
 
 The animation preview uses the model selected in the **preview model** in the **animation asset properties**.
 

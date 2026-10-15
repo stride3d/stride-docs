@@ -25,9 +25,9 @@ myParentScene.Children.Add(myChildScene1);
 myChildScene1.Add(myChildScene2);
 ```
 
->[!Note]
->If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset View**).
-
+> [!NOTE]
+> If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset View**).
+> 
 >![Scenes included in root](media/scenes-included-in-root.png)
 
 >To include a scene in the build, in the **Asset View**, right-click the scene asset and select **Include in build as root asset**.
@@ -57,8 +57,8 @@ Content.Unload(childScene);
 
 Stride also includes a scene streaming script that uses a [trigger](../physics/triggers.md) to load scenes. 
 
->[!Note]
->The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
+> [!NOTE]
+> The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
 
 ### Add a scene streaming script
 

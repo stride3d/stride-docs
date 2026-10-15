@@ -10,8 +10,8 @@
 </video>
 </p>
 
->[!Note]
->Stride supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Stride doesn't have to convert them.
+> [!NOTE]
+> Stride supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Stride doesn't have to convert them.
 
 ## 1. Add a video asset
 

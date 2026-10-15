@@ -125,7 +125,7 @@ public class AnimationLight : StartupScript
 }
 ```
 
->[!NOTE]
+> [!NOTE]
 > If you need to animate a bone procedurally you must use the `NodeTransformations` field of the `Skeleton`.
 
 ## See also

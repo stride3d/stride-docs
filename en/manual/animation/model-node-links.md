@@ -3,8 +3,8 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Artist</span>
 
->[!Note]
->In some versions of Stride, **Model node links** are called **Bone links**.
+> [!NOTE]
+> In some versions of Stride, **Model node links** are called **Bone links**.
 
 The **model node link** component attaches an entity to a node of a skeleton on another entity.
 

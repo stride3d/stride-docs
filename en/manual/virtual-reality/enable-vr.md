@@ -56,8 +56,8 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
 Your game is now ready to use VR.
 
->[!Note]
->After you change APIs, you need to reload the project (**File > Reload project**) for the change to take effect at runtime.
+> [!NOTE]
+> After you change APIs, you need to reload the project (**File > Reload project**) for the change to take effect at runtime.
 
 ## VR properties
 
@@ -72,8 +72,8 @@ As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (
 
 ![MSAA](media/MSAA.png)
 
->[!Note]
->MSAA isn't supported for Direct3D 11 or lower.
+> [!NOTE]
+> MSAA isn't supported for Direct3D 11 or lower.
 
 ## Disable screen synchronization
 

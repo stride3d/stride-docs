@@ -24,7 +24,7 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 
 After you save the script, you can see it in the **Asset View**.
 
->[!Note]
+> [!NOTE]
 > Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
   
 You can also see the new script in Visual Studio.
@@ -122,8 +122,8 @@ You can see the script in the **Asset View**.
 
 ![New script on Asset View tab](media/create-a-script-new-script-asset-view.png)
 
->[!Note]
-> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
+> [!NOTE]
+>  Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
 
 ## See also
 

@@ -28,8 +28,8 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 
 ![Public property appears in the Property Grid](media/scripts-in-stride-change-value-public-property.png)
 
->[!Note]
->As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
+> [!NOTE]
+> As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
 
 For example, the following code will create problems, as it tries to access `Entity.Components`, which is only available at runtime:
 

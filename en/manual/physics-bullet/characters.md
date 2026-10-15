@@ -15,7 +15,7 @@
 
     ![Add character component](media/add-character-component.png)
 
->[!Note]
+> [!NOTE]
 > For the character collider to interact with other physics objects, you also need to set a  collider shape in the collider component properties. The capsule shape is appropriate for most character colliders. For more information, see [collider shapes](collider-shapes.md).
 
 ## Component properties

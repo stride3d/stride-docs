@@ -96,8 +96,8 @@ In the **GPU** and **CPU** modes, the profiler displays information about the pa
 
 ![Profiler columns](media/profiler-columns.png)
 
->[!Note]
->Each value describes the events per frame since the last profiler refresh.
+> [!NOTE]
+> Each value describes the events per frame since the last profiler refresh.
 
 Column  | Description
 --------|--------

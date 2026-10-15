@@ -31,10 +31,10 @@ You can set whether the sprite sheet contains gameplay sprites (**Sprite2D**) or
 
 2. In the **Property Grid** on the right, in the **Source** field, specify the sprite sheet that contains the sprite.
 
->[!Tip]
->If you want to create a new sprite from the same sprite sheet as other sprites in the list, it's often faster to duplicate an existing sprite. To duplicate a sprite, select it and click **Duplicate selected sprites** or press **Ctrl + D**.
+> [!TIP]
+> If you want to create a new sprite from the same sprite sheet as other sprites in the list, it's often faster to duplicate an existing sprite. To duplicate a sprite, select it and click **Duplicate selected sprites** or press **Ctrl + D**.
 >
->![Duplicate selected sprites](media/duplicate-selected-sprites.png)
+> ![Duplicate selected sprites](media/duplicate-selected-sprites.png)
 
 ### Sprite list
 

@@ -30,7 +30,7 @@ After you create a [UI page](ui-pages.md), add it to the scene as a component on
 
 > [!Tip]
 > To stop the UI obscuring the rest of the scene in the editor, disable the **UI component** in the Property Grid.
-
+>
 > ![Disable UI component](media/disable-UI-component.png)
 
 > Remember to enable the component again before you run the game. If you don't, Stride doesn't display the UI.

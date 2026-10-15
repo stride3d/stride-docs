@@ -5,8 +5,8 @@
 
 In this tutorial, we'll create a [trigger](triggers.md) that doubles the size of a ball when the ball passes through it.
 
->[!Note]
->The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
+> [!NOTE]
+> The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
 
 ## 1. Create a bouncing ball
 
@@ -106,8 +106,8 @@ If we run the project now (**F5**), the ball bounces off the trigger, but nothin
 
 Let's write a script to change the size of the ball when it enters the trigger.
 
->[!Note]
->For more information about scripts, see [Scripts](../scripts/index.md).
+> [!NOTE]
+> For more information about scripts, see [Scripts](../scripts/index.md).
 
 1. In the **Asset View**, click **Add asset** and select **Scripts** > **Sync Script**.
 

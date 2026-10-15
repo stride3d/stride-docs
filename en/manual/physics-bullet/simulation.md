@@ -8,8 +8,8 @@
 Stride's physics are controlled by the [Simulation](xref:Stride.Physics.Simulation) class.
 You can change how Stride initializes the [simulation](xref:Stride.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:Stride.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.
 
->[!Note]
->Your scene must have at least one [Collider](colliders.md) in order for Stride to initialize the [Simulation](xref:Stride.Physics.Simulation) instance.
+> [!NOTE]
+> Your scene must have at least one [Collider](colliders.md) in order for Stride to initialize the [Simulation](xref:Stride.Physics.Simulation) instance.
 
 ![Physics Settings](media/simulation-physics-settings.png)
 

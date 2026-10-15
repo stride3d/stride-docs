@@ -14,7 +14,7 @@ Game Studio creates an empty prefab asset with the default name *Prefab*. Double
 You can also create a prefab from an existing entity or entities.
 
 1. In the **Scene Editor**, select the entity or entities you want to create a prefab from.
->[!Tip]
+> [!TIP]
 > Hold Ctrl to select multiple items.
 
 2. Right-click the selection and select **Create prefab from selection**:
@@ -25,8 +25,8 @@ Game Studio creates a prefab asset from the entity or entities you selected. You
 
 ![Prefab in Asset View](media/prefab-asset.png)
 
->[!Note]
->After you create a prefab from a selection, the original selection itself **becomes a prefab**.
+> [!NOTE]
+> After you create a prefab from a selection, the original selection itself **becomes a prefab**.
 
 ### Create a prefab from an existing modified prefab
 

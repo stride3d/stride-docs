@@ -32,8 +32,8 @@ Your VR device displays the scene preview. To display the scene on your monitor 
 
 If your editor and game nodes are connected to the same forward renderer, you might want to create a separate renderer dedicated to the editor. This lets you easily switch between previewing the scene in your VR device and on your monitor.
 
->[!Note]
->If your editor and game nodes already use separate renderers (as in the VR sample project), you don't need to follow these instructions.
+> [!NOTE]
+> If your editor and game nodes already use separate renderers (as in the VR sample project), you don't need to follow these instructions.
 
 1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -63,7 +63,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 
     > [!Tip]
     > You can right-click a property to copy or paste it.
-
+    >
     > ![Copy-paste properties](media/copy-paste-properties.png)
 
     > [!Note]

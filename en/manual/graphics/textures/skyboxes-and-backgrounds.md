@@ -42,8 +42,8 @@ You can capture a cubemap from a position in your scene.
 
 4. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
 
->[!Tip]
->We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../../files-and-folders/version-control.md).
+> [!TIP]
+> We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../../files-and-folders/version-control.md).
 
 Game Studio creates a cubemap `.dds` file in the location you specified.
 
@@ -57,8 +57,8 @@ Instead of using a cubemap, you can use a **360° panoramic texture** as a 3D ba
 
 *Image courtesy of [Texturify](http://texturify.com)*
 
->[!Note]
->Remember that [post effects](../post-effects/index.md) affect the appearance of your skybox. If it doesn't look how you expect, try changing your post effect settings.
+> [!NOTE]
+> Remember that [post effects](../post-effects/index.md) affect the appearance of your skybox. If it doesn't look how you expect, try changing your post effect settings.
 
 ## Add a cubemap or 360° panoramic texture to the project
 

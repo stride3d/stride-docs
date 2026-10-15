@@ -5,8 +5,8 @@
 
 You can print debug text at runtime with [DebugText](xref:Stride.Engine.ScriptComponent.DebugText). For example, you can use this to display a message when a problem occurs.
 
->[!Note]
->Debug text is automatically disabled when you build the game in release mode.
+> [!NOTE]
+> Debug text is automatically disabled when you build the game in release mode.
 
 In the `Update` method of your script, add:
 

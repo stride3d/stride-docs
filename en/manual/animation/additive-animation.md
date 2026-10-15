@@ -21,8 +21,8 @@ Stride calculates the difference between the source and reference clips to creat
 
 We can use use the difference clip to blend the source and reference animations. We can also use the same difference clip to blend the source animation with **other** animations. If the animation you add it to is sufficiently similar to the original reference clip, then the animations blend effectively. For example, you could use it to add the reload animation to any animation that doesn't use the arms, such as crouching.
 
->[!Note]
->Additive animations should use the same skinned mesh and skeleton.
+> [!NOTE]
+> Additive animations should use the same skinned mesh and skeleton.
 
 ### Create a difference clip
 

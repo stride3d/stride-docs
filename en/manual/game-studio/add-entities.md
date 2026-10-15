@@ -23,9 +23,9 @@ After you create a scene, you need to add entities to your scene to build your l
 
     ![New Entity in MainScen](media/add-entities-to-a-scene-empty-entity.png)
 
->[!Tip]
->The **active scene** is the scene entities are added to. To set the active scene, **Entity Tree** (left by default), right-click the scene and select **active scene**.
-
+> [!TIP]
+> The **active scene** is the scene entities are added to. To set the active scene, **Entity Tree** (left by default), right-click the scene and select **active scene**.
+>
 > ![Set active scene](media/set-active-scene.png)
 
 > The active scene has no effect on runtime. 

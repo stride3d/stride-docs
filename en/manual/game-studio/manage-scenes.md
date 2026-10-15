@@ -73,8 +73,8 @@ To lock or unlock a scene or entity, in the Entity Tree, click the **padlock** i
 
 ![Padlock icon](media/lock-scene-or-entity.png)
 
->[!Tip]
->When you lock a scene, all its child scenes and entities are locked too. To lock an entity along with its child entities, hold **Ctrl** and click the padlock icon.
+> [!TIP]
+> When you lock a scene, all its child scenes and entities are locked too. To lock an entity along with its child entities, hold **Ctrl** and click the padlock icon.
 
 Locked items have a **gold locked padlock** icon in the Entity Tree.
 

@@ -264,7 +264,7 @@ The `shape builder` is the class which takes all particle fields and creates the
 
 The engine draws quads using 1 quad = 4 vertices = 6 indices, but we can only specify the number of quads we need. For a rectangle we need only one.
 
->[!Note]
+> [!NOTE]
 > The number of quads is important because the vertex buffer is allocated and mapped prior to writing out the vertex data. If we allocate smaller buffer it might result in illegal memory access and corruption.
 
   ```cs

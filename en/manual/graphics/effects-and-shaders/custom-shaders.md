@@ -85,8 +85,8 @@ For shader-focused development with enhanced IntelliSense and inheritance visual
 
 For detailed information on shader development with VS Code, see [Shader development with Visual Studio Code](shader-development-vscode.md).
 
->[!Note]
->When using VS Code for shader authoring, you still need Visual Studio with the Stride extension to generate the `.cs` files that Game Studio requires. The typical workflow is: develop and edit shaders in VS Code, then open the solution in Visual Studio to trigger the code generation, and finally reload assemblies in Game Studio.
+> [!NOTE]
+> When using VS Code for shader authoring, you still need Visual Studio with the Stride extension to generate the `.cs` files that Game Studio requires. The typical workflow is: develop and edit shaders in VS Code, then open the solution in Visual Studio to trigger the code generation, and finally reload assemblies in Game Studio.
 
     The **Asset View** lists the shader in the same directory as your scripts (eg **MyGame.Game**).
 

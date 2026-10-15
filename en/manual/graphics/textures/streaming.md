@@ -6,8 +6,8 @@
 
 When you **stream** textures, Stride only loads them when they're needed. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
 
->[!Note]
->Currently, only textures can be streamed.
+> [!NOTE]
+> Currently, only textures can be streamed.
 
 ## How Stride streams textures
 
