@@ -195,13 +195,8 @@ This initializer requires the parent emitter to also have a Spawn Order initiali
 ## See also
 
 * [Create particles](create-particles.md)
-
 * [Emitters](emitters.md)
-
 * [Shapes](shapes.md)
-
 * [Materials](materials.md)
-
 * [Spawners](spawners.md)
-
 * [Updaters](updaters.md)
