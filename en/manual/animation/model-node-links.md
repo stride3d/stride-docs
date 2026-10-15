@@ -40,7 +40,7 @@ For example, imagine you have two models: a knight, and a sword. The character h
     > [!Note]
     > The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
-    > [!Tip]
+    > [!TIP]
     > If you don't specify a model, Stride links the entity to the model on the parent entity.
 
 5. In **Node name**, select the node in the model you want to attach this entity to.

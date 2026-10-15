@@ -8,7 +8,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 > Each camera slot must have a camera assigned to it. If you have an unused camera slot, delete it.
 >
 > You can't assign a single camera to more than one slot. If you need to do this, duplicate the camera entity and assign it to a different slot.
-
+>
 > If multiple enabled cameras in your scene use the same camera slot, the result is undefined.
 
 ## Create a camera slot
