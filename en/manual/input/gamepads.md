@@ -95,10 +95,10 @@ public class TestScript : SyncScript
 {
     public override void Update()
     {
-        //Check if a gamepad is connected
+        // Check if a gamepad is connected
         if (Input.HasGamePad)
         {
-            //Get the number of connected gamepads
+            // Get the number of connected gamepads
             int gamepadCount = Input.GamePadCount;
 
             // Check each gamepad's status

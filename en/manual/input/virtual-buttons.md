@@ -28,7 +28,7 @@ public override void Start()
     // Create a new VirtualButtonConfigSet if none exists. 
     Input.VirtualButtonConfigSet = Input.VirtualButtonConfigSet ?? new VirtualButtonConfigSet();
     
-    //Bind "M" key, GamePad "Start" button and left mouse button to a virtual button "MyButton".
+    // Bind "M" key, GamePad "Start" button and left mouse button to a virtual button "MyButton".
     VirtualButtonBinding b1 = new VirtualButtonBinding("MyButton", VirtualButton.Keyboard.M);
     VirtualButtonBinding b2 = new VirtualButtonBinding("MyButton", VirtualButton.GamePad.Start);
     VirtualButtonBinding b3 = new VirtualButtonBinding("MyButton", VirtualButton.Mouse.Left);

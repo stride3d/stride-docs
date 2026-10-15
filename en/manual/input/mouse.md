@@ -92,16 +92,16 @@ public class MouseInputScript : SyncScript
 {
 	public override void Update()
 	{
-		//If the left mouse button is pressed in this update, do something.
+		// If the left mouse button is pressed in this update, do something.
 		if (Input.IsMouseButtonDown(MouseButton.Left))
 		{   
 		}
-		//If the middle mouse button has been pressed since the last update, do something.
+		// If the middle mouse button has been pressed since the last update, do something.
 		if (Input.IsMouseButtonPressed(MouseButton.Middle))
 		{  
 		}
 
-		//If the mouse moved more than 0.2 units of the screen size in X direction, do something.
+		// If the mouse moved more than 0.2 units of the screen size in X direction, do something.
 		if (Input.MouseDelta.X > 0.2f)
 		{
 		}

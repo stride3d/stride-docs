@@ -39,7 +39,7 @@ namespace MyGame
 
         public override async Task Execute()
         {
-        //set up rendering in the debug entry point if we have it
+        // set up rendering in the debug entry point if we have it
         var compositor = SceneSystem.GraphicsCompositor;
         var debugRenderer =
             ((compositor.Game as SceneCameraRenderer)?.Child as SceneRendererCollection)?.Children.Where(

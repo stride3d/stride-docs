@@ -239,7 +239,7 @@ public override void Update()
 
     float Horiz = (Input.IsKeyDown(Keys.Left) ? -1f : 0) + (Input.IsKeyDown(Keys.Right) ? 1f : 0);
     float Vert = (Input.IsKeyDown(Keys.Down) ? -1f : 0) + (Input.IsKeyDown(Keys.Up) ? 1f : 0);
-    //Do something else.
+    // Do something else.
 }
 ```
 

@@ -39,7 +39,7 @@ Alternatively, directly access the `TrackingHashSet`:
 var trigger = Entity.Get<PhysicsComponent>();
 foreach (var collision in trigger.Collisions)
 {
-    //do something with the collision
+    // do something with the collision
 }
 ```
 
@@ -51,15 +51,15 @@ trigger.Collisions.CollectionChanged += (sender, args) =>
 {
     if (args.Action == NotifyCollectionChangedAction.Add)
     {
-        //new collision
+        // new collision
         var collision = (Collision) args.Item;
-        //do something
+        // do something
     }
     else if (args.Action == NotifyCollectionChangedAction.Remove)
     {
-        //old collision
+        // old collision
         var collision = (Collision)args.Item;
-        //do something
+        // do something
     }
 };
 ```

@@ -7,7 +7,7 @@ You can use `UrlReference<Scene>` properties on your scripts to assign **Scene**
 ```cs
 public UrlReference<Scene> ChildSceneUrl { get; set; }
 
-//...
+// ...
 var childScene = Content.Load(ChildSceneUrl);
 
 parentScene.Children.Add(childScene);
@@ -43,7 +43,7 @@ Before a scene is unloaded remove it from the scene hierarchy:
 ```cs
 parentScene.Children.Remove(childScene);
 
-//Alternatively
+// Alternatively
 childScene.Parent = null;
 ```
 

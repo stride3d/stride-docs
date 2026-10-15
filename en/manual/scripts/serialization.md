@@ -122,7 +122,7 @@ public object obj { get => x; internal/private protected/private/protected set =
 [DataMember] internal object obj { get => x; }
 
 // Read only, special case for get-only public properties without backing field, 
-//They must use the attribute to be deserialized, see the comment below
+// They must use the attribute to be deserialized, see the comment below
 [DataMember] public object obj { get => x; }
 
 // Read only for access modifiers more restrictive than internal, even with the attribute

@@ -25,7 +25,7 @@ SpriteFont myFont;
 protected override void InitializeCore()
 {
     base.InitializeCore();
-    //register system font in FontSystem as Arial
+    // register system font in FontSystem as Arial
     if(myFont is null) myFont = InitializeFont();    
 }
 
