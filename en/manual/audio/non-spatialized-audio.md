@@ -30,7 +30,7 @@ The [SoundInstance](xref:Stride.Audio.SoundInstance) controls audio at runtime w
 | Property                                               | Function                                                                                 |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------|
 | [IsLooping](xref:Stride.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio.                                                       |
-| [Pan](xref:Stride.Audio.SoundInstance.Pan)             | Sets the balance between left and right speakers. By default, each speaker a value of 0. |
+| [Pan](xref:Stride.Audio.SoundInstance.Pan)             | Sets the balance between left and right speakers. By default, each speaker has a value of 0. |
 | [Pitch](xref:Stride.Audio.SoundInstance.Pitch)         | Gets or sets the audio pitch (frequency).                                                |
 | [PlayState](xref:Stride.Audio.SoundInstance.PlayState) | Gets the state of the [SoundInstance](xref:Stride.Audio.SoundInstance).                  |
 | [Position](xref:Stride.Audio.SoundInstance.Position)   | Gets the current play position of the audio.                                             |
