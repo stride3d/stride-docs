@@ -20,7 +20,7 @@
 
     ![Select an asset](media/open-asset-picker.png)
 
-	The **Select an asset** window opens.
+    The **Select an asset** window opens.
 
 4. Select the [navigation mesh](navigation-meshes.md) you want the entity to use and click **OK**.
 
@@ -39,16 +39,16 @@ For example:
 ```cs
 void Move(Vector3 from, Vector3 to)
 {
-	var navigationComponent = Entity.Get<NavigationComponent>();
-	List<Vector3> path = new List<Vector3>();
-	if(navigationComponent.TryFindPath(from, to, path))
-	{
-		// Follow the points in path
-	}
-	else
-	{
-		// A path couldn't be found using this navigation mesh
-	}
+    var navigationComponent = Entity.Get<NavigationComponent>();
+    List<Vector3> path = new List<Vector3>();
+    if(navigationComponent.TryFindPath(from, to, path))
+    {
+        // Follow the points in path
+    }
+    else
+    {
+        // A path couldn't be found using this navigation mesh
+    }
 }
 ```
 

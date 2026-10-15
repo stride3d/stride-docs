@@ -61,7 +61,7 @@ Stride supports two main types of gesture:
 
     * [Flick](#Flick)
     
-	* [Long press](#Long-press)
+    * [Long press](#Long-press)
 
 * **Continuous** gestures (drag and composite) trigger a series of events when the user changes the direction of the gesture.
 
@@ -227,12 +227,12 @@ Use the [GestureEvent.Type](xref:Stride.Input.GestureEvent.Type) field to identi
 foreach( var gestureEvent in Input.GestureEvents)
 {
    	// Determine if the event is from a tap gesture
-	if (gestureEvent.Type != GestureType.Tap)
-		continue;
+    if (gestureEvent.Type != GestureType.Tap)
+        continue;
    
-	// Cast a specific tap event class.
-	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent;
-	
+    // Cast a specific tap event class.
+    GestureEventTap  tapEvent = (GestureEventTap) gestureEvent;
+    
     // Access tap-event-specific field.
     log.Info("Tap position: {0}.", tapEvent.TapPosition);
 }
@@ -246,16 +246,16 @@ Use the [GestureEvent.State](xref:Stride.Input.GestureEvent.State) field to get 
 switch(compositeGestureEvent.State)
 {
 case GestureState.Began:
-	image.ComputePreview();
-	break;
+    image.ComputePreview();
+    break;
 case GestureState.Changed:
-	image.TransformPreview(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
-	break;
+    image.TransformPreview(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
+    break;
 case GestureState.Ended:
-	image.TransformRealImage(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
-	break;
+    image.TransformRealImage(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
+    break;
 default:
-	break;
+    break;
 }
 ```
 

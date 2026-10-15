@@ -27,38 +27,38 @@ using Stride.Effects.Data;
 
 namespace StrideEffects
 {
-	params MyParameters
-	{
-		bool EnableSpecular = true;
-	};
-	
-	effect BasicEffect
-	{
-		using params MaterialParameters;
-		using params MyParameters;
+    params MyParameters
+    {
+        bool EnableSpecular = true;
+    };
+    
+    effect BasicEffect
+    {
+        using params MaterialParameters;
+        using params MyParameters;
 
-		mixin ShaderBase;
-		mixin TransformationWAndVP;
-		mixin NormalVSStream;
-		mixin PositionVSStream;
-		mixin BRDFDiffuseBase;
-		mixin BRDFSpecularBase;
-		mixin LightMultiDirectionalShadingPerPixel<2>;
-		mixin TransparentShading;
-		mixin DiscardTransparent;
+        mixin ShaderBase;
+        mixin TransformationWAndVP;
+        mixin NormalVSStream;
+        mixin PositionVSStream;
+        mixin BRDFDiffuseBase;
+        mixin BRDFSpecularBase;
+        mixin LightMultiDirectionalShadingPerPixel<2>;
+        mixin TransparentShading;
+        mixin DiscardTransparent;
 
-		if (MaterialParameters.AlbedoDiffuse != null)
-		{
-			mixin compose DiffuseColor = ComputeBRDFDiffuseLambert;
-			mixin compose albedoDiffuse = MaterialParameters.AlbedoDiffuse;
-		}
+        if (MaterialParameters.AlbedoDiffuse != null)
+        {
+            mixin compose DiffuseColor = ComputeBRDFDiffuseLambert;
+            mixin compose albedoDiffuse = MaterialParameters.AlbedoDiffuse;
+        }
 
-		if (MaterialParameters.AlbedoSpecular != null)
-		{
-			mixin compose SpecularColor = ComputeBRDFColorSpecularBlinnPhong;
-			mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
-		}
-	};
+        if (MaterialParameters.AlbedoSpecular != null)
+        {
+            mixin compose SpecularColor = ComputeBRDFColorSpecularBlinnPhong;
+            mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
+        }
+    };
 }
 ```
 
@@ -79,7 +79,7 @@ using params MaterialParameters;
  
 if (MaterialParameters.AlbedoDiffuse != null)
 {
-	mixin MaterialParameters.AlbedoDiffuse;
+    mixin MaterialParameters.AlbedoDiffuse;
 }
 ```
 
@@ -95,7 +95,7 @@ You can create your own set of parameters using a structure definition syntax.
 ```cs
 params MyParameters
 {
-	bool EnableSpecular = true; // true is the default value
+    bool EnableSpecular = true; // true is the default value
 }
 ```
 
@@ -119,9 +119,9 @@ You can also break the code into sub-mixins to reuse elsewhere with the syntax b
 ```cs
 partial effect MyPartialEffect
 {
-	mixin ComputeColorMultiply;
-	mixin compose color1 = ComputeColorStream;
-	mixin compose color2 = ComputeColorFixed;
+    mixin ComputeColorMultiply;
+    mixin compose color1 = ComputeColorStream;
+    mixin compose color2 = ComputeColorFixed;
 }
  
 // to use it

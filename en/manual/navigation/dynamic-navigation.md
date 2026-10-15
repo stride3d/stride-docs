@@ -62,15 +62,15 @@ dynamicNavigationMeshSystem.AutomaticRebuild = false;
 
 if (/* any condition that should cause the navigation mesh to update (eg open/close door) */)
 {
-	// Start an asynchronous rebuild of the navigation mesh
-	var rebuildTask = dynamicNavigationMeshSystem.Rebuild();
-	rebuildTask.ContinueWith((x) =>
-	{
-		if (x.Result.Success)
-		{
-			// The navigation mesh is successfully rebuilt
-		}
-	});
+    // Start an asynchronous rebuild of the navigation mesh
+    var rebuildTask = dynamicNavigationMeshSystem.Rebuild();
+    rebuildTask.ContinueWith((x) =>
+    {
+        if (x.Result.Success)
+        {
+            // The navigation mesh is successfully rebuilt
+        }
+    });
 }
 ```
 

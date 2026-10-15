@@ -47,23 +47,23 @@ Every @'Stride.Input.KeyEvent' has two properties: @'Stride.Input.KeyEvent.Key' 
 ```cs
 public class KeyboardEventsScript : SyncScript
 {
-	// Declared public member variables and properties show in Game Studio.
+    // Declared public member variables and properties show in Game Studio.
 
-	public override void Update()
-	{
-		// Perform an action in every update.
-		if (Game.IsRunning)
-		{
-			if (Input.IsKeyDown(Keys.Left))
-			{
-				this.Entity.Transform.Position.X -= 0.1f;
-			}
-			if (Input.IsKeyDown(Keys.Right))
-			{
-				this.Entity.Transform.Position.X += 0.1f;
-			}
-		}
-	}
+    public override void Update()
+    {
+        // Perform an action in every update.
+        if (Game.IsRunning)
+        {
+            if (Input.IsKeyDown(Keys.Left))
+            {
+                this.Entity.Transform.Position.X -= 0.1f;
+            }
+            if (Input.IsKeyDown(Keys.Right))
+            {
+                this.Entity.Transform.Position.X += 0.1f;
+            }
+        }
+    }
 }
 ```
 

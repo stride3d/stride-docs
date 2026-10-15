@@ -42,7 +42,7 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
     
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
 
-	Game Studio adds the skybox asset with the texture you specified.
+    Game Studio adds the skybox asset with the texture you specified.
 
 4. Select the entity you want to be the skybox light.
 
@@ -56,11 +56,11 @@ To use a skybox as a light, you need to add a skybox asset, then select it in a 
 
 7. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**):
 
-	![No skybox asset selected](media/no-skybox-asset-selected.png)
+    ![No skybox asset selected](media/no-skybox-asset-selected.png)
 
 8. Select the skybox asset you want to use as a light source and click **OK**.
 
-	![Select an asset](media/select-skybox-asset.png)
+    ![Select an asset](media/select-skybox-asset.png)
 
 The [Light component](xref:Stride.Engine.LightComponent) uses the skybox asset to light the scene.
 
@@ -95,16 +95,16 @@ public Skybox skybox;
 public void ChangeSkyboxParameters()
 {
     // Get the light component from an entity
-	var light = Entity.Get<LightComponent>();
+    var light = Entity.Get<LightComponent>();
 
-	// Get the Skybox Light settings from the light component
-	var skyboxLight = light.Type as LightSkybox;
+    // Get the Skybox Light settings from the light component
+    var skyboxLight = light.Type as LightSkybox;
 
-	// Replace the existing skybox
-	skyboxLight.Skybox = skybox;
+    // Replace the existing skybox
+    skyboxLight.Skybox = skybox;
 
-	// Change the skybox light intensity
-	light.Intensity = 1.5f;
+    // Change the skybox light intensity
+    light.Intensity = 1.5f;
 }
 ```
 

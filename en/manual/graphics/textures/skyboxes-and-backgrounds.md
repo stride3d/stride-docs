@@ -107,13 +107,13 @@ public Texture cubemapTexture;
 public void ChangeBackgroundParameters()
 {
     // Get the background component from an entity
-	var background = directionalLight.Get<BackgroundComponent>();
+    var background = directionalLight.Get<BackgroundComponent>();
 
-	// Replace the existing background
-	background.Texture = cubemapTexture;
+    // Replace the existing background
+    background.Texture = cubemapTexture;
 
-	// Change the background intensity
-	background.Intensity = 1.5f;
+    // Change the background intensity
+    background.Intensity = 1.5f;
 }
 ```
 

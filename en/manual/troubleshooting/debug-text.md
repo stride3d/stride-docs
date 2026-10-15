@@ -39,7 +39,7 @@ namespace MyGame
 {
     public class Script : SyncScript
     {
-		public Texture myTexture;
+        public Texture myTexture;
 
         public override void Start()
         {
@@ -49,7 +49,7 @@ namespace MyGame
 
         public override void Update()
         {
-			if (myTexture == null)
+            if (myTexture == null)
                 DebugText.Print("MyTexture not loaded", new Int2(x: 50, y: 50));
         }
     }

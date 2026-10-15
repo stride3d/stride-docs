@@ -107,7 +107,7 @@ namespace MyGame
 {
     public class Script : SyncScript
     {
-		public Texture myTexture;
+        public Texture myTexture;
 
         public override void Start()
         {

@@ -19,8 +19,8 @@ This script has a public property (`DelayTimeOut`):
 ```cs
 public class SampleSyncScript : StartupScript
 {
-	// This public member will appear in Game Studio
-	public float DelayTimeOut { get; set; }
+    // This public member will appear in Game Studio
+    public float DelayTimeOut { get; set; }
 }
 ```
 
@@ -36,17 +36,17 @@ For example, the following code will create problems, as it tries to access `Ent
 ```cs
 public class SampleSyncScript : StartupScript
 {
-	private float delayTimeOut;
-	// This public member will appear in Game Studio
-	public float DelayTimeOut
-	{
-		get { return delayTimeOut; }
-		set
-		{ 
-			delayTimeOut = value;
-			Entity.Components.Add(new SkyboxComponent());
-		}
-	}
+    private float delayTimeOut;
+    // This public member will appear in Game Studio
+    public float DelayTimeOut
+    {
+        get { return delayTimeOut; }
+        set
+        { 
+            delayTimeOut = value;
+            Entity.Components.Add(new SkyboxComponent());
+        }
+    }
 }
 ```
 
@@ -63,7 +63,7 @@ If you don't want Game Studio to show a property in the Property grid, you can:
 // This public property isn't available in Game Studio
 [DataMemberIgnore]
 public float DelayTimeOut { get; set; }
-	
+    
 ```
 
 Game Studio no longer shows the property:

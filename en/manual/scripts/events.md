@@ -46,7 +46,7 @@ var gameIsOver = gameOverListener.TryReceive();
 var gameOverListenerWithData = new EventReceiver<string>(GlobalEvents.GameOverWithDataEventKey);
 if(gameOverListenerWithData.TryReceive(out string data))
 {
-	// data == "Player 1"
+    // data == "Player 1"
 }
 
 // Or in Async

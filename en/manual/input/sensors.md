@@ -153,26 +153,26 @@ To get the rotation speed, use [GyroscopeSensor.RotationRate](xref:Stride.Input.
 ```cs
 public class SensorScript : AsyncScript
 {
-	public override async Task Execute()
-	{
-		// Check availability of the sensor
-		if(Input.Accelerometer != null)
-			return;
-			
-		// Activate the sensor
-		Input.Accelerometer.IsEnabled = true;
-				
-		while (Game.IsRunning)
-		{
-			// read current acceleration
-			var accel = Input.Accelerometer.Acceleration;
-			
-			// perform require works...
-			await Script.NextFrame();
-		}		
-		// Disable the sensor after use
-		Input.Accelerometer.IsEnabled = false;
-	}
+    public override async Task Execute()
+    {
+        // Check availability of the sensor
+        if(Input.Accelerometer != null)
+            return;
+            
+        // Activate the sensor
+        Input.Accelerometer.IsEnabled = true;
+                
+        while (Game.IsRunning)
+        {
+            // read current acceleration
+            var accel = Input.Accelerometer.Acceleration;
+        	
+            // perform require works...
+            await Script.NextFrame();
+        }		
+        // Disable the sensor after use
+        Input.Accelerometer.IsEnabled = false;
+    }
 }
 ```
 

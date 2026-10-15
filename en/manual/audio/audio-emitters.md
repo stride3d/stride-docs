@@ -59,11 +59,11 @@ Now we need to create a script to play and configure the audio asset.
 
    For example, say we have two sounds, **MySound1** and **MySound2**:
    
-	```cs
-	AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
-	AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
-	AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
-	```
+    ```cs
+    AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
+    AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
+    AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
+    ```
 
 2. Use the following [AudioEmitterSoundController](xref:Stride.Audio.AudioEmitterSoundController) properties and methods to play and configure the audio:
 

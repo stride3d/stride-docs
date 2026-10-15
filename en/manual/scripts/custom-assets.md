@@ -53,7 +53,7 @@ namespace YOUR_GAME_NAMESPACE;
 [DataSerializerGlobal(typeof(CloneSerializer<YOUR_CLASS>), Profile = "Clone")]
 public class YOUR_CLASS
 {
-	// Replace this with whatever you would want this asset to hold at runtime
+    // Replace this with whatever you would want this asset to hold at runtime
     public List<Prefab> PrefabCollection { get; set; } = new();
 }
 
@@ -68,7 +68,7 @@ public sealed class YOUR_CLASS_ASSET : Asset
     private const string CurrentVersion = "1.0.0.0";
     public const string FileExtension = ".blks";
 
-	// Replace this with whatever you would want this asset to have while inside the gamestudio
+    // Replace this with whatever you would want this asset to have while inside the gamestudio
     public List<Prefab> PrefabCollection { get; set; } = new();
 }
 
@@ -88,11 +88,11 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
     public override IEnumerable<ObjectUrl> GetInputFiles(AssetItem assetItem)
     {
         // Yield assets that must be built before this one is built,
-	// this is for cases were you need to read from a compiled version of an asset to build this one.
-	// Note that creating cyclic references through this method will cause a deadlock when building
-	// (e.g.: A is input of B while B is input of A)
+    // this is for cases were you need to read from a compiled version of an asset to build this one.
+    // Note that creating cyclic references through this method will cause a deadlock when building
+    // (e.g.: A is input of B while B is input of A)
 
-	// below only for reference purposes, useless in this context
+    // below only for reference purposes, useless in this context
         var asset = (YOUR_CLASS_ASSET)assetItem.Asset;
         foreach (var block in asset.PrefabCollection)
         {

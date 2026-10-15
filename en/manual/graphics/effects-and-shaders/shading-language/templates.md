@@ -15,16 +15,16 @@ An instantiated shader behaves the same way as any other shader. The value, text
 ```cs
 shader TemplateShader<float speed, Texture2D myTexture, SamplerState mySampler, Semantic mySemantic, LinkType myLink>
 {
-	[Color]
-	[Link("myLink")]
-	float4 myColor;
+    [Color]
+    [Link("myLink")]
+    float4 myColor;
  
-	stream float2 texcoord : mySemantic;
+    stream float2 texcoord : mySemantic;
  
-	float4 GetValue()
-	{
-		return speed * myColor * myTexture.Sample(mySampler, streams.texcoord);
-	}
+    float4 GetValue()
+    {
+        return speed * myColor * myTexture.Sample(mySampler, streams.texcoord);
+    }
 };
  
 // To instantiate the shader, use:
