@@ -23,7 +23,7 @@ Here's how it looks like in a default game project:
   </ItemGroup>
 </Project>
 ```
-> [!Warning]
+> [!WARNING]
 > Make sure that the `TargetFramework` and all package versions match your current Stride version. The example above shows version 4.4.0 for reference.
 
 Inside the same project, create a new csharp file and replace its content with the following:
@@ -126,7 +126,7 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
 }
 ```
 
-> [!Warning]
+> [!WARNING]
 > Every changes made to the runtime asset will break previously built asset databases, make sure to clean the solution or manually delete the build artifacts stride generates for assets (`YOUR_PROJECT.Windows/obj/stride` and `bin/db`) after changing the class to make sure the asset database is fully rebuilt on the next build.
 
 This takes care of the support for this asset, you could create a `*.blks` file inside your `Assets` directory and fill in the content manually, but might as well do it through the editor ...

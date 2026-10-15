@@ -4,7 +4,7 @@ This page explains how to render a UI to a texture, then display it as an overla
 
 These instructions assume you already have a UI that you want to display in the overlay. For information about creating UIs, see the [UI](../ui/index.md) section.
 
-> [!Note]
+> [!NOTE]
 > You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay, not other hardware.
 
 ## 1. Create a render target texture
@@ -74,7 +74,7 @@ To display an overlay, you need at least two renderers:
 
 This page describes the simplest way to do this from scratch, using two cameras and two renderers. Depending on your pipeline, you might need to create a different setup.
 
-> [!Warning]
+> [!WARNING]
 > These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
 
 1. In the graphics compositor editor, select the **Entry points** node.

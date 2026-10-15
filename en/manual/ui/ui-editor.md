@@ -72,7 +72,7 @@ You can select, move, and resize elements in the preview as you do in image edit
 
 To change the color and size of the selection tools, in the **UI editor toolbar**, click ![Eye icon](media/eye-icon.png)
 
-> [!Note]
+> [!NOTE]
 > These options have no effect on how the UI is displayed at runtime.
 
 ![UI editor view options](media/ui-editor-view-options.png)

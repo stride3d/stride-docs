@@ -9,7 +9,7 @@ When you declare a public property or field in a script, the property becomes ac
 
 You can attach the same script to multiple entities and set different property values on each entity.
 
-> [!Note] 
+> [!NOTE] 
 > Properties and fields must be [serializable](serialization.md) to be used in Game Studio. 
 
 ## Add a public property or field

@@ -115,7 +115,7 @@ You can create models in scripts at runtime. You can do this in several differen
     ```
 
 
-> [!Note]
+> [!NOTE]
 > For more information about how to set up vertex and index buffers, see [Drawing vertices](../graphics/low-level-api/draw-vertices.md).
 
 Finally, you need to give the model one or more materials. There are two ways to do this.

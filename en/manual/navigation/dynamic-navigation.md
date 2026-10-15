@@ -6,7 +6,7 @@
 
 If you enable **dynamic navigation**, entities with navigation components don't need a [navigation mesh](navigation-meshes.md) asset. Instead, the entities generate navigation meshes dynamically.
 
-> [!Note]
+> [!NOTE]
 > Make sure that the scenes you want the entities to navigate dynamically have [navigation bounding boxes](navigation-bounding-boxes.md).
 
 ## Enable dynamic navigation

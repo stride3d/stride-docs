@@ -8,7 +8,7 @@
 
 You can use **cubemaps** or **360° panoramic textures** as skyboxes. You can also [use them to light the scene](../lights-and-shadows/skybox-lights.md).
 
-> [!Note]
+> [!NOTE]
 > Currently, Stride doesn't support skydomes or local skyboxes.
 
 Alternatively, you can display a **2D background**, which is often useful for 2D games.

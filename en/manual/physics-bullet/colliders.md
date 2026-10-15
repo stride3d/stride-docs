@@ -62,7 +62,7 @@ You can make colliders visible at runtime, which is useful for debugging problem
 this.GetSimulation().ColliderShapesRendering = true;
 ``
 
-> [!Note]
+> [!NOTE]
 > Collider shapes for infinite planes are always invisible.
 
 ### Keyboard shortcut

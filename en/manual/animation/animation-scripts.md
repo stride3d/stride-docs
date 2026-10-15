@@ -19,8 +19,8 @@ The more useful properties include:
 > Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:Stride.Engine.AnimationComponent).
 > 
 > ![Animations added to component](media/animations-added-to-component.png)
-
->For more information, see [Set up animations](set-up-animations.md).
+>
+> For more information, see [Set up animations](set-up-animations.md).
 
 ## Use the pre-built **AnimationStart** script
 

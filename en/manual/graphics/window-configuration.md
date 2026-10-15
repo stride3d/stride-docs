@@ -6,7 +6,7 @@ Properties of the game's window can be controlled through code.
 
 Currently, this cannot be configured in Game Studio, so a simple alternative is to have a [`Startup Script`](../scripts/types-of-script/startup-script.md) in the root scene of your project, that changes values of `Game.Window`.
 
-> [!Note]
+> [!NOTE]
 > The best solution would be to change these properties before the window is opened, by overriding the `Game` class, but this is outside of the scope of this page.
 
 ```csharp
@@ -51,7 +51,7 @@ Game.Window.FullscreenIsBorderlessWindow = true;
 
 The main difference between these two fullscreen modes is that **exclusive fullscreen** renders the game directly to the screen, while **borderless fullscreen** resizes the window to take up the entire display.
 
-> [!Note]
+> [!NOTE]
 > **Exclusive fullscreen** can slightly improve performence, but is generally disliked by most players due to making switching between different applications slower and more cumbersome.
 
 ## Resolution

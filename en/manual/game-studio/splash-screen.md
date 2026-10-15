@@ -4,7 +4,7 @@
 
 The **splash screen** is the image (usually a logo) displayed when your game starts. It fades in over the color you specify, then fades out.
 
-> [!Note]
+> [!NOTE]
 > The splash screen is only displayed when the game is built in release mode.
 
 The default splash screen is the Stride logo.

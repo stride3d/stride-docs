@@ -11,7 +11,7 @@ Scripts with lower priority numbers have higher priorities. For example, a scrip
 
 If scripts have the same priority, the order in which Stride runs them isn't deterministic. You might give scripts the same priority if you don't care which order they run in.
 
-> [!Note]
+> [!NOTE]
 > Currently, there's no way to see a list of priorities in one place. You have to set each priority of each script individually in the script component properties.
 
 ## Set a script priority

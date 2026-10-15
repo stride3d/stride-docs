@@ -105,7 +105,7 @@ To display a render texture in your scene, you need at least two renderers:
 
 This page describes the simplest way to do this from scratch, using two cameras and two renderers. Depending on your pipeline, you might need to create a different setup.
 
-> [!Warning]
+> [!WARNING]
 > These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
 
 1. In the graphics compositor editor, select the **Entry points** node.

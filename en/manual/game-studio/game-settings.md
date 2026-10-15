@@ -158,7 +158,7 @@ For more details, see [Streaming](../graphics/textures/streaming.md).
 
 The **splash screen** is displayed when your game starts. The default is the Stride splash screen.
 
-> [!Note]
+> [!NOTE]
 > The splash screen is only displayed when the game is built in release mode.
 
 ![Settings](media/splash-screen.png)

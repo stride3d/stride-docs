@@ -4,7 +4,7 @@
 
 You don't have to create a different camera slot for each camera. Instead, you can just change which cameras use each slot. The best practice is to disable the camera components on cameras you don't need.
 
-> [!Note]
+> [!NOTE]
 > Each camera slot must have a camera assigned to it. If you have an unused camera slot, delete it.
 >
 > You can't assign a single camera to more than one slot. If you need to do this, duplicate the camera entity and assign it to a different slot.
@@ -40,7 +40,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
 2. In the **Property grid** (on the right by default), in the **Camera** component properties, under **Slot**, select the slot you want to bind the camera to.
 
-    > [!Note]
+    > [!NOTE]
     > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../game-studio/game-settings.md).
 
     ![media/graphics-compositor-overview-2.png](../graphics-compositor/media/graphics-compositor-overview-2.png)
@@ -58,7 +58,7 @@ var camera = new CameraComponent();
 
 To change the camera at runtime, toggle the ``Enabled`` property.
 
-> [!Note]
+> [!NOTE]
 > Make sure you:
 >
 > * always have at least one enabled camera

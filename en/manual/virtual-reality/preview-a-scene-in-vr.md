@@ -66,7 +66,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
     >
     > ![Copy-paste properties](media/copy-paste-properties.png)
 
-    > [!Note]
+    > [!NOTE]
     > Make sure the forward renderer has VR enabled. For instructions, see [Enable VR](enable-vr.md).
 
 Stride displays the scene preview in your VR device. To display the scene on your monitor instead, disable **VRRendererSettings** in the properties of the new forward renderer.

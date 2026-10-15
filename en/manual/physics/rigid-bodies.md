@@ -15,7 +15,7 @@
 
     ![Add body component](media/add-body-component.png)
 
-> [!Note]
+> [!NOTE]
 > You will need to set a collider for this newly created body, you can do so through the Collider property, see [collider shapes](collider-shapes.md).
 
 > [!WARNING]

@@ -28,11 +28,11 @@ myChildScene1.Add(myChildScene2);
 > [!NOTE]
 > If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset view**).
 > 
->![Scenes included in root](media/scenes-included-in-root.png)
-
->To include a scene in the build, in the **Asset view**, right-click the scene asset and select **Include in build as root asset**.
-
->For more information about including assets in the build, see [Asset compilation](../assets/asset-compilation.md).
+> ![Scenes included in root](media/scenes-included-in-root.png)
+>
+> To include a scene in the build, in the **Asset view**, right-click the scene asset and select **Include in build as root asset**.
+>
+> For more information about including assets in the build, see [Asset compilation](../assets/asset-compilation.md).
 
 For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
 

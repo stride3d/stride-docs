@@ -56,7 +56,7 @@ For pointers, gestures, and keyboards, you can query all the events that happene
 
 ![Several actions between updates](media/index-events-list-several-actions-between-updates.png)
 
-> [!Note] 
+> [!NOTE] 
 > Even if a user performs several actions between two updates, Stride registers all these events.
 
 ### Use virtual buttons

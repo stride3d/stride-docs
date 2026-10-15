@@ -38,7 +38,7 @@ The [SoundInstance](xref:Stride.Audio.SoundInstance) controls audio at runtime w
 
 For more details, see the [SoundInstance API documentation](xref:Stride.Audio.SoundInstance).
 
-> [!Note]
+> [!NOTE]
 > If the sound is already playing, Stride ignores all additional calls to [SoundInstance.Play](xref:Stride.Audio.SoundInstance.Play). The same goes for [SoundInstance.Pause](xref:Stride.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:Stride.Audio.SoundInstance.Stop) (when a sound is already stopped).
 
 For example, the following code:

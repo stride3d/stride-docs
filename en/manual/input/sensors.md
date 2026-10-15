@@ -40,7 +40,7 @@ Before you get the value of a sensor, check that the sensor is available in the 
 var hasCompass = Input.Compass != null;
 ```
 
-> [!Note]
+> [!NOTE]
 > If a sensor isn't natively supported by the device, Stride tries to emulate it using the device's other sensors.
 
 ## Enable a sensor
@@ -71,7 +71,7 @@ For example:
   var orientation = Input.Orientation.Quaternion;
 ```
 
-> [!Note]
+> [!NOTE]
 > Stride provides the orientation under the pitch/yaw/roll, rotation matrix, or quaternion forms. We recommend the quaternion form as it doesn't suffer from [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
 ## Motion sensors

@@ -5,7 +5,7 @@
 
 Gestures are predefined [pointer](pointers.md) patterns. Stride can recognize gestures and trigger corresponding events. For example, in a strategy game, the player can drag and drop a unit to the battlefield with a **drag** gesture. Gestures can use one or several fingers.
 
-> [!Note] 
+> [!NOTE] 
 > All lengths, speeds and error margins of configuration files must use normalized values.
 
 ## Turn on gesture recognition
@@ -18,7 +18,7 @@ To turn on gesture recognition:
 2. Configure the class parameters.
 3. Add the gesture configuration to the @'Stride.Input.InputManager.Gestures' collection.
 
-> [!Warning] 
+> [!WARNING] 
 > After you activate recognition for a gesture, you can't modify the gesture's parameters. If you need to do this, delete the gesture from the @'Stride.Input.InputManager.Gestures' collection and create a new entry with new parameters.
 
 ### Turn off gesture recognition
@@ -29,7 +29,7 @@ Delete the gesture from the [InputManager.Gestures](xref:Stride.Input.InputManag
 
 When the input system detects a gesture, it adds a @'Stride.Input.GestureEvent' to the list of [InputManager.GestureEvents](xref:Stride.Input.InputManager.GestureEvents). The event contains information about the gesture and its state, such as its location and the number of fingers used.
 
-> [!Note]
+> [!NOTE]
 > Each gesture has its own associated gesture event class (see below).
 
 The [GestureEvent.Type](xref:Stride.Input.GestureEvent.Type) field indicates which gesture has been recognized. You can then cast the base gesture event into the gesture-specific event type to have gesture-type-specific information about the event.
@@ -48,7 +48,7 @@ In the @'Stride.Input.GestureConfig' classes, you can configure parameters inclu
 
 * the gesture direction
 
-> [!Note] 
+> [!NOTE] 
 > Each gesture has its own configuration class with specific configuration parameters (see below).
 
 ## Types of gesture

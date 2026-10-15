@@ -37,7 +37,7 @@ For example, imagine you have two models: a knight, and a sword. The character h
 
 4. Select the model you want to link the entity to and click **OK**.
 
-    > [!Note]
+    > [!NOTE]
     > The entity you link to must have a model with a skeleton, even if the model isn't visible at runtime.
 
     > [!TIP]
@@ -57,7 +57,7 @@ To add an offset to the linked entity, use the entity's [TransformComponent](xre
 
 ![Transform](media/transform-component.png)
 
-> [!Note]
+> [!NOTE]
 > If you don't want to add an offset, make sure the values are all set to `0,0,0`.
 
 ## Example script

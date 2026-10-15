@@ -25,7 +25,7 @@ camera.Slot = SceneSystem.GraphicsCompositor.Cameras[0].ToSlotId();
 
 To change the camera at runtime, toggle the ``Enabled`` property.
 
-> [!Note]
+> [!NOTE]
 > Make sure you:
 >
 > * always have at least one enabled camera

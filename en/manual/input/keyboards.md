@@ -24,7 +24,7 @@ You can query **key states** and **state changes** with the following methods:
 | [IsKeyPressed(Keys)](xref:Stride.Input.InputManager.IsKeyPressed\(Stride.Input.Keys\)) | Checks if a specified key has been **pressed** since the last update. 
 | [IsKeyReleased(Keys)](xref:Stride.Input.InputManager.IsKeyReleased\(Stride.Input.Keys\)) | Checks if a specified key has been **released** since the last update. 
 
-> [!Note] 
+> [!NOTE] 
 > Stride doesn't support retrieving interpreted keys, such as special characters and capital letters.
 
 ## Get key events

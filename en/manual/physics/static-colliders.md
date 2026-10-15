@@ -15,7 +15,7 @@
 
    ![Add static component](media/add-static-component.png)
 
-> [!Note]
+> [!NOTE]
 > You will need to set a collider for this newly created static component, you can do so through the Collider property, see [collider shapes](collider-shapes.md).
 
 Have a look at the [API](xref:Stride.BepuPhysics.StaticComponent) for more detail on the properties of this component.

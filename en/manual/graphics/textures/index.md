@@ -27,7 +27,7 @@ You can use the following file types as textures:
 * `.tif`
 * `.tiff`
 
-> [!Note]
+> [!NOTE]
 > * Stride only imports the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Stride; they appear as static images.
 > * Stride currently doesn't support movie files.
 
@@ -37,7 +37,7 @@ In the **Asset view**, click **Add asset** > **Texture**, then select a template
 
 ![Add texture](media/add-texture.png)
 
-> [!Note]
+> [!NOTE]
 > Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras/index.md). For more information, see [Render targets](../graphics-compositor/render-textures.md).
 
 Alternatively, drag the texture file from Explorer to the Asset view:

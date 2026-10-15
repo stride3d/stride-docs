@@ -136,7 +136,7 @@ Alternatively, add additional bounding volumes and process them separately. To d
 
 ![Separate bounding volume](media/separate-bounding-volumes.png)
 
-> [!Note]
+> [!NOTE]
 > Processing bounding volumes separately uses more GPU.
 
 ## See also

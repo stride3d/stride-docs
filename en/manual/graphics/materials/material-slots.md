@@ -22,7 +22,7 @@ You can change the materials a model uses in two places:
 
     ![Model materials](media/model-materials.png)
 
-    > [!Note]
+    > [!NOTE]
     > This affects every instance of this model.
  
 * In the **model component** of an entity or [prefab](../../game-studio/prefabs/index.md):

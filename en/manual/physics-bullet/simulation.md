@@ -17,7 +17,7 @@ You can change how Stride initializes the [simulation](xref:Stride.Physics.Simul
 
 * `ContinuousCollisionDetection` initializes the [Simulation](xref:Stride.Physics.Simulation) with continuous collision detection (CCD). CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
 
-> [!Note] 
+> [!NOTE] 
 > The ``SoftBodySupport``, ``MultiThreaded``, and ``UseHardwareWhenPossible`` flags are currently disabled.
 
 At runtime, you can change some [Simulation](xref:Stride.Physics.Simulation) parameters:

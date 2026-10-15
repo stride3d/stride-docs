@@ -24,7 +24,7 @@ For a demonstration of the different constraints, load the **PhysicsSample** sam
 
 ## Create a constraint
 
-> [!Note]
+> [!NOTE]
 > Currently, you can only use constraints from scripts.
 
 To create a constraint, use the [Simulation](xref:Stride.Physics.Simulation) static method [CreateConstraint](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)):
@@ -36,7 +36,7 @@ CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix fra
 This links [RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) to the world at its current location.
 The boolean [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) specifies which coordinate system the limit is applied to (either [RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) or the world).
 
-> [!Note]
+> [!NOTE]
 > * In the case of [ConstraintTypes.Point2Point](xref:Stride.Physics.ConstraintTypes), the frame represents a pivot in A. Only the translation vector is considered. [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
 > * In the case of [ConstraintTypes.Hinge](xref:Stride.Physics.ConstraintTypes), the frame represents a pivot in A and Axis in A. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world.
 > * In the case of [ConstraintTypes.ConeTwist](xref:Stride.Physics.ConstraintTypes), [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
@@ -48,7 +48,7 @@ CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyC
 
 This method links [RigidBodyA](xref:Stride.Physics.Constraint.RigidBodyA) to  [RigidBodyB](xref:Stride.Physics.Constraint.RigidBodyB).
 
-> [!Note]
+> [!NOTE]
 > * In the case of [ConstraintTypes.Point2Point](xref:Stride.Physics.ConstraintTypes), the frame represents a pivot in A or B. Only the translation vector is considered. [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.
 > * In the case of [ConstraintTypes.Hinge](xref:Stride.Physics.ConstraintTypes) the frame represents pivot in A/B and Axis in A/B. This is because the hinge allows only a limited angle of rotation between the rigidbody and the world in this case.
 > * In the case of [ConstraintTypes.ConeTwist](xref:Stride.Physics.ConstraintTypes), [useReferenceFrameA](xref:Stride.Physics.Simulation.CreateConstraint\(Stride.Physics.ConstraintTypes,Stride.Physics.RigidbodyComponent,Stride.Core.Mathematics.Matrix,System.Boolean\)) is ignored.

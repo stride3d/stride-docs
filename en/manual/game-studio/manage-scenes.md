@@ -14,7 +14,7 @@ The root scene contains all the scenes and entities in your game. It should cont
 
 Scenes are kept in different folders. This means that different people can work on them without overwriting each other's work.
 
-> [!Note]
+> [!NOTE]
 > When scenes load at runtime, their **child scenes aren't automatically loaded too**. You have to load child scenes in code. For more information, see [Load scenes](load-scenes.md).
 
 ## Set parent and child scenes
