@@ -16,7 +16,13 @@ Stride only compiles assets which are used in the game. This means that if an as
 
 ![](media/asset-reference-visualization.webp)
 
-[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+In the **Asset view**, you can see a dot in the top left corner of every asset that signifies how it will be compiled.
+
+![](media/asset-view-indicators.webp)
+
+Each color represents something:
+
+[!INCLUDE [status-dots](../../includes/assets/status-dots.md)]
 
 For more information about how assets are compiled, visit [Asset compilation](asset-compilation.md).
 

@@ -40,7 +40,7 @@ Alternatively, select the entity you want to be a camera, and in the **Property 
 
 With **orthographic cameras**, objects are always the same size, no matter their distance from the camera. Parallel lines never touch, and there's no vanishing point. Orthographic cameras are most used for games with isometric perspectives, such as some strategy, 4X, or role-playing games.
 
-![Perspective and orthographic diagram](../../game-studio/media/perspective-orthographic-diagram.png)
+![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
 
 | Perspective  | Orthographic
 |--------------|------------
@@ -72,7 +72,7 @@ The near and far planes determine where the camera's view begins and ends.
 
 Stride renders the area between the near and far planes.
 
-![Camera position](../../game-studio/media/camera-position.png)
+![Camera position](media/camera-position.png)
 
 | Near plane 0.1 (default); far plane: 50  | Near plane: 7; far plane 1000 (default)
 |--------------------|------------------
@@ -101,7 +101,7 @@ For more information about how to create and use scripts, see [Scripts](../../sc
 
 ## Camera slots
 
-**Camera slots** link the [graphics compositor](index.md) to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../../game-studio/manage-scenes.md) or graphics compositor without having to assign new cameras each time.
+**Camera slots** link the [graphics compositor](index.md) to the cameras in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../../scenes/structuring-scenes.md) or graphics compositor without having to assign new cameras each time.
 
 For more information, see [Camera slots](camera-slots.md).
 
