@@ -3,8 +3,8 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Artist</span>
 
->[!Note]
->As with other depth-aware post effects, enabling ambient occlusion nullifies MSAA (multisample anti-aliasing).
+> [!NOTE]
+> As with other depth-aware post effects, enabling ambient occlusion nullifies MSAA (multisample anti-aliasing).
 
 **Ambient occlusion** darkens areas where light is occluded by opaque objects, such as corners and crevices. You can use it to add subtle realism to scenes.
 

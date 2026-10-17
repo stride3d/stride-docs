@@ -25,7 +25,7 @@ Voxel Cone Tracing requires several changes to the graphics compositor.
 
 To make this easier, we prepared a graphics compositor ready to use with Voxel GI in the asset templates:
 
-1. In the **Asset View**, click **➕ Add asset**.
+1. In the **Asset view**, click **➕ Add asset**.
 
 2. Start to type `Voxel` in the search bar
 

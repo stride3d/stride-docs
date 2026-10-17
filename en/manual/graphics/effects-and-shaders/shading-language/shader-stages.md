@@ -23,9 +23,9 @@ For example:
 ```cs
 override stage void VSMain()
 {
-	...
-	streams.ShadingPosition = ...;
-	...
+    ...
+    streams.ShadingPosition = ...;
+    ...
 }
 ```
 
@@ -38,9 +38,9 @@ For example:
 ```cs
 override stage void PSMain()
 {
-	...
-	streams.ColorTarget = ...;
-	...
+    ...
+    streams.ColorTarget = ...;
+    ...
 }
 ```
 
@@ -52,14 +52,14 @@ An example of geometry shader:
 [maxvertexcount(1)]
 void GSMain(triangle Input input[3], inout PointStream<Output> pointStream)
 {
-	...
-	// fill the streams object
-	streams = input[0];
+    ...
+    // fill the streams object
+    streams = input[0];
  	...
  
-	// always append streams
-	pointStream.Append(streams);
-	...
+    // always append streams
+    pointStream.Append(streams);
+    ...
 }
 ```
 
@@ -80,30 +80,30 @@ An example of a tessellation shader:
 [maxtessfactor(48.0)]
 void HSMain(InputPatch<Input, 3> input, out Output output, uint uCPID : SV_OutputControlPointID)
 {
-	...
-	output = streams;
+    ...
+    output = streams;
 }
  
 void HSConstantMain(InputPatch<Input, 3> input, const OutputPatch<Input2, 3> output, out Constants constants)
 {
-	...
-	output = streams;
-	...
+    ...
+    output = streams;
+    ...
 }
  
 [domain("tri")]
 void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants constants, float3 f3BarycentricCoords : SV_DomainLocation)
 {
-	...
-	output = streams;
-	...
+    ...
+    output = streams;
+    ...
 }
 ```
 
 `Input` and `Input2` both behave like streams.
 
->[!Note]
->Don't forget to assign `output` to `streams` at the end of your stage.
+> [!NOTE]
+> Don't forget to assign `output` to `streams` at the end of your stage.
 
 ## Compute shader
 
@@ -113,7 +113,7 @@ An example of a compute shader:
 [numthreads(2, 3, 5)]
 void CSMain()
 {
-	...
+    ...
 }
 ```
 

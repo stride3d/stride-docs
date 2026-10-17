@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-To view the properties of a video asset, select it in the **Asset View** and use the **Property Grid**.
+To view the properties of a video asset, select it in the **Asset view** and use the **Property grid**.
 
 ![Video asset properties](media/video-asset-properties.png)
 
@@ -18,8 +18,8 @@ To view the properties of a video asset, select it in the **Asset View** and use
 | Force mono channel | Convert video audio to mono. This is useful when you want the video to use [spatialized audio](../audio/spatialized-audio.md).
 
 
->[!Note]
->Currently, you can't preview videos in the Asset Preview.
+> [!NOTE]
+> Currently, you can't preview videos in the Asset preview.
 
 ## See also
 

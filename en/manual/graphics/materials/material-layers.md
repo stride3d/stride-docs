@@ -36,7 +36,7 @@ If the materials have **different** shading models, Stride applies each material
 
 1. Select the material you want to add a layer to.
 
-2. In the **Property Grid** (on the right by default), next to **Layers**, click ➕ (**Add**).
+2. In the **Property grid** (on the right by default), next to **Layers**, click ➕ (**Add**).
 
     ![Add a layer](media/add-a-layer.png)
 

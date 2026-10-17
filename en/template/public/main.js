@@ -2,6 +2,7 @@ import gdscript from './highlight/gdscript.js'
 
 const app = {
     languageDropdownCreated: false,
+    readerVersionKey: 'stride-docs-version',
     iconLinks: [
         {
             icon: 'github',
@@ -184,18 +185,17 @@ const app = {
                 const selectElement = document.getElementById("stride-current-version");
                 selectElement.innerHTML = '';
 
-                data.versions.forEach(version => {
-                    const url = version;
+                data.docs.forEach(doc => {
                     const option = document.createElement('option');
-                    option.value = url;
-                    option.textContent = version;
+                    option.value = doc.url;
+                    option.textContent = doc.url === data.latest ? `${doc.name} (latest)` : doc.name;
                     selectElement.appendChild(option);
                 });
 
                 const urlSplits = window.location.pathname.split('/');
                 let urlVersion = urlSplits[1];
                 if (urlVersion === 'latest') {
-                    urlVersion = data.versions[0];
+                    urlVersion = data.latest;
                 }
 
                 selectElement.value = urlVersion;
@@ -237,11 +237,82 @@ const app = {
                 });
         });
     },
+    // Unversioned pages (/en/..., see versions.json) are shared by all versions: their links to the versioned documentation
+    // (/latest/... in the navbar, /en/manual/... in search results) go to the version the reader comes from, given as ?v=
+    // by the redirects of web.config and remembered while browsing these pages. Without it, they go to latest.
+    keepReaderVersion: async function () {
+        const url = new URL(window.location.href);
+        const requestedVersion = url.searchParams.get('v');
+        if (requestedVersion !== null) {
+            // The address of an unversioned page has no version, i.e. when shared
+            url.searchParams.delete('v');
+            history.replaceState(history.state, '', url);
+        }
+        let version = requestedVersion;
+        try {
+            version ??= sessionStorage.getItem(this.readerVersionKey);
+        } catch {
+            // Storage can be unavailable (i.e. some private modes)
+        }
+        if (!version) return;
+
+        let versions;
+        try {
+            versions = await (await fetch('/versions.json')).json();
+        } catch (error) {
+            console.log('Error loading versions.json:', error);
+            return;
+        }
+        // Only a hosted version: latest, or an old link to a version that isn't (i.e. /2.0/ReleaseNotes/), go to latest
+        const isHosted = (versions.docs || []).some(doc => doc.url === version);
+        if (requestedVersion !== null) {
+            try {
+                if (isHosted) {
+                    sessionStorage.setItem(this.readerVersionKey, version);
+                } else {
+                    sessionStorage.removeItem(this.readerVersionKey);
+                }
+            } catch {
+                // Storage can be unavailable (i.e. some private modes)
+            }
+        }
+        if (!isHosted) return;
+        const unversioned = versions.unversioned || [];
+
+        const versionedHref = href => {
+            const url = new URL(href, window.location.href);
+            const match = url.origin === window.location.origin && url.pathname.match(/^\/(latest\/)?([a-z]{2})\/(.*)$/);
+            if (!match) return null;
+            const section = match[3].split('/')[0];
+            if (!match[1] && (!section || unversioned.includes(section))) return null;
+            return `/${version}/${match[2]}/${match[3]}${url.search}${url.hash}`;
+        };
+        const updateLink = event => {
+            const link = event.target.closest && event.target.closest('a[href]');
+            const href = link && versionedHref(link.href);
+            if (href) link.href = href;
+        };
+        document.addEventListener('click', updateLink, true);
+        document.addEventListener('auxclick', updateLink, true);
+    },
     start: function () {
 
+        // i.e. /en/contributors/index.html, as opposed to /4.4/en/manual/index.html
+        const isUnversioned = /^[a-z]{2}$/.test(window.location.pathname.split('/')[1]);
+        if (isUnversioned) {
+            // These pages have no version, and only exist in English
+            this.keepReaderVersion();
+            return;
+        }
+
         this.waitForNavbarAndAddLanguageNavigation();
-        this.addVersionNavigation();
-        this.loadVersions();
+
+        // Pages without a table of contents have nowhere to put the version selector,
+        // and throwing here would stop docfx from rendering the rest of the page (i.e. the navbar)
+        if (document.getElementById("toc")) {
+            this.addVersionNavigation();
+            this.loadVersions();
+        }
     },
     configureHljs: function (hljs) {
         hljs.registerLanguage('gdscript', gdscript);

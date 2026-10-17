@@ -8,7 +8,7 @@
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
-The Scene Editor shows the position of directional lights with the following icon:
+The Scene editor shows the position of directional lights with the following icon:
 
 ![media/DirectionalLight.png](media/DirectionalLight.png) 
 
@@ -47,7 +47,7 @@ This an example of a shadow map generated from a directional light, using four c
 
 ### See shadow cascades in the editor
 
-In the **Property Grid**, under the **Shadow** properties, enable the **Debug** option.
+In the **Property grid**, under the **Shadow** properties, enable the **Debug** option.
 
 | Cascades debug off    | Cascades debug on     
 | ---------------------- | ----------
@@ -68,7 +68,7 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 | Partition mode      | <p><br>How the cascade split distance is determined.</p></br> <p><br> **Manual**: the split is defined manually for each cascade, in percentage of the visible depth range. A value of 0.1 for a cascade means that the cascade is rendered on the distance 0.1 * (VisibleDepthMax - VisibleDepthMin)<p><br> <p><br> **Logarithmic**: the split is automatically calculated using a logarithmic scale <p><br> The PSSM factor lets you blend from a pure logarithmic scale (0.0f) to a pure uniform scale (1.0f)<p><br>
 | Depth Bias          | The amount of depth to add to the sampling depth to avoid the phenomenon of shadow acne
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal
-| Debug               | Displays the shadow map cascades in the Scene Editor
+| Debug               | Displays the shadow map cascades in the Scene editor
 
 ## See also
 

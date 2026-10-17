@@ -17,8 +17,8 @@
 
     ![Choose UI](media/select-type-UI.png)
 
-    >[!Note]
-    >This has no effect on how the sprite is rendered at runtime, but lets you set slightly different properties, including sprite borders.
+    > [!NOTE]
+    > This has no effect on how the sprite is rendered at runtime, but lets you set slightly different properties, including sprite borders.
 
 2. From the **Sprites** list, select the sprite you want to add sprite borders to.
 
@@ -38,15 +38,15 @@
     </video>
 </p>
 
->[!Note]
->By default, the sprite borders match the sprite texture region.
+> [!NOTE]
+> By default, the sprite borders match the sprite texture region.
 
->[!TIP]
->You can zoom in and out using **Ctrl + mousewheel** to make precise selections.
+> [!TIP]
+> You can zoom in and out using **Ctrl + mousewheel** to make precise selections.
 
 > [!TIP]
 >
-> For fine-tune control over the sprite borders, adjusting one-by-one in the **Property Grid**
+> For fine-tune control over the sprite borders, adjusting one-by-one in the **Property grid**
 >
 > ![Adjust sprite borders from Property grid](media/adjust-sprite-border-from-property-grid.png)
 
@@ -56,8 +56,8 @@ By default, sprite borders move as you resize the texture region. To stop this f
 
 ![Lock icon](media/lock-icon.png)
 
->[!Note]
->Sprite borders always stay inside the texture region.
+> [!NOTE]
+> Sprite borders always stay inside the texture region.
 
 ## See also
 

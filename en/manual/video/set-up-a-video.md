@@ -10,16 +10,16 @@
 </video>
 </p>
 
->[!Note]
->Stride supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Stride doesn't have to convert them.
+> [!NOTE]
+> Stride supports most major video formats, but converts them to `.mp4`. To reduce compilation time, we recommend you use `.mp4` files so Stride doesn't have to convert them.
 
 ## 1. Add a video asset
 
 Before you can use a video in your game, you need to import it as an [asset](../assets/index.md). 
 
-1. Drag the video file from **Explorer** into the **Asset View**.
+1. Drag the video file from **Explorer** into the **Asset view**.
 
-    Alternatively, in the **Asset View**, click **Add asset** and select **Media > Video**, then browse to the video you want to add and click **Open**.
+    Alternatively, in the **Asset view**, click **Add asset** and select **Media > Video**, then browse to the video you want to add and click **Open**.
 
     ![Add video asset](media/add-video-asset.png)
 
@@ -29,23 +29,23 @@ Before you can use a video in your game, you need to import it as an [asset](../
 
 3. Click **OK**.
 
-    Stride adds the video as an asset in the **Asset View**. If you imported audio tracks from the video file, Stride adds them as separate [audio assets](../audio/index.md).
+    Stride adds the video as an asset in the **Asset view**. If you imported audio tracks from the video file, Stride adds them as separate [audio assets](../audio/index.md).
 
     ![Video and audio assets](media/video-and-audio-assets.png)
 
-    >[!Note]
-    >Currently, you can't preview videos in the Asset Preview.
+    > [!NOTE]
+    > Currently, you can't preview videos in the Asset preview.
 
     For information about video asset properties, see [Video properties](video-properties.md).
 
 ## 2. Add a video component
 
-1. In the **Scene Editor**, select or create an entity to add a video component to.
+1. In the **Scene editor**, select or create an entity to add a video component to.
 
-    >[!Tip]
-    >It's usually simplest to add the component to the same entity that has the texture plays the video. This just makes it easier to organize your scene.
+    > [!TIP]
+    > It's usually simplest to add the component to the same entity that has the texture plays the video. This just makes it easier to organize your scene.
 
-2. In the **Property Grid**, click **Add component** and select **Video**.
+2. In the **Property grid**, click **Add component** and select **Video**.
 
     ![Add video component](media/add-component.png)
 
@@ -105,15 +105,15 @@ myVideoComponent.Instance.Play();
 
 ## 4. Add the script to the entity
 
-1. In the **Scene Editor**, select the entity that has the video component.
+1. In the **Scene editor**, select the entity that has the video component.
 
-2. In the **Property Grid**, click **Add component** and select the video script.
+2. In the **Property grid**, click **Add component** and select the video script.
 
     ![My video script](media/add-video-script.png)
 
     Stride adds the script as a component.
 
-    You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **Property Grid** under the script component properties.
+    You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **Property grid** under the script component properties.
 
     ![Properties](media/video-script-properties.png)
 

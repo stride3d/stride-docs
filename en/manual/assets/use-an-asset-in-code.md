@@ -77,7 +77,7 @@ using Stride.Core.Serialization;
 
 public override void Start()
 {
-    var loadedModel = Content.Load<Model>(Assets.Models.Sphere_Model);
+    var loadedModel = Content.Load(Assets.Models.Sphere_Model);
 }
 
 public override void Cancel()

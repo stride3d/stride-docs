@@ -3,8 +3,8 @@
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
 
->[!Note]
->This page requires a basic understanding of graphics pipelines.
+> [!NOTE]
+> This page requires a basic understanding of graphics pipelines.
 
 The **graphics compositor** organizes how [scenes](../../scenes/index.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
@@ -20,7 +20,7 @@ The **graphics compositor** organizes how [scenes](../../scenes/index.md) are re
 
 Stride includes a graphics compositor when you create a project.
 
-If you need to create another graphics compositor, in the **Asset View**, click **Add asset** and select **Misc > Graphics compositor**.
+If you need to create another graphics compositor, in the **Asset view**, click **Add asset** and select **Misc > Graphics compositor**.
 
 ![Add graphics compositor](media/add-graphics-compositor.png)
 
@@ -41,10 +41,10 @@ You can also change the graphics compositor at runtime in a script.
 
 You customize the graphics compositor in the **graphics compositor editor**.
 
->[!Note]
->The graphics compositor editor is an experimental feature.
+> [!NOTE]
+> The graphics compositor editor is an experimental feature.
 
-In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
 ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
@@ -54,7 +54,7 @@ The **graphics compositor editor** opens.
 
 ## Nodes
 
-The graphics compositor editor is divided into **nodes**. You can set the properties of each node in the **Property Grid** on the right.
+The graphics compositor editor is divided into **nodes**. You can set the properties of each node in the **Property grid** on the right.
 
 ### Entry points
 
@@ -66,7 +66,7 @@ There are three entry points:
 
 * **Game**, to render your game
 * **Editor**, to render the Game Studio editor
-* **Single view** (referred to as **Utility** in the Property Grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../textures/skyboxes-and-backgrounds.md)
+* **Single view** (referred to as **Utility** in the Property grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../textures/skyboxes-and-backgrounds.md)
 
 Each entry point can use a separate rendering pipeline. For example, the game and editor might share the same forward renderer and [post-processing effects](../post-effects/index.md) while your single view uses a separate forward renderer.
 
@@ -74,7 +74,7 @@ Each entry point can use a separate rendering pipeline. For example, the game an
 
 1. Select the **Entry point** node.
 
-2. In the **Property Grid**, next to the entry point you want to connect (**Editor**, **Game** or **Utility**), select the renderer you want to connect to.
+2. In the **Property grid**, next to the entry point you want to connect (**Editor**, **Game** or **Utility**), select the renderer you want to connect to.
 
     ![Select renderer](media/connect-entry-point.png)
 

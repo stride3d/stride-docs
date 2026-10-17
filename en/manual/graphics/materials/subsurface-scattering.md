@@ -23,7 +23,7 @@ The shadows are much softer in the second image, as more light passes through th
 
 1. Select the material you want to use subsurface shading.
 
-2. In the Property Grid, under **Shading**, next to **Subsurface scattering**, click the arrow button (**Replace**) and choose **Subsurface scattering**.
+2. In the Property grid, under **Shading**, next to **Subsurface scattering**, click the arrow button (**Replace**) and choose **Subsurface scattering**.
 
     ![Enable subsurface scattering](media/enable-subsurface-scattering.png)
 
@@ -47,7 +47,7 @@ The shadows are much softer in the second image, as more light passes through th
 
 There are additional subsurface scattering options in the **[graphics compositor editor](../graphics-compositor/index.md)**. These options apply globally to **all** materials that use subsurface scattering.
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -57,7 +57,7 @@ There are additional subsurface scattering options in the **[graphics compositor
 
     ![Select node](media/select-subsurface-scattering-node.png)
 
-3. In the **Property Grid** (on the right by default), edit the properties.
+3. In the **Property grid** (on the right by default), edit the properties.
 
     ![Subsurface scattering blur](media/subsurface-scattering-blur-properties.png)
 

@@ -16,7 +16,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
 ## Create a navigation mesh
 
-1. In the **Asset View** (bottom by default), click **Add asset > Scenes > Navigation mesh**.
+1. In the **Asset view** (bottom by default), click **Add asset > Scenes > Navigation mesh**.
 
     ![Select Game Settings asset](media/add-navigation-mesh.png)
 
@@ -24,7 +24,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     ![Navigation mesh asset](media/navigation-mesh-in-asset-view.png)
 
-2. With the navigation mesh selected in the **Asset View**, in the **Property Grid**, set the **scene** the navigation meshes in this asset apply to.
+2. With the navigation mesh selected in the **Asset view**, in the **Property grid**, set the **scene** the navigation meshes in this asset apply to.
 
     ![Set navigation mesh properties](media/navigation-mesh-properties.png)
 
@@ -44,8 +44,8 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
 5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh.
 
-    >[!Note]
-    >If you want to create a navigation mesh for a different scene, create another navigation mesh asset and select the scene in the asset properties.
+    > [!NOTE]
+    > If you want to create a navigation mesh for a different scene, create another navigation mesh asset and select the scene in the asset properties.
 
 ## Navigation mesh properties
 
@@ -56,13 +56,13 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 | Build settings            | Advanced settings for the navigation mesh
 | Groups                    | The groups that use this navigation mesh
 
-## Show or hide a navigation mesh in the Scene Editor
+## Show or hide a navigation mesh in the Scene editor
 
-Use the **navigation visibility** menu in the Scene Editor toolbar.
+Use the **navigation visibility** menu in the Scene editor toolbar.
 
 ![Navigation group visibility](media/navigation-group-visibility.png)
 
-To show or hide layers belonging to different groups, use the checkboxes. The colored boxes indicate the color of the groups displayed in the Scene Editor.
+To show or hide layers belonging to different groups, use the checkboxes. The colored boxes indicate the color of the groups displayed in the Scene editor.
 
 | Navigation mesh hidden   | Navigation mesh shown
 |--------------------------| ------------

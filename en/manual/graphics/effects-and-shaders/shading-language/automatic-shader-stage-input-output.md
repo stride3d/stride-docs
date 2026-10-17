@@ -10,39 +10,39 @@ Here's an example of a simple HLSL shader that uses the color from the vertex.
 ```cs
 struct VS_IN
 {
-	float4 pos : POSITION;
-	float4 col : COLOR;
+    float4 pos : POSITION;
+    float4 col : COLOR;
 };
 
 struct PS_IN
 {
-	float4 pos : SV_POSITION;
-	float4 col : COLOR;
+    float4 pos : SV_POSITION;
+    float4 col : COLOR;
 };
 
 PS_IN VS( VS_IN input )
 {
-	PS_IN output = (PS_IN)0;
+    PS_IN output = (PS_IN)0;
 
-	output.pos = input.pos;
-	output.col = input.col;
+    output.pos = input.pos;
+    output.col = input.col;
 
-	return output;
+    return output;
 }
 
 float4 PS( PS_IN input ) : SV_Target
 {
-	return input.col;
+    return input.col;
 }
 
 technique10 Render
 {
-	pass P0
-	{
-		SetGeometryShader( 0 );
-		SetVertexShader( CompileShader( vs_4_0, VS() ) );
-		SetPixelShader( CompileShader( ps_4_0, PS() ) );
-	}
+    pass P0
+    {
+        SetGeometryShader( 0 );
+        SetVertexShader( CompileShader( vs_4_0, VS() ) );
+        SetPixelShader( CompileShader( ps_4_0, PS() ) );
+    }
 }
 ```
 
@@ -53,42 +53,42 @@ Imagine you want to add a normal to your model and modify the resulting color ac
 ```cs
 struct VS_IN
 {
-	float4 pos : POSITION;
-	float4 col : COLOR;
-	float3 normal : NORMAL;
+    float4 pos : POSITION;
+    float4 col : COLOR;
+    float3 normal : NORMAL;
 };
 
 struct PS_IN
 {
-	float4 pos : SV_POSITION;
-	float4 col : COLOR;
-	float3 normal : TEXCOORD0;
+    float4 pos : SV_POSITION;
+    float4 col : COLOR;
+    float3 normal : TEXCOORD0;
 };
 
 PS_IN VS( VS_IN input )
 {
-	PS_IN output = (PS_IN)0;
+    PS_IN output = (PS_IN)0;
 
-	output.pos = input.pos;
-	output.col = input.col;
-	output.normal = input.normal;
+    output.pos = input.pos;
+    output.col = input.col;
+    output.normal = input.normal;
 
-	return output;
+    return output;
 }
 
 float4 PS( PS_IN input ) : SV_Target
 {
-	return input.col * max(input.normal.z, 0.0);
+    return input.col * max(input.normal.z, 0.0);
 }
 
 technique10 Render
 {
-	pass P0
-	{
-		SetGeometryShader( 0 );
-		SetVertexShader( CompileShader( vs_4_0, VS() ) );
-		SetPixelShader( CompileShader( ps_4_0, PS() ) );
-	}
+    pass P0
+    {
+        SetGeometryShader( 0 );
+        SetVertexShader( CompileShader( vs_4_0, VS() ) );
+        SetPixelShader( CompileShader( ps_4_0, PS() ) );
+    }
 }
 ```
 
@@ -114,8 +114,8 @@ Streams regroup the concepts of attributes, varyings and outputs in a single con
 
 Think of streams as global objects that you can access everywhere without specifying as a parameter of your functions.
 
->[!Note]
->You don't have to create a semantic for these variables; the compiler creates them automatically. However, keep in mind that **the variables sharing the same semantic will be merged in the final shader**. This behavior can be useful when you want to use a stream variable locally without inheriting from the shader where it was declared.
+> [!NOTE]
+> You don't have to create a semantic for these variables; the compiler creates them automatically. However, keep in mind that **the variables sharing the same semantic will be merged in the final shader**. This behavior can be useful when you want to use a stream variable locally without inheriting from the shader where it was declared.
 
 After you declare a stream, you can access it at any stage of your shader. The shader compiler takes care of everything. The variables just have to be visible from the calling code (ie in the inheritance hierarchy) like any other variable.
 
@@ -124,12 +124,12 @@ After you declare a stream, you can access it at any stage of your shader. The s
 ```cs
 shader BaseShader
 {
-	stream float3 myVar;
+    stream float3 myVar;
  
-	float3 Compute()
-	{
-		return streams.myVar;
-	}
+    float3 Compute()
+    {
+        return streams.myVar;
+    }
 };
 ```
 
@@ -138,15 +138,15 @@ shader BaseShader
 ```cs
 shader StreamShader
 {
-	stream float3 myVar;
+    stream float3 myVar;
 };
 
 shader ShaderA : BaseShader, StreamShader
 {
-	float3 Test()
-	{
-		return streams.BaseShader.myVar + streams.StreamShader.myVar;
-	}
+    float3 Test()
+    {
+        return streams.BaseShader.myVar + streams.StreamShader.myVar;
+    }
 }
 ```
 
@@ -159,18 +159,18 @@ Let's look at the same HLSL shader as the first example but in SDSL.
 ```cs
 shader MyShader : ShaderBase
 {
-	stream float4 pos : POSITION;
-	stream float4 col : COLOR;
+    stream float4 pos : POSITION;
+    stream float4 col : COLOR;
 
-	override void VSMain()
-	{
-		streams.ShadingPosition = streams.pos;
-	}
+    override void VSMain()
+    {
+        streams.ShadingPosition = streams.pos;
+    }
 
-	override void PSMain()
-	{
-		streams.ColorTarget = streams.col;
-	}
+    override void PSMain()
+    {
+        streams.ColorTarget = streams.col;
+    }
 };
 ```
 
@@ -181,19 +181,19 @@ Now let's add the normal computation.
 ```cs
 shader MyShader : ShaderBase
 {
-	stream float4 pos : POSITION;
-	stream float4 col : COLOR;
-	stream float3 normal : NORMAL;
+    stream float4 pos : POSITION;
+    stream float4 col : COLOR;
+    stream float3 normal : NORMAL;
 
-	override void VSMain()
-	{
-		streams.ShadingPosition = streams.pos;
-	}
+    override void VSMain()
+    {
+        streams.ShadingPosition = streams.pos;
+    }
 
-	override void PSMain()
-	{
-		streams.ColorTarget = streams.col * max(streams.normal.z, 0.0);
-	}
+    override void PSMain()
+    {
+        streams.ColorTarget = streams.col * max(streams.normal.z, 0.0);
+    }
 };
 ```
 
@@ -208,4 +208,4 @@ In SDSL, adding a new attribute is as simple as adding it to the pool of streams
     - [Shader classes, mixins and inheritance](shader-classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
     - [Templates](templates.md)
-	- [Shader stages](shader-stages.md)
+    - [Shader stages](shader-stages.md)

@@ -15,12 +15,12 @@ The more useful properties include:
 | [BlendTreeBuilder](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md)
 | [PlayingAnimations](xref:Stride.Engine.AnimationComponent#Stride_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation
 
->[!Note]
->Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:Stride.Engine.AnimationComponent).
-
->![Animations added to component](media/animations-added-to-component.png)
-
->For more information, see [Set up animations](set-up-animations.md).
+> [!NOTE]
+> Animation clips you reference in scripts must be added to the same entity under the [AnimationComponent](xref:Stride.Engine.AnimationComponent).
+> 
+> ![Animations added to component](media/animations-added-to-component.png)
+>
+> For more information, see [Set up animations](set-up-animations.md).
 
 ## Use the pre-built **AnimationStart** script
 
@@ -28,7 +28,7 @@ Stride includes a pre-built **AnimationStart** script. You can use this script a
 
 To use the **AnimationStart** script:
 
-1. In the **Asset View** (bottom pane by default), click **Add asset**.
+1. In the **Asset view** (bottom pane by default), click **Add asset**.
 
 2. Choose **Add asset > Scripts > Animation start**.
 

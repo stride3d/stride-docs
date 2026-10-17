@@ -27,28 +27,28 @@ You can use the following file types as textures:
 * `.tif`
 * `.tiff`
 
-> [!Note]
+> [!NOTE]
 > * Stride only imports the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Stride; they appear as static images.
 > * Stride currently doesn't support movie files.
 
 ## Add a texture
 
-In the **Asset View**, click **Add asset** > **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
+In the **Asset view**, click **Add asset** > **Texture**, then select a template for the texture (**color**, **grayscale** or **normal map**):
 
 ![Add texture](media/add-texture.png)
 
-> [!Note]
+> [!NOTE]
 > Render targets are a different kind of texture, and don't use images. Instead, they render the output from a [camera](../cameras/index.md). For more information, see [Render targets](../graphics-compositor/render-textures.md).
 
-Alternatively, drag the texture file from Explorer to the Asset View:
+Alternatively, drag the texture file from Explorer to the Asset view:
 
-![Drap and drop a resource file to the Asset View](media/create-assets-drop-resource.png)
+![Drap and drop a resource file to the Asset view](media/create-assets-drop-resource.png)
 
 Then select a texture template (**color**, **grayscale** or **normal map**):
    
 ![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
-Game Studio adds the texture to the Asset View:
+Game Studio adds the texture to the Asset view:
 
 ![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 
@@ -98,9 +98,9 @@ For more information about normal maps, see the [Normal maps](normal-maps.md) pa
 
 Grayscale texture use only the R channel of the image (finalRGBA = originalRRRR).
 
->[!Note]
->If you add a texture to a scene (as a sprite component), and set the texture type to grayscale, it appears red, not monochrome. This is because the image uses the R (red) channel.
-
+> [!NOTE]
+> If you add a texture to a scene (as a sprite component), and set the texture type to grayscale, it appears red, not monochrome. This is because the image uses the R (red) channel.
+>
 > To make the channel monochrome, in the **Sprite** component properties, set the **Type** as **Grayscale**. For more information about the sprite component properties, see [Use sprites](../../sprites/use-sprites.md).
 
 You can use grayscale textures to provide values in [material maps](../materials/material-maps.md). For example, you can use a texture as a **blend map** to blend two material layers:

@@ -13,17 +13,17 @@ If there's no audio listener in the scene, you won't hear audio from audio emitt
 
 To create an audio listener, attach an **audio listener component** to an entity. You can attach this component to any entity.
 
-1. In **Scene view**, select the entity you want to be an audio listener:
+1. In **Scene editor**, select the entity you want to be an audio listener:
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click _Add Component_ and select [Audio listener component](xref:Stride.Audio.AudioListener):
+2. In the **Property grid**, click _Add component_ and select [Audio listener component](xref:Stride.Audio.AudioListener):
 
     ![Add AudioListener component](media/audio-add-audiolistener-component.png)
 
     The entity is now an audio listener.
 
-> [!Warning] 
+> [!WARNING] 
 > On iOS, you can create multiple objects with [Audio listener component](xref:Stride.Audio.AudioListener) in a scene, but only one is used at runtime.
 
 ## See also

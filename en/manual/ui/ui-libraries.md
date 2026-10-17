@@ -10,17 +10,17 @@ Stride projects include a **standard library** of UI elements. You can create yo
 
 ![UI library](media/UI-library.png)
 
-UI libraries are similar to [prefabs](../scenes/prefabs/index.md) in the Scene Editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages. You can also nest libraries inside other libraries, just like [nested prefabs](../scenes/prefabs/nested-prefabs.md).
+UI libraries are similar to [prefabs](../scenes/prefabs/index.md) in the Scene editor; you can create your own elements, save them in a custom UI library, and then use them wherever you need across multiple UI pages. You can also nest libraries inside other libraries, just like [nested prefabs](../scenes/prefabs/nested-prefabs.md).
 
 At runtime, you can re-instantiate UI library roots and insert them into an existing UI tree.
 
 ## Create a UI library
 
-In the **Asset View**, click **Add asset > UI > UI library**.
+In the **Asset view**, click **Add asset > UI > UI library**.
 
 ![Add UI library](media/add-ui-library.png)
 
-Game Studio adds the UI library to the **Asset View**.
+Game Studio adds the UI library to the **Asset view**.
 
 ![Added UI library](media/added-ui-library.png)
 

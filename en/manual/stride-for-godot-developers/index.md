@@ -34,9 +34,9 @@ In summary, while both Stride and Godot offer integrated code editors, Stride's 
 | Godot | Stride |
 |-------|--------|
 | Scene (`PackedScene`) | Prefab / scene asset |
-| Inspector | Property Grid |
-| FileSystem | Solution/Asset View |
-| 2D/3D Viewport | Scene Editor |
+| Inspector | Property grid |
+| FileSystem | Solution/Asset view |
+| 2D/3D Viewport | Scene editor |
 | Node | [`Entity`](xref:Stride.Engine.Entity) |
 | Script attached to Node | Script component ([`SyncScript`](xref:Stride.Engine.SyncScript), [`AsyncScript`](xref:Stride.Engine.AsyncScript), [`StartupScript`](xref:Stride.Engine.StartupScript)) |
 | `[Export]` | `[DataMember]` |
@@ -74,7 +74,7 @@ Stride saves global settings in a single asset, the **Game Settings** asset. You
 * **Physics settings**
 * **Overrides**
 
-To use the Game Settings asset, in the **Asset View**, select **GameSettings** and view its properties in the **Property Grid**.
+To use the Game Settings asset, in the **Asset view**, select **GameSettings** and view its properties in the **Property grid**.
 
 ![Game settings](../stride-for-unity-developers/media/game-settings.png)
 
@@ -113,7 +113,7 @@ In Stride, you add components to entities in the editor much like you attach chi
 To add a component to an entity in Game Studio:
 
 1. Select the entity you want to add the component to.
-2. In the **Property Grid** (on the right by default), click **Add component** and select the component from the drop-down list.
+2. In the **Property grid** (on the right by default), click **Add component** and select the component from the drop-down list.
 
     ![Add component](../stride-for-unity-developers/media/stride-vs-unity-add-component-to-entity.png)
 
@@ -182,7 +182,7 @@ In Godot, direction vectors are commonly derived from the transform basis (for e
 
 ## Assets
 
-Assets are imported and managed in the **Asset View**.
+Assets are imported and managed in the **Asset view**.
 
 ## Resources
 
@@ -239,7 +239,7 @@ public override void Update()
 
     float Horiz = (Input.IsKeyDown(Keys.Left) ? -1f : 0) + (Input.IsKeyDown(Keys.Right) ? 1f : 0);
     float Vert = (Input.IsKeyDown(Keys.Down) ? -1f : 0) + (Input.IsKeyDown(Keys.Up) ? 1f : 0);
-    //Do something else.
+    // Do something else.
 }
 ```
 
@@ -552,7 +552,7 @@ Godot automatically reloads scripts when they are saved, no manual reload is req
 1. In the **Entity Tree** (on the left by default), or in the scene, select the entity you want to add the script to.
 
     ![Select an entity](../scripts/media/select-entity.png)
-2. In the **Property Grid** (on the right by default), click **Add component** and select the script you want to add.
+2. In the **Property grid** (on the right by default), click **Add component** and select the script you want to add.
  
     ![Add script component](../scripts/media/add-script-component.png)
 
@@ -590,7 +590,7 @@ In Stride, you can instantiate entities using prefabs. However unlike Godot, a p
 In Stride, an entity can be instantiated like so:
 
 ```cs
-// Public member fields and properties displayed in the Game Studio Property Grid
+// Public member fields and properties displayed in the Game Studio Property grid
 public Prefab CarPrefab;
 public Vector3 SpawnPosition;
 public Quaternion SpawnRotation;

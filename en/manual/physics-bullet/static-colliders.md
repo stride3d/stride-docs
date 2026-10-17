@@ -13,11 +13,11 @@
    
 1. Select the entity you want to make a static collider.
 
-2. In the **Property Grid**, click **Add component** and select **Static Collider**.
+2. In the **Property grid**, click **Add component** and select **Static Collider**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
-3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property Grid**, expand the **Static Collider component** to view its properties.
+3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property grid**, expand the **Static Collider component** to view its properties.
 
 4. Next to **Collider Shapes**, click ➕ (**Add**) and select the shape you want.
 
@@ -25,7 +25,7 @@
 
 ## Static collider properties
 
-You can adjust the static collider properties in the **Property Grid**.
+You can adjust the static collider properties in the **Property grid**.
 
 ![Static collider properties](media/static-collider-properties.png)
 

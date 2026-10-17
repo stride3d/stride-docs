@@ -26,9 +26,9 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
 ## 2. Set up the models and animation
 
-1. In the **Asset View**, open the **Models** folder and drag and drop the **mannequinModel** into the scene. The mannequinModel contains a skeleton asset that we'll use for our sword slash animation.
+1. In the **Asset view**, open the **Models** folder and drag and drop the **mannequinModel** into the scene. The mannequinModel contains a skeleton asset that we'll use for our sword slash animation.
 
-2. With the **mannequinModel** selected, in the **Property Grid**, select **Add component > Animations**. This adds an Animation component to the model.
+2. With the **mannequinModel** selected, in the **Property grid**, select **Add component > Animations**. This adds an Animation component to the model.
 
     ![Add Animations](media/add-animation.png)
 
@@ -46,7 +46,7 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Select an animation asset](media/select-animation-asset-in-asset-picker.png)
 
-7. To play the animation at runtime, we need to add an [animation script](../../animation/animation-scripts.md). We can use the pre-built **AnimationStart** script. In the **Asset View** (bottom pane by default), click **Add asset** and choose **Script > Animation start**.
+7. To play the animation at runtime, we need to add an [animation script](../../animation/animation-scripts.md). We can use the pre-built **AnimationStart** script. In the **Asset view** (bottom pane by default), click **Add asset** and choose **Script > Animation start**.
 
     ![Add animation script](../../animation/media/animations-additive-animations-animation-start.png)
 
@@ -58,12 +58,12 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     9b. If Game Studio asks if you want to reload the assemblies, click **Reload assemblies**.
 
-9. With the **mannequinModel** selected, in the **Property Grid**, click **Add component** and select the **AnimationStart** script.
+9. With the **mannequinModel** selected, in the **Property grid**, click **Add component** and select the **AnimationStart** script.
 
     ![Add AnimationStart script](../../animation/media/select-animation-start.png)
 
-    >[!Note]
-    >If the animation script isn't in the list of components, in the taskbar, save your project and click **Reload game assemblies and update scripts**.
+    > [!NOTE]
+    > If the animation script isn't in the list of components, in the taskbar, save your project and click **Reload game assemblies and update scripts**.
 
 10. Under the **Animation** component, under **Item 0**, click 👆 (**Select an asset**).
 
@@ -73,13 +73,13 @@ This tutorial demonstrates how to use particles to create a [trail effect](../ri
 
     ![Select an animation asset](media/select-animation-asset-in-asset-picker.png)
 
-12. Now let's give the mannequin a weapon. In the **Asset View**, browse to the **Models** folder and drag the **SwordModel** to the mannequinModel in the Entity Tree. This makes the SwordModel a child entity of the **mannequinModel**.
+12. Now let's give the mannequin a weapon. In the **Asset view**, browse to the **Models** folder and drag the **SwordModel** to the mannequinModel in the Entity Tree. This makes the SwordModel a child entity of the **mannequinModel**.
 
 13. In the Entity Tree, expand **mannequinModel** to see its child entities, and select **SwordModel**.
 
     ![SwordModel child entity](media/SwordModel-child-entity.png)
 
-14. With the in the **Property Grid**, click **Add component** and select **Model Node Link**. This is called a **Bone Link** in some versions of Stride.
+14. With the in the **Property grid**, click **Add component** and select **Model Node Link**. This is called a **Bone Link** in some versions of Stride.
 
     ![Add Model Node Link](media/add-model-node-link.png)
 
@@ -103,7 +103,7 @@ We have a swinging sword animation. Next, let's add a trail effect.
 
 First we'll build a basic trail, just to see how it looks.
 
-1. In Game Studio, select the **SwordModel**. In the **Property Grid**, click **Add component** and select **Particle System**.
+1. In Game Studio, select the **SwordModel**. In the **Property grid**, click **Add component** and select **Particle System**.
 
     ![Add Particle System](media/add-particle-system.png)
 
@@ -167,8 +167,8 @@ Because the particles are rendered as billboards, the segments of the trail inte
 
 1. In the SwordModel properties, under **Particle System > Source > Emitters**, next to **Initializers**, click ➕ (**Add**) and select **Spawn Order**.
 
-    >[!Note]
-    >Make sure you don't select **Spawn Order (Parent)** or **Spawn Order (Group)**.
+    > [!NOTE]
+    > Make sure you don't select **Spawn Order (Parent)** or **Spawn Order (Group)**.
 
     ![Add spawn-order initializer](media/add-spawn-order-initializer.png)
 
@@ -208,7 +208,7 @@ To fix the color, we'll give the particles a "swoosh" texture:
 
 1. Save the texture image above (**swoosh.png**) to disk.
 
-2. Import it into the project. To do this, in the **Asset View**, click **Add asset > Textures > Color** and select **swoosh.png**.
+2. Import it into the project. To do this, in the **Asset view**, click **Add asset > Textures > Color** and select **swoosh.png**.
 
     ![Add a texture](media/add-texture.png)
 
@@ -246,13 +246,13 @@ So far, we've created a particle effect by attaching it as a component to the sw
 
     ![Create prefab from selection](media/create-prefab-from-selection.png)
 
-    Game Studio creates a prefab from the SwordModel and adds it to the Asset View. By creating a prefab from the selection, we can quickly copy over the options we've set up so far.
+    Game Studio creates a prefab from the SwordModel and adds it to the Asset view. By creating a prefab from the selection, we can quickly copy over the options we've set up so far.
 
 2. We don't want the SwordModel itself to be a prefab — we just used it as a template to create the prefab from. It should be separate from our new particle effect prefab, so right-click it and select **Break link to prefab**.
 
     ![Break link to prefab](media/break-link-to-prefab.png)
 
-3. Because naming things properly makes everything easier, rename the prefab *SwordTrail*. To do this, in the **Asset View**, right-click the **SwordModel** prefab, select **Rename**, and type *SwordTrail*.
+3. Because naming things properly makes everything easier, rename the prefab *SwordTrail*. To do this, in the **Asset view**, right-click the **SwordModel** prefab, select **Rename**, and type *SwordTrail*.
 
     ![Rename prefab](media/rename-prefab.png)
 
@@ -332,9 +332,9 @@ Thanks to our script, the particle effect appears at the start of the sword swin
 
 ## 9. Adjust the trail start time
 
-1. With the **Sword_R** animation asset selected, check the swing animation in the **Asset Preview** in the bottom-right. (If the Asset Preview isn't displayed, check **View > Asset Preview**.)
+1. With the **Sword_R** animation asset selected, check the swing animation in the **Asset preview** in the bottom-right. (If the Asset preview isn't displayed, check **View > Asset preview**.)
 
-    The Asset Preview shows the animation length in seconds. If you look closely, you can see the mannequin doesn't begin to swing the sword down until about 0.1 seconds into the animation. Let's set the trail effect to spawn just when the mannequin swings.
+    The Asset preview shows the animation length in seconds. If you look closely, you can see the mannequin doesn't begin to swing the sword down until about 0.1 seconds into the animation. Let's set the trail effect to spawn just when the mannequin swings.
 
 2. Select the **SwordModel**.
 

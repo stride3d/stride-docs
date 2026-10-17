@@ -5,7 +5,7 @@
 
 [!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
 
-For [colliders](colliders.md) to interact, you need to set their shape in the **Property Grid**. You can specify a geometric shape, or use a collider shape asset.
+For [colliders](colliders.md) to interact, you need to set their shape in the **Property grid**. You can specify a geometric shape, or use a collider shape asset.
 
 ![Select a collider shape](media/select-collider-shape.png)
 
@@ -100,7 +100,7 @@ You can also create **collider shape assets** and use them as your collider shap
 
 ## Create a collider shape asset
 
-1. In the **Asset View** (bottom by default), click **Add asset**.
+1. In the **Asset view** (bottom by default), click **Add asset**.
 
 2. Select **Physics**, then select the shape you want to create.
 
@@ -108,13 +108,13 @@ You can also create **collider shape assets** and use them as your collider shap
 
 Game Studio creates the new collider shape asset in the **CollisionMeshes** folder.
 
-![Collider shape asset in Asset View](media/collider-shape-in-asset-view.png)
+![Collider shape asset in Asset view](media/collider-shape-in-asset-view.png)
 
 ### Create a collider shape asset from a model
 
 This is useful to quickly create a collider shape that matches a model.
 
-1. In the **Asset View** (bottom by default), click **Add asset**.
+1. In the **Asset view** (bottom by default), click **Add asset**.
 
 2. Select **Physics** > **Convex hull**.
 
@@ -136,7 +136,7 @@ Game Studio creates a collider shape asset from the model.
 
     ![Select collider shape asset](media/select-collider-shape-asset.png)
 
-    To do this, drag the asset from the **Asset View** to the **Shape** field in the Property Grid. Alternatively, click 👆 (**Select an asset**) and browse to the asset.
+    To do this, drag the asset from the **Asset view** to the **Shape** field in the Property grid. Alternatively, click 👆 (**Select an asset**) and browse to the asset.
 
 ## See also
 

@@ -6,7 +6,7 @@
 
 If you enable **dynamic navigation**, entities with navigation components don't need a [navigation mesh](navigation-meshes.md) asset. Instead, the entities generate navigation meshes dynamically.
 
-> [!Note]
+> [!NOTE]
 > Make sure that the scenes you want the entities to navigate dynamically have [navigation bounding boxes](navigation-bounding-boxes.md).
 
 ## Enable dynamic navigation
@@ -23,11 +23,11 @@ You can enable and disable dynamic navigation in the global [game settings](../f
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-3. In the **Asset View** (the bottom pane by default), select the **Game Settings** asset.
+3. In the **Asset view** (the bottom pane by default), select the **Game Settings** asset.
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-4. In the **Property Grid** (the right-hand pane by default), under **Navigation Settings**, expand **Dynamic navigation mesh**.
+4. In the **Property grid** (the right-hand pane by default), under **Navigation Settings**, expand **Dynamic navigation mesh**.
 
    ![Game settings](media/expand-dynamic-navigation-mesh.png)
 
@@ -62,15 +62,15 @@ dynamicNavigationMeshSystem.AutomaticRebuild = false;
 
 if (/* any condition that should cause the navigation mesh to update (eg open/close door) */)
 {
-	// Start an asynchronous rebuild of the navigation mesh
-	var rebuildTask = dynamicNavigationMeshSystem.Rebuild();
-	rebuildTask.ContinueWith((x) =>
-	{
-		if (x.Result.Success)
-		{
-			// The navigation mesh is successfully rebuilt
-		}
-	});
+    // Start an asynchronous rebuild of the navigation mesh
+    var rebuildTask = dynamicNavigationMeshSystem.Rebuild();
+    rebuildTask.ContinueWith((x) =>
+    {
+        if (x.Result.Success)
+        {
+            // The navigation mesh is successfully rebuilt
+        }
+    });
 }
 ```
 

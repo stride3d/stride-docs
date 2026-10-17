@@ -60,6 +60,6 @@ public class STRDIAG004
 
 ## Solution
 
-To resolve the warning 1, add a getter to the property with a `public`/`internal`/`internal protected` accessibility or remove the @Stride.Core.DataMemberAttribute .
+To resolve the warning 1, add a getter to the property with a `public`/`internal`/`internal protected` accessibility or remove the @Stride.Core.DataMemberAttribute.
 
-To resolve the warning 2, increase the accessibility of the property getter to `public`/`internal`/`internal protected` accessibility or remove the @Stride.Core.DataMemberAttribute .
+To resolve the warning 2, increase the accessibility of the property getter to `public`/`internal`/`internal protected` accessibility or remove the @Stride.Core.DataMemberAttribute.

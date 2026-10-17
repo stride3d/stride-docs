@@ -6,7 +6,7 @@
 
 **Navigation bounding boxes** define the area that [navigation meshes](navigation-meshes.md) cover. You can use them to create smaller navigation areas in your scene, rather than having a mesh cover the entire scene.
 
-The Scene Editor displays the bounding box as a blue outline.
+The Scene editor displays the bounding box as a blue outline.
 
 ![Bounding box shown](media/navigation-bounding-box-on.jpg) 
 
@@ -16,7 +16,7 @@ To create a navigation bounding box, add a **navigation bounding box component**
 
 1. In the scene, select the entity you want to contain the bounding box, or create a new entity.
 
-2. With the entity selected, in the **Property Grid**, click **Add component** and select **Navigation bounding box**.
+2. With the entity selected, in the **Property grid**, click **Add component** and select **Navigation bounding box**.
 
     ![Add navigation bounding box](media/add-navigation-bounding-box.png)
 
@@ -28,9 +28,9 @@ To create a navigation bounding box, add a **navigation bounding box component**
 
 4. Use the entity's **transform component** to position the bounding box in your scene.
 
-## Show or hide the bounding box in the Scene Editor
+## Show or hide the bounding box in the Scene editor
 
-In the Scene Editor toolbar, open the **gizmo options** menu and use the **Navigation bounding box** checkbox.
+In the Scene editor toolbar, open the **gizmo options** menu and use the **Navigation bounding box** checkbox.
 
 ![Navigation bounding box checkbox](media/navigation-bounding-box-checkbox.png)
 

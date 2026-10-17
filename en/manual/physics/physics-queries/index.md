@@ -5,7 +5,7 @@
 
 **Physics Queries** are a set of operations to test and retrieve physics object in a given simulation. The most well known form of those queries is the [RayCast](raycasts.md) which traces an invisible line through the scene to find intersecting [Collidables](../colliders.md).
 
-> [!Note]
+> [!NOTE]
 > Physics queries use **collider shapes** to find objects. They ignore entities that have no Collidable Component attached or no collider shape set, see [Collidables](../colliders.md).
 
 ## Query types

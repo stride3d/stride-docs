@@ -20,11 +20,11 @@ These pages provide information about how to contribute to the engine as well as
     > [!NOTE]
     > After creating that pull request and if it's your first time contributing a [CLA assistant](https://cla-assistant.io/) will ask you to sign the [.NET Foundation Contribution License Agreement](https://dotnetfoundation.org/docs/default-source/default-document-library/contribution-license-agreement.pdf?sfvrsn=40626e42_3).
 
-### Paid work 💵
+### Bounties 💵
 
 We also have funded [Open Collective Projects](https://opencollective.com/stride3d/projects/) in case **you want to earn a little extra**. These are either bug bounties, requests for new features or other tasks that are deemed important enough. **We can also create a new project for you** in case you are working on something large that the community would like to see.
 
-For more information, visit [Paid work](bug-bounties.md).
+For more information, visit [Bounties](bug-bounties.md).
 
 ## Coding style
 

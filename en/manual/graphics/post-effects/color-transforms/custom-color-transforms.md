@@ -52,8 +52,8 @@ To create a custom color transform, you need to write two files: an effect shade
         }
     };
     ```
-    >[!Note]
-    >Make sure the shader name in the file (eg `MyColorTransformShader` in the code above) is the same as the filename (eg *MyColorTransformShader.sdsl*).
+    > [!NOTE]
+    > Make sure the shader name in the file (eg `MyColorTransformShader` in the code above) is the same as the filename (eg *MyColorTransformShader.sdsl*).
 
 ## 2. Create a C# class
 
@@ -98,8 +98,8 @@ To create a custom color transform, you need to write two files: an effect shade
         }
     }
     ```
-    >[!Note]
-    >Make sure the class name in the file (eg `MyColorTransform` in the class above) is the same as the filename (eg *MyColorTransform.cs*).
+    > [!NOTE]
+    > Make sure the class name in the file (eg `MyColorTransform` in the class above) is the same as the filename (eg *MyColorTransform.cs*).
 
 3. Save all the files in the solution (**File > Save All**).
 
@@ -107,20 +107,20 @@ To create a custom color transform, you need to write two files: an effect shade
 
     ![Reload assemblies](../../../particles/tutorials/media/reload-assemblies.png)
 
-    The **Asset View** lists the class and effect shader in the same directory as your scripts (eg **MyGame.Game**).
+    The **Asset view** lists the class and effect shader in the same directory as your scripts (eg **MyGame.Game**).
 
-    ![Shader in Asset View](media/post-effect-shader.png)
+    ![Shader in Asset view](media/post-effect-shader.png)
 
-    >[!Note]
-    >In some situations, Game Studio incorrectly detects the shader as a script, as in the screenshot below:
-
-    >![Shader as script](media/broken-script-icon.png)
-    
-    >If this happens, restart Game Studio (**File > Reload project**).
+    > [!NOTE]
+    > In some situations, Game Studio incorrectly detects the shader as a script, as in the screenshot below:
+    >
+    > ![Shader as script](media/broken-script-icon.png)
+    >
+    > If this happens, restart Game Studio (**File > Reload project**).
 
 ## 3. Use a custom color transform
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -130,7 +130,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 2. Select the **Post-processing effects** node.
 
-3. In the **Property Grid**, under **Color transforms**, click ➕ (**Change**) and select your color transform (eg **MyColorTransform**).
+3. In the **Property grid**, under **Color transforms**, click ➕ (**Change**) and select your color transform (e.g. **MyColorTransform**).
 
     ![Add script](media/add-script-in-properties.png)
 
@@ -144,8 +144,8 @@ To create a custom color transform, you need to write two files: an effect shade
 
     When you adjust the properties, Game Studio updates the effect automatically.
 
->[!Warning]
->Unfortunately, this part of Game Studio has a memory leak problem. Every time you change a value in the graphics compositor, it uses 60MB of memory. To prevent Game Studio using too much memory, we recommend you restart it after you change a property a few times. This is a known issue.
+> [!WARNING]
+> Unfortunately, this part of Game Studio has a memory leak problem. Every time you change a value in the graphics compositor, it uses 60MB of memory. To prevent Game Studio using too much memory, we recommend you restart it after you change a property a few times. This is a known issue.
 
 ## See also
 

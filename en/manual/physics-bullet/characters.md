@@ -9,18 +9,18 @@
 
 ## Add a character component to an entity
 
-1. In the **Scene Editor**, select the entity you want to add the component to.
+1. In the **Scene editor**, select the entity you want to add the component to.
 
-2. In the **Property Grid**, click **Add component** and select **Character**.
+2. In the **Property grid**, click **Add component** and select **Character**.
 
     ![Add character component](media/add-character-component.png)
 
->[!Note]
+> [!NOTE]
 > For the character collider to interact with other physics objects, you also need to set a  collider shape in the collider component properties. The capsule shape is appropriate for most character colliders. For more information, see [collider shapes](collider-shapes.md).
 
 ## Component properties
 
-You can adjust the character component properties in the **Property Grid**.
+You can adjust the character component properties in the **Property grid**.
 
 Property              |   Description
 ----------------------|-----------------------

@@ -94,7 +94,7 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `appsettings.Development.json` - ASP.NET Core configuration file
 - `Program.cs` - ASP.NET Core startup file
 - `Stride.Web.csproj` - ASP.NET Core project file
-- `Stride.Web.sln` - ASP.NET Core solution file
+- `Stride.Web.slnx` - ASP.NET Core solution file
 - `Stride.Web.csproj.user` - ASP.NET Core project file
 - `web.config` - Configuration file for IIS deployment
 - `web.Release.config` - Configuration file for Windows ASP.NET Core deployment

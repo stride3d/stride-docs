@@ -9,7 +9,7 @@ When you declare a public property or field in a script, the property becomes ac
 
 You can attach the same script to multiple entities and set different property values on each entity.
 
-> [!Note] 
+> [!NOTE] 
 > Properties and fields must be [serializable](serialization.md) to be used in Game Studio. 
 
 ## Add a public property or field
@@ -19,42 +19,42 @@ This script has a public property (`DelayTimeOut`):
 ```cs
 public class SampleSyncScript : StartupScript
 {
-	// This public member will appear in Game Studio
-	public float DelayTimeOut { get; set; }
+    // This public member will appear in Game Studio
+    public float DelayTimeOut { get; set; }
 }
 ```
 
 Game Studio shows the `DelayTimeOut` property in the script component properties:
 
-![Public property appears in the Property Grid](media/scripts-in-stride-change-value-public-property.png)
+![Public property appears in the Property grid](media/scripts-in-stride-change-value-public-property.png)
 
->[!Note]
->As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
+> [!NOTE]
+> As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, they shouldn't try to call methods or access Stride runtime API.
 
 For example, the following code will create problems, as it tries to access `Entity.Components`, which is only available at runtime:
 
 ```cs
 public class SampleSyncScript : StartupScript
 {
-	private float delayTimeOut;
-	// This public member will appear in Game Studio
-	public float DelayTimeOut
-	{
-		get { return delayTimeOut; }
-		set
-		{ 
-			delayTimeOut = value;
-			Entity.Components.Add(new SkyboxComponent());
-		}
-	}
+    private float delayTimeOut;
+    // This public member will appear in Game Studio
+    public float DelayTimeOut
+    {
+        get { return delayTimeOut; }
+        set
+        { 
+            delayTimeOut = value;
+            Entity.Components.Add(new SkyboxComponent());
+        }
+    }
 }
 ```
 
 If you want to include code like this in a property or field, hide it so Game Studio doesn't display it (see below). 
 
-## Hide properties or fields in the Property Grid
+## Hide properties or fields in the Property grid
 
-If you don't want Game Studio to show a property in the Property Grid, you can:
+If you don't want Game Studio to show a property in the Property grid, you can:
 
 * declare your member internal or private, or
 * use the [DataMemberIgnore](xref:Stride.Core.DataMemberIgnoreAttribute) attribute like this:
@@ -63,7 +63,7 @@ If you don't want Game Studio to show a property in the Property Grid, you can:
 // This public property isn't available in Game Studio
 [DataMemberIgnore]
 public float DelayTimeOut { get; set; }
-	
+    
 ```
 
 Game Studio no longer shows the property:
@@ -98,7 +98,7 @@ Enable documentation file generation:
 
 On next reload, the Game Studio should display the documentation:
 
-![The description now shows in the Property Grid](media/userdoc-example.png)
+![The description now shows in the Property grid](media/userdoc-example.png)
 
 ## MemberRequiredAttribute
 The [`MemberRequiredAttribute`](xref:Stride.Core.Annotations.MemberRequiredAttribute) is used to specify if a field or property should not be left null in the editor. If no values are set for this member, a warning or error will be logged when building your game.

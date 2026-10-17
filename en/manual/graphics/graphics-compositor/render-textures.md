@@ -12,7 +12,7 @@ For API details, see [Textures and render textures](../low-level-api/textures-an
 
 Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for a new camera to use. For more information about camera slots, see [Camera slots](../cameras/camera-slots.md).
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
@@ -38,7 +38,7 @@ Camera slots link the graphics compositor to the cameras in your scene. You need
 
 2. Position the entity so the camera captures the area of the scene you want to render to a texture.
 
-3. In the entity **Property Grid**, enable the **Camera** component using the checkbox.
+3. In the entity **Property grid**, enable the **Camera** component using the checkbox.
 
     ![Enable camera component](media/enable-camera-component.png)
 
@@ -48,7 +48,7 @@ Camera slots link the graphics compositor to the cameras in your scene. You need
 
 ## 3. Create a render target texture
 
-In the **Asset View**, click **Add asset** and select **Texture** > **Render target**.
+In the **Asset view**, click **Add asset** and select **Texture** > **Render target**.
 
 ![Add render target](media/add-render-target.png)
 
@@ -76,7 +76,7 @@ There are various ways you can use the render target texture.
 
 1. Create an entity and position it where you want to display the texture.
 
-2. With the entity selected, in the **Property Grid**, click **Add component** and add a **sprite** component.
+2. With the entity selected, in the **Property grid**, click **Add component** and add a **sprite** component.
 
     ![Add sprite component](media/add-sprite-component.png)
 
@@ -105,14 +105,14 @@ To display a render texture in your scene, you need at least two renderers:
 
 This page describes the simplest way to do this from scratch, using two cameras and two renderers. Depending on your pipeline, you might need to create a different setup.
 
-> [!Warning]
+> [!WARNING]
 > These instructions involve deleting your existing renderers for the game entry point. You might want to make a backup of your project in case you want to restore your pipeline afterwards.
 
 1. In the graphics compositor editor, select the **Entry points** node.
 
     ![Entry points node](media/entry-points-node.png)
 
-2. In the **Property Grid** on the right, next to **Game renderer**, click the arrow button (**Replace**) and select **None** to delete your existing renderers.
+2. In the **Property grid** on the right, next to **Game renderer**, click the arrow button (**Replace**) and select **None** to delete your existing renderers.
 
     ![Cleared game renderers](media/game-renderers-cleared.png)
 

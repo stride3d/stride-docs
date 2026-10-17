@@ -6,9 +6,6 @@ This page explains how to launch your game using Game Studio or Visual Studio.
 
 ## Launch a game from Game Studio
 
-> [!NOTE]
-> Game Studio can't launch games for the Windows Store or UWP (Universal Windows Platform) platforms. To launch a game for those platforms, use Visual Studio (see below).
-
   1. In the **Solution Explorer**, right-click in your target platform, then choice **Set as current project**.
 
       ![Platform selection](media/launch-your-game-game-studio-profiles.webp)
@@ -32,7 +29,7 @@ This page explains how to launch your game using Game Studio or Visual Studio.
 
 2. In the Visual Studio toolbar, set the appropriate project as the startup project.
          
-	![Select build profile in Visual Studio](media/launch-your-game-visual-studio-profiles.webp)
+    ![Select build profile in Visual Studio](media/launch-your-game-visual-studio-profiles.webp)
    
    The startup project configuration is updated automatically.
  

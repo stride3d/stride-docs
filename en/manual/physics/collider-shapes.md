@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-Each [collidables](colliders.md) should have a collider defining its shape. You can set them through the **Property Grid**.
+Each [collidables](colliders.md) should have a collider defining its shape. You can set them through the **Property grid**.
 
 ![Collider Types](media/collider-types.png)
 
@@ -34,7 +34,7 @@ Convex shapes are easier to test for collision, simulate and find intersections 
 
 ## Creating a Convex Hull
 
-1. In the Asset View pane, press the Add asset button, hover on the Physics-Bepu option and select Convex hull
+1. In the Asset view pane, press the Add asset button, hover on the Physics-Bepu option and select Convex hull
 
    ![Adding a convex hull](media/convex-hull-add-asset.png)
 

@@ -6,7 +6,7 @@
 
 **Initializers** control the states of particles such as position, velocity, size, and so on when the particles are first spawned. They have no effect on particles spawned on previous frames.
 
-> [!Note] 
+> [!NOTE] 
 > Some [updaters](updaters.md) act change the particle's value at the *end* of the frame. They effectively overwrite any initial values set by a similar initializer. Such is the case with all animations. They operate on the particle's lifetime and a color animation updater will overwrite any initial values from a color initializer.
 
 Similarly, initializers which operate on the same field are exclusive and only the bottom one will have any effect, since they are executed in order. For example if you assign two color initializer, only the second one will have any effect.]
@@ -19,7 +19,7 @@ Several properties are common across many initializers.
 
 | Property                    | Description
 |-----------------------------|-------------
-| Debug draw                  | Draws a debug wireframe in the scene to show the boundaries of the initializer. This is only visible in the Scene Editor, not at runtime.
+| Debug draw                  | Draws a debug wireframe in the scene to show the boundaries of the initializer. This is only visible in the Scene editor, not at runtime.
 | Position inheritance        | Inherit the particle system component position, as defined in the particle entity's Transform component
 | Position offset             | Additional translation of the module. If it inherits the parent position, this is applied on top of the inherited position.
 | Rotation inheritance        | Inherit the particle system component's rotation, as defined in the Transform component
@@ -195,13 +195,8 @@ This initializer requires the parent emitter to also have a Spawn Order initiali
 ## See also
 
 * [Create particles](create-particles.md)
-
 * [Emitters](emitters.md)
-
 * [Shapes](shapes.md)
-
 * [Materials](materials.md)
-
 * [Spawners](spawners.md)
-
 * [Updaters](updaters.md)

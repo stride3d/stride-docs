@@ -6,8 +6,8 @@
 
 When you **stream** textures, Stride only loads them when they're needed. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.
 
->[!Note]
->Currently, only textures can be streamed.
+> [!NOTE]
+> Currently, only textures can be streamed.
 
 ## How Stride streams textures
 
@@ -37,11 +37,11 @@ Streaming is enabled by default for all textures. You might want to disable stre
 
 ## Enable or disable streaming on a texture
 
-1. In the **Asset View**, select the texture.
+1. In the **Asset view**, select the texture.
 
     ![Select normal map texture](media/select-texture.png)
 
-2. In the **Property Grid**, under **Format**, use the **Stream** check box.
+2. In the **Property grid**, under **Format**, use the **Stream** check box.
 
     ![Enable streaming](media/enable-streaming.png)
 

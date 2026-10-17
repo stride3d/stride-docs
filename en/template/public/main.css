@@ -73,12 +73,12 @@ blockquote {
 
 /* Adjust content font-size and margins */
 .content > article {
-    > * {
+    > *:not(.row) {
         margin-left: 0.4rem;
     }
 
     > h1, > h2, > p:has(span.badge) {
-        margin-left: 0rem;
+        margin-left: 0rem !important;
     }
 
     > h1 {

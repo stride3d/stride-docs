@@ -52,8 +52,8 @@ However, if you spawn several particles per second or your particles vary in lif
 
 This adds a spawn order initializer to the emitter. It doesn't have any properties, but it gives the particles a SpawnID we can sort them by.
 
->[!Note]
->Sorting by depth might work in niche cases, but this doesn't preserve the order between different frames. We don't recommend it for most situations.
+> [!NOTE]
+> Sorting by depth might work in niche cases, but this doesn't preserve the order between different frames. We don't recommend it for most situations.
 
 ## Texture coordinates
 

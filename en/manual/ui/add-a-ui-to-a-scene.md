@@ -6,11 +6,11 @@
 
 After you create a [UI page](ui-pages.md), add it to the scene as a component on an entity.
 
-1. In the **Scene Editor**, create an empty entity. To do this, right-click the scene and select **Empty entity**.
+1. In the **Scene editor**, create an empty entity. To do this, right-click the scene and select **Empty entity**.
 
     ![Create empty entity](media/create-empty-entity.png)
 
-2. In the Property Grid (on the right by default), click **Add component** and select **UI**.
+2. In the Property grid (on the right by default), click **Add component** and select **UI**.
 
     ![Add UI component](media/add-UI-component.png)
 
@@ -28,11 +28,11 @@ After you create a [UI page](ui-pages.md), add it to the scene as a component on
 
     For information about how to create and edit UI pages, see the [UI editor](ui-editor.md) page.
 
-> [!Tip]
-> To stop the UI obscuring the rest of the scene in the editor, disable the **UI component** in the Property Grid.
-
+> [!TIP]
+> To stop the UI obscuring the rest of the scene in the editor, disable the **UI component** in the Property grid.
+>
 > ![Disable UI component](media/disable-UI-component.png)
-
+>
 > Remember to enable the component again before you run the game. If you don't, Stride doesn't display the UI.
 
 ### Assign a UI page to a UI page component in code

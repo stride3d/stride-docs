@@ -7,24 +7,24 @@ Here's how it looks like in a default game project:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Stride.Engine" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Video" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Physics" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Navigation" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Particles" Version="4.2.0.1" />
-    <PackageReference Include="Stride.UI" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.1" IncludeAssets="build;buildTransitive" />
+    <PackageReference Include="Stride.Engine" Version="4.4.0" />
+    <PackageReference Include="Stride.Video" Version="4.4.0" />
+    <PackageReference Include="Stride.Physics" Version="4.4.0" />
+    <PackageReference Include="Stride.Navigation" Version="4.4.0" />
+    <PackageReference Include="Stride.Particles" Version="4.4.0" />
+    <PackageReference Include="Stride.UI" Version="4.4.0" />
+    <PackageReference Include="Stride.AssetCompiler" Version="4.4.0" IncludeAssets="build;buildTransitive" />
 
-    <PackageReference Include="Stride.Core.Assets" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Core.Assets" Version="4.4.0" />
   </ItemGroup>
 </Project>
 ```
-> [!Warning]
-> Make sure that the `TargetFrameworks` and all package versions match your current Stride version. The example above shows version 4.2.0.1 for reference.
+> [!WARNING]
+> Make sure that the `TargetFramework` and all package versions match your current Stride version. The example above shows version 4.4.0 for reference.
 
 Inside the same project, create a new csharp file and replace its content with the following:
 ```cs
@@ -53,7 +53,7 @@ namespace YOUR_GAME_NAMESPACE;
 [DataSerializerGlobal(typeof(CloneSerializer<YOUR_CLASS>), Profile = "Clone")]
 public class YOUR_CLASS
 {
-	// Replace this with whatever you would want this asset to hold at runtime
+    // Replace this with whatever you would want this asset to hold at runtime
     public List<Prefab> PrefabCollection { get; set; } = new();
 }
 
@@ -68,7 +68,7 @@ public sealed class YOUR_CLASS_ASSET : Asset
     private const string CurrentVersion = "1.0.0.0";
     public const string FileExtension = ".blks";
 
-	// Replace this with whatever you would want this asset to have while inside the gamestudio
+    // Replace this with whatever you would want this asset to have while inside the gamestudio
     public List<Prefab> PrefabCollection { get; set; } = new();
 }
 
@@ -88,11 +88,11 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
     public override IEnumerable<ObjectUrl> GetInputFiles(AssetItem assetItem)
     {
         // Yield assets that must be built before this one is built,
-	// this is for cases were you need to read from a compiled version of an asset to build this one.
-	// Note that creating cyclic references through this method will cause a deadlock when building
-	// (e.g.: A is input of B while B is input of A)
+    // this is for cases were you need to read from a compiled version of an asset to build this one.
+    // Note that creating cyclic references through this method will cause a deadlock when building
+    // (e.g.: A is input of B while B is input of A)
 
-	// below only for reference purposes, useless in this context
+    // below only for reference purposes, useless in this context
         var asset = (YOUR_CLASS_ASSET)assetItem.Asset;
         foreach (var block in asset.PrefabCollection)
         {
@@ -126,7 +126,7 @@ public sealed class YOUR_CLASS_COMPILER : AssetCompilerBase
 }
 ```
 
-> [!Warning]
+> [!WARNING]
 > Every changes made to the runtime asset will break previously built asset databases, make sure to clean the solution or manually delete the build artifacts stride generates for assets (`YOUR_PROJECT.Windows/obj/stride` and `bin/db`) after changing the class to make sure the asset database is fully rebuilt on the next build.
 
 This takes care of the support for this asset, you could create a `*.blks` file inside your `Assets` directory and fill in the content manually, but might as well do it through the editor ...

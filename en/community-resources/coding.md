@@ -11,7 +11,7 @@
 - [Stride-npc](https://github.com/Doprez/stride-npc) - Basic finite state machine example for NPC behaviour using entity processors
 - [Stride-goap](https://github.com/Doprez/stride-goap) - Simple goal-oriented action planning (GOAP) for agents using MountainGoap
 - [Svelto ECS Mini Examples](https://github.com/sebas77/Svelto.MiniExamples) - Collection of small projects showing Svelto ECS patterns including a Stride demo
-- [Using Entity Processors for Scene Editor Plugins](https://github.com/Doprez/lod-example) - Demonstrates LOD and how entity processors integrate with the scene editor
+- [Using Entity Processors for Scene editor Plugins](https://github.com/Doprez/lod-example) - Demonstrates LOD and how entity processors integrate with the Scene editor
 - [Pathfinding With Entity Processors](https://github.com/Doprez/stride-pathfinding-demo) - Pathfinding demo wiring navigation logic through Stride's entity processor system
 - [Arch ECS Integrated into Stride](https://github.com/Doprez/stride-arch-ecs#add-arch-components-in-strides-editor) - Integrates the high-performance Arch ECS library with the Stride editor workflow
 

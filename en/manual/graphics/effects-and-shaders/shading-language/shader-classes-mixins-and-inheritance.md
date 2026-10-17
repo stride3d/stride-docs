@@ -46,13 +46,13 @@ Like HLSL, annotations are available in SDSL. Some of the most useful ones are:
 ```cs
 shader BaseShader
 {
-	[Color] float4 myColor;
+    [Color] float4 myColor;
  
-	[Link("ProjectKeys.MyTextureKey")]
-	[RenameLink]
-	Texture2D texture;
+    [Link("ProjectKeys.MyTextureKey")]
+    [RenameLink]
+    Texture2D texture;
  
-	[Map("Texturing.Texture0")] Texture2D defaultTexture;
+    [Map("Texturing.Texture0")] Texture2D defaultTexture;
 };
 ```
 
@@ -61,32 +61,32 @@ shader BaseShader
 ```cs
 shader BaseInterface
 {
-	abstract float Compute();
+    abstract float Compute();
 };
  
 shader BaseShader : BaseInterface
 {
-	float Compute()
-	{
-		return 1.0f;
-	}
+    float Compute()
+    {
+        return 1.0f;
+    }
 };
  
 shader ShaderA : BaseShader
 {
-	override void Compute()
-	{
-		return 2.0f;
-	}
+    override void Compute()
+    {
+        return 2.0f;
+    }
 };
  
 shader ShaderB : BaseShader
 {
-	override void Compute()
-	{
-		float prevValue = base.Compute();
-		return (5.0f + prevValue);
-	}
+    override void Compute()
+    {
+        float prevValue = base.Compute();
+        return (5.0f + prevValue);
+    }
 };
 ```
 
@@ -107,38 +107,38 @@ shader MixBA : ShaderB, ShaderA
 
 shader MixAB : BaseInterface, BaseShader, ShaderA, ShaderB
 {
-	float Compute()
-	{
-		// code from BaseShader
-		float v0 = 1.0f;
+    float Compute()
+    {
+        // code from BaseShader
+        float v0 = 1.0f;
  
-		// code from ShaderA
-		float v1 = 2.0f;
+        // code from ShaderA
+        float v1 = 2.0f;
  
-		// code from ShaderB
-		float prevValue = v1;
-		float v2 = 5.0f + prevValue;
+        // code from ShaderB
+        float prevValue = v1;
+        float v2 = 5.0f + prevValue;
  
-		return v2; // = 7.0f
-	}
+        return v2; // = 7.0f
+    }
 };
 
 shader MixBA : BaseInterface, BaseShader, ShaderA, ShaderB
 {
-	float Compute()
-	{
-		// code from BaseShader
-		float v0 = 1.0f;
+    float Compute()
+    {
+        // code from BaseShader
+        float v0 = 1.0f;
 
-		// code from ShaderB
-		float prevValue = v0;
-		float v1 = 5.0f + prevValue;
-		
-		// code from ShaderA
-		float v2 = 2.0f;
+        // code from ShaderB
+        float prevValue = v0;
+        float v1 = 5.0f + prevValue;
+    	
+        // code from ShaderA
+        float v2 = 2.0f;
 
-		return v2; // = 2.0f
-	}
+        return v2; // = 2.0f
+    }
 };
 ```
 
@@ -153,44 +153,44 @@ Note that if you statically call a method that uses shader class variables, the 
 ```cs
 shader StaticClass
 {
-	float StaticValue;
-	float StaticMethod(float a)
-	{
-		return 2.0f * a;
-	}
+    float StaticValue;
+    float StaticMethod(float a)
+    {
+        return 2.0f * a;
+    }
  
-	// this method uses a
-	float NonStaticMethod()
-	{
-		return 2.0f * StaticValue;
-	}
+    // this method uses a
+    float NonStaticMethod()
+    {
+        return 2.0f * StaticValue;
+    }
 };
  
 // this shader class is fine
 shader CorrectStaticCallClass
 {
-	float Compute()
-	{
-		return StaticClass.StaticValue * StaticMethod(5.0f);
-	}
+    float Compute()
+    {
+        return StaticClass.StaticValue * StaticMethod(5.0f);
+    }
 };
  
 // this shader class won't compile since the call is not static
 shader IncorrectStaticCallClass 
 {
-	float Compute()
-	{
-		return StaticClass.NonStaticMethod();
-	}
+    float Compute()
+    {
+        return StaticClass.NonStaticMethod();
+    }
 };
  
 // one way to fix this
 shader IncorrectStaticCallClassFixed : StaticClass
 {
-	float Compute()
-	{
-		return NonStaticMethod();
-	}
+    float Compute()
+    {
+        return NonStaticMethod();
+    }
 };
 ```
 
@@ -201,4 +201,4 @@ shader IncorrectStaticCallClassFixed : StaticClass
     - [Composition](composition.md)
     - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
-	- [Shader stages](shader-stages.md)
+    - [Shader stages](shader-stages.md)

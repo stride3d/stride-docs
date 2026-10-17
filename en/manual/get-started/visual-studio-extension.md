@@ -8,17 +8,11 @@ It isn't needed for syntax highlighting in C#.
 
 ## Installation
 
-### [Visual Studio 2017](#tab/install-vs2019)
+### [Visual Studio](#tab/install-vs)
 
 The extension can be installed via the launcher from the **Visual Studio extension** section.
 
-![Picture of the Visual Studio extension section in the Stride Launcher.](media/extension-install-vs.webp)
-
-### [Visual Studio 2022/2026](#tab/install-vs2022)
-
-The extension can be installed via the launcher from the **Visual Studio extension** section. The 2022 installation button also works for newer versions of Visual Studio, including 2026. 
-
-![Picture of the Visual Studio extension section in the Stride Launcher.](media/extension-install-vs.webp)
+![Picture of the Visual Studio extension section in the Stride Launcher.](../install-and-update/media/vs-extension.webp)
 
 ### [Visual Studio Code](#tab/install-vscode)
 

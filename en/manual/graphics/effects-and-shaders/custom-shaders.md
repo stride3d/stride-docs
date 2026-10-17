@@ -52,12 +52,13 @@ You can also use custom shaders to create custom post effects. For more informat
     }
     ```
 
-    >[!Note]
-    >Make sure the shader name in the file (eg `MyShader` above) is the same as the filename.
+    > [!NOTE]
+    > Make sure the shader name in the file (eg `MyShader` above) is the same as the filename.
 
-    >[!Note]
-    >To be accessible from the Game Studio Property Grid, the shader must inherit from `ComputeColor`.
-    >As `ComputeColor` always returns a float4 value, properties that take float values (eg metalness and gloss maps) use the first component (the red component) of the value returned by `ComputeColor`. 
+    > [!NOTE]
+    > To be accessible from the Game Studio Property grid, the shader must inherit from `ComputeColor`.
+    >
+    > As `ComputeColor` always returns a float4 value, properties that take float values (eg metalness and gloss maps) use the first component (the red component) of the value returned by `ComputeColor`. 
 
 7. Save all the files in the solution (**File > Save All**).
 
@@ -75,8 +76,9 @@ For shader-focused development with enhanced IntelliSense and inheritance visual
    - [OpenVSX](https://open-vsx.org/extension/tebjan/sdsl) (for VSCodium and other alternatives)
 3. Create your `.sdsl` file in your project's **Assets** folder (or a subfolder within Assets)
 
-   >[!Note]
-   >Shaders must be in the **Assets** folder of your package (the folder containing the `.sdpkg` file). This is part of Stride's [project structure](../../files-and-folders/project-structure.md).
+   > [!NOTE]
+   > Shaders must be in the **Assets** folder of your package (the folder containing the `.sdpkg` file). This is part of Stride's [project structure](../../files-and-folders/project-structure.md).
+
 4. VS Code provides:
    * Context-aware completions for inherited members, streams, and semantics
    * Live inheritance tree visualization
@@ -85,27 +87,27 @@ For shader-focused development with enhanced IntelliSense and inheritance visual
 
 For detailed information on shader development with VS Code, see [Shader development with Visual Studio Code](shader-development-vscode.md).
 
->[!Note]
->When using VS Code for shader authoring, you still need Visual Studio with the Stride extension to generate the `.cs` files that Game Studio requires. The typical workflow is: develop and edit shaders in VS Code, then open the solution in Visual Studio to trigger the code generation, and finally reload assemblies in Game Studio.
+> [!NOTE]
+> When using VS Code for shader authoring, you still need Visual Studio with the Stride extension to generate the `.cs` files that Game Studio requires. The typical workflow is: develop and edit shaders in VS Code, then open the solution in Visual Studio to trigger the code generation, and finally reload assemblies in Game Studio.
 
-    The **Asset View** lists the shader in the same directory as your scripts (eg **MyGame.Game**).
+    The **Asset view** lists the shader in the same directory as your scripts (eg **MyGame.Game**).
 
-    ![Shader in Asset View](media/shader-in-asset-view.png)
+    ![Shader in Asset view](media/shader-in-asset-view.png)
 
-    >[!Note]
-    >In some situations, Game Studio incorrectly identifies the shader as a script, as in the screenshot below:
-    
-    >![Shader as script](media/shader-as-script-in-asset-view.png) 
-    
-    >If this happens, restart Game Studio (**File > Reload project**).
+    > [!NOTE]
+    > In some situations, Game Studio incorrectly identifies the shader as a script, as in the screenshot below:
+    > 
+    > ![Shader as script](media/shader-as-script-in-asset-view.png) 
+    > 
+    > If this happens, restart Game Studio (**File > Reload project**).
 
 ## Use a custom shader
 
 You can use custom shaders in any [material attribute](../materials/material-attributes.md).
 
-1. In the **Asset View**, select the material you want to use the shader in.
+1. In the **Asset view**, select the material you want to use the shader in.
 
-2. In the **Property Grid**, next to the property you want to control with the shader, click the arrow button (**Change**) and select **Shader**.
+2. In the **Property grid**, next to the property you want to control with the shader, click the arrow button (**Change**) and select **Shader**.
 
     ![Select Shader](media/select-shader.png)
 
@@ -118,7 +120,7 @@ You can use custom shaders in any [material attribute](../materials/material-att
 > [!Tip]
 > When you make a change to the `.sdsl` file in Visual Studio and save it, Game Studio automatically updates the project with your changes. If this doesn't happen, restart Game Studio (**File > Reload project**).
 
-> [!Note]
+> [!NOTE]
 > If you delete a shader from the project assets, to prevent errors, make sure you also remove it from the properties of materials that use it.
 
 ## Arguments and parameters
@@ -127,7 +129,7 @@ You can use custom shaders in any [material attribute](../materials/material-att
 
 [Template arguments](shading-language/templates.md) (generics) don't change at runtime. However, different materials can use different instances of the shader with different values.
 
-When the shaders are compiled, Stride substitutes template arguments with the value you set in the Property Grid.
+When the shaders are compiled, Stride substitutes template arguments with the value you set in the Property grid.
 
 For example, the code below defines and uses the template argument `Frequency`:
 
@@ -170,12 +172,12 @@ To modify the value at runtime, access and set it in the material parameter coll
 myMaterial.Passes[myPassIndex].Parameters.Set(ComputeColorWaveKeys.Frequency, MyFrequency);
 ```
 
-> [!Note]
+> [!NOTE]
 > `ComputeColorWaveKeys.Frequency` is generated by the Stride Visual Studio extension from the shader file.
 
 ### Compositions
 
-This [composition](shading-language/composition.md) lets you set the `Frequency` in the Game Studio Property Grid:
+This [composition](shading-language/composition.md) lets you set the `Frequency` in the Game Studio Property grid:
 
 ```cs
 shader ComputeColorWave : ComputeColor, Texturing

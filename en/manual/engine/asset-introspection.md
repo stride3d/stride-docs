@@ -87,7 +87,7 @@ The classes handling theses graphs are in the `Stride.Core.Quantum` assembly.
 
 #### Node containers
 
-Nodes of the graphs are created into an instance of `NodeContainer`. Usually a single instance of `NodeContainer` is enough, but we have some scenarios where we use multiple ones: for example each instance of scene editor contains its own `NodeContainer` instance to build graphs of game-side objects, which are different from asset-side (ie. UI-side) objects, have a different lifespan, and require different metadata.
+Nodes of the graphs are created into an instance of `NodeContainer`. Usually a single instance of `NodeContainer` is enough, but we have some scenarios where we use multiple ones: for example each instance of Scene editor contains its own `NodeContainer` instance to build graphs of game-side objects, which are different from asset-side (ie. UI-side) objects, have a different lifespan, and require different metadata.
 
 In the GameStudio, the `NodeContainer` class has two derivations: the `AssetNodeContainer` class, which expands the primitive types to add Stride-specific types (such as `Vector3`, `Matrix`, `Guid`...). This class is inherited to a `SessionNodeContainer`, which additionally allows plugin to register their own primitive types and metadata.
 
@@ -204,7 +204,7 @@ The base-derived concept and the override are stored in specialized Quantum node
 
 ### Node linker
 
-`GraphNodeLinker` is an object that link a given node to another node. It has two main usages: it links objects that are game-side in the scene editor to their counterpart asset-side, and they also link a node to its base if it has one.
+`GraphNodeLinker` is an object that link a given node to another node. It has two main usages: it links objects that are game-side in the Scene editor to their counterpart asset-side, and they also link a node to its base if it has one.
 
 The `AssetToBaseNodeLinker` is used to do that. It is invoked at initialization, as well as each time a property changes. It has a `FindTarget` method and `FindTargetReference`, which basically resolve, when visiting the derived graph, which equivalent node of the base graph corresponds to it.
 

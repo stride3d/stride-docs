@@ -8,7 +8,7 @@
 
 You can use **cubemaps** or **360° panoramic textures** as skyboxes. You can also [use them to light the scene](../lights-and-shadows/skybox-lights.md).
 
-> [!Note]
+> [!NOTE]
 > Currently, Stride doesn't support skydomes or local skyboxes.
 
 Alternatively, you can display a **2D background**, which is often useful for 2D games.
@@ -30,11 +30,11 @@ Currently, Game Studio can't convert image files to cubemaps (`.dds` files). Use
 
 You can capture a cubemap from a position in your scene.
 
-1. In the **scene editor**, position the camera at the point where you want to capture the cubemap. The direction the camera faces doesn't matter, only the position.
+1. In the **Scene editor**, position the camera at the point where you want to capture the cubemap. The direction the camera faces doesn't matter, only the position.
 
     Typically, you should capture cubemaps at the center of your scene to create the best all-round view.
 
-2. In the scene editor toolbar, open the **Lighting options** menu.
+2. In the Scene editor toolbar, open the **Lighting options** menu.
 
     ![Lighting options](../lights-and-shadows/media/lighting-options-menu.png)
 
@@ -42,8 +42,8 @@ You can capture a cubemap from a position in your scene.
 
 4. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
 
->[!Tip]
->We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../../files-and-folders/version-control.md).
+> [!TIP]
+> We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../../files-and-folders/version-control.md).
 
 Game Studio creates a cubemap `.dds` file in the location you specified.
 
@@ -57,18 +57,18 @@ Instead of using a cubemap, you can use a **360° panoramic texture** as a 3D ba
 
 *Image courtesy of [Texturify](http://texturify.com)*
 
->[!Note]
->Remember that [post effects](../post-effects/index.md) affect the appearance of your skybox. If it doesn't look how you expect, try changing your post effect settings.
+> [!NOTE]
+> Remember that [post effects](../post-effects/index.md) affect the appearance of your skybox. If it doesn't look how you expect, try changing your post effect settings.
 
 ## Add a cubemap or 360° panoramic texture to the project
 
 You add these like other color textures.
 
-* In the **Asset View**, click ![Add asset](../lights-and-shadows/media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the file.
+* In the **Asset view**, click ![Add asset](../lights-and-shadows/media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the file.
 
     ![Select texture as asset type](media/engine-skybox-select-asset-type.png)
 
-* Alternatively, drag and drop the file from **Windows Explorer** to the **Asset View**, then select **Color texture**.
+* Alternatively, drag and drop the file from **Windows Explorer** to the **Asset view**, then select **Color texture**.
 
     ![Drag and drop background texture](media/drag-texture.gif)
 
@@ -82,11 +82,11 @@ You can add background components to as many entities as you need. You might wan
 
 #### Add a background entity
 
-1. In the **Scene view**, select the entity you want to add the component to.
+1. In the **Scene editor**, select the entity you want to add the component to.
 
     This can be an empty entity. Its position in the scene doesn't matter.
 
-2. In the **Property Grid** (on the right by default), click **Add component** and select **Background**.
+2. In the **Property grid** (on the right by default), click **Add component** and select **Background**.
 
     ![Add background component](media/engine-skybox-add-background-component.png)
 
@@ -107,13 +107,13 @@ public Texture cubemapTexture;
 public void ChangeBackgroundParameters()
 {
     // Get the background component from an entity
-	var background = directionalLight.Get<BackgroundComponent>();
+    var background = directionalLight.Get<BackgroundComponent>();
 
-	// Replace the existing background
-	background.Texture = cubemapTexture;
+    // Replace the existing background
+    background.Texture = cubemapTexture;
 
-	// Change the background intensity
-	background.Intensity = 1.5f;
+    // Change the background intensity
+    background.Intensity = 1.5f;
 }
 ```
 

@@ -10,16 +10,16 @@ By default, Stride plays audio directly from memory. This is useful for short so
 
 Alternatively, Stride can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Stride plays it while buffering the following sequences in parallel. This saves a lot of memory when used for larger audio files such as background music and character dialogue.
 
-> [!Note] 
+> [!NOTE] 
 > Streaming audio increases latency unless you preload it with the ReadyToPlay task (see below).
 
 ![Streamed audio](media/audio-index-streamed-audio.png)
 
 To stream an audio asset:
 
-1. In the **Asset View**, select the audio asset.
+1. In the **Asset view**, select the audio asset.
 
-2. In the **Property Grid**, select **Stream From Disk**:
+2. In the **Property grid**, select **Stream From Disk**:
 
     ![Audio asset properties](media/audio-asset-properties-property-grid.png)
 

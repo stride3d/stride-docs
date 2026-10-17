@@ -8,13 +8,13 @@ Stride is a very large project, which can make working with its code quite overw
 
 ![](media/stride-repo-good-first-issue.webp)
 
-## Paid work
+## Bounties
 
 If you are a developer with solid experience in C#, rendering techniques, or game development, **we want to hire you!** We have allocated funds from supporters on [OpenCollective](https://opencollective.com/stride3d) and **will pay you for your work on certain issues**.
 
 ![](media/open-collective.webp)
 
-For more information on how to get assigned to a project, how to fulfil a task and how to get paid, visit [🛠️ Contribute to the engine — Paid work](../engine/bug-bounties.md).
+For more information on how to get assigned to a project, how to fulfil a task and how to get paid, visit [🛠️ Contribute to the engine — Bounties](../engine/bug-bounties.md).
 
 ## Important resources
 

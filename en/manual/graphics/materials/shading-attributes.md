@@ -8,8 +8,8 @@ The material **shading attributes** define the color characteristics of the mate
 
 ![Shading attributes](media/shading-properties.png)
 
-> [!Note]
->To display a material, you need to select at least one shading model (diffuse, specular or emissive model) in the model attributes.
+> [!NOTE]
+> To display a material, you need to select at least one shading model (diffuse, specular or emissive model) in the model attributes.
 
 ## Diffuse
 
@@ -36,7 +36,7 @@ Under the Lambert model, light is reflected equally in all directions with an in
 
 ![media/material-attributes-24.png](media/material-attributes-24.png)
 
-> [!Note]
+> [!NOTE]
 > A pure Lambertian material doesn't exist in reality. A material always has a little specular reflection. This effect is more visible at grazing angles (a mostly diffuse surface becomes shiny at grazing angle).
 
 | Property      | Description  
@@ -82,7 +82,7 @@ The specular map provides more control over the actual specular color, but requi
 
 Unlike the metalness workflow, this lets you have a different specular color from the diffuse color even in low-reflection scenarios, allowing for materials with special behavior.
 
-> [!Note]
+> [!NOTE]
 > You can combine metalness and specular workflows in the same material by adding separate [layers](material-layers.md).
 
 ## Specular model

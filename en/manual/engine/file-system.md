@@ -4,7 +4,7 @@
 
 We recommend you use the static class @'Stride.Core.IO.VirtualFileSystem' to access files across platforms. It offers all basic operations such as reading, writing, copying, checking existence and deleting files.
 
-> [!Note]
+> [!NOTE]
 > The path separator is / (Unix/Linux convention).    
 
 ## Code example

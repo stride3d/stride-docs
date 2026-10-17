@@ -6,6 +6,9 @@ If you want to **create games using Stride**, this guide provides the installati
 
 If you're interested in **building the Stride engine from source** or **contributing to its development**, please visit the [Stride GitHub repository](https://github.com/stride3d/stride) for instructions on how to build from source and contribute to the project.
 
+> [!NOTE]
+> This guide is for **Windows users only**. For Linux instructions, visit [Install the editor using Wine](../platforms/linux/install-the-editor-using-wine.md).
+
 ## Installation steps
 
 1. Download the Stride Installer from the [Stride website](http://stride3d.net/download/).
@@ -33,7 +36,7 @@ If you're interested in **building the Stride engine from source** or **contribu
 
 6. Stride is now installed and ready to use.
 
-    ![Stride ready to use](media/stride-launcher-ready.webp)
+    ![Stride ready to use](media/stride-launcher.webp)
 
 ## Installation location
 
@@ -45,8 +48,8 @@ Changing the installation location is possible, but explaining this is outside o
 
 Stride has an optional extension that's available for some IDEs.
 
-* <span class="negative"/> **What it does:** provides shader syntax highlighting useful utilities related to the engine.
-* <span class="positive"/> **What it doesn't do:** provide C# syntax highlighting for Stride (that works without the extension).
+* <span class="positive"/> **What it does:** provides shader syntax highlighting useful utilities related to the engine.
+* <span class="negative"/> **What it doesn't do:** provide C# syntax highlighting for Stride (that works without the extension).
 
 The extension can be installed for Visual Studio via the launcher, by navigating to the **Visual Studio extension** section. For other IDEs, visit the [Stride Extension page](../get-started/visual-studio-extension.md).
 

@@ -44,10 +44,10 @@ var myRenderTarget = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.
 var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D16_UNorm, TextureFlags.DepthStencil);
 ```
 
->[!Note]
->Don't forget the flag @'Stride.Graphics.TextureFlags.RenderTarget' to enable the render target behavior.
+> [!NOTE]
+> Don't forget the flag @'Stride.Graphics.TextureFlags.RenderTarget' to enable the render target behavior.
 >
->Make sure the PixelFormat is correct, especially for the depth buffer. Be careful of the available formats on the target platform.
+> Make sure the PixelFormat is correct, especially for the depth buffer. Be careful of the available formats on the target platform.
 
 ### Use a render target
 
@@ -63,13 +63,13 @@ CommandList.SetRenderTargetAndViewport(myDepthBuffer, myRenderTarget);
 CommandList.SetRenderTargetAndViewport(GraphicsDevice.Presenter.DepthStencilBuffer, GraphicsDevice.Presenter.BackBuffer);
 ```
 
->[!Note]
->Make sure both the render target and the depth buffer have the same size. Otherwise, the depth buffer isn't used.
+> [!NOTE]
+> Make sure both the render target and the depth buffer have the same size. Otherwise, the depth buffer isn't used.
 
 You can set multiple render textures at the same time. See the overloads of @'Stride.Graphics.CommandList.SetRenderTargets(Stride.Graphics.Texture,Stride.Graphics.Texture[])' and @'Stride.Graphics.CommandList.SetRenderTargetsAndViewport(Stride.Graphics.Texture,Stride.Graphics.Texture[])' method.
 
->[!Note]
->Only the @'Stride.Graphics.GraphicsPresenter.BackBuffer' is displayed on screen, so you need to render it to display something.
+> [!NOTE]
+> Only the @'Stride.Graphics.GraphicsPresenter.BackBuffer' is displayed on screen, so you need to render it to display something.
 
 ### Clear a render target
 
@@ -82,8 +82,8 @@ CommandList.Clear(GraphicsDevice.Presenter.BackBuffer, Color.Black);
 CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, DepthStencilClearOptions.DepthBuffer); // only clear the depth buffer
 ```
 
->[!Note]
->Don't forget to clear the @'Stride.Graphics.GraphicsPresenter.BackBuffer' and the @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame. If you don't, you might get unexpected behavior depending on the device. If you want to keep the contents of a frame, use an intermediate render target.
+> [!NOTE]
+> Don't forget to clear the @'Stride.Graphics.GraphicsPresenter.BackBuffer' and the @'Stride.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame. If you don't, you might get unexpected behavior depending on the device. If you want to keep the contents of a frame, use an intermediate render target.
 
 ## Viewport
 

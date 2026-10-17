@@ -70,10 +70,10 @@ Give the package a name and then continue through the steps until the package is
 > RootAssets: []
 > ```
 > 
-> To properly support asset compilation, add a reference to the `Stride.Core.Assets.CompilerApp` package.
+> To properly support asset compilation, add a reference to the `Stride.AssetCompiler` package.
 > 
 > ```xml
-> <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="ENGINE VERSION HERE" IncludeAssets="build;buildTransitive" />
+> <PackageReference Include="Stride.AssetCompiler" Version="ENGINE VERSION HERE" IncludeAssets="build;buildTransitive" />
 > ```
 
 ### [Command line](#tab/command-line)
@@ -119,10 +119,10 @@ dotnet sln add MyGame.MyLibrary
 > RootAssets: []
 > ```
 > 
-> To properly support asset compilation, add a reference to the `Stride.Core.Assets.CompilerApp` package.
+> To properly support asset compilation, add a reference to the `Stride.AssetCompiler` package.
 > 
 > ```xml
-> <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="ENGINE VERSION HERE" IncludeAssets="build;buildTransitive" />
+> <PackageReference Include="Stride.AssetCompiler" Version="ENGINE VERSION HERE" IncludeAssets="build;buildTransitive" />
 > ```
 
 ---

@@ -85,6 +85,30 @@ The Stride CLI tool provides a way of creating new projects without the need for
 
 [!INCLUDE [cli-new-project-parameters](../../includes/cli-new-project-parameters.md)]
 
+### Asset packs
+
+Stride provides additional asset packs to help you more easily get started working on a game. These asset packs can be added through the CLI at any point after a project's creation. 
+
+1. Go to your project's main [project package](../files-and-folders/project-packages/index.md) directory (the one that ends with `.Game`).
+
+    ```bash
+    cd ./NameOfGame/NameOfGame.Game
+    ```
+
+2. Find the asset pack you want to use. For a list of all asset packs, use the following command and look for items under `Stride.Templates.AssetPacks`.
+
+    ```bash
+    stride new list
+    ```
+
+3. Add the asset pack to your project with the following command:
+
+    ```bash
+    stride new AssetPackIdHere
+    ```
+
+You should now notice new files appear in the `Assets` and `Resources` folders.
+
 ## Create a project with dotnet templates
 
 An alternative way of creating a project from the command line without the need for Stride CLI is to use **dotnet templates**.
@@ -98,6 +122,8 @@ An alternative way of creating a project from the command line without the need 
     dotnet new install Stride.Templates.Games.Starters
     # Install samples (complete games)
     dotnet new install Stride.Templates.Samples
+    # Install asset packs
+    dotnet new install Stride.Templates.AssetPacks
     ```
 
 2. Find the template you want to use. The default project template is named `stride-game`. For a list of all Stride templates, use this command:

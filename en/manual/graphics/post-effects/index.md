@@ -14,14 +14,14 @@ Typically, you set up a post effect by specifying:
 
 Stride provides several predefined post effects. You can also [extend the system to create your own color transform effects](color-transforms/custom-color-transforms.md).
 
->[!Note]
->Depth-aware post effects ̶  ie [depth of field](depth-of-field.md), ambient occlusion, and [local reflections](local-reflections.md) ̶  nullify MSAA (multisample anti-aliasing).
+> [!NOTE]
+> Depth-aware post effects ̶  ie [depth of field](depth-of-field.md), ambient occlusion, and [local reflections](local-reflections.md) ̶  nullify MSAA (multisample anti-aliasing).
 
 ## Add or edit a post effect
 
 You add and edit post effects in the [graphics compositor](../graphics-compositor/index.md).
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -35,7 +35,7 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
     > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **Property Grid** (on the right by default), enable the post effects you want to use and configure their properties.
+3. In the **Property grid** (on the right by default), enable the post effects you want to use and configure their properties.
 
     ![Post effect properties](media/post-effect-properties.png)
 

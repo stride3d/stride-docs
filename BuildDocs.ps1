@@ -35,18 +35,26 @@
 param (
     [switch]$BuildAll,
     [switch]$SkipApiBuilding,
+    [switch]$SkipPdfBuilding,
     [ArgumentCompleter({
         [OutputType([System.Management.Automation.CompletionResult])]
         param([string] $CommandName,[string] $ParameterName,[string] $WordToComplete,[System.Management.Automation.Language.CommandAst] $CommandAst,[System.Collections.IDictionary] $FakeBoundParameters)
-        return (Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions
+        return (Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url }
     })]
-    [switch]$SkipPdfBuilding,
-    $Version = $((Get-Content $PSScriptRoot\versions.json -Encoding UTF8 | ConvertFrom-Json).versions | Sort-Object -Descending | Select-Object -First 1)
+    # The highest version of versions.json, which is the one this branch documents
+    $Version = $((Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url } | Sort-Object { [version]$_ } -Descending | Select-Object -First 1)
 )
+
+$versionsJson = Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json
 
 $Settings = [PSCustomObject]@{
     Version = $Version
     SiteDirectory = "_site/$Version"
+    # Sections of en/ that aren't versioned: built from master into /en/, redirected there from every version (see web.config)
+    UnversionedSections = @($versionsJson.unversioned)
+    UnversionedDirectory = "_site/en"
+    # Versions hosted on the website, the release notes link to their own version when it's one of them
+    HostedVersions = @($versionsJson.docs | ForEach-Object { $_.url })
     LocalTestHostUrl = "http://localhost:8080/$Version/en/index.html"
     LanguageJsonPath = "en\languages.json"
     LogPath = ".\build.log"
@@ -277,38 +285,333 @@ function Generate-ArchitectureDocsToc {
     Add-ArchitectureDocsTocItems $architectureFolder $architectureFolder 0 $lines
     [System.IO.File]::WriteAllLines((Join-Path $PSScriptRoot $tocLocation), $lines, [System.Text.UTF8Encoding]::new($false))
 }
+function Get-CommitInfo {
+    param ([string]$RepositoryPath, [string]$RepositoryUrl)
+
+    if (-not (Test-Path (Join-Path $RepositoryPath ".git"))) { return $null }
+
+    $commit = git -C $RepositoryPath rev-parse HEAD 2>$null
+    if (-not $commit) { return $null }
+
+    $info = [ordered]@{ commit = "$commit" }
+    $branch = git -C $RepositoryPath rev-parse --abbrev-ref HEAD 2>$null
+    if ($branch -and $branch -ne "HEAD") { $info.branch = "$branch" }
+    # Commits of a local build might not be pushed, so only builds from GitHub Actions link to them
+    if ($RepositoryUrl) { $info.url = "$RepositoryUrl/commit/$commit" }
+    return $info
+}
+
+function Get-BuildInfo {
+    # The stride-docs and stride commits the documentation is built from, shown in the footer and saved in build.json
+    $isCI = $env:GITHUB_ACTIONS -eq "true"
+
+    $info = [ordered]@{
+        version = $Settings.Version
+        date = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+    }
+    if ($isCI) {
+        $info.run = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY/actions/runs/$env:GITHUB_RUN_ID"
+    }
+
+    $info.docs = Get-CommitInfo $PSScriptRoot $(if ($isCI) { "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY" })
+    # Same location as used for the API and the architecture docs
+    $stride = Get-CommitInfo (Join-Path $PSScriptRoot "..\stride") $(if ($isCI) { "https://github.com/stride3d/stride" })
+    if ($stride) { $info.stride = $stride }
+
+    return $info
+}
+
+function Get-FooterMetadata {
+    # _appFooter of docfx.json, with its <!--build-info--> placeholder replaced by the commits the documentation is built from
+    param ($BuildInfo)
+
+    $links = foreach ($name in @("docs", "stride")) {
+        $commit = $BuildInfo[$name]
+        if (-not $commit) { continue }
+
+        $label = if ($name -eq "docs") { "stride-docs" } else { "stride" }
+        $title = if ($commit.branch) { " title='$($commit.branch)'" } else { "" }
+        $shortCommit = $commit.commit.Substring(0, 7)
+        if ($commit.url) {
+            "$label <a href='$($commit.url)'$title>$shortCommit</a>"
+        } else {
+            "$label <span$title>$shortCommit</span>"
+        }
+    }
+
+    $builtFrom = if ($BuildInfo.run) { "Built from" } else { "Built locally from" }
+    $footer = (Get-Content en/docfx.json -Raw -Encoding UTF8 | ConvertFrom-Json).build.globalMetadata._appFooter
+    $footer = $footer.Replace("<!--build-info-->", "$builtFrom $($links -join ' &middot; ')")
+
+    # Double quotes don't survive being passed as a command line argument by Windows PowerShell
+    return "_appFooter=$($footer.Replace('"', "'"))"
+}
+
+function Generate-ReleaseNotesIndex {
+    # The release notes of each version are in <version>.md, index.md lists them (from toc.yml)
+    $releaseNotesFolder = "en/release-notes"
+    $releaseNotesFileName = "$($Settings.Version).md"
+
+    if (-not (Test-Path "$releaseNotesFolder/$releaseNotesFileName")) {
+        throw "$releaseNotesFolder/$releaseNotesFileName is missing, it should contain the release notes of $($Settings.Version), the highest version of versions.json."
+    }
+    if (-not (Select-String -Path "$releaseNotesFolder/toc.yml" -Pattern "href: $([regex]::Escape($releaseNotesFileName))$" -Quiet)) {
+        throw "$releaseNotesFolder/toc.yml doesn't list $releaseNotesFileName."
+    }
+
+    Write-Host -ForegroundColor Green "Generating the release notes index..."
+    Write-Host ""
+
+    $lines = @("# Release notes", "")
+    $name = $null
+    foreach ($line in Get-Content "$releaseNotesFolder/toc.yml" -Encoding UTF8) {
+        if ($line -match '^- name:\s*(.+)$') {
+            $name = $Matches[1].Trim()
+        } elseif ($name -and $line -match '^\s+href:\s*(\S+)') {
+            $lines += "- [$name]($($Matches[1]))"
+            $name = $null
+        }
+    }
+    [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot "$releaseNotesFolder/index.md"), ($lines -join "`n") + "`n", [System.Text.UTF8Encoding]::new($false))
+}
+
+function Test-InUnversionedSection {
+    param ([string]$Path)
+    # i.e. contributors, contributors/index.md, or contributors/** (a glob of docfx.json)
+    return @($Settings.UnversionedSections | Where-Object { $Path -eq $_ -or $Path -like "$_/*" }).Count -gt 0
+}
+
+function Write-DocfxConfig {
+    # en/docfx.json describes the whole documentation. The versioned build (folder of a version) and the unversioned build (/en/)
+    # each use a copy of it restricted to their sections, so that they share everything else (template, metadata, resources...)
+    param (
+        [ValidateSet('Versioned', 'Unversioned')]
+        [string]$Kind,
+        [string]$Path
+    )
+
+    $config = Get-Content en/docfx.json -Raw -Encoding UTF8 | ConvertFrom-Json
+
+    if ($Kind -eq 'Versioned') {
+        foreach ($group in $config.build.content) {
+            $group.files = @($group.files | Where-Object { -not (Test-InUnversionedSection $_) })
+        }
+        foreach ($group in $config.build.resource) {
+            $group.files = @($group.files | Where-Object { -not (Test-InUnversionedSection $_) })
+            $group.exclude = @($group.exclude) + @($Settings.UnversionedSections | ForEach-Object { "$_/**" })
+        }
+    } else {
+        $config.build.content = @(
+            [PSCustomObject]@{
+                files = @($Settings.UnversionedSections | ForEach-Object { "$_/toc.yml"; "$_/**/*.md" })
+                exclude = @($config.build.content | ForEach-Object { $_.exclude } | Where-Object { $_ })
+            }
+            [PSCustomObject]@{ files = @("404.md") }
+            # The navbar (see Write-UnversionedToc)
+            [PSCustomObject]@{ src = "_unversioned"; files = @("toc.yml"); dest = "." }
+        )
+        foreach ($group in $config.build.resource) {
+            # Media of the unversioned sections and of the site itself (i.e. the logo), not of the versioned sections
+            $group.files = @($group.files | ForEach-Object {
+                if ($_.StartsWith("**/")) {
+                    $glob = $_.Substring(3)
+                    $glob
+                    foreach ($section in $Settings.UnversionedSections) { "$section/**/$glob" }
+                } else {
+                    $_
+                }
+            })
+        }
+        $config.build.sitemap.baseUrl = "$($Settings.DocsUrl)/en/"
+    }
+
+    [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot $Path), ($config | ConvertTo-Json -Depth 20), [System.Text.UTF8Encoding]::new($false))
+}
+
+function Write-UnversionedToc {
+    # The navbar of the unversioned build, from the one of the versioned build (en/toc.yml): unversioned sections link to their
+    # folder, versioned ones to latest (main.js replaces latest with the version the reader comes from)
+    $items = [System.Collections.Generic.List[object]]::new()
+    foreach ($line in Get-Content en/toc.yml -Encoding UTF8) {
+        if ($line -match '^- name:\s*(.+)$') {
+            $items.Add([ordered]@{ name = $Matches[1].Trim() })
+        } elseif ($items.Count -gt 0 -and $line -match '^\s+(href|homepage):\s*(\S+)') {
+            $items[$items.Count - 1][$Matches[1]] = $Matches[2]
+        }
+    }
+
+    $lines = foreach ($item in $items) {
+        "- name: $($item.name)"
+        $section = ($item.href -split '/')[0]
+        if ($Settings.UnversionedSections -contains $section) {
+            "  href: ../$section/"
+            "  homepage: ../$section/index.md"
+        } else {
+            $target = if ($item.homepage) { $item.homepage } else { $item.href }
+            $target = $target -replace '\.md$', '.html'
+            if ($target.EndsWith('/')) { $target += 'index.html' }
+            "  href: /latest/en/$target"
+        }
+    }
+
+    New-Item -ItemType Directory -Force -Path en/_unversioned | Out-Null
+    [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot "en/_unversioned/toc.yml"), ($lines -join "`n") + "`n", [System.Text.UTF8Encoding]::new($false))
+}
+
+function Build-UnversionedDoc {
+    $outputDirectory = $Settings.UnversionedDirectory
+
+    Write-Host -ForegroundColor Yellow "Start building the unversioned sections ($($Settings.UnversionedSections -join ', ')). Output: $outputDirectory"
+    Write-Host ""
+
+    Write-UnversionedToc
+    Write-DocfxConfig -Kind Unversioned -Path en/docfx.unversioned.json
+
+    docfx build en/docfx.unversioned.json -o $outputDirectory --metadata $footerMetadata | Write-Host
+
+    # i.e. contributing-in-stride.pdf
+    Build-EnglishPdf -SkipBuilding $SkipPdfBuilding -Config en/docfx.unversioned.json -OutputDirectory $outputDirectory
+
+    return $LastExitCode
+}
+
+function Get-VersionedLink {
+    # A link of an unversioned page to a versioned page (i.e. ../manual/index.md from release-notes/4.2.md):
+    # absolute, to the version of the release notes when it's hosted, else to latest. $null for other links.
+    param ([string]$Page, [string]$Href)
+
+    if ($Href -match '^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|/|#)') { return $null }
+
+    $suffixStart = $Href.IndexOfAny([char[]]'#?')
+    $path = if ($suffixStart -ge 0) { $Href.Substring(0, $suffixStart) } else { $Href }
+    $suffix = if ($suffixStart -ge 0) { $Href.Substring($suffixStart) } else { "" }
+    if (-not $path) { return $null }
+
+    $target = ([System.Uri]::new([System.Uri]::new("http://site/$Page"), $path)).AbsolutePath.TrimStart('/')
+    if ((Test-InUnversionedSection $target) -or (Test-Path (Join-Path $Settings.UnversionedDirectory $target) -PathType Leaf)) { return $null }
+
+    $version = "latest"
+    if ($Page -match '^release-notes/(\d+\.\d+)\.(?:md|html)$' -and $Settings.HostedVersions -contains $Matches[1]) {
+        $version = $Matches[1]
+    }
+    return "/$version/en/$($target -replace '\.md$', '.html')$suffix"
+}
+
+function PostProcessing-LinksToVersionedDocs {
+    # docfx keeps links to pages of the versioned build as they're written (i.e. ../manual/index.md)
+    Write-Host -ForegroundColor Yellow "Post-processing links of the unversioned sections to the versioned documentation..."
+    Write-Host ""
+
+    $root = (Resolve-Path $Settings.UnversionedDirectory).Path
+    foreach ($file in Get-ChildItem $root -Filter *.html -Recurse) {
+        $page = $file.FullName.Substring($root.Length + 1).Replace('\', '/')
+        $content = [System.IO.File]::ReadAllText($file.FullName)
+        $updated = [regex]::Replace($content, '(<a\b[^>]*?\bhref=")([^"]+)(")', {
+            param ($match)
+            $link = Get-VersionedLink -Page $page -Href ([System.Net.WebUtility]::HtmlDecode($match.Groups[2].Value))
+            if ($link) { $match.Groups[1].Value + $link + $match.Groups[3].Value } else { $match.Value }
+        })
+        if ($updated -ne $content) {
+            [System.IO.File]::WriteAllText($file.FullName, $updated, [System.Text.UTF8Encoding]::new($false))
+        }
+    }
+}
+
+function PostProcessing-LinksToUnversionedSections {
+    # docfx keeps links to pages of the unversioned build as they're written (i.e. ../contributors/index.md): they stay relative
+    # to the version (i.e. /4.4/en/contributors/index.html), web.config redirects them to /en/ with the version the reader comes from
+    param ([string]$Directory)
+
+    Write-Host -ForegroundColor Yellow "Post-processing links of $Directory to the unversioned sections..."
+    Write-Host ""
+
+    $pattern = '(<a\b[^>]*?\bhref="(?:\./|\.\./)*(?:' + ($Settings.UnversionedSections -join '|') + ')/[^"#?]*?)\.md(?=[#?"])'
+    foreach ($file in Get-ChildItem $Directory -Filter *.html -Recurse) {
+        $content = [System.IO.File]::ReadAllText($file.FullName)
+        $updated = [regex]::Replace($content, $pattern, '$1.html')
+        if ($updated -ne $content) {
+            [System.IO.File]::WriteAllText($file.FullName, $updated, [System.Text.UTF8Encoding]::new($false))
+        }
+    }
+}
+
+function Copy-ReleaseNotesMarkdown {
+    # The markdown of the release notes, loaded by the Stride Launcher,
+    # with their links to the versioned documentation made absolute like in their pages
+    $destination = "$($Settings.UnversionedDirectory)/release-notes"
+
+    Write-Host -ForegroundColor Yellow "Copying release notes markdown into $destination/"
+    Write-Host ""
+
+    foreach ($file in Get-ChildItem en/release-notes -Filter *.md | Where-Object Name -match '^\d+\.\d+\.md$') {
+        $page = "release-notes/$($file.Name)"
+        $content = [System.IO.File]::ReadAllText($file.FullName)
+        $updated = [regex]::Replace($content, '(\]\(\s*<?)([^)\s>]+)', {
+            param ($match)
+            $link = Get-VersionedLink -Page $page -Href $match.Groups[2].Value
+            if ($link) { $match.Groups[1].Value + $link } else { $match.Value }
+        })
+        [System.IO.File]::WriteAllText((Join-Path (Resolve-Path $destination) $file.Name), $updated, [System.Text.UTF8Encoding]::new($false))
+    }
+}
+
+function Merge-SearchIndex {
+    # One search index for both builds: its keys are paths from the root of a build, so it works from both
+    # (links to the other build go through the redirects of web.config)
+    Write-Host -ForegroundColor Yellow "Merging the search indexes of the versioned and unversioned documentation..."
+    Write-Host ""
+
+    $files = @("$($Settings.SiteDirectory)/en/index.json", "$($Settings.UnversionedDirectory)/index.json")
+    $merged = [ordered]@{}
+    foreach ($file in $files) {
+        $index = Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json
+        foreach ($property in $index.PSObject.Properties) {
+            # The 404 and home pages are different in each build
+            if (@('404.html', 'index.html') -contains $property.Name) { continue }
+            $merged[$property.Name] = $property.Value
+        }
+    }
+
+    $json = $merged | ConvertTo-Json -Depth 5 -Compress
+    foreach ($file in $files) {
+        [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot $file), $json, [System.Text.UTF8Encoding]::new($false))
+    }
+}
+
 function Copy-ExtraItems {
 
-    Write-Host -ForegroundColor Yellow "Copying versions.json into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item versions.json "$($Settings.WebDirectory)/"
+    # versions.json, web.config and robots.txt are shared by all versions
+    # (they're useful locally, but only deployed from master, see stride-docs-site-root-azure.yml)
+    & "$PSScriptRoot/BuildSiteRoot.ps1" -OutputDirectory $Settings.WebDirectory
 
-    Write-Host -ForegroundColor Yellow "Copying web.config into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item web.config "$($Settings.WebDirectory)/"
+    Copy-ReleaseNotesMarkdown
 
-    Write-Host -ForegroundColor Yellow "Updating web.config"
-    Write-Host ""
+    # The commits the documentation is built from, i.e. to check what's deployed: https://doc.stride3d.net/4.4/build.json
+    foreach ($directory in @($Settings.SiteDirectory, $Settings.UnversionedDirectory)) {
+        Write-Host -ForegroundColor Yellow "Writing build.json into $directory/"
+        Write-Host ""
+        [System.IO.File]::WriteAllText((Join-Path (Resolve-Path $directory) "build.json"), ($buildInfo | ConvertTo-Json -Depth 5), [System.Text.UTF8Encoding]::new($false))
+    }
+}
 
-    $webConfig = "$($Settings.WebDirectory)/web.config"
+function Get-LocalWebsiteLinks {
+    # Locally there's no web.config: /latest/ is the version built, and the unversioned sections are linked into its folder
+    # (Contributing, Release notes... of its navbar), so that both work with docfx serve
+    @([PSCustomObject]@{ Path = "$($Settings.WebDirectory)/latest"; Target = $Settings.SiteDirectory }) +
+    @($Settings.UnversionedSections | ForEach-Object {
+        [PSCustomObject]@{ Path = "$($Settings.SiteDirectory)/en/$_"; Target = "$($Settings.UnversionedDirectory)/$_" }
+    })
+}
 
-    $content = Get-Content $webConfig -Encoding UTF8
-
-    $content = $content -replace "%deployment_version%", $Settings.Version
-
-    $content | Set-Content -Encoding UTF8 $webConfig
-
-    Write-Host -ForegroundColor Green "Updating web.config completed."
-    Write-Host ""
-
-    # This is needed for Stride Launcher, which loads Release Notes
-    Write-Host -ForegroundColor Yellow "Copying ReleaseNotes.md into $($Settings.SiteDirectory)/en/ReleaseNotes/"
-    Write-Host ""
-    Copy-Item en/ReleaseNotes/ReleaseNotes.md "$($Settings.SiteDirectory)/en/ReleaseNotes/"
-
-    Write-Host -ForegroundColor Yellow "Copying robots.txt into $($Settings.WebDirectory)/"
-    Write-Host ""
-    Copy-Item robots.txt "$($Settings.WebDirectory)/"
+function Remove-LocalWebsiteLinks {
+    # Before building, so that no build or post-processing goes through them
+    foreach ($link in Get-LocalWebsiteLinks) {
+        $item = Get-Item $link.Path -Force -ErrorAction SilentlyContinue
+        if ($item -and ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint)) {
+            # Removes the junction itself, not what it links to
+            [System.IO.Directory]::Delete($item.FullName)
+        }
+    }
 }
 
 function Start-LocalWebsite {
@@ -317,6 +620,12 @@ function Start-LocalWebsite {
     Stop-Transcript
 
     New-Item -ItemType Directory -Verbose -Force -Path $Settings.WebDirectory | Out-Null
+
+    foreach ($link in Get-LocalWebsiteLinks) {
+        if ((Test-Path $link.Target) -and -not (Test-Path $link.Path)) {
+            New-Item -ItemType Junction -Path $link.Path -Target (Resolve-Path $link.Target).Path | Out-Null
+        }
+    }
 
     Set-Location $Settings.WebDirectory
 
@@ -358,23 +667,28 @@ function Build-EnglishDoc {
 
     Write-Host ""
 
-    # Output to both build.log and console
-    docfx build en/docfx.json -o $outputDirectory | Write-Host
+    Write-DocfxConfig -Kind Versioned -Path en/docfx.versioned.json
 
-    Build-EnglishPdf -SkipBuilding $SkipPdfBuilding
+    # Output to both build.log and console
+    docfx build en/docfx.versioned.json -o $outputDirectory --metadata $footerMetadata | Write-Host
+
+    Build-EnglishPdf -SkipBuilding $SkipPdfBuilding -Config en/docfx.versioned.json -OutputDirectory $outputDirectory
 
     return $LastExitCode
 }
 
 function Build-EnglishPdf
 {
+    # The PDF of each section with pdf: true in its toc.yml, i.e. -Config en/docfx.versioned.json -OutputDirectory _site/4.4/en
     param (
-        $SkipBuilding
+        $SkipBuilding,
+        [string]$Config,
+        [string]$OutputDirectory
     )
     if(!$SkipBuilding)
     {
         # Build pdf files
-        docfx pdf en/docfx.json -o $outputDirectory | Write-Host
+        docfx pdf $Config -o $OutputDirectory | Write-Host
     }
 }
 
@@ -450,8 +764,8 @@ function Build-NonEnglishDoc {
             Write-Warning "$($SelectedLanguage.Code)/$($Settings.ManualFolderName) not found."
         }
 
-        # we copy the docfx.json file from en folder to the selected language folder, so we can keep the same settings and maitain just one docfx.json file
-        Copy-Item en/docfx.json $langFolder -Force
+        # the same settings as the versioned English documentation, so that we maintain just one docfx.json file
+        Write-DocfxConfig -Kind Versioned -Path $langFolder/docfx.json
 
         $SiteDir = $Settings.SiteDirectory
 
@@ -460,7 +774,9 @@ function Build-NonEnglishDoc {
 
         $outputDirectory = "$($Settings.SiteDirectory)/$($SelectedLanguage.Code)"
 
-        docfx build $langFolder/docfx.json -o $outputDirectory | Write-Host
+        docfx build $langFolder/docfx.json -o $outputDirectory --metadata $footerMetadata | Write-Host
+
+        PostProcessing-LinksToUnversionedSections -Directory $outputDirectory
 
         if (!$BuildAll) {
             Remove-Item $langFolder -Recurse -Verbose
@@ -582,23 +898,23 @@ function PostProcessing-FixingSitemap {
 }
 
 function PostProcessing-Fixing404AbsolutePath {
-    Write-Host -ForegroundColor Yellow "Post-processing 404.html, adding version/en to url"
+    # i.e. -Directory _site/4.4/en -Base /4.4/en/
+    param ([string]$Directory, [string]$Base)
+
+    Write-Host -ForegroundColor Yellow "Post-processing $Directory/404.html, adding $Base to url"
     Write-Host ""
 
-    $file404 = "$($Settings.SiteDirectory)/en/404.html"
+    $file404 = "$Directory/404.html"
 
     $content = Get-Content $file404 -Encoding UTF8
 
-    $keysToReplace = @("favicon.ico", "public/docfx.min.css", "public/main.css", "toc.html", "media/stride-logo-red.svg")
-
-    foreach ($key in $keysToReplace) {
-        $replacement = "/$($Settings.Version)/en/$key"
-        $content = $content -replace $key, $replacement
-    }
-
-    $content = $content -replace "./public/main.js", "/$($Settings.Version)/en/public/main.js"
-    $content = $content -replace "./public/docfx.min.js", "/$($Settings.Version)/en/public/docfx.min.js"
+    # The 404 page is served for any missing url, so its relative urls must be absolute
+    $base = $Base
+    $content = $content -replace '(href|src|content)="(?:\./)?(favicon\.ico|public/[^"]+|media/[^"]+|toc\.html)"', "`$1=""$base`$2"""
     $content = $content -replace '<a class="navbar-brand" href="index.html">', '<a class="navbar-brand" href="/">'
+
+    # The page script loads docfx itself, once it has set the tables of contents of the requested url (see 404.md)
+    $content = $content -replace '<script type="module" src="([^"]+/docfx\.min\.js)"></script>', '<meta name="stride:docfx" content="$1">'
 
     $content | Set-Content -Encoding UTF8 $file404
 
@@ -698,6 +1014,13 @@ if ($engineArchitecture) {
     Generate-ArchitectureDocsToc
 }
 
+Generate-ReleaseNotesIndex
+
+Remove-LocalWebsiteLinks
+
+$buildInfo = Get-BuildInfo
+$footerMetadata = Get-FooterMetadata $buildInfo
+
 Write-Host -ForegroundColor Green "Generating documentation..."
 Write-Host ""
 Write-Warning "Note that when building docs without API, you will get UidNotFound warnings and invalid references warnings"
@@ -715,9 +1038,25 @@ if ($isEnLanguage -or $isAllLanguages)
        return $exitCode
    }
 
+   $exitCode = Build-UnversionedDoc
+
+   if ($exitCode -ne 0)
+   {
+       Write-Error "Failed to build the unversioned documentation. ExitCode: $exitCode"
+       Stop-Transcript
+       Read-Host -Prompt "Press any ENTER to exit..."
+       return $exitCode
+   }
+
    PostProcessing-FixingSitemap
 
-   PostProcessing-Fixing404AbsolutePath
+   PostProcessing-Fixing404AbsolutePath -Directory "$($Settings.SiteDirectory)/en" -Base "/$($Settings.Version)/en/"
+   PostProcessing-Fixing404AbsolutePath -Directory $Settings.UnversionedDirectory -Base "/en/"
+
+   PostProcessing-LinksToUnversionedSections -Directory "$($Settings.SiteDirectory)/en"
+   PostProcessing-LinksToVersionedDocs
+
+   Merge-SearchIndex
 
    Copy-ExtraItems
 }

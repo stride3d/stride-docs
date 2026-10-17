@@ -45,7 +45,7 @@ It's important to keep in mind that objects accessible in a given command (in th
 
 Compilers are classes that generate a set of `BuildStep`s to compile a given `Asset` in a specific context. This list could grow in the future if we have other needs, but the current different contexts are:
 - compiling the asset for the game
-- compiling the asset for the scene editor
+- compiling the asset for the Scene editor
 - compiling the asset to display in the preview
 - compiling the asset to generate a thumbnail
 
@@ -66,7 +66,7 @@ Each compiler provides a set of methods to help discover the dependencies betwee
 Contexts of compilation are defined by *types*, which allow to use inheritance mechanism to fallback on a default compiler when there is no specific compiler for a given context. Each compilation context type must implement `ICompilationContext`. Currently we have:
 
 * `AssetCompilationContext` is the context used when we compile an asset for the runtime (ie. the game).
-* `EditorGameCompilationContext` is the context used when we compile an asset for the scene editor, which is a specific runtime. Therefore, it inherits from `AssetCompilationContext`.
+* `EditorGameCompilationContext` is the context used when we compile an asset for the Scene editor, which is a specific runtime. Therefore, it inherits from `AssetCompilationContext`.
 * `PreviewCompilationContext` is the context used when we compile an asset for the preview, which is a specific runtime. Therefore, it inherits from `AssetCompilationContext`.
 * `ThumbnailCompilationContext` is the context used when we compile an asset to generate a thumbnail. Generally, for thumbnails, we compile one or several assets for the runtime, and use additional steps to generate the thumbnail with the `ThumbnailCompilationContext` (see below).
 
@@ -107,7 +107,7 @@ Currently there is one `BuildDependencyManager` for each type of compiler.
 
 #### AssetDependenciesCompiler
 
-The `AssetDependenciesCompiler` is the object that computes the dependencies with the `BuildDependencyManager`, and then generates the build steps for a given asset, including the runtime dependencies. It's the main entry point of compilation for the CompilerApp, the scene editor, and the preview. Thumbnails also use it, via the `ThumbnailListCompiler` class.
+The `AssetDependenciesCompiler` is the object that computes the dependencies with the `BuildDependencyManager`, and then generates the build steps for a given asset, including the runtime dependencies. It's the main entry point of compilation for the CompilerApp, the Scene editor, and the preview. Thumbnails also use it, via the `ThumbnailListCompiler` class.
 
 > **TODO:** This class should be removed, and its content moved into the `BuildDependencyManager` class. By doing so, it should be possible to make `BuildAssetNode` and `BuildAssetLink` internal - those classes are just the data of the dependency graph, they should not be exposed publicly. To do that, a method to retrieve the dependencies in a given context must be implemented in `BuildDependencyManager` in order to fix the usage of `BuildAssetNode` in `EditorContentLoader`.
 
@@ -119,9 +119,9 @@ Remark: the Game Studio never saves index file on the disk, it keeps the url -> 
 
 #### Databases
 
-Before accessing content to load, a Microthread-local database must be mounted. Depending on the context, it can be a database containing a scene and its dependencies (scene editor), the assets needed to create a thumbnail, an asset to display in the preview...
+Before accessing content to load, a Microthread-local database must be mounted. Depending on the context, it can be a database containing a scene and its dependencies (Scene editor), the assets needed to create a thumbnail, an asset to display in the preview...
 
-For the scene editor, this is handled by the `GameStudioDatabase` class. Thumbnails and preview also handle database mounting internally (in `ThumbnailGenerator` for example).
+For the Scene editor, this is handled by the `GameStudioDatabase` class. Thumbnails and preview also handle database mounting internally (in `ThumbnailGenerator` for example).
 
 > **TODO:** See if it could be possible/useful to wrap all database-mounting in the Game Studio into the GameStudioDatabase class.
 
@@ -137,16 +137,14 @@ The builder service uses `AssetBuildUnit`s as unit of compilation. A build unit 
 
 #### EditorContentLoader
 
-The scene editor needs a special behavior in term of asset loading. The main issue is that any type of asset can be modified by the user (for example a texture), and then need to be reloaded. Stride use the `ContentManager` to handle reference counting of loaded assets. With a few exception (Materials, maybe Textures), it does not support hot-swapping an asset. Therefore, when an asset needs to be reloaded, we actually need to unload and reload the *first-referencer* of this asset.
+The Scene editor needs a special behavior in term of asset loading. The main issue is that any type of asset can be modified by the user (for example a texture), and then need to be reloaded. Stride use the `ContentManager` to handle reference counting of loaded assets. With a few exception (Materials, maybe Textures), it does not support hot-swapping an asset. Therefore, when an asset needs to be reloaded, we actually need to unload and reload the *first-referencer* of this asset.
 
 The *first-referencer* is the first asset referenced by an entity, that contains a way (in term of reference) to the asset to reload. For example, in case of a texture, we will have to reload all models that use materials that use the texture to reload.
 
-This is done by the `EditorContentLoader` class. At initialization, this class collects all *first-referencer* assets and build them. Each time an asset is built, it is then loaded into the scene editor game, and the references (from the entity to the asset) are updated. This means that this class needs to track all first-referencers on its own and update them. This is done specifically by the `LoaderReferenceManager` object. The reference are collected from the `GameEditorChangePropagator`, an object that takes the responsibility to push synchronization of changes between the assets and the game (for all properties, including non-references). There is one instance of it per entity. When a property of an entity that contains a reference to an asset (a *first-referencer*) is modified, the propagator will trigger the work to compile and update the entity. In case of a referenced asset modified by the user, `EditorContentLoader.AssetPropertiesChanged` takes the responsibility to gather, build, unload and reload what needs to be reloaded.
+This is done by the `EditorContentLoader` class. At initialization, this class collects all *first-referencer* assets and build them. Each time an asset is built, it is then loaded into the Scene editor game, and the references (from the entity to the asset) are updated. This means that this class needs to track all first-referencers on its own and update them. This is done specifically by the `LoaderReferenceManager` object. The reference are collected from the `GameEditorChangePropagator`, an object that takes the responsibility to push synchronization of changes between the assets and the game (for all properties, including non-references). There is one instance of it per entity. When a property of an entity that contains a reference to an asset (a *first-referencer*) is modified, the propagator will trigger the work to compile and update the entity. In case of a referenced asset modified by the user, `EditorContentLoader.AssetPropertiesChanged` takes the responsibility to gather, build, unload and reload what needs to be reloaded.
 
 ## Additional Todos
 
 > **TODO:** `GetInputFiles` exists both in `Command` and in `IAssetCompiler`. It has the same signature in both case, so it's returning information using `ObjectUrl` and `UrlType` in the compiler, where we are trying to describe dependency. That signature should be changed, so it returns information using `BuildDependencyType` and `AssetCompilationContext`, just like the GetInputTypes method. Also, the method is passed to the command via the `InputFilesGetter` which is not very nice and has to be done manually (super error-prone, we had multiple commands that were missing it!). An automated way should be provided.
 
 > **TODO:** The current design of the build steps and list build steps is a *tree*. For this reason, same build steps are often generated multiple times and appears in multiple trees. It could be possible to cache and share the build step if the structure was a *graph* rather than a *tree*. Do to that, the `Parent` property of build steps should be removed. The main difficulty is that the way output objects of build steps flow between steps has to be rewritten.
-
-

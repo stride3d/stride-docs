@@ -6,9 +6,12 @@ It is possible to run games built for Windows on Linux using **compatibility lay
 
 ## Development support
 
-Currently, developing games on Linux is only **partially supported**. It's not possible to run **Game Studio** (the editor) on Linux, even when using a compatibility layer, such as Wine.
+Currently, developing games on Linux is only **partially supported**. **Game Studio** (the editor) remains Windows-exclusive, however starting with `4.4.0-beta5`, it is now possible to use it through a compatibility layer. For more information, check out [Install the editor using Wine](install-the-editor-using-wine.md).
 
-However, it is still possible to code and build games natively, meaning that when in a team, some programmers could work on a project using Linux for tasks that don't require the editor.
+> [!NOTE]
+> Using Proton/Wine to run Game Studio **is not officially supported!** You may experience problems with stability, graphical glitches and errors.
+
+Despite Game Studio not being officially available, it is still possible to code and build games natively, meaning that when in a team, some programmers could work on a project using Linux for tasks that don't require the editor.
 
 [!INCLUDE [xplat-editor-notice](../../../includes/xplat-editor-notice.md)]
 
@@ -29,3 +32,4 @@ Currently, **games made with Stride can only run using the X windowing system**,
 ## In this section
 
 * [Setup and requirements](setup-and-requirements.md)
+* [Install the editor using Wine](install-the-editor-using-wine.md)

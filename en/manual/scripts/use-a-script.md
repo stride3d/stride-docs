@@ -43,7 +43,7 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 
 ### Add the script in the property grid
 
-1. In the **scene editor**, select the entity you want to add the script to.
+1. In the **Scene editor**, select the entity you want to add the script to.
 
     ![Select an entity](media/select-entity.png)
 
@@ -53,8 +53,8 @@ Game Studio adds an entity to your scene, with the script as a component on the 
 
     Game Studio adds the script to the entity.
 
->[!Note]
->You can customize where scripts appear in the dropdown using the `ComponentCategoryAttribute`:
+> [!NOTE]
+> You can customize where scripts appear in the dropdown using the `ComponentCategoryAttribute`:
 
 ```cs
 [ComponentCategory("My Startup Scripts")]

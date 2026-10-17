@@ -14,7 +14,7 @@ To create a debug renderer, right-click the graphics compositor editor and selec
 
 In most cases, you want the debug renderer to share an entry point with one or more forward renderers. To do this, use a **scene renderer collection** and select the debug renderer and forward renderer(s) as children, as in the screenshot below:
 
-![Debug renderer Property Grid](media/debug-renderer-property-setup.png)
+![Debug renderer Property grid](media/debug-renderer-property-setup.png)
 
 ## Use a debug renderer
 
@@ -39,7 +39,7 @@ namespace MyGame
 
         public override async Task Execute()
         {
-        //set up rendering in the debug entry point if we have it
+        // set up rendering in the debug entry point if we have it
         var compositor = SceneSystem.GraphicsCompositor;
         var debugRenderer =
             ((compositor.Game as SceneCameraRenderer)?.Child as SceneRendererCollection)?.Children.Where(

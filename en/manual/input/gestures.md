@@ -5,7 +5,7 @@
 
 Gestures are predefined [pointer](pointers.md) patterns. Stride can recognize gestures and trigger corresponding events. For example, in a strategy game, the player can drag and drop a unit to the battlefield with a **drag** gesture. Gestures can use one or several fingers.
 
-> [!Note] 
+> [!NOTE] 
 > All lengths, speeds and error margins of configuration files must use normalized values.
 
 ## Turn on gesture recognition
@@ -18,7 +18,7 @@ To turn on gesture recognition:
 2. Configure the class parameters.
 3. Add the gesture configuration to the @'Stride.Input.InputManager.Gestures' collection.
 
-> [!Warning] 
+> [!WARNING] 
 > After you activate recognition for a gesture, you can't modify the gesture's parameters. If you need to do this, delete the gesture from the @'Stride.Input.InputManager.Gestures' collection and create a new entry with new parameters.
 
 ### Turn off gesture recognition
@@ -29,7 +29,7 @@ Delete the gesture from the [InputManager.Gestures](xref:Stride.Input.InputManag
 
 When the input system detects a gesture, it adds a @'Stride.Input.GestureEvent' to the list of [InputManager.GestureEvents](xref:Stride.Input.InputManager.GestureEvents). The event contains information about the gesture and its state, such as its location and the number of fingers used.
 
-> [!Note]
+> [!NOTE]
 > Each gesture has its own associated gesture event class (see below).
 
 The [GestureEvent.Type](xref:Stride.Input.GestureEvent.Type) field indicates which gesture has been recognized. You can then cast the base gesture event into the gesture-specific event type to have gesture-type-specific information about the event.
@@ -48,7 +48,7 @@ In the @'Stride.Input.GestureConfig' classes, you can configure parameters inclu
 
 * the gesture direction
 
-> [!Note] 
+> [!NOTE] 
 > Each gesture has its own configuration class with specific configuration parameters (see below).
 
 ## Types of gesture
@@ -61,7 +61,7 @@ Stride supports two main types of gesture:
 
     * [Flick](#Flick)
     
-	* [Long press](#Long-press)
+    * [Long press](#Long-press)
 
 * **Continuous** gestures (drag and composite) trigger a series of events when the user changes the direction of the gesture.
 
@@ -227,12 +227,12 @@ Use the [GestureEvent.Type](xref:Stride.Input.GestureEvent.Type) field to identi
 foreach( var gestureEvent in Input.GestureEvents)
 {
    	// Determine if the event is from a tap gesture
-	if (gestureEvent.Type != GestureType.Tap)
-		continue;
+    if (gestureEvent.Type != GestureType.Tap)
+        continue;
    
-	// Cast a specific tap event class.
-	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent;
-	
+    // Cast a specific tap event class.
+    GestureEventTap  tapEvent = (GestureEventTap) gestureEvent;
+    
     // Access tap-event-specific field.
     log.Info("Tap position: {0}.", tapEvent.TapPosition);
 }
@@ -246,16 +246,16 @@ Use the [GestureEvent.State](xref:Stride.Input.GestureEvent.State) field to get 
 switch(compositeGestureEvent.State)
 {
 case GestureState.Began:
-	image.ComputePreview();
-	break;
+    image.ComputePreview();
+    break;
 case GestureState.Changed:
-	image.TransformPreview(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
-	break;
+    image.TransformPreview(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
+    break;
 case GestureState.Ended:
-	image.TransformRealImage(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
-	break;
+    image.TransformRealImage(compositeGestureEvent.TotalScale, compositionGestureEvent.TotalRotation);
+    break;
 default:
-	break;
+    break;
 }
 ```
 
