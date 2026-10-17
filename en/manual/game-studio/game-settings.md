@@ -8,15 +8,15 @@ You can configure the global settings of your game in the **Game Settings** asse
 
 ## Edit game settings
 
-1. In the **Solution Explorer** (the bottom-left pane by default), select the **Assets** folder.
+1. In the **Solution explorer** (the bottom-left pane by default), select the **Assets** folder.
 
     ![Select Assets folder asset](media/select-asset-folder.png)
 
-2. In the **Asset View** (the bottom pane by default), select the **GameSettings** asset.
+2. In the **Asset view** (the bottom pane by default), select the **GameSettings** asset.
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-3. In the **Property Grid** (the right-hand pane by default), edit the Game Settings properties.
+3. In the **Property grid** (the right-hand pane by default), edit the Game Settings properties.
 
    ![Game settings](media/game-settings.png)
 
@@ -64,16 +64,16 @@ For more details about audio, see [Audio](../audio/index.md).
 
 ## Editor
 
-The **editor** settings control how Game Studio displays entities in the Scene Editor. These settings have no effect on your game.
+The **editor** settings control how Game Studio displays entities in the Scene editor. These settings have no effect on your game.
 
->[!Note]
->How Game Studio displays entities is also affected by the **Color space** setting under **Rendering**.
+> [!NOTE]
+> How Game Studio displays entities is also affected by the **Color space** setting under **Rendering**.
 
 ![Editor settings](media/editor-settings.png)
 
 | Property            | Description    
 |---------------------|--------------
-| Rendering mode      | How Game Studio renders thumbnails and Asset Previews
+| Rendering mode      | How Game Studio renders thumbnails and asset previews
 | Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. 
 
 ## Navigation
@@ -141,8 +141,8 @@ For more details, see [Navigation](../navigation/index.md).
 | Resource timeout (ms)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded)
 | Memory budget (in MB) | When the memory used by streaming exceeds this budget, Stride unloads unused textures. You can increase this to keep more textures loaded when you have memory to spare, and vice versa.
 
->[!Note]
->Currently, only textures can be streamed.
+> [!NOTE]
+> Currently, only textures can be streamed.
 
 For more details, see [Streaming](../graphics/textures/streaming.md).
 
@@ -158,7 +158,7 @@ For more details, see [Streaming](../graphics/textures/streaming.md).
 
 The **splash screen** is displayed when your game starts. The default is the Stride splash screen.
 
-> [!Note]
+> [!NOTE]
 > The splash screen is only displayed when the game is built in release mode.
 
 ![Settings](media/splash-screen.png)

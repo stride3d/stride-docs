@@ -38,11 +38,10 @@ engine.EntityManager.AddEntity(myEntity);
 // Iterate through added entities:
 foreach (var entity in engine.EntityManager.Entities)
 {
-	Console.WriteLine(entity.Name);
+    Console.WriteLine(entity.Name);
 }
 ```
 
 @'Stride.Engine.EntityManager' can be used to enumerate its `Entities (ref:{Stride.Engine.Entity})`. Note that children of a given entities will also be in this list.
 
 To manipulate entities as a scenegraph, refer to @'Stride.Engine.TransformComponent' class.
-

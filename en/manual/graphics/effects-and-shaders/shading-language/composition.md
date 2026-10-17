@@ -12,41 +12,41 @@ You can compose with an instance of the desired shader class or an instance of a
 ```cs
 shader CompositionBase
 {
-	float4 Compute()
-	{
-		return float4(0.0);
-	}
+    float4 Compute()
+    {
+        return float4(0.0);
+    }
 };
  
 shader CompositionShaderA : CompositionBase
 {
-	float4 myColor;
+    float4 myColor;
  
-	override float4 Compute()
-	{
-		return myColor;
-	}
+    override float4 Compute()
+    {
+        return myColor;
+    }
 };
  
 shader CompositionShaderB : CompositionBase
 {
-	float4 myColor;
+    float4 myColor;
 
-	override float4 Compute()
-	{
-		return 0.5 * myColor;
-	}
+    override float4 Compute()
+    {
+        return 0.5 * myColor;
+    }
 };
  
 shader BaseShader
 {
-	CompositionBase Comp0;
-	CompositionBase Comp1;
+    CompositionBase Comp0;
+    CompositionBase Comp1;
  
-	float4 GetColor()
-	{
-		return Comp0.Compute() + Comp1.Compute();
-	}
+    float4 GetColor()
+    {
+        return Comp0.Compute() + Comp1.Compute();
+    }
 };
 ```
 
@@ -59,12 +59,12 @@ If you want to access the root compilation context, you can use the following fo
 ```cs
 shader CompositionShaderC : CompositionBase
 {
-	BaseShader rootShader = stage;
+    BaseShader rootShader = stage;
  
-	float4 GetColor()
-	{
-		return rootShader.GetColor();
-	}
+    float4 GetColor()
+    {
+        return rootShader.GetColor();
+    }
 };
 ```
 
@@ -77,19 +77,19 @@ You can also create an array of compositions the same way you use an array of va
 ```cs
 shader BaseShaderArray
 {
-	CompositionBase Comps[];
-	
-	float4 GetColor()
-	{
-		float4 resultColor = float4(0.0);
+    CompositionBase Comps[];
+    
+    float4 GetColor()
+    {
+        float4 resultColor = float4(0.0);
  
-		foreach (var comp in Comps)
-		{
-			resultColor += comp.Compute();
-		}
+        foreach (var comp in Comps)
+        {
+            resultColor += comp.Compute();
+        }
  
-		return resultColor;
-	}
+        return resultColor;
+    }
 };
 ```
 
@@ -100,23 +100,23 @@ The behavior of the `stage` keyword is straightforward: only one instance of the
 ```cs
 shader BaseShader
 {
-	stage float BaseStageValue;
-	float NonStageValue;
+    stage float BaseStageValue;
+    float NonStageValue;
 };
  
 shader TestShader : BaseShader
 {
-	BaseShader comp0;
-	BaseShader comp1;
+    BaseShader comp0;
+    BaseShader comp1;
 };
  
 // resulting shader (representation)
 shader TestShader
 {
-	float BaseStageValue;
-	float NonStageValue;
-	float comp0_NonStageValue;
-	float comp1_NonStageValue;
+    float BaseStageValue;
+    float NonStageValue;
+    float comp0_NonStageValue;
+    float comp1_NonStageValue;
 };
 ```
 
@@ -125,43 +125,43 @@ shader TestShader
 ```cs
 shader BaseShader
 {
-	stage float BaseStageMethod()
-	{
-		return 1.0;
-	}
+    stage float BaseStageMethod()
+    {
+        return 1.0;
+    }
 
-	float NonStageMethod()
-	{
-		return 2.0;
-	}
+    float NonStageMethod()
+    {
+        return 2.0;
+    }
 };
  
 shader TestShader : BaseShader
 {
-	BaseShader comp0;
-	BaseShader comp1;
+    BaseShader comp0;
+    BaseShader comp1;
 };
  
 // resulting shader (representation)
 shader TestClass
 {
-	float BaseStageMethod()
-	{
-		return 1.0;
-	}
+    float BaseStageMethod()
+    {
+        return 1.0;
+    }
 
-	float NonStageMethod()
-	{
-		return 2.0;
-	}
-	float comp0_NonStageMethod()
-	{
-		return 2.0;
-	}
-	float comp1_NonStageMethod()
-	{
-		return 2.0;
-	}
+    float NonStageMethod()
+    {
+        return 2.0;
+    }
+    float comp0_NonStageMethod()
+    {
+        return 2.0;
+    }
+    float comp1_NonStageMethod()
+    {
+        return 2.0;
+    }
 };
 ```
 
@@ -176,65 +176,65 @@ The `clone` keyword has a less trivial behavior. It prevents the `stage` keyword
 ```cs
 shader BaseShader
 {
-	stage float BaseStageMethod()
-	{
-		return 1.0;
-	}
+    stage float BaseStageMethod()
+    {
+        return 1.0;
+    }
  
-	stage float BaseStageMethodNotCloned()
-	{
-		return 1.0;
-	}
+    stage float BaseStageMethodNotCloned()
+    {
+        return 1.0;
+    }
 };
  
 shader CompShader : BaseShader
 {
-	override clone float BaseStageMethod()
-	{
-		return 1.0 + base.BaseStageMethod();
-	}
+    override clone float BaseStageMethod()
+    {
+        return 1.0 + base.BaseStageMethod();
+    }
  
-	override float BaseStageMethodNotCloned()
-	{
-		return 1.0f + base.BaseStageMethodNotCloned();
-	}
+    override float BaseStageMethodNotCloned()
+    {
+        return 1.0f + base.BaseStageMethodNotCloned();
+    }
 };
  
 shader TestShader : BaseShader
 {
-	CompShader comp0;
-	CompShadercomp1;
+    CompShader comp0;
+    CompShadercomp1;
 };
  
 // resulting shader (representation)
 shader TestShader
 {
-	// cloned method
-	float base_BaseStageMethod()
-	{
-		return 1.0;
-	}
+    // cloned method
+    float base_BaseStageMethod()
+    {
+        return 1.0;
+    }
  
-	float comp0_BaseStageMethod()
-	{
-		return 1.0 + base_BaseStageMethod();
-	}
+    float comp0_BaseStageMethod()
+    {
+        return 1.0 + base_BaseStageMethod();
+    }
  
-	float BaseStageMethod() // in fact comp1_BaseStageMethod
-	{
-		return 1.0 + comp0_BaseStageMethod; // 3.0f
-	}
+    float BaseStageMethod() // in fact comp1_BaseStageMethod
+    {
+        return 1.0 + comp0_BaseStageMethod; // 3.0f
+    }
  
-	// not cloned method
-	float base_BaseStageMethodNotCloned()
-	{
-		return 1.0f;
-	}
+    // not cloned method
+    float base_BaseStageMethodNotCloned()
+    {
+        return 1.0f;
+    }
  
-	float BaseStageMethodNotCloned()
-	{
-		return 1.0f + base_BaseStageMethodNotCloned(); // 2.0f
-	}
+    float BaseStageMethodNotCloned()
+    {
+        return 1.0f + base_BaseStageMethodNotCloned(); // 2.0f
+    }
 };
 ```
 
@@ -247,4 +247,4 @@ This behavior is useful when you want to repeat a simple function but with diffe
     - [Shader classes, mixins, and inheritance](shader-classes-mixins-and-inheritance.md)
     - [Templates](templates.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
-	- [Shader stages](shader-stages.md)
+    - [Shader stages](shader-stages.md)

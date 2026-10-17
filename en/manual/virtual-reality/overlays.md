@@ -2,14 +2,14 @@
 
 In VR games, you can display [textures](../graphics/textures/index.md) (including [render textures](../graphics/graphics-compositor/render-textures.md)) as overlays that appear to float in front of the player. This is especially useful for UIs.
 
-> [!Note]
+> [!NOTE]
 > You can't see overlays when you don't run your game in your VR device. This is because the VR device itself creates the overlay.
 
 This page explains how to add an overlay. To display a **UI** in an overlay, you need to render the UI to a render texture, and display the render texture in the overlay. For instructions, see [Display a UI in an overlay](display-a-UI-in-an-overlay.md).
 
 ## Add an overlay
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -21,7 +21,7 @@ This page explains how to add an overlay. To display a **UI** in an overlay, you
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), expand **VR Settings**.
+3. In the **Property grid** (on the right by default), expand **VR Settings**.
 
     ![VR settings](media/vr-settings.png)
 
@@ -45,7 +45,7 @@ Your game is now ready to render the UI to an overlay in your VR device.
 
 You can add as many overlays as you need. To add another overlay, click **Add to overlays** ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) and follow the instructions above from step 4.
 
-> [!Note]
+> [!NOTE]
 > If overlays overlap in the user view, overlays first in the list appear on top.
 
 ## Overlay properties

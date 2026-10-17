@@ -7,7 +7,7 @@ You can use `UrlReference<Scene>` properties on your scripts to assign **Scene**
 ```cs
 public UrlReference<Scene> ChildSceneUrl { get; set; }
 
-//...
+// ...
 var childScene = Content.Load(ChildSceneUrl);
 
 parentScene.Children.Add(childScene);
@@ -25,14 +25,14 @@ myParentScene.Children.Add(myChildScene1);
 myChildScene1.Add(myChildScene2);
 ```
 
->[!Note]
->If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset View**).
-
->![Scenes included in root](media/scenes-included-in-root.png)
-
->To include a scene in the build, in the **Asset View**, right-click the scene asset and select **Include in build as root asset**.
-
->For more information about including assets in the build, see [Asset compilation](../assets/asset-compilation.md).
+> [!NOTE]
+> If you are not using `UrlReference` make sure all the scenes you want to load are included in the build as **root assets** (indicated with blue icons in the **Asset view**).
+> 
+> ![Scenes included in root](media/scenes-included-in-root.png)
+>
+> To include a scene in the build, in the **Asset view**, right-click the scene asset and select **Include in build as root asset**.
+>
+> For more information about including assets in the build, see [Asset compilation](../assets/asset-compilation.md).
 
 For more information about scene hierarchies, see [Manage scenes](manage-scenes.md).
 
@@ -43,7 +43,7 @@ Before a scene is unloaded remove it from the scene hierarchy:
 ```cs
 parentScene.Children.Remove(childScene);
 
-//Alternatively
+// Alternatively
 childScene.Parent = null;
 ```
 
@@ -57,12 +57,12 @@ Content.Unload(childScene);
 
 Stride also includes a scene streaming script that uses a [trigger](../physics/triggers.md) to load scenes. 
 
->[!Note]
->The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
+> [!NOTE]
+> The scene streaming script is included as an example. It isn't always the most appropriate way to load scenes. Feel free to modify it as much as you need.
 
 ### Add a scene streaming script
 
-To add a scene streaming script, in the **Asset View** (bottom pane by default), click **Add asset** and select **Scripts > Scene streaming**.
+To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streaming**.
 
 ![Scene streaming script](media/scene-streaming-script.png)
 
@@ -76,12 +76,12 @@ Game Studio adds a scene streaming script to your project assets.
 
 2. Create an entity and position it where you want the scene to load.
 
-3. With the entity selected, in the **Property Grid** (on the righy by default), click **Add component** and select the **scene streaming** script.
+3. With the entity selected, in the **Property grid** (on the righy by default), click **Add component** and select the **scene streaming** script.
 
     ![Add script](media/add-scene-streaming-script.png)
 
-    >[!Note]
-    >If the scene streaming script doesn't appear in the list of components, reload the assemblies.
+    > [!NOTE]
+    > If the scene streaming script doesn't appear in the list of components, reload the assemblies.
 
     Game Studio adds the script to the entity as a component.
 
@@ -107,7 +107,7 @@ At runtime, when the trigger you created in step 1 is triggered, Stride loads th
 * [Colliders](../physics/colliders.md)
 * [Triggers](../physics/triggers.md)
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the Scene Editor](navigate-in-the-scene-editor.md)
+* [Navigate in the Scene editor](navigate-in-the-scene-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Add entities](add-entities.md)
 * [Manage entities](manage-entities.md)

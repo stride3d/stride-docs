@@ -9,13 +9,13 @@
 
 ## Add a Body Component to an entity
 
-1. In the **Scene Editor**, select the entity you want to add the component to.
+1. In the **Scene editor**, select the entity you want to add the component to.
 
-2. In the **Property Grid**, click `Add component`, hover `Physics - Bepu` and select `BodyComponent`.
+2. In the **Property grid**, click `Add component`, hover `Physics - Bepu` and select `BodyComponent`.
 
     ![Add body component](media/add-body-component.png)
 
-> [!Note]
+> [!NOTE]
 > You will need to set a collider for this newly created body, you can do so through the Collider property, see [collider shapes](collider-shapes.md).
 
 > [!WARNING]

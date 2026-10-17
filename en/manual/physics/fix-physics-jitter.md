@@ -5,7 +5,7 @@
 
 Physics engine operate on a fixed time step; instead of updating physics every frame, physics engine update at a fixed frequency, 60 times per second for example.
 
-> [!Note]
+> [!NOTE]
 > This is controlled through the `FixedTimeStep` property in your [Simulation Settings](simulation.md)
 
 The discrepancy between when your game updates and when physics updates means that you may see physics objects, or things that are attached to physics objects, move in a jittery manner. They jitter because they stay static after every physics update while the whole rest of the world moves every single frame.

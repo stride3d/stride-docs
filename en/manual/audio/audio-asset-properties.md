@@ -1,6 +1,6 @@
 # Audio asset properties
 
-After you select an audio asset in the **Asset View**, you can configure its properties in the **Property Grid**.
+After you select an audio asset in the **Asset view**, you can configure its properties in the **Property grid**.
 
 ![Audio asset properties](media/audio-asset-properties.png)
 

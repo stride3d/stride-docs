@@ -10,6 +10,6 @@ var trigger = Entity.Get<PhysicsComponent>();
 
 foreach (var collision in trigger.Collisions)
 {
-    //do something with the collision
+    // do something with the collision
 }
 ```

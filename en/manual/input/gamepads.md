@@ -5,7 +5,7 @@
 
 **Gamepads**, such as the Xbox Elite Wireless Controller and the PS4 DualShock, are popular input devices for consoles and desktop.
 
-> [!Note] 
+> [!NOTE] 
 > Stride is currently optimized for the Xbox Elite gamepad. Other controllers work, but might have unexpected button mappings. Gamepad-specific features like the PS4 DualShock touchpad aren't supported.
 
 ## Digital and analog buttons
@@ -46,7 +46,7 @@ To query the states and state changes of digital gamepad buttons, on the `GamePa
 
 You can also get the state of digital buttons using [GamePadState.Buttons](xref:Stride.Input.GamePadState.Buttons).
 
-> [!Note] 
+> [!NOTE] 
 > The [GamePadState.Buttons](xref:Stride.Input.GamePadState.Buttons) field is a bitmask that uses binary system. Depending on the bitmask value, you can determine which buttons are *up* or *down*.
 
 To get the gamepad state, use [IGamePadDevice.State](xref:Stride.Input.IGamePadDevice.State).
@@ -82,7 +82,7 @@ Triggers move along the X axis. Their positions read as follows:
 
 To set the gamepad vibration level, use [IGamePadDevice.SetVibration](xref:Stride.Input.IGamePadDevice.SetVibration\(System.Single,System.Single,System.Single,System.Single\)).
 
-> [!Note] 
+> [!NOTE] 
 > Stride currently only supports vibration for Xbox gamepads.
 
 ## Example code
@@ -95,10 +95,10 @@ public class TestScript : SyncScript
 {
     public override void Update()
     {
-        //Check if a gamepad is connected
+        // Check if a gamepad is connected
         if (Input.HasGamePad)
         {
-            //Get the number of connected gamepads
+            // Get the number of connected gamepads
             int gamepadCount = Input.GamePadCount;
 
             // Check each gamepad's status

@@ -4,11 +4,11 @@
 <span class="badge text-bg-success">Artist</span>
 <span class="badge text-bg-success">Programmer</span>
 
->[!Warning]
->Currently, local reflections aren't compatible with mobile platforms and cause crashes.
+> [!WARNING]
+> Currently, local reflections aren't compatible with mobile platforms and cause crashes.
 
->[!Note]
->As with other depth-aware post effects, enabling local reflections nullifies MSAA (multisample anti-aliasing).
+> [!NOTE]
+> As with other depth-aware post effects, enabling local reflections nullifies MSAA (multisample anti-aliasing).
 
 When **local reflections** are enabled, the scene is reflected in glossy [materials](../materials/index.md).
 
@@ -40,7 +40,7 @@ Stride processes local reflections in four passes:
 
 To use local reflections, enable the effect in the **graphics compositor**.
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](../graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -52,10 +52,10 @@ To use local reflections, enable the effect in the **graphics compositor**.
 
     > [!Tip]
     > If there's no post-process effects node, right-click and select **Create > post-processing effects** to create one. On the new **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
-    
+    >
     > ![Connect nodes](media/connect-nodes.png)
 
-3. In the **Property Grid** (on the right by default), enable **Local reflections**.
+3. In the **Property grid** (on the right by default), enable **Local reflections**.
 
     ![Enable local reflections](media/enable-local-reflections.png)
 
@@ -86,8 +86,8 @@ Downscales the depth buffer to optimize raycast performance. Full gives better q
 
 The amount of gloss a material must have to reflect the scene. For example, if this value is set to `0.4`, only materials with a **gloss map** value of `0.4` or above reflect the scene. The default value is `0.55`.
 
->[!Note]
->If the **Invert** check box is selected in the material **micro surface** properties, the opposite is true. For example, if the reflections gloss value is set to `0.4`, only materials with a **gloss map** value of less than `0.4` reflect the scene.
+> [!NOTE]
+> If the **Invert** check box is selected in the material **micro surface** properties, the opposite is true. For example, if the reflections gloss value is set to `0.4`, only materials with a **gloss map** value of less than `0.4` reflect the scene.
 
 For more information about gloss, see [Materials — geometry attributes](../materials/geometry-attributes.md).
 
@@ -95,8 +95,8 @@ For more information about gloss, see [Materials — geometry attributes](../mat
 
 The maximum number of raycast steps allowed per pixel. Higher values produce better results, but worse performance. The default value is `60`. 
 
->[!Note]
->This is the most important property for controlling performance.
+> [!NOTE]
+> This is the most important property for controlling performance.
 
 #### Resolution
 
@@ -155,8 +155,8 @@ Enables the temporal pass. This reduces noise, but produces an animated "jitteri
 |---------------------|---------
 | ![Temporal effect enabled](media/temporal-effect-enabled.jpg)| ![Temporal effect disabled](media/temporal-effect-disabled.jpg)
 
->[!Note]
->If the temporal effect is disabled, the other temporal properties have no effect.
+> [!NOTE]
+> If the temporal effect is disabled, the other temporal properties have no effect.
 
 #### Response
 

@@ -22,14 +22,14 @@ You can change the materials a model uses in two places:
 
     ![Model materials](media/model-materials.png)
 
-    >[!Note]
-    >This affects every instance of this model.
+    > [!NOTE]
+    > This affects every instance of this model.
  
 * In the **model component** of an entity or [prefab](../../game-studio/prefabs/index.md):
 
     ![Model materials on entity](media/model-materials-in-entity.png)
 
-     This only affects **this** instance or prefab.
+    This only affects **this** instance or prefab.
 
 ## Meshes and material slots
 
@@ -59,14 +59,14 @@ When Stride draws a model with meshes, it performs one GPU draw call for each me
 
 In the example above, there are five meshes and five draw calls. After merging, there are three meshes and three draw calls.
 
->[!Note]
->When Stride merges meshes, it merges the vertex and index buffers. This means you can't draw the meshes separately at runtime, and you can't change the original mesh position (transformation matrix). The meshes become a single mesh with a single material and a single transformation matrix (relative to the model).
+> [!NOTE]
+> When Stride merges meshes, it merges the vertex and index buffers. This means you can't draw the meshes separately at runtime, and you can't change the original mesh position (transformation matrix). The meshes become a single mesh with a single material and a single transformation matrix (relative to the model).
 
->[!Note]
->When Stride merges meshes, it changes the draw order of elements. In the case of transparent materials, this can produce different results.
+> [!NOTE]
+> When Stride merges meshes, it changes the draw order of elements. In the case of transparent materials, this can produce different results.
 
->[!Note]
->When you create a [physics collider from a model](../../physics/collider-shapes.md), Stride builds separate convex hulls for each mesh in the model. If the meshes are merged, only one mesh remains per material, so convex hulls are also built from merged meshes.
+> [!NOTE]
+> When you create a [physics collider from a model](../../physics/collider-shapes.md), Stride builds separate convex hulls for each mesh in the model. If the meshes are merged, only one mesh remains per material, so convex hulls are also built from merged meshes.
 
 ### Disable mesh merging
 
@@ -80,7 +80,7 @@ To disable mesh merging on a model:
 
 1. Select the model you want to disable mesh merging for.
 
-2. In the **Property Grid**, disable **Merge meshes**.
+2. In the **Property grid**, disable **Merge meshes**.
 
     ![Disable merge meshes](media/disable-merge-meshes.png)
 
@@ -90,25 +90,25 @@ To disable merging only for specific meshes, enable their corresponding **nodes*
 
 1. Select the model that contains the meshes.
 
-2. In the **Property Grid**, under **Skeleton**, make sure the model has a skeleton associated with it.
+2. In the **Property grid**, under **Skeleton**, make sure the model has a skeleton associated with it.
 
     ![Model skeleton](media/model-skeleton.png)
 
     For more information about skeletons, see [Animation](../../animation/index.md).
 
-3. In the **Asset View**, select the skeleton.
+3. In the **Asset view**, select the skeleton.
 
     ![Select model skeleton](media/select-model-skeleton.png)
 
-4. In the **Property Grid**, under **Nodes**, select the nodes that correspond to the meshes you don't want to merge.
+4. In the **Property grid**, under **Nodes**, select the nodes that correspond to the meshes you don't want to merge.
 
     ![Nodes](media/select-model-skeleton-nodes.png)
 
-    >[!Tip]
-    >To see which nodes correspond to which mesh, open the model source file in a modeling application such as Maya.
+    > [!TIP]
+    > To see which nodes correspond to which mesh, open the model source file in a modeling application such as Maya.
 
-    >[!Note]
-    >Make sure you don't disable nodes that are animated at runtime.
+    > [!NOTE]
+    > Make sure you don't disable nodes that are animated at runtime.
 
 ## See also
 

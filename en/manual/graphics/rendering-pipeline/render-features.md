@@ -22,7 +22,7 @@ The **extract** phase copies data from game states of previously collected objec
 
 This should be as fast as possible and avoid heavy computations since game update and scripts are blocked. Heavy computations should be deferred to [Prepare](#prepare).
 
-> [!Note]
+> [!NOTE]
 > Currently, Stride doesn't parallelize game updates and scripts, so they won't be resumed until the **prepare** and **draw** phases are finished.
 
 Example tasks:

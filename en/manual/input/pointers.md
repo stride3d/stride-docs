@@ -19,10 +19,10 @@ On desktop platforms, the left mouse button can be used to simulate pointers. Fo
 
 5. For each new finger, Stride creates a new pointer with a new pointer ID.
 
-> [!Note] 
+> [!NOTE] 
 > Each pointer event contains information about only one pointer. If several pointers are modified simultaneously in the same update, Stride creates a separate event for each pointer.
 
-> [!Warning]
+> [!WARNING]
 > Each OS handles pointer modifications differently. This means the same finger gesture can generate slightly different pointer event sequences across different platforms. For example, Android doesn't create a new pointer event when a finger touches the screen but doesn't move. For more information, check your OS documentation.
 
 You can enable gesture recognition to detect gestures such as long presses and taps. For more information, see [Gestures](gestures.md).
@@ -41,11 +41,11 @@ You can use the following properties to get information about the pointer that t
 |--------|-----------
 |[PointerEvent.PointerId](xref:Stride.Input.PointerEvent.PointerId) | Indicates the ID of the pointer which triggered the event.
 
-> [!Warning]
+> [!WARNING]
 > The ID of a pointer is valid only during a single _Pressed->Moved->Released_ sequence of pointer events.
 > A finger can have different IDs each time it touches the screen (even if this happens very quickly).
 
-> [!Warning]
+> [!WARNING]
 > Each OS has its own way of assigning IDs to pointers.
 > There's no relation between the pointer ID values and corresponding fingers.
 
@@ -87,7 +87,7 @@ There are five types of pointer event:
 * **Released**: The finger left the screen.
 * **Canceled**: The pointer sequence was canceled. This can happen when the application is interrupted; for example, a phone app might be interrupted by an incoming phone call.
 
-> [!Note] 
+> [!NOTE] 
 > A sequence of pointer events for one pointer always starts with a **Pressed** event. This might be followed by one or more **Moved** events, and always ends with a **Released** or **Canceled** event.
 
 ### Get delta values
@@ -100,7 +100,7 @@ You can get the delta position in normalized or absolute coordinates.
 
 [PointerEvent.DeltaPosition](xref:Stride.Input.PointerEvent.DeltaPosition) gets the change in position since the previous @'Stride.Input.PointerEvent' in **normalized** X,Y coordinates.
 
-> [!Note] 
+> [!NOTE] 
 > Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **pointer state** is **down**).
 
 ### Absolute delta values

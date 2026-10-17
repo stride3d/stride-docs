@@ -4,7 +4,7 @@
 <span class="badge text-bg-success">Programmer</span>
 <span class="badge text-bg-success">Designer</span>
 
-To instantiate a prefab, drag and drop it from the **Asset View** to the scene.
+To instantiate a prefab, drag and drop it from the **Asset view** to the scene.
 
 You can re-arrange entities in the prefab instance just like you do with other entities:
 
@@ -32,7 +32,7 @@ In this case, a parent entity is unnecessary. Instead, you can create several in
 
 After you add a prefab instance, you can break the link between the prefab and any of its child entities. This means the child entity is no longer affected by changes you make to the prefab.
 
-To do this, in the **Scene Editor**, right-click a child entity or entities and select **Break link to prefab**.
+To do this, in the **Scene editor**, right-click a child entity or entities and select **Break link to prefab**.
 
 ![Break link between child and prefab](media/use-prefabs-break-link-to-prefab.gif)
 
@@ -55,7 +55,7 @@ public class SpawnPrefabOnStart : StartupScript
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > `Instantiate()` by itself isn't enough to add a prefab instance to the scene. You also need to `Add()` or `AddRange()` them to a scene . For example, if your prefab contains a model, the model is invisible until you add the prefab instance. Likewise, if your prefab contains a script, the script won't work until you add the prefab instance.
 
 If you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate and add it with the following code:
@@ -78,7 +78,7 @@ private void InstantiateBulletPrefab()
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include new changes.
 > For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at runtime. The script won't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs will have the new color, but existing prefabs won't.
 

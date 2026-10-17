@@ -22,7 +22,7 @@ public class MyDerivedSerializedClass : MySerializedClass
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > Your IDE may wrongfully add `System.Runtime.Serialization` to your list of `using` when adding `DataContract`.
 > They are not interchangeable.
 > Make sure that your `DataContract` comes from `Stride.Core`, specifying the namespace explicitly like shown above if necessary.
@@ -47,7 +47,7 @@ The [`DataAliasAttribute`](xref:Stride.Core.DataAliasAttribute) can be used to e
 public string MyRenamedProp { get; set; }
 ```
 
-> [!Note]
+> [!NOTE]
 > Alias remaps values only while in the editor; this feature is specific to the YAML serialization system. Alias will be ignored during builds and at runtime.
 
 ### DataMemberIgnoreAttribute
@@ -122,7 +122,7 @@ public object obj { get => x; internal/private protected/private/protected set =
 [DataMember] internal object obj { get => x; }
 
 // Read only, special case for get-only public properties without backing field, 
-//They must use the attribute to be deserialized, see the comment below
+// They must use the attribute to be deserialized, see the comment below
 [DataMember] public object obj { get => x; }
 
 // Read only for access modifiers more restrictive than internal, even with the attribute
@@ -134,7 +134,7 @@ private protected/private/protected object obj { get; set; }
 private protected/private/protected object obj { get => x; set => x; }
 ```
 
-> [!Note]
+> [!NOTE]
 > Get-only public properties without backing field (`public object obj { get => x; }`) are not serialized by default as
 > they are, more often than not, shortcuts to values of another object or used purely as a function.
 > It might make more sense to change it to `{ get; } = new MyObject();` or `{ get; init; }` if you want to serialize it,

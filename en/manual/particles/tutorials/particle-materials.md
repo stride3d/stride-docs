@@ -40,13 +40,13 @@ class ComputeColorRed : ComputeColor
 
 The only thing this shader does is return the red color for pixel shading every time `Compute` is called. We'll try something more difficult later, but for now let's keep it simple.
 
-Save the file and reload the scripts in Game Studio. You should see the new shader in **Asset View**.
+Save the file and reload the scripts in Game Studio. You should see the new shader in **Asset view**.
 
 ![media/particles-samples-material-2.png](media/particles-samples-material-2.png)
 
 If the shader isn't there, reload the project.
 
-Once the shader is loaded, you can access it in the **Property Grid** under the **dynamic emissive material** for the particles. Choose a type of shader and, from the drop-down menu, select the shader you just added to the scene.
+Once the shader is loaded, you can access it in the **Property grid** under the **dynamic emissive material** for the particles. Choose a type of shader and, from the drop-down menu, select the shader you just added to the scene.
 
 ![media/particles-samples-material-3.png](media/particles-samples-material-3.png)
 
@@ -94,7 +94,7 @@ This is similar to `ComputeColorRed` and can be compiled and loaded the same way
 
 There are several key differences. The shader now inherits from the `Texturing` shader base class as well. This allows it to use texture coordinates in from the streams. On the material side in Game Studio, we can force the texture coordinates to be streamed in case we don't use texture animation.
 
-The input values `float4 ColorCenter` and `float4 ColorEdge` in our shader are permutations. When we load the shader the Property Grid displays them under the **Generics** dictionary.
+The input values `float4 ColorCenter` and `float4 ColorEdge` in our shader are permutations. When we load the shader the Property grid displays them under the **Generics** dictionary.
 
 ![media/particles-samples-material-4.png](media/particles-samples-material-4.png)
 
@@ -279,7 +279,7 @@ In addition to the already existing @'Stride.Rendering.Materials.IComputeColor',
     shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
 ```
 
-We load the two shaders: one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the `ComputeColor` and `ComputeScalar` properties, which you can edit in the Property Grid. The generated code is similar to the shader code we wrote in the way that it calls `Compute()` and it returns the final result of our color or scalar compute tree.
+We load the two shaders: one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the `ComputeColor` and `ComputeScalar` properties, which you can edit in the Property grid. The generated code is similar to the shader code we wrote in the way that it calls `Compute()` and it returns the final result of our color or scalar compute tree.
 
 After we generate the shader code, we set it to the respective key we need. Check how `ParticleCustomShaderKeys.BaseColor` is defined in `ParticleCustomShaderKeys.cs`. In the effect file we check if this key is set, and if yes, we pass it to the stream defined in our shader code.
 

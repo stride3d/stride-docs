@@ -4,7 +4,7 @@
 
 The **splash screen** is the image (usually a logo) displayed when your game starts. It fades in over the color you specify, then fades out.
 
-> [!Note]
+> [!NOTE]
 > The splash screen is only displayed when the game is built in release mode.
 
 The default splash screen is the Stride logo.
@@ -36,8 +36,8 @@ The splash screen settings are part of the **Game settings** asset.
 | Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *StrideDefaultSplashScreen*. 
 | Color    | The color the splash screen fades in on top of. By default, this is black (*#FF000000*).
 
->[!Tip]
->Additionally, you might want to **disable streaming** on the properties of the splash screen texture itself. This makes sure the texture is always loaded and displayed at the highest quality. For more information, see [Textures > Streaming](../graphics/textures/streaming.md).
+> [!TIP]
+> Additionally, you might want to **disable streaming** on the properties of the splash screen texture itself. This makes sure the texture is always loaded and displayed at the highest quality. For more information, see [Textures > Streaming](../graphics/textures/streaming.md).
 
 ## See also
 

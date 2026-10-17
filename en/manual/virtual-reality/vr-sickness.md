@@ -12,7 +12,7 @@ In general, players should control the camera by moving their head. Moving the c
 
 To disable camera movement from inputs other than VR devices:
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -22,7 +22,7 @@ To disable camera movement from inputs other than VR devices:
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
-3. In the **Property Grid** (on the right by default), expand **VR Settings**.
+3. In the **Property grid** (on the right by default), expand **VR Settings**.
 
     ![VR settings](media/vr-settings.png)
 

@@ -16,7 +16,7 @@ This project contains different scenes that demonstrate different ways to use pa
 
 There are three particle entities in the scene: **ConeEmitter15**, **ConeEmitter30**, and **ConeEmitter45**.
 
-Select one of the particle entities. In the Property Grid, navigate to its source particle system and expand the emitter.
+Select one of the particle entities. In the Property grid, navigate to its source particle system and expand the emitter.
 
 ![media/particles-samples-custom-1.png](media/particles-samples-custom-1.png)
 
@@ -40,20 +40,20 @@ We'll create a spawner which emits particles per second **and** in bursts every 
     public sealed class CustomParticleSpawner : ParticleSpawner
     {
         [DataMemberIgnore]
-        private float carryOver;    // Private members do not appear on the Property Grid
+        private float carryOver;    // Private members do not appear on the Property grid
 
         [DataMember(100)]                // When data is serialized, this attribute decides its priority
-        [Display("Number of particles")] // This is the name which will be displayed on the Property Grid
+        [Display("Number of particles")] // This is the name which will be displayed on the Property grid
         public float SpawnCount { get; set; }
 
         [DataMemberIgnore]
-        private float burstTimer;    // Private members do not appear on the Property Grid
+        private float burstTimer;    // Private members do not appear on the Property grid
 
         [DataMember(200)]                // When data is serialized, this attribute decides its priority
-        [Display("Burst particles")]     // This is the name which will be displayed on the Property Grid
+        [Display("Burst particles")]     // This is the name which will be displayed on the Property grid
         public float BurstCount {get;set;}
 
-		...
+        ...
 
         public override int GetMaxParticlesPerSecond()
         {
@@ -124,7 +124,7 @@ We want to place the particles in a cone and shoot them outwards when they spawn
 
         public unsafe override void Initialize(ParticlePool pool, int startIdx, int endIdx, int maxCapacity)
         {
-			...
+            ...
         }
     }
 ```
@@ -138,41 +138,41 @@ The constructor for the initializer is important, as it sets the list of require
 public unsafe override void Initialize(ParticlePool pool, int startIdx, int endIdx, int maxCapacity)
 {
     // Make sure the fields exist and avoid illegal memory access
-	if (!pool.FieldExists(ParticleFields.Position) || !pool.FieldExists(ParticleFields.Velocity) || !pool.FieldExists(ParticleFields.RandomSeed))
-		return;
+    if (!pool.FieldExists(ParticleFields.Position) || !pool.FieldExists(ParticleFields.Velocity) || !pool.FieldExists(ParticleFields.RandomSeed))
+        return;
 
-	var posField = pool.GetField(ParticleFields.Position);
-	var velField = pool.GetField(ParticleFields.Velocity);
-	var rndField = pool.GetField(ParticleFields.RandomSeed);
+    var posField = pool.GetField(ParticleFields.Position);
+    var velField = pool.GetField(ParticleFields.Velocity);
+    var rndField = pool.GetField(ParticleFields.RandomSeed);
 
-	var range = (float) (Angle*Math.PI/180f);
-	var magnitude = WorldScale.X;
+    var range = (float) (Angle*Math.PI/180f);
+    var magnitude = WorldScale.X;
 
-	var i = startIdx;
-	while (i != endIdx)
-	{
-		var particle = pool.FromIndex(i);
-		var randSeed = particle.Get(rndField);
+    var i = startIdx;
+    while (i != endIdx)
+    {
+        var particle = pool.FromIndex(i);
+        var randSeed = particle.Get(rndField);
 
-		var x = (randSeed.GetFloat(RandomOffset.Offset2A + SeedOffset) - 0.5f)*range;
-		var z = (randSeed.GetFloat(RandomOffset.Offset2B + SeedOffset) - 0.5f) * range;
+        var x = (randSeed.GetFloat(RandomOffset.Offset2A + SeedOffset) - 0.5f)*range;
+        var z = (randSeed.GetFloat(RandomOffset.Offset2B + SeedOffset) - 0.5f) * range;
 
-		var u = (randSeed.GetFloat(RandomOffset.Offset2A + SeedOffset) - 0.5f) * range;
-		var v = (randSeed.GetFloat(RandomOffset.Offset2B + SeedOffset) - 0.5f) * Math.PI;
+        var u = (randSeed.GetFloat(RandomOffset.Offset2A + SeedOffset) - 0.5f) * range;
+        var v = (randSeed.GetFloat(RandomOffset.Offset2B + SeedOffset) - 0.5f) * Math.PI;
 
-		var xz = (float) Math.Sin(u);
-		var particleRandPos = new Vector3((float) Math.Cos(v) * xz, (float)Math.Sqrt(1 - u*u), (float)Math.Sin(v) * xz);
-		particleRandPos.Normalize();
+        var xz = (float) Math.Sin(u);
+        var particleRandPos = new Vector3((float) Math.Cos(v) * xz, (float)Math.Sqrt(1 - u*u), (float)Math.Sin(v) * xz);
+        particleRandPos.Normalize();
 
-		particleRandPos *= magnitude;
-		WorldRotation.Rotate(ref particleRandPos); // WorldRotation is the current rotation of our initializer. We can use it as it is, since inheritance and offset are already taken in account.
+        particleRandPos *= magnitude;
+        WorldRotation.Rotate(ref particleRandPos); // WorldRotation is the current rotation of our initializer. We can use it as it is, since inheritance and offset are already taken in account.
 
-		(*((Vector3*) particle[posField])) = particleRandPos + WorldPosition; // WorldPosition is the current position of our initializer. We can use it as it is, since inheritance and offset are already taken in account.
+        (*((Vector3*) particle[posField])) = particleRandPos + WorldPosition; // WorldPosition is the current position of our initializer. We can use it as it is, since inheritance and offset are already taken in account.
 
-		(*((Vector3*) particle[velField])) = particleRandPos * Strength;
+        (*((Vector3*) particle[velField])) = particleRandPos * Strength;
 
-		i = (i + 1) % maxCapacity;
-	}
+        i = (i + 1) % maxCapacity;
+    }
 }
 ```
 
@@ -204,8 +204,8 @@ For API reference, see @'Stride.Particles.Modules.ParticleUpdater'.
         [DataMember(10)]	// This public field will be serialized. With the DataMember attribute we can specify the serialization and display order.
         public AnimatedCurveEnum Curve; // Refer to the actual sample code for AnimatedCurveEnum
 
-		// In the constructor we have to specify all the fields we need for this updater.
-		// It calculates our newly created field by using the particle's lifetime so we need "RectangleXY" and "Life"
+        // In the constructor we have to specify all the fields we need for this updater.
+        // It calculates our newly created field by using the particle's lifetime so we need "RectangleXY" and "Life"
         public CustomParticleUpdater()
         {
             // This is going to be our "input" field
@@ -216,12 +216,12 @@ For API reference, see @'Stride.Particles.Modules.ParticleUpdater'.
             RequiredFields.Add(CustomParticleFields.RectangleXY);
         }
 
-		// The update method is called once every frame and requires the updater to iterate over all particles in the pool and update their fields.
-		// If the updater is a post-updater it will get called **after** spawning new particles for this frame and might overwrite their initial values on the same frame
-		// If the updater is not a post-updater it will get called **before** spawning new particles for this frame and can't overwrite their initial values for the first frame
+        // The update method is called once every frame and requires the updater to iterate over all particles in the pool and update their fields.
+        // If the updater is a post-updater it will get called **after** spawning new particles for this frame and might overwrite their initial values on the same frame
+        // If the updater is not a post-updater it will get called **before** spawning new particles for this frame and can't overwrite their initial values for the first frame
         public override void Update(float dt, ParticlePool pool)
         {
-			...
+            ...
         }
     }
 ```
@@ -259,12 +259,12 @@ In the next step we'll demonstrate how to display the created values.
 The `shape builder` is the class which takes all particle fields and creates the actual shape we are going to render. It's a little long, so let's break it down.
 
   ```cs
-	public override int QuadsPerParticle { get; protected set; } = 1;
+    public override int QuadsPerParticle { get; protected set; } = 1;
 ```
 
 The engine draws quads using 1 quad = 4 vertices = 6 indices, but we can only specify the number of quads we need. For a rectangle we need only one.
 
->[!Note]
+> [!NOTE]
 > The number of quads is important because the vertex buffer is allocated and mapped prior to writing out the vertex data. If we allocate smaller buffer it might result in illegal memory access and corruption.
 
   ```cs

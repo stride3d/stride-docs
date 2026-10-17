@@ -8,14 +8,14 @@ After you [import animation assets](import-animations.md), you need add them to 
 
 ## 1. Add animation assets to an entity
 
-1. In the **Scene Editor**, select the entity you want to animate.
+1. In the **Scene editor**, select the entity you want to animate.
 
     ![Select an entity](media/select-entity.png)
 
-    >[!Note]
-    >To animate an entity, the entity must have a model component.
+    > [!NOTE]
+    > To animate an entity, the entity must have a model component.
 
-2. In the **Property Grid**, click **Add component** and choose **Animations**.
+2. In the **Property grid**, click **Add component** and choose **Animations**.
 
     ![Select an entity](media/select-animation-component.png)
 
@@ -27,8 +27,8 @@ After you [import animation assets](import-animations.md), you need add them to 
 
     ![Add animation](media/add-animation.png)
 
-    >[!Tip]
-    >When you play animations using scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
+    > [!TIP]
+    > When you play animations using scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
     
 5. Click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
 
@@ -44,7 +44,7 @@ After you [import animation assets](import-animations.md), you need add them to 
 
     ![Animation asset added](media/animation-asset-added.png)
 
-You can add as many animations to the animation component as you need. The Property Grid lists them in alphabetical order.
+You can add as many animations to the animation component as you need. The Property grid lists them in alphabetical order.
 
 ![Animations list](media/animations-list.png)
 
@@ -70,15 +70,15 @@ For more information about creating animation scripts, see [animation scripts](a
 
 ## 3. Add the script to the entity
 
-1. In the **Scene Editor**, select the entity you want to animate.
+1. In the **Scene editor**, select the entity you want to animate.
 
     ![Select an entity](media/select-entity.png)
 
-2. In the **Property Grid**, click **Add component** and choose the animation script you want to add.
+2. In the **Property grid**, click **Add component** and choose the animation script you want to add.
 
     ![Select an entity](media/add-animation-script-component.png)
 
-Game Studio adds the script as a component. You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **Property Grid** under the script component properties.
+Game Studio adds the script as a component. You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **Property grid** under the script component properties.
 
 ![Select an entity](media/animations-setup3.png)
 

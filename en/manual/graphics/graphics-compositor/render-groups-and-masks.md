@@ -9,7 +9,7 @@ With **render groups** and **render masks**, you can choose which parts of your 
 
 1. In the scene, select the entity with the component (such as a model or [UI component](../../ui/add-a-ui-to-a-scene.md)) you want to add to a render group.
 
-2. In the **Property Grid**, next to **Render group**, select the group you want the entity to belong to.
+2. In the **Property grid**, next to **Render group**, select the group you want the entity to belong to.
 
     ![Select render group](media/select-render-group.png)
 
@@ -17,7 +17,7 @@ With **render groups** and **render masks**, you can choose which parts of your 
 
 The **render mask** filters which groups are rendered.
 
-1. In the **Asset View** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+1. In the **Asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
     ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
@@ -29,7 +29,7 @@ The **render mask** filters which groups are rendered.
 
     ![Entry points node](media/entry-points-node.png)
 
-3. In the **Property Grid**, expand the renderer you want to render the model.
+3. In the **Property grid**, expand the renderer you want to render the model.
 
 4. Next to **Render mask**, click **Change values** and select the render groups you want the camera to render.
 

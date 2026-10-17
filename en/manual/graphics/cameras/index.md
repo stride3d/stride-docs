@@ -9,13 +9,13 @@ You can have an unlimited number of cameras in your scene.
 
 ## Create a camera in Game Studio
 
-In the Scene Editor, right-click and select **Camera**, then choose the kind of camera you want to create (**perspective** or **orthographic**).
+In the Scene editor, right-click and select **Camera**, then choose the kind of camera you want to create (**perspective** or **orthographic**).
 
 ![Add camera](media/add-camera.png)
 
 Game Studio creates an entity with a camera component attached.
 
-Alternatively, select the entity you want to be a camera, and in the **Property Grid**, click **Add component** and select **Camera**.
+Alternatively, select the entity you want to be a camera, and in the **Property grid**, click **Add component** and select **Camera**.
 
 ![Add a camera component](media/add-camera-component.png)
 
@@ -85,13 +85,13 @@ You can control cameras using **camera scripts**. Stride includes three camera s
 
 ### Add a camera script in Game Studio
 
-1. In the **Asset View** (in the bottom by default), click **Add asset > Scripts** and choose the camera script you want to add.
+1. In the **Asset view** (in the bottom by default), click **Add asset > Scripts** and choose the camera script you want to add.
 
     ![Add a camera script](media/add-camera-script.png)
 
-2. In the **Scene Editor**, select the entity with the camera you want to control.
+2. In the **Scene editor**, select the entity with the camera you want to control.
 
-3. In the **Property Grid** (on the right by default), click **Add component** and select the camera script you want to use.
+3. In the **Property grid** (on the right by default), click **Add component** and select the camera script you want to use.
 
     ![Add script component](media/add-camera-script-component.png)
 

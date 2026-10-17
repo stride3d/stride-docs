@@ -172,7 +172,7 @@ The page front matter works the same way as the post front matter. The only diff
 ---
 layout: default
 title: Features
-description: 'Stride supports an extensive list of features: Scene Editor, Physically Based Rendering, Particles, UI Editor, Prefabs, DX12 & Vulkan, C# Scripting, etc...'
+description: 'Stride supports an extensive list of features: Scene editor, Physically Based Rendering, Particles, UI Editor, Prefabs, DX12 & Vulkan, C# Scripting, etc...'
 # permlink is automatically generated based on the file name, but you can override it here
 permalink: /my-features/ # otherwise it would be /features/
 ---

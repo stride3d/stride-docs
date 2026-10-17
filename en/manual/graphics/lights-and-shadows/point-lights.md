@@ -8,7 +8,7 @@
 
 ![media/PointLightOverview.png](media/PointLightOverview.png) 
 
-The Scene Editor shows the position of point lights with the following icon:
+The Scene editor shows the position of point lights with the following icon:
 
 ![media/PointLight.png](media/PointLight.png) 
 

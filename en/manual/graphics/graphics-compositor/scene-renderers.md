@@ -11,8 +11,8 @@ You select scene renderers in the **entry points** node properties.
 
 For more information about selecting renderers, see the [Graphics compositor](index.md) page.
 
->[!Note]
->Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer (eg to render a UI).
+> [!NOTE]
+> Currently, **all** renderers must have a camera, or be a child of a renderer that has a camera. This applies even to renderers that don't necessarily use cameras, such as the single stage renderer (eg to render a UI).
 
 ## Clear
 
@@ -46,8 +46,8 @@ Uses @'Stride.Rendering.Compositing.SceneCameraRenderer.Child' to render a view 
 
 The **scene renderer collection** executes multiple renderers (eg camera renderer, render texture, etc) in sequence. This lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
 
->[!Note]
->Stride executes the renderers in list order.
+> [!NOTE]
+> Stride executes the renderers in list order.
 
 To add a renderer to the collection, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select the renderer you want to add.
 

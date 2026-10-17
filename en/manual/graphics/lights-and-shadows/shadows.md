@@ -28,8 +28,8 @@ For example, these are shadow maps from the first-person shooter sample included
 
 ![FPS scene shadow map](media/shadow-atlas-2x.png)
 
->[!Note]
->Note that the directional light in the example above creates four shadow maps, one for each cascade. For more information, see the [Directional lights](directional-lights.md) page.
+> [!NOTE]
+> Note that the directional light in the example above creates four shadow maps, one for each cascade. For more information, see the [Directional lights](directional-lights.md) page.
 
 ### The shadow atlas
 

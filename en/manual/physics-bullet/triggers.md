@@ -9,14 +9,14 @@ If you set a collider to be a **trigger**, other colliders no longer bump into i
 
 The trigger detects when colliders enter it, which you can use to script events. For example, you can detect when a player character enters a room, and use this in your script to trigger an event. For more information, see [Events](../scripts/events.md).
 
->[!Note]
->[Character colliders](characters.md) can't be used as triggers.
+> [!NOTE]
+> [Character colliders](characters.md) can't be used as triggers.
 
 ## Create a trigger 
 
 1. Create a [collider](colliders.md).
 
-2. In the **Property Grid**, under the collider component properties, select **Is Trigger**.
+2. In the **Property grid**, under the collider component properties, select **Is Trigger**.
 
 ![Select 'Is trigger'](media/triggers-select-is-trigger-checkbox.png)
 
@@ -39,7 +39,7 @@ Alternatively, directly access the `TrackingHashSet`:
 var trigger = Entity.Get<PhysicsComponent>();
 foreach (var collision in trigger.Collisions)
 {
-    //do something with the collision
+    // do something with the collision
 }
 ```
 
@@ -51,15 +51,15 @@ trigger.Collisions.CollectionChanged += (sender, args) =>
 {
     if (args.Action == NotifyCollectionChangedAction.Add)
     {
-        //new collision
+        // new collision
         var collision = (Collision) args.Item;
-        //do something
+        // do something
     }
     else if (args.Action == NotifyCollectionChangedAction.Remove)
     {
-        //old collision
+        // old collision
         var collision = (Collision)args.Item;
-        //do something
+        // do something
     }
 };
 ```

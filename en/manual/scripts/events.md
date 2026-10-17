@@ -1,7 +1,7 @@
 # Events
 
->[!Note]
->Events are not recommended anymore, see [Best Practice](best-practice.md)
+> [!NOTE]
+> Events are not recommended anymore, see [Best Practice](best-practice.md)
 
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
@@ -10,8 +10,8 @@
 
 For example, imagine your game has a "Game Over" state that occurs when the player dies. To handle this, you can create a "Game Over" event, which is broadcast to all scripts with receivers listening for the event. When the event is broadcast, the receivers run appropriate scripts to handle the Game Over event (eg reset enemies, replace level objects, start a new timer, etc). You can also send information related to the "Game Over" state (eg game stats, who won, etc).
 
->[!Note]
->Events are handled entirely in scripts. You can't configure them in Game Studio.
+> [!NOTE]
+> Events are handled entirely in scripts. You can't configure them in Game Studio.
 
 ## Create and broadcast an event
 
@@ -46,13 +46,13 @@ var gameIsOver = gameOverListener.TryReceive();
 var gameOverListenerWithData = new EventReceiver<string>(GlobalEvents.GameOverWithDataEventKey);
 if(gameOverListenerWithData.TryReceive(out string data))
 {
-	//data == "Player 1"
+    // data == "Player 1"
 }
 
-//Or in Async
+// Or in Async
 await gameOverListener.ReceiveAsync();
 string asyncData = await gameOverListenerWithData.ReceiveAsync();
-//asyncData == "Player 1"
+// asyncData == "Player 1"
 ```
 
 ## See also

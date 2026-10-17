@@ -24,22 +24,22 @@ You must have both audio emitters and audio listeners to hear spatialized sound 
 
 Spatialized audio is widely used for sound effects in platform, desktop, and VR games. For example, a gun might make a gunshot sound when fired, or a character might make a footstep sound when they take a step.
 
-> [!Note] 
+> [!NOTE] 
 > Spatialized audio uses more CPU than non-spatialized audio.
 
 ## Enable spatialized audio
 
 When you [import your audio](import-audio.md), select *Spatialized Sound* as the asset type.
 
-You can also set audio to spatialized in the asset's **Property Grid**:
+You can also set audio to spatialized in the asset's **Property grid**:
 
-1. In **Asset View**, select _Audio Asset_.
+1. In **Asset view**, select _Audio Asset_.
 
-2. In the **Property Grid**, select the **Spatialized** checkbox:
+2. In the **Property grid**, select the **Spatialized** checkbox:
 
     ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
 
-> [!Note] 
+> [!NOTE] 
 > Stride processes spatialized audio as mono (single-channel) audio. It doesn't alter the source file.
 
 ## See also

@@ -9,12 +9,12 @@ The screenshot below shows a scene with a knight, a light, a background, and a c
 
 ![Basic scene in Stride](media/scene-creation-basic-scene-in-stride.png)
 
-Scenes are a type of [asset](assets.md). As they are complex assets, they have a dedicated editor, the **Scene Editor**.
+Scenes are a type of [asset](assets.md). As they are complex assets, they have a dedicated editor, the **Scene editor**.
 
 ## In this section
 
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the Scene Editor](navigate-in-the-scene-editor.md)
+* [Navigate in the Scene editor](navigate-in-the-scene-editor.md)
 * [Manage scenes](manage-scenes.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)

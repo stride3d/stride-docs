@@ -23,9 +23,9 @@ Unity® and Stride use mostly common terms, with a few differences:
 | Unity®           | Stride                                       |
 |------------------|----------------------------------------------|
 | Hierarchy Window | Entity Tree                                  |
-| Inspector Window | Property Grid                                |
-| Project Window   | Asset View                                   |
-| Scene View       | Scene Editor                                 |
+| Inspector Window | Property grid                                |
+| Project Window   | Asset view                                   |
+| Scene View       | Scene editor                                 |
 | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | [`Entity`](xref:Stride.Engine.Entity) |
 | [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) | [`SyncScript`](xref:Stride.Engine.SyncScript), [`AsyncScript`](xref:Stride.Engine.AsyncScript), [`StartupScript`](xref:Stride.Engine.StartupScript) |
 
@@ -70,7 +70,7 @@ Stride saves global settings in a single asset, the **Game Settings** asset. You
 * **Physics settings**
 * **Overrides**
 
-To use the Game Settings asset, in the **Asset View**, select **GameSettings** and view its properties in the **Property Grid**.
+To use the Game Settings asset, in the **Asset view**, select **GameSettings** and view its properties in the **Property grid**.
 
 ![Game settings](media/game-settings.png)
 
@@ -108,7 +108,7 @@ In Stride, you add components to entities just like you add components to GameOb
 To add a component to an entity in Game Studio:
 
 1. Select the entity you want to add the component to.
-2. In the **Property Grid** (on the right by default), click **Add component** and select the component from the drop-down list.
+2. In the **Property grid** (on the right by default), click **Add component** and select the component from the drop-down list.
 
     ![Add component](media/stride-vs-unity-add-component-to-entity.png)
 
@@ -170,7 +170,7 @@ Note that those are matrix properties, so setting one of those is not enough to 
 
 In Unity®, you select an asset in the **project browser** and edit its properties in the **Inspector** tab.
 
-Stride is similar. You select an asset in the **Asset View** and edit its properties in the **Property Grid**.
+Stride is similar. You select an asset in the **Asset view** and edit its properties in the **Property grid**.
 
 ![Asset and properties](media/asset-and-properties.png)
 
@@ -202,9 +202,9 @@ See the [Custom Assets](../scripts/custom-assets.md) page.
 
 ### Import assets
 
-To import an asset, drag it from Explorer to the **Asset View**. You can also click an **Add asset** button, navigate to the desired file, and specify the type of asset you want to import.
+To import an asset, drag it from Explorer to the **Asset view**. You can also click an **Add asset** button, navigate to the desired file, and specify the type of asset you want to import.
 
-As soon as you add an asset to your project, you can edit its properties in the **Property Grid**.
+As soon as you add an asset to your project, you can edit its properties in the **Property grid**.
 
 ![Add asset](media/stride-vs-unity-add-asset.png)
 
@@ -504,7 +504,7 @@ For more information about Raycasting in Stride, see [Raycasting](../physics/ray
 
 Stride saves scripts in a subfolder in the **MyGame.Game** folder in the project directory.
 
-To open a script in the Game Studio script editor, double-click it in the **Asset View**. The script editor has syntax highlighting, auto-completion, and live diagnostics.
+To open a script in the Game Studio script editor, double-click it in the **Asset view**. The script editor has syntax highlighting, auto-completion, and live diagnostics.
 
 ![Stride script editor](media/stride-vs-unity-script-editor.png)
 
@@ -514,7 +514,7 @@ If you install the Visual Studio plug-in during the Stride installation, you can
 
 ![Open project in Visual Studio](media/stride-vs-unity-open-project-in-visual-studio.png)
 
-Alternatively, right-click the script in the **Asset View** and click **Open asset file**:
+Alternatively, right-click the script in the **Asset view** and click **Open asset file**:
 
 ![Open asset file](media/stride-vs-unity-open-asset-file.png)
 
@@ -620,7 +620,7 @@ After you create a script, you may have to reload the assemblies manually. To do
 
    ![Select an entity](../scripts/media/select-entity.png)
 
-2. In the **Property Grid** (on the right by default), click **Add component** and select the script you want to add.
+2. In the **Property grid** (on the right by default), click **Add component** and select the script you want to add.
 
 ![Add script component](../scripts/media/add-script-component.png)
 
@@ -655,7 +655,7 @@ void Start()
 In Stride, you can instantiate **Entities** similarly to Unity® GameObjects:
 
 ```cs
-// Declared public member fields and properties displayed in the Game Studio Property Grid.
+// Declared public member fields and properties displayed in the Game Studio Property grid.
 public Prefab CarPrefab;
 public Vector3 SpawnPosition;
 public Quaternion SpawnRotation;
@@ -695,7 +695,7 @@ void Start()
 #### Stride
 
 ```cs
-// Declared public member fields and properties displayed in the Game Studio Property Grid.
+// Declared public member fields and properties displayed in the Game Studio Property grid.
 public int NewProp = 30;
 public LightComponent MyLightComponent = null;
 

@@ -1,4 +1,4 @@
-# Navigate in the Scene Editor
+# Navigate in the Scene editor
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Level designer</span>
@@ -9,7 +9,7 @@ You can move around the scene and change the perspective of the editor camera. T
 
 ## Move around in the scene
 
-There are several ways to move the editor camera around the Scene Editor.
+There are several ways to move the editor camera around the Scene editor.
 
 > [!TIP]
 > Holding the **Shift** key speeds up movement.
@@ -77,12 +77,12 @@ Pan                    | Middle mouse button + move mouse
 Focus                  | F (with entity selected)
 
 > [!TIP] 
-> You can change the scene navigator controls in **Edit > Settings** under **Scene Editor > Key bindings**.
+> You can change the scene navigator controls in **Edit > Settings** under **Scene editor > Key bindings**.
 > ![Key bindings](media/settings-key-bindings.png)
 
 ## Change camera editor perspective
 
-You can change the camera editor perspective using the **view camera gizmo** in the top-right of the Scene Editor.
+You can change the camera editor perspective using the **view camera gizmo** in the top-right of the Scene editor.
 
 ![View camera gizmo](media/navigate-in-a-scene-view-camera-gizmo.png)
 
@@ -102,10 +102,10 @@ Corner   | Faces the three adjacent faces at a 45° angle
 
 ## Camera options
 
-> [!Note]
-> This page explains how to use the Scene Editor camera. For information about how to use cameras in your game, see [Graphics — Cameras](../graphics/cameras/index.md).
+> [!NOTE]
+> This page explains how to use the Scene editor camera. For information about how to use cameras in your game, see [Graphics — Cameras](../graphics/cameras/index.md).
 
-To display the Scene Editor camera options, click the **camera icon** in the top-right of the Scene Editor.
+To display the Scene editor camera options, click the **camera icon** in the top-right of the Scene editor.
 
 ![Switch to orthographic](media/switch-to-orthographic.png)
 

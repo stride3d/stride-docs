@@ -10,7 +10,7 @@ Although kinematic bodies aren't bound by physics, other objects can still colli
 
 1. Select the entity you want to be a kinematic body.
 
-2. In the **Property Grid**, under the **Body** component properties, select `Kinematic`.
+2. In the **Property grid**, under the **Body** component properties, select `Kinematic`.
 
     ![Check 'Is kinematic'](media/rigid-bodies-is-kinematic-checkbox.png)
 

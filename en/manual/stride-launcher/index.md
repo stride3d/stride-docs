@@ -75,5 +75,5 @@ To open a project with a more recent version of Stride:
 
 2. Select the Stride version you want to open the project with. Game Studio prompts you to upgrade the project when it opens.
 
->[!Note]
->After you update a project to use a newer version of Stride, you might need to make manual changes to get it to work. **Make sure you back up the project and all its related files before you upgrade it.**
+> [!NOTE]
+> After you update a project to use a newer version of Stride, you might need to make manual changes to get it to work. **Make sure you back up the project and all its related files before you upgrade it.**

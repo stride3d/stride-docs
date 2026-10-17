@@ -20,7 +20,7 @@ If we add another box to the **Boxes** parent in the prefab, it doesn't appear i
 
 ## View overridden properties
 
-In the **Property Grid**, you can see which properties of the prefab instance differ from the base values in the prefab.
+In the **Property grid**, you can see which properties of the prefab instance differ from the base values in the prefab.
 
 * **Overridden** and **unique** properties are **white and bold**:
 
@@ -50,11 +50,11 @@ Let's add five instances of the lamppost prefab to our scene.
 
 ![Five lampposts](media/lamppost-prefab-instances.jpg)
 
-Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Property Grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the Scene editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Property grid displays the modified **Color** property in **bold white**. This means it's overriding the prefab property.
 
 ![Overridden property](media/override-prefab-property.png)
 
-We can see this in the scene view.
+We can see this in the Scene editor.
 
 ![Pink spotlight](media/pink-lamppost-prefab.jpg)
 

@@ -7,8 +7,8 @@
 
 **Raycasting** traces an invisible line through the scene to find intersecting [colliders](colliders.md). This is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
 
->[!Note]
->Raycasting uses **colliders** to calculate intersections. It ignores entities that have no collider component. For more information, see [Colliders](colliders.md).
+> [!NOTE]
+> Raycasting uses **colliders** to calculate intersections. It ignores entities that have no collider component. For more information, see [Colliders](colliders.md).
 
 To use a raycast, in the current [Simulation](xref:Stride.Physics.Simulation), use [Simulation.Raycast](xref:Stride.Physics.Simulation.Raycast(Stride.Core.Mathematics.Vector3,Stride.Core.Mathematics.Vector3,Stride.Physics.CollisionFilterGroups,Stride.Physics.CollisionFilterGroupFlags,System.Boolean,Stride.Physics.EFlags)).
 
@@ -49,11 +49,12 @@ public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, Camer
 }
 ```
 
->[!Note]
->There are multiple ways to retrieve a reference to this `Simulation` from inside one of your `ScriptComponent`:
->- The recommended way is through a reference to a physics component, something like `myRigidBody.Simulation` or `myCollision.Simulation` as it is the fastest.
->- Then through `SceneSystem` by calling `SceneSystem.SceneInstance.GetProcessor<PhysicsProcessor>()?.Simulation`.
->- Or through `this.GetSimulation()`, note that the `this` is required as it is an extension method.
+> [!NOTE]
+> There are multiple ways to retrieve a reference to this `Simulation` from inside one of your `ScriptComponent`:
+>
+> * The recommended way is through a reference to a physics component, something like `myRigidBody.Simulation` or `myCollision.Simulation` as it is the fastest.
+> * Then through `SceneSystem` by calling `SceneSystem.SceneInstance.GetProcessor<PhysicsProcessor>()?.Simulation`.
+> * Or through `this.GetSimulation()`, note that the `this` is required as it is an extension method.
 
 ## See also
 * [Colliders](colliders.md)

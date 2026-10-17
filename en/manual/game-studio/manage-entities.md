@@ -7,7 +7,7 @@ To build the levels of your game, you need to translate (move), rotate, and resi
 
 ## Transformation gizmos
 
-You can select the transformation gizmos from **Scene Editor toolbar**.
+You can select the transformation gizmos from **Scene editor toolbar**.
 
 ![Transformation gizmo toolbox](media/manage-entities-in-scene-gizmos.png)
 
@@ -25,7 +25,7 @@ Game Studio displays the selected transformation gizmo at the origin of the enti
 
 ### Translation gizmo
 
-To select the translation gizmo, click the ![Translation gizmo icon](media/manage-entities-in-scene-translation-gizmo.png) icon in the Scene Editor toolbar or press **W**.
+To select the translation gizmo, click the ![Translation gizmo icon](media/manage-entities-in-scene-translation-gizmo.png) icon in the Scene editor toolbar or press **W**.
 
 The translation gizmo moves (**translates**) entities in the scene along the axis you select.
 
@@ -40,7 +40,7 @@ The translation gizmo moves (**translates**) entities in the scene along the axi
 
 ### Rotation gizmo
 
-To select the rotation gizmo, click the ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) icon in the Scene Editor toolbar or press **E**.
+To select the rotation gizmo, click the ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) icon in the Scene editor toolbar or press **E**.
 
 The rotation gizmo rotates entities in the scene along the axis you select.
 
@@ -54,7 +54,7 @@ The rotation gizmo rotates entities in the scene along the axis you select.
 
 ### Scale gizmo
 
-To select the scale gizmo, click the ![Scale gizmo icon](media/manage-entities-in-scene-scale-gizmo.png) icon in the Scene Editor toolbar or press **R**.
+To select the scale gizmo, click the ![Scale gizmo icon](media/manage-entities-in-scene-scale-gizmo.png) icon in the Scene editor toolbar or press **R**.
 
 The scale gizmo resizes entities along a single axis ("stretching" or "squashing" them) or all axes (making them larger or smaller without changing their proportions).
 
@@ -67,7 +67,7 @@ The scale gizmo resizes entities along a single axis ("stretching" or "squashing
                 <source src="media/manage-entities-in-scene-scale-gizmo.mp4" type="video/mp4">
 </video>
 
-> [!Note] 
+> [!NOTE] 
 > The scale gizmo only works with the **local** coordinate system (see below). When you select the scale gizmo, Game Studio switches to local coordinates.
 
 ## Change gizmo coordinate system
@@ -75,7 +75,7 @@ The scale gizmo resizes entities along a single axis ("stretching" or "squashing
 You can change how the gizmo coordinates work.
 
 1. Select the entity whose gizmo coordinates you want to change.
-2. In the Scene Editor toolbar, select the coordinate system you want.
+2. In the Scene editor toolbar, select the coordinate system you want.
 
 | Coordinate system | Function |
 | ------  |  ------  |
@@ -87,7 +87,7 @@ You can change how the gizmo coordinates work.
 
 You can "snap" transformations to the grid. This means that the degree of transformation you apply to entities is rounded to the closest multiple of the number you specify. For example, if you set the rotation snap value to 10, entities rotate in multiples of 10 (0, 10, 20, 30, etc).
 
-You can change the snap values for each gizmo in the scene view toolbar. Snap values apply to all entities in the scene. For example:
+You can change the snap values for each gizmo in the Viewport toolbar. Snap values apply to all entities in the scene. For example:
 
 | Icon | Function |
 | --- | ---- |
@@ -98,6 +98,6 @@ You can change the snap values for each gizmo in the scene view toolbar. Snap va
 ## See also
 
 * [Create and open a scene](create-a-scene.md)
-* [Navigate in the Scene Editor](navigate-in-the-scene-editor.md)
+* [Navigate in the Scene editor](navigate-in-the-scene-editor.md)
 * [Load scenes](load-scenes.md)
 * [Add entities](add-entities.md)

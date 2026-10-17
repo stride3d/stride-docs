@@ -17,11 +17,11 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 1. Select the **Ground** entity.
 
-2. In the **Property Grid**, click **Add component** and select **Static Collider**.
+2. In the **Property grid**, click **Add component** and select **Static Collider**.
 
     ![Add Static collider component](media/add-static-component.png)
 
-3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property Grid**, expand the **Static Component** to view its properties.
+3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property grid**, expand the **Static Component** to view its properties.
 
 4. Next to **Colliders**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Box Collider**.
 
@@ -35,13 +35,13 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 Next, we'll add a [body](rigid-bodies.md) component to the sphere. A body is a physics object that moves — perfect for our bouncing ball.
 
-1. In the **Scene Editor**, select the **Sphere** entity.
+1. In the **Scene editor**, select the **Sphere** entity.
 
-2. In the **Property Grid**, click **Add component** and select **Rigidbody**.
+2. In the **Property grid**, click **Add component** and select **Rigidbody**.
 
     ![Add Static collider component](media/add-body-component.png)
 
-3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property Grid**, expand the **Body Component** to view its properties.
+3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property grid**, expand the **Body Component** to view its properties.
 
 4. Next to **Colliders**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Sphere**.
 
@@ -53,7 +53,7 @@ Let's position the sphere so it starts in midair and falls to the ground.
 
 1. Select the **Sphere** entity. 
 
-2. In the **Property Grid**, under **Transform**, set the **Position** to: `X: 0, Y: 6, Z: 0`
+2. In the **Property grid**, under **Transform**, set the **Position** to: `X: 0, Y: 6, Z: 0`
 
     This places the ball in midair above the ground.
 
@@ -63,9 +63,9 @@ Now we'll move the camera to give us a good view of the scene.
 
 1. Select the **Camera** entity. 
 
-2. In the **Property Grid**, under **Transform**, set the **Position** to: `X: 11, Y: 3, Z: -4`
+2. In the **Property grid**, under **Transform**, set the **Position** to: `X: 11, Y: 3, Z: -4`
 
-    You can see preview the camera view in the **Camera preview** in the bottom-right of the Scene Editor.
+    You can see preview the camera view in the **Camera preview** in the bottom-right of the Scene editor.
 
     ![Camera preview](media/physics-tutorials-camera-preview.png)
 
@@ -93,7 +93,7 @@ Let's set the `Spring Frequency` and `Spring Damping Ratio` of the Sphere.
 
 1. Select the **Sphere** entity.
 
-2. In the **Property Grid**, under **Body**, set the `Spring Frequency` to 3 and `Spring Damping Ratio` to 0.
+2. In the **Property grid**, under **Body**, set the `Spring Frequency` to 3 and `Spring Damping Ratio` to 0.
 
 To see how this changes the physics, run the project again (**F5**). This time, the ball bounces on the ground before coming to a stop:
 

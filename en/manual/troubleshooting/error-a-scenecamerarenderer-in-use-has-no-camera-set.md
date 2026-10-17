@@ -1,7 +1,7 @@
 # Error: "A SceneCameraRenderer in use has no camera assigned to its [Slot]. Make sure a camera is enabled and assigned to the [Slot]."
 
->[!Note]
->In earlier versions of Stride, this error message was: "A SceneCameraRenderer in use has no camera set. Make sure the camera component to use is enabled and has its [Slot] property correctly set."
+> [!NOTE]
+> In earlier versions of Stride, this error message was: "A SceneCameraRenderer in use has no camera set. Make sure the camera component to use is enabled and has its [Slot] property correctly set."
 
 This error means there's no camera available for the scene renderer to use. This has several possible causes:
 
@@ -25,7 +25,7 @@ camera.Slot = SceneSystem.GraphicsCompositor.Cameras[0].ToSlotId();
 
 To change the camera at runtime, toggle the ``Enabled`` property.
 
-> [!Note]
+> [!NOTE]
 > Make sure you:
 >
 > * always have at least one enabled camera

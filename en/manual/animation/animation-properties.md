@@ -3,9 +3,9 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-After you [import an animation](import-animations.md), you can select it in the **Asset View** (in the bottom pane by default) and view and edit its properties in the **Property Grid** (on the right by default).
+After you [import an animation](import-animations.md), you can select it in the **Asset view** (in the bottom pane by default) and view and edit its properties in the **Property grid** (on the right by default).
 
-![Assets in Asset View](media/assets-in-asset-view1.png)
+![Assets in Asset view](media/assets-in-asset-view1.png)
 
 ![Properties](media/animations-properties.png)
 
@@ -47,8 +47,8 @@ Skeletons are made of bones that form a hierarchy. When parent bones change thei
 
 Make sure you reference the same skeleton used by the model you want to animate. If there are missing bones or other differences between the bone/joint hierarchy of the skeleton in your animation file and the target skeleton, Stride retargets the animation as closely as possible.
 
->[!NOTE]
->There's currently no way to visualize skeletons in Game Studio.
+> [!NOTE]
+> There's currently no way to visualize skeletons in Game Studio.
 
 ## Root motion
 
@@ -56,15 +56,11 @@ When root motion is enabled, Stride applies the **root node animation** to the [
 
 This is useful, for example, to animate entities that don't require skeletons, such as a [spot light](../graphics/lights-and-shadows/spot-lights.md) moving back and forth.
 
->[!Note]
->If the animation has no skeleton specified in **Skeleton**, Stride always applies the animation to [TransformComponent](xref:Stride.Engine.TransformComponent), even if **root motion** is disabled.
+> [!NOTE]
+> If the animation has no skeleton specified in **Skeleton**, Stride always applies the animation to [TransformComponent](xref:Stride.Engine.TransformComponent), even if **root motion** is disabled.
 
->[!Note]
->The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
-
-## Import custom attributes
-
-If you have custom attribute in the animation file...
+> [!NOTE]
+> The [TransformComponent](xref:Stride.Engine.TransformComponent) applies an offset to the model node position. If you don't want to add an offset, make sure the [TransformComponent](xref:Stride.Engine.TransformComponent) is set to `0,0,0`.
 
 ## See also
 

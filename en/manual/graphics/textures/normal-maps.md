@@ -23,21 +23,21 @@ Normal maps usually represent small changes of the normal vector (the vector whi
 
 ## Use a normal map
 
-1. In the **Asset View**, select the texture you want to use as a normal map.
+1. In the **Asset view**, select the texture you want to use as a normal map.
 
     ![Select normal map texture](media/select-normal-map-texture.png)
 
-2. In the **Property Grid**, make sure the **type** is set to **normal map**.
+2. In the **Property grid**, make sure the **type** is set to **normal map**.
 
     ![Normal map](media/normal-map-expanded-properties.png)
 
     This means Stride assumes the texture is in linear color space and converts it to a format suited for normal maps.
 
-3. In the **Asset View**, select the material you want to use the normal map.
+3. In the **Asset view**, select the material you want to use the normal map.
 
     ![Select material](media/select-material.png)
 
-4. In the **Property Grid**, under the material **Geometry** properties, expand **Surface**.
+4. In the **Property grid**, under the material **Geometry** properties, expand **Surface**.
 
     ![Use normal maps](media/use-normal-map.png)
 

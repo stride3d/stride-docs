@@ -13,7 +13,7 @@ For more information about shadows and the shadow atlas, see [Graphics - Shadows
 
 ## Reduce the shadow size
 
-1. In the Scene Editor, select an entity with a light that casts a shadow.
+1. In the Scene editor, select an entity with a light that casts a shadow.
 
 2. In the **Light** component properties, under **Shadow > Size**, reduce the size of the shadow using the drop-down menu. 
 

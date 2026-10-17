@@ -12,7 +12,7 @@ To break as soon as an exception is thrown, add additional conditions to the Vis
 
     ![All common language runtime exceptions not in this list](media/all-common-language-runtime-exceptions.png)
 
->[!Tip]
->To restore the default list of exceptions, right-click and select **Restore Defaults**.
+> [!TIP]
+> To restore the default list of exceptions, right-click and select **Restore Defaults**.
 
 For more information about managing exceptions in Visual Studio, see [Manage exceptions with the debugger in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/managing-exceptions-with-the-debugger) in the Microsoft Visual Studio documentation.

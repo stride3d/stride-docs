@@ -29,7 +29,7 @@ This page explains how to launch your game using Game Studio or Visual Studio.
 
 2. In the Visual Studio toolbar, set the appropriate project as the startup project.
          
-	![Select build profile in Visual Studio](media/launch-your-game-visual-studio-profiles.webp)
+    ![Select build profile in Visual Studio](media/launch-your-game-visual-studio-profiles.webp)
    
    The startup project configuration is updated automatically.
  

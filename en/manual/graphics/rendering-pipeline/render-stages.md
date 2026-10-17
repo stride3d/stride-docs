@@ -4,7 +4,7 @@
 
 Objects can subscribe to multiple render stages. For example, a mesh typically subscribes to both the `Opaque` and `ShadowCaster` stages, or the `Transparent` stage.
 
-> [!Note]
+> [!NOTE]
 > Render stages don't define the rendering order. The rendering order is controlled by the [graphics compositor](../graphics-compositor/index.md).
 
 ## Effect slots

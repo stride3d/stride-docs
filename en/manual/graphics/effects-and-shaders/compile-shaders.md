@@ -26,7 +26,7 @@ Stride can't know in advance which shaders will be used at runtime. This is beca
 
     ![New effects](media/new-effects-to-import.png)
 
-    In the **Asset View**, the **Import effects** button becomes available.
+    In the **Asset view**, the **Import effects** button becomes available.
 
     ![Import effects](media/import-effects-button.png)
 
@@ -40,7 +40,7 @@ Stride can't know in advance which shaders will be used at runtime. This is beca
 
     ![Package properties](media/package-properties-button.png)
 
-2. In the **Property Grid**, set the properties.
+2. In the **Property grid**, set the properties.
 
     ![Package properties](media/package-properties.png)
 
@@ -68,8 +68,8 @@ As iOS devices can't connect directly to PC, to convert Stride shaders remotely 
 
 4. Open **Terminal**, navigate to the folder where you unzipped the file, and execute **stride-ios-relay.py MyPcName**, where **MyPcName** is the name of your developer PC.
 
-    >[!Tip]
-    >To find the name of your developer PC, on the PC, press the Windows key, type **About**, and press **Enter**. The PC name is listed under **PC name**.
+    > [!TIP]
+    > To find the name of your developer PC, on the PC, press the Windows key, type **About**, and press **Enter**. The PC name is listed under **PC name**.
 
 The iOS device should now be able to communicate with the PC via your Mac to build shaders remotely.
 

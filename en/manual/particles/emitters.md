@@ -28,13 +28,8 @@ Emitters contain further controls such as [spawners](spawners.md), [initializers
 ## See also
 
 * [Create particles](create-particles.md)
-
 * [Shapes](shapes.md)
-
 * [Materials](materials.md)
-
 * [Spawners](spawners.md)
-
 * [Initializers](initializers.md)
-
 * [Updaters](updaters.md)

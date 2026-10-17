@@ -24,7 +24,7 @@ You can query **key states** and **state changes** with the following methods:
 | [IsKeyPressed(Keys)](xref:Stride.Input.InputManager.IsKeyPressed\(Stride.Input.Keys\)) | Checks if a specified key has been **pressed** since the last update. 
 | [IsKeyReleased(Keys)](xref:Stride.Input.InputManager.IsKeyReleased\(Stride.Input.Keys\)) | Checks if a specified key has been **released** since the last update. 
 
-> [!Note] 
+> [!NOTE] 
 > Stride doesn't support retrieving interpreted keys, such as special characters and capital letters.
 
 ## Get key events
@@ -47,23 +47,23 @@ Every @'Stride.Input.KeyEvent' has two properties: @'Stride.Input.KeyEvent.Key' 
 ```cs
 public class KeyboardEventsScript : SyncScript
 {
-	//Declared public member variables and properties show in Game Studio.
+    // Declared public member variables and properties show in Game Studio.
 
-	public override void Update()
-	{
-		//Perform an action in every update.
-		if (Game.IsRunning)
-		{
-			if (Input.IsKeyDown(Keys.Left))
-			{
-				this.Entity.Transform.Position.X -= 0.1f;
-			}
-			if (Input.IsKeyDown(Keys.Right))
-			{
-				this.Entity.Transform.Position.X += 0.1f;
-			}
-		}
-	}
+    public override void Update()
+    {
+        // Perform an action in every update.
+        if (Game.IsRunning)
+        {
+            if (Input.IsKeyDown(Keys.Left))
+            {
+                this.Entity.Transform.Position.X -= 0.1f;
+            }
+            if (Input.IsKeyDown(Keys.Right))
+            {
+                this.Entity.Transform.Position.X += 0.1f;
+            }
+        }
+    }
 }
 ```
 

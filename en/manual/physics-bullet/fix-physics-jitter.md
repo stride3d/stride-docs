@@ -9,7 +9,7 @@ In Stride, there is no default smoothing applied to entities that are attached t
 
 In this tutorial, we will explore how to add smoothing to an entity using a SyncScript.
 
-> [!Note]
+> [!NOTE]
 > You can also decrease the `FixedTimeStep` in the physics settings configuration to achieve more accurate physics simulations. For example, changing it from `0.016667` to `0.008` will increase accuracy but at the cost of higher CPU usage.
 
 ## Code to handle smoothing between two entities

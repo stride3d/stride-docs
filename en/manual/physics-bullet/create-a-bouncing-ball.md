@@ -7,8 +7,8 @@
 
 In this tutorial, we'll use the [static collider and rigidbody components](colliders.md) to create a ball bouncing on a floor.
 
->[!Note]
->The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
+> [!NOTE]
+> The screenshots and videos in this tutorial were made using an earlier version of Stride, so some parts of the UI, and the default skybox and sphere, might look different from your version.
 
 ## 1. Create a new project
 
@@ -22,11 +22,11 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 1. Select the **Ground** entity.
 
-2. In the **Property Grid**, click **Add component** and select **Static Collider**.
+2. In the **Property grid**, click **Add component** and select **Static Collider**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
-3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property Grid**, expand the **Static Collider component** to view its properties.
+3. Set the [collider shape](collider-shapes.md) to match the shape of the entity. To do this, in the **Property grid**, expand the **Static Collider component** to view its properties.
 
 4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Infinite Plane**.
 
@@ -38,13 +38,13 @@ Let's begin by adding a [static collider](static-colliders.md) component to the 
 
 Next, we'll add a [rigidbody](rigid-bodies.md) component to the sphere. A rigidbody is a physics object that moves — perfect for our bouncing ball.
 
-1. In the **Scene Editor**, select the **Sphere** entity.
+1. In the **Scene editor**, select the **Sphere** entity.
 
-2. In the **Property Grid**, click **Add component** and select **Rigidbody**.
+2. In the **Property grid**, click **Add component** and select **Rigidbody**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
-3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property Grid**, expand the **Rigidbody component** to view its properties.
+3. Just like we did for the Ground entity, set the [collider shape](collider-shapes.md) to match the entity. To do this, in the **Property grid**, expand the **Rigidbody component** to view its properties.
 
 4. Next to **Collider Shapes**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select **Sphere**.
 
@@ -56,7 +56,7 @@ Let's position the sphere so it starts in mid-air and falls to the ground.
 
 1. Select the **Sphere** entity. 
 
-2. In the **Property Grid**, under **Transform**, set the **Position** to: _X: 0, Y: 6, Z: 0_
+2. In the **Property grid**, under **Transform**, set the **Position** to: _X: 0, Y: 6, Z: 0_
 
     ![Change Sphere position](media/physics-tutorials-create-a-bouncing-ball-change-sphere-position.png)
 
@@ -68,13 +68,13 @@ Now we'll move the camera to give us a good view of the scene.
 
 1. Select the **Camera** entity. 
 
-2. In the **Property Grid**, under **Transform**, set the **Position** to: _X: -12, Y: 7, Z: 9_
+2. In the **Property grid**, under **Transform**, set the **Position** to: _X: -12, Y: 7, Z: 9_
 
 3. Set the **Rotation** to: _X: -20, Y: -50, Z: 0_
 
     ![Change camera position](media/physics-tutorials-create-a-bouncing-ball-change-camera-position.png)
 
-    You can see preview the camera view in the **Camera preview** in the bottom-right of the Scene Editor.
+    You can see preview the camera view in the **Camera preview** in the bottom-right of the Scene editor.
 
     ![Camera preview](media/physics-tutorials-camera-preview.png)
 
@@ -98,13 +98,13 @@ Let's set the restitution of our Sphere and Ground entities.
 
 1. Select the **Sphere** entity.
 
-2. In the **Property Grid**, under **Rigidbody**, set the **Restitution** to 0.8.
+2. In the **Property grid**, under **Rigidbody**, set the **Restitution** to 0.8.
 
     ![Set restitution for a sphere](media/physics-tutorials-create-a-bouncing-ball-restitution-of-a-sphere.png)
 
 3. Select the **Ground** entity.
 
-4. In the **Property Grid**, under **Static Collider**, set the **Restitution** to 0.5.
+4. In the **Property grid**, under **Static Collider**, set the **Restitution** to 0.5.
 
     ![Set restitution for the ground](media/physics-tutorials-create-a-bouncing-ball-restitution-of-the-ground.png)
 

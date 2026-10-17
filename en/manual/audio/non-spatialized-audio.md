@@ -15,7 +15,7 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 2. Make sure the audio asset is a **root asset**. Root assets are assets that Stride includes in the build so they can be used at runtime.
 
-    In the **Asset View**, right-click the asset and select **Include in build as root asset**:
+    In the **Asset view**, right-click the asset and select **Include in build as root asset**:
 
     ![Include in build as root asset](media/audio-include-in-build-as-root-asset.png)
 
@@ -30,7 +30,7 @@ The [SoundInstance](xref:Stride.Audio.SoundInstance) controls audio at runtime w
 | Property                                               | Function                                                                                 |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------|
 | [IsLooping](xref:Stride.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio.                                                       |
-| [Pan](xref:Stride.Audio.SoundInstance.Pan)             | Sets the balance between left and right speakers. By default, each speaker a value of 0. |
+| [Pan](xref:Stride.Audio.SoundInstance.Pan)             | Sets the balance between left and right speakers. By default, each speaker has a value of 0. |
 | [Pitch](xref:Stride.Audio.SoundInstance.Pitch)         | Gets or sets the audio pitch (frequency).                                                |
 | [PlayState](xref:Stride.Audio.SoundInstance.PlayState) | Gets the state of the [SoundInstance](xref:Stride.Audio.SoundInstance).                  |
 | [Position](xref:Stride.Audio.SoundInstance.Position)   | Gets the current play position of the audio.                                             |
@@ -38,7 +38,7 @@ The [SoundInstance](xref:Stride.Audio.SoundInstance) controls audio at runtime w
 
 For more details, see the [SoundInstance API documentation](xref:Stride.Audio.SoundInstance).
 
-> [!Note]
+> [!NOTE]
 > If the sound is already playing, Stride ignores all additional calls to [SoundInstance.Play](xref:Stride.Audio.SoundInstance.Play). The same goes for [SoundInstance.Pause](xref:Stride.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:Stride.Audio.SoundInstance.Stop) (when a sound is already stopped).
 
 For example, the following code:
@@ -123,11 +123,11 @@ public class MySoundScript : SyncScript
 ```
 ## Add the script to the entity
 
-1. In the **Scene view**, select the entity you want to add the script to:
+1. In the **Scene editor**, select the entity you want to add the script to:
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-2. In the **Property Grid**, click **Add component** and select your script:
+2. In the **Property grid**, click **Add component** and select your script:
  
     ![Click Add component](media/audio-emitters-add-script-component.png)
 
@@ -135,7 +135,7 @@ public class MySoundScript : SyncScript
 
 3. If you added **public variables** to the script, you need to tie them to audio assets.
 
-    Drag and drop an asset from the **Asset View** to each variable:
+    Drag and drop an asset from the **Asset view** to each variable:
 
     ![Drag and drop an audio asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 

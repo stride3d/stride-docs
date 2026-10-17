@@ -1,7 +1,7 @@
 # Engine
 
->[!Warning]
->This section is out of date. For now, you should only use it for reference.
+> [!WARNING]
+> This section is out of date. For now, you should only use it for reference.
 
 - [Entity-component system](entity-component-system/index.md)
 - [File system](file-system.md)
