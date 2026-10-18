@@ -88,6 +88,24 @@ The previous step will have added a GitHub Action to your repository, which migh
 
 For a detailed breakdown of the jobs, triggers, inputs and secrets these workflows use, see [GitHub Actions](github-actions.md).
 
+### Azure Front Door Cache
+
+`doc.stride3d.net` is served through Azure Front Door (profile `stride-frontdoor`, endpoint `stride-doc`), which caches the files of the Production slot. `web.config` sends them with `Cache-Control: max-age` of one hour: Front Door and browsers keep them that long.
+
+The production deploys purge what they replaced from Front Door (see [GitHub Actions](github-actions.md#azure-workflows)). They sign in to Azure as the managed identity `stride-frontdoor-purge` (resource group `Stride3d`):
+
+- Its federated credential trusts the GitHub Actions jobs of the `Production` environment of `stride3d/stride-docs` (subject `repo:stride3d/stride-docs:environment:Production`), so no secret is stored in GitHub
+- Its role is **CDN Profile Contributor** on the `stride-doc` endpoint only
+- The `Production` environment of the repository has its client ID, tenant ID and subscription ID in the variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID` and `AZURE_SUBSCRIPTION_ID`
+
+To purge by hand, with the Azure CLI and access to the subscription (it takes a few minutes):
+
+```bash
+az afd endpoint purge -g Stride3d --profile-name stride-frontdoor --endpoint-name stride-doc --content-paths "/en/*" "/latest/*"
+```
+
+In Git Bash, set `MSYS_NO_PATHCONV=1` first: it would turn the paths into Windows paths. A purge doesn't reach the browsers, which keep their copy until it expires (or until a hard refresh, Ctrl+F5).
+
 ### Kudu (Advanced Tools)
 
 Each Azure Web App comes with Kudu, a management site to browse, edit and run commands on the files of the web app, without deploying:

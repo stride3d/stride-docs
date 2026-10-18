@@ -40,6 +40,7 @@ on:
 
 permissions:
   contents: write  # required to create releases/tags
+  id-token: write  # required to sign in to Azure (purge of the Azure Front Door cache)
 
 concurrency:
   group: azure-${{ inputs.slot }}
@@ -157,3 +158,30 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       working-directory: ${{ env.DOCS_PATH }}
+
+    # Azure Front Door caches doc.stride3d.net: without a purge, it serves the old pages until they expire
+    - name: Sign in to Azure
+      if: inputs.slot == 'production'
+      uses: azure/login@v2
+      with:
+        # Variables of the Production environment: the stride-frontdoor-purge managed identity, see deployment-azure.md
+        client-id: ${{ vars.AZURE_CLIENT_ID }}
+        tenant-id: ${{ vars.AZURE_TENANT_ID }}
+        subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+    - name: Purge the Azure Front Door cache
+      if: inputs.slot == 'production'
+      shell: bash
+      env:
+        # Git Bash would turn /4.4/* into a Windows path
+        MSYS_NO_PATHCONV: 1
+      run: |
+        version="${{ steps.version.outputs.version }}"
+        paths=("/$version/*")
+        # /latest/ is a rewrite of web.config: Front Door caches its pages apart from the ones of the version folder
+        latest=$(curl -sf https://stride-doc.azurewebsites.net/versions.json | jq -r .latest)
+        if [ "$latest" = "$version" ]; then paths+=("/latest/*"); fi
+        if [ "${{ steps.version.outputs.unversioned }}" = "true" ]; then paths+=("/en/*"); fi
+        echo "Purging ${paths[*]}"
+        # Front Door takes a few minutes to apply it, no need to wait
+        az afd endpoint purge -g Stride3d --profile-name stride-frontdoor --endpoint-name stride-doc --content-paths "${paths[@]}" --no-wait
