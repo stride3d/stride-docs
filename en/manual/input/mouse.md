@@ -60,6 +60,9 @@ The [Input manager](xref:Stride.Input.InputManager) has several methods that che
 | [IsMouseButtonPressed (MouseButton)](xref:Stride.Input.InputManager.IsMouseButtonPressed\(Stride.Input.MouseButton\)) | Checks if a specified mouse button was pressed in the last update. 
 | [IsMouseButtonReleased (MouseButton)](xref:Stride.Input.InputManager.IsMouseButtonReleased\(Stride.Input.MouseButton\)) | Checks if a specified mouse button was released in the last update. 
 
+> [!NOTE]
+> While the UI or an overlay captures the mouse, these methods report no buttons. For example, a click on a UI button doesn't reach your scripts. For more information, see [Input capture](input-capture.md).
+
 ### Mouse delta
 
 Use [InputManager.MouseDelta](xref:Stride.Input.InputManager.MouseDelta) to get the change in mouse position in normalized coordinates since the last update. You can use this to analyze mouse movement speed and direction.
@@ -69,6 +72,9 @@ Use [InputManager.MouseDelta](xref:Stride.Input.InputManager.MouseDelta) to get 
 You can use the mouse wheel to trigger actions in a project. For example, in a first-person shooter game, moving the mouse wheel might switch weapons or zoom a camera.
 
 The [InputManager.MouseWheelDelta](xref:Stride.Input.InputManager.MouseWheelDelta) returns a positive value when the user scrolls forwards and a negative value when the user scrolls backwards. A value of `0` indicates no movement.
+
+> [!NOTE]
+> While the mouse is captured, `MouseDelta` and `MouseWheelDelta` return `0`. The mouse position isn't hidden. For more information, see [Input capture](input-capture.md).
 
 ## Lock the mouse position
 
@@ -116,4 +122,5 @@ public class MouseInputScript : SyncScript
 * [Virtual buttons](virtual-buttons.md)
 * [Keyboard](keyboards.md)
 * [Gamepads](gamepads.md)
+* [Input capture](input-capture.md)
 * [Input overview](index.md)

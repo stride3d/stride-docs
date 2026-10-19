@@ -90,6 +90,9 @@ There are five types of pointer event:
 > [!NOTE] 
 > A sequence of pointer events for one pointer always starts with a **Pressed** event. This might be followed by one or more **Moved** events, and always ends with a **Released** or **Canceled** event.
 
+> [!NOTE]
+> [InputManager.PointerEvents](xref:Stride.Input.InputManager.PointerEvents) leaves out the events of captured pointers. For example, a finger pressed on the UI is hidden from the game until it is released. Other fingers aren't affected. For more information, see [Input capture](input-capture.md).
+
 ### Get delta values
 
 [PointerEvent.DeltaTime](xref:Stride.Input.PointerEvent.DeltaTime) gets the time elapsed from the previous @'Stride.Input.PointerEvent'.
@@ -159,4 +162,5 @@ namespace Stride.Input.Tests
 * [Gestures](gestures.md)
 * [Mouse](mouse.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input capture](input-capture.md)
 * [Input overview](index.md)

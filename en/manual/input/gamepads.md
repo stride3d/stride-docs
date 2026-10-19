@@ -51,6 +51,9 @@ You can also get the state of digital buttons using [GamePadState.Buttons](xref:
 
 To get the gamepad state, use [IGamePadDevice.State](xref:Stride.Input.IGamePadDevice.State).
 
+> [!NOTE]
+> While a gamepad is captured, for example by a pause menu, [IGamePadDevice.State](xref:Stride.Input.IGamePadDevice.State) is neutral and the button methods report no buttons. For more information, see [Input capture](input-capture.md).
+
 ### Analog buttons
 
 To query values of analog buttons, first get the current state of gamepad using 
@@ -128,4 +131,5 @@ public class TestScript : SyncScript
 ## See also
 * [Keyboards](keyboards.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input capture](input-capture.md)
 * [Input overview](index.md)

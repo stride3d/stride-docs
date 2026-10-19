@@ -76,6 +76,12 @@ The **editor** settings control how Game Studio displays entities in the Scene e
 | Rendering mode      | How Game Studio renders thumbnails and asset previews
 | Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. 
 
+## Input
+
+| Property | Description
+|----------|--------------
+| Hide captured input from the game | When enabled, input that the UI uses, such as a click on a button or typing in a text box, isn't seen by game scripts. Enabled by default. For more details, see [Input capture](../input/input-capture.md).
+
 ## Navigation
 
 ![Navigation settings](../navigation/media/navigation-settings.png)
