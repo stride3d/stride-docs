@@ -63,10 +63,15 @@ For pointers, gestures, and keyboards, you can query all the events that happene
 
 You can use **virtual buttons** to associate input to actions rather than physical keys, then let the user define their own keys. For more information, see [virtual buttons](virtual-buttons.md).
 
+## Input capture
+
+The UI and overlays can **capture** an input device. While a device is captured, your scripts see no input from it. For example, a click on a UI button doesn't also reach `IsMouseButtonPressed` in your scripts. For more information, see [Input capture](input-capture.md).
+
 ## In this section
 
 * [Gamepads](gamepads.md)
 * [Gestures](gestures.md)
+* [Input capture](input-capture.md)
 * [Keyboards](keyboards.md)
 * [Mouse](mouse.md)
 * [Pointers](pointers.md)

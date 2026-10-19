@@ -345,6 +345,8 @@ items:
         href: input/gamepads.md
       - name: Gestures
         href: input/gestures.md
+      - name: Input capture
+        href: input/input-capture.md
       - name: Keyboards
         href: input/keyboards.md
       - name: Mouse
@@ -615,6 +617,8 @@ items:
         href: ui/add-a-ui-to-a-scene.md
       - name: Layout system
         href: ui/layout-system.md
+      - name: UI and game input
+        href: ui/ui-and-game-input.md
 
   - name: Video
     href: video/index.md
