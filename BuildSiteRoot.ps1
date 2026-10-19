@@ -8,7 +8,8 @@
     - versions.json: the list of documentation versions shown in the version selector, and which one is the latest (checked, then copied as is).
       The selector of every version reads it, including old versions that can't be updated anymore: only add fields to its format.
     - web.config: %latest_version% is replaced by the latest version (target of the /latest/ URLs and of the 404 page),
-      and %unversioned_sections% by the unversioned sections (redirected from every version to /en/).
+      %unversioned_sections% by the unversioned sections (redirected from every version to /en/),
+      and %versioned_docs% by the available documentation versions (so unpublished versions can redirect to /latest/).
     - robots.txt: a Disallow is added for each version of versions.json, so that search engines only index /latest/.
 .PARAMETER OutputDirectory
     The directory where the files are generated, the default is _site (the root of the local website).
@@ -30,6 +31,7 @@ function Write-Utf8File {
 
 $versions = Get-Content (Join-Path $PSScriptRoot "versions.json") -Raw -Encoding UTF8 | ConvertFrom-Json
 $urls = @($versions.docs | ForEach-Object { $_.url })
+$versionedDocsPattern = ($urls | ForEach-Object { [regex]::Escape($_) }) -join "|"
 
 if ($urls -notcontains $versions.latest) {
     throw "versions.json: latest version '$($versions.latest)' must be one of the docs versions ($($urls -join ', '))."
@@ -53,6 +55,7 @@ Write-Host -ForegroundColor Yellow "Generating web.config into $OutputDirectory"
 
 $webConfig = Get-Content (Join-Path $PSScriptRoot "web.config") -Raw -Encoding UTF8
 $webConfig = $webConfig.Replace("%latest_version%", $versions.latest).Replace("%unversioned_sections%", $unversioned -join "|")
+$webConfig = $webConfig.Replace("%versioned_docs%", $versionedDocsPattern)
 Write-Utf8File (Join-Path $OutputDirectory "web.config") $webConfig
 
 Write-Host -ForegroundColor Yellow "Generating robots.txt into $OutputDirectory"
