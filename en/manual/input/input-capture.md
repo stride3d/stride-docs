@@ -226,9 +226,11 @@ The input manager and the shared query methods mask these devices too. Their own
     protected override GamePadState RawState => state;
     ```
 
-    The project upgrade doesn't make this change. The [IGamePadDevice](xref:Stride.Input.IGamePadDevice) interface doesn't change.
+    When you upgrade a project, Stride makes this change. In these overrides, it also changes `base.State` to `base.RawState`. The [IGamePadDevice](xref:Stride.Input.IGamePadDevice) interface doesn't change.
 
 * **Custom UI renderers**: the `UIRenderFeature.Flush` override is removed. It only cleared the pointer events, which the UI system now handles.
+
+The project upgrade changes only the code in the projects of your solution. If a custom device comes from a library package, the author of the library must make these changes.
 
 ## See also
 
