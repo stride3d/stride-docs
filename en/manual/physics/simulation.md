@@ -29,8 +29,22 @@ There are multiple ways to retrieve a reference to this `BepuSimulation` from in
 
 The following are relevant excerpts from [Bepu's documentation](https://github.com/bepu/bepuphysics2/blob/master/Documentation/PerformanceTips.md).
 
-If physics causes your game to hang for a while when simulating for the first time, it may be related to just-in-time compilation. If it becomes a problem, consider running a small simulation that hits all the relevant codepaths (a bunch of objects colliding with constraints applied) behind a loading screen. Using an ahead-of-time compilation toolchain would also work.
+### General
+- **JIT Compilation Spikes**: Large spikes in physics step time after launch may be due to JIT compilation. Consider running a small simulation behind a loading screen to prime all relevant code paths. AOT compilation can also help.
+- **Thread Oversubscription**: If recurring spikes occur (especially in the solver), the operating system may be oversubscribing threads. Too many threads vying for CPU time can stall physics. In such cases, reduce the number of threads used by the simulation or by other parts of the engine.
+
+### Shape Optimization
+- **Use Simple Shapes**: Spheres and capsules are fastest, then boxes and triangles, followed by cylinders and convex hulls.  
+- **Keep Hulls Small**: If using convex hulls, minimize vertex count. Complexity directly affects collision cost.
+- **Limit Concave and Mesh Shapes**: Use compounds of simpler shapes instead of concave meshes whenever possible. If absolutely necessary, keep the triangle count low and shapes uniform in size.
+- **Reuse Shapes**: Avoid creating many duplicate, large shapes (like complex hulls or meshes). Reusing shapes reduces memory bandwidth and cache issues.
+- **Type Consistency**: Using similar shape types can yield small SIMD efficiency gains in the narrow phase.
+
+### Solver Optimization
+- **Minimize Iterations**: Use the smallest number of solver iterations that keep the simulation stable. The solver cost grows linearly with iteration count.
+- **Substepping**: For complex or stiff constraint configurations, using solver substeps can dramatically improve stability. With substeps, you can often reduce the number of velocity iterations. Consider using substepping if no reasonable iteration count alone stabilizes the simulation. See the [Substepping documentation](Constraints.md) for more details.
 
 ## See also
-* [Collidables](colliders.md)
+* [Colliders](colliders.md)
 * [Collider shapes](collider-shapes.md)
+* [Constraints](Constraints.md)

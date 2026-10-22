@@ -25,6 +25,7 @@ This section explains how physics components work, how to add them to your proje
   * [Sweepcasts](physics-queries/sweepcasts.md): Retrieving objects from casting a shape
   * [Overlaps](physics-queries/overlaps.md): Retrieving objects that are intersecting with a shape
 * [Physics Update](physics-update.md): Updating logic alongside physics
+* [FAQ](faq.md): Frequently asked questions
 
 ### Tutorials
 
