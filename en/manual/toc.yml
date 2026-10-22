@@ -299,6 +299,8 @@ items:
             items:
               - name: Compute color
                 href: graphics/effects-and-shaders/types-of-shader/compute-color.md
+              - name: Color transform
+                href: graphics/effects-and-shaders/types-of-shader/color-transform.md
               - name: Compute shader
                 href: graphics/effects-and-shaders/types-of-shader/compute-shader.md
           - name: Shading language
