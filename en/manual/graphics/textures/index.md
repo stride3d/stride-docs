@@ -115,9 +115,9 @@ For more information, see [Material maps](../materials/material-maps.md).
 
 ### Global texture settings
 
-For instructions about how to access the global texture settings, see the [Game Settings](../../game-studio/game-settings.md) page.
+For instructions about how to access the global texture settings, see the [Game Settings - Configurations](../../files-and-folders/game-settings/configurations.md) page.
 
-![Texture settings](../../game-studio/media/texture-settings.png)
+![Texture settings](../../files-and-folders/game-settings/media/built-in-configuration-textures.webp)
 
 | Property        | Description  
 |-----------------|--------------
