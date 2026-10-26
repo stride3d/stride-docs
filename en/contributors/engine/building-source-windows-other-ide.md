@@ -8,7 +8,7 @@
    git lfs clone https://github.com/stride3d/stride.git
    ```
 4. **Build using the command line:**
-   - Navigate to the `/build` directory in the command prompt and run:
+   - Run the following command:
    ```bash
    msbuild /t:Restore Stride.slnx
    ```

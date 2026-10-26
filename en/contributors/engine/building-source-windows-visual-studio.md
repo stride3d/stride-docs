@@ -7,7 +7,7 @@ Here are the steps to build Stride with Visual Studio. If you do not have or wan
    git lfs clone https://github.com/stride3d/stride.git
    ```
 2. **Open the solution:**
-   - Open `<StrideDir>\build\Stride.slnx` with Visual Studio. 
+   - Open `<StrideDir>\Stride.slnx` with Visual Studio. 
    - Build the `Stride.GameStudio` project in the `60-Editor` solution folder (it should be the default startup project) or run it directly from Visual Studio's toolbar.
    - _Optionally_, open and build `Stride.Android.slnf`, `Stride.iOS.slnf`, etc.
 
