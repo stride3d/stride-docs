@@ -33,13 +33,8 @@ Deploying `4.1` later (from `master-4.1`) only replaces the `4.1` folder, it doe
 
 ## Other locations to update
 
-1. Modify `contributors\engine\building-source-windows.md`
-   - Update SDK version references
-   - Update Visual Studio version
-1. Modify `contributors\engine\building-source-windows-other-ide.md`
-   - Update Build Tools path
-1. Modify `contributors\engine\building-source-windows-visual-studio.md`
-   - Update Visual Studio version
+1. Modify `contributors\engine\build-guide.md`
+   - Update page based on the detailed guide (linked at the bottom of the page)
 1. Modify `manual\troubleshooting\stride-doesnt-run.md`
    - Update SDK and .NET version references
    - Update Visual Studio version 
