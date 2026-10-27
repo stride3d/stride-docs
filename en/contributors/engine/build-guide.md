@@ -59,7 +59,7 @@ There are also `.slnf` files in the `sources/` directory, which are used by the 
 
 ### Building with Visual Studio
 
-Build the `Stride.GameStudio` project in the `60-Editor` solution folder (it should be the default startup project) or run it directly from Visual Studio's toolbar.
+Build the `Stride.GameStudio` project in the `60-Editor/Wpf` solution folder (it should be the default startup project) or run it directly from Visual Studio's toolbar.
 
 ![The build and run button is located in the top toolbar (look for the green play icon).](media/vs-build-gamestudio.webp)
 
