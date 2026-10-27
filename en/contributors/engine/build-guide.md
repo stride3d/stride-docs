@@ -4,42 +4,30 @@ This guide will walk you through how to build Stride from its source code.
 
 ## Prerequsities
 
-1. **Latest [Git](https://git-scm.com/downloads)** with **Large File Support** selected during setup. For convenience, you might also use a Git UI client like [GitHub Desktop](https://desktop.github.com/download/).
+1. **Latest [Git](https://git-scm.com/downloads)** — the Windows installer includes Git LFS by default; make sure it stays enabled. For convenience, you can also use a UI client like [GitExtensions](https://gitextensions.github.io/).
+2. **[Visual Studio 2026](https://visualstudio.microsoft.com/downloads/)** (Community edition is free), with these two workloads:
+    * **.NET desktop development** (bundles the .NET 10 SDK)
+    * **Desktop development with C++**
 
-2. **[.NET 10.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)**
-
-    > [!TIP]
-    > Run `dotnet --info` in a console or PowerShell window to see which versions you have installed.
-
-    > [!WARNING]
-    > If this is your first time installing the .NET SDK, you might need to restart your system after the installation so that the system can recognize the new environment variables.
-
-3. **[Visual Studio build tools](https://aka.ms/vs/stable/vs_BuildTools.exe)** (you can skip this if you're using Visual Studio and follow the steps below)
-
-If you want to work with Stride's code with **Visual Studio:**
-
-* Make sure you have the **latest version** of [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/)
-* Make sure **have the following workloads installed:**
-  * .NET desktop development workload (defaults are sufficient)
-  * Desktop development with C++ workload (defaults are sufficient)
-* Optional components:
-  * **MSVC Build Tools for ARM64/ARM64EC (Latest)** - required when building for Windows ARM64
-  * **.NET Multi-platform App UI development + Android NDK 20.1+** (via Tools > Android > Android SDK Manager) - required when targeting Android/iOS
-  * **Visual Studio extension development + .NET Framework 4.7.2 targeting pack** - required when building the Stride Visual Studio extension
+> [!NOTE]
+> For a more detailed list of dependencies, check out [the detailed build guide](architecture/build/index.md#detailed-prerequisites).
 
 ## Download the source code
 
 You can clone the source code using a GUI git client or from the command line:
 
-1. (Recommended) Fork the engine's source code in order to be able to contribute back in the future.
+1. (Recommended) **Fork the engine's source code** in order to be able to contribute back in the future.
 
-    TODO: IMAGE
+    ![](media/stride-fork.webp)
 
-2. Copy the Git URL of the repository.
+2. **Copy the Git URL** of the repository.
 
-    TODO: IMAGE
+    ![](media/stride-copy-url.webp)
 
-3. Clone the repository using a Git GUI client or through command line:
+    > [!WARNING]
+    > **Do NOT use Code > Download ZIP** option, as this won't include the LFS files.
+
+3. **Clone the repository** using a Git GUI client or through command line:
 
     ```bash
     git clone GitUrlHere
@@ -47,11 +35,8 @@ You can clone the source code using a GUI git client or from the command line:
 
     This will create a new folder in your current directory containing the engine's source code.
 
-    > [!WARNING]
-    > **Do NOT use GitHub > Code > Download ZIP** option, as this won't include the LFS files.
-
     > [!NOTE]
-    > If you notice that LFS files are missing, run the following command: 
+    > If you notice that the samples folder **weighs less than 200MB,** it means that the **LFS files weren't pulled successfully.** To fix this, run the following command:
     >
     > ```bash
     > git lfs pull
@@ -59,21 +44,24 @@ You can clone the source code using a GUI git client or from the command line:
 
 ## Solution files
 
-The main `Stride.slnx` solution file is located in the root of the source directory and contains every project used for building the engine and its tools.
+**The main `Stride.slnx` solution file** is located in the root of the source directory and contains every project used for building the engine and its tools.
 
 Additionally, there are these `.slnx` files:
 
 * `samples/StrideSamples.slnx` - contains all sample projects
   * Each sample also has it's own `.slnx` solution file
 * `sources/launcher/Stride.Launcher.slnx` - contains projects for the launcher and [Stride CLI](../../manual/get-started/stride-cli.md)
+* `sources/tools/Stride.VisualStudio.slnx` - contains projects for the Stride Visual Studio extension
 
-There are also `.slnf` files in the `sources/` directory which contains solution filters used by the CI for running tests.
+There are also `.slnf` files in the `sources/` directory, which are used by the CI for running tests.
 
 ## Building
 
 ### Building with Visual Studio
 
 Build the `Stride.GameStudio` project in the `60-Editor` solution folder (it should be the default startup project) or run it directly from Visual Studio's toolbar.
+
+TODO: IMAGE
 
 ### Building with command line
 
