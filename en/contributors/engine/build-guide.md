@@ -16,13 +16,13 @@ This guide will walk you through how to build Stride from its source code.
 
 You can clone the source code using a GUI git client or from the command line:
 
-1. (Recommended) **Fork the engine's source code** in order to be able to contribute back in the future.
+1. (Recommended) **Fork the engine's [source code](https://github.com/stride3d/stride)** in order to be able to contribute back in the future.
 
-    ![](media/stride-fork.webp)
+    ![The fork button is located at the top of the repository page, next to its name.](media/stride-fork.webp)
 
 2. **Copy the Git URL** of the repository.
 
-    ![](media/stride-copy-url.webp)
+    ![The git URL is located under the green "Code" dropdown on the right side at the top of the repository page.](media/stride-copy-url.webp)
 
     > [!WARNING]
     > **Do NOT use Code > Download ZIP** option, as this won't include the LFS files.
