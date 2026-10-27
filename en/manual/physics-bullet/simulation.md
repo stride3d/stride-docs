@@ -22,7 +22,7 @@ You can change how Stride initializes the [simulation](xref:Stride.Physics.Simul
 
 At runtime, you can change some [Simulation](xref:Stride.Physics.Simulation) parameters:
 
-* `Gravity` — the global gravity, in [world units](../game-studio/world-units.md) per second squared
+* `Gravity` — the global gravity, in [world units](../scenes/entities/transform/world-units.md) per second squared
 * `FixedTimeStep` — the length of a simulation timestep, in seconds
 * `MaxSubSteps` — the maximum number of fixed timesteps the engine takes per update
 

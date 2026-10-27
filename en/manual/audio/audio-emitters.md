@@ -23,7 +23,7 @@ The pitch and volume of the sound changes as the [audio listener](audio-listener
 
     Now we need to add audio to the emitter.
 
-3.  Under **Audio Emitter**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and specify a name for the audio.
+3.  Under **Audio Emitter**, click ➕ (**Add**) and specify a name for the audio.
 
     ![Add new sound entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
@@ -31,7 +31,7 @@ The pitch and volume of the sound changes as the [audio listener](audio-listener
 
     ![Drag and drop an audio asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+    Alternatively, click 👆 (**Select an asset**).
 
     ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 

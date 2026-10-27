@@ -44,7 +44,7 @@ Convex shapes are easier to test for collision, simulate and find intersections 
 
 2. Select the entity you want to add this Convex Hull to, add in a collidable component as is described in the [static](static-colliders.md) or [body](rigid-bodies.md) section.
 
-3. Next to `Colliders`, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**) and select `ConvexHullCollider`
+3. Next to `Colliders`, click ➕ (**Add**) and select `ConvexHullCollider`
 
    ![Adding a convex hull](media/convex-hull-add-to-component.png)
 
