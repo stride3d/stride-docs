@@ -34,7 +34,7 @@ We allow submitting code written with AI-assistance as long as:
 
 **We forbid using any type of generative AI** in samples, demos, documentation and other parts of Stride for creating 3D models, textures, sprites, sound effects, music, animations and other types of art assets. If your contribution needs one of those, consider using free resources online that are compatible with Stride's [MIT license](https://github.com/stride3d/stride/blob/master/LICENSE.md).
 
-Using minor AI-powered tools (e.g. magic mask) as well as scripts or software created with AI is allowed.
+Using minor AI-powered tools (e.g. magic mask) as well as scripts or software created with AI to make art assets is allowed.
 
 ## Samples and demos
 
