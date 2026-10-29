@@ -30,15 +30,15 @@ We allow submitting code written with AI-assistance as long as:
 * We allow using LLM models in accessibility features, such as translating pages to unsupported languages
   * Every place where users may face AI-generated content must be explicitly stated
 
-## Generative AI
+## Art assets
 
-**We forbid using any type of generative AI** in samples, demos, documentation and other parts of Stride for creating 3D models, textures, sprites, sound effects, music, animations and other types of art assets. If your contribution needs one of those, consider using free resources online that are compatible with Stride's [MIT license](https://github.com/stride3d/stride/blob/master/LICENSE.md).
+**We reserve the right to remove art assets created with generative AI** such as textures, sprites, sound effects, music or animations. This includes assets created for samples, demos, documentation and other parts of Stride. If your contribution needs one of those, consider using free resources online that are compatible with Stride's [MIT license](https://github.com/stride3d/stride/blob/master/LICENSE.md).
 
-Using minor AI-powered tools (e.g. magic mask) as well as scripts or software created with AI to make art assets is allowed.
+Using minor AI-powered tools (e.g. a denoising tool) as well as scripts or software created with AI to make art assets is allowed.
 
 ## Samples and demos
 
-**We forbid using AI when contributing to samples or demos, including AI-assisted code** with exceptions:
+**Using AI when contributing to samples or demos is not allowed, including AI-assisted code** with exceptions:
 
 * We allow using AI for maintenance work (e.g. formatting changes, updating old APIs, etc.)
 * We allow using AI-powered autocorrect or other small tools that may utilize the technology
