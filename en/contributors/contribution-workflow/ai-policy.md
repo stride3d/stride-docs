@@ -1,4 +1,4 @@
-# AI usage
+# AI policy
 
 This page contains the guidelines for using AI when contributing to Stride, including the engine, documentation and website.
 
