@@ -3,13 +3,13 @@
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
 
-A UI or an overlay can **capture** an input device. While a device is captured, game code that reads the device sees no input. The owner of the capture still receives the input.
+A UI or an overlay can **capture** an input device. While a device is captured, scripts and systems that read the device see no input. The owner of the capture still receives the input.
 
 For example, when the player clicks a UI button, the UI captures the mouse. The button receives the click, and [IsMouseButtonPressed](xref:Stride.Input.InputManager.IsMouseButtonPressed\(Stride.Input.MouseButton\)) in your scripts returns `false`. When the player types in an @'Stride.UI.Controls.EditText', the UI captures the keyboard, so `IsKeyDown(Keys.W)` doesn't move the character.
 
 The Stride UI captures input automatically. For more information, see [UI and game input](../ui/ui-and-game-input.md). You can also use the capture API for your own overlays, such as a debug console or an ImGui integration.
 
-## What the game sees
+## What scripts and systems see
 
 While a device is captured, these reads report no input:
 
@@ -24,7 +24,7 @@ The **mouse position** isn't hidden. [MousePosition](xref:Stride.Input.InputMana
 
 Captures don't cause stuck keys or phantom input:
 
-* When a capture begins, keys and buttons that the game saw held are reported released for one frame.
+* When a capture begins, keys and buttons that scripts and systems saw held are reported released for one frame.
 * When a capture ends, a key that is still held stays hidden until the player presses it again. A key repeat from the operating system doesn't count as a new press.
 
 ## Capture a device
@@ -46,7 +46,7 @@ public class PauseMenu : SyncScript
 
     public override void Update()
     {
-        // While the menu is open, the game doesn't see the keyboard and the gamepad
+        // While the menu is open, other scripts don't see the keyboard and the gamepad
         if (IsOpen)
         {
             if (Input.HasKeyboard)
@@ -68,7 +68,7 @@ public class PauseMenu : SyncScript
 ```
 
 > [!NOTE]
-> After the owner captures a device, game-facing reads hide the device from the owner too. To read a device that you hold, use an event listener. For more information, see [Read input as the owner](#read-input-as-the-owner).
+> After the owner captures a device, the input manager hides the device from the owner too. To read a device that you hold, use an event listener. For more information, see [Read input as the owner](#read-input-as-the-owner).
 
 ### Priorities
 
@@ -86,7 +86,7 @@ You can use any integer value.
 
 ## Capture one pointer
 
-On a touch screen, you can capture one pointer (finger) and leave the other pointers to the game. For example, a finger on a UI joystick doesn't hide a second finger that drags the camera.
+On a touch screen, you can capture one pointer (finger) and leave the other pointers to your scripts and systems. For example, a finger on a UI joystick doesn't hide a second finger that drags the camera.
 
 To capture one pointer, call [TryCapturePointer](xref:Stride.Input.InputManager.TryCapturePointer\(Stride.Input.IPointerDevice,System.Int32,System.Object,System.Int32\)) with the pointer device and the [PointerId](xref:Stride.Input.PointerEvent.PointerId). To release it, call [ReleasePointer](xref:Stride.Input.InputManager.ReleasePointer\(Stride.Input.IPointerDevice,System.Int32,System.Object\)).
 
@@ -102,7 +102,7 @@ foreach (var pointerEvent in pointerEventsFromMyListener)
 
 ## Read input as the owner
 
-Capture hides input from game-facing reads only. The owner reads the input through an **event listener**. Listeners receive all events before the input manager hides them.
+Capture hides input only from the input manager's queries, sets and event lists. The owner reads the input through an **event listener**. Listeners receive all events before the input manager hides them.
 
 To add a listener, implement [IInputEventListener&lt;TEventType&gt;](xref:Stride.Input.IInputEventListener`1) and call [AddListener](xref:Stride.Input.InputManager.AddListener\(Stride.Input.IInputEventListener\)). To remove it, call [RemoveListener](xref:Stride.Input.InputManager.RemoveListener\(Stride.Input.IInputEventListener\)).
 
@@ -150,7 +150,7 @@ Each device also has a [CaptureState](xref:Stride.Input.IInputDevice.CaptureStat
 | [Owner](xref:Stride.Input.DeviceCaptureState.Owner) | The owner that holds the whole device, or `null` |
 | [Priority](xref:Stride.Input.DeviceCaptureState.Priority) | The priority of the current capture |
 | [IsCaptured](xref:Stride.Input.DeviceCaptureState.IsCaptured) | `true` if an owner holds the whole device |
-| [IsMasked](xref:Stride.Input.DeviceCaptureState.IsMasked) | `true` if game-facing reads of the device report no input |
+| [IsMasked](xref:Stride.Input.DeviceCaptureState.IsMasked) | `true` if reads of the device by scripts and systems report no input |
 
 For example, to show who holds the mouse:
 
@@ -161,26 +161,26 @@ DebugText.Print($"Mouse held by: {owner?.GetType().Name ?? "nobody"}", new Int2(
 
 ### When to capture
 
-The input manager raises the [ResolvingCapture](xref:Stride.Input.InputManager.ResolvingCapture) event during each update. It occurs after the input manager sends events to the listeners, and before it builds the state that game code reads. If you capture or release a device in this event, the change applies to the same frame. The Stride UI uses this event.
+The input manager raises the [ResolvingCapture](xref:Stride.Input.InputManager.ResolvingCapture) event during each update. It occurs after the input manager sends events to the listeners, and before it builds the state that scripts and systems read. If you capture or release a device in this event, the change applies to the same frame. The Stride UI uses this event.
 
 You can also capture a device in a script. Reads that come after the capture are masked. The input manager builds virtual buttons and gestures before scripts run, so these show the capture from the next frame.
 
 ## ImGui integrations
 
-ImGui tells you when it wants the mouse or the keyboard. To hide that input from the game, add these lines to each frame of your integration:
+ImGui tells you when it wants the mouse or the keyboard. To hide that input from your scripts and systems, add these lines to each frame of your integration:
 
 ```cs
 if (io.WantCaptureMouse) input.TryCapture(input.Mouse, this); else input.Release(input.Mouse, this);
 if (io.WantCaptureKeyboard) input.TryCapture(input.Keyboard, this, InputCapturePriority.Focus); else input.Release(input.Keyboard, this);
 ```
 
-The integration must feed ImGui from event listeners, not from game-facing reads such as `input.IsMouseButtonDown`. Otherwise, ImGui doesn't receive the input that it captures. For more information, see [Read input as the owner](#read-input-as-the-owner).
+The integration must feed ImGui from event listeners, not from input manager queries such as `input.IsMouseButtonDown`. Otherwise, ImGui doesn't receive the input that it captures. For more information, see [Read input as the owner](#read-input-as-the-owner).
 
 ## Turn off masking
 
-By default, game code doesn't see captured input. To let game code see all input, as in Stride 4.4 and earlier, do one of these:
+By default, scripts and systems don't see captured input. To let them see all input, as in Stride 4.4 and earlier, do one of these:
 
-* In the [game settings](../game-studio/game-settings.md#input), clear **Hide captured input from the game**.
+* In the [game settings](../game-studio/game-settings.md#input), clear **UI focus withholds input**.
 * In code, set [MaskCapturedInput](xref:Stride.Input.InputManager.MaskCapturedInput) to `false`:
 
     ```cs

@@ -80,7 +80,7 @@ The **editor** settings control how Game Studio displays entities in the Scene e
 
 | Property | Description
 |----------|--------------
-| Hide captured input from the game | When enabled, input that the UI uses, such as a click on a button or typing in a text box, isn't seen by game scripts. Enabled by default. For more details, see [Input capture](../input/input-capture.md).
+| UI focus withholds input | Turns input masking on or off. When enabled, input that the UI or another owner has captured, such as a click on a button or typing in a text box, isn't seen by scripts and systems. Enabled by default. For more details, see [Input capture](../input/input-capture.md).
 
 ## Navigation
 

@@ -5,30 +5,30 @@
 
 When the player uses the UI, your game scripts don't also receive that input. If the player clicks a button, the button receives the click and your scripts don't. If the player types in a text box, the character doesn't move.
 
-The UI does this with [input capture](../input/input-capture.md). While the UI holds a device, game-facing reads of the device report no input.
+The UI does this with [input capture](../input/input-capture.md). While the UI holds a device, reads of the device by scripts and systems report no input.
 
 ## What the UI captures
 
 | Input | When the UI captures it |
 | --- | --- |
 | Mouse | While the mouse is over a UI element that can be hit, or while a press that started on the UI is held |
-| Touch | One pointer (finger) that was pressed on the UI, until it is released. Other fingers stay with the game. |
+| Touch | One pointer (finger) that was pressed on the UI, until it is released. Other fingers stay visible to scripts and systems. |
 | Keyboard | While a UI element has the focus (@'Stride.UI.UISystem.FocusedElement' isn't `null`), for example a selected @'Stride.UI.Controls.EditText' |
 
-Only elements with [CanBeHitByUser](xref:Stride.UI.UIElement.CanBeHitByUser) set to `true` capture the mouse. A click on an image that can't be hit goes to the game.
+Only elements with [CanBeHitByUser](xref:Stride.UI.UIElement.CanBeHitByUser) set to `true` capture the mouse. A click on an image that can't be hit goes to your scripts.
 
 The UI doesn't capture the mouse in these cases:
 
-* **A game drag crosses the UI.** If the player pressed a button outside the UI and moves over the UI, the game keeps the drag. The game also sees the release when the drag ends over the UI.
+* **A drag crosses the UI.** If the player pressed a button outside the UI and moves over the UI, your scripts keep the drag. They also see the release when the drag ends over the UI.
 * **The mouse is locked**, for example for mouse-look. The position of a locked mouse isn't a cursor, so a UI element at the screen center doesn't freeze the camera.
 
-The mouse position is never hidden. For more information, see [What the game sees](../input/input-capture.md#what-the-game-sees).
+The mouse position is never hidden. For more information, see [What scripts and systems see](../input/input-capture.md#what-scripts-and-systems-see).
 
 ## Focus and the keyboard
 
 While an element has the focus, the UI holds the keyboard with the [Focus](xref:Stride.Input.InputCapturePriority.Focus) priority. A [Modal](xref:Stride.Input.InputCapturePriority.Modal) capture, such as a console, can take the keyboard from the UI. When the modal layer releases the keyboard, the focused element gets it back.
 
-If the focused element becomes hidden or disabled, it loses the focus and the keyboard goes back to the game. For example, when you close a popup that contains a text box, the player doesn't have to press **Esc** before the game sees keys again.
+If the focused element becomes hidden or disabled, it loses the focus and the keyboard goes back to your scripts. For example, when you close a popup that contains a text box, the player doesn't have to press **Esc** before scripts see keys again.
 
 ### Check keys in UI key handlers
 
@@ -50,16 +50,16 @@ The UI uses the layout and the camera matrices of the last frame that it drew. T
 
 If several cameras draw the same UI component, the UI finds elements in each of these views.
 
-## Let the game see UI input
+## Let scripts see UI input
 
-To let your scripts see all input, as in Stride 4.4 and earlier, turn off masking. In the [game settings](../game-studio/game-settings.md#input), clear **Hide captured input from the game**, or set [InputManager.MaskCapturedInput](xref:Stride.Input.InputManager.MaskCapturedInput) to `false`. The UI still works as usual.
+To let your scripts see all input, as in Stride 4.4 and earlier, turn off masking. In the [game settings](../game-studio/game-settings.md#input), clear **UI focus withholds input**, or set [InputManager.MaskCapturedInput](xref:Stride.Input.InputManager.MaskCapturedInput) to `false`. The UI still works as usual.
 
 ## Sample project
 
-The **game menu UI** sample shows what game code sees of the input. The overlay at the top left of the screen shows the keys that are down, the left clicks, the mouse wheel total, and who holds the mouse and the keyboard.
+The **game menu UI** sample shows what scripts and systems see of the input. The overlay at the top left of the screen shows the keys that are down, the left clicks, the mouse wheel total, and who holds the mouse and the keyboard.
 
-* Click a menu button. The button works, and the game doesn't see the click. Click the background, and the game sees the click.
-* Type a name in the welcome popup. The game sees no keys.
+* Click a menu button. The button works, and scripts don't see the click. Click the background, and scripts see the click.
+* Type a name in the welcome popup. Scripts see no keys.
 * Press **F9** to turn masking off and on.
 
 ## See also

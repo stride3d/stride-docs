@@ -91,7 +91,7 @@ There are five types of pointer event:
 > A sequence of pointer events for one pointer always starts with a **Pressed** event. This might be followed by one or more **Moved** events, and always ends with a **Released** or **Canceled** event.
 
 > [!NOTE]
-> [InputManager.PointerEvents](xref:Stride.Input.InputManager.PointerEvents) leaves out the events of captured pointers. For example, a finger pressed on the UI is hidden from the game until it is released. Other fingers aren't affected. For more information, see [Input capture](input-capture.md).
+> [InputManager.PointerEvents](xref:Stride.Input.InputManager.PointerEvents) leaves out the events of captured pointers. For example, a finger pressed on the UI is hidden from scripts and systems until it is released. Other fingers aren't affected. For more information, see [Input capture](input-capture.md).
 
 ### Get delta values
 
