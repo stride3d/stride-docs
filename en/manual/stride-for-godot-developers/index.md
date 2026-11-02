@@ -705,8 +705,3 @@ System.Diagnostics.Debug.WriteLine("hello");
 
 > [!NOTE]
 > To print debug messages, you have to run the game from your IDE, not Game Studio. Running games cannot print to the Game Studio output window.
-
-
-## See also
-
-* [Best Practice](../scripts/best-practice.md)
