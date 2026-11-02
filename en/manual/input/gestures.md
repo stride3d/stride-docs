@@ -38,6 +38,9 @@ Stride can detect several gestures simultaneously, so the event list can contain
 
 The list is cleared with every update, so you don't need to clear it manually.
 
+> [!NOTE]
+> Captured pointers don't make gestures. For example, a drag that starts on a UI button doesn't make a drag gesture. For more information, see [Input capture](input-capture.md).
+
 ## Configure gestures
 
 In the @'Stride.Input.GestureConfig' classes, you can configure parameters including:
@@ -263,4 +266,5 @@ default:
 
 * [Pointers](pointers.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input capture](input-capture.md)
 * [Input overview](index.md)

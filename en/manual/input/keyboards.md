@@ -27,6 +27,9 @@ You can query **key states** and **state changes** with the following methods:
 > [!NOTE] 
 > Stride doesn't support retrieving interpreted keys, such as special characters and capital letters.
 
+> [!NOTE]
+> While a UI text box has the focus, the UI captures the keyboard. These methods then report no keys, so typing doesn't move your character. For more information, see [Input capture](input-capture.md).
+
 ## Get key events
 
 In some cases, you want to know all the keys that are currently _Down_, or all the keys that have been _Pressed_ since the last update. The key state API isn't good for this situation, as you have to query each available key separately.
@@ -72,4 +75,5 @@ public class KeyboardEventsScript : SyncScript
 * [Gamepads](gamepads.md)
 * [Mouse](mouse.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input capture](input-capture.md)
 * [Input overview](index.md)

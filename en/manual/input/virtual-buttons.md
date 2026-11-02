@@ -18,6 +18,9 @@ For example, imagine you develop a first-person shooter game and need to assign 
 5. Create additional virtual buttons.
 6. Add the additional buttons to the same list, or create additional lists.
 
+> [!NOTE]
+> Virtual buttons bound to a captured device report no input. For example, while the UI captures the keyboard, a virtual button bound to a key isn't triggered. For more information, see [Input capture](input-capture.md).
+
 ## Example code
 
 ```cs
@@ -48,4 +51,5 @@ public override void Update() {
 * [Keyboard](keyboards.md)
 * [Mouse](mouse.md)
 * [Pointers](pointers.md)
+* [Input capture](input-capture.md)
 * [Input overview](index.md)

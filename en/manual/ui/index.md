@@ -46,6 +46,7 @@ For an example of a UI implemented in Stride, see the **game menu UI** sample in
 * [UI editor](ui-editor.md)
 * [Add a UI to a scene](add-a-ui-to-a-scene.md)
 * [Layout system](layout-system.md)
+* [UI and game input](ui-and-game-input.md)
 
 ## See also
 
