@@ -30,6 +30,10 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 > [!NOTE]
 > In Game Studio, you can only create simple 3D models such as spheres and cubes. For information about how to do this, see [Create an asset](../assets/create-an-asset.md). To create more complex models, use dedicated software like 3DS Max, Maya, or Blender, then [import the model into Game Studio](import-animations.md).
 
+## Morph targets
+
+**Morph targets** (also known as blend shapes) are alternative shapes of a mesh, such as facial expressions. Their weights can be set in Game Studio, animated, and changed in scripts, alone or together with skinning. For more information, see [Morph targets](morph-targets.md).
+
 ## Animation clips
 
 **Animation clips** describe the pose of a **skeleton** at a particular moment. The skeleton moves according to the animation. The mesh vertices transform (skin) to match the current pose.
@@ -49,6 +53,7 @@ The templates **First-person shooter**, **Third-person platformer** and **Top-do
 * [Set up animations](set-up-animations.md)
 * [Preview animations](preview-animations.md)
 * [Animation scripts](animation-scripts.md)
+* [Morph targets](morph-targets.md)
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
