@@ -22,6 +22,8 @@ items:
   items:
     - name: GitHub Pull Request Guidelines
       href: contribution-workflow/github-pull-request-guidelines.md
+    - name: AI policy
+      href: contribution-workflow/ai-policy.md
     - name: XML Comments and Docs
       href: contribution-workflow/xml-comments-and-docs.md
 - name: 🛠️ Contribute to the engine
