@@ -1,11 +1,10 @@
 # Constraints
 
-[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
-
-[!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
+[!INCLUDE [under-construction-note](../../includes/under-construction-note.md)]
 
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bullet</span>
 
 **Constraints** restrict rigidbodies to certain movement patterns. For example, a realistic knee joint can only move along one axis and can't bend forwards.
 

@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 When you need your logic to interact, query or otherwise modify the state of a simulation, you may need to do so right before or after physics updates. You can implement the `ISimulationUpdate` interface in your EntityComponent or Scripts to be notified of when simulation updates.
 

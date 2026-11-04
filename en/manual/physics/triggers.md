@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 A trigger is a collision shape which detects when colliders enter it, it can be used to run an event when a player character enters a room for example.
  

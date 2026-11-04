@@ -1,9 +1,10 @@
-# Bepu Physics - Configuration
+# Configuration
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
-## Adding Bepu physics to your game
+## Adding Bepu Physics to your game
 
 Some projects may not come with Bepu Physics pre-installed, to add it to your project right-click on the **game** project and select `Add dependency...`
 

@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 Each [collidables](colliders.md) should have a collider defining its shape. You can set them through the **Property grid**.
 

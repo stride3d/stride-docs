@@ -2,8 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
-
-[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+<span class="badge text-bg-secondary">Bullet</span>
 
 If you set a collider to be a **trigger**, other colliders no longer bump into it. Instead, they pass through.
 
