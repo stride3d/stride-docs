@@ -1,2 +1,0 @@
-> [!WARNING]
-> Bullet Physics is being phased out. We no longer plan to support or expand its features as our focus shifts to [Bepu Physics](../manual/physics/index.md). We recommend transitioning to Bepu Physics for access to the latest updates and ongoing improvements.
