@@ -2,8 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
-
-[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+<span class="badge text-bg-secondary">Bullet</span>
 
 In this tutorial, we'll create a [trigger](../physics/triggers.md) that doubles the size of a ball when the ball passes through it.
 

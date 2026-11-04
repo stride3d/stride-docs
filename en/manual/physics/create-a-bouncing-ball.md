@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 In this tutorial, we'll use the [static and body components](colliders.md) to create a ball bouncing on a floor.
 
