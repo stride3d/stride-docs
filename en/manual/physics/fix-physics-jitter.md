@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 Physics engine operate on a fixed time step; instead of updating physics every frame, physics engine update at a fixed frequency, 60 times per second for example.
 

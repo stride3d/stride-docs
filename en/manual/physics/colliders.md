@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 Collidables are the base entity components for physics objects. There are three main types:
 

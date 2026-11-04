@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 In this tutorial, we'll create a [trigger](triggers.md) that doubles the size of a ball when the ball passes through it.
 
