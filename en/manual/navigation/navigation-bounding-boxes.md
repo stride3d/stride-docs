@@ -4,6 +4,8 @@
 <span class="badge text-bg-success">Level designer</span>
 <span class="badge text-bg-success">Programmer</span>
 
+[!INCLUDE [navigation-bepu-notice](../../includes/navigation/bepu-notice.md)]
+
 **Navigation bounding boxes** define the area that [navigation meshes](navigation-meshes.md) cover. You can use them to create smaller navigation areas in your scene, rather than having a mesh cover the entire scene.
 
 The Scene editor displays the bounding box as a blue outline.

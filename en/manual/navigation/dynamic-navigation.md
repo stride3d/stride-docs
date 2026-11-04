@@ -4,6 +4,8 @@
 <span class="badge text-bg-success">Level designer</span>
 <span class="badge text-bg-success">Programmer</span>
 
+[!INCLUDE [navigation-bepu-notice](../../includes/navigation/bepu-notice.md)]
+
 If you enable **dynamic navigation**, entities with navigation components don't need a [navigation mesh](navigation-meshes.md) asset. Instead, the entities generate navigation meshes dynamically.
 
 > [!NOTE]

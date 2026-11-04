@@ -4,6 +4,8 @@
 <span class="badge text-bg-success">Level designer</span>
 <span class="badge text-bg-success">Programmer</span>
 
+[!INCLUDE [navigation-bepu-notice](../../includes/navigation/bepu-notice.md)]
+
 **Navigation meshes** form the area that entities with navigation components can navigate. Stride creates a layer in the navigation mesh for each [navigation group](navigation-groups.md) you create.
 
 Game Studio displays navigation meshes as colored overlays in your scene. The overlay shows where entities in the navigation group for that layer can move. The mesh updates in real time as you edit your scene.
