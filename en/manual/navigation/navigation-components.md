@@ -4,6 +4,8 @@
 <span class="badge text-bg-success">Level designer</span>
 <span class="badge text-bg-success">Programmer</span>
 
+[!INCLUDE [navigation-bepu-notice](../../includes/navigation/bepu-notice.md)]
+
 **Navigation components** allow entities to use [navigation meshes](navigation-meshes.md) to find paths through the scene. Alternatively, if you enable [dynamic navigation](dynamic-navigation.md) in Game Settings, entities can generate their own navigation meshes.
 
 # Add a navigation component
