@@ -525,12 +525,19 @@ function PostProcessing-LinksToUnversionedSections {
     Write-Host -ForegroundColor Yellow "Post-processing links of $Directory to the unversioned sections..."
     Write-Host ""
 
-    $pattern = '(<a\b[^>]*?\bhref="(?:\./|\.\./)*(?:' + ($Settings.UnversionedSections -join '|') + ')/[^"#?]*?)\.md(?=[#?"])'
-    foreach ($file in Get-ChildItem $Directory -Filter *.html -Recurse) {
-        $content = [System.IO.File]::ReadAllText($file.FullName)
-        $updated = [regex]::Replace($content, $pattern, '$1.html')
-        if ($updated -ne $content) {
-            [System.IO.File]::WriteAllText($file.FullName, $updated, [System.Text.UTF8Encoding]::new($false))
+    $sections = '(?:\./|\.\./)*(?:' + ($Settings.UnversionedSections -join '|') + ')/[^"#?]*?'
+    # The links of the pages, and the ones of the navbar, which docfx renders from toc.json (i.e. "href":"contributors/index.md")
+    $targets = @(
+        @{ Filter = '*.html'; Pattern = '(<a\b[^>]*?\bhref="' + $sections + ')\.md(?=[#?"])' }
+        @{ Filter = 'toc.json'; Pattern = '("(?:href|topicHref|homepage)":"' + $sections + ')\.md(?=[#?"])' }
+    )
+    foreach ($target in $targets) {
+        foreach ($file in Get-ChildItem $Directory -Filter $target.Filter -Recurse) {
+            $content = [System.IO.File]::ReadAllText($file.FullName)
+            $updated = [regex]::Replace($content, $target.Pattern, '$1.html')
+            if ($updated -ne $content) {
+                [System.IO.File]::WriteAllText($file.FullName, $updated, [System.Text.UTF8Encoding]::new($false))
+            }
         }
     }
 }
@@ -989,6 +996,9 @@ else {
     }
 }
 
+# Before the API metadata, which takes a while, so that missing release notes of the version fail the build right away
+Generate-ReleaseNotesIndex
+
 # Generate API doc
 if ($ReuseAPI)
 {
@@ -1013,8 +1023,6 @@ if ($engineArchitecture) {
     Copy-ArchitectureDocs
     Generate-ArchitectureDocsToc
 }
-
-Generate-ReleaseNotesIndex
 
 Remove-LocalWebsiteLinks
 
