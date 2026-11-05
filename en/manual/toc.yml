@@ -405,7 +405,7 @@ items:
           - name: Custom particles
             href: particles/tutorials/custom-particles.md
 
-  - name: Physics
+  - name: Physics (Bepu)
     href: physics/index.md
     items:
       - name: Configuration
@@ -450,7 +450,7 @@ items:
       - name: Physics jitter
         href: physics/fix-physics-jitter.md
 
-  - name: Physics Bullet
+  - name: Physics (Bullet)
     href: physics-bullet/index.md
     items:
       - name: Colliders

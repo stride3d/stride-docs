@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 Stride's physics are controlled by the [Simulation](xref:Stride.BepuPhysics.BepuSimulation) class.
 You can change how Stride initializes the [Simulation](xref:Stride.BepuPhysics.BepuSimulation) by going to the [Configuration](configuration.md) section of your game's settings.

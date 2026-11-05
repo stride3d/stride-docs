@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 **Body** move based on physical forces applied to them, such as gravity and collisions. Typical (rigid)bodies are boxes, balls, furniture, and so on — objects that can be pushed, pulled, and knocked around, and also have effects on other bodies they collide with.
 

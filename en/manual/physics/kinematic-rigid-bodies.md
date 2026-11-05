@@ -1,5 +1,7 @@
 # Kinematic Bodies
 
+<span class="badge text-bg-secondary">Bepu</span>
+
 Sometimes you want to move [bodies](rigid-bodies.md) in a specific way rather than have physics apply outside forces, like drag, inertia, etc. For example, you might control an elevator directly through its `LinearVelocity` property, rather than have other objects push and pull it. This is a **kinematic** body.
 
 Although kinematic bodies aren't bound by physics, other objects can still collide with them. For example, in the case of the elevator, objects placed inside won't fall through the elevator floor.
