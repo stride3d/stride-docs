@@ -263,7 +263,7 @@ In Stride, there are three main types of colliders:
 - **Rigidbodies:** Dynamic colliders that are subject to physics simulations, such as gravity or force.
 - **Characters:** Special colliders designed to work with character controllers.
 
-In Stride, collision handling is done through physics components and script logic that handle collision events and triggers. For details, see [Physics](../physics/index.md), [Triggers](../physics/triggers.md), and [Physics Queries](../physics/raycasting.md).
+In Stride, collision handling is done through physics components and script logic that handle collision events and triggers. For details, see [Physics (Bepu)](../physics/index.md), [Triggers](../physics/triggers.md), and [Physics Queries](../physics/raycasting.md).
 
 ### Godot
 

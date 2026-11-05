@@ -8,4 +8,5 @@ Game Studio displays units as a grid.
 
 ## See also
 
-* [Physics](../physics/index.md)
+* [Physics (Bepu)](../physics/index.md)
+* [Physics (Bullet)](../physics-bullet/index.md)
