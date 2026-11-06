@@ -55,11 +55,21 @@ Additionally, there are these `.slnx` files:
 
 There are also `.slnf` files in the `sources/` directory, which are used by the CI for running tests.
 
+## Difference between Wpf and Avalonia editors
+
+Currently Game Studio is in a transitional period. The new Avalonia editor is still experimental and doesn't have as many features as the old Wpf version.
+
+> [!NOTE]
+> Only the Avalonia editor works on Linux and macOS.
+
 ## Building
 
 ### Building with Visual Studio
 
-Build the `Stride.GameStudio` project in the `60-Editor/Wpf` solution folder (it should be the default startup project) or run it directly from Visual Studio's toolbar.
+You can build the entire engine by building either the Wpf or Avalonia editor project:
+
+* **Wpf:** `Stride.GameStudio` located in the `60-Editor/Wpf` solution folder (selected by default)
+* **Avalonia:** `Stride.GameStudio.Avalonia` located in the `60-Editor/Avalonia` solution folder
 
 ![The build and run button is located in the top toolbar (look for the green play icon).](media/vs-build-gamestudio.webp)
 
@@ -74,7 +84,11 @@ dotnet build Stride.slnx
 You can also build and run the editor directly using the following command:
 
 ```bash
+# Build the Wpf editor
 dotnet run --project sources/editor/Stride.GameStudio
+
+# Build the Avalonia editor
+dotnet run --project sources/editor/Stride.GameStudio.Avalonia
 ```
 
 ## Additional properties
