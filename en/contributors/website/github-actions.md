@@ -6,7 +6,7 @@ You don't need to touch these workflows to contribute content. This page is here
 
 | Workflow file | Name in the Actions tab | Trigger | Target |
 | --- | --- | --- | --- |
-| [stride-website-release-azure.yml](https://github.com/stride3d/stride-website/blob/master/.github/workflows/stride-website-release-azure.yml) | Build Stride Web for Azure Web App Release 🚀 | Push to `release`, or manual | Azure Web App `stride-website`, slot **Production** → [www.stride3d.net](https://www.stride3d.net/) |
+| [stride-website-release-azure.yml](https://github.com/stride3d/stride-website/blob/master/.github/workflows/stride-website-release-azure.yml) | Build Stride Web for Azure Web App Release 🚀 | Manual only, from `master` | Azure Web App `stride-website`, slot **Production** → [www.stride3d.net](https://www.stride3d.net/) |
 | [stride-website-staging-azure.yml](https://github.com/stride3d/stride-website/blob/master/.github/workflows/stride-website-staging-azure.yml) | Build Stride Web for Azure Web App Staging | Push to `staging`, or manual | Azure Web App `stride-website`, slot **staging** → [stride-website-staging.azurewebsites.net](https://stride-website-staging.azurewebsites.net/) |
 | [stride-website-github.yml](https://github.com/stride3d/stride-website/blob/master/.github/workflows/stride-website-github.yml) | Build Stride Web for GitHub Staging | Manual only | The `gh-pages` branch of your fork (GitHub Pages) |
 
@@ -16,10 +16,9 @@ You don't need to touch these workflows to contribute content. This page is here
 flowchart LR
     PR[Pull request] --> master[master branch]
     master -->|merge| staging[staging branch]
-    master -->|merge| release[release branch]
 
     staging --> WS[stride-website-staging-azure.yml]
-    release --> WR[stride-website-release-azure.yml]
+    master -.->|manual dispatch only| WR[stride-website-release-azure.yml]
     master -.->|manual dispatch only| WG[stride-website-github.yml]
 
     WS --> AS[Azure slot: staging]
@@ -31,7 +30,7 @@ flowchart LR
     GH --> URLG[GitHub Pages site]
 ```
 
-`master` is the default branch and the target for pull requests. **Nothing is deployed from `master` automatically.** A deployment happens only when work is merged from `master` into `staging` or `release`, which is what makes those two branches the release control points. Optionally, a maintainer can run any of the workflows manually from the **Actions** tab.
+`master` is the default branch and the target for pull requests. **Nothing is deployed from `master` automatically.** Merging work from `master` into `staging` deploys it to staging, and a maintainer deploys `master` to production by running the release workflow from the **Actions** tab. Optionally, a maintainer can run any of the workflows manually.
 
 ## Who can run these workflows
 
@@ -70,7 +69,7 @@ A separate `deploy` job then downloads that artifact and pushes it to Azure. Spl
 ``` mermaid
 flowchart TD
     subgraph Trigger
-      T1[push to release / staging] --> J1
+      T1[push to staging] --> J1
       T2[workflow_dispatch] --> J1
     end
 
@@ -85,31 +84,37 @@ flowchart TD
     subgraph "job: deploy (ubuntu-latest)"
       J5["download-artifact 'node-app'"] --> J6[azure/webapps-deploy]
       J6 --> J7[Environment URL published on the run page]
+      J6 -.->|release only| J8[Purge of the Azure Front Door cache]
     end
 ```
 
 ## Azure workflows
 
-The release and staging workflows are the same file except for the trigger branch, the Azure slot and the publish profile secret.
+The release and staging workflows are the same file except for the trigger, the Azure slot, the publish profile secret and the purge of the cache.
 
 | | Release | Staging |
 | --- | --- | --- |
-| Branch | `release` | `staging` |
+| Branch | `master` (manual) | `staging` |
 | `app-name` | `stride-website` | `stride-website` |
 | `slot-name` | `Production` | `staging` |
-| Publish profile | `AZUREAPPSERVICE_PUBLISHPROFILE_0EC7AAA1…` | `AZUREAPPSERVICE_PUBLISHPROFILE_987D5D58…` |
-| GitHub environment | `Production` | `Production` |
+| GitHub environment | `Production` | `Staging` |
+| Publish profile | Secret `AZURE_PUBLISH_PROFILE` of the `Production` environment | Secret `AZURE_PUBLISH_PROFILE` of the `Staging` environment |
 
-Both use `package: .`, meaning the working directory holding the downloaded artifact contents.
+Both use [Azure Web Apps Deploy v3](https://github.com/Azure/webapps-deploy) with `package: .`, meaning the working directory holding the downloaded artifact contents.
 
-> [!NOTE]
-> Both workflows report to a GitHub environment named `Production`, including the staging one. That is only the label shown on the run page, the actual target is determined by `slot-name`, so the staging workflow really does deploy to the staging slot.
+### Azure Front Door cache
+
+[www.stride3d.net](https://www.stride3d.net/) is served through Azure Front Door (profile `stride-frontdoor`, endpoint `stride-website`), which caches the files of the Production slot. The pages are sent with `Cache-Control: no-cache` and the CSS and scripts have the site version in their URLs, but images, `search.json` and `sitemap.xml` stay cached. After the deploy, the release workflow purges the whole cache (`/*`).
+
+It signs in to Azure as the managed identity `stride-frontdoor-purge`, whose federated credential trusts the jobs of the `Production` environment of `stride3d/stride-website`, so no secret is stored in GitHub. Its role is **CDN Profile Contributor** on the `stride-website` endpoint only. The `Production` environment has its client ID, tenant ID and subscription ID in the variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID` and `AZURE_SUBSCRIPTION_ID`.
+
+Each publish profile is a secret of its environment, so only jobs running in that environment can use it. Both environments have the team `stride-website-publishers` as required reviewers: a deployment waits until one of its members approves it (**Review deployments** on the run page), even when they started it themselves. The `Production` environment only accepts the branch `master`.
 
 For how the Azure Web App itself is configured, see [Deployment](deployment-azure.md).
 
 ### Which pushes are ignored
 
-Pushes are ignored when they only touch documentation or repository plumbing:
+Pushes to `staging` are ignored when they only touch documentation or repository plumbing:
 
 ```yaml
 paths-ignore:
@@ -122,11 +127,11 @@ paths-ignore:
   - '.github/**'
 ```
 
-So editing a draft post or a workflow file on `release` will **not** redeploy the production site. If you need a run anyway, start one manually from the Actions tab, both workflows also declare `workflow_dispatch`.
+So editing a draft post or a workflow file on `staging` will **not** redeploy the staging site. If you need a run anyway, start one manually from the Actions tab, both workflows also declare `workflow_dispatch`.
 
 ### Publish profiles
 
-The publish profiles are stored as repository secrets. If one is rotated in the Azure portal (**Get publish profile** on the app or the slot), the matching secret in the repository settings has to be updated too, otherwise deployments start failing with an authentication error.
+The publish profiles are stored as secrets of the environments. If one is rotated in the Azure portal (**Download publish profile** on the app or the slot), the secret of the matching environment has to be updated too, otherwise deployments start failing with an authentication error. The profile decides where the files go: the `Staging` environment must have the profile of the staging slot, never the one of the app.
 
 ## GitHub Pages workflow
 

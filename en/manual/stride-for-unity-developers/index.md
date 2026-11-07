@@ -806,7 +806,3 @@ public float MyProperty { get; init; }
 ---
 
 Unity® is a trademark of Unity Technologies.
-
-## See also
-
-* [Best Practice](../scripts/best-practice.md)

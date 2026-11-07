@@ -192,7 +192,6 @@
 ## Scripting terms
 
 - [Asynchronous script](../scripts/types-of-script/async-script.md): Runs a task-like Execute method; can await operations and return to the main thread with `await Script.NextFrame()`.
-- [Best practices](../scripts/best-practice.md): Recommended coding patterns for Stride projects.
 - [Camera controller](../../tutorials/csharpintermediate/third-person-camera.md): A script enabling camera movement using input.
 - [Content.Load<T>](../scripts/create-a-model-from-code.md): Load assets at runtime via the content system.
 - [Debugging](../scripts/debugging.md): Inspect and troubleshoot scripts at runtime.

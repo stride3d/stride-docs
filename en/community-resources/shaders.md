@@ -16,6 +16,7 @@
 - [UnrealMotion](https://github.com/ykafia/UnrealMotion) - Unreal Engine-style per-object motion blur post-process effect for Stride
 - [Image Processing Shaders (VVVV community)](https://github.com/bj-rn/VL.Addons/tree/main/vl/shaders) - Collection of image processing and compositing shaders from the vvvv add-on library
 - [VL.StandardLibs - Core Stride Shaders](https://github.com/vvvv/VL.StandardLibs/tree/main/VL.Stride.Runtime/src/Effects) - Stride runtime shader effects bundled with the vvvv standard library
+- [StrideCustomPostprocessEffect - Custom post-processing image effect](https://github.com/w0wca7a/StrideCustomPostprocessEffect) - Custom post-processing image effect thats working in Game studio and can be configured in Graphics compositor
 
 ## Tools and References
 

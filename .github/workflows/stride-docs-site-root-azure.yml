@@ -29,6 +29,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write  # required to sign in to Azure (purge of the Azure Front Door cache)
 
 env:
   # Pushes to master are deployed to staging only
@@ -116,3 +117,19 @@ jobs:
         check /en/contributors/missing-page.html 404
         curl -s "$base/en/contributors/missing-page.html" | grep -q '"/en/public/' || { echo "::error::/en/ doesn't serve its own 404 page"; failed=1; }
         exit $failed
+
+    # Azure Front Door caches doc.stride3d.net: without a purge, it serves the old files and redirects until they expire
+    - name: Sign in to Azure
+      if: env.SLOT == 'production'
+      uses: azure/login@v2
+      with:
+        # Variables of the Production environment: the stride-frontdoor-purge managed identity, see deployment-azure.md
+        client-id: ${{ vars.AZURE_CLIENT_ID }}
+        tenant-id: ${{ vars.AZURE_TENANT_ID }}
+        subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+    # Everything: web.config changes the redirects of every version and what /latest/ serves
+    - name: Purge the Azure Front Door cache
+      if: env.SLOT == 'production'
+      # Front Door takes a few minutes to apply it, no need to wait
+      run: az afd endpoint purge -g Stride3d --profile-name stride-frontdoor --endpoint-name stride-doc --content-paths '/*' --no-wait
