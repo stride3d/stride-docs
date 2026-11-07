@@ -85,7 +85,7 @@ If you select **GPU** as the display mode, the profiler displays:
 
 * `Device`: the graphics device (manufacturer's description)
 * `Platform`: the currently used backend (Direct3D or Vulkan)
-* `Profile`: the feature level for your game, set in **Game Settings > Rendering** (see [Game settings](../game-studio/game-settings.md))
+* `Profile`: the feature level for your game, set in **Game Settings > Rendering** (see [Game Settings — Configurations](../files-and-folders/game-settings/configurations.md))
 * `Resolution`: the game resolution
 * `Drawn triangles`: the number of triangles drawn per frame
 * `Draw calls`: the number of draw calls per frame
