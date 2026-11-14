@@ -2,8 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
-
-[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+<span class="badge text-bg-secondary">Bullet</span>
 
 **Static colliders** aren't moved by forces such as gravity and collisions, but other physics objects can bump into them. Typical static colliders are strong immovable objects like walls, floors, large rocks, and so on.
 

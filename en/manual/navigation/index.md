@@ -4,6 +4,8 @@
 <span class="badge text-bg-success">Level designer</span>
 <span class="badge text-bg-success">Programmer</span>
 
+[!INCLUDE [navigation-bepu-notice](../../includes/navigation/bepu-notice.md)]
+
 You can use the **navigation** system to control how characters and other objects navigate scenes.
 
 ## Set up navigation

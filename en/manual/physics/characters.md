@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 **Characters** are used for player and NPC movement. Entities with [character components](xref:Stride.BepuPhysics.CharacterComponent) can be moved with [Move](xref:Stride.BepuPhysics.CharacterComponent.Move\(Stride.Core.Mathematics.Vector3\)), [TryJump](xref:Stride.BepuPhysics.CharacterComponent.TryJump), and teleported by setting its [Position](xref:Stride.BepuPhysics.BodyComponent.Position) property.
 

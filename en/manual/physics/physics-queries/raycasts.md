@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 **Raycast** is the most commonly used type of physics query. It casts a ray in a direction and returns what it collided with. In more basic terms, **it's like shooting an invisible laser and seeing what it hits**.
 

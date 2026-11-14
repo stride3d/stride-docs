@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 **Physics Queries** are a set of operations to test and retrieve physics object in a given simulation. The most well known form of those queries is the [RayCast](raycasts.md) which traces an invisible line through the scene to find intersecting [Collidables](../colliders.md).
 

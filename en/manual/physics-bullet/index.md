@@ -1,10 +1,14 @@
-# Bullet Physics
+# Physics (Bullet)
 
-[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+<span class="badge text-bg-secondary">Bullet</span>
 
-![Physics in Stride](media/physics-index-physics-in-stride.png)
+![](media/physics-index-physics-in-stride.png)
 
 Stride simulates real-world physics such as gravity and collisions. This section explains how physics components work, how to add them to your project, and how to use them with scripts.
+
+## Difference between Bepu and Bullet
+
+[!INCLUDE [physics-comparison](../../includes/physics/physics-system-comparison.md)]
 
 ## In this section
 
