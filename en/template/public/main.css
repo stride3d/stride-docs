@@ -59,6 +59,14 @@ blockquote {
     padding: 9px .8em 1px 0.8em;
 }
 
+/* Images for one theme: GitHub reads the #gh-*-mode-only fragment, DocFX drops it from src, so the file name also says the theme */
+[data-bs-theme=dark] img[src*=".light."],
+[data-bs-theme=dark] img[src$="#gh-light-mode-only"],
+[data-bs-theme=light] img[src*=".dark."],
+[data-bs-theme=light] img[src$="#gh-dark-mode-only"] {
+    display: none;
+}
+
 [data-bs-theme=dark] blockquote {
     border-color: var(--stride-red-web);
     background: #33383c;
