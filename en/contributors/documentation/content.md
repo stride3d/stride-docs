@@ -67,6 +67,8 @@ Observe existing pages and folders for the naming convention.
 
 You can observe that existing folders might have a `media` folder. This folder contains images and videos used in the manual pages. You can use this folder or create a new one in your folder. If possible make sure that images are `.webp` format and videos are `.mp4` format.
 
+Use a pair of light and dark images only when it can't be avoided, when a single image can't work in both themes. An image made for the light or the dark theme comes in a pair, shown only in its theme: name the files `*.light.webp` and `*.dark.webp`, and add GitHub's `#gh-light-mode-only` or `#gh-dark-mode-only` fragment so that GitHub picks the right one too, i.e. `![Compile time](media/compile-time.dark.webp#gh-dark-mode-only)`.
+
 ## Tutorial
 
 These pages contain tutorials on how to use Stride, an open-source C# game engine.

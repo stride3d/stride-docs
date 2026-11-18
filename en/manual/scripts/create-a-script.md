@@ -127,7 +127,6 @@ You can see the script in the **Asset view**.
 
 ## See also
 
-* [Best Practice](best-practice.md)
 * [Types of script](types-of-script/index.md)
 * [Use a script](use-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)

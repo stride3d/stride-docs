@@ -31,7 +31,7 @@ flowchart LR
 The site hosts the documentation of several versions, each in its own folder (`4.4/`, `4.3/`, ...), the sections that aren't versioned in `en/` (contributing, community resources and release notes, see `unversioned` in `versions.json`), and a few files at its root shared by all versions:
 
 - `versions.json` lists the versions shown in the version selector and which one is the latest
-- `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules, i.e. from the unversioned sections of every version to `en/`
+- `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules, i.e. from the unversioned sections of every version to `en/`, and from a version that has no folder on the site (i.e. the version in development) to `/latest/`
 - `robots.txt` keeps search engines on `/latest/`
 
 Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a run of the site root workflow, without rebuilding any documentation.
