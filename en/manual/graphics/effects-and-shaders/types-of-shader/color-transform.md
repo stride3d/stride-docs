@@ -42,7 +42,7 @@ shader Example : ColorTransformShader, Texturing
 
 ## Using the shader
 
-Color transform shaders need to be wrapped in a C# class in order to become usable in Game Studio and in code.
+Color transform shaders need to be wrapped in a C# class inheriting from [`ColorTransform`](xref:Stride.Rendering.Images.ColorTransform) in order to become usable in the engine.
 
 ```csharp
 public class Example : ColorTransform

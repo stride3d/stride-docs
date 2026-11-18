@@ -12,11 +12,12 @@ Shaders are a fundamental tool for the graphics of a game. Stride contains a lot
 Stride uses its own shading language called **SDSL**. Unlike a lot of the alternatives, it allows you to write **reusable code** that can be shared across multiple shaders.
 
 ```sdsl
-shader MyShader : ComputeColor, Texturing, MyOtherShader
+shader MyShader<float4 colorA, float4 colorB, float multiplier> : ComputeColor, Texturing, MyOtherShader
 {
     override float4 Compute()
     {
-        var pos = streams.
+        var dist = dist(streams.TexCoord, 0.5) * Global.Time;
+        return lerp(colorA, colorB, sin(dist * multiplier));
     }
 };
 ```

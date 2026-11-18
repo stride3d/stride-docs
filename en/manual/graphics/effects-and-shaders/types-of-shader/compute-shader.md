@@ -17,7 +17,7 @@ shader Example : ComputeShaderBase
 
 ## How it works
 
-The `Compute` method is executed multiple times at once with a different `ThreadGroupIndex` value. They can then access and modify buffers (`RwStructuredBuffer<T>`) provided by the executing C# script to compute data.
+The `Compute` method is executed multiple times at once with a different `ThreadGroupIndex` value. They can then access and modify buffers (e.g. `RwStructuredBuffer<T>`) provided by the executing C# script to compute data.
 
 TODO: VISUALIZATION
 

@@ -1,5 +1,7 @@
 # Effect language
 
+TODO: Move content from this page to `effects/`
+
 ## Create shaders in C&#35;
 
 You can create a shader at runtime with @'Stride.Shaders.ShaderSource' objects. Shaders come in three types:

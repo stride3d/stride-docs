@@ -53,7 +53,7 @@ Every [attribute](../../../materials/material-attributes.md) in a material has i
 
 Material shaders need to be wrapped in a C# class in order to become usable in the engine and in Game Studio.
 
-1. Create a new C# script that inherits from [`MaterialFeature`](xref:Stride.Rendering.Materials.MaterialFeature) and a C# interface for the slot you want to target (see tables above).
+1. Create a new C# script that inherits from [`MaterialFeature`](xref:Stride.Rendering.Materials.MaterialFeature) and an interface for the slot you want to target (see tables above).
     
     ```csharp
     using Stride.Rendering.Materials;

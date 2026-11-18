@@ -88,14 +88,14 @@ shader Example : ComputeColor
     cbuffer PerMaterial
     {
         // This can be modified at runtime via code
-        stage float intensity;
+        stage float Intensity;
     }
 
     override float4 Compute()
     {
-        // Yellow if intensity = 1
-        // Black if intensity = 0
-        return float4(intensity, intensity, 0, 1);
+        // Yellow if Intensity = 1
+        // Black if Intensity = 0
+        return float4(Intensity, Intensity, 0, 1);
     }
 };
 ```
@@ -116,7 +116,7 @@ public class ExampleScript : SyncScript
         time += (float)Game.UpdateTime.Elapsed.TotalSeconds;
     
         var materialParameters = Model.GetMaterial(0).Passes[0].Parameters;
-        materialParameters.Set(ExampleKeys, MathF.Sin(materialParameters));
+        materialParameters.Set(ExampleKeys.Intensity, MathF.Sin(materialParameters));
     }
 }
 ```

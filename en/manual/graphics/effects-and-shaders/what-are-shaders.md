@@ -18,4 +18,9 @@ You might be able to see why this is useful in graphics. Instead of going one-by
 
 As mentioned previously, most of the time shaders are used for graphics (e.g. post-processing effects or animated textures). However, you can also utilize them for other tasks that require processing of large amounts of data (e.g. world generation).
 
-In Stride...
+In Stride, you can use shaders for many things, including:
+
+* In place of a texture in a material
+* To create custom materials
+* For custom colors transforms used in post-processing effects
+* Compute shaders
