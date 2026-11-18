@@ -40,7 +40,7 @@ To create your own filter for objects in a render stage, inherit from @'Stride.R
 
 ### Render stage selectors
 
-**Render stage selectors** define which objects in your scene are sent to which render stage, and choose which [effect](../../shaders/effect-language.md) to use when rendering a given object.
+**Render stage selectors** define which objects in your scene are sent to which render stage, and choose which [effect](../../shaders/effect-language/index.md) to use when rendering a given object.
 
 For example, this is the typical setup for meshes:
 
