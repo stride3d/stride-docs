@@ -35,14 +35,19 @@ env:
   # Pushes to master are deployed to staging only
   SLOT: ${{ inputs.slot || 'staging' }}
 
+# A newer run to the same slot replaces the older one, also while it waits for approval
 concurrency:
-  group: azure-${{ inputs.slot || 'staging' }}
-  cancel-in-progress: false
+  group: site-root-azure-${{ inputs.slot || 'staging' }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
     # Run this job only if the repository is 'stride3d/stride-docs'
     if: github.repository == 'stride3d/stride-docs'
+    # One deploy at a time on a slot, shared with the version workflow
+    concurrency:
+      group: azure-${{ inputs.slot || 'staging' }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
 
     environment:

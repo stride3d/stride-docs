@@ -157,6 +157,8 @@ The documentation of a version not released yet (a beta) can be deployed to prod
 
 A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`. A production deploy purges the whole Azure Front Door cache of the site: `web.config` changes the redirects of every version and what `/latest/` serves.
 
+Both workflows deploy to a slot one at a time. A newer run of the same workflow to the same slot (and from the same branch, for a version) cancels the older one, also while it waits for approval, so only the latest run can be approved. To go back to an earlier version, revert it on its branch, or re-run the older run of the workflow.
+
 ## GitHub Pages workflow
 
 ``` mermaid
