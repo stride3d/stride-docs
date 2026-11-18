@@ -15,7 +15,7 @@ There are two types of attribute:
 
 Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
-You can also write [custom shaders](../effects-and-shaders/types-of-shader/material-shaders/index.md) to use in material attributes.
+You can also write [custom shaders](../../shaders/types-of-shader/material-shaders/index.md) to use in material attributes.
 
 ## In this section
 
@@ -30,4 +30,4 @@ You can also write [custom shaders](../effects-and-shaders/types-of-shader/mater
 * [Material layers](material-layers.md)
 * [Material slots](material-slots.md)
 * [Materials for developers](materials-for-developers.md)
-* [Material shaders](../effects-and-shaders/types-of-shader/material-shaders/index.md)
+* [Material shaders](../../shaders/types-of-shader/material-shaders/index.md)

@@ -124,4 +124,4 @@ With HDR, a [Bloom](../post-effects/bloom.md) and a [Bright filter](../post-effe
 * [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)
-* [Material shaders](../effects-and-shaders/types-of-shader/material-shaders/index.md)
+* [Material shaders](../../shaders/types-of-shader/material-shaders/index.md)

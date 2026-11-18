@@ -1,6 +1,6 @@
 # Render stages
 
-**Render stages** define how given objects are rendered (usually with their associated [effect/shader](../effects-and-shaders/index.md)). They also let you control advanced properties such as sorting and filtering objects.
+**Render stages** define how given objects are rendered (usually with their associated [effect/shader](../../shaders/index.md)). They also let you control advanced properties such as sorting and filtering objects.
 
 Objects can subscribe to multiple render stages. For example, a mesh typically subscribes to both the `Opaque` and `ShadowCaster` stages, or the `Transparent` stage.
 
@@ -9,7 +9,7 @@ Objects can subscribe to multiple render stages. For example, a mesh typically s
 
 ## Effect slots
 
-**Effect slots** determine which [effect/shader](../effects-and-shaders/index.md) a render stage uses. You choose the effect slot with @'Stride.Rendering.RenderStage.EffectSlotName'.
+**Effect slots** determine which [effect/shader](../../shaders/index.md) a render stage uses. You choose the effect slot with @'Stride.Rendering.RenderStage.EffectSlotName'.
 
 If multiple render stages exclusively render different objects, the stages can share the same effect slot. For example, as the opaque stage only renders opaque objects and the transparent stage only renders transparent objects, both stages can use the main effect slot.
 
@@ -40,7 +40,7 @@ To create your own filter for objects in a render stage, inherit from @'Stride.R
 
 ### Render stage selectors
 
-**Render stage selectors** define which objects in your scene are sent to which render stage, and choose which [effect](../effects-and-shaders/effect-language.md) to use when rendering a given object.
+**Render stage selectors** define which objects in your scene are sent to which render stage, and choose which [effect](../../shaders/effect-language.md) to use when rendering a given object.
 
 For example, this is the typical setup for meshes:
 
@@ -55,5 +55,5 @@ You can customize everything, so you can add other predefined render stage selec
 
 * [Rendering pipeline](index.md)
 * [Render features](render-features.md)
-* [Effects and shaders](../effects-and-shaders/index.md)
+* [Effects and shaders](../../shaders/index.md)
 * [Graphics compositor](../graphics-compositor/index.md)

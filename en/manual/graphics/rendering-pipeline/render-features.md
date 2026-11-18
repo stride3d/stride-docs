@@ -64,5 +64,5 @@ Stride includes several predefined pipeline processors. You can also create your
 
 * [Rendering pipeline](index.md)
 * [Render stages](render-stages.md)
-* [Effects and shaders](../effects-and-shaders/index.md)
+* [Effects and shaders](../../shaders/index.md)
 * [Graphics compositor](../graphics-compositor/index.md)

@@ -32,7 +32,7 @@ var myTorus = GeometricPrimitive.Torus.New(GraphicsDevice);
 myCube.Draw(CommandList, EffectInstance);
 ```
 
-They have no effect associated with them, so the user has to provide an @'Stride.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../effects-and-shaders/index.md).
+They have no effect associated with them, so the user has to provide an @'Stride.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../../shaders/index.md).
 
 ## Custom drawing
 
@@ -95,4 +95,3 @@ commandList.SetIndexBuffer(indexBuffer, 0, is32Bits);
 // Draw indexed vertices
 commandList.DrawIndexed(indexBuffer.ElementCount);
 ```
-

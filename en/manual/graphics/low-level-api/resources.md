@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
 
-When [drawing vertices](draw-vertices.md) using an [effect](../effects-and-shaders/index.md), the shaders expect certain resources to be available, including:
+When [drawing vertices](draw-vertices.md) using an [effect](../../shaders/index.md), the shaders expect certain resources to be available, including:
 
 - textures and buffers
 - samplers

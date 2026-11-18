@@ -13,7 +13,7 @@
 
 ## Source References
 
-- [Stride Shader Stages Documentation](https://github.com/stride3d/stride-docs/blob/master/en/manual/graphics/effects-and-shaders/shading-language/shader-stages.md/) - Official reference for vertex, pixel, geometry, and compute shader stages in Stride
+- [Stride Shader Stages Documentation](https://github.com/stride3d/stride-docs/blob/master/en/manual/shaders/shading-language/shader-stages.md/) - Official reference for vertex, pixel, geometry, and compute shader stages in Stride
 
 ## Building and Compiling
 

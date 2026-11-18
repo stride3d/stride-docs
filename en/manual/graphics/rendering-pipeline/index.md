@@ -16,7 +16,7 @@ Views are a first-class concept available to all rendering phases, allowing batc
 
 ## Render stages
 
-@'Stride.Rendering.RenderStage's select the [effect](../effects-and-shaders/index.md) and [pipeline state](../low-level-api/pipeline-state.md) per object, and define the output of a render pass.
+@'Stride.Rendering.RenderStage's select the [effect](../../shaders/index.md) and [pipeline state](../low-level-api/pipeline-state.md) per object, and define the output of a render pass.
 
 For more information, see [Render stages](render-stages.md).
 

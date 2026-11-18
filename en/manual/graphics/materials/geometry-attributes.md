@@ -127,4 +127,4 @@ If you have local reflections enabled, the scene is reflected in materials with 
 * [Material layers](material-layers.md)
 * [Material slots](material-slots.md)
 * [Materials for developers](materials-for-developers.md)
-* [Material shaders](../effects-and-shaders/types-of-shader/material-shaders/index.md)
+* [Material shaders](../../shaders/types-of-shader/material-shaders/index.md)

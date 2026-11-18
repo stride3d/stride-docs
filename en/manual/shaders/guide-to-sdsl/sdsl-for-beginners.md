@@ -20,7 +20,7 @@ TODO: VISUALIZATION / DRAWING
 
 You can write shaders in any text editor of your choosing, but we recommend that you use one of the supported IDEs (applications for writing code) and take the time to properly set them up by installing the **Stride Extension**.
 
-For more information, visit [Stride Extension](../../../get-started/visual-studio-extension.md).
+For more information, visit [Stride Extension](../../get-started/visual-studio-extension.md).
 
 ## Creatng a shader
 
@@ -147,6 +147,6 @@ You can also explore other pages in this manual to learn more about other featur
 * [Streams](../shading-language/streams.md)
 * [Inheritance](../shading-language/inheritance.md)
 
-If you still don't understand how shaders work, consider exploring other resources online, like those listed in our [community resources](../../../../community-resources/shaders.md).
+If you still don't understand how shaders work, consider exploring other resources online, like those listed in our [community resources](../../../community-resources/shaders.md).
 
 You can also ask for help on our [Discord server](https://discord.gg/f6aerfE).

@@ -95,17 +95,17 @@ Our recommended workflow is:
 
 1. Execute the app on Windows. This creates the shader permutations.
 
-    ![New effects](../../graphics/effects-and-shaders/media/new-effects-to-import.png)
+    ![New effects](../../shaders/media/new-effects-to-import.png)
 
 2. Import the new shaders in Game Studio. This generates an effect log.
 
-    ![Effect log](../../graphics/effects-and-shaders/media/effect-log.png)
+    ![Effect log](../../shaders/media/effect-log.png)
 
 3. Save and run the game on iOS.
 
-Ideally, this creates all the shader permutations remotely, so you don't need to convert them on the device. However, new permutations might still occur due to differences such as supported screen resolutions. For more information, including information about how to compile shaders remotely on iOS, see [Compile shaders](../../graphics/effects-and-shaders/compile-shaders.md).
+Ideally, this creates all the shader permutations remotely, so you don't need to convert them on the device. However, new permutations might still occur due to differences such as supported screen resolutions. For more information, including information about how to compile shaders remotely on iOS, see [Compile shaders](../../shaders/compile-shaders.md).
 
 ## See also
 
 * [iOs in the Xamarin documentation](https://developer.xamarin.com/guides/ios/)
-* [Compile shaders](../../graphics/effects-and-shaders/compile-shaders.md)
+* [Compile shaders](../../shaders/compile-shaders.md)

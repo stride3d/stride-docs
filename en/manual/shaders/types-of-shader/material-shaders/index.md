@@ -29,7 +29,7 @@ shader MaterialSurfaceShadingDiffuseLambert<bool TIsEnergyConservative> : IMater
 
 ## Types of material shaders
 
-Every [attribute](../../../materials/material-attributes.md) in a material has it's own shader type from which you can inherit:
+Every [attribute](../../../graphics/materials/material-attributes.md) in a material has it's own shader type from which you can inherit:
 
 | Geometry attribute | Shader base | C# interface | Example |
 | :-- | :-- | :-- |

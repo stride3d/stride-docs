@@ -287,52 +287,6 @@ items:
             href: graphics/graphics-compositor/render-textures.md
           - name: Render group and masks
             href: graphics/graphics-compositor/render-groups-and-masks.md
-      - name: Shaders
-        href: graphics/effects-and-shaders/index.md
-        items:
-          - name: What are shaders?
-            href: graphics/effects-and-shaders/what-are-shaders.md
-          - name: Create a shader
-            href: graphics/effects-and-shaders/create-a-shader.md
-          - name: Guide to SDSL
-            href: graphics/effects-and-shaders/guide-to-sdsl/index.md
-            items:
-              - name: SDSL for beginners
-                href: graphics/effects-and-shaders/guide-to-sdsl/sdsl-for-beginners.md
-              - name: SDSL for HLSL users
-                href: graphics/effects-and-shaders/guide-to-sdsl/sdsl-for-hlsl-users.md
-          - name: Types of shader
-            href: graphics/effects-and-shaders/types-of-shader/index.md
-            items:
-              - name: Compute color
-                href: graphics/effects-and-shaders/types-of-shader/compute-color.md
-              - name: Color transform
-                href: graphics/effects-and-shaders/types-of-shader/color-transform.md
-              - name: Compute shader
-                href: graphics/effects-and-shaders/types-of-shader/compute-shader.md
-              - name: Material shaders
-                href: graphics/effects-and-shaders/types-of-shader/material-shaders/index.md
-          - name: Shading language
-            href: graphics/effects-and-shaders/shading-language/index.md
-            items:
-              - name: Composition
-                href: graphics/effects-and-shaders/shading-language/composition.md
-              - name: Semantics
-                href: graphics/effects-and-shaders/shading-language/semantics.md
-              - name: Shader stages
-                href: graphics/effects-and-shaders/shading-language/shader-stages.md
-              - name: Streams
-                href: graphics/effects-and-shaders/shading-language/streams.md
-              - name: Templates
-                href: graphics/effects-and-shaders/shading-language/templates.md
-              - name: Variables
-                href: graphics/effects-and-shaders/shading-language/variables.md
-          - name: Use a shader
-            href: graphics/effects-and-shaders/use-a-shader.md
-          - name: Compile shaders
-            href: graphics/effects-and-shaders/compile-shaders.md
-          - name: Effects (.sdfx)
-            href: graphics/effects-and-shaders/effects/index.md
       - name: Low-level API
         href: graphics/low-level-api/index.md
         items:
@@ -608,6 +562,53 @@ items:
         href: scripts/gizmos.md
       - name: Create Custom Assets
         href: scripts/custom-assets.md
+
+  - name: Shaders
+    href: shaders/index.md
+    items:
+      - name: What are shaders?
+        href: shaders/what-are-shaders.md
+      - name: Create a shader
+        href: shaders/create-a-shader.md
+      - name: Guide to SDSL
+        href: shaders/guide-to-sdsl/index.md
+        items:
+          - name: SDSL for beginners
+            href: shaders/guide-to-sdsl/sdsl-for-beginners.md
+          - name: SDSL for HLSL users
+            href: shaders/guide-to-sdsl/sdsl-for-hlsl-users.md
+      - name: Types of shader
+        href: shaders/types-of-shader/index.md
+        items:
+          - name: Compute color
+            href: shaders/types-of-shader/compute-color.md
+          - name: Color transform
+            href: shaders/types-of-shader/color-transform.md
+          - name: Compute shader
+            href: shaders/types-of-shader/compute-shader.md
+          - name: Material shaders
+            href: shaders/types-of-shader/material-shaders/index.md
+      - name: Shading language
+        href: shaders/shading-language/index.md
+        items:
+          - name: Composition
+            href: shaders/shading-language/composition.md
+          - name: Semantics
+            href: shaders/shading-language/semantics.md
+          - name: Shader stages
+            href: shaders/shading-language/shader-stages.md
+          - name: Streams
+            href: shaders/shading-language/streams.md
+          - name: Templates
+            href: shaders/shading-language/templates.md
+          - name: Variables
+            href: shaders/shading-language/variables.md
+      - name: Use a shader
+        href: shaders/use-a-shader.md
+      - name: Compile shaders
+        href: shaders/compile-shaders.md
+      - name: Effects (.sdfx)
+        href: shaders/effects/index.md
 
   - name: Sprites
     href: sprites/index.md

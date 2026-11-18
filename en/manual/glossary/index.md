@@ -82,7 +82,7 @@
 - [Camera](../graphics/cameras/index.md): Captures the scene from a perspective or orthographic view.
 - [Camera slot](../graphics/cameras/camera-slots.md): Binds scene cameras to the graphics compositor.
 - [Debug renderers](../graphics/graphics-compositor/debug-renderers.md): On-screen debug drawings (lines, shapes, labels).
-- [Effects and shaders](../graphics/effects-and-shaders/index.md): Shader authoring and customization for rendering.
+- [Effects and shaders](../shaders/index.md): Shader authoring and customization for rendering.
 - [Graphics compositor](../graphics/graphics-compositor/index.md): Organizes how scenes are rendered, including cameras, render targets, and post effects.
 - [Material](../graphics/materials/index.md): Defines how a surface is shaded (color, textures, and lighting response).
 - [Mesh](../graphics/low-level-api/draw-vertices.md): Geometry to render, defined by vertex and optionally index buffers.

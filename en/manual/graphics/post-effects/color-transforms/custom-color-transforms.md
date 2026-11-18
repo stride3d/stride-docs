@@ -14,17 +14,17 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## 1. Create a shader
 
-1. Make sure you have the [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from SDSL ([Stride shading language](../../effects-and-shaders/shading-language/index.md)) to `.cs` files.
+1. Make sure you have the [Stride Visual Studio extension](../../../get-started/visual-studio-extension.md) installed. This is necessary to convert the shader files from SDSL ([Stride shading language](../../../shaders/shading-language/index.md)) to `.cs` files.
 
 2. In Game Studio, in the toolbar, click ![Open in IDE](../../../get-started/media/launch-your-game-IDE-icon.webp) (**Open in IDE**) to open your project in Visual Studio.
 
 3. In the Visual Studio **Solution Explorer**, right-click the project (eg *MyGame.Game*) and select **New item**.
 
-    ![New item](../../effects-and-shaders/media/new-item.png)
+    ![New item](../../../shaders/media/new-item.png)
 
 4. Select **Class**.
 
-    ![Select class](../../effects-and-shaders/media/select-class.png)
+    ![Select class](../../../shaders/media/select-class.png)
 
 5. In the **Name** field, specify a name with the extension **.sdsl** (eg *MyColorTransformShader.sdsl*), and click **Add**.
 
@@ -36,7 +36,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 6. Open the `.sdsl` file, remove the existing lines, and write your shader.
 
-    Shaders are written in Stride Shading Language (SDSL), which is based on HLSL. For more information, see [Shading language](../../effects-and-shaders/shading-language/index.md).
+    Shaders are written in Stride Shading Language (SDSL), which is based on HLSL. For more information, see [Shading language](../../../shaders/shading-language/index.md).
 
     For example, the shader below multiplies the image color by the `MyColor` parameter:
 
@@ -59,7 +59,7 @@ To create a custom color transform, you need to write two files: an effect shade
 
 1. In the Visual Studio **Solution Explorer**, right-click the project (eg *MyGame.Game*) and select **Add > New item**.
 
-    ![New item](../../effects-and-shaders/media/new-item.png)
+    ![New item](../../../shaders/media/new-item.png)
 
 2. Select **Class**, specify a **name** (eg *MyColorTransform.cs*), and click **Add**.
 
@@ -149,8 +149,8 @@ To create a custom color transform, you need to write two files: an effect shade
 
 ## See also
 
-* [Shading language](../../effects-and-shaders/shading-language/index.md)
-* [Color transform shaders](../../effects-and-shaders/types-of-shader/color-transform.md)
+* [Shading language](../../../shaders/shading-language/index.md)
+* [Color transform shaders](../../../shaders/types-of-shader/color-transform.md)
 * [Graphics compositor](../../graphics-compositor/index.md)
 * [Post effects](../index.md)
 * [Color transforms](index.md)

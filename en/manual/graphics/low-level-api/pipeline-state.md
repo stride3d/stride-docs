@@ -155,7 +155,7 @@ The pipeline state also includes the shaders you want to use for drawing.
 To bind an @'Stride.Graphics.Effect' to the pipeline, set the @'Stride.Graphics.PipelineStateDescription.EffectBytecode'
 and @'Stride.Graphics.PipelineStateDescription.RootSignature' properties of the @'Stride.Graphics.PipelineStateDescription' to the matching values of the effect.
 
-An @'Stride.Shaders.EffectBytecode' contains the actual shader programs. For more information, see [Effects and Shaders](../effects-and-shaders/index.md).
+An @'Stride.Shaders.EffectBytecode' contains the actual shader programs. For more information, see [Effects and Shaders](../../shaders/index.md).
 
 The @'Stride.Graphics.RootSignature' describes the number and kind of resources expected by the effect. The next chapter covers how to [bind resources](resources.md) to the pipeline.
 
