@@ -10,3 +10,7 @@ Here are the key benefits of SDSL over HLSL:
 * **Modularity** - instead of creating large and complex shaders that do many things, you can create small easily-manageble bits and combine them.
 * **Reusability** - you are able to reuse code between shaders, just like you could with C# scripts.
 * **Smaller size** - SDSL removes a lot of the boilerplate that is typically required when writing HLSL code.
+
+## New to SDSL?
+
+We recommend we check out one of the pages under [Guide to SDSL](../guide-to-sdsl/index.md) in order to get started.

@@ -588,27 +588,33 @@ items:
             href: shaders/types-of-shader/compute-shader.md
           - name: Material shaders
             href: shaders/types-of-shader/material-shaders/index.md
-      - name: Shading language
+      - name: Shading language (SDSL)
         href: shaders/shading-language/index.md
         items:
           - name: Composition
             href: shaders/shading-language/composition.md
+          - name: Inheritance
+            href: shaders/shading-language/inheritance.md
+          - name: Namespaces
+            href: shaders/shading-language/namespaces.md
           - name: Semantics
             href: shaders/shading-language/semantics.md
           - name: Shader stages
             href: shaders/shading-language/shader-stages.md
+          - name: Shaders and modules
+            href: shaders/shading-language/shaders-and-modules.md
           - name: Streams
             href: shaders/shading-language/streams.md
           - name: Templates
             href: shaders/shading-language/templates.md
           - name: Variables
             href: shaders/shading-language/variables.md
+      - name: Effect language (SDFX)
+        href: shaders/effect-language/index.md
       - name: Use a shader
         href: shaders/use-a-shader.md
       - name: Compile shaders
         href: shaders/compile-shaders.md
-      - name: Effects (.sdfx)
-        href: shaders/effects/index.md
 
   - name: Sprites
     href: sprites/index.md

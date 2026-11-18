@@ -24,8 +24,14 @@ shader MyShader<float4 colorA, float4 colorB, float multiplier> : ComputeColor, 
 
 ## What are effects?
 
-**Effects** are a way of creating new shaders from mixing existing ones. You can think of **shaders** as small **building blocks** and an **effect** as the thing that **joins them together**.
+An **effect** is a complete package of multiple **shaders** that the engine can more easily work with. While shaders can use other shader files through inheritance, compositions and importing, effects are singular and independent.
 
 TODO: VISUALIZATION
 
-Effects aren't shaders by themselves, they only specify how to generate a new shader.
+You can create `.sdfx` files to describe how to mix together multiple shaders into an effect based on specified parameters. Think of it as using small building blocks (shaders) to construct something bigger (an effect).
+
+> [!NOTE]
+> `.sdfx` files aren't shader code by themselves. They are ran on the CPU in order to construct effects which then get executed on the GPU.
+
+> [!TIP]
+> You don't need to create a `.sdfx` file to create an effect. In many cases, Stride will do it for you automatically.
