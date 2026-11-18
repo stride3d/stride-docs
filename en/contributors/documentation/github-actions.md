@@ -122,13 +122,17 @@ Both Azure workflows deploy to the same Azure Web App, `stride-doc`. The **slot*
 | --- | --- | --- |
 | `app-name` | `stride-doc` | `stride-doc` |
 | `slot-name` | `Production` | `staging` |
-| GitHub environment | `Production` | `Staging` |
-| Publish profile | Secret `AZURE_PUBLISH_PROFILE` of the `Production` environment | Secret `AZURE_PUBLISH_PROFILE` of the `Staging` environment |
+| GitHub environment | `Production` | `Staging` from `master` and `master-*`, `Staging-branch` from other branches |
+| Publish profile | Secret `AZURE_PUBLISH_PROFILE` of the `Production` environment | Secret `AZURE_PUBLISH_PROFILE` of the `Staging` and `Staging-branch` environments (the same staging slot profile) |
 | URL | [doc.stride3d.net](https://doc.stride3d.net/) | [stride-doc-staging.azurewebsites.net](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) |
 
 For production, both also purge the cache of [Azure Front Door](deployment-azure.md#azure-front-door-cache), which serves `doc.stride3d.net`. They sign in to Azure with the variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID` and `AZURE_SUBSCRIPTION_ID` of the `Production` environment, without any secret.
 
-Each publish profile is a secret of its environment, so only jobs running in that environment can use it. Both environments have the team `stride-website-publishers` as required reviewers: a deployment waits until one of its members approves it (**Review deployments** on the run page), even when they started it themselves. The `Production` environment only accepts the branches `master` and `master-*`.
+Each publish profile is a secret of its environment, so only jobs running in that environment can use it:
+
+- `Production` only accepts the branches `master` and `master-*`, and has the team `stride-website-publishers` as required reviewers: a deployment waits until one of its members approves it (**Review deployments** on the run page), even when they started it themselves
+- `Staging` only accepts the branches `master` and `master-*`, without approval: what reached them, through a pull request or an admin, is deployed to staging at once
+- `Staging-branch` accepts any branch, to test a branch on staging, with the same required reviewers as `Production`: a branch can change the workflow it runs, so only an approval keeps the staging publish profile from it
 
 Both use [Azure Web Apps Deploy v3](https://github.com/Azure/webapps-deploy) with a `target-path`, which deploys only into that path of the site. Nothing outside of it is removed, so the other versions and the root files stay untouched.
 

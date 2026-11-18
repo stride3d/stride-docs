@@ -51,7 +51,8 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: ${{ inputs.slot == 'production' && 'Production' || 'Staging' }}
+      # Staging-branch requires an approval: any branch can deploy to staging through it, Staging only allows master and master-*
+      name: ${{ inputs.slot == 'production' && 'Production' || (github.ref_name == 'master' || startsWith(github.ref_name, 'master-')) && 'Staging' || 'Staging-branch' }}
 
     steps:
     - name: Check branch
