@@ -526,7 +526,7 @@ items:
             href: files-and-folders/external-packages/using-nuget-packages.md
           - name: Publish a NuGet package
             href: files-and-folders/external-packages/publish-a-nuget-package.md
-      - name: Game Settings
+      - name: Game settings
         href: files-and-folders/game-settings/index.md
         items:
           - name: Basic properties

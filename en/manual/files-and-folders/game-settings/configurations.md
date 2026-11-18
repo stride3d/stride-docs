@@ -54,7 +54,7 @@ For more information about audio, visit [Audio](../../audio/index.md).
 
 | Property | Description |
 | :-- | :-- |
-| Simulations | A list of simulations used by the physics engine. For more information about simulations, visit [Simulation](../../physics/simulation.md). |
+| Bepu Simulations | A list of simulations used by the physics engine. For more information about simulations, visit [Simulation](../../physics/simulation.md). |
 
 For more information about Bepu physics, visit [Physics](../../physics/index.md).
 
@@ -85,6 +85,14 @@ The **editor** configuration controls how Game Studio displays entities in the *
 | Build settings | Advanced settings for dynamically-generated navigation meshes. |
 
 For more details, see [Dynamic navigation](../../navigation/dynamic-navigation.md).
+
+#### Input
+
+TODO: IMAGE
+
+| Property | Description |
+| :-- | :-- |
+| UI focus withholds input | When enabled, if an input from a device gets captured by the UI (e.g. by a text field), it will appear as it wasn't pressed for scripts and systems. |
 
 #### Navigation group properties
 
@@ -131,7 +139,7 @@ For more details, see [Navigation](../../navigation/index.md).
 
 | Property | Description |
 | :-- | :-- |
-| Streaming | Enable streaming. |
+| Streaming toggle | Whether streaming is enabled. |
 | Update interval | How frequently Stride updates the streaming. Smaller intervals mean the streaming system reacts faster, but use more CPU and cause more memory fluctuations. |
 | Max resources per update | The maximum number of textures loaded or unloaded per streaming update. Higher numbers reduce pop-in but might slow down the framerate. |
 | Resource timeout (ms)| How long resources stay loaded after they're no longer used (when the **memory budget** is exceeded). |
@@ -141,6 +149,12 @@ For more details, see [Navigation](../../navigation/index.md).
 > Currently, only textures can be streamed.
 
 For more details, see [Streaming](../../graphics/textures/streaming.md).
+
+### Subsurface scattering settings
+
+TODO: IMAGE
+
+This configuration holds settings used by the subsurface scattering blur.
 
 ### Textures
 
