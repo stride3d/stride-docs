@@ -68,17 +68,17 @@ Material shaders need to be wrapped in a C# class in order to become usable in t
 
 2. If your shader uses material-specific [streams](../../shading-language/streams.md), you will have to define them by inheriting from [`IMaterialStreamProvider`](xref:Stride.Rendering.Materials.IMaterialStreamProvider).
 
-```csharp
-public class Example : MaterialFeature, IMaterialDiffuseFeature, IMaterialStreamProvider
-{
-    public static readonly MaterialStreamDescriptor MyStream = new("MyName (can be anything)", "NameOfStream (e.g. matDiffuse)", MaterialKeys.NameOfFeatureValue.PropertyType);
-
-    public IEnumerable<MaterialStreamDescriptor> GetStreams()
+    ```csharp
+    public class Example : MaterialFeature, IMaterialDiffuseFeature, IMaterialStreamProvider
     {
-        yield return MyStream;
+        public static readonly MaterialStreamDescriptor MyStream = new("MyName (can be anything)", "NameOfStream (e.g. matDiffuse)", MaterialKeys.NameOfFeatureValue.PropertyType);
+    
+        public IEnumerable<MaterialStreamDescriptor> GetStreams()
+        {
+            yield return MyStream;
+        }
     }
-}
-```
+    ```
 
 3. Implement the [`GenerateShader`](xref:Stride.Rendering.Materials.MaterialFeature.GenerateShader*) method.
     

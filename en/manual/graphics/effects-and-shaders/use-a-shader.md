@@ -31,7 +31,7 @@ For more information on working with compute color shaders, see [Compute color](
 
 You can create your own material features and use them in an attribute slot of a material. For example: a custom diffuse shader.
 
-Custom material feature shaders need to be wrapped in a C# class before becoming usable in Stride and Game Studio. For more information, visit [Material shaders](types-of-shaders/material-shaders/index.md).
+Custom material feature shaders need to be wrapped in a C# class before becoming usable in Stride and Game Studio. For more information, visit [Material shaders](types-of-shader/material-shaders/index.md).
 
 1. Select your material
 

@@ -47,4 +47,4 @@ You can open your project in Game Studio from **Visual Studio** by going to **Ex
 > This feature is currently exclusive to **Visual Studio**.
 
 ## See also
-* [Custom shaders](../graphics/effects-and-shaders/custom-shaders.md)
+* [Shaders](../graphics/effects-and-shaders/index.md)

@@ -150,7 +150,7 @@ To create a custom color transform, you need to write two files: an effect shade
 ## See also
 
 * [Shading language](../../effects-and-shaders/shading-language/index.md)
-* [Custom shaders](../../effects-and-shaders/custom-shaders.md)
+* [Color transform shaders](../../effects-and-shaders/types-of-shader/color-transform.md)
 * [Graphics compositor](../../graphics-compositor/index.md)
 * [Post effects](../index.md)
 * [Color transforms](index.md)
