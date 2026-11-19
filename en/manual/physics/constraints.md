@@ -1,12 +1,10 @@
 # Constraints
 
-> [!WARNING]
-> This page is WIP
-
-[!INCLUDE [stride-studio-note](../../includes/under-construction-note.md)]
+[!INCLUDE [under-construction-note](../../includes/under-construction-note.md)]
 
 <span class="badge text-bg-primary">Advanced</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 **Constraints** restrict bodies to certain movement patterns. For example, a realistic knee joint can only move along one axis and can't bend forwards.
 

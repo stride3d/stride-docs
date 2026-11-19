@@ -2,8 +2,7 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Programmer</span>
-
-[!INCLUDE [bullet-deprecation](../../includes/bullet-physics-deprecation.md)]
+<span class="badge text-bg-secondary">Bullet</span>
 
 In Stride, there is no default smoothing applied to entities that are attached to physics entities. This can cause noticeable jitter, especially if the camera is attached to a character component.
 

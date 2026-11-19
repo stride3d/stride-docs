@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 A **sweepcast** is similar to a raycast, with the distinction of using shapes instead of a ray. It casts a shape in a direction and returns what it collided with. In more basic terms, it's like **launching an invisible object and seeing what it hits**.
 
