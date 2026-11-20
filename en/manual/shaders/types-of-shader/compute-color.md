@@ -80,7 +80,7 @@ Currently variables cannot be changed in Game Studio. They can only be changed d
 
 In order for a variable to become available and modifiable in code, it has to:
 1. Be wrapped in `cbuffer PerMaterial`.
-2. Have the `stage` modifier.
+2. Have the `module` modifier.
 
 ```sdsl
 shader Example : ComputeColor
@@ -88,7 +88,7 @@ shader Example : ComputeColor
     cbuffer PerMaterial
     {
         // This can be modified at runtime via code
-        stage float Intensity;
+        module float Intensity;
     }
 
     override float4 Compute()

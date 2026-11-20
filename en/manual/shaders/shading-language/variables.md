@@ -96,6 +96,18 @@ var example3 = float4(1.0);
 > float4 variable = 1;
 > ```
 
+## Arrays
+
+Arrays in SDSL can be defined like so:
+
+```sdsl
+int Example[];
+```
+
+NOTE FOR XEN: remove the following if it's wrong
+
+Arrays don't have a set limit. You can freely set and get values for any index without getting any errors.
+
 ## Shader-scope variables
 
 Similarly to C#, you can define variables inside a shader or module, which can then be read by different methods and other shaders/modules. Keep in mind that **variables can only be changed from C# code.**

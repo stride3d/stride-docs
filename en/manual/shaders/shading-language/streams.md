@@ -7,12 +7,12 @@ shader Example : ShaderBase
 {
     stream float2 myValue;
 
-    override stage void VSMain()
+    override module void VSMain()
     {
         streams.myValue = 0.5;
     }
 
-    override stage void PSMain()
+    override module void PSMain()
     {
         float4 processedValue = streams.myValue;
     }
