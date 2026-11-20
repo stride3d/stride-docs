@@ -575,6 +575,8 @@ items:
         items:
           - name: SDSL for beginners
             href: shaders/guide-to-sdsl/sdsl-for-beginners.md
+          - name: SDSL for C# users
+            href: shaders/guide-to-sdsl/sdsl-for-csharp-users.md
           - name: SDSL for HLSL users
             href: shaders/guide-to-sdsl/sdsl-for-hlsl-users.md
       - name: Types of shader
