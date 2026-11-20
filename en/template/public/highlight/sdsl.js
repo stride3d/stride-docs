@@ -60,7 +60,7 @@ export default function(hljs) {
 
                 // Taken from https://github.com/stride3d/stride/blob/master/sources/shaders/Stride.Shaders.Parsers/Parsing/SDSL/Parsers/LiteralParsers/Reserved.cs
                 ' asm asm_fragment bool break case cbuffer centroid class column_major compile compile_fragment compose const continue default discard do double dword else export extern false float for foreach fxgroup groupshared half if in inline inout int interface line lineadj linear matrix min16float min10float min16int min12int min16uint namespace nointerpolation noperspective out packoffset pass pixelfragment point precise return register rgroup row_major sample sampler shader shared snorm stateblock stateblock_state static stream string struct switch tbuffer technique technique10 technique11 texture true typedef triangle triangleadj uint uniform unorm unsigned var vector vertexfragment void volatile while' +
-                ' streams stage override abstract',
+                ' streams override abstract module import extend pipeline patch replace enum',
 
             type:
                 // Taken from https://github.com/stride3d/stride/blob/master/sources/shaders/Stride.Shaders.Parsers/Parsing/SDSL/Parsers/LiteralParsers/Reserved.cs
