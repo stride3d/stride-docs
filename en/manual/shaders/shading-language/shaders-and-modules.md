@@ -6,7 +6,7 @@ The `shader` and `module` keywords are essential when trying to write SDSL code.
 
 ## Keyword cheatsheet
 
-* `shader` - defines a shader (which can have multiple instances of the same type)
+* `shader` - defines a shader (which can have multiple instances of itself)
 * `module` - defines a module (which is always singular in the entire effect)
 
 ## Difference between shaders and modules

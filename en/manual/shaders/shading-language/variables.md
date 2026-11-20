@@ -1,6 +1,8 @@
 # Variables
 
-Similarly to C# scripts, shaders can also declare their own variables in order to store data and share it with other shaders and C# code.
+Similarly to C# scripts, shaders and modules can also declare their own variables in order to store data and share it with other shaders and C# code.
+
+NOTE FOR XEN: is there a word that encompasses modules and shaders (and optionally effects) into one, or could modules be considered shaders? If yes, then change all mentions of shaders and modules to that one word.
 
 ## Built-in types
 
@@ -96,20 +98,20 @@ var example3 = float4(1.0);
 
 ## Shader-scope variables
 
-Similarly to C#, you can define variables inside a shader, which can then be shared between methods and other shaders. However by default, **variables can only be changed from C# code.**
+Similarly to C#, you can define variables inside a shader or module, which can then be read by different methods and other shaders/modules. Keep in mind that **variables can only be changed from C# code.**
 
 ```sdsl
 shader Example : ShaderBase
 {
-    // Shaders can read the value, but not set it
+    // Value can be read by shader code, but not set
     float myVariable;
 };
 ```
 
 > [!NOTE]
-> Depending on the context, variables might need to be differently defined to be modifiable via C#. For more infofmration, find the script which you are trying to write in [Types of shaders](../types-of-shader/index.md).
+> Depending on the context, variables might need to be **differently defined to be modifiable via C#.** For more infofmration, find the script which you are trying to write in [Types of shaders](../types-of-shader/index.md).
 
-The reason why shaders cannot modify normal variables, is because they are executed on multiple threads at once for different values (e.g. different texture positions). Having them fight over which one gets to set the value it wants is probably not what you want your shader to do.
+The reason why shaders cannot modify normal variables, is because they are executed on multiple threads at once for different data (e.g. different texture positions). Making multiple threads fight over which one gets to set the value it wants is probably not what you want your shader to do.
 
 TODO: VISUALIZATION
 
@@ -120,12 +122,12 @@ You can use the `stream` modifier to make a variable streamable. Streamable vari
 ```sdsl
 shader Example : ComputeColor
 {
-    stream float myVariable;
+    stream float MyVariable;
 
     override float4 Compute()
     {
-        streams.myVariable = 1;
-        return streams.myVariable
+        streams.MyVariable = 1;
+        return streams.MyVariable
     }
 };
 ```
@@ -136,7 +138,7 @@ For more information, visit [Streams](streams.md).
 
 Variables defined outside of methods are labeled as **shader constnats**. Despite what their name might suggest, it is possible to change their values, but only through C# scripts.
 
-Shader constnats are put into **buffers**. A single shader can define multiple buffers, that can be used differently depending on the context (e.g. [compute colors](../types-of-shader/compute-color.md) require variables to be stored in a `PerMaterial` buffer to be modifiable through code). If no buffer is specified, the default one is used.
+Shader constants are put into **buffers**. A single shader can define multiple buffers, that can be used differently depending on the context (e.g. [compute colors](../types-of-shader/compute-color.md) require variables to be stored in a `PerMaterial` buffer to be modifiable through code). If no buffer is specified, the default one is used.
 
 There are two types of buffers:
 

@@ -64,7 +64,6 @@ Right away, you should be able to use your shader in Game Studio to preview how 
 
     TODO: IMAGE
 
-
 4. Write the name of your shader in the field.
 
     TODO: IMAGE
@@ -104,11 +103,12 @@ You can try and change some of those `1` values and see the material in your gam
 
 TODO: IMAGE
 
-Now, if you remember from the example, the shader is meant to return a `float4` where the first value is set to the X position of the pixel being displayed. We can get that information by inheriting from another shader called `Texturing`. It provides information related to textures and coordinates, which is exactly what we need for this shader.
+Now, if you remember from the example, the shader is meant to return a `float4` where the first value is set to the X position of the pixel being displayed. We can get that information by importing a module called `Texturing`. It provides information related to textures and coordinates, which is exactly what we need for this shader.
 
 ```sdsl
-shader NameOfFile : ComputeColor, Texturing
+shader NameOfFile : ComputeColor
 {
+    import Texturing;
     ...
 }
 ```
@@ -118,8 +118,10 @@ We can now access the pixel coordinate from `streams.TexCoord`. It contains a `f
 TODO: IMAGE
 
 ```sdsl
-shader NameOfFile : ComputeColor, Texturing
+shader NameOfFile : ComputeColor
 {
+    import Texturing;
+
     override float4 Compute()
     {
         return float4(streams.TexCoord.x, 0, 0, 1);

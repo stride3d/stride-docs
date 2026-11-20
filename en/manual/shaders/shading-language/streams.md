@@ -21,8 +21,8 @@ shader Example : ShaderBase
 
 ## Keyword cheatsheet
 
-* `stream` - used to declare streams that are available in the `streams` keyword.
-* `streams` - used to get and set declared streams.
+* [`stream`](#declaring-a-stream) - used to declare streams that are available in the `streams` keyword.
+* [`streams`](#using-streams) - used to get and set declared streams.
 
 ## Differences between variables and streams
 
@@ -56,6 +56,6 @@ float4 Compute()
 
 ## Streams between stages
 
-Values from streams can be shared between different [stages](shader-stages.md) that share different data (e.g. vertex uses vertices, shading uses pixels). The reason why this is possible is because SDSL automatically interpolates them, ensuring your methods work correctly.
+Values from streams can be shared between different [stages](shader-stages.md) that share different data (e.g. vertex uses vertices, shading uses pixels). The reason why this is possible is because SDSL automatically interpolates them, ensuring your methods don't run into problems.
 
 TODO: VISUALIZATION

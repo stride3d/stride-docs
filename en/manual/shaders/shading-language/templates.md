@@ -38,26 +38,42 @@ On top of that, there are other differences:
 ## Example
 
 ```sdsl
-shader TemplateShader<float speed, Texture2D myTexture, SamplerState mySampler, Semantic mySemantic, LinkType myLink>
+shader TemplateShader<float Speed, Semantic MySemantic, LinkType MyLink>
 {
     [Color]
-    [Link(myLink)]
-    float4 myColor;
+    // NOTE FOR XEN: should quotes be used here?
+    [Link("MyLink")]
+    float4 MyColor;
     
-    stream float2 texcoord : mySemantic;
+    stream float2 Texcoord : MySemantic;
     
     float4 GetValue()
     {
-        return speed * myColor * myTexture.Sample(mySampler, streams.texcoord);
+        return Speed * MyColor * float4(streams.Texcoord, 0, 1);
     }
+};
+```
+
+Shaders can also pass template parameters to parent shaders that they inherit and imported modules:
+
+```sdsl
+shader Example<float Speed, LinkType TextureLink, LinkType SamplerLink> : ParentShader<speed>
+{
+    import DynamicTexture<TextureLink, PerMaterial>;
+    import DynamicSampler<SamplerLink, PerMaterial>;
+
+    ...
 };
 ```
 
 This shader could then be used in a `.sdfx` file like so:
 
 ```sdsl
-effect Example
+// NOTE FOR XEN: change this example to correctly use links in mixin
+effect ExampleEffect
 {
-    mixin TemplateShader<1.0f, Texturing.Texture0, Texturing.Sampler0, TEXCOORD0, MyColorLink>
-}
+    mixin Example<1.0f, Texturing.Texture0, Texturing.Sampler0>;
+
+    ...
+};
 ```

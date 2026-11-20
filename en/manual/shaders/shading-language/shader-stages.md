@@ -4,7 +4,7 @@ A shader consists of multiple **stages** that compute values for different types
 
 ## Rendering stages
 
-The rendering process goes through multiple stages.
+The rendering process goes through multiple stages:
 
 1. Vertex stage - processes individual vertices
 2. Hull stage - processes patches of vertices and further sub-divides them
@@ -36,5 +36,30 @@ shader Example : ComputeShaderBase
         uint i = streams.ThreadGroupIndex;
         data[i] = sin(data[i]);
     }
-}
+};
 ```
+
+## Sharing data between stages
+
+You can pass data between stages using [streams](streams.md).
+
+```sdsl
+shader Example : ShaderBase
+{
+    override module void VSMain()
+    {
+        streams.WorldPos = mul(streams.Position, World).xyz;
+    }
+
+    override module void PSMain()
+    {
+        float3 wp = streams.WorldPos;
+        
+        ...
+    }
+};
+```
+
+Values from streams get automatically interpolated when they are accessed form other stages that work on different sets of data.
+
+TODO: VISUALIZATION

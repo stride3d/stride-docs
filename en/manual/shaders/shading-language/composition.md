@@ -65,4 +65,4 @@ If you are using a compute color shader, you can set its compositions in the pro
 
 ## Setting compositions in code
 
-TODO: FIGURE THAT OUT
+TODO: FIGURE THAT OUT AND COVER ALL WAYS

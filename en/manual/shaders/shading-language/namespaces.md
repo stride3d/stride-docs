@@ -20,7 +20,7 @@ namespace MyGame.Player
             streams.matDiffuse = diamondTexture;
             streams.matColorBase = diamondTexture + noise * 0.04;
         }
-    }
+    };
 }
 ```
 
@@ -58,7 +58,7 @@ namespace MyGame.Example;
 > shader EnemyEyeEmissionTexture : ComputeColor
 > {
 >     ...
-> }
+> };
 > ```
 
 ## Using code from other namespaces
@@ -84,7 +84,7 @@ shader Example : ComputeColor
 
         return (val1 + val2) / 2;
     }
-}
+};
 ```
 
 ## Namespaces in C# and Game Studio

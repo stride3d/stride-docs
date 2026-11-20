@@ -11,12 +11,9 @@ Shaders are ordinary text files with the `.sdsl` extension. They are stored in t
 
     TODO: IMAGE
 
-2. Find the location where you want to create your shader. We recommend storing all shaders in `Assets/Effects`.
+2. Find the location where you want to create your shader.
 
     TODO: IMAGE
-
-    > [!IMPORTANT]
-    > Shaders need to be in the `Assets` folder.
 
 3. Create an empty file with the `.sdsl` extension.
 

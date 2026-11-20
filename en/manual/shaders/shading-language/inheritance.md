@@ -15,7 +15,7 @@ Stride provides many shaders which you can inherit from, but you can also inheri
 You can inherit another shader by adding a `:` suffix along with a name in your shader's declaration.
 
 ```sdsl
-shader Example : ComputeColor { }
+shader Example : ComputeColor { };
 ```
 
 In the above example, shader `Example` is inheriting from `ComputeColor`, granting itself access to its `Compute` method.
@@ -41,7 +41,7 @@ shader GenericColorShader
         // Returns red
         return float4(1,0,0,1);
     }
-}
+};
 
 // FavouriteColorShader.sdsl
 shader FavouriteColorShader : GenericColorShader
@@ -51,7 +51,7 @@ shader FavouriteColorShader : GenericColorShader
         // Returns green
         return float4(0,1,0,1);
     }
-}
+};
 ```
 
 If we now use the `GenericColorShader` in our game, we can expect its method `GetColor` to always return red. However, if we then switch to using `FavouriteColorShader`, the method will start returning green.
@@ -80,7 +80,7 @@ shader Example : OtherShader
 
         return (original + different) / 2;
     }
-}
+};
 ```
 
 ### Abstract
@@ -91,7 +91,7 @@ The `abstract` modifier allows you to declare a method without a body, meaning t
 shader ShaderWithAbstractMethod
 {
     abstract float4 Compute(float4 color, float time);
-}
+};
 ```
 
 The abstract method can then be implemented by a different shader that inherits it.
@@ -103,7 +103,7 @@ shader OtherShader : ShaderWithAbstractMethod
     {
         return color * time;
     }
-}
+};
 ```
 
 > [!NOTE]
