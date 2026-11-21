@@ -88,7 +88,7 @@ For more details, see [Dynamic navigation](../../navigation/dynamic-navigation.m
 
 #### Input
 
-TODO: IMAGE
+![](media/built-in-configuration-input.webp)
 
 | Property | Description |
 | :-- | :-- |
@@ -152,7 +152,7 @@ For more details, see [Streaming](../../graphics/textures/streaming.md).
 
 ### Subsurface scattering settings
 
-TODO: IMAGE
+![](media/built-in-configuration-subsurface-scattering-settings.webp)
 
 This configuration holds settings used by the subsurface scattering blur.
 
