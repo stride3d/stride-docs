@@ -150,7 +150,7 @@ For more details, see [Navigation](../../navigation/index.md).
 
 For more details, see [Streaming](../../graphics/textures/streaming.md).
 
-## Subsurface scattering settings
+### Subsurface scattering settings
 
 ![](media/built-in-configuration-subsurface-scattering-settings.webp)
 
