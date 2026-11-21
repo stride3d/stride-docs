@@ -72,6 +72,14 @@ The **editor** configuration controls how Game Studio displays entities in the *
 | Rendering mode | How **Game Studio** renders thumbnails and asset previews. |
 | Animation framerate | The framerate of animations shown in **Game Studio**. This doesn't affect animation data. |
 
+### Input
+
+![](media/built-in-configuration-input.webp)
+
+| Property | Description |
+| :-- | :-- |
+| UI focus withholds input | When enabled, if an input from a device gets captured by the UI (e.g. by a text field), it will appear as it wasn't pressed for scripts and systems. |
+
 ### Navigation
 
 ![](media/built-in-configuration-navigation.webp)
@@ -85,14 +93,6 @@ The **editor** configuration controls how Game Studio displays entities in the *
 | Build settings | Advanced settings for dynamically-generated navigation meshes. |
 
 For more details, see [Dynamic navigation](../../navigation/dynamic-navigation.md).
-
-#### Input
-
-![](media/built-in-configuration-input.webp)
-
-| Property | Description |
-| :-- | :-- |
-| UI focus withholds input | When enabled, if an input from a device gets captured by the UI (e.g. by a text field), it will appear as it wasn't pressed for scripts and systems. |
 
 #### Navigation group properties
 
@@ -150,7 +150,7 @@ For more details, see [Navigation](../../navigation/index.md).
 
 For more details, see [Streaming](../../graphics/textures/streaming.md).
 
-### Subsurface scattering settings
+## Subsurface scattering settings
 
 ![](media/built-in-configuration-subsurface-scattering-settings.webp)
 
