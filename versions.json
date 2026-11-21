@@ -3,6 +3,7 @@
   "latest": "4.4",
   "unversioned": [ "contributors", "community-resources", "release-notes" ],
   "docs": [
+    { "url": "4.5", "name": "4.5 (nightly)" },
     { "url": "4.4", "name": "4.4" },
     { "url": "4.3", "name": "4.3" },
     { "url": "4.2", "name": "4.2" },
