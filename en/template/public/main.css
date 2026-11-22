@@ -102,6 +102,22 @@ blockquote {
     }
 }
 
+/* The ID of an upgrade step (see conceptual.extension.js): first in its heading, so that "In this article" shows it, and drawn under the title */
+h3:has(> .step-id) {
+    position: relative;
+    padding-bottom: 1.6rem;
+}
+
+.step-id {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: var(--bs-font-monospace);
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--bs-secondary-color);
+}
+
 /* +/- bullet points */
 li:has(.positive)::marker {
     content: '＋ ';

@@ -1,3 +1,16 @@
+- name: Upgrade guide
+  href: ../upgrade/index.md
+  items:
+  - name: Stride 4.5
+    href: ../upgrade/4.5.md
+  - name: Stride 4.4
+    href: ../upgrade/4.4.md
+  - name: Stride 4.3
+    href: ../upgrade/4.3.md
+  - name: Stride 4.2
+    href: ../upgrade/4.2.md
+  - name: Stride 4.1
+    href: ../upgrade/4.1.md
 - name: 4.4 release notes
   href: 4.4.md
 - name: 4.3 release notes

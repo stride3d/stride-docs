@@ -375,6 +375,29 @@ function Generate-ReleaseNotesIndex {
     [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot "$releaseNotesFolder/index.md"), ($lines -join "`n") + "`n", [System.Text.UTF8Encoding]::new($false))
 }
 
+function Test-UpgradeGuide {
+    # Each upgrade step of Stride (the list Stride checks in) has a section in the page of its version, which the upgrade report
+    # links to by the step ID: Stride-4.5.0-P2 -> en/upgrade/4.5.md#stride-4.5.0-p2. Its heading starts with the ID, which
+    # en/template/conceptual.extension.js makes the anchor. A missing anchor opens the top of the page.
+    $stepList = Join-Path $PSScriptRoot "..\stride\sources\engine\Stride.Assets\StridePackageUpgrader.Steps.md"
+    if (-not (Test-Path $stepList)) {
+        Write-Warning "Not checking the upgrade guide: can't find $stepList. Make sure the stride directory is located next to stride-docs."
+        return
+    }
+
+    $missing = foreach ($line in Get-Content $stepList -Encoding UTF8) {
+        if ($line -notmatch '^\| `(Stride-(\d+)\.(\d+)\.[^`]+)` \|') { continue }
+        $id = $Matches[1]
+        $page = "en/upgrade/$($Matches[2]).$($Matches[3]).md"
+        if (-not (Test-Path $page) -or -not (Select-String -Path $page -Pattern "^### $([regex]::Escape($id)) " -CaseSensitive -Quiet)) {
+            "$id in $page"
+        }
+    }
+    if ($missing) {
+        throw "The upgrade guide has no section for these steps of Stride: $($missing -join ', '). Add one to the page of the version, with a heading that starts with the ID: ### <ID> <title>."
+    }
+}
+
 function Test-InUnversionedSection {
     param ([string]$Path)
     # i.e. contributors, contributors/index.md, or contributors/** (a glob of docfx.json)
@@ -998,6 +1021,7 @@ else {
 
 # Before the API metadata, which takes a while, so that missing release notes of the version fail the build right away
 Generate-ReleaseNotesIndex
+Test-UpgradeGuide
 
 # Generate API doc
 if ($ReuseAPI)
