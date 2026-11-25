@@ -154,6 +154,7 @@ items:
             href: game-studio/panels/references.md
           - name: Solution explorer
             href: game-studio/panels/solution-explorer.md
+<<<<<<< HEAD
       - name: Dedicated editors
         href: game-studio/dedicated-editors/index.md
         items:
@@ -174,6 +175,8 @@ items:
             href: game-studio/dedicated-editors/ui-editor/index.md
           - name: Graphics Compositor editor
             href: game-studio/dedicated-editors/graphics-compositor-editor/index.md
+=======
+>>>>>>> ab45c8ec (feat: Game Studio panels subsection)
 
   - name: Graphics
     href: graphics/index.md
