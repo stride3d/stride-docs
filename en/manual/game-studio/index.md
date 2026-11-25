@@ -16,3 +16,15 @@ Game Studio is currently in a **transitional phase** for its UI, moving away fro
 ## Developing games without Game Studio
 
 The [Stride community-toolkit](https://stride3d.github.io/stride-community-toolkit/manual/index.html) provides a set of helper functions that let you make **code-only games with Stride.** It's intended for people who prefer working directly with code and don't need a visual editor.
+
+## In this section
+
+* [Panels](panels/index.md)
+  * [Asset errors](panels/asset-errors.md)
+  * [Asset preview](panels/asset-preview.md)
+  * [Asset view](panels/asset-view.md)
+  * [Edit history](panels/edit-history.md)
+  * [Output](panels/output.md)
+  * [Property grid](panels/property-grid.md)
+  * [References](panels/references.md)
+  * [Solution explorer](panels/solution-explorer.md)

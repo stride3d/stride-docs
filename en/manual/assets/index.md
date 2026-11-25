@@ -16,7 +16,7 @@ Stride only compiles assets which are used in the game. This means that if an as
 
 ![](media/asset-reference-visualization.webp)
 
-[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+[!INCLUDE [asset-status-dots](../../includes/assets/status-dots.md)]
 
 For more information about how assets are compiled, visit [Asset compilation](asset-compilation.md).
 

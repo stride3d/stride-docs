@@ -28,12 +28,12 @@
 
 ## Asset terms
 
-- [Archetype](../assets/archetypes.md): A template for asset properties that other assets can inherit from.
 - [Asset](../assets/index.md): Content used by the game (models, textures, materials, scripts, etc.) managed by the asset pipeline.
-- Asset URL: The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`. See [Create a model from code](../scripts/create-a-model-from-code.md) and [Create a script](../scripts/create-a-script.md).
+- [Root asset](../assets/asset-compilation.md#root-assets): An asset that will always be included in the build, serving as a starting point for detecting other assets that are needed by the game.
+- [Asset URL](../assets/use-an-asset-in-code.md): The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`.
+- [Archetype](../assets/archetypes.md): A template for asset properties that other assets can inherit from.
 - [Asset compilation](../assets/asset-compilation.md): Compiles assets into runtime-ready formats.
 - [Asset bundles](../assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
-- [Root asset](../assets/asset-compilation.md#root-assets): An asset included in the build so it is available at runtime.
 
 ## Audio terms
 
@@ -52,16 +52,12 @@
 - [GameTime](https://doc.stride3d.net/latest/en/api/Stride.Games.GameTime.html): Time information passed to the game loop.
 - [Vector3](https://doc.stride3d.net/latest/en/api/Stride.Core.Mathematics.Vector3.html): A 3D vector representing a point or direction.
  
-## Editor terms
+## Game Studio terms
 
-- [Archetypes](../assets/archetypes.md): Share default properties across assets.
-- [Asset view](../assets/index.md): Panel used to manage assets in your project.
-- [Create assets](../assets/create-an-asset.md): Create and organize project assets.
-- [Game settings](../files-and-folders/game-settings/index.md): Project-wide defaults such as the graphics compositor and rendering options.
-- [Graphics compositor editor](../graphics/graphics-compositor/index.md): Node-based editor to configure the rendering pipeline.
-- [Property grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
-- [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
-- [Use assets](../assets/use-an-asset.md): Reference and place assets in scenes.
+- [Panel](../game-studio/panels/index.md): A rearrangeable part of the editor UI that serves a distinct purpose.
+- [Asset view](../game-studio/panels/asset-view.md): Panel used to manage assets in your project.
+- [Property grid](../game-studio/panels/property-grid.md): Panel used to view and edit properties of selected elements.
+- [Solution explorer](../game-studio/panels/solution-explorer.md): Panel used to view and edit the structure of a Stride project.
 
 ## General terms
 

@@ -67,4 +67,5 @@ Four of the lampposts now have a green light. The fifth is still red, as overrid
 
 ## See also
 
+* [Property grid](../../game-studio/panels/property-grid.md)
 * [Use prefabs](use-prefabs.md)
