@@ -500,8 +500,9 @@ function Build-UnversionedDoc {
 
 function Get-VersionedLink {
     # A link of an unversioned page to a versioned page (i.e. ../manual/index.md from release-notes/4.2.md):
-    # absolute, to the version of the release notes when it's hosted, else to latest. $null for other links.
-    param ([string]$Page, [string]$Href)
+    # absolute, to the version of the release notes when it's hosted, else to latest. With -AlsoUnversionedPages, a link to a
+    # page of an unversioned section (i.e. ../upgrade/4.4.md) is made absolute too: /en/upgrade/4.4.html. $null for other links.
+    param ([string]$Page, [string]$Href, [switch]$AlsoUnversionedPages)
 
     if ($Href -match '^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|/|#)') { return $null }
 
@@ -511,7 +512,11 @@ function Get-VersionedLink {
     if (-not $path) { return $null }
 
     $target = ([System.Uri]::new([System.Uri]::new("http://site/$Page"), $path)).AbsolutePath.TrimStart('/')
-    if ((Test-InUnversionedSection $target) -or (Test-Path (Join-Path $Settings.UnversionedDirectory $target) -PathType Leaf)) { return $null }
+    if (Test-InUnversionedSection $target) {
+        if ($AlsoUnversionedPages -and $target -match '\.md$') { return "/en/$($target -replace '\.md$', '.html')$suffix" }
+        return $null
+    }
+    if (Test-Path (Join-Path $Settings.UnversionedDirectory $target) -PathType Leaf) { return $null }
 
     $version = "latest"
     if ($Page -match '^release-notes/(\d+\.\d+)\.(?:md|html)$' -and $Settings.HostedVersions -contains $Matches[1]) {
@@ -566,8 +571,8 @@ function PostProcessing-LinksToUnversionedSections {
 }
 
 function Copy-ReleaseNotesMarkdown {
-    # The markdown of the release notes, loaded by the Stride Launcher,
-    # with their links to the versioned documentation made absolute like in their pages
+    # The markdown of the release notes, loaded by the Stride Launcher, with their links to the versioned documentation made
+    # absolute like in their pages, and their links to other pages, which the Launcher would open as .md, made absolute .html
     $destination = "$($Settings.UnversionedDirectory)/release-notes"
 
     Write-Host -ForegroundColor Yellow "Copying release notes markdown into $destination/"
@@ -578,7 +583,7 @@ function Copy-ReleaseNotesMarkdown {
         $content = [System.IO.File]::ReadAllText($file.FullName)
         $updated = [regex]::Replace($content, '(\]\(\s*<?)([^)\s>]+)', {
             param ($match)
-            $link = Get-VersionedLink -Page $page -Href $match.Groups[2].Value
+            $link = Get-VersionedLink -Page $page -Href $match.Groups[2].Value -AlsoUnversionedPages
             if ($link) { $match.Groups[1].Value + $link } else { $match.Value }
         })
         [System.IO.File]::WriteAllText((Join-Path (Resolve-Path $destination) $file.Name), $updated, [System.Text.UTF8Encoding]::new($false))
