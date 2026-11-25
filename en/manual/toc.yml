@@ -556,6 +556,20 @@ items:
           - name: Distributing
             href: files-and-folders/building-the-game/distributing.md
 
+  - name: Scenes
+    href: scenes/index.md
+    items:
+      - name: Create a scene
+        href: scenes/create-a-scene.md
+      - name: Edit a scene
+        href: scenes/edit-a-scene.md
+      - name: Sub-scenes
+        href: scenes/sub-scenes.md
+      - name: Structuring scenes
+        href: scenes/structuring-scenes.md
+      - name: Scene loading
+        href: scenes/scene-loading.md
+
   - name: Scripts
     href: scripts/index.md
     items:
