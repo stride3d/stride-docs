@@ -12,12 +12,40 @@ The log and `upgrade-report.md` link each step to its section below. A section s
 ## What happens when a step fails
 
 - A step that can't change one file leaves that file as it was and changes the others. The upgrade goes on, and `upgrade-report.md`, next to the project file, lists the files to fix by hand.
-- A step of the whole project (the project file, the package references, or the code as a whole) stops the upgrade of that project. Game Studio then asks what to do with its files:
-  - **Revert** (the default) puts every file of the project back as it was before the upgrade. The project stays on its version, and its next upgrade runs every step again.
-  - **Keep** leaves the files as the upgrade left them. The project records the steps that are left (`Unfinished` in its `StridePackageUpgradeRecord`), and no upgrade runs on it until you mark the upgrade as finished: Game Studio asks when you open the project, and `stride upgrade --mark-finished` does it from the command line.
+- A step of the whole project (the project file, the package references, or the code as a whole) stops the upgrade of the whole solution, so that its projects stay on one version. Game Studio then asks what to do with the files:
+  - **Revert** (the default) puts back every file the upgrade changed, in every project. The projects stay on their version, and their next upgrade runs every step again. The report of the upgrade goes in the backup folder (`.stride-backup-<date>`, next to the solution), with the files it explains.
+  - **Keep** leaves the files as the upgrade left them, and opens the solution. Each project that didn't finish records the steps that are left (`Unfinished` in its `StridePackageUpgradeRecord`), also a project that only stopped because a project it references failed.
+- Without a backup, there is nothing to put back: the files are always kept.
 - `stride upgrade` reverts by default. Pass `--keep-partial` to keep the files, and `--report <file>` to write what the upgrade did to a file.
 
-Delete `upgrade-report.md` once you handled its items. Game Studio shows a banner while the file is there.
+![Game Studio asks to revert or keep the files of a failed upgrade](media/upgrade-failed.webp)
+
+## Finish an unfinished upgrade
+
+A project with an unfinished upgrade opens as it is. While the upgrade is unfinished, Game Studio shows a banner:
+
+![The banner of an unfinished upgrade](media/upgrade-unfinished-banner.webp)
+
+- **Open the report** opens the `upgrade-report.md` of each project, which lists the steps that are left.
+- **Retry** runs the project steps that are left again. The upgrade is finished once none is left. Code steps don't run again, as they read the API of the old version: do them by hand, as `upgrade-report.md` lists them, then mark the upgrade as finished.
+- **Mark as finished** records that you did the steps that are left by hand.
+
+No new upgrade runs on a project until its last upgrade is finished. When a newer version of Stride has steps for it, Game Studio asks first, for the whole solution: **Retry**, **Mark as finished**, or **Not now**, which opens the project as it is, without the new upgrade.
+
+![Game Studio asks about an unfinished upgrade before a new one](media/upgrade-unfinished-question.webp)
+
+From the command line:
+
+- `stride upgrade --retry` runs the steps that are left again, and upgrades the project once none is left.
+- `stride upgrade --mark-finished` marks the upgrade as finished, and upgrades the project.
+
+On the version the project already has, both only finish the upgrade.
+
+## The upgrade report
+
+Delete `upgrade-report.md` once you handled its items. Once the upgrade is finished, Game Studio shows a banner while a project has the file, with **Remove the report**.
+
+![The banner of an upgrade report](media/upgrade-report-banner.webp)
 
 ## Versions
 
