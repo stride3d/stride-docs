@@ -62,3 +62,4 @@ public void ReloadScene(Scene scene, UrlReference<Scene> sceneUrl)
 ## See also
 
 * [Use an asset in code](../assets/use-an-asset-in-code.md)
+* [Entities](entities/index.md)

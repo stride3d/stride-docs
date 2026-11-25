@@ -67,11 +67,8 @@
 ## General terms
 
 - [ECS (Entity Component System)](../engine/entity-component-system/index.md): The architecture where entities host components and systems process them.
-- [Entity](../engine/entity-component-system/index.md): An object in the scene that can represent anything from a 3D model to a camera or light and aggregates multiple components.
-- [Entity component](../engine/entity-component-system/index.md): A piece of data/behavior attached to an entity (for example Transform, Model, Light).
 - [Game](https://doc.stride3d.net/latest/en/api/Stride.Engine.Game.html): A Stride application or interactive experience running the game loop.
 - [Game loop](https://en.wikipedia.org/wiki/Video_game_programming#Game_structure): The main loop that updates and renders the game each frame.
-- [Transform](../../tutorials/csharpbeginner/transform-position.md): Defines an entity's position, rotation, and scale in the scene.
  
 ## Graphics terms
 
@@ -188,6 +185,9 @@
 
 - [Scene](../scenes/index.md): A loadable portion of a game containing world data (e.g. models, lights, character controllers).
 - [Sub-scene](../scenes/sub-scenes.md): A scene that is a child of a different scene.
+- [Entity](../scenes/entities/index.md): An element of a scene containing components which are used to define what it is, how it looks and what it does.
+- [Component](../scenes/entities/components.md): A piece of code that can be attached to an entity. Components contain their own data, can execute their own code or be used by other components or processors.
+- [Transform](../scenes/entities/transform/index.md): A component that defines an entity's position, rotation and scale.
 - [Prefab](../scenes/prefabs/index.md): A reusable entity template that can be used for creating elements of a game that keep in-sync with the original or used for instantiating at runtime.
 - [Nested prefab](../scenes/prefabs/nested-prefabs.md): A prefab which is added as a child entity of another prefab.
 - [Prefab models](../scenes/prefabs/prefab-models.md): A model created from a prefab.
