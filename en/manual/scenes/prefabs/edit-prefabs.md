@@ -3,7 +3,7 @@
 <span class="badge text-bg-primary">Beginner</span>
 <span class="badge text-bg-success">Designer</span>
 
-Prefabs can be edited in their **dedicated editor**, which works similarly to the **Scene editor**.
+Prefabs can be edited in their [dedicated editor](../../game-studio/dedicated-editors/prefab-editor/index.md), which works similarly to the [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md).
 
 ## Open the Prefab editor
 
@@ -17,7 +17,7 @@ Alternatively, you can open the prefab from the **Scene editor** by right-clicki
 
 ## Use the Prefab editor
 
-The **Prefab editor** works almost identically to the **Scene editor**. Navigation and entity management are exactly the same.
+The [Prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md) works almost identically to the [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md). Navigation and entity management are exactly the same.
 
 ![](../../game-studio/dedicated-editors/prefab-editor/media/prefab-editor.webp)
 
@@ -25,4 +25,6 @@ When you edit a prefab in the **Prefab editor**, the changes are applied to the 
 
 ## See also
 
+* [Prefab editor](../../game-studio/dedicated-editors/prefab-editor/index.md)
+* [Scene editor](../../game-studio/dedicated-editors/scene-editor/index.md)
 * [Entities](../entities/index.md)

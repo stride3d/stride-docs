@@ -154,6 +154,26 @@ items:
             href: game-studio/panels/references.md
           - name: Solution explorer
             href: game-studio/panels/solution-explorer.md
+      - name: Dedicated editors
+        href: game-studio/dedicated-editors/index.md
+        items:
+          - name: Scene editor
+            href: game-studio/dedicated-editors/scene-editor/index.md
+            items:
+              - name: Viewport
+                href: game-studio/dedicated-editors/scene-editor/viewport.md
+              - name: Entity tree
+                href: game-studio/dedicated-editors/scene-editor/entity-tree.md
+          - name: Prefab editor
+            href: game-studio/dedicated-editors/prefab-editor/index.md
+          - name: Script editor
+            href: game-studio/dedicated-editors/script-editor/index.md
+          - name: Sprite editor
+            href: game-studio/dedicated-editors/sprite-editor/index.md
+          - name: UI editor
+            href: game-studio/dedicated-editors/ui-editor/index.md
+          - name: Graphics Compositor editor
+            href: game-studio/dedicated-editors/graphics-compositor-editor/index.md
 
   - name: Graphics
     href: graphics/index.md
