@@ -23,7 +23,7 @@ You don't have to create a different camera slot for each camera. Instead, you c
 
     For more information about the graphics compositor, see the [Graphics compositor](../graphics-compositor/index.md) page.
 
-2. In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
+2. In the graphics compositor editor, on the left, under **Camera slots**, click ➕ (**Add**).
 
     ![Camera slots](../graphics-compositor/media/graphics-compositor-camera-slots.png)
 

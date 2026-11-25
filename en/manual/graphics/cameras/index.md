@@ -40,7 +40,7 @@ Alternatively, select the entity you want to be a camera, and in the **Property 
 
 With **orthographic cameras**, objects are always the same size, no matter their distance from the camera. Parallel lines never touch, and there's no vanishing point. Orthographic cameras are most used for games with isometric perspectives, such as some strategy, 4X, or role-playing games.
 
-![Perspective and orthographic diagram](../../game-studio/media/perspective-orthographic-diagram.png)
+![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
 
 | Perspective  | Orthographic
 |--------------|------------
@@ -72,7 +72,7 @@ The near and far planes determine where the camera's view begins and ends.
 
 Stride renders the area between the near and far planes.
 
-![Camera position](../../game-studio/media/camera-position.png)
+![Camera position](media/camera-position.png)
 
 | Near plane 0.1 (default); far plane: 50  | Near plane: 7; far plane 1000 (default)
 |--------------------|------------------

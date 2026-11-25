@@ -2,27 +2,17 @@
 
 <span class="badge text-bg-primary">Beginner</span>
 
-**Game Studio** is the central tool for game and application production in Stride. In Game Studio, you can:
+**Game Studio** is the central tool for game and application production in Stride. It provides a graphical way of interacting with a project, including editing scenes, importing resources, designing UI and much more.
 
-* create and arrange scenes
-* import assets, modify their parameters and see changes in real time in the preview window
-* organize assets by folder, attach tags and get notifications from modified assets on the disk
-* build a game executable and run it directly
+![](media/game-studio.webp)
 
-Game Studio is also integrated with your Visual Studio projects, so you can seamlessly sync and switch between them.
+## WPF and Avalonia versions
 
-## Interface
+Game Studio is currently in a **transitional phase** for its UI, moving away from the windows-only **WPF** to the more modern **Avalonia** framework. Currently every Stride installations provides the two options for you to choose depending on your needs.
 
-![Game Studio](media/game-studio-main-interface.webp)
+* Use **WPF** if you want a more stable experience out of your editor and your machine is running Windows
+* Use **Avalonia** if you aren't using Windows or if you want to use the latest and greatest
 
-The **asset editor** (1) is used to edit assets and scenes. Some asset types, such as [scenes](../scenes/index.md), have dedicated editors where you can make complex changes to the asset. To open a dedicated editor (when available), double-click the asset or right-click it and select **Edit asset**.
+## Developing games without Game Studio
 
-The **Property grid** (2) displays the properties of the asset or entity you select. You can edit the properties here.
-
-The **Solution explorer** (3) displays the hierarchy of the elements of your project, such as assets, code files, packages and dependencies. You can create folders and objects, rename them, and move them.
-
-The **Asset view** (4) displays the project assets. You can create new assets using the **New Asset** button or by dragging and dropping resource files into the Asset view. You can also drag and drop assets from the Asset view to the different editors or the Property grid to Create an instance of the asset or add a reference to it. By default, the Asset view is in the bottom center.
-
-The **Asset preview** tab (5) displays a preview of the selected asset. The preview changes based on the type of the asset you have selected. For example, you can play animations and sounds. This is a quick way to check changes to an asset when editing it in the Property grid. By default, the Asset preview is in the bottom right.
-
-You can show and hide different parts of the Game Studio in the View menu. You can also resize and move parts of the UI.
+The [Stride community-toolkit](https://stride3d.github.io/stride-community-toolkit/manual/index.html) provides a set of helper functions that let you make **code-only games with Stride.** It's intended for people who prefer working directly with code and don't need a visual editor.

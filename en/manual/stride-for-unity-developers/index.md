@@ -84,7 +84,7 @@ You can have multiple scenes in your project. The scene that loads up as soon as
 
 To set the default scene:
 
-1. In the **GameSettings** properties, next to **Default Scene**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Select an asset**).
+1. In the **GameSettings** properties, next to **Default Scene**, click 👆 (**Select an asset**).
 
     ![Set default scene](media/stride-vs-unity-game-settings-default-scene.png)
 
@@ -245,7 +245,7 @@ For example, imagine we have three sphere entities that share a material asset n
 
 The better approach is to derive a new asset from the archetype. The derived asset inherits properties from the archetype and lets you override individual properties where you need them. For example, we can derive the sphere's material asset and override its color. Then, if we change the gloss of the archetype, the gloss of all three spheres changes.
 
-![Create derived asset](../game-studio/media/archetypes-three-spheres.png)
+![Create derived asset](media/archetypes-three-spheres.png)
 
 You can derive an asset from an archetype, then in turn derive another asset from that derived asset. This way you can create different layers of assets to keep your project organized:
 
