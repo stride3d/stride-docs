@@ -8,16 +8,21 @@
     - versions.json: the list of documentation versions shown in the version selector, and which one is the latest (checked, then copied as is).
       The selector of every version reads it, including old versions that can't be updated anymore: only add fields to its format.
     - web.config: %latest_version% is replaced by the latest version (target of the /latest/ URLs and of the 404 page),
-      and %unversioned_sections% by the unversioned sections (redirected from every version to /en/).
+      %unversioned_sections% by the unversioned sections (redirected from every version to /en/), and %client_cache_mode%
+      by how long browsers keep the files: an hour on production, no-cache on staging.
     - robots.txt: a Disallow is added for each version of versions.json, so that search engines only index /latest/.
 .PARAMETER OutputDirectory
     The directory where the files are generated, the default is _site (the root of the local website).
+.PARAMETER Slot
+    The Azure slot the files are deployed to: production (the default) or staging.
 .EXAMPLE
     .\BuildSiteRoot.ps1 -OutputDirectory _site
 #>
 
 param (
-    [string]$OutputDirectory = "_site"
+    [string]$OutputDirectory = "_site",
+    [ValidateSet('production', 'staging')]
+    [string]$Slot = 'production'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -52,7 +57,8 @@ Copy-Item (Join-Path $PSScriptRoot "versions.json") $OutputDirectory
 Write-Host -ForegroundColor Yellow "Generating web.config into $OutputDirectory"
 
 $webConfig = Get-Content (Join-Path $PSScriptRoot "web.config") -Raw -Encoding UTF8
-$webConfig = $webConfig.Replace("%latest_version%", $versions.latest).Replace("%unversioned_sections%", $unversioned -join "|")
+$clientCacheMode = if ($Slot -eq 'staging') { 'DisableCache' } else { 'UseMaxAge' }
+$webConfig = $webConfig.Replace("%latest_version%", $versions.latest).Replace("%unversioned_sections%", $unversioned -join "|").Replace("%client_cache_mode%", $clientCacheMode)
 Write-Utf8File (Join-Path $OutputDirectory "web.config") $webConfig
 
 Write-Host -ForegroundColor Yellow "Generating robots.txt into $OutputDirectory"

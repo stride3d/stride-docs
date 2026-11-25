@@ -174,7 +174,7 @@ The documentation of a version not released yet (a beta) can be deployed to prod
 `stride-docs-site-root-azure.yml` runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master`, and deploys them together as a zip, without cleaning (the version folders are left untouched):
 
 - `versions.json`, as is. The version selector of every version reads it, including old versions that can't be updated anymore, so its format can only gain fields
-- `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`, and `%unversioned_sections%` by its unversioned sections
+- `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`, `%unversioned_sections%` by its unversioned sections, and `%client_cache_mode%` by how long browsers keep the files: an hour on production, and `no-cache` on staging, where a browser checks each file again so that a deploy shows at once
 - `robots.txt`, with a `Disallow` for each version of `versions.json`
 
 A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`. A production deploy purges the whole Azure Front Door cache of the site: `web.config` changes the redirects of every version and what `/latest/` serves.
