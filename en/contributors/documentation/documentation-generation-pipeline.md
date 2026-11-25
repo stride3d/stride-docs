@@ -42,6 +42,7 @@ In this part, we elaborate on the individual steps involved in the documentation
     - If set to 'Yes', it proceeds to generate all languages and the Stride API automatically, which is particularly useful for CI/CD.
     - If set to 'No', it will prompt the user to select languages through an interactive command-line UI.
   - Sets the `$Version` parameter based on the `-Version` command-line argument or fetches it from `version.json` if the argument is not provided.
+  - `-Sections` chooses the builds: `All` (default), `Versioned` (the version folder and the other languages) or `Unversioned` (`_site/en`, without API). The post-processing of each build doesn't read the output of the other one, so that each can be deployed alone.
 - **Read-LanguageConfigurations**
   - Reads `languages.json` to identify which languages should be generated.
 - **BuildAll**
@@ -70,10 +71,10 @@ In this part, we elaborate on the individual steps involved in the documentation
   - PostProcessing-LinksToUnversionedSections, PostProcessing-LinksToVersionedDocs
     - Fix the links between both builds, which docfx keeps as they're written: links to unversioned sections stay relative to the version (`web.config` redirects them to `en/`), links of the release notes to the versioned documentation go to the documentation of their version when it's hosted, else to latest.
   - Merge-SearchIndex
-    - Merges the search indexes of both builds, written to both, so that searching from any page finds all sections.
+    - Merges the search indexes of both builds, so that searching from any page finds all sections: the index of the version folder has that version, the one of `_site/en` the latest version. With `-SearchIndexSite`, the half that isn't built comes from the deployed site, and the index of a folder that isn't built is written alone (i.e. `_site/en/index.json`), see [Search index](github-actions.md#search-index).
   - Copy-ExtraItems
     - Copies the markdown of the release notes (`<version>.md`) into `_site/en/release-notes`, loaded by the Stride Launcher.
-    - Writes `build.json` into the version folder and `_site/en`.
+    - Writes `build.json` into the version folder and `_site/en`, when they're built.
     - Runs `BuildSiteRoot.ps1`, which generates the files shared by all versions at the root of the site: `versions.json`, `web.config` (with `%latest_version%` replaced by the latest version of `versions.json`) and `robots.txt` (with a `Disallow` for each version of `versions.json`, so that search engines only index `/latest/`).
 - **Build-AllLanguagesDocs**
   - Iterates over all selected languages and triggers the `Build-NonEnglishDoc` function for each.

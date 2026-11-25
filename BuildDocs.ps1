@@ -19,6 +19,12 @@
     Switch parameter. If provided, it skips API metadata generation and excludes API documentation from the build.
 .PARAMETER SkipPdfBuilding
     Switch parameter. If provided, It skips Pdf generation step.
+.PARAMETER Sections
+    Which of the two builds to run: All (default), Versioned (the folder of the version, i.e. _site/4.4) or Unversioned
+    (the sections of versions.json that aren't versioned, _site/en). Unversioned builds neither the API nor other languages.
+.PARAMETER SearchIndexSite
+    The site the documentation is deployed to, i.e. https://stride-doc-staging.azurewebsites.net: the search indexes take the
+    half that isn't built here from it (see Merge-SearchIndex). Without it, they only hold what is built.
 .EXAMPLE
     .\BuildDocs.ps1 -BuildAll
     In this example, the script will build the documentation in all available languages and include API documentation. Use this in GitHub Actions.
@@ -42,8 +48,14 @@ param (
         return (Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url }
     })]
     # The highest version of versions.json, which is the one this branch documents
-    $Version = $((Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url } | Sort-Object { [version]$_ } -Descending | Select-Object -First 1)
+    $Version = $((Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json).docs | ForEach-Object { $_.url } | Sort-Object { [version]$_ } -Descending | Select-Object -First 1),
+    [ValidateSet('All', 'Versioned', 'Unversioned')]
+    [string]$Sections = 'All',
+    [string]$SearchIndexSite
 )
+
+$buildVersioned = $Sections -ne 'Unversioned'
+$buildUnversioned = $Sections -ne 'Versioned'
 
 $versionsJson = Get-Content $PSScriptRoot\versions.json -Raw -Encoding UTF8 | ConvertFrom-Json
 
@@ -589,27 +601,104 @@ function Copy-ReleaseNotesMarkdown {
     }
 }
 
-function Merge-SearchIndex {
-    # One search index for both builds: its keys are paths from the root of a build, so it works from both
-    # (links to the other build go through the redirects of web.config)
-    Write-Host -ForegroundColor Yellow "Merging the search indexes of the versioned and unversioned documentation..."
-    Write-Host ""
+function Read-SearchIndex {
+    # The pages of a search index (a file of _site, or a URL of the deployed site) in one half of the documentation:
+    # Versioned or Unversioned. $null when the deployed site doesn't have it.
+    param ([string]$Path, [ValidateSet('Versioned', 'Unversioned')][string]$Half)
 
-    $files = @("$($Settings.SiteDirectory)/en/index.json", "$($Settings.UnversionedDirectory)/index.json")
-    $merged = [ordered]@{}
-    foreach ($file in $files) {
-        $index = Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json
-        foreach ($property in $index.PSObject.Properties) {
-            # The 404 and home pages are different in each build
-            if (@('404.html', 'index.html') -contains $property.Name) { continue }
-            $merged[$property.Name] = $property.Value
+    $file = $Path
+    if ($Path -match '^https?://') {
+        Write-Host "Reading the $($Half.ToLower()) pages of $Path"
+        $file = [System.IO.Path]::GetTempFileName()
+        try {
+            # Into a file: Windows PowerShell decodes a response without charset as ISO-8859-1
+            Invoke-WebRequest $Path -OutFile $file -UseBasicParsing
+        } catch {
+            Remove-Item $file
+            if ($_.Exception.Response.StatusCode -ne [System.Net.HttpStatusCode]::NotFound) { throw }
+            Write-Warning "$Path doesn't exist: the search indexes won't have its $($Half.ToLower()) pages."
+            return $null
         }
     }
 
-    $json = $merged | ConvertTo-Json -Depth 5 -Compress
-    foreach ($file in $files) {
-        [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot $file), $json, [System.Text.UTF8Encoding]::new($false))
+    $index = Get-Content $file -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($file -ne $Path) { Remove-Item $file }
+
+    $pages = [ordered]@{}
+    foreach ($property in $index.PSObject.Properties) {
+        # The 404 and home pages are different in each build
+        if (@('404.html', 'index.html') -contains $property.Name) { continue }
+        if ((Test-InUnversionedSection $property.Name) -eq ($Half -eq 'Unversioned')) {
+            $pages[$property.Name] = $property.Value
+        }
     }
+    return $pages
+}
+
+function Write-SearchIndex {
+    param ([string]$Path, [object[]]$Halves)
+
+    Write-Host "Writing $Path"
+    $merged = [ordered]@{}
+    foreach ($half in $Halves | Where-Object { $_ }) {
+        foreach ($key in $half.Keys) { $merged[$key] = $half[$key] }
+    }
+    $directory = Join-Path $PSScriptRoot (Split-Path $Path)
+    New-Item -ItemType Directory -Force -Path $directory | Out-Null
+    [System.IO.File]::WriteAllText((Join-Path $directory (Split-Path $Path -Leaf)), ($merged | ConvertTo-Json -Depth 5 -Compress), [System.Text.UTF8Encoding]::new($false))
+}
+
+function Merge-SearchIndex {
+    # Each search index has the pages of both builds: its keys are paths from the root of a build, so it works from both (links
+    # to the other build go through the redirects of web.config). They're the same paths in every version, so an index has the
+    # versioned pages of a single version:
+    # - <version>/en/index.json: that version, and the unversioned pages
+    # - /en/index.json, and <latest>/en/index.json: latest, where its results open without ?v= (keepReaderVersion in main.js),
+    #   and the unversioned pages
+    # The half that isn't built comes from the deployed site (-SearchIndexSite). The index of a folder that isn't built is
+    # written alone (i.e. _site/en/index.json), for the deploy to update it without the rest of its folder.
+    Write-Host -ForegroundColor Yellow "Merging the search indexes of the versioned and unversioned documentation..."
+    Write-Host ""
+
+    # The progress bar of Windows PowerShell slows down downloads a lot
+    $ProgressPreference = 'SilentlyContinue'
+    $latest = $versionsJson.latest
+    if ($SearchIndexSite) {
+        # Not the one of this branch, which can be older
+        $latest = (Invoke-RestMethod "$SearchIndexSite/versions.json" -UseBasicParsing).latest
+    }
+    $versionIndex = "$($Settings.SiteDirectory)/en/index.json"
+    $unversionedIndex = "$($Settings.UnversionedDirectory)/index.json"
+    $latestIndex = "$($Settings.WebDirectory)/$latest/en/index.json"
+    $isLatest = $Settings.Version -eq $latest
+
+    $unversionedPages = $null
+    if ($buildUnversioned) {
+        $unversionedPages = Read-SearchIndex $unversionedIndex Unversioned
+    } elseif ($SearchIndexSite) {
+        $unversionedPages = Read-SearchIndex "$SearchIndexSite/en/index.json" Unversioned
+    }
+
+    $latestPages = $null
+    if ($buildVersioned) {
+        $versionPages = Read-SearchIndex $versionIndex Versioned
+        Write-SearchIndex $versionIndex $versionPages, $unversionedPages
+        # Without a deployed site, the version built is the only one
+        if ($isLatest -or -not $SearchIndexSite) { $latestPages = $versionPages }
+    }
+
+    if (-not $buildUnversioned) {
+        # The deployed /en/index.json gets the versioned pages of latest just built
+        if ($isLatest -and $SearchIndexSite -and $unversionedPages) { Write-SearchIndex $unversionedIndex $latestPages, $unversionedPages }
+        return
+    }
+
+    if (-not $latestPages -and $SearchIndexSite) {
+        $latestPages = Read-SearchIndex "$SearchIndexSite/$latest/en/index.json" Versioned
+        # The deployed <latest>/en/index.json gets the unversioned pages just built
+        if ($latestPages) { Write-SearchIndex $latestIndex $latestPages, $unversionedPages }
+    }
+    Write-SearchIndex $unversionedIndex $latestPages, $unversionedPages
 }
 
 function Copy-ExtraItems {
@@ -618,10 +707,12 @@ function Copy-ExtraItems {
     # (they're useful locally, but only deployed from master, see stride-docs-site-root-azure.yml)
     & "$PSScriptRoot/BuildSiteRoot.ps1" -OutputDirectory $Settings.WebDirectory
 
-    Copy-ReleaseNotesMarkdown
+    if ($buildUnversioned) { Copy-ReleaseNotesMarkdown }
 
-    # The commits the documentation is built from, i.e. to check what's deployed: https://doc.stride3d.net/4.4/build.json
-    foreach ($directory in @($Settings.SiteDirectory, $Settings.UnversionedDirectory)) {
+    # The commits the documentation is built from, i.e. to check what's deployed: https://doc.stride3d.net/4.4/build.json.
+    # Only in the folders built, the deploy deploys these entirely
+    $directories = @(if ($buildVersioned) { $Settings.SiteDirectory }; if ($buildUnversioned) { $Settings.UnversionedDirectory })
+    foreach ($directory in $directories) {
         Write-Host -ForegroundColor Yellow "Writing build.json into $directory/"
         Write-Host ""
         [System.IO.File]::WriteAllText((Join-Path (Resolve-Path $directory) "build.json"), ($buildInfo | ConvertTo-Json -Depth 5), [System.Text.UTF8Encoding]::new($false))
@@ -990,7 +1081,7 @@ else {
     # Ask if the user wants to run additional steps
     if ($isEnLanguage -or $isAllLanguages -or $shouldBuildSelectedLanguage)
     {
-        if ($SkipApiBuilding)
+        if ($SkipApiBuilding -or -not $buildVersioned)
         {
             $API = $false
             $ReuseAPI = $false
@@ -1009,7 +1100,11 @@ else {
                     $ReuseAPI = Ask-UseExistingAPI
                 }
             }
+        }
 
+        # They're pages of the contributors section
+        if ($buildUnversioned)
+        {
             $engineArchitecture = Ask-ReplaceEngineArchitectureDocs
         }
     } elseif ($isCanceled) {
@@ -1025,10 +1120,13 @@ else {
 
 # Before the API metadata, which takes a while, so that missing release notes of the version fail the build right away
 Test-ReleaseNotes
-Test-UpgradeGuide
+if ($buildUnversioned) { Test-UpgradeGuide }
 
-# Generate API doc
-if ($ReuseAPI)
+# Generate API doc, which the unversioned sections don't use
+if (-not $buildVersioned)
+{
+    Write-Host -ForegroundColor Green "Building the unversioned sections only, without API documentation."
+} elseif ($ReuseAPI)
 {
     Write-Host -ForegroundColor Green "Generating API documentation from existing mete data..."
 } elseif ($API)
@@ -1047,7 +1145,7 @@ if ($ReuseAPI)
 }
 
 # Engine architecture docs
-if ($engineArchitecture) {
+if ($engineArchitecture -and $buildUnversioned) {
     Copy-ArchitectureDocs
     Generate-ArchitectureDocsToc
 }
@@ -1064,46 +1162,54 @@ Write-Host ""
 
 if ($isEnLanguage -or $isAllLanguages)
 {
-   $exitCode = Build-EnglishDoc
-
-   if ($exitCode -ne 0)
+   # The post-processing of each build doesn't read the output of the other one, so that each can be built and deployed alone
+   if ($buildVersioned)
    {
-       Write-Error "Failed to build English documentation. ExitCode: $exitCode"
-       Stop-Transcript
-       Read-Host -Prompt "Press any ENTER to exit..."
-       return $exitCode
+       $exitCode = Build-EnglishDoc
+
+       if ($exitCode -ne 0)
+       {
+           Write-Error "Failed to build English documentation. ExitCode: $exitCode"
+           Stop-Transcript
+           Read-Host -Prompt "Press any ENTER to exit..."
+           return $exitCode
+       }
+
+       PostProcessing-FixingSitemap
+       PostProcessing-Fixing404AbsolutePath -Directory "$($Settings.SiteDirectory)/en" -Base "/$($Settings.Version)/en/"
+       PostProcessing-LinksToUnversionedSections -Directory "$($Settings.SiteDirectory)/en"
    }
 
-   $exitCode = Build-UnversionedDoc
-
-   if ($exitCode -ne 0)
+   if ($buildUnversioned)
    {
-       Write-Error "Failed to build the unversioned documentation. ExitCode: $exitCode"
-       Stop-Transcript
-       Read-Host -Prompt "Press any ENTER to exit..."
-       return $exitCode
+       $exitCode = Build-UnversionedDoc
+
+       if ($exitCode -ne 0)
+       {
+           Write-Error "Failed to build the unversioned documentation. ExitCode: $exitCode"
+           Stop-Transcript
+           Read-Host -Prompt "Press any ENTER to exit..."
+           return $exitCode
+       }
+
+       Test-ReleaseNotesIndex
+
+       PostProcessing-Fixing404AbsolutePath -Directory $Settings.UnversionedDirectory -Base "/en/"
+       PostProcessing-LinksToVersionedDocs
    }
-
-   Test-ReleaseNotesIndex
-
-   PostProcessing-FixingSitemap
-
-   PostProcessing-Fixing404AbsolutePath -Directory "$($Settings.SiteDirectory)/en" -Base "/$($Settings.Version)/en/"
-   PostProcessing-Fixing404AbsolutePath -Directory $Settings.UnversionedDirectory -Base "/en/"
-
-   PostProcessing-LinksToUnversionedSections -Directory "$($Settings.SiteDirectory)/en"
-   PostProcessing-LinksToVersionedDocs
 
    Merge-SearchIndex
 
    Copy-ExtraItems
 }
 
-# Build non-English language if selected or build all languages if selected
-if ($isAllLanguages) {
-    Build-AllLanguagesDocs -Languages $languages
-} elseif ($selectedLanguage) {
-    Build-NonEnglishDoc -SelectedLanguage $selectedLanguage
+# Build non-English language if selected or build all languages if selected: they're versioned
+if ($buildVersioned) {
+    if ($isAllLanguages) {
+        Build-AllLanguagesDocs -Languages $languages
+    } elseif ($selectedLanguage) {
+        Build-NonEnglishDoc -SelectedLanguage $selectedLanguage
+    }
 }
 
 Stop-Transcript

@@ -89,7 +89,7 @@ Step by step:
 
 1. **Checkout Stride Docs** into a `stride-docs` folder, with `lfs: true` so that images and other large assets are fetched rather than left as pointer files
 1. **Install the .NET 10 SDK**
-1. **Checkout [stride3d/stride](https://github.com/stride3d/stride)** into a sibling folder, also with Git LFS. The engine source is needed to generate the API reference
+1. **Checkout [stride3d/stride](https://github.com/stride3d/stride)** into a sibling folder, also with Git LFS. The engine source is needed to generate the API reference, its upgrade steps to check the upgrade guide, and its `docs` folder gives the engine architecture pages of the contributors section
 1. **Install DocFX** as a global tool, at a specific version (see [Upgrading Docfx](docfx.md#upgrading-docfx))
 1. **Build the documentation** by running `build-all.bat`, which drives `BuildDocs.ps1` in non-interactive mode and writes the result into `_site`
 
@@ -140,14 +140,32 @@ For how the Azure Web App itself is configured, see [Deployment](deployment-azur
 
 ### Version deployment
 
-`stride-docs-deploy-azure.yml` runs from the branch of the version to deploy, for example `master` for the version in development or `master-4.3` for 4.3:
+`stride-docs-deploy-azure.yml` runs from the branch of the version to deploy, for example `master` for the version in development or `master-4.3` for 4.3. Its **Sections** input chooses what it deploys:
 
-1. Builds the documentation, the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`
-1. Deploys only that folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too. The site root files generated next to it aren't deployed
-1. From `master` only, deploys the unversioned sections (`_site/en`) to `/home/site/wwwroot/en` the same way: they're maintained on `master`, other branches don't deploy them
-1. Checks that `build.json` of each deployed folder has the commit just built, on the Azure Web App itself
+| Sections | Deploys | Takes |
+| --- | --- | --- |
+| `all` (default) | The version folder (i.e. `4.4/`), and from `master` the unversioned sections (`en/`) | About 19 minutes, most of it the API and the upload of the version folder |
+| `versioned` | The version folder only | Almost as long as `all` |
+| `unversioned` | The unversioned sections only: release notes, contributing, community resources, upgrade guide. Only from `master`, the run fails from another branch | About 5 minutes, without the API |
+
+The links between the two builds don't depend on the other build (see [Generation Pipeline](documentation-generation-pipeline.md)), so a deploy of one of them links to the other like a full deploy does. A change that spans both, such as a manual page that links to a new release notes or upgrade guide page, or a page moved between them, needs `all`.
+
+1. Builds the documentation (`-Sections` of `BuildDocs.ps1`): the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`, and the unversioned sections (`_site/en`). From a branch other than `master`, `all` only builds the version
+1. Deploys the version folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too. The site root files generated next to it aren't deployed
+1. Deploys the unversioned sections to `/home/site/wwwroot/en` the same way: they're maintained on `master`, other branches don't deploy them
+1. Deploys the search index of each folder it didn't build, without `clean` (see [Search index](#search-index) below)
+1. Checks, on the Azure Web App itself, that `build.json` of each deployed folder has the commit just built, and that each search index deployed alone is the one just merged
 1. For production, creates a **draft** GitHub Release tagged `2.0.0.<run number>`, which is why this workflow requests `contents: write` permission
-1. For production, purges the Azure Front Door cache of the version folder (i.e. `/4.4/*`), of `/latest/*` when it's the latest version, and of `/en/*` when the unversioned sections were deployed
+1. For production, purges the Azure Front Door cache of what it deployed: the version folder (i.e. `/4.4/*`), `/latest/*` when it's the latest version, `/en/*`, and each search index deployed alone
+
+#### Search index
+
+The search index of a page has the pages of both builds: `<version>/en/index.json` has that version and the unversioned sections, `/en/index.json` has the latest version (`latest` of the deployed `versions.json`) and the unversioned sections, so that its results open in `/latest/`. A deploy merges what it built with the other half taken from the indexes deployed on its slot (`-SearchIndexSite` of `BuildDocs.ps1`), and updates the index of the other side too:
+
+- A deploy of the version folder takes the unversioned pages from `/en/index.json`. When it's the latest version, it also deploys `/en/index.json` with the new versioned pages.
+- A deploy of the unversioned sections takes the versioned pages from `/<latest>/en/index.json` (or from its own build when it built the latest version), and also deploys `/<latest>/en/index.json` with the new unversioned pages.
+
+The index of another version gets the current unversioned pages at its next deploy.
 
 The documentation of a version not released yet (a beta) can be deployed to production as well: it's available in its own folder, without being the latest. Game Studio loads its getting started links from there, and the Stride Launcher its release notes from the unversioned sections, which have the release notes of every version.
 
@@ -160,6 +178,8 @@ The documentation of a version not released yet (a beta) can be deployed to prod
 - `robots.txt`, with a `Disallow` for each version of `versions.json`
 
 A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`. A production deploy purges the whole Azure Front Door cache of the site: `web.config` changes the redirects of every version and what `/latest/` serves.
+
+After a change of the latest version, deploy the unversioned sections from `master` (**Sections** `unversioned`): until then, the search of `/en/` pages finds the pages of the previous latest version.
 
 Both workflows deploy to a slot one at a time. A newer run of the same workflow to the same slot (and from the same branch, for a version) cancels the older one, also while it waits for approval, so only the latest run can be approved. To go back to an earlier version, revert it on its branch, or re-run the older run of the workflow.
 

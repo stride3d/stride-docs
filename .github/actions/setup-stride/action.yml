@@ -17,6 +17,14 @@ inputs:
     description: 'Stride branch to checkout (default: master-x.y for a master-x.y branch of stride-docs, master otherwise)'
     required: false
     default: ''
+  sections:
+    description: 'Builds to run: all, versioned (the version folder) or unversioned (en/, without API)'
+    required: false
+    default: 'all'
+  search-index-site:
+    description: 'Site the documentation is deployed to, whose search indexes give the half that is not built (see Merge-SearchIndex of BuildDocs.ps1)'
+    required: false
+    default: ''
 
 runs:
   using: "composite"
@@ -116,6 +124,12 @@ runs:
 
       if ('${{ inputs.skip-api-building }}' -eq 'true') {
         $arguments += '-SkipApiBuilding'
+      }
+
+      $arguments += '-Sections', '${{ inputs.sections }}'
+
+      if ('${{ inputs.search-index-site }}') {
+        $arguments += '-SearchIndexSite', '${{ inputs.search-index-site }}'
       }
 
       ./build-all.bat @arguments
