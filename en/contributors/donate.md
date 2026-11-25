@@ -1,3 +1,3 @@
 ---
-redirect_url: ways-to-contribute/donate.md
+redirect_url: ways-to-contribute/donate.html
 ---

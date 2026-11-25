@@ -1,3 +1,3 @@
 ﻿---
-redirect_url: ../ways-to-contribute/code.md
+redirect_url: ../ways-to-contribute/code.html
 ---

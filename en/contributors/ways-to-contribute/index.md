@@ -1,3 +1,3 @@
 ---
-redirect_url: ../index.md
+redirect_url: ../index.html
 ---
