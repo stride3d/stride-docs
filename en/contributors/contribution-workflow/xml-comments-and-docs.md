@@ -23,6 +23,6 @@ It's up to the Stride team, alongside our amazing contributors, to make sure tha
 
 ## Release notes
 
-The release notes of the version in development, `en/release-notes/<version>.md` in the [stride-docs](https://github.com/stride3d/stride-docs) repository (i.e. `4.5.md` while 4.5 is in development), should be continuously updated with summaries of important/major PRs that have been merged and are noteworthy for the community, such as new features.
+The release notes of the version in development, `en/release-notes/<version>.md` in the [stride-docs](https://github.com/stride3d/stride-docs) repository (i.e. `4.5.md` while 4.5 is in development), should be continuously updated with summaries of important/major PRs that have been merged and are noteworthy for the community, such as new features. They start with an **Under construction** notice, and `/en/release-notes/` opens the release notes of the previous version until they're ready (see `index.md`).
 
 They serve as a running log of all significant changes slated for inclusion in the next release. Keeping them current is vital for ensuring that the release notes are both accurate and exhaustive, thereby **streamlining the release process**.

@@ -347,8 +347,8 @@ function Get-FooterMetadata {
     return "_appFooter=$($footer.Replace('"', "'"))"
 }
 
-function Generate-ReleaseNotesIndex {
-    # The release notes of each version are in <version>.md, index.md lists them (from toc.yml)
+function Test-ReleaseNotes {
+    # The release notes of each version are in <version>.md
     $releaseNotesFolder = "en/release-notes"
     $releaseNotesFileName = "$($Settings.Version).md"
 
@@ -358,21 +358,20 @@ function Generate-ReleaseNotesIndex {
     if (-not (Select-String -Path "$releaseNotesFolder/toc.yml" -Pattern "href: $([regex]::Escape($releaseNotesFileName))$" -Quiet)) {
         throw "$releaseNotesFolder/toc.yml doesn't list $releaseNotesFileName."
     }
+}
 
-    Write-Host -ForegroundColor Green "Generating the release notes index..."
-    Write-Host ""
-
-    $lines = @("# Release notes", "")
-    $name = $null
-    foreach ($line in Get-Content "$releaseNotesFolder/toc.yml" -Encoding UTF8) {
-        if ($line -match '^- name:\s*(.+)$') {
-            $name = $Matches[1].Trim()
-        } elseif ($name -and $line -match '^\s+href:\s*(\S+)') {
-            $lines += "- [$name]($($Matches[1]))"
-            $name = $null
-        }
+function Test-ReleaseNotesIndex {
+    # en/release-notes/index.md redirects /en/release-notes/ to the release notes shown by default (its redirect_url, which
+    # docfx copies as written): the page it names must have been built
+    $index = Join-Path $Settings.UnversionedDirectory "release-notes/index.html"
+    $redirect = Select-String -Path $index -Pattern "http-equiv=`"refresh`" content=`"0;URL='([^']+)'`"" | Select-Object -First 1
+    if (-not $redirect) {
+        throw "$index doesn't redirect: en/release-notes/index.md should have a redirect_url to the release notes shown by default."
     }
-    [System.IO.File]::WriteAllText((Join-Path $PSScriptRoot "$releaseNotesFolder/index.md"), ($lines -join "`n") + "`n", [System.Text.UTF8Encoding]::new($false))
+    $target = $redirect.Matches[0].Groups[1].Value
+    if (-not (Test-Path (Join-Path (Split-Path $index) $target) -PathType Leaf)) {
+        throw "en/release-notes/index.md redirects to $target, which isn't a page of the release notes."
+    }
 }
 
 function Test-UpgradeGuide {
@@ -1025,7 +1024,7 @@ else {
 }
 
 # Before the API metadata, which takes a while, so that missing release notes of the version fail the build right away
-Generate-ReleaseNotesIndex
+Test-ReleaseNotes
 Test-UpgradeGuide
 
 # Generate API doc
@@ -1084,6 +1083,8 @@ if ($isEnLanguage -or $isAllLanguages)
        Read-Host -Prompt "Press any ENTER to exit..."
        return $exitCode
    }
+
+   Test-ReleaseNotesIndex
 
    PostProcessing-FixingSitemap
 
