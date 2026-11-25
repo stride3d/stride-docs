@@ -134,6 +134,26 @@ items:
 
   - name: Game Studio
     href: game-studio/index.md
+    items:
+      - name: Panels
+        href: game-studio/panels/index.md
+        items:
+          - name: Asset errors
+            href: game-studio/panels/asset-errors.md
+          - name: Asset preview
+            href: game-studio/panels/asset-preview.md
+          - name: Asset view
+            href: game-studio/panels/asset-view.md
+          - name: Edit history
+            href: game-studio/panels/edit-history.md
+          - name: Output
+            href: game-studio/panels/output.md
+          - name: Property grid
+            href: game-studio/panels/property-grid.md
+          - name: References
+            href: game-studio/panels/references.md
+          - name: Solution explorer
+            href: game-studio/panels/solution-explorer.md
 
   - name: Graphics
     href: graphics/index.md

@@ -12,7 +12,7 @@ Stride only compiles assets which are used in the game. This means that if an as
 
 ## Blue, green and gray dots
 
-[!INCLUDE [asset-status-dots](../../includes/asset-status-dots.md)]
+[!INCLUDE [asset-status-dots](../../includes/assets/status-dots.md)]
 
 ## Root assets
 
