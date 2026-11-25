@@ -67,9 +67,10 @@ permissions:
   contents: write  # required to create releases/tags
   id-token: write  # required to sign in to Azure (purge of the Azure Front Door cache)
 
-# A newer run of the same branch and sections to the same slot replaces the older one, also while it waits for approval
+# A newer run of the same branch and sections to the same slot replaces the older one, also while it waits for approval.
+# The sections are those of env.SECTIONS (env isn't available here): all and versioned are the same run outside master
 concurrency:
-  group: deploy-azure-${{ github.ref_name }}-${{ inputs.slot || 'staging' }}-${{ inputs.sections || 'root' }}
+  group: deploy-azure-${{ github.ref_name }}-${{ inputs.slot || 'staging' }}-${{ github.event_name == 'push' && 'root' || github.ref_name != 'master' && inputs.sections == 'all' && 'versioned' || inputs.sections }}
   cancel-in-progress: true
 
 jobs:
