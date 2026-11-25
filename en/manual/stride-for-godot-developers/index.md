@@ -95,7 +95,7 @@ To set the default scene:
     The **Select an asset** window opens.
 2. Select the default scene and click **OK**.
 
-For more information about scenes, see [Scenes](../game-studio/scenes.md).
+For more information about scenes, see [Scenes](../scenes/index.md).
 
 
 ## Entities vs Nodes

@@ -28,7 +28,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     ![Set navigation mesh properties](media/navigation-mesh-properties.png)
 
-    For more information about scenes, see [Scenes](../game-studio/scenes.md).
+    For more information about scenes, see [Scenes](../scenes/index.md).
 
 3. Under **Selected groups**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add**).
 
@@ -76,4 +76,4 @@ These options have no effect on runtime behavior.
 * [Navigation bounding boxes](navigation-bounding-boxes.md)
 * [Navigation components](navigation-components.md)
 * [Dynamic navigation](dynamic-navigation.md)
-* [Scenes](../game-studio/scenes.md)
+* [Scenes](../scenes/index.md)

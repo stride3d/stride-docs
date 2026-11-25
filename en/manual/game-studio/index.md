@@ -15,7 +15,7 @@ Game Studio is also integrated with your Visual Studio projects, so you can seam
 
 ![Game Studio](media/game-studio-main-interface.webp)
 
-The **asset editor** (1) is used to edit assets and scenes. Some asset types, such as [scenes](create-a-scene.md), have dedicated editors where you can make complex changes to the asset. To open a dedicated editor (when available), double-click the asset or right-click it and select **Edit asset**.
+The **asset editor** (1) is used to edit assets and scenes. Some asset types, such as [scenes](../scenes/index.md), have dedicated editors where you can make complex changes to the asset. To open a dedicated editor (when available), double-click the asset or right-click it and select **Edit asset**.
 
 The **Property grid** (2) displays the properties of the asset or entity you select. You can edit the properties here.
 
@@ -29,13 +29,6 @@ You can show and hide different parts of the Game Studio in the View menu. You c
 
 ## In this section
 
-* [Scenes](scenes.md)
-    * [Create a scene](create-a-scene.md)
-    * [Navigate in the Scene editor](navigate-in-the-scene-editor.md)
-    * [Manage scenes](manage-scenes.md)
-    * [Load scenes](load-scenes.md)
-    * [Add entities](add-entities.md)
-    * [Manage entities](manage-entities.md)
 * [Prefabs](prefabs/index.md)
     * [Create a prefab](prefabs/create-a-prefab.md)
     * [Use prefabs](prefabs/use-prefabs.md)

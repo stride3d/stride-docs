@@ -3,6 +3,10 @@
 - [Stride](https://www.stride3d.net/): A C# game engine for creating 2D/3D games and visualizations.
 - [Stride Community Toolkit](https://stride3d.github.io/stride-community-toolkit/index.html): A collection of extensions and helpers for the Stride engine.
 - [Code-Only](https://stride3d.github.io/stride-community-toolkit/manual/code-only/index.html): A feature of the toolkit that allows you to create a game without using the Game Studio.
+
+## Software
+
+- [Stride Launcher](../install-and-update/index.md): An application used for managing Stride installations and opening Game Studio.
 - [Game Studio](../game-studio/index.md): An editor application for Stride projects.
 - [Stride CLI](../get-started/stride-cli.md): A command-line tool that provides utilities for working with Stride directly from a terminal.
 
@@ -51,17 +55,12 @@
  
 ## Editor terms
 
-- [Add entities](../game-studio/add-entities.md): Create new entities in a scene.
 - [Archetypes](../assets/archetypes.md): Share default properties across assets.
 - [Asset view](../assets/index.md): Panel used to manage assets in your project.
 - [Create assets](../assets/create-an-asset.md): Create and organize project assets.
 - [Game settings](../files-and-folders/game-settings/index.md): Project-wide defaults such as the graphics compositor and rendering options.
 - [Graphics compositor editor](../graphics/graphics-compositor/index.md): Node-based editor to configure the rendering pipeline.
-- [Manage entities](../game-studio/manage-entities.md): Select, group, and organize entities.
-- [Manage scenes](../game-studio/manage-scenes.md): Open, set defaults, and load/unload scenes.
-- [Navigate the Scene editor](../game-studio/navigate-in-the-scene-editor.md): Viewport navigation and controls.
 - [Property grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
-- [Scene editor](../game-studio/scenes.md): The 3D/2D viewport for arranging entities in a scene.
 - [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
 - [Use assets](../assets/use-an-asset.md): Reference and place assets in scenes.
 - [World units](../game-studio/world-units.md): Scene scale conventions (unit size, conversions).
@@ -73,7 +72,6 @@
 - [Entity component](../engine/entity-component-system/index.md): A piece of data/behavior attached to an entity (for example Transform, Model, Light).
 - [Game](https://doc.stride3d.net/latest/en/api/Stride.Engine.Game.html): A Stride application or interactive experience running the game loop.
 - [Game loop](https://en.wikipedia.org/wiki/Video_game_programming#Game_structure): The main loop that updates and renders the game each frame.
-- [Scene](../game-studio/scenes.md): The container for entities, defining the game world or environment.
 - [Transform](../../tutorials/csharpbeginner/transform-position.md): Defines an entity's position, rotation, and scale in the scene.
  
 ## Graphics terms
@@ -110,16 +108,6 @@
 - [Light streaks](../graphics/post-effects/light-streaks.md): Streaking effect from bright lights.
 - [Local reflections](../graphics/post-effects/local-reflections.md): Screen-space reflections for shiny surfaces.
 - [Tone mapping](../graphics/post-effects/color-transforms/tonemap.md): Map HDR values to displayable range.
-
-## Project structure terms
-
-- [Stride project](../files-and-folders/project-structure.md) (in .NET: solution): Contains code and assets used for creating a Stride game.
-- [Project package](../files-and-folders/project-packages/index.md) (in .NET: C# project): A separated portion of a project's code and assets, used for organization.
-- [Platform package](../files-and-folders/project-packages/index.md#platform-packages): A special type of project package that represents a specific platform (e.g. Windows or Linux).
-- [External package](../files-and-folders/external-packages/index.md): An external project package that can be referenced in order to use it's code and assets.
-- [Entry point](../files-and-folders/project-packages/index.md#entry-point): The place in code where a game's execution starts from.
-- [Building](../files-and-folders/building-the-game/index.md): Process of converting raw project files into a playable game.
-- [Publishing](../files-and-folders/building-the-game/index.md#what-is-publishing): Building the final version of the game that can be distributed.
 
 ## Input terms
 
@@ -184,6 +172,23 @@
 - [Rigid body](../physics/rigid-bodies.md): Dynamic colliders affected by forces (gravity, collisions).
 - [Static](../physics/static-colliders.md): Non-moving colliders (terrain, walls) that other objects collide with.
 - [Trigger](../physics/triggers.md): A collider that raises events when other objects overlap without blocking them.
+
+## Project structure terms
+
+- [Stride project](../files-and-folders/project-structure.md) (in .NET: solution): Contains code and assets used for creating a Stride game.
+- [Project package](../files-and-folders/project-packages/index.md) (in .NET: C# project): A separated portion of a project's code and assets, used for organization.
+- [Platform package](../files-and-folders/project-packages/index.md#platform-packages): A special type of project package that represents a specific platform (e.g. Windows or Linux).
+- [External package](../files-and-folders/external-packages/index.md): An external project package that can be referenced in order to use it's code and assets.
+- [Entry point](../files-and-folders/project-packages/index.md#entry-point): The place in code where a game's execution starts from.
+- [Building](../files-and-folders/building-the-game/index.md): Process of converting raw project files into a playable game.
+- [Publishing](../files-and-folders/building-the-game/index.md#what-is-publishing): Building the final version of the game that can be distributed.
+- [Game settings](../files-and-folders/game-settings/index.md): Project-wide defaults such as the graphics compositor and rendering options.
+- [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
+
+## Scene terms
+
+- [Scene](../scenes/index.md): A loadable portion of a game containing world data (e.g. models, lights, character controllers).
+- [Sub-scene](../scenes/sub-scenes.md): A scene that is a child of a different scene.
 
 ## Scripting terms
 

@@ -135,21 +135,6 @@ items:
   - name: Game Studio
     href: game-studio/index.md
     items:
-      - name: Scenes
-        href: game-studio/scenes.md
-        items:
-          - name: Create and open a scene
-            href: game-studio/create-a-scene.md
-          - name: Navigate in the Scene Editor
-            href: game-studio/navigate-in-the-scene-editor.md
-          - name: Manage scenes
-            href: game-studio/manage-scenes.md
-          - name: Load scenes
-            href: game-studio/load-scenes.md
-          - name: Add entities
-            href: game-studio/add-entities.md
-          - name: Manage entities
-            href: game-studio/manage-entities.md
       - name: Prefabs
         href: game-studio/prefabs/index.md
         items:
