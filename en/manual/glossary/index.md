@@ -33,7 +33,6 @@
 - Asset URL: The path used in code to load an asset, for example with `Content.Load<T>("MyFolder/MyAsset")`. See [Create a model from code](../scripts/create-a-model-from-code.md) and [Create a script](../scripts/create-a-script.md).
 - [Asset compilation](../assets/asset-compilation.md): Compiles assets into runtime-ready formats.
 - [Asset bundles](../assets/asset-bundles.md): Groups of assets packaged for deployment/streaming.
-- [Prefab](../game-studio/prefabs/index.md): A reusable entity hierarchy that can be instantiated at design time or runtime.
 - [Root asset](../assets/asset-compilation.md#root-assets): An asset included in the build so it is available at runtime.
 
 ## Audio terms
@@ -189,6 +188,9 @@
 
 - [Scene](../scenes/index.md): A loadable portion of a game containing world data (e.g. models, lights, character controllers).
 - [Sub-scene](../scenes/sub-scenes.md): A scene that is a child of a different scene.
+- [Prefab](../scenes/prefabs/index.md): A reusable entity template that can be used for creating elements of a game that keep in-sync with the original or used for instantiating at runtime.
+- [Nested prefab](../scenes/prefabs/nested-prefabs.md): A prefab which is added as a child entity of another prefab.
+- [Prefab models](../scenes/prefabs/prefab-models.md): A model created from a prefab.
 
 ## Scripting terms
 

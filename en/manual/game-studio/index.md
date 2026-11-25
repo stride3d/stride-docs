@@ -29,10 +29,4 @@ You can show and hide different parts of the Game Studio in the View menu. You c
 
 ## In this section
 
-* [Prefabs](prefabs/index.md)
-    * [Create a prefab](prefabs/create-a-prefab.md)
-    * [Use prefabs](prefabs/use-prefabs.md)
-    * [Edit prefabs](prefabs/edit-prefabs.md)
-    * [Nested prefabs](prefabs/nested-prefabs.md)
-    * [Override prefab properties](prefabs/override-prefab-properties.md)
 * [World units](world-units.md)

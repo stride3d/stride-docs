@@ -240,7 +240,7 @@ We're getting closer. But the trail doesn't disappear, so it looks like it's att
 
 ## 7. Make the particle effect a prefab
 
-So far, we've created a particle effect by attaching it as a component to the sword. Now we're going to separate the effect from the sword and make it an independent entity we can turn on and off when we like. To do this, we'll create a prefab. For more information about prefabs, see the [prefab documentation](../../game-studio/prefabs/index.md).
+So far, we've created a particle effect by attaching it as a component to the sword. Now we're going to separate the effect from the sword and make it an independent entity we can turn on and off when we like. To do this, we'll create a prefab. For more information about prefabs, see the [prefab documentation](../../scenes/prefabs/index.md).
 
 1. Right-click the **SwordModel** and select **Create prefab from selection**.
 
