@@ -58,6 +58,8 @@
 - [Asset view](../game-studio/panels/asset-view.md): Panel used to manage assets in your project.
 - [Property grid](../game-studio/panels/property-grid.md): Panel used to view and edit properties of selected elements.
 - [Solution explorer](../game-studio/panels/solution-explorer.md): Panel used to view and edit the structure of a Stride project.
+- [Dedicated editor](../game-studio/dedicated-editors/index.md): A dedicated editor panel used to edit a complex asset.
+- [Scene editor](../game-studio/dedicated-editors/scene-editor/index.md): A dedicated editor consisting of a 2D/3D viewport and an entity tree used for editing scenes.
 
 ## General terms
 
