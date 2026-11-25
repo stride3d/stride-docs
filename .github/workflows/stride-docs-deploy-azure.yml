@@ -284,11 +284,11 @@ jobs:
       if: env.SECTIONS == 'root' || env.SECTIONS == 'all'
       shell: bash
       run: |
+        # On the Windows runner, curl and jq end their lines with \r\n: tr -d '\r' removes it from the outputs read line by line
         latest=$(jq -r .latest site-root/versions.json)
         failed=0
         # url, expected status, expected end of the redirection location (optional)
         check() {
-          # The curl of Git for Windows (all runs on Windows) ends the line with \r\n
           read -r status location < <(curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' "$SITE_URL$1" | tr -d '\r')
           if [ "$status" != "$2" ] || [[ -n "$3" && "$location" != *"$3" ]]; then
             echo "::error::$1 -> $status $location (expected $2 $3)"
@@ -310,7 +310,7 @@ jobs:
         check / 302 /latest/en/
         check /latest/en/index.html 200
         # Unversioned sections, redirected to /en/ from every version (with the version as ?v=)
-        for section in $(jq -r '.unversioned[]' site-root/versions.json); do
+        for section in $(jq -r '.unversioned[]' site-root/versions.json | tr -d '\r'); do
           check /$latest/en/$section/toc.json 302 "/en/$section/toc.json?v=$latest"
         done
         check /latest/en/contributors/index.html 302 /en/contributors/index.html
