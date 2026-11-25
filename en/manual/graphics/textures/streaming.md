@@ -53,7 +53,7 @@ For instructions about how to access the global streaming settings, see the [Gam
 
 ### Properties
 
-![Streaming settings](../../game-studio/media/streaming-settings.png)
+![Streaming settings](../../files-and-folders/game-settings/media/built-in-configuration-streaming.webp)
 
 | Property             | Description
 |----------------------|------------

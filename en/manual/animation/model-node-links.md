@@ -29,7 +29,7 @@ For example, imagine you have two models: a knight, and a sword. The character h
 
     The component only has two properties: **Node name** and **Target**.
 
-3. Next to **Target**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png).
+3. Next to **Target**, click 👆.
 
     The **Select an entity** window opens.
 
