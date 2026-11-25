@@ -12,21 +12,11 @@ env:
   # Tag of the GitHub release created for production deployments
   VERSION: "2.0.0.${{ github.run_number }}"
   DOCS_PATH: stride-docs
-  # Pushes to master deploy the site root to staging
-  SLOT: ${{ inputs.slot || 'staging' }}
+  SLOT: ${{ inputs.slot }}
   # The unversioned sections and the site root are only deployed from master, where they're maintained: all deploys only the version elsewhere
-  SECTIONS: ${{ github.event_name == 'push' && 'root' || github.ref_name != 'master' && inputs.sections == 'all' && 'versioned' || inputs.sections }}
+  SECTIONS: ${{ github.ref_name != 'master' && inputs.sections == 'all' && 'versioned' || inputs.sections }}
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'versions.json'
-      - 'web.config'
-      - 'robots.txt'
-      - 'BuildSiteRoot.ps1'
-      - '.github/workflows/stride-docs-deploy-azure.yml'
   workflow_dispatch:
     inputs:
       slot:
@@ -71,7 +61,7 @@ permissions:
 # A newer run of the same branch and sections to the same slot replaces the older one, also while it waits for approval.
 # The sections are those of env.SECTIONS (env isn't available here): all and versioned are the same run outside master
 concurrency:
-  group: deploy-azure-${{ github.ref_name }}-${{ inputs.slot || 'staging' }}-${{ github.event_name == 'push' && 'root' || github.ref_name != 'master' && inputs.sections == 'all' && 'versioned' || inputs.sections }}
+  group: deploy-azure-${{ github.ref_name }}-${{ inputs.slot }}-${{ github.ref_name != 'master' && inputs.sections == 'all' && 'versioned' || inputs.sections }}
   cancel-in-progress: true
 
 jobs:
@@ -81,12 +71,12 @@ jobs:
     # One deploy at a time on a slot: the search indexes merge what's deployed there.
     # The others wait in line, instead of the default where a new one cancels the one already waiting
     concurrency:
-      group: azure-${{ inputs.slot || 'staging' }}
+      group: azure-${{ inputs.slot }}
       cancel-in-progress: false
       queue: max
     # One job, so that all needs a single approval and deploys the root right after the documentation, on the same lock.
     # The root alone builds nothing: about a minute on Linux
-    runs-on: ${{ (github.event_name == 'push' || inputs.sections == 'root') && 'ubuntu-latest' || 'windows-2025-vs2026' }}
+    runs-on: ${{ inputs.sections == 'root' && 'ubuntu-latest' || 'windows-2025-vs2026' }}
 
     environment:
       # Staging-branch requires an approval: any branch can deploy to staging through it, Staging only allows master and master-*

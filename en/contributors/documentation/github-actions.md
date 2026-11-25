@@ -6,7 +6,7 @@ You don't need to touch these workflows to contribute content. This page is here
 
 | Workflow file | Name in the Actions tab | Trigger | Target |
 | --- | --- | --- | --- |
-| [stride-docs-deploy-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-deploy-azure.yml) | Deploy Stride Docs to Azure Web App 🚀 | Manual, from the branch of the version, or push to `master` changing the root files (staging) | The version folder (i.e. `4.4/`), and from `master` the unversioned sections (`en/`) and the root files (`versions.json`, `web.config`, `robots.txt`) of the Azure Web App `stride-doc`, slot **staging** or **Production** |
+| [stride-docs-deploy-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-deploy-azure.yml) | Deploy Stride Docs to Azure Web App 🚀 | Manual, from the branch of the version | The version folder (i.e. `4.4/`), and from `master` the unversioned sections (`en/`) and the root files (`versions.json`, `web.config`, `robots.txt`) of the Azure Web App `stride-doc`, slot **staging** or **Production** |
 | [stride-docs-github.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-github.yml) | Build Stride Docs for GitHub Staging | Manual only | GitHub Pages in your own fork |
 | [stride-docs-test-build.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-test-build.yml) | Build Stride Docs - Test Build | Manual only | Nothing, build artifact only |
 
@@ -17,7 +17,6 @@ flowchart LR
     PR[Pull request] --> master[master branch]
     master -.->|manual| WD[stride-docs-deploy-azure.yml]
     old[master-4.3, ... branches] -.->|manual| WD
-    master -->|push changing root files| WD
     master -.->|manual dispatch only| WG[stride-docs-github.yml]
     master -.->|manual dispatch only| WT[stride-docs-test-build.yml]
 
@@ -34,7 +33,7 @@ The site hosts the documentation of several versions, each in its own folder (`4
 
 Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a deploy of the root files (**Sections** `root`), without rebuilding any documentation.
 
-`master` is the default branch and the target for pull requests. **The documentation isn't deployed from `master` automatically**, a maintainer runs the deployment manually from the **Actions** tab, choosing the branch and the Azure slot (staging or production). Only changes to the root files on `master` are deployed automatically, to staging.
+`master` is the default branch and the target for pull requests. **Nothing is deployed automatically**, a maintainer runs the deployment manually from the **Actions** tab, choosing the branch, the Azure slot (staging or production) and the sections.
 
 ## Who can run these workflows
 
@@ -129,7 +128,7 @@ For production, it also purges the cache of [Azure Front Door](deployment-azure.
 Each publish profile is a secret of its environment, so only jobs running in that environment can use it:
 
 - `Production` only accepts the branches `master` and `master-*`, and has the team `stride-website-publishers` as required reviewers: a deployment waits until one of its members approves it (**Review deployments** on the run page), even when they started it themselves
-- `Staging` only accepts the branches `master` and `master-*`, without approval: what reached them, through a pull request or an admin, is deployed to staging at once
+- `Staging` only accepts the branches `master` and `master-*`, without approval, since what reached them went through a pull request or an admin
 - `Staging-branch` accepts any branch, to test a branch on staging, with the same required reviewers as `Production`: a branch can change the workflow it runs, so only an approval keeps the staging publish profile from it
 
 It uses [Azure Web Apps Deploy v3](https://github.com/Azure/webapps-deploy) with a `target-path`, which deploys only into that path of the site. Nothing outside of it is removed, so the other versions stay untouched.
@@ -184,8 +183,6 @@ The workflow runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to
 - `robots.txt`, with a `Disallow` for each version of `versions.json`
 
 It then checks them on the Azure Web App: `versions.json` is the one generated, `Cache-Control` matches the slot, and the redirects of `web.config` answer as expected.
-
-A push to `master` changing one of these files, `BuildSiteRoot.ps1` or the workflow deploys the root files to staging, as a `root` run without approval. Deploying them to production is manual.
 
 After a change of the latest version, deploy the unversioned sections from `master` (**Sections** `unversioned`): until then, the search of `/en/` pages finds the pages of the previous latest version.
 

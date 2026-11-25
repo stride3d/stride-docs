@@ -82,7 +82,7 @@ The previous step will have added a GitHub Action to your repository, which migh
 ### GitHub Actions
 
 - `stride-docs-github.yml`: Enables manual deployment to GitHub Pages in a forked repository, primarily for showcasing updates.
-- `stride-docs-deploy-azure.yml`: Manually deploys the documentation of the branch it runs from into its version folder, to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) or production, and from `master` the unversioned sections and `versions.json`, `web.config` and `robots.txt`. It deploys these three files to staging automatically when they change on `master`.
+- `stride-docs-deploy-azure.yml`: Manually deploys the documentation of the branch it runs from into its version folder, to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) or production, and from `master` the unversioned sections and `versions.json`, `web.config` and `robots.txt`.
 - `stride-docs-test-build.yml`: Builds the documentation manually and uploads it as an artifact without deploying anywhere, useful for verifying that a change builds.
 
 For a detailed breakdown of the jobs, triggers, inputs and secrets these workflows use, see [GitHub Actions](github-actions.md).
