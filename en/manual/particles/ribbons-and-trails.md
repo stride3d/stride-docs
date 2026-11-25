@@ -69,7 +69,7 @@ Unlike billboards, which are individual quads, ribbons and trails have a single 
 
      ![Stretched texture mapping](media/particles-diagram-stretched.png)
 
- * **DistanceBased**: The texture is repeated based on the actual world length of the ribbon or trail rather than the number of particles. The **UV Factor** defines the distance in [world units](../game-studio/world-units.md) after which the texture repeats
+ * **DistanceBased**: The texture is repeated based on the actual world length of the ribbon or trail rather than the number of particles. The **UV Factor** defines the distance in [world units](../scenes/entities/transform/world-units.md) after which the texture repeats
 
      ![Distance-based texture mapping](media/particles-diagram-distancebased.png)
 

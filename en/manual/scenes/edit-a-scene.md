@@ -66,6 +66,8 @@ The **Property grid** displays a list of properties of the selected entities. It
 
 ![](../game-studio/panels/media/property-grid.webp)
 
+For more information about components, visit [Components](entities/components.md).
+
 ## Transforming entities
 
 The **Viewport** displays a transformation gizmo next to selected entities. You can use it to move, rotate and scale objects in a visual way by clicking on a part of the gizmo and dragging it.

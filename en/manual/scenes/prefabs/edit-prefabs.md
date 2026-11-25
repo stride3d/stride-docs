@@ -22,3 +22,7 @@ The **Prefab editor** works almost identically to the **Scene editor**. Navigati
 ![](../../game-studio/dedicated-editors/prefab-editor/media/prefab-editor.webp)
 
 When you edit a prefab in the **Prefab editor**, the changes are applied to the instances of the prefab in other scenes in **real time**.
+
+## See also
+
+* [Entities](../entities/index.md)

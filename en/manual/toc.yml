@@ -134,9 +134,6 @@ items:
 
   - name: Game Studio
     href: game-studio/index.md
-    items:
-      - name: World units
-        href: game-studio/world-units.md
 
   - name: Graphics
     href: graphics/index.md
@@ -539,6 +536,20 @@ items:
         href: scenes/structuring-scenes.md
       - name: Scene loading
         href: scenes/scene-loading.md
+      - name: Entities
+        href: scenes/entities/index.md
+        items:
+          - name: Components
+            href: scenes/entities/components.md
+          - name: Transform
+            href: scenes/entities/transform/index.md
+            items:
+              - name: Types of rotation
+                href: scenes/entities/transform/types-of-rotation.md
+              - name: Local and world matrix
+                href: scenes/entities/transform/local-and-world-matrix.md
+              - name: World units
+                href: scenes/entities/transform/world-units.md
       - name: Prefabs
         href: scenes/prefabs/index.md
         items:
