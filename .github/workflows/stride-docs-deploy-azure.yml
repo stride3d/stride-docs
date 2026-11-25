@@ -38,7 +38,8 @@ on:
           - staging
           - production
       sections:
-        description: 'Sections to deploy: the version folder (versioned), en/ (unversioned: release notes, contributing, community resources, upgrade guide; from master only), versions.json, web.config and robots.txt (root; from master only), or all three (all). A change that spans them, i.e. a manual page linking to a new release notes page, needs all'
+        # The Run workflow dialog shows the description on one line, without Markdown
+        description: 'all: everything on master, the version only elsewhere. versioned: the version folder. unversioned: en/ (master only). root: versions.json, web.config, robots.txt (master only)'
         required: true
         default: all
         type: choice
