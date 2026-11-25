@@ -15,6 +15,9 @@ env:
   SLOT: ${{ inputs.slot }}
   # The unversioned sections and the site root are only deployed from master, where they're maintained: all deploys only the version elsewhere
   SECTIONS: ${{ github.ref_name != 'master' && inputs.sections == 'all' && 'versioned' || inputs.sections }}
+  # The Azure Web App itself, not the CDN of doc.stride3d.net: the search indexes are merged with what it serves,
+  # and the deploy is checked there
+  SITE_URL: https://stride-doc${{ inputs.slot != 'production' && '-staging' || '' }}.azurewebsites.net
 
 on:
   workflow_dispatch:
@@ -65,9 +68,117 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # The run summary lists what each folder of this run changes on the slot, since the commit of the build.json the slot serves for it
+  changes:
+    if: github.repository == 'stride3d/stride-docs'
+    runs-on: ubuntu-latest
+    # Only informative: a failure doesn't fail the run
+    continue-on-error: true
+    steps:
+    # Commits and trees only, for git log and git diff --name-status of any deployed commit
+    - name: Checkout Stride Docs
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+        filter: blob:none
+
+    - name: Summarize the changes
+      shell: bash
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        STRIDE_BRANCH: ${{ inputs.strideBranch }}
+      run: |
+        # A grep that keeps no line, or a head that stops git early, isn't an error here
+        set +o pipefail
+        repo="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+        new=$GITHUB_SHA
+        # The version BuildDocs.ps1 builds: the highest one of versions.json
+        version=$(jq -r '[.docs[].url] | sort_by(split(".") | map(tonumber)) | last' versions.json)
+        version_paths=(en); unversioned_paths=()
+        for section in $(jq -r '.unversioned[]' versions.json); do
+          version_paths+=(":(exclude)en/$section"); unversioned_paths+=("en/$section")
+        done
+        root_paths=(versions.json web.config robots.txt BuildSiteRoot.ps1)
+        limit=100
+
+        # folder (empty for the root), pathspecs of its pages
+        folder() {
+          local folder=$1; shift
+          local record deployed compare missing pages other stride stride_branch ahead
+          echo
+          echo "### \`/$folder\`"
+          echo
+          record=$(curl -sf "$SITE_URL/${folder}build.json" || true)
+          deployed=$(jq -r '.docs.commit // empty' <<< "$record" 2>/dev/null || true)
+          if [ -z "$deployed" ]; then
+            echo "No \`build.json\` on the slot: deployed before deploys recorded their commit, or never deployed."
+            return
+          fi
+          echo "Deployed: [\`${deployed:0:7}\`]($repo/commit/$deployed) of $(jq -r '.docs.branch // "?"' <<< "$record"), $(jq -r '.date' <<< "$record"), [run]($(jq -r '.run' <<< "$record"))"
+          echo
+          # The API and the architecture pages also change with Stride, even when the docs commit doesn't
+          stride=$(jq -r '.stride.commit // empty' <<< "$record")
+          if [ -n "$stride" ]; then
+            stride_branch=${STRIDE_BRANCH:-$(jq -r '.stride.branch // "master"' <<< "$record")}
+            ahead=$(gh api "repos/stride3d/stride/compare/$stride...$stride_branch" --jq .ahead_by 2>/dev/null) || ahead="?"
+            echo "Stride: [$ahead new commits]($GITHUB_SERVER_URL/stride3d/stride/compare/$stride...$stride_branch) on $stride_branch since [\`${stride:0:7}\`]($GITHUB_SERVER_URL/stride3d/stride/commit/$stride)"
+            echo
+          fi
+          if ! git cat-file -e "$deployed^{commit}" 2>/dev/null; then
+            echo "> [!WARNING]"
+            echo "> The deployed commit isn't in this repository anymore: this run replaces what it deployed."
+            return
+          fi
+          if [ "$deployed" = "$new" ]; then echo "Same stride-docs commit as deployed."; return; fi
+          compare="$repo/compare/$deployed...$new"
+          missing=$(git rev-list --count "$new..$deployed")
+          if [ "$missing" != 0 ]; then
+            echo "> [!WARNING]"
+            echo "> Deployed commits that this run's commit doesn't have: [$missing]($repo/compare/$new...$deployed). This run removes their changes."
+            echo
+          fi
+          echo "[All changes on GitHub]($compare)"
+          echo
+          echo "**Commits that change its pages**"
+          echo
+          pages=$(git log --no-merges --format=%H "$deployed..$new" -- "$@")
+          if [ -z "$pages" ]; then
+            echo "None."
+          else
+            git log --no-merges -n $limit --date=short --format="- [\`%h\`]($repo/commit/%H) %s (%an, %ad)" "$deployed..$new" -- "$@"
+            echo
+            echo "**Files**"
+            echo
+            # The anchor of a file on the compare page is the SHA-256 of its path
+            git diff --name-status --no-renames "$deployed" "$new" -- "$@" | head -n $limit | while IFS=$'\t' read -r status path; do
+              echo "- $status [\`$path\`]($compare#diff-$(printf %s "$path" | sha256sum | cut -c1-64))"
+            done
+          fi
+          other=$(git log --no-merges --format=%H "$deployed..$new" | grep -vxF "${pages:-none}" | wc -l)
+          if [ "$other" != 0 ]; then
+            echo
+            echo "<details><summary>$other other commits in the range (build, workflows, other sections)</summary>"
+            echo
+            git log --no-merges --date=short --format="%H - [\`%h\`]($repo/commit/%H) %s (%an, %ad)" "$deployed..$new" \
+              | grep -vF "${pages:-none}" | cut -d' ' -f2- | head -n $limit
+            echo
+            echo "</details>"
+          fi
+        }
+
+        {
+          echo "## Changes this run deploys to $SLOT ($SECTIONS)"
+          echo
+          echo "Since the commit of each folder on $SITE_URL when the run started, up to [\`${new:0:7}\`]($repo/commit/$new) of $GITHUB_REF_NAME. Lists stop at $limit."
+          echo
+          case "$SECTIONS" in all|versioned) folder "$version/" "${version_paths[@]}";; esac
+          case "$SECTIONS" in all|unversioned) folder "en/" "${unversioned_paths[@]}";; esac
+          case "$SECTIONS" in all|root) folder "" "${root_paths[@]}";; esac
+        } | tee -a "$GITHUB_STEP_SUMMARY"
+
   deploy:
     # Run this job only if the repository is 'stride3d/stride-docs'
-    if: github.repository == 'stride3d/stride-docs'
+    if: github.repository == 'stride3d/stride-docs' && !cancelled()
     # One deploy at a time on a slot: the search indexes merge what's deployed there.
     # The others wait in line, instead of the default where a new one cancels the one already waiting
     concurrency:
@@ -83,10 +194,9 @@ jobs:
       name: ${{ inputs.slot == 'production' && 'Production' || (github.ref_name == 'master' || startsWith(github.ref_name, 'master-')) && 'Staging' || 'Staging-branch' }}
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url || steps.deploy-unversioned.outputs.webapp-url || steps.deploy-root.outputs.webapp-url }}
 
-    env:
-      # The Azure Web App itself, not the CDN of doc.stride3d.net: the search indexes are merged with what it serves,
-      # and the deploy is checked there
-      SITE_URL: https://stride-doc${{ inputs.slot != 'production' && '-staging' || '' }}.azurewebsites.net
+    # The summary of the changes is on the run page while this job waits for its approval. The deploy doesn't depend on it:
+    # !cancelled() in if runs it also when the summary fails
+    needs: changes
 
     steps:
     - name: Check sections
@@ -257,7 +367,15 @@ jobs:
     # The root last, so that its redirects only point at pages once they're deployed
     - name: Generate site root files
       if: env.SECTIONS == 'root' || env.SECTIONS == 'all'
-      run: ./${{ env.DOCS_PATH }}/BuildSiteRoot.ps1 -OutputDirectory site-root -Slot $env:SLOT
+      run: |
+        ./${{ env.DOCS_PATH }}/BuildSiteRoot.ps1 -OutputDirectory site-root -Slot $env:SLOT
+        # The commit of the root files, as build.json of the documentation folders has theirs (read by the changes job)
+        $repo = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY"
+        [ordered]@{
+          date = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+          run = "$repo/actions/runs/$env:GITHUB_RUN_ID"
+          docs = [ordered]@{ commit = $env:GITHUB_SHA; branch = $env:GITHUB_REF_NAME; url = "$repo/commit/$env:GITHUB_SHA" }
+        } | ConvertTo-Json | Set-Content site-root/build.json -Encoding utf8NoBOM
       shell: pwsh
 
     - name: Package site root files
@@ -298,6 +416,13 @@ jobs:
           fi
         }
         curl -sf "$SITE_URL/versions.json" | cmp -s - site-root/versions.json || { echo "::error::The deployed versions.json differs from site-root/versions.json"; failed=1; }
+        root_commit=$(curl -sf "$SITE_URL/build.json" | jq -r .docs.commit | tr -d '\r' || true)
+        if [ "$root_commit" != "$GITHUB_SHA" ]; then
+          echo "::error::/build.json doesn't have the commit $GITHUB_SHA (found: $root_commit)"
+          failed=1
+        else
+          echo "/build.json: $root_commit"
+        fi
         # How long browsers keep the files (%client_cache_mode% of web.config)
         expected_cache="${{ env.SLOT == 'production' && 'max-age=3600' || 'no-cache' }}"
         cache=$(curl -sI "$SITE_URL/versions.json" | tr -d '\r' | sed -n 's/^[Cc]ache-[Cc]ontrol: *//p')

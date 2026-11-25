@@ -90,7 +90,7 @@ Step by step:
 1. **Install DocFX** as a global tool, at a specific version (see [Upgrading Docfx](docfx.md#upgrading-docfx))
 1. **Build the documentation** by running `build-all.bat`, which drives `BuildDocs.ps1` in non-interactive mode and writes the result into `_site`
 
-Every build is traceable back to its sources: the footer of each page links to the stride-docs and stride commits it was built from, and `build.json` in the version folder (i.e. [/4.4/build.json](https://doc.stride3d.net/4.4/build.json)) lists them with their branches, the build date and the GitHub Actions run.
+Every build is traceable back to its sources: the footer of each page links to the stride-docs and stride commits it was built from, and `build.json` in the version folder (i.e. [/4.4/build.json](https://doc.stride3d.net/4.4/build.json)) and in `/en/` lists them with their branches, the build date and the GitHub Actions run. The deploy also writes one for the root files, `/build.json`, with the stride-docs commit only.
 
 For what happens inside that last step, languages, versions, API metadata and the post-processing passes, see [Generation Pipeline](documentation-generation-pipeline.md).
 
@@ -150,6 +150,7 @@ The links between the two builds don't depend on the other build (see [Generatio
 
 A run of `all` or `versioned` from `master-4.3` deploys only the version: the unversioned sections and the root files are maintained on `master`.
 
+1. Writes the run summary, in a short job of its own, before the deploy job waits for its approval (see [Changes of a run](#changes-of-a-run) below)
 1. Builds the documentation (`-Sections` of `BuildDocs.ps1`): the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`, and the unversioned sections (`_site/en`). `root` builds nothing
 1. Deploys the version folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too
 1. Deploys the unversioned sections to `/home/site/wwwroot/en` the same way
@@ -159,9 +160,22 @@ A run of `all` or `versioned` from `master-4.3` deploys only the version: the un
 1. For production, except `root`, creates a **draft** GitHub Release tagged `2.0.0.<run number>`, which is why this workflow requests `contents: write` permission
 1. For production, purges the Azure Front Door cache of what it deployed: the version folder (i.e. `/4.4/*`), `/latest/*` when it's the latest version, `/en/*`, and each search index deployed alone. With the root files, it purges everything: `web.config` changes the redirects of every version and what `/latest/` serves
 
-The whole run is one job, so a production deploy waits for one approval, and no other run deploys to the slot between the documentation and the root files.
+The whole deploy is one job, so a production deploy waits for one approval, and no other run deploys to the slot between the documentation and the root files.
 
 The workflow deploys to a slot one run at a time, and the others wait in line. A newer run from the same branch, with the same slot and sections, cancels the older one, also while it waits for approval, so only the latest run can be approved. To go back to an earlier version, revert it on its branch, or re-run the older run of the workflow.
+
+#### Changes of a run
+
+The summary of a run lists what it changes on the slot, so that an approver can check it on the run page before **Review deployments**. For each folder the run deploys, it reads the `build.json` that the slot serves for it, and gives:
+
+- The commit and run that deployed it, and the Stride commits since its Stride commit, which change the API and the architecture pages
+- A link to the comparison of the two commits on GitHub
+- The commits that change the folder's pages: `en/` without the unversioned sections for the version folder, the unversioned sections for `en/`, and `versions.json`, `web.config`, `robots.txt` and `BuildSiteRoot.ps1` for the root files
+- Their files, each linked to its diff in the comparison
+- The other commits since, such as build scripts, workflows or other sections
+- A warning when the deployed commit has commits that the run's commit doesn't, whose changes the run removes
+
+A folder deployed before deploys wrote `build.json` (`4.2/` and older) has no summary. The summary is informative only: when it fails, the deploy goes on.
 
 #### Search index
 
@@ -182,7 +196,7 @@ The workflow runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to
 - `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`, `%unversioned_sections%` by its unversioned sections, and `%client_cache_mode%` by how long browsers keep the files: an hour on production, and `no-cache` on staging, where a browser checks each file again so that a deploy shows at once
 - `robots.txt`, with a `Disallow` for each version of `versions.json`
 
-It then checks them on the Azure Web App: `versions.json` is the one generated, `Cache-Control` matches the slot, and the redirects of `web.config` answer as expected.
+With them, it deploys `build.json`, the commit they come from. It then checks them on the Azure Web App: `versions.json` is the one generated, `build.json` has the run's commit, `Cache-Control` matches the slot, and the redirects of `web.config` answer as expected.
 
 After a change of the latest version, deploy the unversioned sections from `master` (**Sections** `unversioned`): until then, the search of `/en/` pages finds the pages of the previous latest version.
 
