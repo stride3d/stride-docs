@@ -135,21 +135,6 @@ items:
   - name: Game Studio
     href: game-studio/index.md
     items:
-      - name: Prefabs
-        href: game-studio/prefabs/index.md
-        items:
-          - name: Create a prefab
-            href: game-studio/prefabs/create-a-prefab.md
-          - name: Use prefabs
-            href: game-studio/prefabs/use-prefabs.md
-          - name: Edit prefabs
-            href: game-studio/prefabs/edit-prefabs.md
-          - name: Nested prefabs
-            href: game-studio/prefabs/nested-prefabs.md
-          - name: Override prefab properties
-            href: game-studio/prefabs/override-prefab-properties.md
-          - name: Prefab models
-            href: game-studio/prefabs/prefab-models.md
       - name: World units
         href: game-studio/world-units.md
 
@@ -554,6 +539,21 @@ items:
         href: scenes/structuring-scenes.md
       - name: Scene loading
         href: scenes/scene-loading.md
+      - name: Prefabs
+        href: scenes/prefabs/index.md
+        items:
+          - name: Create a prefab
+            href: scenes/prefabs/create-a-prefab.md
+          - name: Use prefabs
+            href: scenes/prefabs/use-prefabs.md
+          - name: Edit prefabs
+            href: scenes/prefabs/edit-prefabs.md
+          - name: Nested prefabs
+            href: scenes/prefabs/nested-prefabs.md
+          - name: Override prefab properties
+            href: scenes/prefabs/override-prefab-properties.md
+          - name: Prefab models
+            href: scenes/prefabs/prefab-models.md
 
   - name: Scripts
     href: scripts/index.md
