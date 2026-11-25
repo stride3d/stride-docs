@@ -61,10 +61,12 @@ jobs:
   build-deploy:
     # Run this job only if the repository is 'stride3d/stride-docs'
     if: github.repository == 'stride3d/stride-docs'
-    # One deploy at a time on a slot, shared with the site root workflow
+    # One deploy at a time on a slot, shared with the site root workflow: the search indexes merge what's deployed there.
+    # The others wait in line, instead of the default where a new one cancels the one already waiting
     concurrency:
       group: azure-${{ inputs.slot }}
       cancel-in-progress: false
+      queue: max
     runs-on: windows-2025-vs2026
 
     environment:
