@@ -19,6 +19,7 @@ The [Stride community-toolkit](https://stride3d.github.io/stride-community-toolk
 
 ## In this section
 
+* [Layout](layout.md)
 * [Panels](panels/index.md)
   * [Asset errors](panels/asset-errors.md)
   * [Asset preview](panels/asset-preview.md)
@@ -37,3 +38,5 @@ The [Stride community-toolkit](https://stride3d.github.io/stride-community-toolk
   * [Sprite editor](dedicated-editors/sprite-editor/index.md)
   * [UI editor](dedicated-editors/ui-editor/index.md)
   * [Graphics compositor editor](dedicated-editors/graphics-compositor-editor/index.md)
+* [Settings](settings.md)
+* [Themes](themes/index.md)
