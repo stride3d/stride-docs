@@ -21,14 +21,14 @@ Before starting, create the `master-4.1` branch from `master`: it keeps the docu
    - The highest version of `versions.json` is the one built from the branch
 1. For GitHub Actions deployment update `*.yml` files in the `.github\workflows\` folder
    - `dotnet-version:` Update to the related .NET version
-1. Run **Deploy Stride Docs version to Azure Web App** from `master` with the `staging` slot, and check the [staging environment](https://stride-doc-staging.azurewebsites.net/4.2/en/)
-1. ⚠️ Run it again with the `production` slot. The `4.2` folder is deployed next to the other versions, `latest` still serves `4.1`, and the Stride Launcher can already load the release notes of `4.2`
-1. Run **Deploy Stride Docs site root to Azure Web App** from `master` with the `production` slot, so that `4.2 (beta)` appears in the version selector (pushing `versions.json` to `master` already deployed it to staging)
+1. Run **Deploy Stride Docs to Azure Web App** from `master` with the `staging` slot, and check the [staging environment](https://stride-doc-staging.azurewebsites.net/4.2/en/)
+1. ⚠️ Run it again with the `production` slot. The `4.2` folder is deployed next to the other versions, `4.2 (beta)` appears in the version selector, `latest` still serves `4.1`, and the Stride Launcher can already load the release notes of `4.2`
 
 Once `4.2` is released:
 
 1. Edit `versions.json`: set `latest` to `4.2`, and rename it from `4.2 (beta)` to `4.2`
-1. Run **Deploy Stride Docs site root to Azure Web App** from `master` with the `production` slot. `/latest/` now serves `4.2`, nothing needs to be rebuilt
+1. Run **Deploy Stride Docs to Azure Web App** from `master` with the `production` slot and **Sections** `root`. `/latest/` now serves `4.2`, nothing needs to be rebuilt
+1. Run it again with **Sections** `unversioned`, so that the search of the unversioned pages finds the pages of `4.2`
 1. It might take up to 24 hours for the CDN to refresh. The best approach is to contact the core contributors and request a CDN reset
 
 Deploying `4.1` later (from `master-4.1`) only replaces the `4.1` folder, it doesn't change `versions.json`, `web.config` or `/latest/`.

@@ -6,8 +6,7 @@ You don't need to touch these workflows to contribute content. This page is here
 
 | Workflow file | Name in the Actions tab | Trigger | Target |
 | --- | --- | --- | --- |
-| [stride-docs-deploy-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-deploy-azure.yml) | Deploy Stride Docs version to Azure Web App 🚀 | Manual only, from the branch of the version | The version folder (i.e. `4.4/`) of the Azure Web App `stride-doc`, slot **staging** or **Production** |
-| [stride-docs-site-root-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-site-root-azure.yml) | Deploy Stride Docs site root to Azure Web App 🚀 | Push to `master` changing the root files (staging), or manual | `versions.json`, `web.config` and `robots.txt` of the Azure Web App `stride-doc`, slot **staging** or **Production** |
+| [stride-docs-deploy-azure.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-deploy-azure.yml) | Deploy Stride Docs to Azure Web App 🚀 | Manual, from the branch of the version, or push to `master` changing the root files (staging) | The version folder (i.e. `4.4/`), and from `master` the unversioned sections (`en/`) and the root files (`versions.json`, `web.config`, `robots.txt`) of the Azure Web App `stride-doc`, slot **staging** or **Production** |
 | [stride-docs-github.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-github.yml) | Build Stride Docs for GitHub Staging | Manual only | GitHub Pages in your own fork |
 | [stride-docs-test-build.yml](https://github.com/stride3d/stride-docs/blob/master/.github/workflows/stride-docs-test-build.yml) | Build Stride Docs - Test Build | Manual only | Nothing, build artifact only |
 
@@ -18,12 +17,11 @@ flowchart LR
     PR[Pull request] --> master[master branch]
     master -.->|manual| WD[stride-docs-deploy-azure.yml]
     old[master-4.3, ... branches] -.->|manual| WD
-    master -->|push changing root files, or manual| WR[stride-docs-site-root-azure.yml]
+    master -->|push changing root files| WD
     master -.->|manual dispatch only| WG[stride-docs-github.yml]
     master -.->|manual dispatch only| WT[stride-docs-test-build.yml]
 
-    WD --> AV["Azure: version folder (4.4/, 4.3/, ...),<br/>and en/ from master"]
-    WR --> AR["Azure: versions.json, web.config, robots.txt"]
+    WD --> AV["Azure: version folder (4.4/, 4.3/, ...),<br/>and from master en/, versions.json, web.config, robots.txt"]
     WG --> GH[GitHub Pages]
     WT --> AA[Artifact only, no deployment]
 ```
@@ -34,7 +32,7 @@ The site hosts the documentation of several versions, each in its own folder (`4
 - `web.config` serves `/latest/` from the latest version folder, and holds the redirection rules, i.e. from the unversioned sections of every version to `en/`, and from a version that has no folder on the site (i.e. the version in development) to `/latest/`
 - `robots.txt` keeps search engines on `/latest/`
 
-Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a run of the site root workflow, without rebuilding any documentation.
+Each version is deployed from its own branch (`master` for the version in development, `master-4.3` for 4.3, ...) and only replaces its own folder. The root files are always deployed from `master`, so deploying an older version never changes which version is the latest. Making a version the latest one is a change to `versions.json` followed by a deploy of the root files (**Sections** `root`), without rebuilding any documentation.
 
 `master` is the default branch and the target for pull requests. **The documentation isn't deployed from `master` automatically**, a maintainer runs the deployment manually from the **Actions** tab, choosing the branch and the Azure slot (staging or production). Only changes to the root files on `master` are deployed automatically, to staging.
 
@@ -44,13 +42,13 @@ On the [stride3d/stride-docs](https://github.com/stride3d/stride-docs) repositor
 
 Opening a pull request doesn't deploy anything either. None of the workflows declare a `pull_request` trigger, so your PR is reviewed from the diff and from whatever preview you provide yourself.
 
-Both Azure workflows guard every job with a repository check:
+The Azure workflow guards its job with a repository check:
 
 ```yaml
 if: github.repository == 'stride3d/stride-docs'
 ```
 
-This means that in a fork they don't merely fail, the jobs are **skipped entirely** and the run finishes grey rather than red. Deploying to Azure from a fork would require your own Azure Web App, your own publish profile secrets and removing that guard, which is described in [Setting up a new Azure Web App](deployment-azure.md#setting-up-a-new-azure-web-app).
+This means that in a fork it doesn't merely fail, its job is **skipped entirely** and the run finishes grey rather than red. Deploying to Azure from a fork would require your own Azure Web App, your own publish profile secrets and removing that guard, which is described in [Setting up a new Azure Web App](deployment-azure.md#setting-up-a-new-azure-web-app).
 
 The two workflows without that guard, `stride-docs-github.yml` and `stride-docs-test-build.yml`, are the ones intended for contributors:
 
@@ -58,7 +56,7 @@ The two workflows without that guard, `stride-docs-github.yml` and `stride-docs-
 | --- | --- | --- |
 | `stride-docs-github.yml` | ✅ Publishes to your GitHub Pages | Pages enabled with the **GitHub Actions** source |
 | `stride-docs-test-build.yml` | ✅ Builds and gives you an artifact | Nothing |
-| The two Azure workflows | ⏭️ Jobs are skipped | Your own Azure infrastructure |
+| The Azure workflow | ⏭️ Its job is skipped | Your own Azure infrastructure |
 
 > [!TIP]
 > **Deploying to GitHub Pages is by far the easier route** and is what we recommend for showing off a change. It is free, needs no Azure account, and the setup is a one-time repository setting. Follow [Deployment to GitHub Pages](deployment-azure.md#deployment-to-github-pages) and share the resulting link in your pull request. Optionally, run it locally, using [Installation](installation.md) and share screenshots of the local preview.
@@ -67,7 +65,7 @@ Note that GitHub disables Actions on newly forked repositories by default. The f
 
 ## The shared build
 
-Every workflow building the documentation (all of them except the site root one) performs its build through the same composite action, [`.github/actions/setup-stride`](https://github.com/stride3d/stride-docs/blob/master/.github/actions/setup-stride/action.yml). Keeping the build in one place means these workflows stay in sync automatically; if you need to change how the documentation is built, that file is almost always the one to edit.
+Every workflow builds the documentation through the same composite action (a deploy of the root files alone builds nothing), [`.github/actions/setup-stride`](https://github.com/stride3d/stride-docs/blob/master/.github/actions/setup-stride/action.yml). Keeping the build in one place means these workflows stay in sync automatically; if you need to change how the documentation is built, that file is almost always the one to edit.
 
 All builds run on a **Windows** runner (`windows-2025-vs2026`). Windows is required because the build compiles the Stride solution to extract the API documentation.
 
@@ -114,9 +112,9 @@ Both skip options default to `true` because they are the slowest parts of the bu
 
 The deploy workflow is the exception: both options only apply to staging, a production deploy always builds the API reference and the PDF. A deploy replaces the whole version folder, so a version deployed without them would lose them. **Skip API building** also defaults to `false`.
 
-## Azure workflows
+## Azure workflow
 
-Both Azure workflows deploy to the same Azure Web App, `stride-doc`. The **slot** input chooses where:
+The Azure workflow, `stride-docs-deploy-azure.yml`, deploys to the Azure Web App `stride-doc`. The **slot** input chooses where:
 
 | | Production | Staging |
 | --- | --- | --- |
@@ -126,7 +124,7 @@ Both Azure workflows deploy to the same Azure Web App, `stride-doc`. The **slot*
 | Publish profile | Secret `AZURE_PUBLISH_PROFILE` of the `Production` environment | Secret `AZURE_PUBLISH_PROFILE` of the `Staging` and `Staging-branch` environments (the same staging slot profile) |
 | URL | [doc.stride3d.net](https://doc.stride3d.net/) | [stride-doc-staging.azurewebsites.net](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) |
 
-For production, both also purge the cache of [Azure Front Door](deployment-azure.md#azure-front-door-cache), which serves `doc.stride3d.net`. They sign in to Azure with the variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID` and `AZURE_SUBSCRIPTION_ID` of the `Production` environment, without any secret.
+For production, it also purges the cache of [Azure Front Door](deployment-azure.md#azure-front-door-cache), which serves `doc.stride3d.net`. It signs in to Azure with the variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID` and `AZURE_SUBSCRIPTION_ID` of the `Production` environment, without any secret.
 
 Each publish profile is a secret of its environment, so only jobs running in that environment can use it:
 
@@ -134,29 +132,37 @@ Each publish profile is a secret of its environment, so only jobs running in tha
 - `Staging` only accepts the branches `master` and `master-*`, without approval: what reached them, through a pull request or an admin, is deployed to staging at once
 - `Staging-branch` accepts any branch, to test a branch on staging, with the same required reviewers as `Production`: a branch can change the workflow it runs, so only an approval keeps the staging publish profile from it
 
-Both use [Azure Web Apps Deploy v3](https://github.com/Azure/webapps-deploy) with a `target-path`, which deploys only into that path of the site. Nothing outside of it is removed, so the other versions and the root files stay untouched.
+It uses [Azure Web Apps Deploy v3](https://github.com/Azure/webapps-deploy) with a `target-path`, which deploys only into that path of the site. Nothing outside of it is removed, so the other versions stay untouched.
 
 For how the Azure Web App itself is configured, see [Deployment](deployment-azure.md).
 
-### Version deployment
+### Sections
 
-`stride-docs-deploy-azure.yml` runs from the branch of the version to deploy, for example `master` for the version in development or `master-4.3` for 4.3. Its **Sections** input chooses what it deploys:
+The workflow runs from the branch of the version to deploy, for example `master` for the version in development or `master-4.3` for 4.3. Its **Sections** input chooses what it deploys:
 
 | Sections | Deploys | Takes |
 | --- | --- | --- |
-| `all` (default) | The version folder (i.e. `4.4/`), and from `master` the unversioned sections (`en/`) | About 19 minutes, most of it the API and the upload of the version folder |
+| `all` (default) | The version folder (i.e. `4.4/`), and from `master` the unversioned sections (`en/`) and the root files, in that order | About 19 minutes, most of it the API and the upload of the version folder |
 | `versioned` | The version folder only | Almost as long as `all` |
 | `unversioned` | The unversioned sections only: release notes, contributing, community resources, upgrade guide. Only from `master`, the run fails from another branch | About 5 minutes, without the API |
+| `root` | The root files only: `versions.json`, `web.config` and `robots.txt`. Only from `master`, the run fails from another branch | About a minute, on a Linux runner, without any build |
 
-The links between the two builds don't depend on the other build (see [Generation Pipeline](documentation-generation-pipeline.md)), so a deploy of one of them links to the other like a full deploy does. A change that spans both, such as a manual page that links to a new release notes or upgrade guide page, or a page moved between them, needs `all`.
+The links between the two builds don't depend on the other build (see [Generation Pipeline](documentation-generation-pipeline.md)), so a deploy of one of them links to the other like a full deploy does. A change that spans several sections needs `all`, for example a manual page that links to a new release notes or upgrade guide page, a page moved between them, or a new unversioned section, whose pages are in `en/` and whose redirects are in `web.config`.
 
-1. Builds the documentation (`-Sections` of `BuildDocs.ps1`): the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`, and the unversioned sections (`_site/en`). From a branch other than `master`, `all` only builds the version
-1. Deploys the version folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too. The site root files generated next to it aren't deployed
-1. Deploys the unversioned sections to `/home/site/wwwroot/en` the same way: they're maintained on `master`, other branches don't deploy them
+A run of `all` or `versioned` from `master-4.3` deploys only the version: the unversioned sections and the root files are maintained on `master`.
+
+1. Builds the documentation (`-Sections` of `BuildDocs.ps1`): the version folder in `_site` (i.e. `4.4/`) being the highest version of the branch's `versions.json`, and the unversioned sections (`_site/en`). `root` builds nothing
+1. Deploys the version folder to `/home/site/wwwroot/4.4` with `clean: true`, which replaces its whole content, so pages removed from the documentation are removed from the site too
+1. Deploys the unversioned sections to `/home/site/wwwroot/en` the same way
 1. Deploys the search index of each folder it didn't build, without `clean` (see [Search index](#search-index) below)
 1. Checks, on the Azure Web App itself, that `build.json` of each deployed folder has the commit just built, and that each search index deployed alone is the one just merged
-1. For production, creates a **draft** GitHub Release tagged `2.0.0.<run number>`, which is why this workflow requests `contents: write` permission
-1. For production, purges the Azure Front Door cache of what it deployed: the version folder (i.e. `/4.4/*`), `/latest/*` when it's the latest version, `/en/*`, and each search index deployed alone
+1. Deploys the root files and checks them (see [Root files](#root-files) below). They come last, so that their redirects only point to pages already deployed
+1. For production, except `root`, creates a **draft** GitHub Release tagged `2.0.0.<run number>`, which is why this workflow requests `contents: write` permission
+1. For production, purges the Azure Front Door cache of what it deployed: the version folder (i.e. `/4.4/*`), `/latest/*` when it's the latest version, `/en/*`, and each search index deployed alone. With the root files, it purges everything: `web.config` changes the redirects of every version and what `/latest/` serves
+
+The whole run is one job, so a production deploy waits for one approval, and no other run deploys to the slot between the documentation and the root files.
+
+The workflow deploys to a slot one run at a time, and the others wait in line. A newer run from the same branch, with the same slot and sections, cancels the older one, also while it waits for approval, so only the latest run can be approved. To go back to an earlier version, revert it on its branch, or re-run the older run of the workflow.
 
 #### Search index
 
@@ -169,19 +175,19 @@ The index of another version gets the current unversioned pages at its next depl
 
 The documentation of a version not released yet (a beta) can be deployed to production as well: it's available in its own folder, without being the latest. Game Studio loads its getting started links from there, and the Stride Launcher its release notes from the unversioned sections, which have the release notes of every version.
 
-### Site root deployment
+#### Root files
 
-`stride-docs-site-root-azure.yml` runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master`, and deploys them together as a zip, without cleaning (the version folders are left untouched):
+The workflow runs [`BuildSiteRoot.ps1`](documentation-generation-pipeline.md) to generate the root files from `master` for the slot, and deploys them together as a zip, without cleaning (the folders are left untouched):
 
 - `versions.json`, as is. The version selector of every version reads it, including old versions that can't be updated anymore, so its format can only gain fields
 - `web.config`, with `%latest_version%` replaced by the latest version of `versions.json`, `%unversioned_sections%` by its unversioned sections, and `%client_cache_mode%` by how long browsers keep the files: an hour on production, and `no-cache` on staging, where a browser checks each file again so that a deploy shows at once
 - `robots.txt`, with a `Disallow` for each version of `versions.json`
 
-A push to `master` changing one of these files deploys them to staging. Deploying them to production is manual, and only allowed from `master`. A production deploy purges the whole Azure Front Door cache of the site: `web.config` changes the redirects of every version and what `/latest/` serves.
+It then checks them on the Azure Web App: `versions.json` is the one generated, `Cache-Control` matches the slot, and the redirects of `web.config` answer as expected.
+
+A push to `master` changing one of these files, `BuildSiteRoot.ps1` or the workflow deploys the root files to staging, as a `root` run without approval. Deploying them to production is manual.
 
 After a change of the latest version, deploy the unversioned sections from `master` (**Sections** `unversioned`): until then, the search of `/en/` pages finds the pages of the previous latest version.
-
-Both workflows deploy to a slot one at a time. A newer run of the same workflow to the same slot (and from the same branch, for a version) cancels the older one, also while it waits for approval, so only the latest run can be approved. To go back to an earlier version, revert it on its branch, or re-run the older run of the workflow.
 
 ## GitHub Pages workflow
 

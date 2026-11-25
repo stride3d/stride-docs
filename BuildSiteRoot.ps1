@@ -2,7 +2,7 @@
 .SYNOPSIS
     Generates the files shared by all documentation versions at the root of the website: versions.json, web.config and robots.txt.
 .DESCRIPTION
-    These files are owned by the master branch and deployed on their own (see .github/workflows/stride-docs-site-root-azure.yml),
+    These files are owned by the master branch and deployed from it (sections root or all of .github/workflows/stride-docs-deploy-azure.yml),
     so that deploying the documentation of any version (including older ones) never overwrites them.
 
     - versions.json: the list of documentation versions shown in the version selector, and which one is the latest (checked, then copied as is).

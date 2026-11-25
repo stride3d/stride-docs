@@ -75,15 +75,14 @@ The previous step will have added a GitHub Action to your repository, which migh
     #      - staging
         workflow_dispatch:
     ```
-1. Open the `stride-docs-deploy-azure.yml` and `stride-docs-site-root-azure.yml` workflows and update them with the values obtained in the previous step. Save your changes.
-1. Execute the workflow `stride-docs-site-root-azure.yml` from `master`, selecting the slot, and click **Run workflow**. This deploys the files shared by all versions.
-1. Execute the workflow `stride-docs-deploy-azure.yml` from the branch of each version to host (`master`, `master-4.3`, ...), selecting the slot, and click **Run workflow**. Each run deploys one version folder to the Azure Web App.
+1. Open the `stride-docs-deploy-azure.yml` workflow and update it with the values obtained in the previous step. Save your changes.
+1. Execute the workflow `stride-docs-deploy-azure.yml` from `master`, selecting the slot, and click **Run workflow**. With **Sections** `all`, it deploys the version of `master`, the unversioned sections and the files shared by all versions.
+1. Execute it from the branch of each other version to host (`master-4.3`, ...). Each of these runs deploys one version folder to the Azure Web App.
 
 ### GitHub Actions
 
 - `stride-docs-github.yml`: Enables manual deployment to GitHub Pages in a forked repository, primarily for showcasing updates.
-- `stride-docs-deploy-azure.yml`: Manually deploys the documentation of the branch it runs from into its version folder, to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) or production.
-- `stride-docs-site-root-azure.yml`: Deploys `versions.json`, `web.config` and `robots.txt` from `master`, automatically to staging when they change, and manually to staging or production.
+- `stride-docs-deploy-azure.yml`: Manually deploys the documentation of the branch it runs from into its version folder, to [staging](https://stride-doc-staging.azurewebsites.net/latest/en/index.html) or production, and from `master` the unversioned sections and `versions.json`, `web.config` and `robots.txt`. It deploys these three files to staging automatically when they change on `master`.
 - `stride-docs-test-build.yml`: Builds the documentation manually and uploads it as an artifact without deploying anywhere, useful for verifying that a change builds.
 
 For a detailed breakdown of the jobs, triggers, inputs and secrets these workflows use, see [GitHub Actions](github-actions.md).
@@ -92,7 +91,7 @@ For a detailed breakdown of the jobs, triggers, inputs and secrets these workflo
 
 `doc.stride3d.net` is served through Azure Front Door (profile `stride-frontdoor`, endpoint `stride-doc`), which caches the files of the Production slot. `web.config` sends them with `Cache-Control: max-age` of one hour: Front Door and browsers keep them that long.
 
-The production deploys purge what they replaced from Front Door (see [GitHub Actions](github-actions.md#azure-workflows)). They sign in to Azure as the managed identity `stride-frontdoor-purge` (resource group `Stride3d`):
+The production deploys purge what they replaced from Front Door (see [GitHub Actions](github-actions.md#azure-workflow)). They sign in to Azure as the managed identity `stride-frontdoor-purge` (resource group `Stride3d`):
 
 - Its federated credential trusts the GitHub Actions jobs of the `Production` environment of `stride3d/stride-docs` (subject `repo:stride3d/stride-docs:environment:Production`), so no secret is stored in GitHub
 - Its role is **CDN Profile Contributor** on the `stride-doc` endpoint only

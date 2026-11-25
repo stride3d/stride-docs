@@ -704,7 +704,7 @@ function Merge-SearchIndex {
 function Copy-ExtraItems {
 
     # versions.json, web.config and robots.txt are shared by all versions
-    # (they're useful locally, but only deployed from master, see stride-docs-site-root-azure.yml)
+    # (they're useful locally, but only deployed from master, by sections root or all of stride-docs-deploy-azure.yml)
     & "$PSScriptRoot/BuildSiteRoot.ps1" -OutputDirectory $Settings.WebDirectory
 
     if ($buildUnversioned) { Copy-ReleaseNotesMarkdown }
