@@ -26,7 +26,3 @@ The **Asset view** (4) displays the project assets. You can create new assets us
 The **Asset preview** tab (5) displays a preview of the selected asset. The preview changes based on the type of the asset you have selected. For example, you can play animations and sounds. This is a quick way to check changes to an asset when editing it in the Property grid. By default, the Asset preview is in the bottom right.
 
 You can show and hide different parts of the Game Studio in the View menu. You can also resize and move parts of the UI.
-
-## In this section
-
-* [World units](world-units.md)

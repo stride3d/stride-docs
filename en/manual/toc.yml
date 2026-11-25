@@ -134,9 +134,6 @@ items:
 
   - name: Game Studio
     href: game-studio/index.md
-    items:
-      - name: World units
-        href: game-studio/world-units.md
 
   - name: Graphics
     href: graphics/index.md

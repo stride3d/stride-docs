@@ -62,7 +62,6 @@
 - [Property grid](../game-studio/index.md): Panel used to view and edit properties of selected entities/components.
 - [Splash screen](../files-and-folders/game-settings/splash-screen.md): Configure startup visuals.
 - [Use assets](../assets/use-an-asset.md): Reference and place assets in scenes.
-- [World units](../game-studio/world-units.md): Scene scale conventions (unit size, conversions).
 
 ## General terms
 

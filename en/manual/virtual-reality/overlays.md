@@ -57,7 +57,7 @@ You can add as many overlays as you need. To add another overlay, click **Add to
 | Texture        | The texture displayed in the overlay    
 | Local position | The position of the overlay relative to the user                           
 | Local rotation | The rotation of the overlay relative to the user                           
-| Surface size   | The size of the overlay in [world units](../game-studio/world-units.md)                        
+| Surface size   | The size of the overlay in [world units](../scenes/entities/transform/world-units.md)                        
 | Follows head   | Follow the user's head so the overlay is always in front of their view
 
 ## VR template
