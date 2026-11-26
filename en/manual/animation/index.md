@@ -32,7 +32,7 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 
 ## Morph targets
 
-**Morph targets** (also known as blend shapes) are alternative shapes of a mesh, such as facial expressions. Their weights can be set in Game Studio, animated, and changed in scripts, alone or together with skinning. For more information, see [Morph targets](morph-targets.md).
+**Morph targets** (also known as blend shapes) are alternative versions of a model's shape (e.g. different facial expressions) that can be added in your modeling program of choice. These can then be blended together dynamically in Stride based on weights set in Game Studio, by code or by animations. For more information, see [Morph targets](morph-targets.md).
 
 ## Animation clips
 

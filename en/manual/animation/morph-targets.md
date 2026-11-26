@@ -12,13 +12,13 @@ Morph targets are often used for facial expressions, lip sync, muscles and corre
 
 ## Import morph targets
 
-Stride imports morph targets from FBX and glTF files with the model. In the **Asset View**, select the model asset, and set these properties in the **Property Grid**:
+Stride imports morph targets from FBX and glTF files along with the model by default. You can further customize import options by selecting the asset in the **Asset view** and changing the following in the **Property grid**:
 
 ![Model asset properties](media/morph-targets-model-asset-properties.webp)
 
 | Property | Description |
 | --- | --- |
-| Import Morph Targets | Import the morph targets of the source file. When unchecked, the model is imported without them. |
+| Import Morph Targets | When unchecked, the model is imported without morph targets. |
 | Morph Normals | Where the normal changes of each target come from. See below. |
 | Morph Tangents | Where the tangent changes of each target come from. See below. |
 
@@ -36,7 +36,7 @@ The **Morph Normals** and **Morph Tangents** options are:
 
 ## Set weights in Game Studio
 
-When a model has morph targets, its **Model** component shows a **Morphs** section with a slider and a text box for each target. The scene view updates while you move a slider.
+When a model has morph targets, its **Model** component shows a **Morphs** section with a slider and a text box for each target. The Viewport updates while you move a slider.
 
 ![Morphs section of the model component](media/morph-targets-model-component.webp)
 
@@ -53,7 +53,7 @@ These weights are saved with the scene, and are the starting weights at runtime.
 
 Morph weight animation is imported with the model's animations. Add the animation to an [animation component](set-up-animations.md) and play it like any other clip.
 
-An animation curve drives a weight with the path `[ModelComponent.Key].MorphWeights[TargetName]`. A target name drives the target with that name on every mesh of the model, and a model without that target ignores the curve, so one clip can play on different models.
+An animation curve drives a weight with the path `[ModelComponent.Key].MorphWeights[TargetName]`. The specified target will be animated on every mesh of the model that has it. Models without that target will ignore the curve, meaning that one animation can be reused on multiple types of models.
 
 ## Set weights in scripts
 
@@ -62,12 +62,7 @@ The [model component](xref:Stride.Engine.ModelComponent) has methods to read and
 ```cs
 public class Smile : SyncScript
 {
-    private ModelComponent model;
-
-    public override void Start()
-    {
-        model = Entity.Get<ModelComponent>();
-    }
+    public ModelComponent Model { get; set; }
 
     public override void Update()
     {
@@ -75,7 +70,7 @@ public class Smile : SyncScript
         // Loops the weight between 0 and 1.
         float weight = 0.5f + 0.5f * MathF.Sin(time);
 
-        model.SetMorphWeight("Smile", weight);
+        Model.SetMorphWeight("Smile", weight);
     }
 }
 ```
@@ -84,7 +79,7 @@ public class Smile : SyncScript
 | --- | --- |
 | [`MorphTargetNames`](xref:Stride.Engine.ModelComponent.MorphTargetNames) | The target names of the model. A name's index is its slot. |
 | [`FindMorphTarget(name)`](xref:Stride.Engine.ModelComponent.FindMorphTarget*) | The slot of a target, or -1 if the model has no target with that name. |
-| [`GetMorphWeight(slot)`](xref:Stride.Engine.ModelComponent.GetMorphWeight*) | The weight that is rendered. |
+| [`GetMorphWeight(slot)`](xref:Stride.Engine.ModelComponent.GetMorphWeight*) | Gets the rendered weight of a given target. |
 | [`SetMorphWeight(slot, value)`](xref:Stride.Engine.ModelComponent.SetMorphWeight(System.Int32,System.Single)) | Sets a weight by slot id. This is the fastest way to change a weight every frame. |
 | [`SetMorphWeight(name, value)`](xref:Stride.Engine.ModelComponent.SetMorphWeight(System.String,System.Single)) | Sets a weight by name. It looks the name up on every call. |
 | [`SetAllMorphWeights(value)`](xref:Stride.Engine.ModelComponent.SetAllMorphWeights*) | Sets every weight, for example 0 to go back to the base shape. |
