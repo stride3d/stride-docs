@@ -44,17 +44,6 @@
             "TargetFramework": "net10.0",
             "StrideBuildDoc": "true"
           }
-        },
-        {
-          "files": [
-            "sources/editor/Stride.Core.Assets.Editor.Wpf/Stride.Core.Assets.Editor.Wpf.csproj",
-            "sources/editor/Stride.Editor.Wpf/Stride.Editor.Wpf.csproj"
-          ],
-          "src": "../../stride",
-          "properties": {
-            "TargetFramework": "net10.0-windows",
-            "StrideBuildDoc": "true"
-          }
         }
       ],
       "dest": "api",
