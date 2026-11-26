@@ -85,8 +85,8 @@ public class Smile : SyncScript
 | [`MorphTargetNames`](xref:Stride.Engine.ModelComponent.MorphTargetNames) | The target names of the model. A name's index is its slot. |
 | [`FindMorphTarget(name)`](xref:Stride.Engine.ModelComponent.FindMorphTarget*) | The slot of a target, or -1 if the model has no target with that name. |
 | [`GetMorphWeight(slot)`](xref:Stride.Engine.ModelComponent.GetMorphWeight*) | The weight that is rendered. |
-| [`SetMorphWeight(slot, value)`](xref:Stride.Engine.ModelComponent.SetMorphWeight*) | Sets a weight. This is the fastest way to change a weight every frame. |
-| [`SetMorphWeight(name, value)`](xref:Stride.Engine.ModelComponent.SetMorphWeight*) | Sets a weight by name. It looks the name up on every call. |
+| [`SetMorphWeight(slot, value)`](xref:Stride.Engine.ModelComponent.SetMorphWeight(System.Int32,System.Single)) | Sets a weight by slot id. This is the fastest way to change a weight every frame. |
+| [`SetMorphWeight(name, value)`](xref:Stride.Engine.ModelComponent.SetMorphWeight(System.String,System.Single)) | Sets a weight by name. It looks the name up on every call. |
 | [`SetAllMorphWeights(value)`](xref:Stride.Engine.ModelComponent.SetAllMorphWeights*) | Sets every weight, for example 0 to go back to the base shape. |
 | [`Morphs`](xref:Stride.Engine.ModelComponent.Morphs) | The weights set in Game Studio, and whether morphs are enabled. |
 
