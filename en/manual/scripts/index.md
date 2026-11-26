@@ -13,7 +13,6 @@ Stride scripts are written in **C#**. You can edit scripts in Game Studio or ano
 
 Scripts have access to the main modules of the Stride engine:
 
-* [Audio](xref:Stride.Engine.ScriptComponent.Audio): the audio system
 * [Content](xref:Stride.Engine.ScriptComponent.Content): loads and saves content from assets
 * [DebugText](xref:Stride.Engine.ScriptComponent.DebugText): prints debug text
 * [EffectSystem](xref:Stride.Engine.ScriptComponent.EffectSystem): loads and compiles effects and shaders
