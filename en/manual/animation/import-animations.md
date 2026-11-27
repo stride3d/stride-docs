@@ -45,6 +45,8 @@ You can view and edit their properties in the **Property grid** (on the right by
 
 ![Properties](media/animations-properties.png)
 
+If the model file has morph targets (also known as blend shapes), Game Studio imports them with the model, and their weight animation with the animation. For more information, see [Morph targets](morph-targets.md).
+
 ## Use an animation asset
 
 To use an animation asset, add an [AnimationComponent](xref:Stride.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
@@ -59,6 +61,7 @@ To use an animation asset, add an [AnimationComponent](xref:Stride.Engine.Animat
 * [Set up animations](set-up-animations.md)
 * [Preview animations](preview-animations.md)
 * [Animation scripts](animation-scripts.md)
+* [Morph targets](morph-targets.md)
 * [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
 * [Custom blend trees](custom-blend-trees.md)
