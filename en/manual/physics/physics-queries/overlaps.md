@@ -2,6 +2,7 @@
 
 <span class="badge text-bg-primary">Intermediate</span>
 <span class="badge text-bg-success">Programmer</span>
+<span class="badge text-bg-secondary">Bepu</span>
 
 An **overlap** checks for intersecting collisions in the bounds of a shape. In more basic terms, **it checks which colliders are inside or partially inside of a shape**.
 
